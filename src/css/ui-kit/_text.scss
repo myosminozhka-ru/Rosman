@@ -1,0 +1,134 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 6rem;
+  letter-spacing: -0.24rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    letter-spacing: 0rem;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 4.3rem;
+  line-height: 4.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 4rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 2.7em;
+  line-height: 3.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+}
+
+// text
+
+p,
+a {
+  color: #000000;
+}
+
+a {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+.text-overline {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: em(18, 13);
+  letter-spacing: em(0.5, 13);
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.text-caption {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: em(14, 11);
+  letter-spacing: em(0.25, 11);
+  color: #000000;
+}
+
+.link-m-400,
+.link-m-500 {
+  font-size: 15px;
+  line-height: em(20, 15);
+  text-decoration-line: underline;
+}
+
+.link-m-400 {
+  font-weight: 400;
+}
+
+.link-m-500 {
+  font-weight: 500;
+}
+
+.link-s-400,
+.link-s-500 {
+  font-size: 13px;
+  line-height: em(18, 13);
+  text-decoration-line: underline;
+}
+
+.link-s-400 {
+  font-weight: 400;
+}
+
+.link-s-500 {
+  font-weight: 500;
+}

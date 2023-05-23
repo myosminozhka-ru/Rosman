@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h3 class="accordion">Text</h3>
+    <div class="panel block">
+      <div>
+  <div class="p-12">
+    <h2>Heading desc</h2>
+  </div>
+  <div class="p-12">
+    <h1>Headline 1</h1>
+    <h2>Headline 2</h2>
+    <h3>Headline 3</h3>
+    <h4>Headline 4</h4>
+    <h5>Headline 5</h5>
+    <h6>Headline 6</h6>
+  </div>
+
+  <div class="p-12">
+    <h2>Body large</h2>
+  </div>
+  <div class="p-12">
+    <p class="text-l sm:text-m">Body Large</p>
+    <p class="text-l font-bold sm:text-m">Body Large Bold</p>
+    <p class="text-m">Body Medium</p>
+    <p class="text-m font-bold">Body Medium Bold</p>
+    <p class="text-s">Body Small</p>
+    <p class="text-s font-bold">Body Small Bold</p>
+  </div>
+
+  <div class="p-12">
+    <h2>Overline</h2>
+  </div>
+
+  <div class="p-12">
+    <p class="text-overline">overline</p>
+  </div>
+
+  <div class="p-12">
+    <h2>Caption</h2>
+  </div>
+
+  <div class="p-12">
+    <p class="text-caption">overline</p>
+  </div>
+
+  <div class="p-12">
+    <h2>Links</h2>
+  </div>
+
+  <div class="p-12">
+    <a href="" class="link-m-400">link medium</a>
+    <a href="" class="link-m-500">link medium bold</a>
+    <a href="" class="link-s-400">link small</a>
+    <a href="" class="link-s-500">link small bold</a>
+  </div>
+</div>
+
+    </div>
+
+    <h3 class="accordion">Inputs</h3>
+    <div class="panel hidden">
+      <div class="flex-gap-8 flex flex-col p-12">
+  <div class="flex items-center justify-center">
+    <span class="">Default</span>
+    <!-- <input class="ui-form-input" type="text" placeholder="Электронная почта" /> -->
+    <input class="text-l" type="text" placeholder="Электронная почта" />
+  </div>
+
+  <div class="align-items-center flex">
+    <span class="mr-12">Error</span>
+    <input class="ui-form-input --error" type="text" value="error" />
+  </div>
+
+  <div class="align-items-center flex">
+    <span class="mr-12">Right</span>
+    <input class="ui-form-input --success" type="text" value="success" />
+  </div>
+
+  <div class="align-items-center flex">
+    <span class="mr-12">Disabled</span>
+    <input class="ui-form-input" type="text" value="disabled" disabled />
+  </div>
+</div>
+
+    </div>
+
+    <h3 class="accordion">Buttons</h3>
+    <div class="panel hidden">
+      <div class="p-12">
+  <h3>Buttons</h3>
+  <div class="flex flex-direction-column flex-gap-8">
+    <a class="ui-button --black">Показать ещё</a>
+    <a class="ui-button --transparent">Показать ещё</a>
+    <a class="ui-button --yellow">Смотреть</a>
+    <a class="ui-button --violet">Смотреть</a>
+  </div>
+  <h3>Full w Button</h3>
+  <a class="ui-button --light-yellow --full-w">Показать еще</a>
+
+  <h3>Text hide buttons</h3>
+  <a class="ui-dropdown-button">Подробное описание, характеристики</a>
+  <a class="ui-text-hide-button --active">Подробнее</a>
+
+  <div class="test"></div>
+</div>
+
+<!-- <div class="p-12">
+  <h3></h3>
+  <div class="flex flex-direction-column flex-gap-8">
+    <a class="ui-button --black">Показать ещё</a>
+    <a class="ui-button --transparent">Показать ещё</a>
+    <a class="ui-button --yellow">Смотреть</a>
+    <a class="ui-button --violet">Смотреть</a>
+  </div>
+  <h3>Full w Button</h3>
+  <a class="ui-button --light-yellow --full-w">Показать еще</a>
+</div>
+
+<div class="p-12">
+  <h3>Breadcrumbs</h3>
+  <div class="flex flex-direction-column flex-gap-8">
+    <a class="ui-button --black">Показать ещё</a>
+    <a class="ui-button --transparent">Показать ещё</a>
+    <a class="ui-button --yellow">Смотреть</a>
+    <a class="ui-button --violet">Смотреть</a>
+  </div>
+  <h3>Full w Button</h3>
+  <a class="ui-button --light-yellow --full-w">Показать еще</a>
+</div> -->
+
+    </div>
+
+    <style>
+      /* Style the buttons that are used to open and close the accordion panel */
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      /* Style the accordion panel. Note: hidden by default */
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        /* display: none; */
+        overflow: hidden;
+      }
+    </style>
+
+    <script>
+      //   var acc = document.getElementsByClassName("accordion");
+      //   var i;
+
+      //   for (i = 0; i < acc.length; i++) {
+      //     acc[i].addEventListener("click", function () {
+      //       /* Toggle between adding and removing the "active" class,
+      // to highlight the button that controls the panel */
+      //       this.classList.toggle("active");
+
+      //       /* Toggle between hiding and showing the active panel */
+      //       var panel = this.nextElementSibling;
+      //       if (panel.style.display === "block") {
+      //         panel.style.display = "none";
+      //       } else {
+      //         panel.style.display = "block";
+      //       }
+      //     });
+      //   }
+    </script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
