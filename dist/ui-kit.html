@@ -6,62 +6,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>UI Kit</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h3 class="accordion">Text</h3>
+    <h3 class="accordion">Ui Kit</h3>
     <div class="panel block">
       <div>
-  <div class="p-12">
-    <h2>Heading desc</h2>
+  <div class="p-12 m-8 bg-black rounded-3xl">
+    <h2 class="text-white">Типографика</h2>
   </div>
   <div class="p-12">
-    <h1>Headline 1</h1>
-    <h2>Headline 2</h2>
-    <h3>Headline 3</h3>
-    <h4>Headline 4</h4>
-    <h5>Headline 5</h5>
-    <h6>Headline 6</h6>
+    <div class="p-6">
+      <h1>Headline 1</h1>
+    </div>
+  
+    <div class="p-6">
+      <h2>Headline 2</h2>
+    </div>
+    
+    <div class="p-6">
+      <h3>Headline 3</h3>
+    </div>
+  
+    <div class="p-6">
+      <h4>Headline 4</h4>
+    </div>
+   
+    <div class="p-6">
+      <h5>Headline 5</h5>
+    </div>
+   
+    <div class="p-6">
+      <h6>Headline 6</h6>
+    </div>
+   
   </div>
+  <hr class="text-grey">
 
   <div class="p-12">
     <h2>Body large</h2>
   </div>
   <div class="p-12">
-    <p class="text-l sm:text-m">Body Large</p>
+    <div class="p-6">
+      <p class="text-l sm:text-m">Body Large</p>
+    </div>
+    
+    <div class="p-6">
     <p class="text-l font-bold sm:text-m">Body Large Bold</p>
-    <p class="text-m">Body Medium</p>
-    <p class="text-m font-bold">Body Medium Bold</p>
-    <p class="text-s">Body Small</p>
-    <p class="text-s font-bold">Body Small Bold</p>
+    </div>
+
+    <div class="p-6">
+      <p class="text-m">Body Medium</p>
+    </div>
+   
+    <div class="p-6">
+      <p class="text-m font-bold">Body Medium Bold</p>
+    </div>
+    
+    <div class="p-6">
+      <p class="text-s">Body Small</p>
+    </div>
+   
+    <div class="p-6">
+      <p class="text-s font-bold">Body Small Bold</p>
+    </div>
+    
+  </div>
+  <hr class="text-grey">
+
+  <div class="p-12">
+    <h3>Overline</h>
   </div>
 
   <div class="p-12">
-    <h2>Overline</h2>
+    <p class="overline decoration-dashed">overline</p>
   </div>
-
-  <div class="p-12">
-    <p class="text-overline">overline</p>
-  </div>
-
-  <div class="p-12">
-    <h2>Caption</h2>
-  </div>
-
-  <div class="p-12">
-    <p class="text-caption">overline</p>
-  </div>
+  <hr class="text-grey">
 
   <div class="p-12">
     <h2>Links</h2>
   </div>
 
   <div class="p-12">
-    <a href="" class="link-m-400">link medium</a>
-    <a href="" class="link-m-500">link medium bold</a>
-    <a href="" class="link-s-400">link small</a>
-    <a href="" class="link-s-500">link small bold</a>
+    <div class="p-6">
+      <a href="" class="text-2xl underline font-normal">link medium</a>
+    </div>
+   
+    <div class="p-6">
+      <a href="" class="text-2xl underline font-medium">link medium bold</a>
+    </div>
+   
+    <div class="p-6">
+      <a href="" class="text-xl underline font-normal">link small</a>
+    </div>
+   
+    <div class="p-6">
+      <a href="" class="text-xl underline font-medium">link small bold</a>
+    </div>
+  </div>
+  <div class="p-12 m-4 bg-black rounded-3xl">
+    <h2 class="text-white">Цвета</h2>
+  </div>
+
+  <div class="flex flex-wrap justify-center">
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-yellow"> <!-- yellow -->
+      <span class="text-black font-bold">#FFF145</span> 
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-black"> <!-- black -->
+      <span class="text-white font-bold">#000000</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center  border-black border-2 bg-white"> <!-- white -->
+      <span class="text-black font-bold">#FFFFFF</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-orange"><!-- orange -->
+      <span class="text-white font-bold">#FF8500</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-green"> <!-- green -->
+      <span class="text-black font-bold">#35CC66</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-blue"> <!-- blue -->
+      <span class="text-black font-bold">#4498FC</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-red"> <!-- red -->
+      <span class="text-black font-bold">#FF0053</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-card-stroke"> <!-- card-stroke -->
+      <span class="text-black font-bold">#D9D9D9</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center bg-grey"> <!-- grey -->
+      <span class="text-black font-bold">#E3E3E2</span>
+    </div>
+    <div class="w-68 h-68 rounded-full m-6 flex items-center justify-center border-black border-2 bg-gray-background"> <!-- gray-background -->
+      <span class="text-black font-bold">#F5F5F5</span>
+    </div>
   </div>
 </div>
 

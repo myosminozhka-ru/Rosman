@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries"),
+  containerQueries: require("@tailwindcss/container-queries")
 };
 
 const plugins = Object.keys(allPlugins)
@@ -26,29 +26,31 @@ module.exports = {
       l: ["1.7rem", "2.4rem"],
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
+      "2xl" : ["1.5rem","2rem"],
+      "3/9xl" : ["2.1rem","2.3rem"],
+      "4/4xl" : ["2.4rem", "2.8rem"],
+      "4/7xl" : ["2.7rem", "3.2rem"],
+      "5/4xl" : ["3.4rem", "4rem"],
+      "6/5xl" : ["4.3rem","4.8rem"],
+      "7/5xl": ["5.5rem", "6rem"]
     },
     colors: {
-      "light-yellow": "rgba(255, 241, 69, 0.25)",
-      "blue-1": "#0070ea",
-      "blue-2": "#4498fc",
-      green: "#33c15b",
+      "blue": "#4498fc",
+      green: "#35CC66",
       yellow: "#fff145",
       black: "#000000",
-      text: "#808080",
       "card-stroke": "#d9d9d9",
-      background: "#f5f5f5",
+      "gray-background": "#f5f5f5",
       white: "#ffffff",
-      devider: "#d9d9d9",
-      grey: "#e3e3e2",
+      grey: "#E3E3E2",
       red: "#ff0053",
       orange: "#ff8500",
-      "orange-text": "#f46300",
-
       // base-transition: 0.2s ease,
     },
     fontFamily: {
       // sans: ['Graphik', 'sans-serif'],
       // serif: ['Merriweather', 'serif'],
+      'tt-hoves-pro': ["TT Hoves Pro", 'sans-serif']
     },
     extend: {
       spacing: {

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-weight: 400;
+  font-family: "TT Hoves Pro";
+  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "TT Hoves Pro";
+  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
+}
+
+@font-face {
+  font-style: italic;
+  font-family: "TT Hoves Pro";
+  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Italic.ttf");
+}
 // @layer components {
 //   .bg-tiles {
 //     background-size: 73px 73px;
