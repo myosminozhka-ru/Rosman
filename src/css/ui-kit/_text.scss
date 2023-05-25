@@ -1,4 +1,7 @@
-body { 
+
+// text
+
+body {
   @apply font-tt-hoves-pro; 
 }
 
@@ -11,54 +14,6 @@ h6 {
   @apply text-black m-0;
 }
 
-
-
-h1 {
-  @apply font-medium text-7/5xl tracking-tight;
-
-  @media (max-width: 768px) {
-    @apply text-4/7xl tracking-normal;
-  }
-}
-
-h2 {
-  @apply text-6/5xl font-medium;
-
-  @media (max-width: 768px) {
-    @apply text-4/4xl;
-  }
-}
-
-h3 {
-  @apply text-5/4xl font-medium;
-
-  @media (max-width: 768px) {
-    @apply text-3/9xl;
-  }
-}
-
-h4 {
-  @apply text-4/7xl font-medium;
-
-  @media (max-width: 768px) {
-    @apply text-3/9xl;
-  }
-}
-
-h5 {
-  @apply text-4/4xl font-normal;
-
-  @media (max-width: 768px) {
-    @apply text-3/9xl;
-  }
-}
-
-h6 {
-  @apply text-3/9xl font-normal;
-}
-
-// text
-
 p,
 a {
   @apply text-black;
@@ -66,8 +21,93 @@ a {
 
 a {
   @apply block;
-} 
+}
 
 p {
-  @apply m-0; 
+  @apply m-0;
+}
+
+
+.head-1 {
+  @apply font-medium text-7xl tracking-tight;
+
+  @media (max-width: 768px) {
+    @apply text-4xl tracking-normal;
+  }
+}
+
+.head-2 {
+  @apply text-6xl font-medium;
+
+  @media (max-width: 768px) {
+    @apply text-3xl;
+  }
+}
+
+.head-3 {
+  @apply text-5xl font-medium;
+
+  @media (max-width: 768px) {
+    @apply text-2xl;
+  }
+}
+
+.head-4 {
+  @apply text-4xl font-medium;
+
+  @media (max-width: 768px) {
+    @apply text-2xl;
+  }
+}
+
+.head-5 {
+  @apply text-3xl font-normal;
+
+  @media (max-width: 768px) {
+    @apply text-2xl;
+  }
+}
+
+.head-6 {
+  @apply text-2xl font-normal;
+}
+
+.body-l, .body-l-bold {
+  @apply text-l sm:text-m;
+}
+
+.body-l-bold {
+  @apply font-bold;
+}
+
+.body-m, .body-m-bold {
+  @apply text-m;
+}
+
+.body-m-bold {
+  @apply font-bold;
+}
+
+.body-s, .body-s-bold {
+  @apply text-s;
+}
+
+.body-s-bold {
+  @apply font-bold;
+}
+
+
+.overline-dashed {
+  @apply overline decoration-dashed;
+}
+
+.link-m {
+  @apply text-1xl underline font-normal;
+}
+
+.link-s {
+  @apply text-xl underline font-normal;
+}
+.link-s-bold {
+  @apply text-xl underline font-medium;
 }

@@ -648,9 +648,6 @@ select {
 .m-6 {
   margin: 1.5rem;
 }
-.m-8 {
-  margin: 0.8rem;
-}
 .mr-12 {
   margin-right: 1.2rem;
 }
@@ -697,11 +694,19 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.bg-blue {
+.bg-blue-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 112 234 / var(--tw-bg-opacity));
+}
+.bg-blue-2 {
   --tw-bg-opacity: 1;
   background-color: rgb(68 152 252 / var(--tw-bg-opacity));
 }
@@ -709,13 +714,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
-.bg-gray-background {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
 .bg-green {
   --tw-bg-opacity: 1;
-  background-color: rgb(53 204 102 / var(--tw-bg-opacity));
+  background-color: rgb(51 193 91 / var(--tw-bg-opacity));
 }
 .bg-grey {
   --tw-bg-opacity: 1;
@@ -725,9 +726,17 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 133 0 / var(--tw-bg-opacity));
 }
+.bg-orange-text {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 99 0 / var(--tw-bg-opacity));
+}
 .bg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 83 / var(--tw-bg-opacity));
+}
+.bg-text {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 128 128 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -743,30 +752,12 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-l {
   font-size: 1.7rem;
   line-height: 2.4rem;
 }
-.text-m {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.text-s {
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-}
 .font-bold {
   font-weight: 700;
-}
-.font-medium {
-  font-weight: 500;
-}
-.font-normal {
-  font-weight: 400;
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -780,14 +771,8 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.underline {
-  text-decoration-line: underline;
-}
 .overline {
   text-decoration-line: overline;
-}
-.decoration-dashed {
-  text-decoration-style: dashed;
 }
 .outline {
   outline-style: solid;
@@ -802,17 +787,17 @@ select {
 @font-face {
   font-weight: 400;
   font-family: "TT Hoves Pro";
-  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
+  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Medium.ttf");
 }
 @font-face {
   font-weight: 500;
   font-family: "TT Hoves Pro";
-  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
+  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
 }
 @font-face {
   font-style: italic;
   font-family: "TT Hoves Pro";
-  src: url("/src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Italic.ttf");
+  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Italic.ttf");
 }
 html {
   font-size: 65.2%;
@@ -833,7 +818,7 @@ html {
 }
 
 body {
-  font-family: TT Hoves Pro, Graphik, sans-serif;
+  font-family: TT Hoves Pro, sans-serif;
 }
 
 h1,
@@ -845,74 +830,6 @@ h6 {
   margin: 0px;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-h1 {
-  font-size: 5.5rem;
-  line-height: 6rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.7rem;
-    line-height: 3.2rem;
-    letter-spacing: 0em;
-  }
-}
-
-h2 {
-  font-size: 4.3rem;
-  line-height: 4.8rem;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  h2 {
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-  }
-}
-
-h3 {
-  font-size: 3.4rem;
-  line-height: 4rem;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  h3 {
-    font-size: 2.1rem;
-    line-height: 2.3rem;
-  }
-}
-
-h4 {
-  font-size: 2.7rem;
-  line-height: 3.2rem;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  h4 {
-    font-size: 2.1rem;
-    line-height: 2.3rem;
-  }
-}
-
-h5 {
-  font-size: 2.4rem;
-  line-height: 2.8rem;
-  font-weight: 400;
-}
-@media (max-width: 768px) {
-  h5 {
-    font-size: 2.1rem;
-    line-height: 2.3rem;
-  }
-}
-
-h6 {
-  font-size: 2.1rem;
-  line-height: 2.3rem;
-  font-weight: 400;
 }
 
 p,
@@ -929,10 +846,131 @@ p {
   margin: 0px;
 }
 
+.head-1 {
+  font-size: 5.5rem;
+  line-height: 6rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+@media (max-width: 768px) {
+  .head-1 {
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    letter-spacing: 0em;
+  }
+}
+
+.head-2 {
+  font-size: 4.3rem;
+  line-height: 4.8rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .head-2 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.head-3 {
+  font-size: 3.4rem;
+  line-height: 4rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .head-3 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.head-4 {
+  font-size: 2.7rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .head-4 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.head-5 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .head-5 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.head-6 {
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+.body-l, .body-l-bold {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+
 @media (max-width: 639px) {
 
-  .sm\:text-m {
+  .body-l, .body-l-bold {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+}
+
+.body-l-bold {
+  font-weight: 700;
+}
+
+.body-m, .body-m-bold {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.body-m-bold {
+  font-weight: 700;
+}
+
+.body-s, .body-s-bold {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+.body-s-bold {
+  font-weight: 700;
+}
+
+.overline-dashed {
+  text-decoration-line: overline;
+  text-decoration-style: dashed;
+}
+
+.link-m {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.link-s {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.link-s-bold {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  text-decoration-line: underline;
 }
