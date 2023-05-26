@@ -1,147 +1,215 @@
-.ui-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: em(158, 15);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.5em;
-  line-height: em(20, 15);
-  padding-top: em(9, 15);
-  padding-bottom: em(9, 15);
-  border: 1px solid transparent;
-
-  cursor: pointer;
-
-  &.--full-w {
-    width: 100%;
-  }
-
-  &.--black {
-    color: $white;
-    background-color: $black;
-    transition: color $base-transition, background-color $base-transition;
-
-    &:hover {
-      background-color: $yellow;
-      color: $black;
-    }
-  }
-
-  &.--transparent {
-    border-color: $black;
-    background-color: transparent;
-    color: $black;
-    transition: border-color $base-transition, background-color $base-transition;
-
-    &:hover {
-      border-color: transparent;
-      background-color: $yellow;
-    }
-  }
-
-  &.--yellow {
-    background-color: $yellow;
-    color: $black;
-    transition: color $base-transition, background-color $base-transition;
-
-    &:hover {
-      background-color: $black;
-      color: $white;
-    }
-  }
-
-  &.--violet {
-    background-image: linear-gradient(
-      90deg,
-      #06083d 0%,
-      #311166 22.24%,
-      #1f1871 60.71%,
-      #301550 100%
-    );
-    color: $white;
-    position: relative;
-    z-index: 1;
-    transition: opacity $base-transition;
-
-    &:before {
-      background-image: linear-gradient(
-        78.1deg,
-        #4b65cd 0.32%,
-        #af74e9 103.16%
-      );
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      width: 100%;
-      z-index: -1;
-      transition: opacity $base-transition;
-    }
-    &:hover {
-      &:before {
-        opacity: 1;
-      }
-    }
-  }
-
-  &.--light-yellow {
-    background-color: $light-yellow;
-    color: $black;
-    transition: background-color $base-transition;
-
-    &:hover {
-      background-color: $yellow;
-    }
-  }
+button {
+  @apply flex flex-row justify-center items-center py-10 px-40;
 }
-
-.ui-dropdown-button {
-  width: fit-content;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: em(20, 15);
-  text-decoration-line: underline;
-  color: #000000;
-  cursor: pointer;
-
+.button-black {
+  @apply bg-black text-white;
   &:hover {
-    text-decoration-line: none;
+    @apply  bg-yellow text-black;
+  }
+}
+.button-white {
+  @apply bg-white border border-black text-black;
+  &:hover {
+    @apply  bg-yellow text-black border-yellow;
+  }
+}
+.button-yellow {
+  @apply bg-yellow text-black;
+  &:hover {
+    @apply  bg-black text-white;
+  }
+}
+.button-yellow-full {
+  @apply bg-yellow bg-opacity-50 text-black px-70;
+  &:hover {
+    @apply  bg-opacity-100 text-black;
+  }
+}
+.button-yellow-full-hover {
+  @apply bg-yellow bg-opacity-100 text-black px-70;
+  &:hover {
+    @apply  bg-opacity-50  text-black;
   }
 }
 
-.test {
-  height: 20px;
-  width: 20px;
-  border: 1px solid red;
-  background-image: "@img/svg/icon20/black-arrow 2.svg";
+.button-purple {
+  @apply bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3  text-white;
+  &:hover {
+    @apply  bg-gradient-to-r from-purple-4 to-purple-5;
+  }
+}
+.button-purple-hover {
+  @apply bg-gradient-to-r  bg-gradient-to-r from-purple-4 to-purple-5  text-white;
+  &:hover {
+    @apply  bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3;
+  }
+}
+
+.circle-button {
+  @apply w-69 h-69 rounded-full m-6 flex items-center justify-center bg-card-stroke;
+  background-image: url("../../img/play.svg");
   background-repeat: no-repeat;
-  background-size: 20px;
-}
-
-.ui-text-hide-button {
-  width: fit-content;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: em(20, 15);
-  color: #000000;
-  cursor: pointer;
-  //img/svg/icon20/black-arrow_up.svg
-
-  &:after {
-    content: "";
-    display: block;
-    height: em(20, 15);
-    width: em(20, 15);
-    margin-left: em(20, 8);
-    // background-image: "/img/svg/icon20/black-arrow_up.svg";
-  }
-
-  &.--active:after {
-    content: "";
-    // background-image: "img/svg/icon20/black-arrow_down.svg";
+  background-position: 54%;
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/play-fill.svg");
   }
 }
+.circle-button-hover {
+  @apply w-69 h-69 rounded-full m-6 flex items-center justify-center bg-yellow;
+  background-image: url("../../img/play-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 54%;
+  &:hover {
+    @apply  bg-card-stroke;
+    background-image: url("../../img/play.svg");
+  }
+}
+
+//.ui-button {
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  width: em(158, 15);
+//  font-style: normal;
+//  font-weight: 500;
+//  font-size: 1.5em;
+//  line-height: em(20, 15);
+//  padding-top: em(9, 15);
+//  padding-bottom: em(9, 15);
+//  border: 1px solid transparent;
+//
+//  cursor: pointer;
+//
+//  &.--full-w {
+//    width: 100%;
+//  }
+//
+//  &.--black {
+//    color: $white;
+//    background-color: $black;
+//    transition: color $base-transition, background-color $base-transition;
+//
+//    &:hover {
+//      background-color: $yellow;
+//      color: $black;
+//    }
+//  }
+//
+//  &.--transparent {
+//    border-color: $black;
+//    background-color: transparent;
+//    color: $black;
+//    transition: border-color $base-transition, background-color $base-transition;
+//
+//    &:hover {
+//      border-color: transparent;
+//      background-color: $yellow;
+//    }
+//  }
+//
+//  &.--yellow {
+//    background-color: $yellow;
+//    color: $black;
+//    transition: color $base-transition, background-color $base-transition;
+//
+//    &:hover {
+//      background-color: $black;
+//      color: $white;
+//    }
+//  }
+//
+//  &.--violet {
+//    background-image: linear-gradient(
+//      90deg,
+//      #06083d 0%,
+//      #311166 22.24%,
+//      #1f1871 60.71%,
+//      #301550 100%
+//    );
+//    color: $white;
+//    position: relative;
+//    z-index: 1;
+//    transition: opacity $base-transition;
+//
+//    &:before {
+//      background-image: linear-gradient(
+//        78.1deg,
+//        #4b65cd 0.32%,
+//        #af74e9 103.16%
+//      );
+//      content: "";
+//      display: block;
+//      height: 100%;
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      opacity: 0;
+//      width: 100%;
+//      z-index: -1;
+//      transition: opacity $base-transition;
+//    }
+//    &:hover {
+//      &:before {
+//        opacity: 1;
+//      }
+//    }
+//  }
+//
+//  &.--light-yellow {
+//    background-color: $light-yellow;
+//    color: $black;
+//    transition: background-color $base-transition;
+//
+//    &:hover {
+//      background-color: $yellow;
+//    }
+//  }
+//}
+//
+//.ui-dropdown-button {
+//  width: fit-content;
+//  font-weight: 500;
+//  font-size: 15px;
+//  line-height: em(20, 15);
+//  text-decoration-line: underline;
+//  color: #000000;
+//  cursor: pointer;
+//
+//  &:hover {
+//    text-decoration-line: none;
+//  }
+//}
+//
+//.test {
+//  height: 20px;
+//  width: 20px;
+//  border: 1px solid red;
+//  background-image: "@img/svg/icon20/black-arrow 2.svg";
+//  background-repeat: no-repeat;
+//  background-size: 20px;
+//}
+//
+//.ui-text-hide-button {
+//  width: fit-content;
+//  font-weight: 500;
+//  font-size: 15px;
+//  line-height: em(20, 15);
+//  color: #000000;
+//  cursor: pointer;
+//  //img/svg/icon20/black-arrow_up.svg
+//
+//  &:after {
+//    content: "";
+//    display: block;
+//    height: em(20, 15);
+//    width: em(20, 15);
+//    margin-left: em(20, 8);
+//    // background-image: "/img/svg/icon20/black-arrow_up.svg";
+//  }
+//
+//  &.--active:after {
+//    content: "";
+//    // background-image: "img/svg/icon20/black-arrow_down.svg";
+//  }
+//}

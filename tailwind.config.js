@@ -27,7 +27,6 @@ module.exports = {
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
       xl : ["1.3rem","1.8rem"],
-      "1xl" : ["1.5rem","2rem"],
       "2xl" : ["2.1rem","2.4rem"],
       "3xl" : ["2.4rem", "2.8rem"],
       "4xl" : ["2.7rem", "3.2rem"],
@@ -36,6 +35,11 @@ module.exports = {
       "7xl": ["5.5rem", "6rem"]
     },
     colors: {
+      "purple-1": "#06083D",
+      "purple-2": "#311166",
+      "purple-3": "#1F1871",
+      "purple-4": "#4B65CD",
+      "purple-5": "#AF74E9",
       "blue-1": "#0070EA",
       "blue-2": "#4498FC",
       green: "#33C15B",
@@ -61,6 +65,7 @@ module.exports = {
       spacing: {
         4: "0.4rem",
         8: "0.8rem",
+        10: "1rem",
         12: "1.2rem",
         16: "1.6rem",
         20: "2rem",
@@ -76,6 +81,8 @@ module.exports = {
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",
+        69: "9.6rem",
+        70: "10rem",
       },
       borderRadius: {},
     },

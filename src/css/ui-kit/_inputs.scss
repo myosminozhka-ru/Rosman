@@ -1,34 +1,67 @@
-.ui-form-input {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: em(18, 13);
-  color: #808080;
-  border: 1px solid #d9d9d9;
-  padding: em(11, 13) em(9, 13);
-  outline: none;
-
-  &::placeholder {
-    color: #000000;
-  }
-
+.input {
+  @apply text-xl py-10 px-16 border border-card-stroke;
   &:hover {
-    border-color: $black;
+    @apply border-black;
   }
-
-  &:disabled:hover {
-    border-color: #d9d9d9;
+  &:active {
+    @apply border-black;
   }
-
   &:focus {
-    border-color: $black;
-    color: $black;
+    @apply border-black shadow-none ring-0 ring-black;
   }
-
-  &.--error {
-    border-color: $red;
+  &:disabled {
+    @apply text-grey border-grey shadow-none ring-0 ring-grey;
   }
-
-  &.--success {
-    border-color: $green;
+  &.hover {
+    @apply border-black;
+  }
+  &.input-active {
+    @apply border-black;
+  }
+  &.error {
+    @apply border-red;
+    background: url("../../img/error.png") no-repeat 90% 50%;
+  }
+  &.success {
+    @apply border-green;
+    background: url("../../img/success.png") no-repeat 90% 50%;
   }
 }
+
+
+
+
+//.ui-form-input {
+//  font-weight: 400;
+//  font-size: 13px;
+//  line-height: em(18, 13);
+//  color: #808080;
+//  border: 1px solid #d9d9d9;
+//  padding: em(11, 13) em(9, 13);
+//  outline: none;
+//
+//  &::placeholder {
+//    color: #000000;
+//  }
+//
+//  &:hover {
+//    border-color: $black;
+//  }
+//
+//  &:disabled:hover {
+//    border-color: #d9d9d9;
+//  }
+//
+//  &:focus {
+//    border-color: $black;
+//    color: $black;
+//  }
+//
+//  &.--error {
+//    border-color: $red;
+//  }
+//
+//  &.--success {
+//    border-color: $green;
+//  }
+//}
