@@ -25,7 +25,7 @@ button {
     @apply  bg-opacity-100 text-black;
   }
 }
-.button-yellow-full-hover {
+.button-yellow-full-hover-js {
   @apply bg-yellow bg-opacity-100 text-black px-70;
   &:hover {
     @apply  bg-opacity-50  text-black;
@@ -38,7 +38,7 @@ button {
     @apply  bg-gradient-to-r from-purple-4 to-purple-5;
   }
 }
-.button-purple-hover {
+.button-purple-hover-js {
   @apply bg-gradient-to-r  bg-gradient-to-r from-purple-4 to-purple-5  text-white;
   &:hover {
     @apply  bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3;
@@ -55,7 +55,7 @@ button {
     background-image: url("../../img/play-fill.svg");
   }
 }
-.circle-button-hover {
+.circle-button-hover-js {
   @apply w-69 h-69 rounded-full m-6 flex items-center justify-center bg-yellow;
   background-image: url("../../img/play-fill.svg");
   background-repeat: no-repeat;
@@ -65,6 +65,169 @@ button {
     background-image: url("../../img/play.svg");
   }
 }
+
+.overline-button {
+ @apply text-m underline;
+  &:hover {
+    @apply no-underline;
+  }
+}
+.overline-button-hover-js {
+  @apply text-m no-underline;
+  &:hover {
+    @apply underline;
+  }
+}
+.more-down {
+  @apply text-m;
+  span {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    margin-left: 10px;
+    transform: rotate(135deg);
+  }
+  &:active {
+    span {
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #000000;
+      border-right: 2px solid #000000;
+      margin-left: 10px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.more-down-active-js {
+  @apply text-m;
+  span {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+.category-btn {
+@apply border rounded-3xl border-card-stroke text-s justify-between py-2 px-6 w-100 font-normal;
+  span {
+    @apply invisible;
+  }
+  &:hover {
+    @apply border-yellow;
+  }
+  &:active {
+    @apply bg-yellow;
+    span {
+      background: url("../../img/close.svg") no-repeat 90% 40%;
+      @apply text-left inline w-40 ml-4;
+    }
+  }
+}
+.category-btn-hover-js {
+  @apply border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 font-normal;
+  span {
+    @apply invisible;
+  }
+}
+.category-btn-active-js {
+  @apply border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 bg-yellow font-normal;
+  span {
+    background: url("../../img/close.svg") no-repeat 90% 40%;
+    @apply text-left inline w-40 ml-4;
+  }
+}
+.filter-btn {
+  @apply border rounded-3xl border-card-stroke text-s  justify-between py-2 px-6 w-auto font-medium;
+  span {
+    @apply hidden;
+  }
+  &:hover {
+    @apply border-yellow;
+  }
+  &:active {
+    @apply bg-yellow;
+    span {
+      background: url("../../img/close.svg") no-repeat 90% 40%;
+      @apply text-left inline w-40 ml-4;
+    }
+  }
+}
+.filter-btn-hover-js {
+  @apply border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto font-medium;
+  span {
+    @apply hidden;
+  }
+}
+.filter-btn-active-js {
+  @apply border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto bg-yellow font-medium;
+  span {
+    background: url("../../img/close.svg") no-repeat 90% 40%;
+    @apply text-left inline w-40 ml-4;
+  }
+}
+.navigation {
+  @apply text-grey flex flex-row;
+  span {
+    @apply mr-8 text-text;
+  }
+  a {
+    @apply mr-8 text-text;
+    &.active-js {
+      @apply text-black;
+    }
+    &:hover {
+      @apply text-black;
+    }
+  }
+}
+
+.dropdown {
+  @apply relative inline-block bg-yellow  border-black border-2 h-44 w-full py-2 px-4 max-w-menu;
+  button {
+    @apply p-1 flex w-full justify-between text-l;
+  }
+  .icon {
+    @apply w-20 h-20;
+    background: url("../../img/menu-1.svg") no-repeat 90% 40%;
+  }
+  .content {
+    @apply hidden absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    a {
+      @apply p-1 flex w-full justify-start text-l;
+      .menu-icon-book {
+        @apply w-20 h-20;
+        background: url("../../img/book.svg") no-repeat 90% 40%;
+      }
+      .menu-icon-toys {
+        @apply w-20 h-20;
+        background: url("../../img/toys.svg") no-repeat 90% 40%;
+      }
+    }
+  }
+  .content-open-js {
+    @apply block absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    a {
+      @apply p-1 flex w-full justify-start text-l;
+      .menu-icon-book {
+        @apply w-20 h-20;
+        background: url("../../img/book.svg") no-repeat 90% 40%;
+      }
+      .menu-icon-toys {
+        @apply w-20 h-20;
+        background: url("../../img/toys.svg") no-repeat 90% 40%;
+      }
+    }
+  }
+  &:hover .content{
+    @apply block;
+  }
+}
+
 
 //.ui-button {
 //  display: flex;

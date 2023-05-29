@@ -19,6 +19,10 @@ module.exports = {
   content: ["./src/**/*.{html,js,php}"],
   darkMode: "class",
   theme: {
+    maxWidth: {
+      'menu': '115px',
+      'inner-menu': '166px',
+    },
     screens: {
       sm: { max: "639px" },
     },
@@ -83,6 +87,7 @@ module.exports = {
         68: "6.8rem",
         69: "9.6rem",
         70: "10rem",
+        100: "25.9rem",
       },
       borderRadius: {},
     },
