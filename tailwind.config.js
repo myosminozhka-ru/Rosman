@@ -20,7 +20,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      'menu': '115px',
+      'menu': '165px',
       'inner-menu': '166px',
     },
     screens: {
@@ -72,6 +72,7 @@ module.exports = {
         10: "1rem",
         12: "1.2rem",
         16: "1.6rem",
+        17: "1.7rem",
         20: "2rem",
         24: "2.4rem",
         28: "2.8rem",
