@@ -1,0 +1,41 @@
+.contact-us-ru-button-js {
+  @apply bg-yellow bg-opacity-50 px-70 text-black;
+  &:hover {
+    @apply bg-opacity-100 text-black;
+  }
+}
+
+.contact-us-ru-popup-js {
+  @apply border-2;
+  max-width: 72rem;
+  max-height: 47.2rem;
+}
+.content-contact-us-ru-popup-js {
+  @apply flex flex-col p-40;
+  grid-gap: 3.6rem;
+}
+.header_contact-us-ru-popup_js {
+  @apply flex flex-row items-center justify-between;
+}
+.text_contact-us-ru-popup_js {
+  @apply text-5xl font-medium;
+}
+.close_contact-us-ru-popup_js {
+  @apply h-20 w-20;
+  background: url("../../img/x.svg");
+}
+.body_contact-us-ru-popup_js {
+  @apply flex flex-col;
+  grid-gap: 2.4rem;
+}
+.item_text {
+  @apply text-2xl font-medium;
+}
+.item_contact-us-ru-popup_js {
+  @apply flex flex-row flex-nowrap items-center;
+  grid-gap: 1.2rem;
+}
+.popup-arrow {
+  @apply h-12 w-16;
+  background: url("../../img/popup_arrow.svg");
+}

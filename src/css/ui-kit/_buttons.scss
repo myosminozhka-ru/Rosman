@@ -1,52 +1,52 @@
 button {
-  @apply flex flex-row justify-center items-center py-10 px-40;
+  @apply flex flex-row items-center justify-center px-40 py-10;
 }
 .button-black {
   @apply bg-black text-white;
   &:hover {
-    @apply  bg-yellow text-black;
+    @apply bg-yellow text-black;
   }
 }
 .button-white {
-  @apply bg-white border border-black text-black;
+  @apply border border-black bg-white text-black;
   &:hover {
-    @apply  bg-yellow text-black border-yellow;
+    @apply border-yellow bg-yellow text-black;
   }
 }
 .button-yellow {
   @apply bg-yellow text-black;
   &:hover {
-    @apply  bg-black text-white;
+    @apply bg-black text-white;
   }
 }
 .button-yellow-full {
-  @apply bg-yellow bg-opacity-50 text-black px-70;
+  @apply bg-yellow bg-opacity-50 px-70 text-black;
   &:hover {
-    @apply  bg-opacity-100 text-black;
+    @apply bg-opacity-100 text-black;
   }
 }
 .button-yellow-full-hover-js {
-  @apply bg-yellow bg-opacity-100 text-black px-70;
+  @apply bg-yellow bg-opacity-100 px-70 text-black;
   &:hover {
-    @apply  bg-opacity-50  text-black;
+    @apply bg-opacity-50  text-black;
   }
 }
 
 .button-purple {
   @apply bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3  text-white;
   &:hover {
-    @apply  bg-gradient-to-r from-purple-4 to-purple-5;
+    @apply bg-gradient-to-r from-purple-4 to-purple-5;
   }
 }
 .button-purple-hover-js {
   @apply bg-gradient-to-r  bg-gradient-to-r from-purple-4 to-purple-5  text-white;
   &:hover {
-    @apply  bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3;
+    @apply bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3;
   }
 }
 
 .circle-button {
-  @apply w-69 h-69 rounded-full m-6 flex items-center justify-center bg-card-stroke;
+  @apply m-6 flex h-69 w-69 items-center justify-center rounded-full bg-card-stroke;
   background-image: url("../../img/play.svg");
   background-repeat: no-repeat;
   background-position: 54%;
@@ -56,18 +56,18 @@ button {
   }
 }
 .circle-button-hover-js {
-  @apply w-69 h-69 rounded-full m-6 flex items-center justify-center bg-yellow;
+  @apply m-6 flex h-69 w-69 items-center justify-center rounded-full bg-yellow;
   background-image: url("../../img/play-fill.svg");
   background-repeat: no-repeat;
   background-position: 54%;
   &:hover {
-    @apply  bg-card-stroke;
+    @apply bg-card-stroke;
     background-image: url("../../img/play.svg");
   }
 }
 
 .overline-button {
- @apply text-m underline;
+  @apply text-m underline;
   &:hover {
     @apply no-underline;
   }
@@ -113,7 +113,7 @@ button {
 }
 
 .category-btn {
-@apply border rounded-3xl border-card-stroke text-s justify-between py-2 px-6 w-100 font-normal;
+  @apply w-100 justify-between rounded-3xl border border-card-stroke px-6 py-2 text-s font-normal;
   span {
     @apply invisible;
   }
@@ -124,25 +124,25 @@ button {
     @apply bg-yellow;
     span {
       background: url("../../img/close.svg") no-repeat 90% 40%;
-      @apply text-left inline w-40 ml-4;
+      @apply ml-4 inline w-40 text-left;
     }
   }
 }
 .category-btn-hover-js {
-  @apply border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 font-normal;
+  @apply w-100 justify-between rounded-3xl border  border-yellow px-6 py-2 text-s font-normal;
   span {
     @apply invisible;
   }
 }
 .category-btn-active-js {
-  @apply border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 bg-yellow font-normal;
+  @apply w-100 justify-between rounded-3xl border  border-yellow bg-yellow px-6 py-2 text-s font-normal;
   span {
     background: url("../../img/close.svg") no-repeat 90% 40%;
-    @apply text-left inline w-40 ml-4;
+    @apply ml-4 inline w-40 text-left;
   }
 }
 .filter-btn {
-  @apply border rounded-3xl border-card-stroke text-s  justify-between py-2 px-6 w-auto font-medium;
+  @apply w-auto justify-between rounded-3xl border  border-card-stroke px-6 py-2 text-s font-medium;
   span {
     @apply hidden;
   }
@@ -153,25 +153,25 @@ button {
     @apply bg-yellow;
     span {
       background: url("../../img/close.svg") no-repeat 90% 40%;
-      @apply text-left inline w-40 ml-4;
+      @apply ml-4 inline w-40 text-left;
     }
   }
 }
 .filter-btn-hover-js {
-  @apply border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto font-medium;
+  @apply w-auto justify-between rounded-3xl border border-yellow px-6 py-2 text-s font-medium;
   span {
     @apply hidden;
   }
 }
 .filter-btn-active-js {
-  @apply border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto bg-yellow font-medium;
+  @apply w-auto justify-between rounded-3xl border border-yellow bg-yellow px-6 py-2 text-s font-medium;
   span {
     background: url("../../img/close.svg") no-repeat 90% 40%;
-    @apply text-left inline w-40 ml-4;
+    @apply ml-4 inline w-40 text-left;
   }
 }
 .navigation {
-  @apply text-grey flex flex-row;
+  @apply flex flex-row text-grey;
   span {
     @apply mr-8 text-text;
   }
@@ -187,47 +187,46 @@ button {
 }
 
 .dropdown {
-  @apply relative inline-block bg-yellow  border-black border-2 h-44 w-full py-2 px-4 max-w-menu;
+  @apply relative inline-block h-44  w-full max-w-menu border-2 border-black bg-yellow px-4 py-2;
   button {
-    @apply p-1 flex w-full justify-between text-l;
+    @apply flex w-full justify-between p-1 text-l;
   }
   .icon {
-    @apply w-20 h-20;
+    @apply h-20 w-20;
     background: url("../../img/menu-1.svg") no-repeat 90% 40%;
   }
   .content {
-    @apply hidden absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    @apply absolute z-10 hidden w-auto max-w-inner-menu bg-white p-12;
     a {
-      @apply p-1 flex w-full justify-start text-l;
+      @apply flex w-full justify-start p-1 text-l;
       .menu-icon-book {
-        @apply w-20 h-20;
+        @apply h-20 w-20;
         background: url("../../img/book.svg") no-repeat 90% 40%;
       }
       .menu-icon-toys {
-        @apply w-20 h-20;
+        @apply h-20 w-20;
         background: url("../../img/toys.svg") no-repeat 90% 40%;
       }
     }
   }
   .content-open-js {
-    @apply block absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    @apply absolute z-10 block w-auto max-w-inner-menu bg-white p-12;
     a {
-      @apply p-1 flex w-full justify-start text-l;
+      @apply flex w-full justify-start p-1 text-l;
       .menu-icon-book {
-        @apply w-20 h-20;
+        @apply h-20 w-20;
         background: url("../../img/book.svg") no-repeat 90% 40%;
       }
       .menu-icon-toys {
-        @apply w-20 h-20;
+        @apply h-20 w-20;
         background: url("../../img/toys.svg") no-repeat 90% 40%;
       }
     }
   }
-  &:hover .content{
+  &:hover .content {
     @apply block;
   }
 }
-
 
 //.ui-button {
 //  display: flex;

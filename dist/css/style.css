@@ -148,6 +148,9 @@
 .p-6 {
   padding: 1.5rem;
 }
+.pb-20 {
+  padding-bottom: 2rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -991,10 +994,10 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   padding-left: 4rem;
   padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .button-black {
@@ -1206,10 +1209,10 @@ button {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -1240,10 +1243,10 @@ button {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 241 69 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -1261,10 +1264,10 @@ button {
   border-color: rgb(255 241 69 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 241 69 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -1284,10 +1287,10 @@ button {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 500;
@@ -1318,10 +1321,10 @@ button {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 241 69 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 500;
@@ -1339,10 +1342,10 @@ button {
   border-color: rgb(255 241 69 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 241 69 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 500;
@@ -1391,10 +1394,10 @@ button {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 241 69 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .dropdown button {
   display: flex;
@@ -1467,4 +1470,76 @@ button {
 }
 .dropdown:hover .content {
   display: block;
+}
+
+.contact-us-ru-button-js {
+  background-color: rgb(255 241 69 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.contact-us-ru-button-js:hover {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.contact-us-ru-popup-js {
+  border-width: 2px;
+  max-width: 72rem;
+  max-height: 47.2rem;
+}
+
+.content-contact-us-ru-popup-js {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  grid-gap: 3.6rem;
+}
+
+.header_contact-us-ru-popup_js {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text_contact-us-ru-popup_js {
+  font-size: 3.4rem;
+  line-height: 4rem;
+  font-weight: 500;
+}
+
+.close_contact-us-ru-popup_js {
+  height: 2rem;
+  width: 2rem;
+  background: url("../../img/x.svg");
+}
+
+.body_contact-us-ru-popup_js {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2.4rem;
+}
+
+.item_text {
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+
+.item_contact-us-ru-popup_js {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-gap: 1.2rem;
+}
+
+.popup-arrow {
+  height: 1.2rem;
+  width: 1.6rem;
+  background: url("../../img/popup_arrow.svg");
 }

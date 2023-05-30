@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries")
+  containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -20,8 +20,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      'menu': '115px',
-      'inner-menu': '166px',
+      menu: "115px",
+      "inner-menu": "166px",
     },
     screens: {
       sm: { max: "639px" },
@@ -30,13 +30,13 @@ module.exports = {
       l: ["1.7rem", "2.4rem"],
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
-      xl : ["1.3rem","1.8rem"],
-      "2xl" : ["2.1rem","2.4rem"],
-      "3xl" : ["2.4rem", "2.8rem"],
-      "4xl" : ["2.7rem", "3.2rem"],
-      "5xl" : ["3.4rem", "4rem"],
-      "6xl" : ["4.3rem","4.8rem"],
-      "7xl": ["5.5rem", "6rem"]
+      xl: ["1.3rem", "1.8rem"],
+      "2xl": ["2.1rem", "2.4rem"],
+      "3xl": ["2.4rem", "2.8rem"],
+      "4xl": ["2.7rem", "3.2rem"],
+      "5xl": ["3.4rem", "4rem"],
+      "6xl": ["4.3rem", "4.8rem"],
+      "7xl": ["5.5rem", "6rem"],
     },
     colors: {
       "purple-1": "#06083D",
@@ -63,7 +63,7 @@ module.exports = {
     fontFamily: {
       // sans: ['Graphik', 'sans-serif'],
       // serif: ['Merriweather', 'serif'],
-      'tt-hoves-pro': ["TT Hoves Pro", 'sans-serif']
+      "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
       spacing: {
