@@ -243,6 +243,52 @@ button {
   }
 }
 
+.collapse-q {
+  @apply w-3/5;
+  .collapse-button {
+    @apply flex text-l flex-row items-center justify-between w-full p-24 bg-background border-none	text-left cursor-pointer transition-all duration-500 ease-out;
+    span {
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #000000;
+      border-right: 2px solid #000000;
+      margin-left: 10px;
+      transform: rotate(135deg);
+      transition: all 0.5s ease-out;
+    }
+    &.active {
+      @apply bg-yellow;
+      span {
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #000000;
+        border-right: 2px solid #000000;
+        margin-left: 10px;
+        transform: rotate(-45deg);
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+  .collapse-content {
+    @apply block text-l bg-white h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out;
+    p {
+      @apply m-0 text-l;
+    }
+    &.active {
+      @apply  p-6 opacity-100 h-68 transition-all duration-500 ease-out;
+      span {
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #000000;
+        border-right: 2px solid #000000;
+        margin-left: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+
 //.ui-button {
 //  display: flex;
 //  align-items: center;
