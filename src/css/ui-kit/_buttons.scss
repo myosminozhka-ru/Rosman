@@ -35,10 +35,11 @@ button {
 
 
 .circle-button {
-  @apply flex flex-row justify-center items-center py-10 px-40 w-69 h-69 rounded-full m-6 flex items-center justify-center bg-card-stroke;
+  @apply flex flex-row justify-center items-center py-10 px-20 w-64 h-64 rounded-full m-6 flex items-center justify-center bg-card-stroke;
   background-image: url("../../img/play.svg");
   background-repeat: no-repeat;
-  background-position: 54%;
+  background-position: 54% 50%;
+  background-size: 30px 30px;
   &:hover {
     @apply bg-yellow;
     background-image: url("../../img/play-fill.svg");

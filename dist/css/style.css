@@ -1115,8 +1115,8 @@ button {
 .circle-button {
   margin: 1.5rem;
   display: flex;
-  height: 9.6rem;
-  width: 9.6rem;
+  height: 6.4rem;
+  width: 6.4rem;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -1125,11 +1125,12 @@ button {
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-image: url("../../img/play.svg");
   background-repeat: no-repeat;
-  background-position: 54%;
+  background-position: 54% 50%;
+  background-size: 30px 30px;
 }
 .circle-button:hover {
   --tw-bg-opacity: 1;
