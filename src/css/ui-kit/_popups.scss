@@ -1,41 +1,267 @@
-.contact-us-ru-button-js {
-  @apply bg-yellow bg-opacity-50 px-70 text-black;
+.popup-btn {
+  @apply mb-32 bg-yellow bg-opacity-50 px-70 text-black;
   &:hover {
     @apply bg-opacity-100 text-black;
   }
 }
-
-.contact-us-ru-popup-js {
-  @apply border-2;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  &.--active {
+    display: block;
+  }
+}
+.popup_contact_us_content {
+  @apply flex flex-col bg-white p-40;
   max-width: 72rem;
-  max-height: 47.2rem;
-}
-.content-contact-us-ru-popup-js {
-  @apply flex flex-col p-40;
   grid-gap: 3.6rem;
+  position: relative;
+  margin: auto;
+  @media screen and (max-width: 500px) {
+    @apply m-20 p-16;
+  }
+  @media (min-width: 501px) and (max-width: 800px) {
+    @apply m-20 p-16;
+  }
 }
-.header_contact-us-ru-popup_js {
+.popup_contact_us_header {
   @apply flex flex-row items-center justify-between;
 }
-.text_contact-us-ru-popup_js {
-  @apply text-5xl font-medium;
+.popup_contact_us_text {
+  @apply text-5xl;
+  @media screen and (max-width: 500px) {
+    @apply text-3xl;
+  }
 }
-.close_contact-us-ru-popup_js {
-  @apply h-20 w-20;
-  background: url("../../img/x.svg");
+.js_popup_contact_us_close_button {
+  @apply h-20 w-20 cursor-pointer;
+  background: url("../../img/x.svg") no-repeat;
 }
-.body_contact-us-ru-popup_js {
+.js_contact_us_popup_body {
   @apply flex flex-col;
   grid-gap: 2.4rem;
+  @media screen and (max-width: 500px) {
+    grid-gap: 1.6rem;
+  }
 }
-.item_text {
+.contact_us_popup_item_text {
   @apply text-2xl font-medium;
+  @media screen and (max-width: 500px) {
+    @apply text-15.20;
+  }
 }
-.item_contact-us-ru-popup_js {
-  @apply flex flex-row flex-nowrap items-center;
+.contact_us_popup_item {
+  @apply flex cursor-pointer flex-row flex-nowrap items-center;
   grid-gap: 1.2rem;
 }
-.popup-arrow {
+.contact_us_popup_item_arrow {
   @apply h-12 w-16;
-  background: url("../../img/popup_arrow.svg");
+  background: url("../../img/popup_arrow.svg") no-repeat;
+  @media screen and (max-width: 500px) {
+    @apply h-16 w-16;
+  }
+}
+
+// blockchain popups
+
+.popup_blockchain_content {
+  @apply relative flex flex-col items-end bg-white p-48;
+  max-width: 55.6rem;
+  grid-gap: 3.6rem;
+  margin: auto;
+  @media screen and (max-width: 600px) {
+    margin: 0 20px;
+    padding: 16px;
+  }
+}
+.js_popup_blockchain_close_button {
+  @apply h-20 w-20 cursor-pointer;
+  background: url("../../img/x.svg") no-repeat;
+}
+.popup_blockchain_body {
+  @apply flex flex-col;
+  grid-gap: 4rem;
+}
+.popup_blockchain_text_fields {
+  @apply flex flex-col;
+  grid-gap: 3.2rem;
+  @media screen and (max-width: 600px) {
+    grid-gap: 1.6rem;
+  }
+}
+.popup_blockchain_main_info {
+  @apply flex flex-col;
+  grid-gap: 1.6rem;
+}
+.popup_blockchain_header {
+  @apply text-5xl;
+  @media screen and (max-width: 600px) {
+    @apply text-3xl;
+  }
+}
+.popup_blockchain_description {
+  @apply text-2.5xl;
+  @media screen and (max-width: 600px) {
+    @apply text-15.20;
+  }
+}
+
+.popup_blockchain_transaction_info {
+  @apply flex flex-col bg-background p-24;
+  grid-gap: 1.3rem;
+}
+.popup_blockchain_transaction_info_items {
+  @apply flex flex-row items-center justify-between;
+}
+.popup_blockchain_transaction_info_header {
+  @apply text-3xl;
+  @media screen and (max-width: 600px) {
+    @apply text-2xl;
+  }
+}
+.popup_blockchain_transaction_info_images {
+  @apply flex flex-row gap-2;
+}
+.popup_blockchain_transaction_info_question_img {
+  @apply block h-24 w-24 cursor-pointer;
+  border: 1px solid #d9d9d9;
+  background: url("../../img/question.svg") no-repeat center;
+  background-size: contain;
+}
+.popup_blockchain_transaction_info_cards {
+  @apply block h-24 w-24 cursor-pointer;
+  border: 1px solid #d9d9d9;
+  background: url("../../img/cards.svg") no-repeat center;
+  background-size: contain;
+}
+.popup_blockchain_transaction_info_number {
+  @apply text-2.5xl;
+  max-width: 40rem;
+  word-break: break-all;
+  @media screen and (max-width: 600px) {
+    @apply text-15.20;
+  }
+}
+
+.popup_blockchain_go_out_buttons {
+  @apply flex flex-row justify-center gap-24;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    grid-gap: 0.6rem;
+  }
+}
+
+.go-out-btn {
+  @apply flex-grow text-15.20;
+  flex-basis: 0;
+}
+.popup_blockchain_etherscan_button {
+  @apply bg-black text-white;
+}
+.popup_blockchain_opensea_button {
+  border: 1px solid #000000;
+}
+.go_out_black_img {
+  @apply block h-24 w-24 cursor-pointer pl-32;
+  background: url("../../img/go_out_white.svg") no-repeat center;
+  background-size: contain;
+}
+.go_out_white_img {
+  @apply block h-24 w-24 cursor-pointer pl-32;
+  background: url("../../img/go_out_black.svg") no-repeat center;
+  background-size: contain;
+}
+
+// пятый попап - описание бренда
+.js_popup_brand_description {
+}
+// -
+.popup_brand_description_content {
+  @apply flex flex-col bg-white p-32;
+  max-width: 61rem;
+  grid-gap: 2.4rem;
+  position: relative;
+  margin: auto;
+  @media screen and (max-width: 500px) {
+    @apply m-28 p-16;
+  }
+  @media (min-width: 501px) and (max-width: 800px) {
+    @apply m-28 p-16;
+  }
+}
+.popup_brand_description_heading {
+  @apply flex flex-row items-start justify-between gap-24 text-5xl;
+  font-weight: 500;
+  @media screen and (max-width: 500px) {
+    @apply text-2xl;
+    font-weight: 500;
+  }
+}
+.heading_main {
+  @apply flex flex-row items-center gap-24;
+}
+.popup_brand_description_image {
+  @apply block;
+  width: 14rem;
+  height: 14rem;
+  background: url("../../img/brand_name.svg") no-repeat center;
+  background-size: contain;
+  @media screen and (max-width: 500px) {
+    @apply h-60 w-60;
+  }
+}
+.popup_brand_description_header {
+}
+.js_popup_brand_description_close_button {
+  @apply h-20 w-20 cursor-pointer;
+  background: url("../../img/x.svg") no-repeat;
+}
+// --
+.popup_brand_description_info {
+  @apply flex flex-col gap-16;
+}
+.description_info_text {
+  @apply text-15.20;
+}
+.popup_brand_description_info_one {
+}
+.popup_brand_description_info_two {
+}
+.popup_brand_description_info_three {
+}
+
+// ---
+.popup_brand_description_socials {
+  @apply flex flex-row gap-24;
+  @media screen and (max-width: 500px) {
+    @apply h-12 w-12;
+  }
+}
+.popup_brand_description_vk {
+  @apply block h-16 w-16 cursor-pointer pl-32;
+  background: url("../../img/vkcom.svg") no-repeat center;
+  background-size: contain;
+}
+.popup_brand_description_tiktok {
+  @apply block h-16 w-16 cursor-pointer pl-32;
+  background: url("../../img/tiktok.svg") no-repeat center;
+  background-size: contain;
+}
+.popup_brand_description_youtube {
+  @apply block h-16 w-16 cursor-pointer pl-32;
+  background: url("../../img/youtube.svg") no-repeat center;
+  background-size: contain;
+}
+
+// ----
+.popup_brand_description_site {
 }

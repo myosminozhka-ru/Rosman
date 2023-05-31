@@ -148,9 +148,6 @@
 .p-6 {
   padding: 1.5rem;
 }
-.pb-20 {
-  padding-bottom: 2rem;
-}
 .font-bold {
   font-weight: 700;
 }
@@ -929,13 +926,15 @@ p {
   font-weight: 400;
 }
 
-.body-l, .body-l-bold {
+.body-l,
+.body-l-bold {
   font-size: 1.7rem;
   line-height: 2.4rem;
 }
 
 @media (max-width: 639px) {
-  .body-l, .body-l-bold {
+  .body-l,
+.body-l-bold {
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -945,7 +944,8 @@ p {
   font-weight: 700;
 }
 
-.body-m, .body-m-bold {
+.body-m,
+.body-m-bold {
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -954,7 +954,8 @@ p {
   font-weight: 700;
 }
 
-.body-s, .body-s-bold {
+.body-s,
+.body-s-bold {
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
@@ -969,13 +970,23 @@ p {
 }
 
 .link-m {
+  cursor: pointer;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 400;
   text-decoration-line: underline;
 }
 
+.link-m-bold {
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+
 .link-s {
+  cursor: pointer;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -983,6 +994,7 @@ p {
 }
 
 .link-s-bold {
+  cursor: pointer;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 500;
@@ -1472,7 +1484,8 @@ button {
   display: block;
 }
 
-.contact-us-ru-button-js {
+.popup-btn {
+  margin-bottom: 3.2rem;
   background-color: rgb(255 241 69 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
   padding-left: 10rem;
@@ -1480,66 +1493,429 @@ button {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.contact-us-ru-button-js:hover {
+.popup-btn:hover {
   --tw-bg-opacity: 1;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.contact-us-ru-popup-js {
-  border-width: 2px;
-  max-width: 72rem;
-  max-height: 47.2rem;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.--active {
+  display: block;
 }
 
-.content-contact-us-ru-popup-js {
+.popup_contact_us_content {
   display: flex;
   flex-direction: column;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 4rem;
+  max-width: 72rem;
   grid-gap: 3.6rem;
+  position: relative;
+  margin: auto;
+}
+@media screen and (max-width: 500px) {
+  .popup_contact_us_content {
+    margin: 2rem;
+    padding: 1.6rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  .popup_contact_us_content {
+    margin: 2rem;
+    padding: 1.6rem;
+  }
 }
 
-.header_contact-us-ru-popup_js {
+.popup_contact_us_header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.text_contact-us-ru-popup_js {
+.popup_contact_us_text {
   font-size: 3.4rem;
   line-height: 4rem;
-  font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+  .popup_contact_us_text {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
 }
 
-.close_contact-us-ru-popup_js {
+.js_popup_contact_us_close_button {
   height: 2rem;
   width: 2rem;
-  background: url("../../img/x.svg");
+  cursor: pointer;
+  background: url("../../img/x.svg") no-repeat;
 }
 
-.body_contact-us-ru-popup_js {
+.js_contact_us_popup_body {
   display: flex;
   flex-direction: column;
   grid-gap: 2.4rem;
 }
+@media screen and (max-width: 500px) {
+  .js_contact_us_popup_body {
+    grid-gap: 1.6rem;
+  }
+}
 
-.item_text {
+.contact_us_popup_item_text {
   font-size: 2.1rem;
   line-height: 2.4rem;
   font-weight: 500;
 }
+@media screen and (max-width: 500px) {
+  .contact_us_popup_item_text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
-.item_contact-us-ru-popup_js {
+.contact_us_popup_item {
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   grid-gap: 1.2rem;
 }
 
-.popup-arrow {
+.contact_us_popup_item_arrow {
   height: 1.2rem;
   width: 1.6rem;
-  background: url("../../img/popup_arrow.svg");
+  background: url("../../img/popup_arrow.svg") no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .contact_us_popup_item_arrow {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+.popup_blockchain_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 4.8rem;
+  max-width: 55.6rem;
+  grid-gap: 3.6rem;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_content {
+    margin: 0 20px;
+    padding: 16px;
+  }
+}
+
+.js_popup_blockchain_close_button {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  background: url("../../img/x.svg") no-repeat;
+}
+
+.popup_blockchain_body {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4rem;
+}
+
+.popup_blockchain_text_fields {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 3.2rem;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_text_fields {
+    grid-gap: 1.6rem;
+  }
+}
+
+.popup_blockchain_main_info {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1.6rem;
+}
+
+.popup_blockchain_header {
+  font-size: 3.4rem;
+  line-height: 4rem;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_header {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.popup_blockchain_description {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.popup_blockchain_transaction_info {
+  display: flex;
+  flex-direction: column;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  padding: 2.4rem;
+  grid-gap: 1.3rem;
+}
+
+.popup_blockchain_transaction_info_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup_blockchain_transaction_info_header {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_transaction_info_header {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.popup_blockchain_transaction_info_images {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.popup_blockchain_transaction_info_question_img {
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  background: url("../../img/question.svg") no-repeat center;
+  background-size: contain;
+}
+
+.popup_blockchain_transaction_info_cards {
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  background: url("../../img/cards.svg") no-repeat center;
+  background-size: contain;
+}
+
+.popup_blockchain_transaction_info_number {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  max-width: 40rem;
+  word-break: break-all;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_transaction_info_number {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.popup_blockchain_go_out_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2.4rem;
+}
+@media screen and (max-width: 600px) {
+  .popup_blockchain_go_out_buttons {
+    flex-direction: column;
+    grid-gap: 0.6rem;
+  }
+}
+
+.go-out-btn {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  flex-basis: 0;
+}
+
+.popup_blockchain_etherscan_button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.popup_blockchain_opensea_button {
+  border: 1px solid #000000;
+}
+
+.go_out_black_img {
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+  padding-left: 3.2rem;
+  background: url("../../img/go_out_white.svg") no-repeat center;
+  background-size: contain;
+}
+
+.go_out_white_img {
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+  padding-left: 3.2rem;
+  background: url("../../img/go_out_black.svg") no-repeat center;
+  background-size: contain;
+}
+
+.popup_brand_description_content {
+  display: flex;
+  flex-direction: column;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 3.2rem;
+  max-width: 61rem;
+  grid-gap: 2.4rem;
+  position: relative;
+  margin: auto;
+}
+@media screen and (max-width: 500px) {
+  .popup_brand_description_content {
+    margin: 2.8rem;
+    padding: 1.6rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  .popup_brand_description_content {
+    margin: 2.8rem;
+    padding: 1.6rem;
+  }
+}
+
+.popup_brand_description_heading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.4rem;
+  font-size: 3.4rem;
+  line-height: 4rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+  .popup_brand_description_heading {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+  }
+}
+
+.heading_main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.popup_brand_description_image {
+  display: block;
+  width: 14rem;
+  height: 14rem;
+  background: url("../../img/brand_name.svg") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 500px) {
+  .popup_brand_description_image {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+.js_popup_brand_description_close_button {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  background: url("../../img/x.svg") no-repeat;
+}
+
+.popup_brand_description_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.description_info_text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.popup_brand_description_socials {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+@media screen and (max-width: 500px) {
+  .popup_brand_description_socials {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+
+.popup_brand_description_vk {
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  padding-left: 3.2rem;
+  background: url("../../img/vkcom.svg") no-repeat center;
+  background-size: contain;
+}
+
+.popup_brand_description_tiktok {
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  padding-left: 3.2rem;
+  background: url("../../img/tiktok.svg") no-repeat center;
+  background-size: contain;
+}
+
+.popup_brand_description_youtube {
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  padding-left: 3.2rem;
+  background: url("../../img/youtube.svg") no-repeat center;
+  background-size: contain;
 }
