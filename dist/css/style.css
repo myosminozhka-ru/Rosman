@@ -15,15 +15,6 @@
 .mr-12 {
   margin-right: 1.2rem;
 }
-.mt-32 {
-  margin-top: 3.2rem;
-}
-.mt-44 {
-  margin-top: 4.4rem;
-}
-.mt-48 {
-  margin-top: 4.8rem;
-}
 .mt-52 {
   margin-top: 5.2rem;
 }
@@ -747,17 +738,17 @@ select {
 @font-face {
   font-weight: 400;
   font-family: "TT Hoves Pro";
-  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Medium.ttf");
+  src: url("../fonts/TT Hoves Pro/TTF/TT Hoves Pro Medium.ttf");
 }
 @font-face {
   font-weight: 500;
   font-family: "TT Hoves Pro";
-  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
+  src: url("../fonts/TT Hoves Pro/TTF/TT Hoves Pro Regular.ttf");
 }
 @font-face {
   font-style: italic;
   font-family: "TT Hoves Pro";
-  src: url("src/fonts/TT Hoves Pro/TTF/TT Hoves Pro Italic.ttf");
+  src: url("../fonts/TT Hoves Pro/TTF/TT Hoves Pro Italic.ttf");
 }
 html {
   font-size: 65.2%;
@@ -1548,9 +1539,8 @@ button {
   font-size: 1.7rem;
   line-height: 2.4rem;
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .collapse-q .collapse-button span {
   width: 8px;
@@ -1559,7 +1549,7 @@ button {
   border-right: 2px solid #000000;
   margin-left: 10px;
   transform: rotate(135deg);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .collapse-q .collapse-button.active {
   --tw-bg-opacity: 1;
@@ -1572,7 +1562,7 @@ button {
   border-right: 2px solid #000000;
   margin-left: 10px;
   transform: rotate(-45deg);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .collapse-q .collapse-content {
   display: block;
@@ -1580,13 +1570,16 @@ button {
   overflow: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-size: 1.7rem;
   line-height: 2.4rem;
   opacity: 0;
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .collapse-q .collapse-content p {
   margin: 0px;
@@ -1595,12 +1588,12 @@ button {
 }
 .collapse-q .collapse-content.active {
   height: 6.8rem;
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   opacity: 1;
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .collapse-q .collapse-content.active span {
   width: 8px;
