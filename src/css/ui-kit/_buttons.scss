@@ -90,62 +90,55 @@ button {
 
 .category-checkbox {
   @apply hidden;
-}
-.category-label {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-card-stroke text-s justify-between py-2 px-6 w-100 font-normal;
-  span {
-    @apply invisible;
-  }
-  &:hover {
-    @apply border-yellow;
-  }
-  &:active {
+  &:checked + .category-label {
     @apply bg-yellow;
-    span {
+    .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 20px 15px;
-      @apply text-left inline w-40 h-17 ml-4;
+      width: 20px;
+      height: 15px;
+      @apply inline text-left inline  ml-4;
+    }
+    .count {
+      @apply text-s font-normal	 inline text-left inline w-auto ml-4;
     }
   }
 }
-
-.category-checkbox-active-js {
-  @apply hidden;
-}
-.category-label-active-js {
-  @apply flex flex-row justify-center items-center  border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 bg-yellow font-normal;
-  span {
-    background: url("../../img/close.svg") no-repeat center right;
-    background-size: 20px 15px;
-    @apply text-left inline w-40 h-17 ml-4;
-  }
-}
-.filter-btn {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-card-stroke text-s  justify-between py-2 px-6 w-auto font-medium;
+.category-label {
+  @apply flex flex-row items-center border rounded-3xl border-card-stroke text-s justify-between h-24 px-6 w-100 font-normal;
   span {
     @apply hidden;
   }
   &:hover {
     @apply border-yellow;
   }
-  &:active {
+}
+.filter-checkbox {
+  @apply hidden;
+  &:checked + .filter-label {
     @apply bg-yellow;
-    span {
+    .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 20px 15px;
-      @apply text-left inline w-40 h-17 ml-4;
+      width: 20px;
+      height: 15px;
+      @apply inline text-left inline  ml-4;
+    }
+    .count {
+      @apply text-s font-normal	 inline text-left inline w-auto ml-4;
     }
   }
 }
-
-.filter-btn-active-js {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto bg-yellow font-medium;
+.filter-label {
+  @apply flex flex-row  items-center border rounded-3xl border-card-stroke  text-s justify-between h-24 px-6 w-auto font-semibold;
   span {
-    background: url("../../img/close.svg") no-repeat center right;
-    background-size: 20px 15px;
-    @apply text-left inline w-40 h-17 ml-4;
+    @apply hidden;
+  }
+  &:hover {
+    @apply border-yellow;
   }
 }
+
 .breadcrumbs {
   @apply text-grey flex flex-row;
   span {
