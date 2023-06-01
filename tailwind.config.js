@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries"),
+  containerQueries: require("@tailwindcss/container-queries")
 };
 
 const plugins = Object.keys(allPlugins)
@@ -20,8 +20,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      menu: "115px",
-      "inner-menu": "166px",
+      'menu': '165px',
+      'inner-menu': '216px',
     },
     screens: {
       sm: { max: "639px" },
@@ -65,7 +65,7 @@ module.exports = {
     fontFamily: {
       // sans: ['Graphik', 'sans-serif'],
       // serif: ['Merriweather', 'serif'],
-      "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
+      'tt-hoves-pro': ["TT Hoves Pro", 'sans-serif']
     },
     extend: {
       spacing: {
@@ -73,22 +73,33 @@ module.exports = {
         8: "0.8rem",
         10: "1rem",
         12: "1.2rem",
+        14: "1.4rem",
         16: "1.6rem",
+        17: "1.7rem",
+        18: "1.8rem",
         20: "2rem",
+        21: "2.1rem",
         24: "2.4rem",
+        26: "2.6rem",
         28: "2.8rem",
         32: "3.2rem",
+        34: "3.4rem",
         36: "3.6rem",
         40: "4rem",
         44: "4.4rem",
         48: "4.8rem",
+        50: "5rem",
         52: "5.2rem",
+        55: "5.5rem",
         56: "5.6rem",
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",
-        69: "9.6rem",
+        90: "9rem",
+        95: "9.5rem",
+        96: "9.6rem",
         70: "10rem",
+        74: "14rem",
         100: "25.9rem",
       },
       borderRadius: {},
