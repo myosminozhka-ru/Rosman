@@ -20,7 +20,7 @@ button {
   }
 }
 .button-yellow-full {
-  @apply flex flex-row justify-center items-center py-10 bg-yellow bg-opacity-50 text-black px-70;
+  @apply flex flex-row justify-center items-center py-10 bg-yellow bg-opacity-50 text-black px-90 mx-auto;
   &:hover {
     @apply  bg-opacity-100 text-black;
   }
@@ -54,8 +54,8 @@ button {
   }
 }
 
-.more-down {
-  @apply flex flex-row justify-center items-center py-10 px-40 text-m;
+.more-down-button {
+  @apply flex flex-row justify-center items-center p-10 text-left cursor-pointer transition-all duration-500 text-m;
   span {
     width: 8px;
     height: 8px;
@@ -64,7 +64,7 @@ button {
     margin-left: 10px;
     transform: rotate(135deg);
   }
-  &:active {
+  &.active-js {
     span {
       width: 8px;
       height: 8px;
@@ -73,6 +73,12 @@ button {
       margin-left: 10px;
       transform: rotate(-45deg);
     }
+  }
+}
+.more-down-content {
+  @apply p-2 hidden;
+  &.active-js {
+    @apply block;
   }
 }
 
@@ -88,64 +94,110 @@ button {
   }
 }
 
-.category-checkbox {
+.sort-checkbox {
   @apply hidden;
-}
-.category-label {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-card-stroke text-s justify-between py-2 px-6 w-100 font-normal;
-  span {
-    @apply invisible;
-  }
-  &:hover {
-    @apply border-yellow;
-  }
-  &:active {
+  &:checked + .sort-label {
     @apply bg-yellow;
-    span {
+    .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 20px 15px;
-      @apply text-left inline w-40 h-17 ml-4;
+      width: 20px;
+      height: 15px;
+      @apply inline text-left inline  ml-4;
+    }
+    .count {
+      @apply text-s font-normal	 inline text-left inline w-auto ml-4;
     }
   }
 }
-
-.category-checkbox-active-js {
-  @apply hidden;
-}
-.category-label-active-js {
-  @apply flex flex-row justify-center items-center  border rounded-3xl border-yellow text-s  justify-between py-2 px-6 w-100 bg-yellow font-normal;
-  span {
-    background: url("../../img/close.svg") no-repeat center right;
-    background-size: 20px 15px;
-    @apply text-left inline w-40 h-17 ml-4;
-  }
-}
-.filter-btn {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-card-stroke text-s  justify-between py-2 px-6 w-auto font-medium;
+.sort-label {
+  @apply flex flex-row items-center border rounded-3xl border-card-stroke text-s justify-between h-24 px-6 my-14 w-100 font-normal;
   span {
     @apply hidden;
   }
   &:hover {
     @apply border-yellow;
   }
-  &:active {
+}
+.filter-checkbox {
+  @apply hidden;
+  &:checked + .filter-label {
     @apply bg-yellow;
-    span {
+    .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 20px 15px;
-      @apply text-left inline w-40 h-17 ml-4;
+      width: 20px;
+      height: 15px;
+      @apply inline text-left inline  ml-4;
+    }
+    .count {
+      @apply text-s font-normal	 inline text-left inline w-auto ml-4;
     }
   }
 }
-
-.filter-btn-active-js {
-  @apply flex flex-row justify-center items-center border rounded-3xl border-yellow text-s justify-between py-2 px-6 w-auto bg-yellow font-medium;
+.filter-label {
+  @apply inline-flex my-8 mx-4 flex-row  items-center border rounded-3xl border-card-stroke  text-s justify-between h-24 px-6 w-auto font-semibold;
+  &.age {
+    @apply w-55 justify-center;
+  }
   span {
-    background: url("../../img/close.svg") no-repeat center right;
-    background-size: 20px 15px;
-    @apply text-left inline w-40 h-17 ml-4;
+    @apply hidden;
+  }
+  &:hover {
+    @apply border-yellow;
   }
 }
+.checkbox-container {
+  @apply flex items-center cursor-pointer text-black text-l my-10;
+  input[type="radio"] {
+   @apply hidden;
+  }
+  input[type="radio"]:checked + .checkmark {
+    @apply bg-yellow border-none;
+  }
+  input[type="radio"]:checked + .checkmark::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 10px;
+  }
+  .checkmark {
+    @apply inline-block w-18 h-18 rounded-full  border-2 border-black border-solid mr-2;
+  }
+}
+.toggle-switch {
+  @apply inline-block relative w-34 h-16 my-10;
+  input[type="checkbox"] {
+  @apply hidden;
+    &:checked + .slider {
+      @apply bg-yellow;
+    }
+    &:checked + .slider:before {
+      transform: translateX(30px);
+      background-color: #000000;
+    }
+  }
+
+  .slider {
+    @apply absolute top-0 left-0 right-0 bottom-0 cursor-pointer bg-grey rounded-3xl transition-all duration-300;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+  }
+}
+
 .breadcrumbs {
   @apply text-grey flex flex-row;
   span {
@@ -165,7 +217,7 @@ button {
 .dropdown {
   @apply  relative inline-block bg-yellow  border-black border-2 h-44 w-auto py-2 px-4 max-w-menu;
   button {
-    @apply flex flex-row justify-center items-center  p-1 flex w-full justify-between text-l;
+    @apply flex flex-row  items-center  p-1 pb-16 flex w-full justify-between text-l;
   }
   .icon {
     @apply w-24 h-24 mb-1;
@@ -173,7 +225,7 @@ button {
     background-size: contain;
   }
   .content {
-    @apply hidden absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    @apply hidden absolute w-auto max-w-inner-menu z-50	 bg-white p-12;
     a {
       @apply p-1 flex w-full justify-start text-l;
       .menu-icon-book {
@@ -191,7 +243,7 @@ button {
     }
   }
   .content-open-js {
-    @apply block absolute w-auto max-w-inner-menu z-10 bg-white p-12;
+    @apply block absolute w-auto max-w-inner-menu z-50 bg-white p-12;
     a {
       @apply p-1 flex w-full justify-start text-l;
       .menu-icon-book {
@@ -249,7 +301,6 @@ button {
     }
   }
 }
-
 .collapse-q {
   @apply w-3/5;
   .collapse-button {
@@ -294,7 +345,6 @@ button {
     }
   }
 }
-
 
 //.ui-button {
 //  display: flex;

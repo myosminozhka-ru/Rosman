@@ -55,54 +55,97 @@
   <div class="flex flex-col items-center justify-center">
     <div class="my-4 flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Default</span>
-      <button class="more-down">Подробное описание характеристики<span></span></button> <!--  more-down -->
-    </div>
-
-    <div class="my-4 flex justify-between">
-      <span class="w-68 mr-12 my-auto head-6">Active</span>
-      <button class="more-down-active-js">Подробное описание характеристики<span></span></button>
+      <div class="more-down">
+        <button class="more-down-button out">Подробное описание характеристики<span></span></button> <!--  more-down -->
+        <div class="more-down-content out">
+          <p>Содержимое 1</p>
+        </div>
+        <button class="more-down-button out">Подробное описание характеристики<span></span></button> <!--  more-down -->
+        <div class="more-down-content out">
+          <p>Содержимое 2</p>
+        </div>
+      </div>
+      <div class="more-down">
+        <button class="more-down-button">Подробное описание характеристики<span></span></button> <!--  more-down -->
+        <div class="more-down-content">
+          <p>Содержимое 1</p>
+        </div>
+        <button class="more-down-button">Подробное описание характеристики<span></span></button> <!--  more-down -->
+        <div class="more-down-content">
+          <p>Содержимое 2</p>
+        </div>
+      </div>
+      <div class="more-down-filters">
+        <button class="more-down-button">Фильтр<span></span></button> <!--  more-down -->
+        <div class="more-down-content">
+          <p>Содержимое 1</p>
+        </div>
+        <button class="more-down-button">Сначала новые<span></span></button> <!--  more-down -->
+        <div class="more-down-content">
+          <p>Содержимое 2</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="p-12 flex justify-around">
   <div class="flex flex-col items-center justify-center">
-
     <div class="my-4 flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Default</span>
-      <input type="checkbox" id="category-1" class="category-checkbox">
-      <label class="category-label" for="category-1">Художественная литература<span>12</span>
-      </label> <!--  category-btn -->
+      <input type="checkbox" id="sort-1" class="sort-checkbox">
+      <label class="sort-label" for="sort-1">Художественная литература</label> <!--  sort-btn -->
     </div>
     <div class="my-4 flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Active</span>
-      <input type="checkbox" id="category-2" class="category-checkbox-active-js">
-      <label class="category-label-active-js" for="category-2">Художественная литература<span>12</span>
+      <input type="checkbox" id="sort-2" class="sort-checkbox">
+      <label class="sort-label" for="sort-2">Художественная литература<span class="cross"></span>
       </label>
     </div>
     <div class="my-4 flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Active</span>
-      <input type="checkbox" id="category-3" class="category-checkbox-active-js">
-      <label class="category-label-active-js" for="category-3">Художественная литература<span></span>
+      <input type="checkbox" id="sort-3" class="sort-checkbox">
+      <label class="sort-label" for="sort-3">Художественная литература<span class="count">12</span> <span class="cross"></span>
       </label>
     </div>
   </div>
   <div class="flex flex-col items-center justify-center">
-    <div class="my-4 flex justify-between">
+    <div class="my-4 flex flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Default</span>
-      <button class="filter-btn">0-3<span>135</span></button> <!--  filter-btn -->
+      <input type="checkbox" id="filter-1" class="filter-checkbox">
+      <label class="filter-label" for="filter-1">0-3
+      </label>
     </div>
-    <div class="my-4 flex justify-between">
+      <div class="my-4 flex flex justify-between">
       <span class="w-68 mr-12 my-auto head-6">Default</span>
-      <a class="filter-btn">0-3<span>135</span></a> <!--  filter-btn -->
+      <input type="checkbox" id="filter-2" class="filter-checkbox">
+      <label class="filter-label" for="filter-2">0-3<span class="cross"></span>
+      </label>
+      </div>
+      <div class="my-4 flex flex justify-between">
+      <span class="w-68 mr-12 my-auto head-6">Default</span>
+      <input type="checkbox" id="filter-3" class="filter-checkbox">
+      <label class="filter-label" for="filter-3">0-3<span class="count">156</span> <span class="cross"></span>
+      </label>
     </div>
-    <div class="my-4 flex justify-between">
-      <span class="w-68 mr-12 my-auto head-6">Active</span>
-      <button class="filter-btn-active-js">Фильтр<span>135</span></button>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="my-4 flex flex justify-between">
+      <span class="w-68 mr-12 my-auto head-6">Default</span>
+      <label class="checkbox-container">
+        <input type="radio">
+        <span class="checkmark"></span>
+        Текст чекбокса
+      </label>
     </div>
-    <div class="my-4 flex justify-between">
-      <span class="w-68 mr-12 my-auto head-6">Active</span>
-      <a class="filter-btn-active-js">Фильтр<span>135</span></a>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="my-4 flex flex justify-between">
+      <span class="w-68 mr-12 my-auto head-6">Default</span>
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
     </div>
   </div>
 </div>
@@ -144,7 +187,7 @@
     </div>
   </div>
 </div>
-<div class="p-12 flex justify-around mt-52">
+<div class="p-12 flex justify-around">
   <div class="navigation">
     <ul>
       <li><a href="#">Общее</a></li>
@@ -154,23 +197,45 @@
       <li><a href="#" class="active-js">Подборки</a></li>
     </ul>
   </div>
-  <div class="collapse-q">
-    <div class="collapse-button">С какими волчками можно объединить волчок серии Классик? <span></span></div>
-    <div class="collapse-content">
-      <p>Содержимое 1</p>
-    </div>
-    <div class="collapse-button">Чем отличается Стандарт от остальных серий Инфинити Надо? <span></span></div>
-    <div class="collapse-content">
-      <p>Пусковая установка Infinity Nado Стандарт позволяет запускать блейды в левую и правую стороны!</p>
-    </div>
-    <div class="collapse-button">В какие наборы Инфинити Надо входят мечи? <span></span></div>
-    <div class="collapse-content">
-      <p>Содержимое 3</p>
-    </div>
-    <div class="collapse-button">С какими волчками можно объединить волчок серии Классик? <span></span></div>
-    <div class="collapse-content">
-      <p>Содержимое 3</p>
-    </div>
-  </div>
-
 </div>
+<div class="collapse-q">
+  <div class="collapse-button">С какими волчками можно объединить волчок серии Классик? <span></span></div>
+  <div class="collapse-content">
+    <p>Содержимое 1</p>
+  </div>
+  <div class="collapse-button">Чем отличается Стандарт от остальных серий Инфинити Надо? <span></span></div>
+  <div class="collapse-content">
+    <p>Пусковая установка Infinity Nado Стандарт позволяет запускать блейды в левую и правую стороны!</p>
+  </div>
+  <div class="collapse-button">В какие наборы Инфинити Надо входят мечи? <span></span></div>
+  <div class="collapse-content">
+    <p>Содержимое 3</p>
+  </div>
+  <div class="collapse-button">С какими волчками можно объединить волчок серии Классик? <span></span></div>
+  <div class="collapse-content">
+    <p>Содержимое 3</p>
+  </div>
+</div>
+<!-- <div class="p-12">
+  <h3></h3>
+  <div class="flex flex-direction-column flex-gap-8">
+    <a class="ui-button --black">Показать ещё</a>
+    <a class="ui-button --transparent">Показать ещё</a>
+    <a class="ui-button --yellow">Смотреть</a>
+    <a class="ui-button --violet">Смотреть</a>
+  </div>
+  <h3>Full w Button</h3>
+  <a class="ui-button --light-yellow --full-w">Показать еще</a>
+</div>
+
+<div class="p-12">
+  <h3>Breadcrumbs</h3>
+  <div class="flex flex-direction-column flex-gap-8">
+    <a class="ui-button --black">Показать ещё</a>
+    <a class="ui-button --transparent">Показать ещё</a>
+    <a class="ui-button --yellow">Смотреть</a>
+    <a class="ui-button --violet">Смотреть</a>
+  </div>
+  <h3>Full w Button</h3>
+  <a class="ui-button --light-yellow --full-w">Показать еще</a>
+</div> -->
