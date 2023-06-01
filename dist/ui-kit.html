@@ -611,11 +611,13 @@
         </div>
       </div>
 
-      <div class="popup_blockchain_go_out_buttons">
-        <button class="popup_blockchain_etherscan_button go-out-btn">
+      <div class="popup_blockchain_go_out_buttons popup_btns">
+        <button
+          class="popup_blockchain_etherscan_button button-black go-out-btn"
+        >
           Etherscan <span class="go_out_black_img"></span>
         </button>
-        <button class="popup_blockchain_opensea_button go-out-btn">
+        <button class="popup_blockchain_opensea_button button-white go-out-btn">
           Open Sea <span class="go_out_white_img"></span>
         </button>
       </div>
@@ -673,7 +675,7 @@
 <button class="js_popup_brand_description_button popup-btn">
   Блокчейн ENG
 </button>
-<div class="js_popup_brand_description modal --active">
+<div class="js_popup_brand_description modal">
   <div class="popup_brand_description_content">
     <div class="popup_brand_description_heading">
       <div class="heading_main">
@@ -711,6 +713,340 @@
     <div class="popup_brand_description_site">
       <a href="#" class="link-m-bold">Перейти на страницу бренда</a>
     </div>
+  </div>
+</div>
+
+<!-- попап для опросов -->
+<button class="js_popup_survey_button popup-btn">Попап для опросов</button>
+<div class="js_popup_survey modal">
+  <div class="popup_survey_content">
+    <div class="popup_survey_heading">
+      <div class="popup_survey_header">Тут будет опрос для наших партнёров</div>
+      <div class="js_popup_survey_close_button ui-popup-close-button"></div>
+    </div>
+    <form
+      class="js_popup_survey_form"
+      action="/#"
+      method="post"
+      target="_self"
+      autocomplete="on"
+      onsubmit=""
+    >
+      <input
+        class="input js_popup_survey_one"
+        placeholder="Названия магазинов"
+        type="text"
+      />
+      <input
+        class="input js_popup_survey_two"
+        placeholder="Количество магазинов"
+        type="text"
+      />
+      <input
+        class="input js_popup_survey_three"
+        placeholder="Адрес сайта"
+        type="url"
+      />
+    </form>
+
+    <div class="js_popup_survey_submit_block">
+      <button class="js_popup_survey_submit_button">Отправить</button>
+
+      <div class="js_popup_survey_policy_agreement checkbox_main">
+        <input
+          class="js_popup_survey_checkbox checkbox__input_main"
+          type="checkbox"
+          id="popup_survey_checkbox"
+        />
+        <label
+          for="popup_survey_checkbox"
+          class="popup_survey_policy_agreement_text checkbox__label_main body-m"
+        >
+          Соглашаюсь с &nbsp
+          <a class="popup_survey_policy_agreement_link link-m-bold">
+            политикой конфиденциальности</a
+          >
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- попап  заявка на сотрудничество  -->
+<!-- первая страница  popup_collaboration_one_ -->
+<button class="js_popup_collaboration_button popup-btn">
+  Попап для опросов
+</button>
+<div class="js_popup_collaboration modal --active">
+  <div class="popup_collaboration_content">
+    <div class="popup_collaboration_heading">
+      <div class="popup_collaboration_header">
+        <div class="popup_collaboration_header_text">
+          Заявка на сотрудничество
+        </div>
+        <div
+          class="js_popup_collaboration_close_button ui-popup-close-button"
+        ></div>
+      </div>
+
+      <div class="popup_collaboration_step">Шаг 1 из 4</div>
+    </div>
+
+    <div class="popup_collaboration_page_one_conditions">
+      <div
+        class="popup_collaboration_page_one_condition_one pup_coll_condition"
+      >
+        <span
+          class="popup_collaboration_page_one_condition_one_img pup_coll_img"
+        ></span>
+        <div
+          class="popup_collaboration_page_one_condition_one_text pup_coll_txt"
+        >
+          Минимальная сумма заказа - 30 000₽
+        </div>
+      </div>
+      <div
+        class="popup_collaboration_page_one_condition_two pup_coll_condition"
+      >
+        <span
+          class="popup_collaboration_page_one_condition_two_img pup_coll_img"
+        ></span>
+        <div
+          class="popup_collaboration_page_one_condition_two_text pup_coll_txt"
+        >
+          Бесплатная доставка по Москве и ближайшему Подмосковью
+        </div>
+      </div>
+      <div
+        class="popup_collaboration_page_one_condition_three pup_coll_condition"
+      >
+        <span
+          class="popup_collaboration_page_one_condition_three_img pup_coll_img"
+        ></span>
+        <div
+          class="popup_collaboration_page_one_condition_three_text pup_coll_txt"
+        >
+          Индивидуальная система скидок
+        </div>
+      </div>
+    </div>
+
+    <form
+      class="popup_collaboration_page_one_form collab_form collab_form_step_one"
+    >
+      <input
+        class="input popup_collaboration_page_one_input"
+        placeholder="Организация*"
+        type="text"
+      />
+      <input
+        class="input popup_collaboration_page_one_input"
+        placeholder="Страна*"
+        type="text"
+      />
+      <input
+        class="input popup_collaboration_page_one_input"
+        placeholder="Регион и город*"
+        type="text"
+      />
+      <button
+        class="button-black popup_collaboration_page_one_cont_btn pup_btn"
+      >
+        Следующий шаг
+      </button>
+    </form>
+  </div>
+
+  <div class="popup_collaboration_content">
+    <div class="popup_collaboration_heading">
+      <div class="popup_collaboration_header">
+        <div class="popup_collaboration_header_text">
+          Заявка на сотрудничество
+        </div>
+        <div class="js_popup_survey_close_button ui-popup-close-button"></div>
+      </div>
+
+      <div class="popup_collaboration_step">Шаг 2 из 4</div>
+    </div>
+    <div class="popup_collaboration_page_two_form">
+      <div class="popup_collaboration_page_two_format">
+        <div
+          class="popup_collaboration_page_two_format_header pup_format_header"
+        >
+          Формат торговли *
+        </div>
+
+        <div
+          class="popup_collaboration_page_two_format_options pup_format_checkboxes"
+        >
+          <div class="pup_format_options_one">
+            <button class="category-btn">Опт<span></span></button>
+            <button class="category-btn">Розница<span></span></button>
+            <button class="category-btn">Интернет-магазин<span></span></button>
+          </div>
+
+          <div class="pup_format_options_two">
+            <button class="category-btn">
+              Совместные закупки<span></span>
+            </button>
+            <button class="category-btn">Бюджетные закупки<span></span></button>
+            <button class="category-btn">Другое<span></span></button>
+            <input
+              class="input pup_format_options_two_input"
+              placeholder="Другое"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="popup_collaboration_page_two_category">
+        <div
+          class="popup_collaboration_page_two_category_header pup_format_header"
+        >
+          Ключевая товарная категория*
+        </div>
+
+        <div class="popup_collaboration_page_two_category_options">
+          <div class="pup_format_options_two pup_format_checkboxes">
+            <div class="pup_format_options_one">
+              <button class="category-btn">Книги<span></span></button>
+              <button class="category-btn">Игрушки<span></span></button>
+              <button class="category-btn">
+                Канцелярские товары<span></span>
+              </button>
+            </div>
+
+            <div class="pup_format_options_two">
+              <button class="category-btn">Детские товары<span></span></button>
+              <button class="category-btn">Другое<span></span></button>
+              <input
+                class="input pup_format_options_two_input"
+                placeholder="Названия магазинов"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup_collaboration_page_two_buttons pup_coll_buttons">
+      <button class="button-white collab_btn pup_btn">Назад</button>
+      <button class="button-black collab_btn pup_btn">Следующий шаг</button>
+    </div>
+  </div>
+
+  <div class="popup_collaboration_content">
+    <div class="popup_collaboration_heading">
+      <div class="popup_collaboration_header">
+        <div class="popup_collaboration_header_text">
+          Заявка на сотрудничество
+        </div>
+        <div class="js_popup_survey_close_button ui-popup-close-button"></div>
+      </div>
+
+      <div class="popup_collaboration_step">Шаг 3 из 4</div>
+    </div>
+    <div
+      class="popup_collaboration_page_three_form collab_form collab_form_step_three"
+    >
+      <input
+        class="input popup_collaboration_page_three_input"
+        placeholder="Названия магазинов"
+        type="text"
+      />
+      <input
+        class="input popup_collaboration_page_three_input"
+        placeholder="Количество магазинов"
+        type="text"
+      />
+      <input
+        class="input popup_collaboration_page_three_input"
+        placeholder="Адрес сайта"
+        type="url"
+      />
+    </div>
+    <div class="popup_collaboration_page_three_buttons pup_coll_buttons">
+      <button class="button-white collab_btn pup_btn">Назад</button>
+      <button class="button-black collab_btn pup_btn">Следующий шаг</button>
+    </div>
+  </div>
+
+  <div class="popup_collaboration_content">
+    <div class="popup_collaboration_heading">
+      <div class="popup_collaboration_header">
+        <div class="popup_collaboration_header_text">
+          Заявка на сотрудничество
+        </div>
+        <div class="js_popup_survey_close_button ui-popup-close-button"></div>
+      </div>
+
+      <div class="popup_collaboration_step">Шаг 4 из 4</div>
+    </div>
+    <div class="popup_collaboration_page_four_form">
+      <form class="collab_form collab_form_step_four">
+        <input
+          class="input popup_collaboration_page_three_input"
+          placeholder="ФИО*"
+          type="text"
+        />
+        <input
+          class="input popup_collaboration_page_three_input"
+          placeholder="+7___-___-__-__*"
+          type="text"
+        />
+        <input
+          class="input popup_collaboration_page_three_input"
+          placeholder="Электронная почта*"
+          type="email"
+        />
+      </form>
+    </div>
+
+    <div class="popup_collaboration_page_four_description body-m-bold">
+      При подаче заявки вы не сможете работать с маркетплейсами в случае
+      подписания договора партнёрства
+    </div>
+    <div class="popup_collaboration_page_four_send_request">
+      <div class="popup_collaboration_page_four_buttons">
+        <button class="button-white collab_btn pup_btn">Назад</button>
+        <button class="button-black collab_btn pup_btn">
+          Отправить заявку
+        </button>
+      </div>
+      <div class="js_popup_collaboration_submit_block">
+        <div class="js_popup_collaboration_policy_agreement checkbox_main">
+          <input
+            class="js_popup_collaboration_checkbox checkbox__input_main"
+            type="checkbox"
+            id="popup_collaboration_checkbox"
+          />
+          <label
+            for="popup_collaboration_checkbox"
+            class="popup_collaboration_policy_agreement_text checkbox__label_main body-m"
+          >
+            Соглашаюсь с &nbsp<a
+              class="popup_collaboration_policy_agreement_link link-m-bold"
+            >
+              политикой конфиденциальности</a
+            >
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup_collaboration_content">
+    <div class="popup_collaboration_heading">
+      <div class="popup_collaboration_header">
+        <div class="popup_collaboration_header_text popup_collab_final_text">
+          Ваша заявка успешно отправлена
+        </div>
+        <div
+          class="js_popup_collaboration_close_button ui-popup-close-button"
+        ></div>
+      </div>
+    </div>
+    <button class="button-black pup_btn">Спасибо!</button>
   </div>
 </div>
 

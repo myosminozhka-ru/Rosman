@@ -42,10 +42,10 @@
     @apply text-3xl;
   }
 }
-.js_popup_contact_us_close_button {
-  @apply h-20 w-20 cursor-pointer;
-  background: url("../../img/x.svg") no-repeat;
-}
+//.ui-popup-close-button {
+//  @apply h-20 w-20 cursor-pointer;
+//  background: url("../../img/x.svg") no-repeat;
+//}
 .js_contact_us_popup_body {
   @apply flex flex-col;
   grid-gap: 2.4rem;
@@ -83,10 +83,10 @@
     padding: 16px;
   }
 }
-.js_popup_blockchain_close_button {
-  @apply h-20 w-20 cursor-pointer;
-  background: url("../../img/x.svg") no-repeat;
-}
+//.ui-popup-close-button {
+//  @apply h-20 w-20 cursor-pointer;
+//  background: url("../../img/x.svg") no-repeat;
+//}
 .popup_blockchain_body {
   @apply flex flex-col;
   grid-gap: 4rem;
@@ -152,7 +152,7 @@
   }
 }
 
-.popup_blockchain_go_out_buttons {
+.popup_btns {
   @apply flex flex-row justify-center gap-24;
   @media screen and (max-width: 600px) {
     flex-direction: column;
@@ -170,6 +170,12 @@
 .popup_blockchain_opensea_button {
   border: 1px solid #000000;
 }
+.popup_blockchain_oetherscan_button:hover {
+  @apply block h-24 w-24 cursor-pointer pl-32;
+  background: url("../../img/go_out_black.svg") no-repeat center;
+  background-size: contain;
+}
+
 .go_out_black_img {
   @apply block h-24 w-24 cursor-pointer pl-32;
   background: url("../../img/go_out_white.svg") no-repeat center;
@@ -192,10 +198,10 @@
   position: relative;
   margin: auto;
   @media screen and (max-width: 500px) {
-    @apply m-28 p-16;
+    @apply m-28 p-12;
   }
   @media (min-width: 501px) and (max-width: 800px) {
-    @apply m-28 p-16;
+    @apply m-28 p-12;
   }
 }
 .popup_brand_description_heading {
@@ -208,6 +214,9 @@
 }
 .heading_main {
   @apply flex flex-row items-center gap-24;
+  @media screen and (max-width: 500px) {
+    @apply gap-24;
+  }
 }
 .popup_brand_description_image {
   @apply block;
@@ -221,9 +230,13 @@
 }
 .popup_brand_description_header {
 }
-.js_popup_brand_description_close_button {
+.ui-popup-close-button {
   @apply h-20 w-20 cursor-pointer;
-  background: url("../../img/x.svg") no-repeat;
+  background: url("../../img/x.svg") no-repeat center;
+  background-size: contain;
+  @media screen and (max-width: 500px) {
+    @apply h-20 w-20;
+  }
 }
 // --
 .popup_brand_description_info {
@@ -264,4 +277,393 @@
 
 // ----
 .popup_brand_description_site {
+}
+
+// Попап для опросов
+.js_popup_survey_button {
+}
+
+.js_popup_survey {
+}
+.popup_survey_content {
+  @apply m-0 flex flex-col gap-32 bg-white p-40;
+  max-width: 56.7rem;
+  position: relative;
+  margin: auto;
+  @media screen and (max-width: 500px) {
+    @apply m-28 gap-24 p-24;
+  }
+  @media (min-width: 501px) and (max-width: 800px) {
+    @apply m-28 gap-24 p-24;
+  }
+}
+
+// heading
+.popup_survey_heading {
+  @apply flex flex-row items-start justify-between;
+}
+.popup_survey_header {
+  @apply text-5xl;
+  @media screen and (max-width: 500px) {
+    @apply text-2xl;
+  }
+}
+.js_popup_survey_close_button {
+}
+
+// form
+.js_popup_survey_form {
+  @apply flex w-full flex-col gap-16;
+}
+.js_popup_survey_input {
+  @apply px-16 py-10;
+  border: 1px solid #d9d9d9;
+}
+.js_popup_survey_input::placeholder {
+  @apply text-xl;
+  color: #808080;
+}
+// submit button block
+.js_popup_survey_submit_block {
+  @apply flex flex-col gap-16;
+}
+.js_popup_survey_submit_button {
+  @apply w-full bg-black text-15.20 text-white;
+  &:hover {
+    @apply bg-yellow text-black;
+  }
+}
+.js_popup_survey_policy_agreement {
+  @apply flex flex-row;
+}
+
+.popup_survey_policy_agreement_text {
+  @apply ml-16 flex flex-row text-15.20;
+  @media screen and (max-width: 500px) {
+    @apply flex-col text-xl;
+  }
+}
+.js_popup_survey_policy_agreement_link {
+  @apply ml-0;
+  word-break: break-word;
+  font-weight: 500;
+  @media screen and (max-width: 500px) {
+    @apply flex-col text-xl;
+  }
+}
+
+// checkbox
+.checkbox_main {
+  position: relative;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.checkbox__input_main {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+  position: absolute;
+}
+
+.checkbox__label_main {
+  padding-left: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.checkbox__label_main:before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border: 1px solid black;
+  background-color: #fff;
+  border-radius: 3px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /*transition: background 0.1s linear, border 0.1s linear;*/
+}
+
+.checkbox__label_main:after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background: url("../../img/check_new.png") no-repeat;
+  background-size: 15px 15px;
+  opacity: 0;
+
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.checkbox__input_main:checked + .checkbox__label_main:before {
+  border: 1px solid black;
+  background: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.checkbox__input_main:checked + .checkbox__label_main:after {
+  opacity: 1;
+}
+
+// попап заявка на сотрудничество -
+// общее
+.js_popup_collaboration {
+}
+.popup_collaboration_content {
+  @apply m-0 flex flex-col gap-32 bg-white p-40;
+  max-width: 56.7rem;
+  position: relative;
+  margin: auto;
+  @media screen and (max-width: 500px) {
+    @apply m-12 gap-24 p-24;
+  }
+  @media (min-width: 501px) and (max-width: 800px) {
+    @apply m-12 gap-24 p-24;
+  }
+}
+.popup_collaboration_heading {
+  @apply flex flex-col gap-16;
+}
+.popup_collaboration_header {
+  @apply flex flex-row items-start justify-between gap-24 text-5xl;
+  font-weight: 500;
+  @media screen and (max-width: 500px) {
+    @apply text-2xl;
+    font-weight: 500;
+  }
+}
+.popup_collaboration_header_text {
+  @apply text-5xl text-black;
+  @media screen and (max-width: 500px) {
+    @apply text-2xl;
+    font-weight: 500;
+  }
+}
+.js_popup_collaboration_close_button {
+}
+.popup_collaboration_step {
+  @apply text-15.20 text-text;
+}
+
+// первая страница
+.popup_collaboration_page_one_conditions {
+  @apply flex flex-col gap-16;
+}
+.pup_coll_condition {
+  @apply flex flex-row flex-nowrap items-center gap-16;
+}
+.pup_coll_img {
+  @apply h-40 w-40;
+  flex-shrink: 0;
+  @media screen and (max-width: 500px) {
+    @apply h-28 w-28;
+  }
+}
+.pop_coll_img img {
+  width: 100%;
+}
+.pup_coll_txt {
+  @apply text-15.20 text-black;
+  @media screen and (max-width: 500px) {
+    @apply text-xl;
+    max-width: 39rem;
+  }
+}
+
+.popup_collaboration_page_one_condition_one {
+}
+.popup_collaboration_page_one_condition_one_img {
+  @apply block h-40 w-40 cursor-pointer;
+  background: url("../../img/yellow_money.svg") no-repeat center;
+  background-size: contain;
+  @media screen and (max-width: 500px) {
+    @apply h-28 w-28;
+  }
+}
+.popup_collaboration_page_one_condition_one_text {
+}
+
+.popup_collaboration_page_one_condition_two {
+}
+.popup_collaboration_page_one_condition_two_img {
+  @apply block h-40 w-40 cursor-pointer;
+  background: url("../../img/yellow_van.svg") no-repeat center;
+  background-size: contain;
+  @media screen and (max-width: 500px) {
+    @apply h-28 w-28;
+  }
+}
+.popup_collaboration_page_one_condition_two_text {
+}
+
+.popup_collaboration_page_one_condition_three {
+}
+.popup_collaboration_page_one_condition_three_img {
+  @apply block h-40 w-40 cursor-pointer;
+  background: url("../../img/yellow_discounts.svg") no-repeat center;
+  background-size: contain;
+  @media screen and (max-width: 500px) {
+    @apply h-28 w-28;
+  }
+}
+.popup_collaboration_page_one_condition_three_text {
+}
+
+.collab_form {
+  @apply flex flex-col gap-16;
+}
+.popup_collaboration_page_one_input {
+}
+.popup_collaboration_page_one_cont_btn {
+}
+
+// вторая страница
+.pup_format_header {
+  @apply text-15.20;
+  font-weight: 500;
+}
+
+.popup_collaboration_page_two_form {
+  @apply flex flex-col;
+}
+
+.pup_format_checkboxes {
+  @apply flex flex-row gap-56;
+}
+
+// третья страница
+
+.pup_coll_buttons {
+  @apply flex flex-row flex-nowrap gap-16;
+  @media screen and (max-width: 500px) {
+    @apply gap-10;
+  }
+}
+.collab_btn {
+  flex-basis: 50%;
+  flex-grow: 1;
+  @media screen and (max-width: 500px) {
+    @apply p-12;
+  }
+}
+.pup_btn {
+  @apply text-15.20;
+  white-space: nowrap;
+}
+.popup_collaboration_page_four_send_request {
+  @apply flex flex-col gap-16;
+}
+
+.checkbox_main {
+  position: relative;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.checkbox__input_main {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+  position: absolute;
+}
+
+.checkbox__label_main {
+  padding-left: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.checkbox__label_main:before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border: 1px solid black;
+  background-color: #fff;
+  border-radius: 3px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /*transition: background 0.1s linear, border 0.1s linear;*/
+}
+
+.checkbox__label_main:after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background: url("../../img/check_new.png") no-repeat;
+  background-size: 15px 15px;
+  opacity: 0;
+
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.checkbox__input_main:checked + .checkbox__label_main:before {
+  border: 1px solid black;
+  background: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.checkbox__input_main:checked + .checkbox__label_main:after {
+  opacity: 1;
+}
+
+.js_popup_collaboration_submit_block {
+  @apply flex flex-col gap-16;
+}
+
+.js_popup_collaboration_policy_agreement {
+  @apply flex flex-row;
+}
+
+.popup_collaboration_policy_agreement_text {
+  @apply ml-16 flex flex-row text-15.20;
+  @media screen and (max-width: 500px) {
+    @apply flex-col text-xl;
+  }
+}
+.popup_collaboration_policy_agreement_link {
+  @apply ml-0;
+  word-break: break-word;
+  font-weight: 500;
+  @media screen and (max-width: 500px) {
+    @apply flex-col text-xl;
+  }
+}
+.popup_collaboration_page_four_buttons {
+  @apply flex flex-row justify-center gap-24;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    grid-gap: 0.6rem;
+  }
+}
+
+.popup_collab_final_text {
+  @media screen and (max-width: 500px) {
+    @apply text-2xl;
+  }
 }
