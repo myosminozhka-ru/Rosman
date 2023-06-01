@@ -423,7 +423,7 @@
 .js_popup_collaboration {
 }
 .popup_collaboration_content {
-  @apply m-0 flex flex-col gap-32 bg-white p-40;
+  @apply m-0 flex flex-col gap-24 bg-white p-40;
   max-width: 56.7rem;
   position: relative;
   margin: auto;
@@ -533,17 +533,43 @@
 // вторая страница
 .pup_format_header {
   @apply text-15.20;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .popup_collaboration_page_two_form {
-  @apply flex flex-col;
+  @apply flex flex-col gap-24;
 }
 
 .pup_format_checkboxes {
   @apply flex flex-row gap-56;
+  @media screen and (max-width: 500px) {
+    @apply flex-col gap-12;
+  }
 }
 
+.pup_format_options_two_input {
+  @apply w-full;
+}
+
+.popup_collaboration_page_two_format {
+  @media screen and (max-width: 500px) {
+    @apply flex-col;
+  }
+}
+.popup_collaboration_page_two_category {
+  @media screen and (max-width: 500px) {
+    @apply flex-col;
+  }
+}
+.pup_format_options_one,
+.pup_format_options_two {
+  @apply flex flex-col gap-12;
+  flex-grow: 1;
+  flex-basis: 50%;
+  @media screen and (max-width: 500px) {
+    @apply flex flex-col gap-12;
+  }
+}
 // третья страница
 
 .pup_coll_buttons {

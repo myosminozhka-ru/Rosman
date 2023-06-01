@@ -423,17 +423,54 @@
           class="popup_collaboration_page_two_format_options pup_format_checkboxes"
         >
           <div class="pup_format_options_one">
-            <button class="category-btn">Опт<span></span></button>
-            <button class="category-btn">Розница<span></span></button>
-            <button class="category-btn">Интернет-магазин<span></span></button>
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-opt" class="sort-checkbox" />
+              <label class="sort-label" for="sort-opt"
+                >Опт<span class="cross"></span>
+              </label>
+            </div>
+
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-roznica" class="sort-checkbox" />
+              <label class="sort-label" for="sort-roznica"
+                >Розница<span class="cross"></span>
+              </label>
+            </div>
+
+            <div class="checkbox_container">
+              <input
+                type="checkbox"
+                id="sort-inetstore"
+                class="sort-checkbox"
+              />
+              <label class="sort-label" for="sort-inetstore"
+                >Интернет-магазин<span class="cross"></span>
+              </label>
+            </div>
           </div>
 
           <div class="pup_format_options_two">
-            <button class="category-btn">
-              Совместные закупки<span></span>
-            </button>
-            <button class="category-btn">Бюджетные закупки<span></span></button>
-            <button class="category-btn">Другое<span></span></button>
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-cobuy" class="sort-checkbox" />
+              <label class="sort-label" for="sort-cobuy"
+                >Совместные закупки<span class="cross"></span>
+              </label>
+            </div>
+
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-cheapbuy" class="sort-checkbox" />
+              <label class="sort-label" for="sort-cheapbuy"
+                >Бюджетные закупки<span class="cross"></span>
+              </label>
+            </div>
+
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-other" class="sort-checkbox" />
+              <label class="sort-label" for="sort-other"
+                >Другое<span class="cross"></span>
+              </label>
+            </div>
+
             <input
               class="input pup_format_options_two_input"
               placeholder="Другое"
@@ -442,6 +479,7 @@
           </div>
         </div>
       </div>
+
       <div class="popup_collaboration_page_two_category">
         <div
           class="popup_collaboration_page_two_category_header pup_format_header"
@@ -449,25 +487,56 @@
           Ключевая товарная категория*
         </div>
 
-        <div class="popup_collaboration_page_two_category_options">
-          <div class="pup_format_options_two pup_format_checkboxes">
-            <div class="pup_format_options_one">
-              <button class="category-btn">Книги<span></span></button>
-              <button class="category-btn">Игрушки<span></span></button>
-              <button class="category-btn">
-                Канцелярские товары<span></span>
-              </button>
+        <div
+          class="popup_collaboration_page_two_category_options pup_format_checkboxes"
+        >
+          <div class="pup_format_options_one">
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-books" class="sort-checkbox" />
+              <label class="sort-label" for="sort-books"
+                >Книги<span class="cross"></span>
+              </label>
             </div>
 
-            <div class="pup_format_options_two">
-              <button class="category-btn">Детские товары<span></span></button>
-              <button class="category-btn">Другое<span></span></button>
-              <input
-                class="input pup_format_options_two_input"
-                placeholder="Названия магазинов"
-                type="text"
-              />
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-toys" class="sort-checkbox" />
+              <label class="sort-label" for="sort-toys"
+                >Игрушки<span class="cross"></span>
+              </label>
             </div>
+
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-kanz" class="sort-checkbox" />
+              <label class="sort-label" for="sort-kanz"
+                >Канцелярские товары<span class="cross"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pup_format_options_two">
+            <div class="checkbox_container">
+              <input
+                type="checkbox"
+                id="sort-for-children"
+                class="sort-checkbox"
+              />
+              <label class="sort-label" for="sort-for-children"
+                >Детские товары<span class="cross"></span>
+              </label>
+            </div>
+
+            <div class="checkbox_container">
+              <input type="checkbox" id="sort-other" class="sort-checkbox" />
+              <label class="sort-label" for="sort-other"
+                >Другое<span class="cross"></span>
+              </label>
+            </div>
+
+            <input
+              class="input pup_format_options_two_input"
+              placeholder="Названия магазинов"
+              type="text"
+            />
           </div>
         </div>
       </div>
