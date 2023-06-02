@@ -1,5 +1,4 @@
 //libraries like jquery etc
-
 console.log("privet");
 const popup = function Popup(el, triggerButton) {
   this.el = el;
@@ -36,33 +35,6 @@ const popup = function Popup(el, triggerButton) {
     }
   });
 };
-
-// js_contact_us_ru_popup_button
-// js_popup_contact_us_ru_modal
-
-// js_contact_us_eng_popup_button
-// js_popup_contact_us_eng_modal
-
-// js_blockchain_ru_popup_button
-// js_popup_blockchain_ru_modal
-
-// js_blockchain_eng_popup_button
-// js_popup_blockchain_eng_modal
-
-// js_popup_brand_description_button
-// js_popup_brand_description_modal
-
-// js_popup_survey_button
-// js_popup_survey_modal
-
-// js_popup_collaboration_button
-// js_popup_collaboration_modal
-
-// js_popup_brand_choose_button
-// js_popup_brand_choose_modal
-
-// js_popup_all_filters_button
-// js_popup_all_filters_modal
 
 const jsContactUsRuPopupButton = document.querySelector(
   ".js_contact_us_ru_popup_button"
@@ -133,11 +105,28 @@ for (let i = 0; i < popups.length; i++) {
   }
 }
 
+// функция для добавления класса через положение тогглера в true,
+// повесить слушатель событий,
+let testInput = document.querySelector(".test");
+console.log(testInput.checked)
+let downContent = testInput.parentNode.parentNode.nextElementSibling;
+if (!testInput.checked === true) {
+  console.log("rwer")
+  downContent.classList.add("active-js");
+}
+
+console.log(testInput, "1");
+console.log(testInput.parentNode, "2");
+console.log(testInput.parentNode.parentNode, "3");
+console.log(testInput.parentNode.parentNode.nextElementSibling, "4");
+
+
 window.addEventListener("DOMContentLoaded", () => {
   console.log("Loaded Scripts");
 });
 // дропдаун добавление класса active-js с отслеживанием клика вне блока
 const moreButtons = document.getElementsByClassName("more-down-button");
+
 for (let i = 0; i < moreButtons.length; i++) {
   moreButtons[i].addEventListener("click", function() {
     const content = this.nextElementSibling;
@@ -169,6 +158,7 @@ document.addEventListener("click", function(event) {
     }
   }
 });
+
 const buttons = document.getElementsByClassName("collapse-button");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function() {

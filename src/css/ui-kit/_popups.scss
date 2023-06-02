@@ -821,8 +821,10 @@ img {
     max-width: 45rem;
   }
 }
+
+
 .more-down-button {
-  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-xl text-text transition-all duration-500;
+  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-15.20 text-black transition-all duration-500;
   span {
     width: 8px;
     height: 8px;
@@ -841,7 +843,44 @@ img {
       transform: rotate(-45deg);
     }
   }
+  span .slider{
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #ff0000;
+    border-right: 2px solid #ff0000;
+    margin-left: 25px;
+    transform: rotate(135deg);
+  }
+  &.active-js {
+    span .slider{
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #ff0000;
+      border-right: 2px solid #ff0000;
+      margin-left: 25px;
+      transform: rotate(-45deg);
+    }
+  }
 }
+
+.slider_button{
+  @apply  relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+}
+.slider_button.active-js::before {
+  transform: rotate(-45deg);
+}
+
 .more-down-content2 {
   @apply hidden p-2;
   &.active-js {
@@ -860,7 +899,7 @@ img {
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
   @apply relative m-20 flex flex-col gap-24 bg-white p-40;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: auto;
   @media screen and (max-width: 500px) {
     @apply m-24 gap-24 p-24;
@@ -923,4 +962,7 @@ img {
 }
 .popup_brands_checkbox_text {
   @apply ml-24;
+}
+. {
+  @apply flex flex-row items-center justify-between p-10 text-15.20 text-black;
 }

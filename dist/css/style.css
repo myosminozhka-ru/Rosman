@@ -2987,10 +2987,10 @@ img {
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   --tw-text-opacity: 1;
-  color: rgb(128 128 128 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -3009,6 +3009,41 @@ img {
   border-top: 2px solid #000000;
   border-right: 2px solid #000000;
   margin-left: 25px;
+  transform: rotate(-45deg);
+}
+.more-down-button span .slider {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #ff0000;
+  border-right: 2px solid #ff0000;
+  margin-left: 25px;
+  transform: rotate(135deg);
+}
+.more-down-button.active-js span .slider {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #ff0000;
+  border-right: 2px solid #ff0000;
+  margin-left: 25px;
+  transform: rotate(-45deg);
+}
+
+.slider_button {
+  position: relative;
+}
+.slider_button::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.slider_button.active-js::before {
   transform: rotate(-45deg);
 }
 
@@ -3040,7 +3075,7 @@ img {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 4rem;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: auto;
 }
 @media screen and (max-width: 500px) {
@@ -3162,4 +3197,28 @@ img {
 
 .popup_brands_checkbox_text {
   margin-left: 2.4rem;
+}
+
+.pup_toggler {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.pup_toggler_dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
