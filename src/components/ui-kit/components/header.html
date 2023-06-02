@@ -1,0 +1,35 @@
+<div id="yellow-background">
+    <div id="moving-block"></div>
+</div>
+
+<style>
+    #yellow-background {
+        background: #FFF145;
+        width: 100vw;
+        height: 100vh;
+    }
+    #moving-block {
+        width: 100%;
+        height: 100%;
+        background-color: #ff0000;
+        position: absolute;
+    }
+</style>
+<script>
+    const movingBlock = document.getElementById("moving-block");
+
+    document.addEventListener("mousemove", function(event) {
+        const windowWidth = window.innerWidth;
+        const blockWidth = movingBlock.offsetWidth;
+
+        // Вычисляем позицию блока на основе позиции мыши и ширины окна
+        let blockX = event.clientX - blockWidth / 2;
+
+        // Вычисляем наклон блока в зависимости от позиции мыши
+        let tilt = -((blockX / windowWidth)) * 3;
+
+        // Применяем наклон к блоку с помощью свойства transform
+        movingBlock.style.transform = `rotate(${tilt}deg)`;
+    });
+
+</script>
