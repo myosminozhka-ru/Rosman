@@ -26,10 +26,15 @@ const popup = function Popup(el, triggerButton) {
 
   this.closeButton.addEventListener("click", () => {
     this.open = false;
-    console.log(this.el);
     this.el.classList.remove("--active");
   });
   document.addEventListener("click", this.clickOutside);
+  document.addEventListener("keydown", (event) => {
+    if (event.code === "Escape" && this.open) {
+      this.open = false;
+      this.el.classList.remove("--active");
+    }
+  });
 };
 
 // js_contact_us_ru_popup_button
