@@ -60,3 +60,19 @@ for (let i = 0; i < buttons.length; i++) {
     }
   });
 }
+
+const movingBlock = document.getElementById("moving-block");
+
+document.addEventListener("mousemove", function(event) {
+  const windowWidth = window.innerWidth;
+  const blockWidth = movingBlock.offsetWidth;
+
+  // Вычисляем позицию блока на основе позиции мыши и ширины окна
+  let blockX = event.clientX - blockWidth / 2;
+
+  // Вычисляем наклон блока в зависимости от позиции мыши
+  let tilt = -((blockX / windowWidth)) * 6;
+
+  // Применяем наклон к блоку с помощью свойства transform
+  movingBlock.style.transform = `rotate(${tilt}deg)`;
+});
