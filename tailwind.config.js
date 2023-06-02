@@ -103,6 +103,9 @@ module.exports = {
         100: "25.9rem",
       },
       borderRadius: {},
+      zIndex: {
+        '9999': '9999',
+      }
     },
   },
   plugins: plugins,

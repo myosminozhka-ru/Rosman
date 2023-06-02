@@ -109,7 +109,7 @@ button {
   }
 }
 .sort-label {
-  @apply flex h-24 w-full flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
   span {
     @apply hidden;
   }
