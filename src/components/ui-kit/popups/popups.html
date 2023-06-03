@@ -895,7 +895,7 @@
 <button class="js_popup_all_filters_button popup-btn">
   Попап для выбора всех фильтров
 </button>
-<div class="js_popup_all_filters_modal modal --active">
+<div class="js_popup_all_filters_modal modal ">
   <div class="popup_all_filters_content">
     <div class="popup_all_filters_heading">
       <div class="popup_all_filters_header">
@@ -1085,9 +1085,13 @@
           </div>
         </div>
         <div class="more-down-filters">
-          <button class="more-down-button combined">
-            Интерактивные функции<span class="slider"></span>
-          </button>
+            <div class="popup_all_filters_inter_funcs_toggler pup_toggler">
+                <span>Интерактивные функции</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" class="dropdown_checkbox"/>
+                    <span class="slider"></span>
+                </label>
+            </div>
           <div class="more-down-content">
             <div class="js_popup_filter_item checkbox_main">
               <input
@@ -1118,9 +1122,13 @@
           </div>
         </div>
         <div class="more-down-filters">
-          <button class="more-down-button combined">
-            Звуковые эффекты<span class="slider"></span>
-          </button>
+            <div class="popup_all_filters_sound_effects_toggler pup_toggler">
+                <span>Звуковые эффекты</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" class="dropdown_checkbox"/>
+                    <span class="slider"></span>
+                </label>
+            </div>
           <div class="more-down-content">
             <div class="js_popup_filter_item checkbox_main">
               <input
@@ -1594,7 +1602,7 @@
           <div class="popup_all_filters_item_purpose_toggler pup_toggler">
             <span>Назначение аксессуара</span>
             <label class="toggle-switch">
-              <input type="checkbox" class="test"/>
+              <input type="checkbox" class="dropdown_checkbox"/>
               <span class="slider"></span>
             </label>
           </div>

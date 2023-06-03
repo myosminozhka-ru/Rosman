@@ -106,15 +106,24 @@ for (let i = 0; i < popups.length; i++) {
 
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
-let testInput = document.querySelector(".test");
-console.log(testInput.checked)
-let downContent = testInput.parentNode.parentNode.nextElementSibling;
-if (!testInput.checked === true) {
-  console.log("rwer")
-  downContent.classList.add("active-js");
+const dropdownTogglers = document.getElementsByClassName("dropdown_checkbox");
+
+for (let i = 0; i < dropdownTogglers.length; i++) {
+  dropdownTogglers[i].addEventListener("click", function () {
+    const content = this.parentNode.parentNode.nextElementSibling;
+    console.log(this);
+    console.log(content);
+    if (this.classList.contains("active-js")) {
+      this.classList.remove("active-js");
+    } else {
+      this.classList.add("active-js");
+    }
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+      content.classList.add("active-js");
+    }
+  });
 }
 
-console.log(testInput, "1");
-console.log(testInput.parentNode, "2");
-console.log(testInput.parentNode.parentNode, "3");
-console.log(testInput.parentNode.parentNode.nextElementSibling, "4");
