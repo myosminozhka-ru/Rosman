@@ -319,8 +319,7 @@
   border: 1px solid #d9d9d9;
 }
 .js_popup_survey_input::placeholder {
-  @apply text-xl;
-  color: #808080;
+  @apply text-xl text-text;
 }
 // submit button block
 .js_popup_survey_submit_block {
@@ -823,45 +822,45 @@ img {
 }
 
 
-.more-down-button {
-  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-15.20 text-black transition-all duration-500;
-  span {
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    margin-left: 25px;
-    transform: rotate(135deg);
-  }
-  &.active-js {
-    span {
-      width: 8px;
-      height: 8px;
-      border-top: 2px solid #000000;
-      border-right: 2px solid #000000;
-      margin-left: 25px;
-      transform: rotate(-45deg);
-    }
-  }
-  span .slider{
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #ff0000;
-    border-right: 2px solid #ff0000;
-    margin-left: 25px;
-    transform: rotate(135deg);
-  }
-  &.active-js {
-    span .slider{
-      width: 8px;
-      height: 8px;
-      border-top: 2px solid #ff0000;
-      border-right: 2px solid #ff0000;
-      margin-left: 25px;
-      transform: rotate(-45deg);
-    }
-  }
-}
+//.more-down-button {
+//  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-15.20 text-black transition-all duration-500;
+//  span {
+//    width: 8px;
+//    height: 8px;
+//    border-top: 2px solid #000000;
+//    border-right: 2px solid #000000;
+//    margin-left: 25px;
+//    transform: rotate(135deg);
+//  }
+//  &.active-js {
+//    span {
+//      width: 8px;
+//      height: 8px;
+//      border-top: 2px solid #000000;
+//      border-right: 2px solid #000000;
+//      margin-left: 25px;
+//      transform: rotate(-45deg);
+//    }
+//  }
+//  span .slider{
+//    width: 8px;
+//    height: 8px;
+//    border-top: 2px solid #ff0000;
+//    border-right: 2px solid #ff0000;
+//    margin-left: 25px;
+//    transform: rotate(135deg);
+//  }
+//  &.active-js {
+//    span .slider{
+//      width: 8px;
+//      height: 8px;
+//      border-top: 2px solid #ff0000;
+//      border-right: 2px solid #ff0000;
+//      margin-left: 25px;
+//      transform: rotate(-45deg);
+//    }
+//  }
+//}
 
 .slider_button{
   @apply  relative;
@@ -882,7 +881,7 @@ img {
 }
 
 .more-down-content2 {
-  @apply hidden p-2;
+  @apply hidden p-12;
   &.active-js {
     @apply absolute z-9999 block;
     top: 200%;
