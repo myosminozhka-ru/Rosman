@@ -820,7 +820,18 @@ img {
     max-width: 45rem;
   }
 }
-
+.more-down-filters {
+  @apply relative p-10;
+}
+.more-down-filters::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
 
 //.more-down-button {
 //  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-15.20 text-black transition-all duration-500;
@@ -862,8 +873,8 @@ img {
 //  }
 //}
 
-.slider_button{
-  @apply  relative;
+.slider_button {
+  @apply relative;
   &::before {
     content: "";
     position: absolute;
@@ -962,6 +973,24 @@ img {
 .popup_brands_checkbox_text {
   @apply ml-24;
 }
-.pup_toggler{
+.pup_toggler {
   @apply flex flex-row items-center justify-between p-10 text-15.20 text-black;
+}
+
+.pup_toggler {
+  position: relative;
+}
+
+.pup_toggler::after  {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+
+.more-down-filters > .pup_toggler::after {
+  content: none;
 }
