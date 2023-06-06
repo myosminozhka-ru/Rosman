@@ -1,13 +1,13 @@
 @import "./inputs";
 @import "./text";
- @import "./buttons";
+ @import "./buttons" ;
 #yellow-background {
- @apply bg-yellow w-full h-screen items-center pt-60;
+ @apply bg-yellow w-full h-screen items-center pt-60 overflow-hidden relative;
 }
 #moving-block {
- @apply mx-auto my-0 w-full h-full bg-white z-100 absolute;
+ @apply mx-auto my-0 w-full h-full  bg-white z-100 absolute overflow-hidden ;
 }
 #above-block {
- @apply z-1000 relative p-60;
+ @apply z-1000 relative p-60 overflow-hidden;
 
 }

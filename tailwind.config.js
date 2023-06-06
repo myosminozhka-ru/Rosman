@@ -22,6 +22,7 @@ module.exports = {
     maxWidth: {
       'menu': '165px',
       'inner-menu': '216px',
+      "5xl" : '115rem'
     },
     screens: {
       sm: { max: "639px" },
