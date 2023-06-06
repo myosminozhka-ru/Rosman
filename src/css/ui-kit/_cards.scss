@@ -62,18 +62,21 @@
   @apply body-m-bold;
 }
 .item_card_more {
-  @apply flex flex-row justify-start gap-8;
+  @apply flex flex-row justify-start gap-18;
 }
 .item_card_link.overline-button {
   @apply p-0;
 }
 .item_card_add_to_favourite {
-  @apply m-0 cursor-pointer border-0 bg-cover bg-center p-10;
-  //background-size: cover;
-  //background-position: center;
+  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+  background: url("../../img/heart_white.svg") no-repeat center;
 }
-.add_to_favourite_button {
+
+.item_card_add_to_favourite.js_pressed {
+  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+  background: url("../../img/heart_black.svg") no-repeat center;
 }
+
 .add_to_favourite_img {
 }
 .book_card_author {
@@ -438,7 +441,7 @@
 
 // карточка НАГРАД
 .card_awards_content {
-  @apply flex flex-col flex-nowrap gap-16 p-16 bg-background;
+  @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
   max-width: 40rem;
 }
 .card_awards_image {
