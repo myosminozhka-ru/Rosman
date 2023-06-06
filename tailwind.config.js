@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries")
+  containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -20,17 +20,19 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      'menu': '165px',
-      'inner-menu': '216px',
+      menu: "165px",
+      "inner-menu": "216px",
     },
     screens: {
       sm: { max: "639px" },
+      ssm: { max: "400px" },
     },
     fontSize: {
       l: ["1.7rem", "2.4rem"],
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
       xl: ["1.3rem", "1.8rem"],
+      11.14: ["1.1rem", "1.4rem"],
       "15.20": ["1.5rem", "2rem"],
       "2xl": ["2.1rem", "2.4rem"],
       "2.5xl": ["1.7rem", "2.4rem"],
@@ -65,7 +67,7 @@ module.exports = {
     fontFamily: {
       // sans: ['Graphik', 'sans-serif'],
       // serif: ['Merriweather', 'serif'],
-      'tt-hoves-pro': ["TT Hoves Pro", 'sans-serif']
+      "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
       spacing: {
@@ -109,8 +111,8 @@ module.exports = {
       },
       borderRadius: {},
       zIndex: {
-        '9999': '9999',
-      }
+        9999: "9999",
+      },
     },
   },
   plugins: plugins,
