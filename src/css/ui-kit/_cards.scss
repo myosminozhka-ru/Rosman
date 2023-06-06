@@ -222,6 +222,9 @@
 // 1
 .card_career_heading {
   @apply flex flex-row flex-wrap items-center  gap-12;
+  @media screen and (max-width: 520px) {
+    @apply flex-col-reverse items-start;
+  }
 }
 .card_career_title {
   @apply text-4xl;
@@ -238,11 +241,14 @@
 //2
 .card_career_conditions {
   @apply flex flex-row flex-nowrap gap-16;
+  @media screen and (max-width: 520px) {
+    @apply flex-col items-start;
+  }
 }
 .card_career_cond_item {
 }
 .car_cond_item {
-  @apply flex flex-row flex-nowrap items-center gap-8 bg-background px-8 py-4;
+  @apply flex flex-row flex-nowrap items-center gap-8 rounded bg-background px-8 py-4;
 }
 .car_cond_location {
 }
@@ -454,7 +460,7 @@
   @apply flex flex-col flex-nowrap items-start gap-8;
 }
 .card_awards_year {
-  @apply rounded-2xl bg-white px-8 py-4 text-s font-medium text-black;
+  @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
 }
 .card_awards_title {
   @apply text-3xl font-medium;
