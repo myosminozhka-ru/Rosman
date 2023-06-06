@@ -100,6 +100,10 @@ module.exports = {
         74: "14rem",
         100: "25.9rem",
       },
+      zIndex: {
+        '100': '100',
+        '1000': '1000',
+      },
       borderRadius: {},
     },
   },
