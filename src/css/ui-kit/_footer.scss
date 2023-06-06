@@ -1,0 +1,101 @@
+.footer {
+}
+.rosman_footer_ru {
+}
+.footer_container {
+  @apply flex flex-col gap-56 px-24 py-24;
+}
+
+// footer heading
+.footer_heading {
+  @apply flex flex-row justify-between;
+}
+.footer_heading_main {
+  @apply flex flex-col justify-between;
+}
+.footer_heading_image {
+  @apply block;
+  height: 8.8rem;
+  width: 8.3rem;
+  background: url("../../img/footer_elephant.svg") no-repeat center;
+  background-size: contain;
+}
+.footer_heading_subscription {
+}
+.footer_heading_subs_title {
+}
+.footer_heading_subs_inputs {
+}
+.footer_heading_subs_inputs_main {
+  @apply flex flex-row flex-nowrap;
+}
+.footer_heading_subs_input {
+  flex-grow: 1;
+}
+.footer_heading_subs_button {
+}
+.js_footer_heading_policy_agreement {
+}
+.js_footer_heading_checkbox {
+}
+.footer_heading_policy_agreement_text {
+}
+.footer_heading__policy_agreement_link {
+}
+// footer middle
+.footer_heading_discover_rosman {
+  @apply flex flex-row flex-nowrap justify-between;
+  flex-grow: 1;
+}
+.footer_heading__disc_block {
+  @apply flex flex-grow flex-col items-start gap-16;
+  flex-basis: 17.6rem;
+  flex-grow: 1;
+}
+.footer_heading_about {
+}
+.footer_heading_books {
+}
+.footer_heading_toys {
+}
+.footer_section_header {
+}
+.footer_section_items {
+}
+.footer_section_item {
+  @apply py-8;
+}
+//.footer_heading_about,
+//.footer_heading_books,
+//.footer_heading_toys {
+//  flex-basis: 17.6rem;
+//}
+// footer bottom
+.footer_info {
+}
+.footer_info_rss {
+}
+.footer_info_contacts {
+}
+.footer_info_address {
+}
+.footer_info_directs {
+}
+.footer_info_tel {
+}
+.footer_info_email {
+}
+.footer_info_address {
+}
+.footer_extras {
+}
+.footer_extras_creators {
+}
+.footer_extras_idea {
+}
+.footer_extras_creators {
+}
+.footer_extras_links {
+}
+.footer_extras_link {
+}
