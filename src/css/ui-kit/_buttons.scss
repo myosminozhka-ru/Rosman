@@ -20,7 +20,7 @@ button {
   }
 }
 .button-yellow-full {
-  @apply flex flex-row justify-center items-center py-10 bg-yellow bg-opacity-50 text-black px-90 mx-auto;
+  @apply w-full flex flex-row justify-center items-center py-10 bg-yellow bg-opacity-50 text-black px-90 mx-auto;
   &:hover {
     @apply  bg-opacity-100 text-black;
   }
@@ -137,7 +137,7 @@ button {
   }
 }
 .sort-label {
-  @apply flex flex-row items-center border rounded-3xl border-card-stroke text-s justify-between h-24 px-6  w-full font-normal;
+  @apply flex flex-row items-center border rounded-3xl border-card-stroke cursor-pointer text-s justify-between h-24 px-6  w-full font-normal;
   span {
     @apply hidden;
   }
@@ -162,7 +162,7 @@ button {
   }
 }
 .filter-label {
-  @apply inline-flex my-8 mx-4 flex-row  items-center border rounded-3xl border-card-stroke  text-s justify-between h-24 px-6 w-auto font-semibold;
+  @apply inline-flex my-8 mx-4 flex-row  items-center border cursor-pointer rounded-3xl border-card-stroke  text-s justify-between h-24 px-6 w-auto font-semibold;
   &.age {
     @apply w-55 justify-center;
   }
