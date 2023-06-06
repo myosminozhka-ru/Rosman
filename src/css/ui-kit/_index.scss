@@ -1,6 +1,7 @@
 @import "./inputs";
 @import "./text";
- @import "./buttons" ;
+ @import "./buttons";
+ @import "./components";
 #yellow-background {
  @apply bg-yellow w-full h-screen items-center pt-60 overflow-hidden relative;
 }
@@ -9,5 +10,3 @@
 }
 #above-block {
  @apply z-1000 relative py-35 px-60 overflow-hidden;
-
-}
