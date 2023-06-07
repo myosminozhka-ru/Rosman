@@ -16,16 +16,48 @@
   <div class="panel block">
     @@include('components/ui-kit/text/text.html', { }, )
   </div>
-
-  <h3 class="accordion head-3">Inputs</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/inputs/inputs.html', { }, )
-  </div>
-
   <h3 class="accordion head-3">Buttons</h3>
   <div class="panel block">
     @@include('components/ui-kit/buttons/buttons.html', { }, )
   </div>
+  <h3 class="accordion head-3">header</h3>
+  <div class="panel block p-0">
+    @@include('components/ui-kit/components/header.html', { }, )
+  </div>
+
+  <h3 class="accordion head-3">Components</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/filters.html', { }, )
+  </div>
+  <style>
+    /* Style the buttons that are used to open and close the accordion panel */
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    <h3 class="accordion head-3">Inputs</h3><div class="panel block">@@include('components/ui-kit/inputs/inputs.html', {}
+
+    , ) </div><h3 class="accordion head-3">Buttons</h3><div class="panel block">@@include('components/ui-kit/buttons/buttons.html', {}
+
+    , ) </div>
+    /* Style the accordion panel. Note: hidden by default */
+
+    .panel {
+      padding: 0;
+      background-color: white;
+      /* display: none; */
+      overflow: hidden;
+    }
+  </style>
 
   <h3 class="accordion head-3">Popups</h3>
   <div class="panel block">
