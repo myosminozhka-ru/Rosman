@@ -829,7 +829,7 @@ img {
   }
 }
 .more-down-filters {
-  @apply relative p-10;
+  @apply relative;
 }
 .more-down-filters::after {
   content: "";
@@ -1025,13 +1025,11 @@ img {
 }
 
 .more-down-button {
-  @apply justify-between;
-}
-.with-padds {
-  @apply pl-40 pr-16;
+  @apply justify-between w-full;
 }
 .more-down-content {
   @apply p-12;
+  //border: 1px solid #D9D9D9;
 }
 
 .null-margin > .toggle-switch {
