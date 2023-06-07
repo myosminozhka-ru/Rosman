@@ -18,7 +18,6 @@ for (let i = 0; i < addToFavBtns.length; i++) {
 // функция для изменения фона рандомно для блока новостей и наград,
 
 const traceableItems = document.getElementsByClassName("js_traceable_item");
-console.log(traceableItems);
 for (let i = 0; i < traceableItems.length; i++) {
   traceableItems[i].addEventListener("mouseenter", function (event) {
     const colors = [

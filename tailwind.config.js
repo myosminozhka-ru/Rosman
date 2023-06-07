@@ -107,16 +107,21 @@ module.exports = {
                 90: "9rem",
                 95: "9.5rem",
                 96: "9.6rem",
+                99: "9.9rem",
                 70: "10rem",
                 74: "14rem",
                 100: "25.9rem",
             },
+
+
+            borderRadius: {},
             zIndex: {
                 '100': '100',
+                '900': '900',
                 '1000': '1000',
                 9999: "9999",
             },
-            borderRadius: {},
+
         },
     },
     plugins: plugins,
