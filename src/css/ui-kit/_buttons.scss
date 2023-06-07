@@ -179,16 +179,18 @@ button {
    @apply hidden;
   }
   input[type="radio"]:checked + .checkmark {
-    @apply bg-yellow border-none;
+    @apply bg-yellow border-none flex justify-center;
+    display: flex;
+    justify-content: center;
   }
   input[type="radio"]:checked + .checkmark::after {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     background-color: #000;
-    margin: 10px;
+    margin: auto;
   }
   .checkmark {
     @apply inline-block w-18 h-18 rounded-full  border-2 border-black border-solid mr-2;
