@@ -27,7 +27,7 @@ button {
 }
 
 .button-yellow-full {
-  @apply w-full flex flex-row justify-center items-center py-10 bg-yellow bg-opacity-50 text-black px-90 mx-auto;
+  @apply mx-auto flex w-full flex-row items-center justify-center bg-yellow bg-opacity-50 px-90 py-10 text-black;
 
   &:hover {
     @apply bg-opacity-100 text-black;
@@ -155,7 +155,7 @@ button {
 .sort-checkbox {
   @apply hidden;
 
-  &:checked+.sort-label {
+  &:checked + .sort-label {
     @apply bg-yellow;
 
     .cross {
@@ -163,7 +163,7 @@ button {
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1.8rem;
-      @apply inline text-left inline ml-4;
+      @apply ml-4 inline inline text-left;
     }
 
     .count {
@@ -173,7 +173,7 @@ button {
 }
 
 .sort-label {
-  @apply flex flex-row items-center border rounded-3xl border-card-stroke cursor-pointer text-s justify-between h-24 px-6 w-full font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
 
   span {
     @apply hidden;
@@ -187,7 +187,7 @@ button {
 .filter-checkbox {
   @apply hidden;
 
-  &:checked+.filter-label {
+  &:checked + .filter-label {
     @apply bg-yellow;
 
     .cross {
@@ -195,7 +195,7 @@ button {
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1.8rem;
-      @apply inline text-left inline ml-4;
+      @apply ml-4 inline inline text-left;
     }
 
     .count {
@@ -205,7 +205,7 @@ button {
 }
 
 .filter-label {
-  @apply inline-flex my-8 mx-4 flex-row items-center border cursor-pointer rounded-3xl border-card-stroke text-s justify-between h-24 px-6 w-auto font-semibold;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold;
 
   &.age {
     @apply w-55 justify-center;
@@ -227,13 +227,11 @@ button {
     @apply hidden;
   }
 
-  input[type="radio"]:checked+.checkmark {
-    @apply bg-yellow border-none flex justify-center;
-    display: flex;
-    justify-content: center;
+  input[type="radio"]:checked + .checkmark {
+    @apply flex justify-center border-none bg-yellow;
   }
 
-  input[type="radio"]:checked+.checkmark::after {
+  input[type="radio"]:checked + .checkmark::after {
     content: "";
     display: block;
     width: 0.7rem;
@@ -254,21 +252,21 @@ button {
   input[type="checkbox"] {
     @apply hidden;
 
-    &:checked+.slider {
+    &:checked + .slider {
       @apply bg-yellow;
     }
 
-    &:checked+.slider:before {
+    &:checked + .slider:before {
       transform: translateX(2rem);
       background-color: #000000;
     }
   }
 
   .slider {
-    @apply absolute top-0 left-0 right-0 bottom-0 cursor-pointer bg-grey rounded-3xl transition-all duration-300 w-45 h-25;
+    @apply absolute bottom-0 left-0 right-0 top-0 h-25 w-45 cursor-pointer rounded-3xl bg-grey transition-all duration-300;
 
     &:before {
-      @apply w-20 h-20;
+      @apply h-20 w-20;
       position: absolute;
       content: "";
       left: 0.3rem;
@@ -314,7 +312,7 @@ button {
   }
 
   .content {
-    @apply hidden absolute w-auto max-w-inner-menu z-1000 bg-white p-12;
+    @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-12;
 
     a {
       @apply flex w-full justify-start p-1 text-l;
