@@ -12,10 +12,10 @@ for (let i = 0; i < moreButtons.length; i++) {
     } else {
       this.classList.add("active-js");
     }
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
     } else {
-      content.style.display = "block";
+      // content.style.display = "block";
       content.classList.add("active-js");
     }
   });
@@ -28,7 +28,7 @@ document.addEventListener("click", function(event) {
     if (!block.contains(targetElement)) {
     for (let i = 0; i < moreButtons.length; i++) {
       if ( moreButtons[i].classList.contains("active-js")) {
-        moreButtons[i].nextElementSibling.style.display = "none";
+        moreButtons[i].nextElementSibling.classList.remove("active-js")
         moreButtons[i].classList.remove("active-js")
        }
       }
@@ -88,3 +88,19 @@ document.addEventListener("mousemove", function(event) {
   let offsetY = (mouseY - boxCenterY) * 0.1;
   movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 20px 20px rgba(0, 0, 0, 0.2)';
 })
+
+function toggleSearch() {
+  let headerNav = document.querySelector('.header-nav')
+  let searchInput = document.querySelector('.search-input')
+  if (headerNav.classList.contains("hide")) {
+    headerNav.classList.remove("hide");
+  } else {
+    headerNav.classList.add("hide");
+  }
+  if (searchInput.classList.contains("hide")) {
+    searchInput.classList.remove("hide");
+  } else {
+    searchInput.classList.add("hide");
+  }
+
+}
