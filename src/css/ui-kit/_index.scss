@@ -1,6 +1,18 @@
 @import "./inputs";
 @import "./text";
-@import "./buttons";
 @import "./popups";
-@import "./components";
 @import "./pagination";
+@import "./buttons";
+@import "./components";
+
+#yellow-background {
+    @apply bg-yellow w-full h-screen items-center pt-60 overflow-hidden relative;
+}
+
+#moving-block {
+    @apply mx-auto my-0 w-full h-full bg-white z-100 absolute overflow-hidden;
+}
+
+#above-block {
+    @apply z-1000 relative py-35 px-60 overflow-hidden;
+}
