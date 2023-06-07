@@ -86,3 +86,19 @@ document.addEventListener("mousemove", function(event) {
   let offsetY = (mouseY - boxCenterY) * 0.1;
   movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 20px 20px rgba(0, 0, 0, 0.2)';
 })
+
+function toggleSearch() {
+  let headerNav = document.querySelector('.header-nav')
+  let searchInput = document.querySelector('.search-input')
+  if (headerNav.classList.contains("hide")) {
+    headerNav.classList.remove("hide");
+  } else {
+    headerNav.classList.add("hide");
+  }
+  if (searchInput.classList.contains("hide")) {
+    searchInput.classList.remove("hide");
+  } else {
+    searchInput.classList.add("hide");
+  }
+
+}

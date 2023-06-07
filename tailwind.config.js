@@ -109,6 +109,7 @@ module.exports = {
       },
       zIndex: {
         '100': '100',
+        '900': '900',
         '1000': '1000',
       },
       borderRadius: {},
