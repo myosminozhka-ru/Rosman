@@ -22,6 +22,7 @@ module.exports = {
     maxWidth: {
       'menu': '165px',
       'inner-menu': '216px',
+      "5xl" : '115rem'
     },
     screens: {
       sm: { max: "639px" },
@@ -86,6 +87,7 @@ module.exports = {
         30: "3rem",
         32: "3.2rem",
         34: "3.4rem",
+        35: "3.5rem",
         36: "3.6rem",
         40: "4rem",
         44: "4.4rem",
@@ -104,6 +106,10 @@ module.exports = {
         70: "10rem",
         74: "14rem",
         100: "25.9rem",
+      },
+      zIndex: {
+        '100': '100',
+        '1000': '1000',
       },
       borderRadius: {},
     },

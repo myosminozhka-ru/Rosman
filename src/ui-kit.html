@@ -24,6 +24,11 @@
     <div class="panel block">
       @@include('components/ui-kit/buttons/buttons.html', { }, )
     </div>
+    <h3 class="accordion head-3">header</h3>
+    <div class="panel block p-0">
+      @@include('components/ui-kit/components/header.html', { }, )
+    </div>
+
     <h3 class="accordion head-3">Components</h3>
     <div class="panel block">
       @@include('components/ui-kit/Components/filters.html', { }, )
@@ -50,7 +55,7 @@
 
       /* Style the accordion panel. Note: hidden by default */
       .panel {
-        padding: 0 18px;
+        padding: 0;
         background-color: white;
         /* display: none; */
         overflow: hidden;
