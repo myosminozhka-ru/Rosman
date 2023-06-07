@@ -25,6 +25,7 @@ module.exports = {
     },
     screens: {
       sm: { max: "639px" },
+      mm: {max: "1000px"},
     },
     fontSize: {
       l: ["1.7rem", "2.4rem"],

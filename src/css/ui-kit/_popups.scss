@@ -958,10 +958,19 @@ img {
 }
 
 // filter block
+.js_popup_all_filters_modal{
+  @apply mx-10;
+  @media (min-width: 701px) and (max-width: 1000px) {
+    @apply px-10;
+  }
+}
 .popup_all_filters_block_filter {
   @apply flex grow flex-row gap-56;
-  @media screen and (max-width: 700px) {
-    @apply flex-wrap justify-center;
+  @media (min-width: 901px) and (max-width: 1000px) {
+    @apply gap-16;
+  }
+  @media screen and (max-width: 900px){
+    @apply flex-col items-center;
   }
 }
 .pup_filter_item {
@@ -984,7 +993,7 @@ img {
 .pup_toggler::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -998,6 +1007,13 @@ img {
 // стили для фильтров попапа ВСЕ ФИЛЬТРЫ НОВЫЕ
 .popup_all_filters_block_filter_clmn {
   @apply w-1/3;
+  @media (min-width: 700px) and (max-width: 900px){
+    @apply w-3/4;
+  }
+
+  @media screen and (max-width: 700px){
+    @apply w-full;
+  }
 }
 
 .more-down-button {
@@ -1005,4 +1021,8 @@ img {
 }
 .more-down-content {
   @apply p-12;
+}
+
+.null-margin > .toggle-switch {
+  margin: 0;
 }
