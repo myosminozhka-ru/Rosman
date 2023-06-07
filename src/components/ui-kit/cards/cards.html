@@ -1,0 +1,369 @@
+<!-- js_traceable_item будет применяться к всей карточке целиком -->
+<!-- а js-hovered только к элементам с изменяющимся фоном с классом js-bg-changeable-->
+<div class="cards_wrapper">
+  <!-- карточка ИГРУШКИ -->
+  <div class="toy_card item_card">
+    <div class="toy_card_heading">
+      <div class="item_card_tags bordered_tags">
+        <div class="item_card_tags_main bordered_tags_main">
+          <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+            Бестселлер
+          </div>
+          <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+            Новинка
+          </div>
+        </div>
+        <div class="toy_card_tags_age body-s-bold">8+</div>
+      </div>
+      <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+      <div class="toy_card_image item_card_image">
+        <img
+          class="toy_card_img item_card_img"
+          src="../../img/cards_toy.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="toy_card_info item_card_info">
+      <div class="toy_card_name item_card_name">
+        Арена для баттлов Инфинити Надо
+      </div>
+      <div class="toy_card_more item_card_more">
+        <button class="toy_card_item_link item_card_link overline-button">
+          Подробнее
+        </button>
+        <button class="item_card_add_to_favourite"> </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- карточка КНИГИ -->
+  <div class="book_card js_item_card">
+    <div class="book_card_heading">
+      <div class="item_card_tags bordered_tags">
+        <div class="item_card_tags_main bordered_tags_main">
+          <div class="book_card_tags_first bordered_tags_item body-s-bold">
+            Бестселлер
+          </div>
+          <div class="book_card_tags_second bordered_tags_item body-s-bold">
+            Новинка
+          </div>
+        </div>
+        <div class="book_card_tags_age body-s-bold">8+</div>
+      </div>
+
+      <div class="book_card_image item_card_image">
+        <img
+          class="book_card_img item_card_img"
+          src="../../img/cards_book.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="book_card_info item_card_info">
+      <div class="book_card_name item_card_name">
+        Чародол. Весь цикл в одном томе
+      </div>
+      <div class="book_card_author">Щерба Н. В.</div>
+      <div class="book_card_more item_card_more">
+        <button class="book_card_item_link item_card_link overline-button">
+          Подробнее
+        </button>
+        <button class="item_card_add_to_favourite"> </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- карточка ПОДБОРКИ -->
+  <div class="card_selection js_traceable_item">
+    <a href="#" class="card_selection_image item_card_image">
+      <img
+        src="../../img/cards_selection.svg"
+        alt=""
+        class="selection_card_img item_card_img"
+      />
+    </a>
+    <div class="card_selection_description js-bg-changeable">
+      <div class="card_selection_tags dotted_tags">
+        <a href="#" class="card_selection_category dotted_tags_category"
+          >Подборки</a
+        >
+        <div class="card_selection_separator dotted_tags_separator">•</div>
+        <a href="#" class="card_selection_date dotted_tags_date">30.11.2022</a>
+      </div>
+      <a href="#" class="card_selection_info card_sel_info">
+        <div class="card_selection_name card_sel_name">
+          Новая книга Джона Смита стала бестселлером за первую неделю продаж!
+        </div>
+        <div class="card_selection_text card_sel_text">
+          Также как сплочённость команды профессионалов представляет собой
+          интересный эксперимент проверки системы массового участия. Безусловно,
+          внедрение современных методик требует определения и уточнения системы
+          массового участия.
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- КАРТОЧКА ИНТЕРВЬЮ -->
+  <div class="card_interview js_traceable_item">
+    <a href="#" class="card_interview_image item_card_image">
+      <img
+        src="../../img/cards_interview.svg"
+        alt=""
+        class="interview_card_img item_card_img"
+      />
+    </a>
+    <div class="card_interview_description js-bg-changeable">
+      <div class="card_interview_tags dotted_tags">
+        <a href="#" class="card_interview_category dotted_tags_category"
+          >Интервью</a
+        >
+        <div class="card_interview_separator dotted_tags_separator">•</div>
+        <a href="#" class="card_interview_date dotted_tags_date">30.11.2022</a>
+      </div>
+      <a href="#" class="card_interview_info card_sel_info">
+        <div class="card_interview_name card_sel_name">
+          Классический бестселлер обрёл новую жизнь в свежем переводе на русский
+          язык
+        </div>
+        <div class="card_interview_text card_sel_text">
+          Также как сплочённость команды профессионалов представляет собой
+          интересный эксперимент
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- карточка СТАТЬИ средний размер текста-->
+  <div class="card_articles js_traceable_item">
+    <a href="#" class="card_articles_image item_card_image">
+      <img
+        src="../../img/cards_articles.svg"
+        alt=""
+        class="articles_card_img item_card_img"
+      />
+    </a>
+    <div class="card_articles_description js-bg-changeable">
+      <div class="card_articles_tags dotted_tags">
+        <a href="#" class="card_articles_category dotted_tags_category"
+          >Статьи</a
+        >
+        <div class="card_articles_separator dotted_tags_separator">•</div>
+        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+      </div>
+      <a href="#" class="card_articles_info card_sel_info">
+        <div class="card_articles_name card_sel_name">
+          Известный автор выпустил свою самую личную и чувственную книгу
+        </div>
+        <div class="card_articles_text card_sel_text">
+          В четверг стартует главное книжное событие – ярмарка NonFiction. С 1
+          по 5 декабря в Гостином дворе издательства России представят свои
+          лучшие книги, проведут ряд мероприятий, и встретятся со своими
+          читателями.
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--  карточки СТАТЬИ маленький размер текста  -->
+  <div class="card_articles js_traceable_item">
+    <a href="#" class="card_articles_image item_card_image">
+      <img
+        src="../../img/cards_article_small_fs.svg"
+        alt=""
+        class="articles_card_img item_card_img"
+      />
+    </a>
+    <div class="card_articles_description js-bg-changeable">
+      <div class="card_articles_tags dotted_tags">
+        <a href="#" class="card_articles_category dotted_tags_category"
+          >Статьи</a
+        >
+        <div class="card_articles_separator dotted_tags_separator">•</div>
+        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+      </div>
+      <a href="#" class="card_articles_info card_sel_info">
+        <div class="card_articles_name_sfs card_sel_name">
+          Новый закон накладывает вето на полуночный
+        </div>
+        <div class="card_articles_text_sfs card_sel_text">
+          Противоположная точка зрения подразумевает, что явные признаки победы
+          институционализации лишь добавляют фракционных разногласий и объявлены
+          нарушающими общечеловеческие нормы этики и морали.
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--  карточки БРЕНДЫ  -->
+  <div class="card_brand">
+    <div class="card_brand_content">
+      <div class="card_brand_info">
+        <div class="card_brand_all_items">Все товары бренда</div>
+        <div class="card_brand_name">Дикие Скричеры</div>
+      </div>
+      <a href="#" class="card_brand_image">
+        <span class="card_brand_img"></span>
+      </a>
+    </div>
+  </div>
+
+  <!--  КАТАЛОГ КНИГ КАРТОЧКА  -->
+  <div class="card_book_catalog">
+    <div class="card_book_image">
+      <img src="../../img/cards_book_catalog.svg" alt="" class="card_img" />
+    </div>
+    <div class="card_book_title">Художественная литература</div>
+    <div class="card_book_link link-m">
+      Перейти
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <!--  КАРТОЧКА КАРЬЕРА  -->
+  <div class="card_career">
+    <div class="card_career_heading">
+      <div class="card_career_title">Бренд-менеджер</div>
+      <div class="card_career_tags">
+        <div class="card_career_tag">Маркетинг</div>
+        <div class="card_career_tag">IT</div>
+        <div class="card_career_tag">+3</div>
+      </div>
+    </div>
+    <div class="card_career_conditions">
+      <div class="card_career_cond_item car_cond_item car_cond_location">
+        <div class="card_career_cond_item_image">
+          <img
+            src="../../img/card_career_location.svg"
+            alt=""
+            class="card_career_cond_item_img"
+          />
+        </div>
+        <div class="card_career_cond_item_text">Москва</div>
+      </div>
+
+      <div class="card_career_cond_item car_cond_item car_cond_shift_length">
+        <div class="card_career_cond_item_image">
+          <img
+            src="../../img/card_career_watch.svg"
+            alt=""
+            class="card_career_cond_item_img"
+          />
+        </div>
+        <div class="card_career_cond_item_text">Полный рабочий день</div>
+      </div>
+    </div>
+    <div class="card_career_description">
+      Вы активный, драйвовый мендежер, которому одинаково интересно следить за
+      коммерческим результатом своей работы и генерить креативные, смелые идеи
+    </div>
+    <button class="card_career_more_info">
+      <span class="card_career_text">Подробнее</span>
+      <span class="card_career_img"></span>
+    </button>
+  </div>
+
+  <!--  Карточка БРЕНДА С ВСПЛЫВАЮЩЕЙ КНОПКОЙ и страницами в СС -->
+
+  <div class="card_brand_with_socials">
+    <div class="card_brand_with_socials_links">
+      <a href="#" class="card_brand_with_socials_link_image">
+        <img
+          src="../../img/socials_black_vk.svg"
+          alt=""
+          class="brand_soc_link_img"
+        />
+      </a>
+      <a href="#" class="card_brand_with_socials_link_image">
+        <img
+          src="../../img/socials_black_fb.svg"
+          alt=""
+          class="brand_soc_link_img"
+        />
+      </a>
+      <a href="#" class="card_brand_with_socials_link_image">
+        <img
+          src="../../img/socials_black_tiktok.svg"
+          alt=""
+          class="brand_soc_link_img"
+        />
+      </a>
+      <a href="#" class="card_brand_with_socials_link_image">
+        <img
+          src="../../img/socials_black_heart.svg"
+          alt=""
+          class="brand_soc_link_img"
+        />
+      </a>
+    </div>
+
+    <a href="" class="card_brand_with_socials_item_page">Дикие скричеры</a>
+  </div>
+
+  <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+  <div class="card_photogallery_item">
+    <img src="../../img/cards_photogallery_item.svg" alt="" />
+    <div class="cards_photogallery_eye_image">
+      <img
+        class="cards_photogallery_eye_img"
+        src="../../img/cards_photogallery_eye.svg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <!--  КАРТОЧКА ВИДЕО  -->
+  <div class="card_video_item">
+    <div class="card_video_preview">
+      <img src="../../img/cards_video_preview.svg" alt="" />
+      <button class="card_video_play_button circle-button"></button>
+    </div>
+
+    <div class="card_video_info">
+      <span class="card_video_title"
+        >Как правильно выбрать книгу: наши советы для любителей книг</span
+      >
+    </div>
+  </div>
+
+  <!--  Карточка сотрудника  -->
+  <div class="card_employee">
+    <div class="card_employee_image">
+      <img src="../../img/cards_employee.svg" alt="" />
+      <div class="card_employee_socials">
+        <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+        <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+        <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+        <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+      </div>
+    </div>
+
+    <div class="card_employee_info">
+      <div class="card_employee_name">Иван Иванов</div>
+      <div class="card_employee_occupation">Писатель</div>
+      <div class="card_employee_text">
+        Картельные сговоры не допускают ситуации, при которой представители
+        современных социальных резервов лишь добавляют.
+      </div>
+    </div>
+  </div>
+
+  <!--  Карточка с НАГРАДАМИ  -->
+  <div class="card_awards js_traceable_item">
+    <div class="card_awards_content js_traceable_item">
+      <div class="card_awards_image">
+        <img src="../../img/cards_awards_img.svg" alt="" />
+      </div>
+      <div class="card_awards_info">
+        <div class="card_awards_year">2016</div>
+        <div class="card_awards_title">
+          РОСМЭН – «лучшее издательство России»
+        </div>
+        <div class="card_awards_description">
+          Победа в профессиональном конкурсе книжной индустрии «Ревизор»
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

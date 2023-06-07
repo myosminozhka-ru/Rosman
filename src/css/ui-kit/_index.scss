@@ -1,6 +1,9 @@
 @import "./inputs";
 @import "./text";
- @import "./buttons";
+@import "./popups";
+@import "./cards";
+@import "./footer";
+@import "./buttons";
 @import "./components";
 header {
  @apply flex items-center justify-between px-10 pt-4 pb-14 bg-yellow h-99;
@@ -134,12 +137,13 @@ background-size: cover;
 
 
 #yellow-background {
- @apply bg-yellow w-full h-screen items-center pt-60 overflow-hidden relative;
+    @apply bg-yellow w-full h-screen items-center pt-60 overflow-hidden relative;
 }
-#moving-block {
- @apply mx-auto my-0 w-full h-full  bg-white z-100 absolute overflow-hidden ;
-}
-#above-block {
- @apply z-900 relative py-35 px-60 overflow-hidden;
 
+#moving-block {
+    @apply mx-auto my-0 w-full h-full bg-white z-100 absolute overflow-hidden;
+}
+
+#above-block {
+    @apply z-1000 relative py-35 px-60 overflow-hidden;
 }
