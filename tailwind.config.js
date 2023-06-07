@@ -114,11 +114,9 @@ module.exports = {
             zIndex: {
                 '100': '100',
                 '1000': '1000',
-            },
-            borderRadius: {},
-            zIndex: {
                 9999: "9999",
             },
+            borderRadius: {},
         },
     },
     plugins: plugins,
