@@ -3,15 +3,19 @@
 .rosman_footer_ru {
 }
 .footer_container {
-  @apply flex flex-col gap-56 px-24 py-24;
+  @apply flex flex-col gap-28 bg-background px-24 py-32;
+  @media screen and (max-width: 800px) {
+    @apply gap-12 px-12 py-24;
+  }
 }
 
 // footer heading
 .footer_heading {
-  @apply flex flex-row justify-between;
+  @apply flex flex-row justify-between gap-56;
 }
 .footer_heading_main {
-  @apply flex flex-col justify-between;
+  @apply flex flex-col items-start justify-between;
+  flex-basis: 52rem;
 }
 .footer_heading_image {
   @apply block;
@@ -21,36 +25,69 @@
   background-size: contain;
 }
 .footer_heading_subscription {
+  @apply flex flex-col gap-24;
+}
+.drop-down-discover-rosman {
+  @apply hidden;
+  @media screen and (max-width: 800px) {
+    @apply block mt-40;
+  }
+}
+.disc-rosman-item{
+  @media (min-width: 501px) and (max-width: 800px) {
+    @apply text-xl p-8;
+  }
+  @media screen and (max-width: 500px) {
+    @apply text-s;
+  }
+}
+.disc-rosman-button{
+  @apply justify-between p-8 text-15.20;
+}
+.disc-rosman-content{
+  @apply p-4;
 }
 .footer_heading_subs_title {
+  @apply text-2.5xl font-normal;
+  @media screen and (max-width: 500px) {
+    @apply text-s;
+  }
 }
 .footer_heading_subs_inputs {
+  @apply flex flex-col gap-16;
 }
 .footer_heading_subs_inputs_main {
   @apply flex flex-row flex-nowrap;
+  @media screen and (max-width: 500px) {
+    @apply flex-col;
+  }
 }
 .footer_heading_subs_input {
-  flex-grow: 1;
+  @apply w-full;
 }
 .footer_heading_subs_button {
+  @apply text-15.20 font-medium;
 }
 .js_footer_heading_policy_agreement {
+  @apply flex flex-row flex-nowrap;
 }
 .js_footer_heading_checkbox {
 }
 .footer_heading_policy_agreement_text {
+  @apply ml-16 flex flex-row flex-nowrap text-s font-medium;
 }
 .footer_heading__policy_agreement_link {
+  @apply text-s font-medium;
 }
 // footer middle
 .footer_heading_discover_rosman {
-  @apply flex flex-row flex-nowrap justify-between;
-  flex-grow: 1;
+  @apply flex w-1/2 flex-row justify-between gap-32;
+  @media screen and (max-width: 800px) {
+    @apply hidden;
+  }
 }
 .footer_heading__disc_block {
-  @apply flex flex-grow flex-col items-start gap-16;
-  flex-basis: 17.6rem;
-  flex-grow: 1;
+  @apply flex w-1/3 flex-col gap-16;
 }
 .footer_heading_about {
 }
@@ -59,8 +96,10 @@
 .footer_heading_toys {
 }
 .footer_section_header {
+  @apply text-2xl font-medium;
 }
 .footer_section_items {
+  @apply flex flex-col gap-8;
 }
 .footer_section_item {
   @apply py-8;
@@ -72,30 +111,81 @@
 //}
 // footer bottom
 .footer_info {
+  @apply flex flex-col gap-32;
+}
+.footer_info_main {
+  @apply flex flex-row flex-wrap justify-between gap-16;
+  @media screen and (max-width: 800px) {
+    @apply flex-col;
+  }
 }
 .footer_info_rss {
+  @apply flex flex-row flex-nowrap gap-8;
+}
+
+.footer_info_rss_image {
+  @apply block h-20 w-20;
+  background: url("../../img/footer_rss.svg") no-repeat center;
+  background-size: contain;
 }
 .footer_info_contacts {
+  @apply flex w-1/2 flex-row justify-between gap-32;
+  @media screen and (max-width: 800px) {
+    @apply w-full flex-col gap-16;
+  }
+}
+.ft_inf_item {
+  @apply w-1/3;
+  @media screen and (max-width: 800px) {
+    @apply w-full;
+  }
 }
 .footer_info_address {
 }
 .footer_info_directs {
+  @apply flex flex-col gap-8;
 }
 .footer_info_tel {
 }
-.footer_info_email {
+.footer_info_email-one {
+  @media screen and (max-width: 800px) {
+    @apply hidden;
+  }
 }
+.footer_info_email-two{
+  @apply hidden;
+  @media screen and (max-width: 800px) {
+    @apply block;
+  }
+}
+
 .footer_info_address {
 }
 .footer_extras {
+  @apply flex flex-row justify-between;
+  @media screen and (max-width: 800px) {
+    @apply w-full flex-col gap-8;
+  }
 }
 .footer_extras_creators {
+  @apply flex flex-row flex-nowrap gap-12;
+  @media screen and (max-width: 800px) {
+    @apply w-full flex-col gap-8;
+  }
 }
 .footer_extras_idea {
 }
 .footer_extras_creators {
 }
 .footer_extras_links {
+  @apply flex w-1/2 flex-row items-start gap-16;
+  @media screen and (max-width: 800px) {
+    @apply w-full flex-col gap-8;
+  }
 }
 .footer_extras_link {
+}
+
+.common_text {
+  @apply text-s font-normal;
 }
