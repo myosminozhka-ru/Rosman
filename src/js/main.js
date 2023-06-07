@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 // дропдаун добавление класса active-js с отслеживанием клика вне блока
 const moreButtons = document.getElementsByClassName("more-down-button");
+
 for (let i = 0; i < moreButtons.length; i++) {
   moreButtons[i].addEventListener("click", function() {
     const content = this.nextElementSibling;
@@ -34,6 +35,7 @@ document.addEventListener("click", function(event) {
     }
   }
 });
+
 const buttons = document.getElementsByClassName("collapse-button");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function() {
