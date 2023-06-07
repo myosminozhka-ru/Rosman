@@ -12,10 +12,10 @@ for (let i = 0; i < moreButtons.length; i++) {
     } else {
       this.classList.add("active-js");
     }
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
     } else {
-      content.style.display = "block";
+      // content.style.display = "block";
       content.classList.add("active-js");
     }
   });
@@ -28,7 +28,7 @@ document.addEventListener("click", function(event) {
     if (!block.contains(targetElement)) {
     for (let i = 0; i < moreButtons.length; i++) {
       if ( moreButtons[i].classList.contains("active-js")) {
-        moreButtons[i].nextElementSibling.style.display = "none";
+        moreButtons[i].nextElementSibling.classList.remove("active-js")
         moreButtons[i].classList.remove("active-js")
        }
       }
@@ -61,4 +61,46 @@ for (let i = 0; i < buttons.length; i++) {
       this.classList.add("active")
     }
   });
+}
+
+const movingBlock = document.getElementById("moving-block");
+
+document.addEventListener("mousemove", function(event) {
+  const windowWidth = window.innerWidth;
+  const blockWidth = movingBlock.offsetWidth;
+
+  // Вычисляем позицию блока на основе позиции мыши и ширины окна
+  let blockX = event.clientX - blockWidth / 2;
+
+  // Вычисляем наклон блока в зависимости от позиции мыши
+  let tilt = -((blockX / windowWidth)) * 6;
+
+  // Применяем наклон к блоку с помощью свойства transform
+   movingBlock.style.transform = `rotate(${tilt}deg)`;
+
+   // добавляем тень блоку в зависимости от расположения мышки
+  let mouseX = event.clientX;
+  let mouseY = event.clientY;
+  let boxRect = movingBlock.getBoundingClientRect();
+  let boxCenterX = boxRect.left + boxRect.width / 2;
+  let boxCenterY = boxRect.top + boxRect.height / 10;
+  let offsetX = (mouseX - boxCenterX) * 0.1;
+  let offsetY = (mouseY - boxCenterY) * 0.1;
+  movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 20px 20px rgba(0, 0, 0, 0.2)';
+})
+
+function toggleSearch() {
+  let headerNav = document.querySelector('.header-nav')
+  let searchInput = document.querySelector('.search-input')
+  if (headerNav.classList.contains("hide")) {
+    headerNav.classList.remove("hide");
+  } else {
+    headerNav.classList.add("hide");
+  }
+  if (searchInput.classList.contains("hide")) {
+    searchInput.classList.remove("hide");
+  } else {
+    searchInput.classList.add("hide");
+  }
+
 }

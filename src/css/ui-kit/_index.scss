@@ -2,6 +2,167 @@
 @import "./text";
 @import "./buttons";
 @import "./popups";
+@import "./pagination";
 @import "./cards";
 @import "./footer";
 @import "./components";
+
+header {
+  @apply flex h-99 items-center justify-between bg-yellow px-10 pb-14 pt-4;
+  background: url("../../img/header-bg.png") no-repeat center;
+  background-size: cover;
+
+  .logo {
+    @apply ml-24;
+  }
+
+  .search-button {
+    display: inline-block;
+    background: url("../../img/search.svg") no-repeat center;
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .micro-button {
+    display: inline-block;
+    background: url("../../img/micro.svg") no-repeat center;
+    background-size: 2rem 2rem;
+    width: 1rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .heart-button {
+    display: inline-block;
+    background: url("../../img/heart.svg") no-repeat center;
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .language {
+    @apply inline-block;
+
+    .eng-lang {
+      color: rgba(160, 168, 47, 0.69);
+    }
+  }
+
+  .search-input {
+    @apply flex flex-row border-0 border-b-2 border-solid border-black transition-all duration-300;
+    opacity: 1;
+    padding: 5px;
+    width: 40%;
+
+    input {
+      @apply w-full border-0 bg-yellow;
+    }
+
+    span {
+      @apply ml-5;
+    }
+
+    .search-icon {
+      display: block;
+      background: url("../../img/search.svg") no-repeat center;
+      background-size: 1rem 1rem;
+      width: 1rem;
+      height: 2rem;
+    }
+
+    .micro-icon {
+      display: block;
+      background: url("../../img/micro.svg") no-repeat center;
+      background-size: 2rem 2rem;
+      width: 1rem;
+      height: 2rem;
+    }
+
+    .cross-icon {
+      cursor: pointer;
+      display: block;
+      background: url("../../img/close.svg") no-repeat center;
+      background-size: 1rem 1rem;
+      width: 1rem;
+      height: 2rem;
+    }
+
+    &.hide {
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+  .header-btn {
+    @apply inline-flex items-center;
+
+    span {
+      @apply mr-10;
+    }
+  }
+
+  nav {
+    @apply flex justify-start transition-all duration-300;
+    width: 65rem;
+    opacity: 1;
+
+    &.hide {
+      width: 0;
+      opacity: 0;
+      margin: 0;
+    }
+
+    ul {
+      @apply m-0 flex list-none p-0;
+
+      li {
+        a {
+          @apply mx-17 my-16 text-s;
+        }
+
+        .more-down-button {
+          @apply mx-6 my-3 text-s uppercase;
+
+          span {
+            width: 0.6rem;
+            height: 0.6rem;
+            border-top: 0.2rem solid #000000;
+            border-right: 0.2rem solid #000000;
+            margin-left: 0.9rem;
+            transform: rotate(135deg);
+          }
+
+          &.active-js {
+            span {
+              width: 0.6rem;
+              height: 0.6rem;
+              border-top: 0.2rem solid #000000;
+              border-right: 0.2rem solid #000000;
+              margin-left: 0.9rem;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+
+        .more-down-content {
+          @apply absolute z-1000 bg-white;
+        }
+      }
+    }
+  }
+}
+
+#yellow-background {
+  @apply relative h-screen w-full items-center overflow-hidden bg-yellow pt-60;
+}
+
+#moving-block {
+  @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+}
+
+#above-block {
+  @apply relative z-1000 overflow-hidden px-60 py-35;
+}

@@ -1,591 +1,831 @@
-<div class="p-12 flex justify-around">
-    <div class="flex flex-row items-center justify-center w-full">
-        <form id="filter-form-1" class="filters-block">
-            <div class="more-down">
-                <div class="more-down-button">Жанр<span></span></div>
-                <div class="more-down-content">
-                    <div class="back-filter"><span><</span>Все Книги</div>
-                    <div class="back-filter"><span><</span>Художественная литература</div>
-                    <input type="checkbox" id="sort-5" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-5">Русские народные сказки</label>
-                    <input type="checkbox" id="sort-6" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-6">Художественная литература</label>
-                    <input type="checkbox" id="sort-7" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-7">Книги для молодёжи</label>
-                    <input type="checkbox" id="sort-8" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-8">Научпоп</label>
-                    <button class="button-yellow-full">Показать ещё</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Авторы<span></span></div>
-                <div class="more-down-content">
-                    <input class="input search w-full" type="text" placeholder="Поиск" />
-                    <div class="scroll-block">
-                        <input type="checkbox" id="sort-9" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-9">Мадс Миккельсен<span class="cross"></span></label>
-                        <input type="checkbox" id="sort-10" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-10">Джеймс МакЭвой<span class="cross"></span></label>
-                        <input type="checkbox" id="sort-11" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-11">Джонни Депп<span class="cross"></span></label>
-                        <input type="checkbox" id="sort-12" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-12">Джонни Депп<span class="cross"></span></label>
-                        <input type="checkbox" id="sort-13" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-13">Джек Николсон<span class="cross"></span></label>
-                        <input type="checkbox" id="sort-14" class="sort-checkbox">
-                        <label class="sort-label my-14" for="sort-14">Марк Твен<span class="cross"></span></label>
-                    </div>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Популярное<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="filter-4" class="filter-checkbox">
-                    <label class="filter-label" for="filter-4">Хиты<span class="count">1</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-5" class="filter-checkbox">
-                    <label class="filter-label" for="filter-5">Новинки<span class="count">233</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-6" class="filter-checkbox">
-                    <label class="filter-label" for="filter-6">Поэма<span class="count">156</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-7" class="filter-checkbox">
-                    <label class="filter-label" for="filter-7">Для Мальчиков<span class="count">86</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-8" class="filter-checkbox">
-                    <label class="filter-label" for="filter-8">Для девочек<span class="count">56</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-9" class="filter-checkbox">
-                    <label class="filter-label" for="filter-9">Комиксы<span class="count">4</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-10" class="filter-checkbox">
-                    <label class="filter-label" for="filter-10">Ода<span class="count">22</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-11" class="filter-checkbox">
-                    <label class="filter-label" for="filter-11">Эллегия<span class="count">88</span> <span class="cross"></span>
-                    </label>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Возраст<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="filter-12" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-12">0+
-                    </label>
-                    <input type="checkbox" id="filter-13" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-13">3+
-                    </label>
-                    <input type="checkbox" id="filter-14" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-14">5+
-                    </label>
-                    <input type="checkbox" id="filter-15" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-15">7+
-                    </label>
-                    <input type="checkbox" id="filter-16" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-16">10+
-                    </label>
-                    <input type="checkbox" id="filter-17" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-17">15+
-                    </label>
-                    <input type="checkbox" id="filter-18" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-18">5+</label>
-                    <input type="checkbox" id="filter-19" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-19">7+ </label>
-                    <button class="button-yellow-full my-14">Показать ещё</button>
-                </div>
-                <div class="p-10">
-                    <h3 class="body-l font-semibold  my-14"> Категории</h3>
-                    <label class="checkbox-container">
-                        <input type="radio" name="category">
-                        <span class="checkmark"></span>
-                        Игрушки
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="category">
-                        <span class="checkmark"></span>
-                        Книги
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="category">
-                        <span class="checkmark"></span>
-                        Для школы
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="category">
-                        <span class="checkmark"></span>
-                        Для творчества
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="category">
-                        <span class="checkmark"></span>
-                        Для праздника
-                    </label>
-                </div>
+<div class="flex justify-around p-12">
+  <div class="flex w-full flex-row items-center justify-center">
+    <form id="filter-form-1" class="filters-block">
+      <div class="more-down">
+        <div class="more-down-button">Жанр<span></span></div>
+        <div class="more-down-content">
+          <div class="back-filter"><span><</span>Все Книги</div>
+          <div class="back-filter"><span><</span>Художественная литература</div>
+          <input type="checkbox" id="sort-5" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-5"
+            >Русские народные сказки</label
+          >
+          <input type="checkbox" id="sort-6" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-6"
+            >Художественная литература</label
+          >
+          <input type="checkbox" id="sort-7" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-7"
+            >Книги для молодёжи</label
+          >
+          <input type="checkbox" id="sort-8" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-8">Научпоп</label>
+          <button class="button-yellow-full">Показать ещё</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Авторы<span></span></div>
+        <div class="more-down-content">
+          <input class="input search w-full" type="text" placeholder="Поиск" />
+          <div class="scroll-block">
+            <input type="checkbox" id="sort-9" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-9"
+              >Мадс Миккельсен<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-10" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-10"
+              >Джеймс МакЭвой<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-11" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-11"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-12" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-12"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-13" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-13"
+              >Джек Николсон<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-14" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-14"
+              >Марк Твен<span class="cross"></span
+            ></label>
+          </div>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Популярное<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="filter-4" class="filter-checkbox" />
+          <label class="filter-label" for="filter-4"
+            >Хиты<span class="count">1</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-5" class="filter-checkbox" />
+          <label class="filter-label" for="filter-5"
+            >Новинки<span class="count">233</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-6" class="filter-checkbox" />
+          <label class="filter-label" for="filter-6"
+            >Поэма<span class="count">156</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-7" class="filter-checkbox" />
+          <label class="filter-label" for="filter-7"
+            >Для Мальчиков<span class="count">86</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-8" class="filter-checkbox" />
+          <label class="filter-label" for="filter-8"
+            >Для девочек<span class="count">56</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-9" class="filter-checkbox" />
+          <label class="filter-label" for="filter-9"
+            >Комиксы<span class="count">4</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-10" class="filter-checkbox" />
+          <label class="filter-label" for="filter-10"
+            >Ода<span class="count">22</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-11" class="filter-checkbox" />
+          <label class="filter-label" for="filter-11"
+            >Эллегия<span class="count">88</span> <span class="cross"></span>
+          </label>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Возраст<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="filter-12" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-12">0+ </label>
+          <input type="checkbox" id="filter-13" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-13">3+ </label>
+          <input type="checkbox" id="filter-14" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-14">5+ </label>
+          <input type="checkbox" id="filter-15" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-15">7+ </label>
+          <input type="checkbox" id="filter-16" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-16">10+ </label>
+          <input type="checkbox" id="filter-17" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-17">15+ </label>
+          <input type="checkbox" id="filter-18" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-18">5+</label>
+          <input type="checkbox" id="filter-19" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-19">7+ </label>
+          <button class="button-yellow-full my-14">Показать ещё</button>
+        </div>
+        <div class="p-10">
+          <h3 class="body-l my-14 font-semibold">Категории</h3>
+          <label class="checkbox-container">
+            <input type="radio" name="category" />
+            <span class="checkmark"></span>
+            Игрушки
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="category" />
+            <span class="checkmark"></span>
+            Книги
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="category" />
+            <span class="checkmark"></span>
+            Для школы
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="category" />
+            <span class="checkmark"></span>
+            Для творчества
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="category" />
+            <span class="checkmark"></span>
+            Для праздника
+          </label>
+        </div>
 
-                <div class="p-10">
-                    <h3 class="body-l font-semibold  my-14">Наличие товаров</h3>
-                    <label class="checkbox-container">
-                        <input type="radio" name="exist">
-                        <span class="checkmark"></span>
-                        Неважно
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="exist">
-                        <span class="checkmark"></span>
-                        В наличие
-                    </label>
-                    <label class="checkbox-container">
-                        <input type="radio" name="exist">
-                        <span class="checkmark"></span>
-                        Нет в наличие
-                    </label>
-                    <button class="button-black w-full my-10">Показать ещё</button>
-                    <input  type="reset"  class="button-white w-full my-10">
-                </div>
-            </div>
-        </form>
-        <form id="filter-form-2" class="filters-block">
-            <div class="more-down">
-                <div class="more-down-button">Категории<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-15" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-15">Трансформеры</label>
-                    <input type="checkbox" id="sort-16" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-16">Волчки и наборы</label>
-                    <input type="checkbox" id="sort-17" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-17">Игровые набор и фигурки</label>
-                    <button class="button-yellow-full">Показать ещё</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="my-4 flex flex justify-between px-10">
-                    <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Новинка</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="my-4 flex flex justify-between px-10">
-                    <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Скоро в продаже</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Для кого<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-18" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-18">Для Мальчиков</label>
-                    <input type="checkbox" id="sort-19" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-19">Для девочек</label>
-                    <input type="checkbox" id="sort-20" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-20">Для всех</label>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Возраст<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="filter-20" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-20">0+
-                    </label>
-                    <input type="checkbox" id="filter-21" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-21">3+
-                    </label>
-                    <input type="checkbox" id="filter-22" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-22">5+
-                    </label>
-                    <input type="checkbox" id="filter-23" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-23">7+
-                    </label>
-                    <input type="checkbox" id="filter-24" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-24">10+
-                    </label>
-                    <input type="checkbox" id="filter-25" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-25">15+
-                    </label>
-                    <input type="checkbox" id="filter-26" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-26">5+</label>
-                    <input type="checkbox" id="filter-27" class="filter-checkbox">
-                    <label class="filter-label age" for="filter-27">7+ </label>
-                    <button class="button-yellow-full my-14">Показать ещё</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Тип<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-21" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-21">Пластиковый конструктор <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-22" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-22">Мягкая игрушка <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-23" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-23">Машинка <span class="count">156</span> <span class="cross"></span></label>
-                    <button class="button-yellow-full">Посмотреть все</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Особенности<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-24" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-24">Три диска <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-25" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-25">Из мультфильма <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-26" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-26">Две трансформации <span class="count">156</span> <span class="cross"></span></label>
-                    <button class="button-yellow-full">Посмотреть все</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Упаковка<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-27" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-27">Карточная упаковка <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-28" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-28">Пластиковый контейнер <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-29" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-29">Фольгированные пакеты <span class="count">156</span> <span class="cross"></span></label>
-                    <button class="button-yellow-full">Посмотреть все</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Назначение<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="sort-30" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-30">Развитие моторики  <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-31" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-31">Развитие интеллекта <span class="count">156</span> <span class="cross"></span></label>
-                    <input type="checkbox" id="sort-32" class="sort-checkbox">
-                    <label class="sort-label my-14" for="sort-32">Развитеи социальных навыков <span class="count">156</span> <span class="cross"></span></label>
-                    <button class="button-yellow-full">Посмотреть все</button>
-                </div>
-                <hr class="text-grey my-14">
-                <div class="more-down-button">Популярное<span></span></div>
-                <div class="more-down-content">
-                    <input type="checkbox" id="filter-28" class="filter-checkbox">
-                    <label class="filter-label" for="filter-28">Хиты<span class="count">1</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-29" class="filter-checkbox">
-                    <label class="filter-label" for="filter-29">Новинки<span class="count">233</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-30" class="filter-checkbox">
-                    <label class="filter-label" for="filter-30">Поэма<span class="count">156</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-31" class="filter-checkbox">
-                    <label class="filter-label" for="filter-31">Для Мальчиков<span class="count">86</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-32" class="filter-checkbox">
-                    <label class="filter-label" for="filter-32">Для девочек<span class="count">56</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-33" class="filter-checkbox">
-                    <label class="filter-label" for="filter-33">Комиксы<span class="count">4</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-34" class="filter-checkbox">
-                    <label class="filter-label" for="filter-34">Ода<span class="count">22</span> <span class="cross"></span>
-                    </label>
-                    <input type="checkbox" id="filter-35" class="filter-checkbox">
-                    <label class="filter-label" for="filter-35">Эллегия<span class="count">88</span> <span class="cross"></span>
-                    </label>
-                </div>
-                <hr class="text-grey my-14">
+        <div class="p-10">
+          <h3 class="body-l my-14 font-semibold">Наличие товаров</h3>
+          <label class="checkbox-container">
+            <input type="radio" name="exist" />
+            <span class="checkmark"></span>
+            Неважно
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="exist" />
+            <span class="checkmark"></span>
+            В наличие
+          </label>
+          <label class="checkbox-container">
+            <input type="radio" name="exist" />
+            <span class="checkmark"></span>
+            Нет в наличие
+          </label>
+          <button class="button-black my-10 w-full">Показать ещё</button>
+          <input type="reset" class="button-white my-10 w-full" />
+        </div>
+      </div>
+    </form>
+    <form id="filter-form-2" class="filters-block">
+      <div class="more-down">
+        <div class="more-down-button">Категории<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-15" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-15">Трансформеры</label>
+          <input type="checkbox" id="sort-16" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-16">Волчки и наборы</label>
+          <input type="checkbox" id="sort-17" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-17"
+            >Игровые набор и фигурки</label
+          >
+          <button class="button-yellow-full">Показать ещё</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="my-4 flex flex justify-between px-10">
+          <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+            >Новинка</span
+          >
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="my-4 flex flex justify-between px-10">
+          <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+            >Скоро в продаже</span
+          >
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Для кого<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-18" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-18">Для Мальчиков</label>
+          <input type="checkbox" id="sort-19" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-19">Для девочек</label>
+          <input type="checkbox" id="sort-20" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-20">Для всех</label>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Возраст<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="filter-20" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-20">0+ </label>
+          <input type="checkbox" id="filter-21" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-21">3+ </label>
+          <input type="checkbox" id="filter-22" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-22">5+ </label>
+          <input type="checkbox" id="filter-23" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-23">7+ </label>
+          <input type="checkbox" id="filter-24" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-24">10+ </label>
+          <input type="checkbox" id="filter-25" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-25">15+ </label>
+          <input type="checkbox" id="filter-26" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-26">5+</label>
+          <input type="checkbox" id="filter-27" class="filter-checkbox" />
+          <label class="filter-label age" for="filter-27">7+ </label>
+          <button class="button-yellow-full my-14">Показать ещё</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Тип<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-21" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-21"
+            >Пластиковый конструктор <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-22" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-22"
+            >Мягкая игрушка <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-23" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-23"
+            >Машинка <span class="count">156</span> <span class="cross"></span
+          ></label>
+          <button class="button-yellow-full">Посмотреть все</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Особенности<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-24" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-24"
+            >Три диска <span class="count">156</span> <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-25" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-25"
+            >Из мультфильма <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-26" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-26"
+            >Две трансформации <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <button class="button-yellow-full">Посмотреть все</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Упаковка<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-27" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-27"
+            >Карточная упаковка <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-28" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-28"
+            >Пластиковый контейнер <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-29" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-29"
+            >Фольгированные пакеты <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <button class="button-yellow-full">Посмотреть все</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Назначение<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="sort-30" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-30"
+            >Развитие моторики <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-31" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-31"
+            >Развитие интеллекта <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <input type="checkbox" id="sort-32" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-32"
+            >Развитеи социальных навыков <span class="count">156</span>
+            <span class="cross"></span
+          ></label>
+          <button class="button-yellow-full">Посмотреть все</button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button">Популярное<span></span></div>
+        <div class="more-down-content">
+          <input type="checkbox" id="filter-28" class="filter-checkbox" />
+          <label class="filter-label" for="filter-28"
+            >Хиты<span class="count">1</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-29" class="filter-checkbox" />
+          <label class="filter-label" for="filter-29"
+            >Новинки<span class="count">233</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-30" class="filter-checkbox" />
+          <label class="filter-label" for="filter-30"
+            >Поэма<span class="count">156</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-31" class="filter-checkbox" />
+          <label class="filter-label" for="filter-31"
+            >Для Мальчиков<span class="count">86</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-32" class="filter-checkbox" />
+          <label class="filter-label" for="filter-32"
+            >Для девочек<span class="count">56</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-33" class="filter-checkbox" />
+          <label class="filter-label" for="filter-33"
+            >Комиксы<span class="count">4</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-34" class="filter-checkbox" />
+          <label class="filter-label" for="filter-34"
+            >Ода<span class="count">22</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-35" class="filter-checkbox" />
+          <label class="filter-label" for="filter-35"
+            >Эллегия<span class="count">88</span> <span class="cross"></span>
+          </label>
+        </div>
+        <hr class="my-14 text-grey" />
 
-                <div class="p-10">
-                    <button class="button-black w-full my-10">Показать ещё</button>
-                    <input  type="reset"  class="button-white w-full my-10">
-                </div>
-            </div>
-        </form>
-    </div>
+        <div class="p-10">
+          <button class="button-black my-10 w-full">Показать ещё</button>
+          <input type="reset" class="button-white my-10 w-full" />
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-<div class="p-12 flex justify-around">
-    <div class="flex flex-row items-center justify-center w-full">
-        <div class="more-down-filters">
-            <button class="more-down-button filters">Фильтр<span></span></button> <!--  more-down -->
+<div class="flex justify-around p-12">
+  <div class="flex w-full flex-row items-center justify-center">
+    <div class="more-down-filters">
+      <button class="more-down-button filters">Фильтр<span></span></button>
+      <!--  more-down -->
+      <div class="more-down-content">
+        <form id="filter-form-3" class="filters-block">
+          <div class="more-down">
+            <div class="more-down-button">Категории<span></span></div>
             <div class="more-down-content">
-                <form id="filter-form-3" class="filters-block">
-                    <div class="more-down">
-                        <div class="more-down-button">Категории<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-15" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-15">Трансформеры</label>
-                            <input type="checkbox" id="sort-16" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-16">Волчки и наборы</label>
-                            <input type="checkbox" id="sort-17" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-17">Игровые набор и фигурки</label>
-                            <button class="button-yellow-full">Показать ещё</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="my-4 flex flex justify-between px-10">
-                            <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Новинка</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <div class="my-4 flex flex justify-between px-10">
-                            <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Скоро в продаже</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Для кого<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-33" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-33">Для Мальчиков</label>
-                            <input type="checkbox" id="sort-34" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-34">Для девочек</label>
-                            <input type="checkbox" id="sort-35" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-35">Для всех</label>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Возраст<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="filter-36" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-36">0+
-                            </label>
-                            <input type="checkbox" id="filter-37" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-37">3+
-                            </label>
-                            <input type="checkbox" id="filter-38" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-38">5+
-                            </label>
-                            <input type="checkbox" id="filter-39" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-39">7+
-                            </label>
-                            <input type="checkbox" id="filter-40" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-40">10+
-                            </label>
-                            <input type="checkbox" id="filter-41" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-41">15+
-                            </label>
-                            <input type="checkbox" id="filter-42" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-42">5+</label>
-                            <input type="checkbox" id="filter-43" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-43">7+ </label>
-                            <button class="button-yellow-full my-14">Показать ещё</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Тип<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-36" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-36">Пластиковый конструктор <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-37" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-37">Мягкая игрушка <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-38" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-38">Машинка <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Особенности<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-39" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-39">Три диска <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-40" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-40">Из мультфильма <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-41" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-41">Две трансформации <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Упаковка<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-42" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-42">Карточная упаковка <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-43" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-43">Пластиковый контейнер <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-44" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-44">Фольгированные пакеты <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Назначение<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-45" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-45">Развитие моторики  <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-46" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-46">Развитие интеллекта <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-47" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-47">Развитеи социальных навыков <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Популярное<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="filter-44" class="filter-checkbox">
-                            <label class="filter-label" for="filter-44">Хиты<span class="count">1</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-45" class="filter-checkbox">
-                            <label class="filter-label" for="filter-45">Новинки<span class="count">233</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-46" class="filter-checkbox">
-                            <label class="filter-label" for="filter-46">Поэма<span class="count">156</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-47" class="filter-checkbox">
-                            <label class="filter-label" for="filter-47">Для Мальчиков<span class="count">86</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-48" class="filter-checkbox">
-                            <label class="filter-label" for="filter-48">Для девочек<span class="count">56</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-49" class="filter-checkbox">
-                            <label class="filter-label" for="filter-49">Комиксы<span class="count">4</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-50" class="filter-checkbox">
-                            <label class="filter-label" for="filter-50">Ода<span class="count">22</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-51" class="filter-checkbox">
-                            <label class="filter-label" for="filter-51">Эллегия<span class="count">88</span> <span class="cross"></span>
-                            </label>
-                        </div>
-                        <hr class="text-grey my-14">
-
-                        <div class="p-10">
-                            <button class="button-black w-full my-10">Показать ещё</button>
-                            <input  type="reset"  class="button-white w-full my-10">
-                        </div>
-                    </div>
-                </form>
+              <input type="checkbox" id="sort-15" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-15">Трансформеры</label>
+              <input type="checkbox" id="sort-16" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-16"
+                >Волчки и наборы</label
+              >
+              <input type="checkbox" id="sort-17" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-17"
+                >Игровые набор и фигурки</label
+              >
+              <button class="button-yellow-full">Показать ещё</button>
             </div>
-        </div>
-        <div class="more-down-filters">
-            <button class="more-down-button new">Сначала новые<span></span></button> <!--  more-down -->
+            <hr class="my-14 text-grey" />
+            <div class="my-4 flex flex justify-between px-10">
+              <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+                >Новинка</span
+              >
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="my-4 flex flex justify-between px-10">
+              <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+                >Скоро в продаже</span
+              >
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Для кого<span></span></div>
             <div class="more-down-content">
-                <form id="filter-form-4" class="filters-block">
-                    <div class="more-down">
-                        <div class="more-down-button">Категории<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-15" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-15">Трансформеры</label>
-                            <input type="checkbox" id="sort-new-16" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-16">Волчки и наборы</label>
-                            <input type="checkbox" id="sort-new-17" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-17">Игровые набор и фигурки</label>
-                            <button class="button-yellow-full">Показать ещё</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="my-4 flex flex justify-between px-10">
-                            <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Новинка</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <div class="my-4 flex flex justify-between px-10">
-                            <span class="w-68 mr-12 my-auto font-semibold text-l w-full">Скоро в продаже</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Для кого<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-33" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-33">Для Мальчиков</label>
-                            <input type="checkbox" id="sort-new-34" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-34">Для девочек</label>
-                            <input type="checkbox" id="sort-new-35" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-35">Для всех</label>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Возраст<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="filter-new-36" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-36">0+
-                            </label>
-                            <input type="checkbox" id="filter-new-37" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-37">3+
-                            </label>
-                            <input type="checkbox" id="filter-new-38" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-38">5+
-                            </label>
-                            <input type="checkbox" id="filter-new-39" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-39">7+
-                            </label>
-                            <input type="checkbox" id="filter-new-40" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-40">10+
-                            </label>
-                            <input type="checkbox" id="filter-new-41" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-41">15+
-                            </label>
-                            <input type="checkbox" id="filter-new-42" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-42">5+</label>
-                            <input type="checkbox" id="filter-new-43" class="filter-checkbox">
-                            <label class="filter-label age" for="filter-new-43">7+ </label>
-                            <button class="button-yellow-full my-14">Показать ещё</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Тип<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-36" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-36">Пластиковый конструктор <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-37" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-37">Мягкая игрушка <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-38" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-38">Машинка <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Особенности<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-39" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-39">Три диска <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-40" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-40">Из мультфильма <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-41" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-41">Две трансформации <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Упаковка<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-42" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-42">Карточная упаковка <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-43" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-43">Пластиковый контейнер <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-44" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-44">Фольгированные пакеты <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Назначение<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="sort-new-45" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-45">Развитие моторики  <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-46" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-46">Развитие интеллекта <span class="count">156</span> <span class="cross"></span></label>
-                            <input type="checkbox" id="sort-new-47" class="sort-checkbox">
-                            <label class="sort-label my-14" for="sort-new-47">Развитеи социальных навыков <span class="count">156</span> <span class="cross"></span></label>
-                            <button class="button-yellow-full">Посмотреть все</button>
-                        </div>
-                        <hr class="text-grey my-14">
-                        <div class="more-down-button">Популярное<span></span></div>
-                        <div class="more-down-content">
-                            <input type="checkbox" id="filter-new-44" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-44">Хиты<span class="count">1</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-45" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-45">Новинки<span class="count">233</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-46" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-46">Поэма<span class="count">156</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-47" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-47">Для Мальчиков<span class="count">86</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-48" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-48">Для девочек<span class="count">56</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-49" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-49">Комиксы<span class="count">4</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-50" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-50">Ода<span class="count">22</span> <span class="cross"></span>
-                            </label>
-                            <input type="checkbox" id="filter-new-51" class="filter-checkbox">
-                            <label class="filter-label" for="filter-new-51">Эллегия<span class="count">88</span> <span class="cross"></span>
-                            </label>
-                        </div>
-                        <hr class="text-grey my-14">
-
-                        <div class="p-10">
-                            <button class="button-black w-full my-10">Показать ещё</button>
-                            <input  type="reset"  class="button-white w-full my-10">
-                        </div>
-                    </div>
-                </form>
+              <input type="checkbox" id="sort-33" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-33"
+                >Для Мальчиков</label
+              >
+              <input type="checkbox" id="sort-34" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-34">Для девочек</label>
+              <input type="checkbox" id="sort-35" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-35">Для всех</label>
             </div>
-        </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Возраст<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="filter-36" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-36">0+ </label>
+              <input type="checkbox" id="filter-37" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-37">3+ </label>
+              <input type="checkbox" id="filter-38" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-38">5+ </label>
+              <input type="checkbox" id="filter-39" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-39">7+ </label>
+              <input type="checkbox" id="filter-40" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-40">10+ </label>
+              <input type="checkbox" id="filter-41" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-41">15+ </label>
+              <input type="checkbox" id="filter-42" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-42">5+</label>
+              <input type="checkbox" id="filter-43" class="filter-checkbox" />
+              <label class="filter-label age" for="filter-43">7+ </label>
+              <button class="button-yellow-full my-14">Показать ещё</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Тип<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-36" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-36"
+                >Пластиковый конструктор <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-37" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-37"
+                >Мягкая игрушка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-38" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-38"
+                >Машинка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Особенности<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-39" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-39"
+                >Три диска <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-40" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-40"
+                >Из мультфильма <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-41" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-41"
+                >Две трансформации <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Упаковка<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-42" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-42"
+                >Карточная упаковка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-43" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-43"
+                >Пластиковый контейнер <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-44" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-44"
+                >Фольгированные пакеты <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Назначение<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-45" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-45"
+                >Развитие моторики <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-46" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-46"
+                >Развитие интеллекта <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-47" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-47"
+                >Развитеи социальных навыков <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Популярное<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="filter-44" class="filter-checkbox" />
+              <label class="filter-label" for="filter-44"
+                >Хиты<span class="count">1</span> <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-45" class="filter-checkbox" />
+              <label class="filter-label" for="filter-45"
+                >Новинки<span class="count">233</span>
+                <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-46" class="filter-checkbox" />
+              <label class="filter-label" for="filter-46"
+                >Поэма<span class="count">156</span> <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-47" class="filter-checkbox" />
+              <label class="filter-label" for="filter-47"
+                >Для Мальчиков<span class="count">86</span>
+                <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-48" class="filter-checkbox" />
+              <label class="filter-label" for="filter-48"
+                >Для девочек<span class="count">56</span>
+                <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-49" class="filter-checkbox" />
+              <label class="filter-label" for="filter-49"
+                >Комиксы<span class="count">4</span> <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-50" class="filter-checkbox" />
+              <label class="filter-label" for="filter-50"
+                >Ода<span class="count">22</span> <span class="cross"></span>
+              </label>
+              <input type="checkbox" id="filter-51" class="filter-checkbox" />
+              <label class="filter-label" for="filter-51"
+                >Эллегия<span class="count">88</span>
+                <span class="cross"></span>
+              </label>
+            </div>
+            <hr class="my-14 text-grey" />
+
+            <div class="p-10">
+              <button class="button-black my-10 w-full">Показать ещё</button>
+              <input type="reset" class="button-white my-10 w-full" />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    <div class="more-down-filters">
+      <button class="more-down-button new">Сначала новые<span></span></button>
+      <!--  more-down -->
+      <div class="more-down-content">
+        <form id="filter-form-4" class="filters-block">
+          <div class="more-down">
+            <div class="more-down-button">Категории<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-15" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-15"
+                >Трансформеры</label
+              >
+              <input type="checkbox" id="sort-new-16" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-16"
+                >Волчки и наборы</label
+              >
+              <input type="checkbox" id="sort-new-17" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-17"
+                >Игровые набор и фигурки</label
+              >
+              <button class="button-yellow-full">Показать ещё</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="my-4 flex flex justify-between px-10">
+              <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+                >Новинка</span
+              >
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="my-4 flex flex justify-between px-10">
+              <span class="my-auto mr-12 w-68 w-full text-l font-semibold"
+                >Скоро в продаже</span
+              >
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Для кого<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-33" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-33"
+                >Для Мальчиков</label
+              >
+              <input type="checkbox" id="sort-new-34" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-34"
+                >Для девочек</label
+              >
+              <input type="checkbox" id="sort-new-35" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-35">Для всех</label>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Возраст<span></span></div>
+            <div class="more-down-content">
+              <input
+                type="checkbox"
+                id="filter-new-36"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-36">0+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-37"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-37">3+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-38"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-38">5+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-39"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-39">7+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-40"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-40">10+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-41"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-41">15+ </label>
+              <input
+                type="checkbox"
+                id="filter-new-42"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-42">5+</label>
+              <input
+                type="checkbox"
+                id="filter-new-43"
+                class="filter-checkbox"
+              />
+              <label class="filter-label age" for="filter-new-43">7+ </label>
+              <button class="button-yellow-full my-14">Показать ещё</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Тип<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-36" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-36"
+                >Пластиковый конструктор <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-37" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-37"
+                >Мягкая игрушка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-38" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-38"
+                >Машинка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Особенности<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-39" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-39"
+                >Три диска <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-40" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-40"
+                >Из мультфильма <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-41" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-41"
+                >Две трансформации <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Упаковка<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-42" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-42"
+                >Карточная упаковка <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-43" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-43"
+                >Пластиковый контейнер <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-44" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-44"
+                >Фольгированные пакеты <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Назначение<span></span></div>
+            <div class="more-down-content">
+              <input type="checkbox" id="sort-new-45" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-45"
+                >Развитие моторики <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-46" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-46"
+                >Развитие интеллекта <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-new-47" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-new-47"
+                >Развитеи социальных навыков <span class="count">156</span>
+                <span class="cross"></span
+              ></label>
+              <button class="button-yellow-full">Посмотреть все</button>
+            </div>
+            <hr class="my-14 text-grey" />
+            <div class="more-down-button">Популярное<span></span></div>
+            <div class="more-down-content">
+              <input
+                type="checkbox"
+                id="filter-new-44"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-44"
+                >Хиты<span class="count">1</span> <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-45"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-45"
+                >Новинки<span class="count">233</span>
+                <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-46"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-46"
+                >Поэма<span class="count">156</span> <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-47"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-47"
+                >Для Мальчиков<span class="count">86</span>
+                <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-48"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-48"
+                >Для девочек<span class="count">56</span>
+                <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-49"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-49"
+                >Комиксы<span class="count">4</span> <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-50"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-50"
+                >Ода<span class="count">22</span> <span class="cross"></span>
+              </label>
+              <input
+                type="checkbox"
+                id="filter-new-51"
+                class="filter-checkbox"
+              />
+              <label class="filter-label" for="filter-new-51"
+                >Эллегия<span class="count">88</span>
+                <span class="cross"></span>
+              </label>
+            </div>
+            <hr class="my-14 text-grey" />
+
+            <div class="p-10">
+              <button class="button-black my-10 w-full">Показать ещё</button>
+              <input type="reset" class="button-white my-10 w-full" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

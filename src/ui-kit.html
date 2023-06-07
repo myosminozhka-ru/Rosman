@@ -2,48 +2,55 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Kit</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UI Kit</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <h3 class="accordion head-3">Типографика</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/text/text.html', { }, )
+    </div>
 
-<body>
-  <h3 class="accordion head-3">Типографика</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/text/text.html', { }, )
-  </div>
+    <h3 class="accordion head-3">Buttons</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/buttons/buttons.html', { }, )
+    </div>
 
-  <h3 class="accordion head-3">Inputs</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/inputs/inputs.html', { }, )
-  </div>
+    <h3 class="accordion head-3">Inputs</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/inputs/inputs.html', { }, )
+    </div>
 
-  <h3 class="accordion head-3">Buttons</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/buttons/buttons.html', { }, )
-  </div>
+    <h3 class="accordion head-3">Popups</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/popups/popups.html', { }, )
+    </div>
 
-  <h3 class="accordion head-3">Popups</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/popups/popups.html', { }, )
-  </div>
+    <h3 class="accordion head-3">Cards</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/cards/cards.html', { }, )
+    </div>
 
-  <h3 class="accordion head-3">Cards</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/cards/cards.html', { }, )
-  </div>
+    <h3 class="accordion head-3">Footer ru/eng</h3>
+    <div class="panel block">
+      @@include('components/ui-kit/footer/footer.html', { }, )
+    </div>
 
-  <h3 class="accordion head-3">Footer ru/eng</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/footer/footer.html', { }, )
+    <h3 class="accordion head-3">header</h3>
+    <div class="panel block p-0">
+      @@include('components/ui-kit/components/header.html', { }, )
+    </div>
+
     <h3 class="accordion head-3">Components</h3>
     <div class="panel block">
       @@include('components/ui-kit/Components/filters.html', { }, )
     </div>
+
     <style>
       /* Style the buttons that are used to open and close the accordion panel */
 
@@ -69,7 +76,7 @@
       /* Style the accordion panel. Note: hidden by default */
 
       .panel {
-        padding: 0 18px;
+        padding: 0;
         background-color: white;
         /* display: none; */
         overflow: hidden;
@@ -77,28 +84,25 @@
     </style>
 
     <script>
-            //   var acc = document.getElementsByClassName("accordion");
-            //   var i;
+      //   var acc = document.getElementsByClassName("accordion");
+      //   var i;
 
-            //   for (i = 0; i < acc.length; i++) {
-            //     acc[i].addEventListener("click", function () {
-            //       /* Toggle between adding and removing the "active" class,
-            // to highlight the button that controls the panel */
-            //       this.classList.toggle("active");
+      //   for (i = 0; i < acc.length; i++) {
+      //     acc[i].addEventListener("click", function () {
+      //       /* Toggle between adding and removing the "active" class,
+      // to highlight the button that controls the panel */
+      //       this.classList.toggle("active");
 
-            //       /* Toggle between hiding and showing the active panel */
-            //       var panel = this.nextElementSibling;
-            //       if (panel.style.display === "block") {
-            //         panel.style.display = "none";
-            //       } else {
-            //         panel.style.display = "block";
-            //       }
-            //     });
-            //   }
+      //       /* Toggle between hiding and showing the active panel */
+      //       var panel = this.nextElementSibling;
+      //       if (panel.style.display === "block") {
+      //         panel.style.display = "none";
+      //       } else {
+      //         panel.style.display = "block";
+      //       }
+      //     });
+      //   }
     </script>
     <script src="./js/scripts.js"></script>
-    <script src="./js/modal_windows.js"></script>
-    <script src="./js/cards/cards.js"></script>
-</body>
-
+  </body>
 </html>

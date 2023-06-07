@@ -1,9 +1,11 @@
 .popup-btn {
   @apply mb-32 bg-yellow bg-opacity-50 px-70 text-black;
+
   &:hover {
     @apply bg-opacity-100 text-black;
   }
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -16,32 +18,40 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+
   &.--active {
     display: block;
   }
 }
+
 .popup_contact_us_content {
   @apply flex flex-col bg-white p-40;
   max-width: 72rem;
   grid-gap: 3.6rem;
   position: relative;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply m-20 p-16;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-20 p-16;
   }
 }
+
 .popup_contact_us_header {
   @apply flex flex-row items-center justify-between;
 }
+
 .popup_contact_us_text {
   @apply text-5xl;
+
   @media screen and (max-width: 500px) {
     @apply text-3xl;
   }
 }
+
 //.ui-popup-close-button {
 //  @apply h-20 w-20 cursor-pointer;
 //  background: url("../../img/x.svg") no-repeat;
@@ -49,39 +59,46 @@
 .js_contact_us_popup_body {
   @apply flex flex-col;
   grid-gap: 2.4rem;
+
   @media screen and (max-width: 500px) {
     grid-gap: 1.6rem;
   }
 }
+
 .contact_us_popup_item_text {
   @apply text-2xl font-medium;
+
   @media screen and (max-width: 500px) {
     @apply text-15.20;
   }
 }
+
 .contact_us_popup_item {
   @apply flex cursor-pointer flex-row flex-nowrap items-center;
   grid-gap: 1.2rem;
 }
+
 .contact_us_popup_item_arrow {
   @apply h-12 w-16;
+
   @media screen and (max-width: 500px) {
     @apply h-16 w-16;
   }
 }
 
 // blockchain popups
-
 .popup_blockchain_content {
   @apply relative flex flex-col items-end bg-white p-48;
   max-width: 55.6rem;
   grid-gap: 3.6rem;
   margin: auto;
+
   @media screen and (max-width: 600px) {
-    margin: 0 20px;
-    padding: 16px;
+    margin: 0 2rem;
+    padding: 1.6rem;
   }
 }
+
 //.ui-popup-close-button {
 //  @apply h-20 w-20 cursor-pointer;
 //  background: url("../../img/x.svg") no-repeat;
@@ -90,25 +107,32 @@
   @apply flex flex-col;
   grid-gap: 4rem;
 }
+
 .popup_blockchain_text_fields {
   @apply flex flex-col;
   grid-gap: 3.2rem;
+
   @media screen and (max-width: 600px) {
     grid-gap: 1.6rem;
   }
 }
+
 .popup_blockchain_main_info {
   @apply flex flex-col;
   grid-gap: 1.6rem;
 }
+
 .popup_blockchain_header {
   @apply text-5xl;
+
   @media screen and (max-width: 600px) {
     @apply text-3xl;
   }
 }
+
 .popup_blockchain_description {
   @apply text-2.5xl;
+
   @media screen and (max-width: 600px) {
     @apply text-15.20;
   }
@@ -118,34 +142,42 @@
   @apply flex flex-col bg-background p-24;
   grid-gap: 1.3rem;
 }
+
 .popup_blockchain_transaction_info_items {
   @apply flex flex-row items-center justify-between;
 }
+
 .popup_blockchain_transaction_info_header {
   @apply text-3xl;
+
   @media screen and (max-width: 600px) {
     @apply text-2xl;
   }
 }
+
 .popup_blockchain_transaction_info_images {
   @apply flex flex-row gap-2;
 }
+
 .popup_blockchain_transaction_info_question_img {
   @apply block h-24 w-24 cursor-pointer;
   border: 1px solid #d9d9d9;
   background: url("../../img/question.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_blockchain_transaction_info_cards {
   @apply block h-24 w-24 cursor-pointer;
   border: 1px solid #d9d9d9;
   background: url("../../img/cards.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_blockchain_transaction_info_number {
   @apply text-2.5xl;
   max-width: 40rem;
   word-break: break-all;
+
   @media screen and (max-width: 600px) {
     @apply text-15.20;
   }
@@ -153,6 +185,7 @@
 
 .popup_btns {
   @apply flex flex-row justify-center gap-24;
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     grid-gap: 0.6rem;
@@ -163,12 +196,15 @@
   @apply flex-grow text-15.20;
   flex-basis: 0;
 }
+
 .popup_blockchain_etherscan_button {
   @apply bg-black text-white;
 }
+
 .popup_blockchain_opensea_button {
   border: 1px solid #000000;
 }
+
 .popup_blockchain_oetherscan_button:hover {
   @apply block h-24 w-24 cursor-pointer pl-32;
   background: url("../../img/go_out_black.svg") no-repeat center;
@@ -180,6 +216,7 @@
   background: url("../../img/go_out_white.svg") no-repeat center;
   background-size: contain;
 }
+
 .go_out_white_img {
   @apply block h-24 w-24 cursor-pointer pl-32;
   background: url("../../img/go_out_black.svg") no-repeat center;
@@ -187,8 +224,8 @@
 }
 
 // пятый попап - описание бренда
-.js_popup_brand_description {
-}
+.js_popup_brand_description {}
+
 // -
 .popup_brand_description_content {
   @apply flex flex-col bg-white p-32;
@@ -196,78 +233,94 @@
   grid-gap: 2.4rem;
   position: relative;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply m-28 p-12;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-28 p-12;
   }
 }
+
 .popup_brand_description_heading {
   @apply flex flex-row items-start justify-between gap-24 text-5xl;
   font-weight: 500;
+
   @media screen and (max-width: 500px) {
     @apply text-2xl;
     font-weight: 500;
   }
 }
+
 .heading_main {
   @apply flex flex-row items-center gap-24;
+
   @media screen and (max-width: 500px) {
     @apply gap-24;
   }
 }
+
 .popup_brand_description_image {
   @apply block;
   width: 14rem;
   height: 14rem;
   background: url("../../img/brand_name.svg") no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     @apply h-60 w-60;
   }
 }
-.popup_brand_description_header {
-}
+
+.popup_brand_description_header {}
+
 .ui-popup-close-button {
   @apply h-20 w-20 cursor-pointer;
   background: url("../../img/x.svg") no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     @apply h-20 w-20;
   }
 }
+
 // --
 .popup_brand_description_info {
   @apply flex flex-col gap-16;
 }
+
 .description_info_text {
   @apply text-15.20;
 }
-.popup_brand_description_info_one {
-}
-.popup_brand_description_info_two {
-}
-.popup_brand_description_info_three {
-}
+
+.popup_brand_description_info_one {}
+
+.popup_brand_description_info_two {}
+
+.popup_brand_description_info_three {}
 
 // ---
 .popup_brand_description_socials {
   @apply flex flex-row gap-24;
+
   @media screen and (max-width: 500px) {
     @apply h-12 w-12;
   }
 }
+
 .popup_brand_description_vk {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/vkcom.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_brand_description_tiktok {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/tiktok.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_brand_description_youtube {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/youtube.svg") no-repeat center;
@@ -275,23 +328,23 @@
 }
 
 // ----
-.popup_brand_description_site {
-}
+.popup_brand_description_site {}
 
 // Попап для опросов
-.js_popup_survey_button {
-}
+.js_popup_survey_button {}
 
-.js_popup_survey {
-}
+.js_popup_survey {}
+
 .popup_survey_content {
   @apply m-0 flex flex-col gap-32 bg-white p-40;
   max-width: 56.7rem;
   position: relative;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply m-28 gap-24 p-24;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-28 gap-24 p-24;
   }
@@ -301,50 +354,61 @@
 .popup_survey_heading {
   @apply flex flex-row items-start justify-between;
 }
+
 .popup_survey_header {
   @apply text-5xl;
+
   @media screen and (max-width: 500px) {
     @apply text-2xl;
   }
 }
-.js_popup_survey_close_button {
-}
+
+.js_popup_survey_close_button {}
 
 // form
 .js_popup_survey_form {
   @apply flex w-full flex-col gap-16;
 }
+
 .js_popup_survey_input {
   @apply px-16 py-10;
   border: 1px solid #d9d9d9;
 }
+
 .js_popup_survey_input::placeholder {
   @apply text-xl text-text;
 }
+
 // submit button block
 .js_popup_survey_submit_block {
   @apply flex flex-col gap-16;
 }
+
 .js_popup_survey_submit_button {
   @apply w-full bg-black text-15.20 text-white;
+
   &:hover {
     @apply bg-yellow text-black;
   }
 }
+
 .js_popup_survey_policy_agreement {
   @apply flex flex-row;
 }
 
 .popup_survey_policy_agreement_text {
   @apply ml-16 flex flex-row text-15.20;
+
   @media screen and (max-width: 500px) {
     @apply flex-col text-xl;
   }
 }
+
 .js_popup_survey_policy_agreement_link {
   @apply ml-0;
   word-break: break-word;
   font-weight: 500;
+
   @media screen and (max-width: 500px) {
     @apply flex-col text-xl;
   }
@@ -356,6 +420,7 @@
   margin-bottom: 1rem;
   display: inline-block;
 }
+
 .checkbox__input_main {
   -webkit-appearance: none;
   appearance: none;
@@ -364,7 +429,7 @@
 }
 
 .checkbox__label_main {
-  padding-left: 10px;
+  padding-left: 1rem;
   color: #444;
   cursor: pointer;
 }
@@ -374,16 +439,13 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-
   border: 1px solid black;
   background-color: #fff;
-  border-radius: 3px;
-
+  border-radius: 0.3rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-
   /*transition: background 0.1s linear, border 0.1s linear;*/
 }
 
@@ -392,66 +454,71 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-
   background: url("../../img/check_new.png") no-repeat;
-  background-size: 15px 15px;
+  background-size: 1.3rem 1.3rem;
   opacity: 0;
-
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 1rem;
+  left: 1rem;
   z-index: 2;
-
   transition: opacity 0.1s linear;
 }
 
-.checkbox__input_main:checked + .checkbox__label_main:before {
+.checkbox__input_main:checked+.checkbox__label_main:before {
   border: 1px solid black;
   background: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.checkbox__input_main:checked + .checkbox__label_main:after {
+.checkbox__input_main:checked+.checkbox__label_main:after {
   opacity: 1;
 }
 
 // попап заявка на сотрудничество -
 // общее
-.js_popup_collaboration {
-}
+.js_popup_collaboration {}
+
 .popup_collaboration_content {
   @apply m-0 flex flex-col gap-24 bg-white p-40;
   max-width: 56.7rem;
   position: relative;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply m-12 gap-24 p-24;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-12 gap-24 p-24;
   }
 }
+
 .popup_collaboration_heading {
   @apply flex flex-col gap-16;
 }
+
 .popup_collaboration_header {
   @apply flex flex-row items-start justify-between gap-24 text-5xl;
   font-weight: 500;
+
   @media screen and (max-width: 500px) {
     @apply text-2xl;
     font-weight: 500;
   }
 }
+
 .popup_collaboration_header_text {
   @apply text-5xl text-black;
+
   @media screen and (max-width: 500px) {
     @apply text-2xl;
     font-weight: 500;
   }
 }
-.js_popup_collaboration_close_button {
-}
+
+.js_popup_collaboration_close_button {}
+
 .popup_collaboration_step {
   @apply text-15.20 text-text;
 }
@@ -460,73 +527,82 @@
 .popup_collaboration_page_one_conditions {
   @apply flex flex-col gap-16;
 }
+
 .pup_coll_condition {
   @apply flex flex-row flex-nowrap items-center gap-16;
 }
+
 .pup_coll_img {
   @apply h-40 w-40;
   flex-shrink: 0;
+
   @media screen and (max-width: 500px) {
     @apply h-28 w-28;
   }
 }
+
 .pop_coll_img img {
   width: 100%;
 }
+
 .pup_coll_txt {
   @apply text-15.20 text-black;
+
   @media screen and (max-width: 500px) {
     @apply text-xl;
     max-width: 39rem;
   }
 }
 
-.popup_collaboration_page_one_condition_one {
-}
+.popup_collaboration_page_one_condition_one {}
+
 .popup_collaboration_page_one_condition_one_img {
   @apply block h-40 w-40 cursor-pointer;
   background: url("../../img/yellow_money.svg") no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     @apply h-28 w-28;
   }
 }
-.popup_collaboration_page_one_condition_one_text {
-}
 
-.popup_collaboration_page_one_condition_two {
-}
+.popup_collaboration_page_one_condition_one_text {}
+
+.popup_collaboration_page_one_condition_two {}
+
 .popup_collaboration_page_one_condition_two_img {
   @apply block h-40 w-40 cursor-pointer;
   background: url("../../img/yellow_van.svg") no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     @apply h-28 w-28;
   }
 }
-.popup_collaboration_page_one_condition_two_text {
-}
 
-.popup_collaboration_page_one_condition_three {
-}
+.popup_collaboration_page_one_condition_two_text {}
+
+.popup_collaboration_page_one_condition_three {}
+
 .popup_collaboration_page_one_condition_three_img {
   @apply block h-40 w-40 cursor-pointer;
   background: url("../../img/yellow_discounts.svg") no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     @apply h-28 w-28;
   }
 }
-.popup_collaboration_page_one_condition_three_text {
-}
+
+.popup_collaboration_page_one_condition_three_text {}
 
 .collab_form {
   @apply flex flex-col gap-16;
 }
-.popup_collaboration_page_one_input {
-}
-.popup_collaboration_page_one_cont_btn {
-}
+
+.popup_collaboration_page_one_input {}
+
+.popup_collaboration_page_one_cont_btn {}
 
 // вторая страница
 .pup_format_header {
@@ -540,6 +616,7 @@
 
 .pup_format_checkboxes {
   @apply flex flex-row gap-56;
+
   @media screen and (max-width: 500px) {
     @apply flex-col gap-12;
   }
@@ -554,39 +631,47 @@
     @apply flex-col;
   }
 }
+
 .popup_collaboration_page_two_category {
   @media screen and (max-width: 500px) {
     @apply flex-col;
   }
 }
+
 .pup_format_options_one,
 .pup_format_options_two {
   @apply flex flex-col gap-12;
   flex-grow: 1;
   flex-basis: 50%;
+
   @media screen and (max-width: 500px) {
     @apply flex flex-col gap-12;
   }
 }
-// третья страница
 
+// третья страница
 .pup_coll_buttons {
   @apply flex flex-row flex-nowrap gap-16;
+
   @media screen and (max-width: 500px) {
     @apply gap-10;
   }
 }
+
 .collab_btn {
   flex-basis: 50%;
   flex-grow: 1;
+
   @media screen and (max-width: 500px) {
     @apply p-12;
   }
 }
+
 .pup_btn {
   @apply text-15.20;
   white-space: nowrap;
 }
+
 .popup_collaboration_page_four_send_request {
   @apply flex flex-col gap-16;
 }
@@ -596,6 +681,7 @@
   margin-bottom: 1rem;
   display: inline-block;
 }
+
 .checkbox__input_main {
   -webkit-appearance: none;
   appearance: none;
@@ -604,7 +690,7 @@
 }
 
 .checkbox__label_main {
-  padding-left: 10px;
+  padding-left: 1rem;
   color: #444;
   cursor: pointer;
 }
@@ -614,16 +700,13 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-
   border: 1px solid black;
   background-color: #fff;
-  border-radius: 3px;
-
+  border-radius: 0.3rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-
   /*transition: background 0.1s linear, border 0.1s linear;*/
 }
 
@@ -632,27 +715,24 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-
   background: url("../../img/check_new.png") no-repeat;
-  background-size: 15px 15px;
+  background-size: 1.3rem 1.3rem;
   opacity: 0;
-
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 0.1rem;
+  left: 0.1rem;
   z-index: 2;
-
   transition: opacity 0.1s linear;
 }
 
-.checkbox__input_main:checked + .checkbox__label_main:before {
+.checkbox__input_main:checked+.checkbox__label_main:before {
   border: 1px solid black;
   background: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.checkbox__input_main:checked + .checkbox__label_main:after {
+.checkbox__input_main:checked+.checkbox__label_main:after {
   opacity: 1;
 }
 
@@ -666,20 +746,25 @@
 
 .popup_collaboration_policy_agreement_text {
   @apply ml-16 flex flex-row text-15.20;
+
   @media screen and (max-width: 500px) {
     @apply flex-col text-xl;
   }
 }
+
 .popup_collaboration_policy_agreement_link {
   @apply ml-0;
   word-break: break-word;
   font-weight: 500;
+
   @media screen and (max-width: 500px) {
     @apply flex-col text-xl;
   }
 }
+
 .popup_collaboration_page_four_buttons {
   @apply flex flex-row justify-center gap-24;
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     grid-gap: 0.6rem;
@@ -698,12 +783,32 @@
   max-width: 84.6rem;
   position: relative;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply gap-16 p-16;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-20 p-16;
   }
+}
+
+.no-padds {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-after::after {
+  content: none !important;
+}
+
+.no-padds {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-after::after {
+  content: none !important;
 }
 
 .popup_brand_choose_header {
@@ -712,6 +817,7 @@
 
 .popup_brand_choose_search_selectors {
   @apply flex flex-row justify-between;
+
   @media screen and (max-width: 500px) {
     @apply flex-col gap-16;
   }
@@ -720,9 +826,12 @@
 .pup_brand_selector {
   flex-grow: 1;
 }
+
 .popup_brand_choose_search_line {
   @apply relative;
+  max-height: 4.3rem;
   max-width: 40rem;
+
   @media screen and (max-width: 500px) {
     max-width: 45rem;
   }
@@ -731,7 +840,6 @@
 //.popup_brand_choose_search_line input::placeholder {
 //  @apply pl-32;
 //}
-
 .popup_brand_choose_search_line input::placeholder:before {
   content: "";
   position: absolute;
@@ -747,6 +855,7 @@
 
 .popup_brand_choose_search_sorter {
   max-width: 20rem;
+
   @media screen and (max-width: 500px) {
     max-width: 45rem;
   }
@@ -763,49 +872,62 @@
 .popup_brand_choose_brands {
   @apply flex flex-row flex-wrap justify-between gap-20;
 }
+
 .image-container {
-  width: 90px;
-  height: 90px;
+  width: 9rem;
+  height: 9rem;
   aspect-ratio: 1/1;
 }
+
 .search-container {
   @apply flex flex-row items-center;
   @apply border border-card-stroke px-16 py-10 text-xl;
+
   &:hover {
     @apply border-black;
   }
+
   &:active {
     @apply border-black;
   }
+
   &:focus {
     @apply border-black shadow-none ring-0 ring-black;
   }
+
   &:disabled {
     @apply border-grey text-grey shadow-none ring-0 ring-grey;
   }
+
   &.hover {
     @apply border-black;
   }
+
   &.input-active {
     @apply border-black;
   }
+
   &.error {
     @apply border-red;
     background: url("../../img/error.png") no-repeat 90% 50%;
   }
+
   &.success {
     @apply border-green;
     background: url("../../img/success.png") no-repeat 90% 50%;
   }
+
   &.search {
     background: url("../../img/search_item.svg") no-repeat 95% 50%;
-    background-size: 40px 40px;
+    background-size: 4rem 4rem;
   }
 }
+
 .search-container img {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 img {
   width: 100%;
   height: 100%;
@@ -816,11 +938,25 @@ img {
 .more-down-filters2 {
   @apply relative;
   max-width: 40rem;
+
   @media screen and (max-width: 500px) {
     max-width: 45rem;
   }
 }
 
+.more-down-filters {
+  @apply relative;
+}
+
+.more-down-filters::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
 
 //.more-down-button {
 //  @apply flex w-full  cursor-pointer flex-row items-center justify-between text-left text-15.20 text-black transition-all duration-500;
@@ -861,14 +997,14 @@ img {
 //    }
 //  }
 //}
+.slider_button {
+  @apply relative;
 
-.slider_button{
-  @apply  relative;
   &::before {
     content: "";
     position: absolute;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     left: 0;
     bottom: 0;
     background-color: black;
@@ -876,12 +1012,14 @@ img {
     transition: transform 0.3s;
   }
 }
+
 .slider_button.active-js::before {
   transform: rotate(-45deg);
 }
 
 .more-down-content2 {
   @apply hidden p-12;
+
   &.active-js {
     @apply absolute z-9999 block;
     top: 200%;
@@ -894,74 +1032,147 @@ img {
 }
 
 // тут будут стили для радиобаттонового попапа
-
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
   @apply relative m-20 flex flex-col gap-24 bg-white p-40;
   max-width: 100rem;
   margin: auto;
+
   @media screen and (max-width: 500px) {
     @apply m-24 gap-24 p-24;
   }
+
   @media (min-width: 501px) and (max-width: 800px) {
     @apply m-24 gap-24 p-24;
   }
 }
+
 .popup_all_filters_heading {
   @apply flex flex-col gap-24;
 }
+
 .popup_all_filters_header {
   @apply flex flex-row items-start justify-between;
 }
+
 .popup_all_filters_header_text {
   @apply text-4xl;
 }
+
 .popup_all_filters_filters {
   @apply flex flex-row flex-wrap gap-8;
 }
+
 .popup_all_filters_filter {
   width: fit-content;
+
   @media screen and (max-width: 500px) {
     width: 100%;
   }
 }
+
 .sort-label_erase {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke bg-background px-6 text-s font-normal;
+
   span {
     @apply ml-10 block h-12 w-12 cursor-pointer;
     background: url("../../img/x.svg") no-repeat;
     background-size: contain;
   }
+
   &:hover {
     @apply border-yellow;
   }
 }
+
 .sort-checkbox_erase {
   @apply hidden cursor-pointer;
   //&:checked + .sort-label_erase {
   //  @apply bg-yellow;
   //}
 }
+
 .popup_all_filters_filter_not_found {
   @apply text-center;
 }
 
 // filter block
-.popup_all_filters_block_filter {
-  @apply flex grow flex-row gap-56;
-  @media screen and (max-width: 700px) {
-    @apply flex-wrap justify-center;
+.js_popup_all_filters_modal {
+  @apply mx-10;
+
+  @media (min-width: 701px) and (max-width: 1000px) {
+    @apply px-10;
   }
 }
+
+.popup_all_filters_block_filter {
+  @apply flex grow flex-row gap-56;
+
+  @media (min-width: 901px) and (max-width: 1000px) {
+    @apply gap-16;
+  }
+
+  @media screen and (max-width: 900px) {
+    @apply flex-col items-center;
+  }
+}
+
 .pup_filter_item {
   @apply w-full text-center;
 }
+
 .js_popup_filter_item {
   @apply flex flex-row justify-between;
 }
+
 .popup_brands_checkbox_text {
   @apply ml-24;
 }
-.pup_toggler{
+
+.pup_toggler {
   @apply flex flex-row items-center justify-between p-10 text-15.20 text-black;
+}
+
+.pup_toggler {
+  position: relative;
+}
+
+.pup_toggler::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+
+.more-down-filters>.pup_toggler::after {
+  content: none;
+}
+
+// стили для фильтров попапа ВСЕ ФИЛЬТРЫ НОВЫЕ
+.popup_all_filters_block_filter_clmn {
+  @apply w-1/3;
+
+  @media (min-width: 700px) and (max-width: 900px) {
+    @apply w-3/4;
+  }
+
+  @media screen and (max-width: 700px) {
+    @apply w-full;
+  }
+}
+
+.more-down-button {
+  @apply justify-between w-full;
+}
+
+.more-down-content {
+  @apply p-12;
+  //border: 1px solid #D9D9D9;
+}
+
+.null-margin>.toggle-switch {
+  margin: 0;
 }
