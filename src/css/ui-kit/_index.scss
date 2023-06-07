@@ -3,7 +3,9 @@
  @import "./buttons";
 @import "./components";
 header {
- @apply flex items-center justify-between p-10 bg-yellow;
+ @apply flex items-center justify-between px-10 pt-4 pb-14 bg-yellow h-99;
+ background: url("../../img/header-bg.png") no-repeat center;
+background-size: cover;
  .logo {
   @apply ml-24;
  }
@@ -34,6 +36,9 @@ header {
  }
 .language {
  @apply inline-block;
+ .eng-lang {
+  color: rgba(160, 168, 47, 0.69);
+ }
 }
  .search-input {
   @apply transition-all duration-300  border-0 border-b-2 border-black border-solid flex flex-row;
@@ -81,8 +86,8 @@ header {
   }
  }
  nav {
-  @apply mr-74 transition-all duration-300;
-  width: 200px;
+  @apply  transition-all duration-300 flex justify-start;
+  width: 65rem;
   opacity: 1;
   &.hide {
    width: 0;
@@ -119,7 +124,7 @@ header {
      }
     }
     .more-down-content {
-     @apply absolute z-1000;
+     @apply  z-1000 bg-white absolute;
     }
    }
   }

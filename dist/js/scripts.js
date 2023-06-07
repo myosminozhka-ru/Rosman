@@ -12,10 +12,10 @@ for (let i = 0; i < moreButtons.length; i++) {
     } else {
       this.classList.add("active-js");
     }
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
     } else {
-      content.style.display = "block";
+      // content.style.display = "block";
       content.classList.add("active-js");
     }
   });
@@ -28,7 +28,7 @@ document.addEventListener("click", function(event) {
     if (!block.contains(targetElement)) {
     for (let i = 0; i < moreButtons.length; i++) {
       if ( moreButtons[i].classList.contains("active-js")) {
-        moreButtons[i].nextElementSibling.style.display = "none";
+        moreButtons[i].nextElementSibling.classList.remove("active-js")
         moreButtons[i].classList.remove("active-js")
        }
       }
