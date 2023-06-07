@@ -224,7 +224,8 @@
 }
 
 // пятый попап - описание бренда
-.js_popup_brand_description {}
+.js_popup_brand_description {
+}
 
 // -
 .popup_brand_description_content {
@@ -273,7 +274,8 @@
   }
 }
 
-.popup_brand_description_header {}
+.popup_brand_description_header {
+}
 
 .ui-popup-close-button {
   @apply h-20 w-20 cursor-pointer;
@@ -294,11 +296,14 @@
   @apply text-15.20;
 }
 
-.popup_brand_description_info_one {}
+.popup_brand_description_info_one {
+}
 
-.popup_brand_description_info_two {}
+.popup_brand_description_info_two {
+}
 
-.popup_brand_description_info_three {}
+.popup_brand_description_info_three {
+}
 
 // ---
 .popup_brand_description_socials {
@@ -328,12 +333,15 @@
 }
 
 // ----
-.popup_brand_description_site {}
+.popup_brand_description_site {
+}
 
 // Попап для опросов
-.js_popup_survey_button {}
+.js_popup_survey_button {
+}
 
-.js_popup_survey {}
+.js_popup_survey {
+}
 
 .popup_survey_content {
   @apply m-0 flex flex-col gap-32 bg-white p-40;
@@ -363,7 +371,8 @@
   }
 }
 
-.js_popup_survey_close_button {}
+.js_popup_survey_close_button {
+}
 
 // form
 .js_popup_survey_form {
@@ -464,20 +473,21 @@
   transition: opacity 0.1s linear;
 }
 
-.checkbox__input_main:checked+.checkbox__label_main:before {
+.checkbox__input_main:checked + .checkbox__label_main:before {
   border: 1px solid black;
   background: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.checkbox__input_main:checked+.checkbox__label_main:after {
+.checkbox__input_main:checked + .checkbox__label_main:after {
   opacity: 1;
 }
 
 // попап заявка на сотрудничество -
 // общее
-.js_popup_collaboration {}
+.js_popup_collaboration {
+}
 
 .popup_collaboration_content {
   @apply m-0 flex flex-col gap-24 bg-white p-40;
@@ -517,7 +527,8 @@
   }
 }
 
-.js_popup_collaboration_close_button {}
+.js_popup_collaboration_close_button {
+}
 
 .popup_collaboration_step {
   @apply text-15.20 text-text;
@@ -554,7 +565,8 @@
   }
 }
 
-.popup_collaboration_page_one_condition_one {}
+.popup_collaboration_page_one_condition_one {
+}
 
 .popup_collaboration_page_one_condition_one_img {
   @apply block h-40 w-40 cursor-pointer;
@@ -566,9 +578,11 @@
   }
 }
 
-.popup_collaboration_page_one_condition_one_text {}
+.popup_collaboration_page_one_condition_one_text {
+}
 
-.popup_collaboration_page_one_condition_two {}
+.popup_collaboration_page_one_condition_two {
+}
 
 .popup_collaboration_page_one_condition_two_img {
   @apply block h-40 w-40 cursor-pointer;
@@ -580,9 +594,11 @@
   }
 }
 
-.popup_collaboration_page_one_condition_two_text {}
+.popup_collaboration_page_one_condition_two_text {
+}
 
-.popup_collaboration_page_one_condition_three {}
+.popup_collaboration_page_one_condition_three {
+}
 
 .popup_collaboration_page_one_condition_three_img {
   @apply block h-40 w-40 cursor-pointer;
@@ -594,15 +610,18 @@
   }
 }
 
-.popup_collaboration_page_one_condition_three_text {}
+.popup_collaboration_page_one_condition_three_text {
+}
 
 .collab_form {
   @apply flex flex-col gap-16;
 }
 
-.popup_collaboration_page_one_input {}
+.popup_collaboration_page_one_input {
+}
 
-.popup_collaboration_page_one_cont_btn {}
+.popup_collaboration_page_one_cont_btn {
+}
 
 // вторая страница
 .pup_format_header {
@@ -725,14 +744,14 @@
   transition: opacity 0.1s linear;
 }
 
-.checkbox__input_main:checked+.checkbox__label_main:before {
+.checkbox__input_main:checked + .checkbox__label_main:before {
   border: 1px solid black;
   background: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.checkbox__input_main:checked+.checkbox__label_main:after {
+.checkbox__input_main:checked + .checkbox__label_main:after {
   opacity: 1;
 }
 
@@ -1147,7 +1166,7 @@ img {
   background-color: gray;
 }
 
-.more-down-filters>.pup_toggler::after {
+.more-down-filters > .pup_toggler::after {
   content: none;
 }
 
@@ -1165,7 +1184,7 @@ img {
 }
 
 .more-down-button {
-  @apply justify-between w-full;
+  @apply w-full justify-between;
 }
 
 .more-down-content {
@@ -1173,6 +1192,9 @@ img {
   //border: 1px solid #D9D9D9;
 }
 
-.null-margin>.toggle-switch {
+.null-margin > .toggle-switch {
   margin: 0;
+}
+.more-down-button.justify-btwn {
+  justify-content: space-between;
 }
