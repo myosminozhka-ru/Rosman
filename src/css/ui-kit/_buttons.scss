@@ -80,6 +80,18 @@ button {
     }
 
     &.new {
+      @apply w-full justify-between pl-24;
+      background-image: url("../../img/sort.svg");
+      background-repeat: no-repeat;
+      background-position: 0.5rem 50%;
+      background-size: 1.5rem 1.5rem;
+
+      &.active-js {
+        @apply bg-yellow;
+      }
+    }
+
+    &.new {
       // поправил на 30
       @apply w-full justify-between pl-30;
       background-image: url("../../img/sort.svg");
@@ -216,17 +228,19 @@ button {
   }
 
   input[type="radio"]:checked+.checkmark {
-    @apply border-none bg-yellow;
+    @apply bg-yellow border-none flex justify-center;
+    display: flex;
+    justify-content: center;
   }
 
   input[type="radio"]:checked+.checkmark::after {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     background-color: #000;
-    margin: 10px;
+    margin: auto;
   }
 
   .checkmark {
@@ -300,7 +314,7 @@ button {
   }
 
   .content {
-    @apply absolute z-50 hidden w-auto max-w-inner-menu bg-white p-12;
+    @apply hidden absolute w-auto max-w-inner-menu z-1000 bg-white p-12;
 
     a {
       @apply flex w-full justify-start p-1 text-l;
