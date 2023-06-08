@@ -160,11 +160,33 @@
 }
 
 .popup_blockchain_transaction_info_question_img {
-  @apply block h-24 w-24 cursor-pointer;
+  @apply relative block h-24 w-24 cursor-pointer;
   border: 1px solid #d9d9d9;
   background: url("../../img/question.svg") no-repeat center;
   background-size: contain;
 }
+
+.popup_blockchain_transaction_info_question_img:hover {
+  background-image: url("../../img/questions_white.svg");
+  background-color: black; /* Заменяем @apply на отдельное свойство */
+}
+
+.popup_blockchain_transaction_hash {
+  @apply absolute hidden bg-white p-10 text-12.20.4;
+  top: 130%;
+  left: -1230%;
+  width: 29.6rem;
+  @media screen and (max-width: 450px ) {
+    width: 20rem;
+    left: -800%;
+  }
+}
+
+
+.popup_blockchain_transaction_info_question_img:hover .popup_blockchain_transaction_hash {
+  display: block;
+}
+
 
 .popup_blockchain_transaction_info_cards {
   @apply block h-24 w-24 cursor-pointer;
@@ -332,7 +354,7 @@
   background: url("../../img/tiktok.svg") no-repeat center;
   background-size: contain;
 }
-.popup_brand_description_tiktok:hover{
+.popup_brand_description_tiktok:hover {
   background-image: url("../../img/tiktok-yellow.svg");
 }
 .popup_brand_description_youtube {
@@ -340,7 +362,7 @@
   background: url("../../img/youtube.svg") no-repeat center;
   background-size: contain;
 }
-.popup_brand_description_youtube:hover{
+.popup_brand_description_youtube:hover {
   background-image: url("../../img/youtube-yellow.svg");
 }
 // ----
