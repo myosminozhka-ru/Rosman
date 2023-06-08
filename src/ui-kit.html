@@ -46,6 +46,19 @@
   <div class="panel block p-0">
     @@include('components/ui-kit/components/header.html', { }, )
   </div>
+  <h3 class="accordion head-3">Components</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/filters.html', { }, )
+  </div>
+  <h3 class="accordion head-3">sliders</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/swiper.html', { }, )
+  </div>
+
+  <h3 class="accordion head-3">Elephant</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
+  </div>
 
   <h3 class="accordion head-3">Components</h3>
   <div class="panel block">
@@ -54,7 +67,7 @@
 
   <h3 class="accordion head-3">Pagination</h3>
   <div class="panel block">
-      @@include('components/ui-kit/pagination/pagination.html', { }, )
+    @@include('components/ui-kit/pagination/pagination.html', { }, )
   </div>
 
   <style>
@@ -88,28 +101,9 @@
       overflow: hidden;
     }
   </style>
-
-  <script>
-        //   var acc = document.getElementsByClassName("accordion");
-        //   var i;
-
-        //   for (i = 0; i < acc.length; i++) {
-        //     acc[i].addEventListener("click", function () {
-        //       /* Toggle between adding and removing the "active" class,
-        // to highlight the button that controls the panel */
-        //       this.classList.toggle("active");
-
-        //       /* Toggle between hiding and showing the active panel */
-        //       var panel = this.nextElementSibling;
-        //       if (panel.style.display === "block") {
-        //         panel.style.display = "none";
-        //       } else {
-        //         panel.style.display = "block";
-        //       }
-        //     });
-        //   }
-  </script>
-  <script src="./js/scripts.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/scripts.js"></script>
 </body>
 
 </html>
