@@ -176,23 +176,25 @@
   top: 130%;
   left: -1230%;
   width: 29.6rem;
-  @media screen and (max-width: 450px ) {
+  @media screen and (max-width: 450px) {
     width: 20rem;
     left: -800%;
   }
 }
 
-
-.popup_blockchain_transaction_info_question_img:hover .popup_blockchain_transaction_hash {
+.popup_blockchain_transaction_info_question_img:hover
+  .popup_blockchain_transaction_hash {
   display: block;
 }
-
 
 .popup_blockchain_transaction_info_cards {
   @apply block h-24 w-24 cursor-pointer;
   border: 1px solid #d9d9d9;
   background: url("../../img/cards.svg") no-repeat center;
   background-size: contain;
+  &:active {
+    @apply bg-yellow;
+  }
 }
 
 .popup_blockchain_transaction_info_number {
