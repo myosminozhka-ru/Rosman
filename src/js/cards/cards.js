@@ -21,24 +21,12 @@ const traceableItems = document.getElementsByClassName("js_traceable_item");
 for (let i = 0; i < traceableItems.length; i++) {
   traceableItems[i].addEventListener("mouseenter", function (event) {
     const colors = [
-      "#06083D",
-      "#311166",
-      "#1F1871",
-      "#1F1871",
-      "#0070EA",
-      "#4498FC",
-      "#4B65CD",
-      "#808080",
-      "#AF74E9",
-      "#33C15B",
-      "#FFF145",
-      "#D9D9D9",
-      "#F5F5F5",
-      // "#ffffff",
-      "#E3E3E2",
-      "#FF0053",
-      "#FF8500",
-      "#F46300",
+        // остались цвета, гармонирующие с попапом
+      "#FFF145", // +
+      "#FF8500", // +
+      "#35CC66", // +
+      "#4498FC", // +
+      "#FF0053", // +
     ];
     function getRandomColor(colorArray) {
       if (colorArray.length === 0) {
