@@ -323,19 +323,26 @@
   background: url("../../img/vkcom.svg") no-repeat center;
   background-size: contain;
 }
+.popup_brand_description_vk:hover {
+  background-image: url("../../img/vkcom-yellow.svg");
+}
 
 .popup_brand_description_tiktok {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/tiktok.svg") no-repeat center;
   background-size: contain;
 }
-
+.popup_brand_description_tiktok:hover{
+  background-image: url("../../img/tiktok-yellow.svg");
+}
 .popup_brand_description_youtube {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/youtube.svg") no-repeat center;
   background-size: contain;
 }
-
+.popup_brand_description_youtube:hover{
+  background-image: url("../../img/youtube-yellow.svg");
+}
 // ----
 .popup_brand_description_site {
 }
@@ -1192,7 +1199,7 @@ img {
 }
 
 .more-down-content {
-  @apply p-24;
+  @apply pl-12;
   //border: 1px solid #D9D9D9;
 }
 
@@ -1203,6 +1210,6 @@ img {
   justify-content: space-between;
 }
 
-.more-down-content.pad-left {
-  @apply pl-12;
-}
+//.more-down-content.pad-left {
+//  @apply pl-12;
+//}
