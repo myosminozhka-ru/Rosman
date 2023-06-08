@@ -2,118 +2,108 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Kit</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <h3 class="accordion head-3">Типографика</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/text/text.html', { }, )
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Kit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <h3 class="accordion head-3">Buttons</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/buttons/buttons.html', { }, )
-    </div>
+<body>
+  <h3 class="accordion head-3">Типографика</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/text/text.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Inputs</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/inputs/inputs.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Buttons</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/buttons/buttons.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Popups</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/popups/popups.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Inputs</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/inputs/inputs.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Cards</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/cards/cards.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Popups</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/popups/popups.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Footer ru/eng</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/footer/footer.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Cards</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/cards/cards.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">header</h3>
-    <div class="panel block p-0">
-      @@include('components/ui-kit/components/header.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Footer ru/eng</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/footer/footer.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Components</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/Components/filters.html', { }, )
-    </div>
-    <h3 class="accordion head-3">sliders</h3>
-    <div class="panel block">
-      @@include('components/ui-kit/Components/swiper.html', { }, )
-    </div>
+  <h3 class="accordion head-3">header</h3>
+  <div class="panel block p-0">
+    @@include('components/ui-kit/components/header.html', { }, )
+  </div>
+  <h3 class="accordion head-3">Components</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/filters.html', { }, )
+  </div>
+  <h3 class="accordion head-3">sliders</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/swiper.html', { }, )
+  </div>
 
-    <h3 class="accordion head-3">Elephant</h3>
-    <div class="panel block">
-        @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
-    </div>
+  <h3 class="accordion head-3">Elephant</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
+  </div>
 
-    <style>
-      /* Style the buttons that are used to open and close the accordion panel */
+  <h3 class="accordion head-3">Components</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/filters.html', { }, )
+  </div>
 
-      .accordion {
-        background-color: #eee;
-        color: #444;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        transition: 0.4s;
-      }
+  <h3 class="accordion head-3">Pagination</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/pagination/pagination.html', { }, )
+  </div>
 
-      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  <style>
+    /* Style the buttons that are used to open and close the accordion panel */
 
-      .active,
-      .accordion:hover {
-        background-color: #ccc;
-      }
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
 
-      /* Style the accordion panel. Note: hidden by default */
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
-      .panel {
-        padding: 0;
-        background-color: white;
-        /* display: none; */
-        overflow: hidden;
-      }
-    </style>
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
 
-    <script>
-      //   var acc = document.getElementsByClassName("accordion");
-      //   var i;
+    /* Style the accordion panel. Note: hidden by default */
 
-      //   for (i = 0; i < acc.length; i++) {
-      //     acc[i].addEventListener("click", function () {
-      //       /* Toggle between adding and removing the "active" class,
-      // to highlight the button that controls the panel */
-      //       this.classList.toggle("active");
+    .panel {
+      padding: 0;
+      background-color: white;
+      /* display: none; */
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/scripts.js"></script>
+</body>
 
-      //       /* Toggle between hiding and showing the active panel */
-      //       var panel = this.nextElementSibling;
-      //       if (panel.style.display === "block") {
-      //         panel.style.display = "none";
-      //       } else {
-      //         panel.style.display = "block";
-      //       }
-      //     });
-      //   }
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script type="module" src="./js/scripts.js"></script>
-  </body>
 </html>
