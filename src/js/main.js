@@ -104,3 +104,49 @@ function toggleSearch() {
   }
 
 }
+function scrollContent(direction) {
+  var container = document.getElementById('elephant-container');
+  var content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}
+const elephantDownButtons = document.getElementsByClassName("elephant-more-down-button");
+const elephantUpButtons = document.getElementsByClassName("elephant-more-up-button");
+
+for (let i = 0; i < elephantDownButtons.length; i++) {
+  elephantDownButtons[i].addEventListener("click", function() {
+    const content = this.nextElementSibling;
+    if (this.classList.contains("active-js")) {
+      this.classList.remove("active-js")
+    } else {
+      this.classList.add("active-js");
+    }
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
+    } else {
+      // content.style.display = "block";
+      content.classList.add("active-js");
+    }
+  });
+}
+
+for (let i = 0; i < elephantUpButtons.length; i++) {
+  elephantUpButtons[i].addEventListener("click", function() {
+    const content = this.previousElementSibling;
+    if (this.classList.contains("active-js")) {
+      this.classList.remove("active-js")
+    } else {
+      this.classList.add("active-js");
+    }
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
+    } else {
+      // content.style.display = "block";
+      content.classList.add("active-js");
+    }
+  });
+}

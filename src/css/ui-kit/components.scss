@@ -211,3 +211,285 @@ header {
   }
 }
 
+
+//.elephant-swiper {
+//  width: 100% !important;
+//  height: auto!important;
+//  padding: 0 3rem!important;
+//  .swiper-header {
+//    @apply flex justify-between my-40 w-5/6;
+//    .buttons {
+//      @apply flex justify-between w-36 gap-8;
+//      .button-prev {
+//        display: block;
+//        background: url("../../img/prev.png") no-repeat center;
+//        background-size: 2rem 2rem;
+//        width: 2rem;
+//        height: 2rem;
+//      }
+//      .button-next {
+//        display: block;
+//        background: url("../../img/next.png") no-repeat center;
+//        background-size: 2rem 2rem;
+//        width: 2rem;
+//        height: 2rem;
+//      }
+//    }
+//  }
+//  .swiper-wrapper {
+//    background:  url("../../img/elephant-slider/big-elephant.png") no-repeat center;
+//  }
+//}
+.elephant-history {
+  .slider-header {
+    @apply flex justify-between my-40 w-5/6;
+    .buttons {
+      @apply flex justify-between w-36 gap-8;
+      .button-prev {
+        display: block;
+        background: url("../../img/prev.png") no-repeat center;
+        background-size: 2rem 2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+      .button-next {
+        display: block;
+        background: url("../../img/next.png") no-repeat center;
+        background-size: 2rem 2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+  }
+  #elephant-container {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    #elephant-slider {
+      background-size: auto;
+      width: 3450px;
+      height: 1000px;
+      position: relative;
+      display: list-item;
+      .year-text {
+        @apply text-5xl text-white;
+        display: inline-block;
+        position: absolute;
+        z-index: 1001;
+        &.up {
+          bottom: 625px;
+          &.first {
+            left: 435px;
+          }
+          &.second {
+            left: 755px;
+          }
+          &.third {
+            left: 1225px;
+          }
+          &.fourth {
+            left: 1555px;
+          }
+          &.fifth {
+            left: 2030px;
+          }
+          &.sixth {
+            left: 2345px;
+          }
+          &.seventh {
+            left: 2815px;
+          }
+          &.nine {
+            left: 3135px;
+          }
+          &.ten {
+            left: 3455px;
+          }
+        }
+        &.bottom {
+          top: 710px;
+          &.first {
+            left: 990px;
+          }
+          &.second {
+            left: 1785px;
+          }
+          &.third {
+            left: 2580px;
+          }
+          &.fourth {
+            left: 2975px;
+            top: 680px;
+          }
+          &.fifth {
+            left: 3295px;
+            top: 680px;
+          }
+        }
+
+      }
+      .elephant-dropdown {
+        display: inline-block;
+        position: absolute;
+        z-index: 900;
+
+        width: 240px;
+        &.upper {
+          bottom: 635px;
+          &.first {
+            left: 355px;
+          }
+          &.second {
+            left: 680px;
+          }
+          &.third {
+            left: 1150px;
+          }
+          &.fourth {
+            left: 1480px;
+          }
+          &.fifth {
+            left: 1955px;
+          }
+          &.sixth {
+            left: 2270px;
+          }
+          &.seventh {
+            left: 2740px;
+          }
+          &.nine {
+            left: 3060px;
+          }
+          &.ten {
+            left: 3380px;
+          }
+        }
+        &.bottom {
+          top: 710px;
+          &.first {
+            left: 915px;
+          }
+          &.second {
+            left: 1720px;
+          }
+          &.third {
+            left: 2500px;
+          }
+          &.fourth {
+            left: 2900px;
+            top: 680px;
+          }
+          &.fifth {
+            left: 3225px;
+            top: 680px;
+          }
+        }
+
+        .color-block {
+          &.bottom {
+            padding-top: 90px;
+          }
+          &.upper {
+            padding-bottom: 90px;
+          }
+          height: auto;
+          background-color: #FFF145;
+
+          .elephant-more-up-button {
+
+            @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-start;
+
+            span {
+              width: 0.8rem;
+              height: 0.8rem;
+              border-top: 0.2rem solid #000000;
+              border-right: 0.2rem solid #000000;
+              margin-left: 1rem;
+              transform: rotate(-45deg);
+            }
+
+            &.active-js {
+              span {
+                width: 0.8rem;
+                height: 0.8rem;
+                border-top: 0.2rem solid #000000;
+                border-right: 0.2rem solid #000000;
+                margin-left: 1rem;
+                transform: rotate(135deg);
+              }
+            }
+          }
+
+          .elephant-more-up-content {
+            @apply invisible h-0 p-2;
+
+            &.active-js {
+              @apply visible h-auto;
+            }
+          }
+          .elephant-more-down-button {
+            @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
+
+            span {
+              width: 0.8rem;
+              height: 0.8rem;
+              border-top: 0.2rem solid #000000;
+              border-right: 0.2rem solid #000000;
+              margin-left: 1rem;
+              transform: rotate(135deg);
+            }
+
+            &.active-js {
+              span {
+                width: 0.8rem;
+                height: 0.8rem;
+                border-top: 0.2rem solid #000000;
+                border-right: 0.2rem solid #000000;
+                margin-left: 1rem;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+
+          .elephant-more-down-content {
+            @apply hidden p-2;
+
+            &.active-js {
+              @apply block;
+            }
+          }
+
+        }
+      }
+      .body {
+        @apply relative inline-block;
+        width: 53.6rem;
+        height: 65.6rem;
+        left: -28rem;
+        background: url("../../img/elephant-slider/elephant-body.png") no-repeat center;
+        background-size: contain;
+        @media screen and (max-width: 500px) {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      .trunk-one {
+        @apply relative inline-block;
+        z-index: 1000;
+        width: 304rem;
+        height: 42rem;
+        left: -41.3rem;
+        background: url("../../img/elephant-slider/trunk-1.png") no-repeat center;
+        background-size: contain;
+        @media screen and (max-width: 500px) {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+    }
+  }
+
+}
+
