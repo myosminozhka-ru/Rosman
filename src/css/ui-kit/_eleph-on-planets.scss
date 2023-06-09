@@ -1,50 +1,75 @@
 .container-elephant-on-planets {
-  @apply flex flex-col items-center;
+  @apply mx-40 my-70 flex flex-col items-center;
 }
-.el-pl-img {
+.elephant-planet-central-img {
   max-width: 13.4rem;
 }
+
 .pl-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  @apply flex flex-row items-center justify-center;
 }
-.planet-secondary {
+
+.planet-secondary-left {
   position: relative;
-  animation: rotate 5s linear infinite;
+  animation: rotate-left 6s linear infinite;
+  flex-basis: 40rem;
+}
+.planet-secondary-right {
+  position: relative;
+  animation: rotate-right 6s linear infinite;
   flex-basis: 40rem;
 }
 
-.el-pl-left {
+.elephant-planet-central-img {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) scaleX(-1) scaleY(-1);
+}
+.elephant-planet-left-img {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) scaleX(1) scaleY(-1);
+}
+
+.elephant-planet-right-img {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) scaleX(1) scaleY(-1);
+}
+
+.elephant-planet-left {
+  rotate: 300deg;
   top: -10rem;
   left: 2rem;
 }
-.el-pl-right {
+.elephant-planet-right {
+  rotate: 230deg;
   top: -10rem;
   right: 2rem;
 }
-
-.planet-central {
-  position: relative;
+.elephant-planet-central {
+  z-index: 10;
+  rotate: 100deg;
+  @apply relative flex-grow;
   flex-basis: 50rem;
-  animation: rotate-central 5s linear infinite;
-  flex-grow: 1;
+  animation: rotate-central 6s linear infinite;
 }
-.planet-central-img {
+.elephant-planet-cantral-img {
   @apply h-full w-full;
 }
 
-@keyframes rotate {
+@keyframes rotate-left {
   0% {
-    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
-@keyframes rotate-central {
+@keyframes rotate-right {
   0% {
     transform: rotate(0deg);
   }
@@ -53,11 +78,120 @@
   }
 }
 
-@keyframes rotate-elephant {
+@keyframes rotate-central {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
+}
+
+///////////// левый слон
+.elephant-planet-left-img {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.elephant-planet-left-img.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: auto;
+}
+
+@keyframes toggleVisibility {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  66.67% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.elephant-planet-left-img {
+  animation: toggleVisibility 18s linear infinite;
+}
+/////////////////// центральный слон
+.elephant-planet-central-img {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.elephant-planet-central-img.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: auto;
+}
+@keyframes toggleVisibility2 {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  11.12% {
+    opacity: 1;
+    visibility: visible;
+  }
+  44.45% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  66.67% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.elephant-planet-central-img {
+  animation: toggleVisibility2 18s linear infinite;
+}
+
+/// правый слон
+.elephant-planet-right-img {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.elephant-planet-right-img.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: auto;
+}
+@keyframes toggleVisibility3 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  16.67% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  88.8% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.elephant-planet-right-img {
+  animation: toggleVisibility3 18s linear infinite;
 }
