@@ -1,0 +1,63 @@
+.container-elephant-on-planets {
+  @apply flex flex-col items-center;
+}
+.el-pl-img {
+  max-width: 13.4rem;
+}
+.pl-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.planet-secondary {
+  position: relative;
+  animation: rotate 5s linear infinite;
+  flex-basis: 40rem;
+}
+
+.el-pl-left {
+  top: -10rem;
+  left: 2rem;
+}
+.el-pl-right {
+  top: -10rem;
+  right: 2rem;
+}
+
+.planet-central {
+  position: relative;
+  flex-basis: 50rem;
+  animation: rotate-central 5s linear infinite;
+  flex-grow: 1;
+}
+.planet-central-img {
+  @apply h-full w-full;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-central {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-elephant {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
