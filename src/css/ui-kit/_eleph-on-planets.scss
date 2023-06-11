@@ -88,20 +88,17 @@
 }
 
 @media screen and (max-width: 700px) {
-  .elephant-central-img{
+  .elephant-central-img {
     transform: translateX(-50%) scaleX(1) scaleY(-1);
   }
-  .elephant-secondary-img{
+  .elephant-secondary-img {
     transform: translateX(-50%) scaleX(-1) scaleY(-1);
   }
 }
 
-
 .elephant-planet-cantral-img {
   @apply h-full w-full;
 }
-
-
 
 // верчение планет на большом и среднем экране
 @keyframes rotate-secondary {
@@ -141,7 +138,6 @@
       transform: rotate(-360deg);
     }
   }
-
 }
 
 ///////////// левый слон
@@ -180,6 +176,14 @@
     0% {
       opacity: 1;
       visibility: visible;
+    }
+    20% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    83.33% {
+      opacity: 0;
+      visibility: hidden;
     }
     100% {
       opacity: 1;
@@ -232,16 +236,39 @@
   animation: toggleVisibility2 18s linear infinite;
 }
 
-
 @media screen and (max-width: 700px) {
   @keyframes toggleVisibility2 {
     0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    19% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    31% {
       opacity: 1;
       visibility: visible;
     }
-    100% {
+    37% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    66% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    76% {
       opacity: 1;
       visibility: visible;
+    }
+    84% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
@@ -288,15 +315,24 @@
 @media screen and (max-width: 700px) {
   @keyframes toggleVisibility3 {
     0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    33.34% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    66.67% {
       opacity: 1;
       visibility: visible;
     }
+    70% {
+      opacity: 0;
+      visibility: hidden;
+    }
     100% {
-      opacity: 1;
-      visibility: visible;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
-
-
-@media screen and (max-width: 700px) {}
