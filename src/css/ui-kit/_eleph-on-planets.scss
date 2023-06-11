@@ -1,23 +1,57 @@
 .container-elephant-on-planets {
-  @apply mx-40 my-70 flex flex-col items-center;
+  @apply my-70 flex flex-col items-center px-40;
+  @media (min-width: 701px) and (max-width: 900px) {
+    @apply px-20;
+  }
+  @media screen and (max-width: 500px) {
+    @apply px-12;
+  }
 }
 .elephant-planet-central-img {
   max-width: 13.4rem;
+  @media (min-width: 701px) and (max-width: 900px) {
+    max-width: 10rem;
+  }
 }
 
 .pl-wrapper {
-  @apply flex flex-row items-center justify-center relative;
+  @apply relative flex flex-row items-center justify-center;
+  @media screen and (max-width: 700px) {
+    @apply flex-col;
+  }
 }
 
 .planet-secondary-left {
   position: relative;
   animation: rotate-left 6s linear infinite;
   flex-basis: 40rem;
+  rotate: 300deg;
+  top: -10rem;
+  left: 2rem;
+  @media (min-width: 701px) and (max-width: 900px) {
+    left: 2.8rem;
+  }
+  @media screen and (max-width: 700px) {
+    top: 0;
+    left: 0;
+    flex-basis: 33.6rem;
+  }
 }
 .planet-secondary-right {
   position: relative;
   animation: rotate-right 6s linear infinite;
   flex-basis: 40rem;
+  rotate: 230deg;
+  top: -10rem;
+  right: 2rem;
+  @media (min-width: 701px) and (max-width: 900px) {
+    right: 2.8rem;
+  }
+  @media screen and (max-width: 700px) {
+    top: 0;
+    right: 0;
+    flex-basis: 33.6rem;
+  }
 }
 
 .elephant-planet-central-img {
@@ -40,22 +74,15 @@
   transform: translateX(-50%) scaleX(1) scaleY(-1);
 }
 
-.elephant-planet-left {
-  rotate: 300deg;
-  top: -10rem;
-  left: 2rem;
-}
-.elephant-planet-right {
-  rotate: 230deg;
-  top: -10rem;
-  right: 2rem;
-}
 .elephant-planet-central {
   z-index: 10;
   rotate: 100deg;
   @apply relative flex-grow;
   flex-basis: 50rem;
   animation: rotate-central 6s linear infinite;
+  @media screen and (max-width: 700px) {
+    flex-basis: 33.6rem;
+  }
 }
 .elephant-planet-cantral-img {
   @apply h-full w-full;
@@ -68,9 +95,13 @@
     transform: rotate(-360deg);
   }
 }
-.planet{
+.planet {
   position: relative;
   z-index: 6;
+  @media screen and (max-width: 700px) {
+    height: 33.6rem;
+    width: 33.6rem;
+  }
 }
 @keyframes rotate-right {
   0% {
@@ -94,7 +125,7 @@
 .elephant-planet-left-img {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease
+  transition: opacity 0.2s ease;
 }
 
 .elephant-planet-left-img.visible {
@@ -114,7 +145,6 @@
   100% {
     opacity: 1;
     visibility: visible;
-
   }
 }
 
@@ -126,30 +156,34 @@
   opacity: 0;
   visibility: hidden;
   z-index: -1;
-  transition: opacity 0.2s
+  transition: opacity 0.2s;
 }
 
 .elephant-planet-central-img.visible {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.2s ease
+  transition: opacity 0.2s ease;
 }
 @keyframes toggleVisibility2 {
   0% {
     opacity: 1;
     visibility: visible;
   }
-  11.12% {
-    opacity: 1;
-    visibility: visible;
-  }
-  44.45% {
+  15% {
     opacity: 0;
     visibility: hidden;
   }
-  66.67% {
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  63% {
     opacity: 1;
     visibility: visible;
+  }
+  70% {
+    opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 0;
@@ -186,7 +220,7 @@
     opacity: 1;
     visibility: visible;
   }
-  88.8% {
+  50% {
     opacity: 0;
     visibility: hidden;
   }
