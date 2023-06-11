@@ -211,3 +211,49 @@ header {
   }
 }
 
+.eleph-run-moon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  video {
+    margin: 0 auto;
+    top: 35px;
+    position: relative;
+  }
+  /* Применяем анимацию к элементу */
+  .spinning-moon {
+    margin: 0 auto;
+    width: 50.4rem;
+    height: 50.4rem;
+    animation: spin 20s linear infinite;
+  }
+  .text-on-moon {
+    margin: 0 auto;
+    bottom: 290px;
+    position: relative;
+    text-align: center;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#white-background {
+  @apply relative h-200 w-full items-center overflow-hidden bg-white pt-60 px-70 mb-10;
+  .slide-el {
+    width: 10.4rem;
+    z-index: 1000;
+    height: 10.4rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+#yellow-moving-block {
+  @apply absolute z-100 mx-auto my-0 h-full w-10/12	 overflow-hidden bg-white bg-yellow;
+}
