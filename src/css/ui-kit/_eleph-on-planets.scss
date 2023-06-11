@@ -65,14 +65,21 @@
 
 .elephant-planet-central {
   z-index: 10;
-  rotate: 20deg;
+  rotate: 100deg;
   @apply relative flex-grow;
   flex-basis: 50rem;
   animation: rotate-central 6s linear infinite;
   @media screen and (max-width: 700px) {
     flex-basis: 33.6rem;
   }
+  @media screen and (max-width: 700px) {
+    top: 0;
+    right: 0;
+    flex-basis: 33.6rem;
+    rotate: 20deg;
+  }
 }
+
 
 .elephant-central-img {
   position: absolute;
@@ -218,7 +225,7 @@
     opacity: 0;
     visibility: hidden;
   }
-  63% {
+  55% {
     opacity: 1;
     visibility: visible;
   }
