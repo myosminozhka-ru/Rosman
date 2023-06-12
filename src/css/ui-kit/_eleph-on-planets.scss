@@ -22,7 +22,6 @@
 }
 .planet {
   position: relative;
-  z-index: 6;
   @media screen and (max-width: 700px) {
     height: 33.6rem;
     width: 33.6rem;
@@ -64,7 +63,6 @@
 }
 
 .elephant-planet-central {
-  z-index: 10;
   rotate: 100deg;
   @apply relative flex-grow;
   flex-basis: 50rem;
@@ -79,7 +77,6 @@
     rotate: 20deg;
   }
 }
-
 
 .elephant-central-img {
   position: absolute;
@@ -148,25 +145,18 @@
 }
 
 ///////////// левый слон
-.elephant-planet-left-img {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
-}
-
-.elephant-planet-left-img.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes toggleVisibility {
   0% {
     opacity: 0;
     visibility: hidden;
   }
-  66.67% {
+  67.32% {
     opacity: 0;
     visibility: hidden;
+  }
+  67.33% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -184,13 +174,21 @@
       opacity: 1;
       visibility: visible;
     }
-    20% {
+    17.99% {
+      opacity: 1;
+      visibility: visible;
+    }
+    18% {
       opacity: 0;
       visibility: hidden;
     }
-    83.33% {
+    85.33% {
       opacity: 0;
       visibility: hidden;
+    }
+    85.44% {
+      opacity: 1;
+      visibility: visible;
     }
     100% {
       opacity: 1;
@@ -200,36 +198,36 @@
 }
 
 /////////////////// центральный слон
-.elephant-planet-central-img {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  transition: opacity 0.2s;
-}
-
-.elephant-planet-central-img.visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.2s ease;
-}
 @keyframes toggleVisibility2 {
   0% {
     opacity: 1;
     visibility: visible;
   }
-  15% {
+  13.99% {
+    opacity: 1;
+    visibility: visible;
+  }
+  14% {
     opacity: 0;
     visibility: hidden;
   }
-  50% {
+  48% {
     opacity: 0;
     visibility: hidden;
+  }
+  48.01% {
+    opacity: 1;
+    visibility: visible;
   }
   55% {
     opacity: 1;
     visibility: visible;
   }
-  70% {
+  68.33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  68.34% {
     opacity: 0;
     visibility: hidden;
   }
@@ -249,23 +247,39 @@
       opacity: 0;
       visibility: hidden;
     }
-    19% {
+    18.67% {
       opacity: 0;
       visibility: hidden;
+    }
+    18.68% {
+      opacity: 1;
+      visibility: visible;
     }
     31% {
       opacity: 1;
       visibility: visible;
     }
-    37% {
+    35.09% {
+      opacity: 1;
+      visibility: visible;
+    }
+    35.1% {
       opacity: 0;
       visibility: hidden;
     }
-    66% {
+    68.3% {
       opacity: 0;
       visibility: hidden;
+    }
+    68.31% {
+      opacity: 1;
+      visibility: visible;
     }
     76% {
+      opacity: 1;
+      visibility: visible;
+    }
+    83.99% {
       opacity: 1;
       visibility: visible;
     }
@@ -281,31 +295,29 @@
 }
 
 /// правый слон
-.elephant-planet-right-img {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
-}
-
-.elephant-planet-right-img.visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.2s ease;
-}
 @keyframes toggleVisibility3 {
   0% {
     opacity: 0;
     visibility: hidden;
   }
-  16.67% {
+  14.67% {
     opacity: 0;
     visibility: hidden;
   }
+  14.68% {
+    opacity: 1;
+    visibility: visible;
+  }
+
   33% {
     opacity: 1;
     visibility: visible;
   }
-  50% {
+  48.99% {
+    opacity: 1;
+    visibility: visible;
+  }
+  49% {
     opacity: 0;
     visibility: hidden;
   }
@@ -325,9 +337,13 @@
       opacity: 0;
       visibility: hidden;
     }
-    33.34% {
+    36% {
       opacity: 0;
       visibility: hidden;
+    }
+    36.01% {
+      opacity: 1;
+      visibility: visible;
     }
     66.67% {
       opacity: 1;
