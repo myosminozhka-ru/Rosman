@@ -21,43 +21,10 @@
   }
 }
 
-.planet {
-  // @apply relative;
-  @media screen and (max-width: 700px) {
-    height: 33.6rem;
-    width: 33.6rem;
-  }
-}
-
-// .planet-secondary-left:after {
-//   background-color: tomato;
-// }
-
-// .elephant-planet-central:after {
-//   background-color: green;
-// }
-
-// .planet-secondary-right:after {
-//   background-color: aqua;
-// }
-
-// .planet-secondary-left:after,
-// .elephant-planet-central:after,
-// .planet-secondary-right:after {
-//   content: "a;ksjdfklsakdfsk";
-//   z-index: -1;
-//   position: relative;
-//   display: block;
-//   height: 120%;
-//   width: 120%;
-// }
-
-.planet-secondary-left {
-  animation: rotate-secondary 6s linear infinite;
-  flex-basis: 40rem;
-  rotate: 300deg;
+.wrapper-first {
   top: -10rem;
   left: 2rem;
+  flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
     left: 2.8rem;
   }
@@ -65,6 +32,52 @@
     top: 0;
     left: 0;
     flex-basis: 33.6rem;
+  }
+}
+
+.wrapper-second{
+  top: -10rem;
+  right: 2rem;
+  flex-basis: 40rem;
+  @media (min-width: 701px) and (max-width: 900px) {
+    right: 2.8rem;
+  }
+  @media screen and (max-width: 700px) {
+    top: 0;
+    right: 0;
+    flex-basis: 33.6rem;
+  }
+}
+
+.wrapper-central {
+  flex-basis: 50rem;
+  @media screen and (max-width: 700px) {
+    max-height: 33.6rem;
+  }
+}
+
+.static-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.planet {
+  @apply relative;
+  @media screen and (max-width: 700px) {
+    height: 33.6rem;
+    width: 33.6rem;
+  }
+}
+
+
+.planet-secondary-left {
+  animation: rotate-secondary 6s linear infinite;
+  flex-basis: 40rem;
+  rotate: 300deg;
+
+  @media screen and (max-width: 700px) {
+    top: 0.5rem;
     rotate: 160deg;
   }
 }
@@ -73,15 +86,9 @@
   animation: rotate-secondary 6s linear infinite;
   flex-basis: 40rem;
   rotate: 230deg;
-  top: -10rem;
-  right: 2rem;
-  @media (min-width: 701px) and (max-width: 900px) {
-    right: 2.8rem;
-  }
+
   @media screen and (max-width: 700px) {
-    top: 0;
-    right: 0;
-    flex-basis: 33.6rem;
+    top: -0.5rem;
     rotate: 160deg;
   }
 }
@@ -169,14 +176,22 @@
 ///////////// левый слон
 @keyframes toggleVisibility {
   0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  2%{
+    opacity: 1;
+    visibility: visible;
+  }
+  2.01%{
     opacity: 0;
     visibility: hidden;
   }
-  67.32% {
+  68.22% {
     opacity: 0;
     visibility: hidden;
   }
-  67.33% {
+  68.23% {
     opacity: 1;
     visibility: visible;
   }
@@ -196,11 +211,11 @@
       opacity: 1;
       visibility: visible;
     }
-    17.99% {
+    18.3% {
       opacity: 1;
       visibility: visible;
     }
-    18% {
+    18.31% {
       opacity: 0;
       visibility: hidden;
     }
@@ -222,6 +237,10 @@
 /////////////////// центральный слон
 @keyframes toggleVisibility2 {
   0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  0.7% {
     opacity: 1;
     visibility: visible;
   }
@@ -233,11 +252,11 @@
     opacity: 0;
     visibility: hidden;
   }
-  48% {
+  48.6% {
     opacity: 0;
     visibility: hidden;
   }
-  48.01% {
+  48.61% {
     opacity: 1;
     visibility: visible;
   }
@@ -245,11 +264,11 @@
     opacity: 1;
     visibility: visible;
   }
-  68.33% {
+  67.33% {
     opacity: 1;
     visibility: visible;
   }
-  68.34% {
+  67.34% {
     opacity: 0;
     visibility: hidden;
   }
@@ -281,11 +300,11 @@
       opacity: 1;
       visibility: visible;
     }
-    35.09% {
+    34.79% {
       opacity: 1;
       visibility: visible;
     }
-    35.1% {
+    34.8% {
       opacity: 0;
       visibility: hidden;
     }
@@ -301,11 +320,11 @@
       opacity: 1;
       visibility: visible;
     }
-    83.99% {
+    84.8% {
       opacity: 1;
       visibility: visible;
     }
-    84% {
+    84.81% {
       opacity: 0;
       visibility: hidden;
     }
@@ -334,11 +353,11 @@
     opacity: 1;
     visibility: visible;
   }
-  48.99% {
+  48.2% {
     opacity: 1;
     visibility: visible;
   }
-  49% {
+  48.21% {
     opacity: 0;
     visibility: hidden;
   }
@@ -366,11 +385,11 @@
       opacity: 1;
       visibility: visible;
     }
-    66.67% {
+    68.8% {
       opacity: 1;
       visibility: visible;
     }
-    70% {
+    68.81% {
       opacity: 0;
       visibility: hidden;
     }
