@@ -136,12 +136,12 @@ header {
           @apply mx-6 my-3 text-s uppercase;
 
           span {
-            width: 0.6rem;
-            height: 0.6rem;
-            border-top: 0.2rem solid #000000;
-            border-right: 0.2rem solid #000000;
-            margin-left: 0.9rem;
-            transform: rotate(135deg);
+             width: 0.6rem;
+             height: 0.6rem;
+             border-top: 0.2rem solid #000000;
+             border-right: 0.2rem solid #000000;
+             margin-left: 0.9rem;
+             transform: rotate(135deg);
           }
 
           &.active-js {
