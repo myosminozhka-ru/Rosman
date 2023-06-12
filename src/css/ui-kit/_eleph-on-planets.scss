@@ -15,19 +15,43 @@
 }
 
 .pl-wrapper {
-  @apply relative z-10 flex flex-row items-center justify-center;
+  @apply flex flex-row items-center justify-center;
   @media screen and (max-width: 700px) {
     @apply flex-col;
   }
 }
 
 .planet {
-  @apply relative;
+  // @apply relative;
   @media screen and (max-width: 700px) {
     height: 33.6rem;
     width: 33.6rem;
   }
 }
+
+// .planet-secondary-left:after {
+//   background-color: tomato;
+// }
+
+// .elephant-planet-central:after {
+//   background-color: green;
+// }
+
+// .planet-secondary-right:after {
+//   background-color: aqua;
+// }
+
+// .planet-secondary-left:after,
+// .elephant-planet-central:after,
+// .planet-secondary-right:after {
+//   content: "a;ksjdfklsakdfsk";
+//   z-index: -1;
+//   position: relative;
+//   display: block;
+//   height: 120%;
+//   width: 120%;
+// }
+
 .planet-secondary-left {
   animation: rotate-secondary 6s linear infinite;
   flex-basis: 40rem;
@@ -44,6 +68,7 @@
     rotate: 160deg;
   }
 }
+
 .planet-secondary-right {
   animation: rotate-secondary 6s linear infinite;
   flex-basis: 40rem;
