@@ -209,3 +209,25 @@ header {
   }
 }
 
+.quest-eleph {
+  @apply bg-yellow items-center h-screen;
+  .images-block {
+    @apply flex justify-center flex-row;
+    img {
+      width: 18rem;
+      height: 24rem;
+    }
+    .zero {
+      @apply relative items-center flex justify-center;
+      width: 25rem;
+      video {
+        @apply absulute h-74;
+        bottom: -2rem;
+        width: 25rem;
+        left: -1rem;
+      }
+    }
+  }
+
+
+}
