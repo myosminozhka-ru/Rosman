@@ -147,7 +147,7 @@ document.addEventListener("mousemove", function(event) {
   console.log(number);
   if (!isMoving) {
     isMoving = true;
-    follower.style.transform = "translate(" + newX + "px, 10px)"; // Используем translateX для перемещения блока
+    follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
 
 
     setTimeout(function() {
