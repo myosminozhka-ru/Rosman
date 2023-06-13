@@ -269,8 +269,8 @@ header {
     scroll-behavior: smooth;
     #elephant-slider {
       background-size: auto;
-      width: 3450px;
-      height: 1000px;
+      width: 345rem;
+      height: 95rem;
       position: relative;
       display: list-item;
       .year-text {
@@ -279,7 +279,7 @@ header {
         position: absolute;
         z-index: 1001;
         &.up {
-          bottom: 60.5rem;
+          bottom: 64.5rem;
           &.first {
             left: 36.5rem;
           }
@@ -287,45 +287,45 @@ header {
             left: 62.5rem;
           }
           &.third {
-            left: 122.5rem;
+            left: 103rem;
           }
           &.fourth {
-            left: 155.5rem;
+            left: 130.5rem;
           }
           &.fifth {
-            left: 203rem;
+            left: 170rem;
           }
           &.sixth {
-            left: 234.5rem;
+            left: 196.5rem;
           }
           &.seventh {
-            left: 281.5rem;
+            left: 235.5rem;
           }
           &.nine {
-            left: 313.5rem;
+            left: 262.5rem;
           }
           &.ten {
-            left: 345.5rem;
+            left: 288.5rem;
           }
         }
         &.bottom {
-          top: 71rem;
+          top: 59rem;
           &.first {
-            left: 99rem;
+            left: 83rem;
           }
           &.second {
-            left: 178.5rem;
+            left: 150.5rem;
           }
           &.third {
-            left: 258rem;
+            left: 217rem;
           }
           &.fourth {
-            left: 297.5rem;
-            top: 68rem;
+            left: 249rem;
+            top: 56rem;
           }
           &.fifth {
-            left: 329.5rem;
-            top: 68rem;
+            left: 276.5rem;
+            top: 56rem;
           }
         }
 
@@ -335,55 +335,55 @@ header {
         position: absolute;
         z-index: 900;
 
-        width: 24rem;
+        width: 20rem;
         &.upper {
-          bottom: 58.5rem;
+          bottom: 64.5rem;
           &.first {
-            left: 35.5rem;
+            left: 30.5rem;
           }
           &.second {
-            left: 68rem;
+            left: 57rem;
           }
           &.third {
-            left: 115rem;
+            left: 97rem;
           }
           &.fourth {
-            left: 148rem;
+            left: 124rem;
           }
           &.fifth {
-            left: 195.5rem;
+            left: 163.5rem;
           }
           &.sixth {
-            left: 227rem;
+            left: 190rem;
           }
           &.seventh {
-            left: 274rem;
+            left: 230rem;
           }
           &.nine {
-            left: 306rem;
+            left: 256rem;
           }
           &.ten {
-            left: 338rem;
+            left: 283rem;
           }
         }
         &.bottom {
-          top: 71rem;
+          top: 58rem;
           &.first {
-            left: 91.5rem;
+            left: 77.5rem;
           }
           &.second {
-            left: 172rem;
+            left: 145rem;
           }
           &.third {
-            left: 250rem;
+            left: 210rem;
           }
           &.fourth {
-            left: 290rem;
-            top: 68rem;
+            left: 243rem;
+            top: 56rem;
           }
           &.fifth {
-            left: 322.5rem;
-            top: 68rem;
+            left: 269.5rem;
+            top: 56rem;
           }
         }
 
