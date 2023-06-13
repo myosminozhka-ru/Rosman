@@ -221,7 +221,7 @@ header {
       @apply relative items-center flex justify-center;
       width: 25rem;
       video {
-        @apply absulute h-74;
+        @apply absolute h-74;
         bottom: -2rem;
         width: 25rem;
         left: -1rem;
