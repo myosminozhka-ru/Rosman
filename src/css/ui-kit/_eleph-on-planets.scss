@@ -54,6 +54,7 @@
   @media screen and (max-width: 700px) {
     max-height: 33.6rem;
   }
+
 }
 
 .static-text{
@@ -80,6 +81,9 @@
     top: 0.5rem;
     rotate: 160deg;
   }
+  @media (min-width: 1500px) {
+    left: 0.5rem;
+  }
 }
 
 .planet-secondary-right {
@@ -90,6 +94,9 @@
   @media screen and (max-width: 700px) {
     top: -0.5rem;
     rotate: 160deg;
+  }
+  @media (min-width: 1500px) {
+    right: 0.5rem;
   }
 }
 
@@ -112,11 +119,13 @@
 .elephant-central-img {
   position: absolute;
   left: 50%;
+  top: 99%;
   transform: translateX(-50%) scaleX(-1) scaleY(-1);
 }
 .elephant-secondary-img {
   position: absolute;
   left: 50%;
+  top: 99%;
   transform: translateX(-50%) scaleX(1) scaleY(-1);
 }
 
@@ -252,11 +261,11 @@
     opacity: 0;
     visibility: hidden;
   }
-  48.6% {
+  48% {
     opacity: 0;
     visibility: hidden;
   }
-  48.61% {
+  48.01% {
     opacity: 1;
     visibility: visible;
   }
@@ -341,11 +350,11 @@
     opacity: 0;
     visibility: hidden;
   }
-  14.67% {
+  14.87% {
     opacity: 0;
     visibility: hidden;
   }
-  14.68% {
+  14.88% {
     opacity: 1;
     visibility: visible;
   }
