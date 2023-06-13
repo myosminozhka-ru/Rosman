@@ -204,12 +204,9 @@
   @apply text-xl font-normal text-black;
 }
 .card_brand_image {
-  @apply bg-white;
-  width: 15rem;
-  @apply block;
-  height: 9rem;
-  background: url("../../img/brand_image.svg") no-repeat center;
-  background-size: cover;
+  @apply block bg-white;
+  max-width: 15rem;
+  max-height: 9rem;
   @media screen and (max-width: 400px) {
     width: 11rem;
     height: 8.6rem;
@@ -322,6 +319,15 @@
   background-image: url("../../img/cards_brand_socials.svg");
   background-position: center center;
 }
+//
+//.card_brand_img {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  object-fit: cover;
+//}
 .card_brand_with_socials_links {
   @apply flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
 }
