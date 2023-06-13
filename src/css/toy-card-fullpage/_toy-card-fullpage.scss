@@ -1,0 +1,146 @@
+.card-fullpage{
+  @apply bg-white;
+}
+.card-fullpage-main-info{
+  @apply flex flex-row justify-between gap-16 items-start mb-64;
+}
+.card-fullpage-images{
+  @apply flex flex-row-reverse gap-16 items-center;
+}
+.breadcrumbs-icons{
+  @apply flex flex-row gap-16;
+  @media  (min-width: 500px){
+    @apply hidden;
+  }
+}
+.card-fullpage-description{
+  @apply flex flex-row gap-12;
+  flex-basis: 53rem;
+}
+.card-fp-desc-main{
+  @apply flex flex-col gap-32;
+}
+.card-fp-desc-top{
+  @apply flex flex-col gap-16 items-start;
+}
+.card-fp-desc-header{
+  @apply text-6xl font-medium;
+  @media (min-width: 501px) and (max-width: 700px) {
+    @apply text-3xl
+  }
+}
+.card-fp-desc-vendor-code{
+  @apply text-text font-normal text-15.20;
+}
+.card-fp-desc-target-aud{
+  @apply px-12 py-4 text-s inline-block font-medium rounded-3xl;
+  border: 1px solid black;
+}
+.card-fp-desc-text{
+  @apply flex flex-col gap-24 text-s;
+}
+.card-fp-desc-text-top{}
+.card-fp-desc-text-top{}
+.card-fp-transparent-text {
+  @apply relative
+}
+.card-fp-transparent-text:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+          rgba(255,255,255, 1) 0%,
+          rgba(255,255,255, 0) 100%
+  );
+  pointer-events: none; /* so the text is still selectable */
+}
+.card-fp-hidden-text{
+  @apply hidden;
+}
+.card-fp-desc-bottom{
+  @apply flex flex-col items-start gap-16;
+}
+.card-fp-desc-buy{
+  @apply text-2.5xl font-medium;
+}
+
+
+.card-fp-desc-buy-buttons{
+  @apply flex flex-row gap-16;
+}
+.card-fp-desc-buy-btn{
+  @apply  cursor-pointer;
+  border: 1px solid black;
+}
+.c-fp-d-b-btn-1{
+  @apply px-24 py-14;
+}
+.c-fp-d-b-btn-2{
+  @apply px-14 py-14;
+}
+
+
+
+.card-fp-desc-buttons{
+  @apply flex flex-col items-center gap-24;
+  @media  (max-width: 500px){
+    @apply hidden;
+  }
+}
+
+
+.largeImg-wrapper{
+  @apply relative;
+  aspect-ratio: 1/1;
+  flex-grow: 1;
+}
+.card-fullpage-tags{
+  @apply absolute top-0 left-0 text-s bg-white;
+}
+.bordered_tags_item-hidden{
+  @media  (min-width: 500px){
+    @apply hidden;
+  }
+}
+.largeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.thumbs{
+  @apply flex flex-col gap-16;
+}
+.js-thumb-chosen{
+  border: 3px solid #4498FC;
+}
+.thumbs a {
+  max-width: 8.8rem;
+  max-height: 8.8rem;
+  aspect-ratio: 1/1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.thumbs a:hover {
+}
+.thumbs li {
+  list-style: none;
+}
+.thumbs {
+  margin: 0;
+  padding: 0;
+}
+.more-down-button.js-mdb {
+  @apply p-0;
+}
+
+
+// карточки брендов
+.card-fullpage-card-brands{
+  @apply  flex flex-row gap-16 flex-nowrap;
+}
+.card-fullpage-card-brand{
+  @apply w-1/3;
+}

@@ -64,7 +64,6 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 const movingBlock = document.getElementById("moving-block");
-
 document.addEventListener("mousemove", function(event) {
   const windowWidth = window.innerWidth;
   const blockWidth = movingBlock.offsetWidth;

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игрушки. Карточка товара.</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="card-fullpage">
+    <header id="header" class="bottom">
+        <div class="logo"><img src="../../img/logo.png"></div>
+        <div class="dropdown">
+            <button><div class="icon"></div>Каталог</button>
+            <div class="content">
+                <a href="#"><div class="menu-icon-book"></div>Книги</a>
+                <a href="#"><div class="menu-icon-toys"></div>Игрушки</a>
+            </div>
+        </div>
+        <nav class="header-nav ">
+            <ul>
+                <li><a href="#">Бренды</a></li>
+                <li><a href="#">Новости</a></li>
+                <li>
+                    <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
+                    <div class="more-down-content out">
+                        <p>Содержимое 1</p>
+                        <p>Содержимое 1</p>
+                        <p>Содержимое 1</p>
+                    </div>
+                </li>
+                <li><a href="#">Партнерам</a></li>
+            </ul>
+        </nav>
+        <div class="search-input hide">
+            <span class="search-icon"></span>
+            <span class="micro-icon"></span>
+            <input type="text"  placeholder="Введите поисковый запрос">
+            <span class="cross-icon" onclick="toggleSearch()"></span>
+        </div>
+        <div class="header-btn">
+            <span class="search-button" onclick="toggleSearch()"></span>
+            <span class="micro-button"></span>
+            <span class="heart-button"></span>
+            <div class="language">
+                <span class="rus-lang">RU</span>/
+                <span class="eng-lang">ENG</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="yellow-background">
+      <div id="moving-block"></div>
+      <div id="above-block">
+        <div class="flex mb-24 justify-between">
+          <p class="breadcrumbs">
+            <a href="#">Главная </a><span>/</span>
+            <a href="#">Игрушки </a><span>/</span>
+            <a href="#">Все игрушки </a><span>/</span>
+            <a href="#">Волчки и блейды </a><span>/</span>
+            <a href="#">Арена</a><span>/</span>
+            <a href="#">Ещё уровень вложенности</a><span>/</span>
+            <a href="#">Волчок Эпик Лончер Стандарт Gold Phoenix</a>
+          </p>
+
+          <div class="breadcrumbs-icons">
+              <a href="#" class="item_card-external-link"></a>
+              <button class="item_card_add_to_favourite"> </button>
+          </div>
+        </div>
+            <!--    тут будет контент по карточке    -->
+        <div class="card-fullpage-main-info">
+          <div class="card-fullpage-images">
+            <div class="largeImg-wrapper">
+                <img class="largeImg" src="../../img/card-fullpage/img1.svg" alt="Large image">
+                <div class="card-fullpage-tags bordered_tags_main">
+                    <div class="bordered_tags_item ">Хит</div>
+                    <div class="bordered_tags_item ">Новинка</div>
+                    <div class="bordered_tags_item bordered_tags_item-hidden">5+</div>
+                </div>
+            </div>
+              <ul class="thumbs">
+                <li>
+                  <a href="../../img/card-fullpage/img1.svg" title="Image 2"><img src="../../img/card-fullpage/img1.svg"></a>
+                </li>
+                <li>
+                  <a href="../../img/card-fullpage/img2.svg" title="Image 3"><img src="../../img/card-fullpage/img2.svg"></a>
+                </li>
+                <li>
+                  <a href="../../img/card-fullpage/img3.svg" title="Image 4"><img src="../../img/card-fullpage/img3.svg"></a>
+                </li>
+                <li>
+                  <a href="../../img/card-fullpage/img4.svg" title="Image 5"><img src="../../img/card-fullpage/img4.svg"></a>
+                </li>
+                <li>
+                  <a href="../../img/card-fullpage/img5.svg" title="Image 6"><img src="../../img/card-fullpage/img5.svg"></a>
+                </li>
+              </ul>
+          </div>
+          <div class="card-fullpage-description">
+              <div class="card-fp-desc-main">
+                    <div class="card-fp-desc-top">
+                      <div class="card-fp-desc-header">Инфинити Надо.
+                        Волчок Эпик Лончер Стандарт Gold Phoenix</div>
+                      <div class="card-fp-desc-vendor-code">Артикул: 40599</div>
+                      <div class="card-fp-desc-target-aud">Для мальчиков</div>
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category">Сильви Мишле</a>
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">Sylvie Michelet</a>
+                      </div>
+                      <div class="card-fp-desc-text">
+                        <p class="card-fp-desc-text-top">
+                          Инфинити Надо – самый мощный блейд для крутейших баттлов!
+                          Эпик Лончер – новое представление о пусковых установках и волчках!
+                          Готовься к самому эпичному запуску блейдов Инфинити Надо Мечом Эпик
+                          Лончер Стандарт, 39 см! Он помогает точнее запустить блейд на арену.
+                          Меч не только пусковая установка, но и монтажный инструмент.
+                        </p>
+                        <p class="card-fp-desc-text-top card-fp-trans card-fp-transparent-text">
+                          В комплект входит облегченный волчок для скоростного запуска.
+                          Его можно пересобирать: все элементы взаимозаменяемы внутри линейки Эпик Лончер.
+                          Вставь Надо в специальное отверстие до щелчка, раскрути волчок с помощью ножен,
+                          нажми кнопку запуска. Блейд Эпик Лончер Стандарт светится при вращении и
+                          нажатии на аватар. Порази соперника эпичностью
+                        </p>
+                        <p class="card-fp-desc-text-top card-fp-hide card-fp-hidden-text">
+                          В комплект входит облегченный волчок для скоростного запуска.
+                          Его можно пересобирать: все элементы взаимозаменяемы внутри линейки Эпик Лончер.
+                          Вставь Надо в специальное отверстие до щелчка, раскрути волчок с помощью ножен,
+                          нажми кнопку запуска. Блейд Эпик Лончер Стандарт светится при вращении и
+                          нажатии на аватар. Порази соперника эпичностью
+                        </p>
+                      </div>
+                      <button class="more-down-button js-mdb">Подробное описание характеристики<span></span></button>
+
+                    </div>
+                    <div class="card-fp-desc-bottom">
+                        <div class="card-fp-desc-buy">Купить игрушку</div>
+                        <div class="card-fp-desc-buy-buttons">
+                            <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-1">
+                                <img src="../../img/card-fullpage/ozon.svg">
+                            </a>
+                            <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-2">
+                                <img src="../../img/card-fullpage/wildberries.svg">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-fp-desc-buttons">
+                    <div class="bordered_tags_item-fp">5+</div>
+                    <a href="#" class="item_card-external-link"></a>
+                    <button class="item_card_add_to_favourite"></button>
+                </div>
+            </div>
+        </div>
+        <div class="card-fullpage-card-brands">
+          <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары бренда</div>
+                  <div class="card_brand_name">Инфинити Надо</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                  <img src="../../img/card-fullpage/infinity-nado.svg" alt="">
+                </a>
+              </div>
+            </div>
+          <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары коллекции</div>
+                  <div class="card_brand_name">Дикие Скричеры</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                    <img src="../../img/card-fullpage/wild-screeches.svg" alt="">
+                </a>
+              </div>
+            </div>
+          <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары серии</div>
+                  <div class="card_brand_name">Трансформеры</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                  <img src="../../img/card-fullpage/infinity-nado.svg" alt="">
+                </a>
+              </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script type="module" src="./js/scripts.js"></script>
+</body>
+</html>

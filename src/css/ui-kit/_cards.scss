@@ -116,6 +116,11 @@
   @apply px-12 py-4;
   border: 1px solid #000000;
 }
+.bordered_tags_item-fp {
+  @apply w-30 h-30 text-center text-s font-medium;
+  line-height: 3rem;
+  border: 1px solid #000000;
+}
 .toy_card_tags_first {
 }
 .toy_card_tags_second {
@@ -157,11 +162,19 @@
 .item_card_add_to_favourite {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url("../../img/heart_white.svg") no-repeat center;
+  background-size: contain;
+}
+
+.item_card-external-link{
+  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+  background: url("../../img/follow_the_link.svg") no-repeat center;
+  background-size: contain;
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url("../../img/heart_black.svg") no-repeat center;
+  background-size: contain;
 }
 
 .add_to_favourite_img {
@@ -283,13 +296,18 @@
   width: 15rem;
   @apply block;
   height: 9rem;
-  background: url("../../img/brand_image.svg") no-repeat center;
-  background-size: cover;
+  //background: url("../../img/brand_image.svg") no-repeat center;
+  //background-size: cover;
   @media screen and (max-width: 400px) {
     width: 11rem;
     height: 8.6rem;
     background-size: contain;
   }
+}
+.card_brand_image{
+  @apply block;
+  max-width: 20rem;
+  max-height: 12rem;
 }
 
 .card_brand_img {

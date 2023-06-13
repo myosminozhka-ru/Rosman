@@ -165,7 +165,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative h-screen w-full items-center overflow-hidden bg-yellow pt-60;
+  @apply relative h-screen w-full items-center overflow-hidden; // убрал отступ
 }
 
 #moving-block {
@@ -173,7 +173,7 @@ header {
 }
 
 #above-block {
-  @apply relative z-1000 overflow-hidden px-60 py-35;
+  @apply relative z-1000 overflow-hidden p-24; // изменил отступ
 }
 .swiper-text {
   .swiper-slide {
