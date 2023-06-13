@@ -244,16 +244,24 @@ header {
 }
 
 #white-background {
-  @apply relative h-200 w-full items-center overflow-hidden bg-white pt-60 px-70 mb-10;
+  @apply relative h-200  w-full items-center overflow-hidden bg-white pt-60 px-70 mb-20;
   .slide-el {
     width: 10.4rem;
     z-index: 1000;
     height: 10.4rem;
     position: absolute;
     bottom: 0;
+    transition: transform 1s ease;
   }
 }
 
 #yellow-moving-block {
-  @apply absolute z-100 mx-auto my-0 h-full w-10/12	 overflow-hidden bg-white bg-yellow;
+  @apply absolute z-100 mx-auto my-0 h-180 w-10/12	 overflow-hidden bg-white bg-yellow;
+}
+#parent {
+  width: 99%;
+  margin: auto;
+  position: relative;
+  height: 25rem;
+  overflow: hidden; /* Скрыть содержимое, выходящее за границы блока */
 }

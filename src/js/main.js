@@ -108,7 +108,7 @@ const yellowMovingBlock = document.getElementById("yellow-moving-block");
 
 document.addEventListener("mousemove", function(event) {
   const windowWidth = window.innerWidth;
-  const blockWidth = movingBlock.offsetWidth;
+  const blockWidth = yellowMovingBlock.offsetWidth;
 
   // Вычисляем позицию блока на основе позиции мыши и ширины окна
   let blockX = event.clientX - blockWidth / 2;
@@ -120,3 +120,39 @@ document.addEventListener("mousemove", function(event) {
   yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
 
 })
+var isMoving = false;
+
+document.addEventListener("mousemove", function(event) {
+
+  var follower = document.getElementById("follower");
+  var parent = document.getElementById("parent");
+  var parentRect = parent.getBoundingClientRect();
+  var x = event.clientX - parentRect.left;
+  var newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+  newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
+
+  // Получаем ширину контейнера
+  var containerWidth = parent.offsetWidth;
+
+  // Получаем текущую позицию мыши
+  var mouseX = event.clientX;
+
+  // Вычисляем относительное положение мыши в контейнере
+  var relativeX = mouseX / containerWidth;
+
+  // Вычисляем значение числа на основе относительной позиции мыши
+  var number = Math.round(relativeX * 20) - 10;
+
+  // Выводим число
+  console.log(number);
+  if (!isMoving) {
+    isMoving = true;
+    follower.style.transform = "translate(" + newX + "px, 10px)"; // Используем translateX для перемещения блока
+
+
+    setTimeout(function() {
+      isMoving = false;
+    }, 500); // Задержка в 200 миллисекунд
+  }
+  if (isMoving) {}
+});
