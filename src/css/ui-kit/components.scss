@@ -134,12 +134,12 @@ header {
           @apply mx-6 my-3 text-s uppercase;
 
           span {
-            width: 0.6rem;
-            height: 0.6rem;
-            border-top: 0.2rem solid #000000;
-            border-right: 0.2rem solid #000000;
-            margin-left: 0.9rem;
-            transform: rotate(135deg);
+             width: 0.6rem;
+             height: 0.6rem;
+             border-top: 0.2rem solid #000000;
+             border-right: 0.2rem solid #000000;
+             margin-left: 0.9rem;
+             transform: rotate(135deg);
           }
 
           &.active-js {
@@ -209,25 +209,60 @@ header {
   }
 }
 
-.quest-eleph {
-  @apply bg-yellow items-center h-screen;
-  .images-block {
-    @apply flex justify-center flex-row;
-    img {
-      width: 18rem;
-      height: 24rem;
-    }
-    .zero {
-      @apply relative items-center flex justify-center;
-      width: 25rem;
-      video {
-        @apply absolute h-74;
-        bottom: -2rem;
-        width: 25rem;
-        left: -1rem;
-      }
-    }
+.eleph-run-moon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  video {
+    margin: 0 auto;
+    top: 35px;
+    position: relative;
   }
+  /* Применяем анимацию к элементу */
+  .spinning-moon {
+    margin: 0 auto;
+    width: 50.4rem;
+    height: 50.4rem;
+    animation: spin 20s linear infinite;
+  }
+  .text-on-moon {
+    margin: 0 auto;
+    bottom: 290px;
+    position: relative;
+    text-align: center;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#white-background {
+  @apply relative h-200  w-full items-center overflow-hidden bg-white pt-60 px-70 mb-20;
+  .slide-el {
+    width: 10.4rem;
+    z-index: 1000;
+    height: 10.4rem;
+    position: absolute;
+    bottom: -2rem;
+    transition: transform 2s ease;
+  }
+}
+
+#yellow-moving-block {
+  @apply absolute z-100 mx-auto my-0 h-180 w-10/12	 overflow-hidden bg-white bg-yellow;
+}
+#parent {
+  width: 99%;
+  margin: auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden; /* Скрыть содержимое, выходящее за границы блока */
+}
 
 
 }
