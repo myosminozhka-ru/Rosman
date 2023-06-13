@@ -543,15 +543,46 @@
   transform: translate(-50%, -50%);
 }
 .card_employee_social_item {
-  @apply block h-20 w-20 rounded-3xl;
-  background: url("../../img/icon_white_inst.svg") no-repeat;
+  @apply block h-20 w-20 rounded-full;
   background-position: center center;
 }
 .card_employee_social_item:hover {
   @apply bg-yellow p-12;
-  background-image: url("../../img/icon_black_twitter.svg");
+}
+
+.emp_soc_fb{
+  background: url("../../img/icon-white-facebook.svg") no-repeat;
+
+}
+.emp_soc_fb:hover{
+  background-image: url("../../img/icon-black-facebook.svg");
   background-position: center center;
 }
+
+.emp_soc_twit{
+  background: url("../../img/icon-white-twitter.svg") no-repeat;
+}
+.emp_soc_twit:hover{
+  background-image: url("../../img/icon-black-twitter.svg");
+  background-position: center center;
+}
+
+.emp_soc_pint{
+  background: url("../../img/icon-white-pint.svg") no-repeat;
+}
+.emp_soc_pint:hover{
+  background-image: url("../../img/icon-black-pinterest.svg");
+  background-position: center center;
+}
+
+.emp_soc_inst{
+  background: url("../../img/icon-white-inst.svg") no-repeat;
+}
+.emp_soc_inst:hover{
+  background-image: url("../../img/icon-black-instagram.svg");
+  background-position: center center;
+}
+
 
 // карточка НАГРАД
 .card_awards_content {
