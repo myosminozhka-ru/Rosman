@@ -17,9 +17,7 @@
   }
 }
 header {
-  @apply flex h-99 items-center justify-between bg-yellow px-10 pb-14 pt-4;
-  background: url("../../img/header-bg.png") no-repeat center;
-  background-size: cover;
+  @apply flex h-60 items-center justify-between bg-yellow px-10 p-4;
 
   .logo {
     @apply ml-24;
@@ -265,3 +263,4 @@ header {
   height: 100%;
   overflow: hidden; /* Скрыть содержимое, выходящее за границы блока */
 }
+
