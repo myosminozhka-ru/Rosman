@@ -1228,11 +1228,12 @@ img {
   @media screen and (max-width: 700px) {
     @apply w-full;
   }
+  .more-down-button {
+    @apply w-full justify-between;
+  }
+
 }
 
-.more-down-button {
-  @apply w-full justify-between;
-}
 
 .more-down-content {
   @apply pl-12;

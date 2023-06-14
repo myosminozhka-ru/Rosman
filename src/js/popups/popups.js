@@ -1,4 +1,4 @@
-console.log("privet");
+
 const popup = function Popup(el, triggerButton) {
   this.el = el;
   this.triggerButton = triggerButton;
@@ -120,8 +120,6 @@ const dropdownTogglers = document.getElementsByClassName("dropdown_checkbox");
 for (let i = 0; i < dropdownTogglers.length; i++) {
   dropdownTogglers[i].addEventListener("click", function () {
     const content = this.parentNode.parentNode.nextElementSibling;
-    console.log(this);
-    console.log(content);
     if (this.classList.contains("active-js")) {
       this.classList.remove("active-js");
     } else {

@@ -107,7 +107,6 @@ function toggleSearch() {
 function changeLang(lang) {
   let eng = document.querySelector('.eng-lang')
   let rus = document.querySelector('.rus-lang')
-  console.log('event',lang)
   if (lang ===  'eng') {
     rus.classList.remove("active-js");
     eng.classList.add("active-js");
