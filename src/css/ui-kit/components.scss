@@ -21,6 +21,27 @@ header {
 
   .logo {
     @apply ml-24;
+    @apply block;
+    @media screen and (max-width: 768px) {
+      @apply hidden;
+    }
+  }
+  .mobile-logo {
+    @apply hidden;
+    @media screen and (max-width: 768px) {
+      @apply block;
+    }
+  }
+  .dropdown {
+    @media screen and (max-width: 768px) {
+      @apply hidden;
+    }
+  }
+
+  .header-nav {
+    @media screen and (max-width: 768px) {
+      @apply hidden;
+    }
   }
 
   .search-button {
@@ -52,9 +73,11 @@ header {
 
   .language {
     @apply inline-block;
-
-    .eng-lang {
+    .active-js {
       color: rgba(160, 168, 47, 0.69);
+    }
+    span {
+      @apply cursor-pointer mx-3;
     }
   }
 
@@ -120,6 +143,16 @@ header {
       width: 0;
       opacity: 0;
       margin: 0;
+      ul {
+        width: 0;
+        opacity: 0;
+        margin: 0;
+        li {
+          width: 0;
+          opacity: 0;
+          margin: 0;
+        }
+      }
     }
 
     ul {
