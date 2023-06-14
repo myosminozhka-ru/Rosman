@@ -20,6 +20,47 @@ for (let i = 0; i < moreButtons.length; i++) {
     }
   });
 }
+const navbar = document.querySelector('.navigation')
+const contentNavBar = document.getElementsByClassName("navigation-content");
+const contentNavBarUl = document.querySelector(".nav-list");
+const activeP =  document.querySelector("p.active-js");
+const p =  contentNavBarUl.getElementsByTagName('p')
+
+navbar.addEventListener("click", function(event) {
+  if (activeP != null) {
+    if (!activeP.contains(event.target)) {
+      for (let i = 0; i < p.length; i++) {
+        if ( p[i].classList.contains("active-js")) {
+          p[i].classList.remove("active-js")
+        }
+      }
+    }
+
+  }
+  for (let i = 0; i < contentNavBar.length; i++) {
+    if (contentNavBar[i].id === event.target.classList.value) {
+      contentNavBar[i].classList.add('active-js')
+      contentNavBar[i].classList.remove('hide')
+    } else {
+      contentNavBar[i].classList.remove('active-js')
+      contentNavBar[i].classList.add('hide')
+
+    }
+  }
+  event.target.classList.add('active-js')
+});
+
+function closeBar() {
+  for (let i = 0; i < p.length; i++) {
+    if ( p[i].classList.contains("active-js")) {
+      p[i].classList.remove("active-js")
+    }
+  }
+  for (let i = 0; i < contentNavBar.length; i++) {
+      contentNavBar[i].classList.remove('active-js')
+      contentNavBar[i].classList.add('hide')
+  }
+}
 
 document.addEventListener("click", function(event) {
   const block = document.querySelector(".more-down-button.out.active-js");

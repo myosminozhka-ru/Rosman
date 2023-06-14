@@ -365,6 +365,7 @@ button {
 }
 
 .navigation {
+
   ul {
     @apply m-0 flex list-none p-0;
   }
@@ -372,8 +373,8 @@ button {
   li {
     @apply m-4;
 
-    a {
-      @apply relative px-2 text-black no-underline;
+    p {
+      @apply relative px-2 text-black no-underline cursor-pointer;
 
       &.active-js {
         &::after {
@@ -395,6 +396,34 @@ button {
         width: 100%;
         height: 0.2rem;
         background-color: #000;
+      }
+    }
+  }
+  .navigation-content {
+    @apply bg-white z-9999;
+    position: absolute;
+    .cross {
+      background: url("../../img/close.svg") no-repeat center right;
+      background-size: 1rem 1rem;
+      width: 1rem;
+      height: 1rem;
+      right: 0;
+      position: absolute;
+      @apply ml-4 inline-block text-left align-middle	cursor-pointer;
+    }
+    &.hide {
+      @apply opacity-0 hidden transition-all duration-500 ease-linear	;
+    }
+    &.active-js {
+      @apply opacity-100 block  transition-all duration-500 ease-linear	;
+    }
+    .content-layer {
+      @apply flex;
+      .picture {
+        @apply w-3/12;
+      }
+      .name {
+        @apply w-9/12 p-10 text-m;
       }
     }
   }
