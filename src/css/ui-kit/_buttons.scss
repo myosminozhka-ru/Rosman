@@ -162,8 +162,8 @@ button {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
-      height: 1.8rem;
-      @apply ml-4 inline inline text-left;
+      height: 1rem;
+      @apply ml-4 inline-block text-left align-middle	;
     }
 
     .count {
@@ -174,9 +174,11 @@ button {
 
 .sort-label {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
+  max-width: 30rem;
+  min-width: 15rem;
 
-  span {
-    @apply hidden;
+  .count {
+    @apply hidden align-middle	;
   }
 
   &:hover {
@@ -194,25 +196,26 @@ button {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
-      height: 1.8rem;
-      @apply ml-4 inline inline text-left;
+      height: 1rem;
+      @apply ml-4 inline-block text-left align-middle;
     }
 
     .count {
-      @apply ml-4 inline inline w-auto text-left text-s font-normal;
+      @apply ml-4 inline-block  w-auto text-left text-s font-normal;
     }
   }
 }
 
 .filter-label {
   @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold;
-
+  min-width: 5rem;
+  max-width: 15rem;
   &.age {
     @apply w-55 justify-center;
   }
 
   span {
-    @apply hidden;
+    @apply hidden align-middle;
   }
 
   &:hover {
