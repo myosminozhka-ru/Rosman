@@ -1,5 +1,8 @@
 .filters-block {
   @apply w-1/4;
+  @media screen and (max-width: 768px) {
+    @apply  w-3/4;
+  }
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left;
   }
