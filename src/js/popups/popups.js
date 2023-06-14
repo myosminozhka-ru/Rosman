@@ -79,6 +79,14 @@ const jsPopupBrandChooseButton = document.querySelector(
 const jsPopupBrandChooseModal = document.querySelector(
   ".js_popup_brand_choose_modal"
 );
+
+const jsPopupBrandChooseListButton = document.querySelector(
+    ".js_popup_brand_choose_list_button"
+);
+const jsPopupBrandChooseListModal = document.querySelector(
+    ".js_popup_brand_choose_list_modal"
+);
+
 const jsPopupAllFiltersButton = document.querySelector(
   ".js_popup_all_filters_button"
 );
@@ -95,6 +103,7 @@ const popups = [
   [jsPopupSurveyModal, jsPopupSurveyButton],
   [jsPopupCollaborationModal, jsPopupCollaborationButton],
   [jsPopupBrandChooseModal, jsPopupBrandChooseButton],
+  [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
   [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
 ];
 
