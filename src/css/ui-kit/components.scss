@@ -165,7 +165,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative w-full items-center overflow-hidden; // убрал отступ и  h-screen
+  @apply relative bg-yellow pt-16 w-full items-center overflow-hidden; // убрал отступ и  h-screen
 }
 
 #moving-block {
@@ -184,14 +184,14 @@ header {
 .swiper, .swiper-text, .swiper-image {
   width: 100% !important;
   height: auto!important;
-  padding: 0 3rem!important;
+  //padding: 0 3rem!important;
   .card_career {
   margin-top: 3rem;
   }
   .swiper-header {
-    @apply flex justify-between my-40 w-5/6;
+    @apply flex justify-between pb-40 w-full; // поправил на всю ширину
     .buttons {
-      @apply flex justify-between w-36 gap-8;
+      @apply flex justify-between w-44 gap-16; // и гэп по макету
       .button-prev {
         display: block;
         background: url("../../img/prev.png") no-repeat center;

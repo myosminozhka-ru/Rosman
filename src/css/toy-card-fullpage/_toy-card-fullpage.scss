@@ -1,6 +1,6 @@
-.card-fullpage{
-  @apply bg-white;
-}
+//.card-fullpage{
+//  @apply bg-white;
+//}
 .card-fullpage-main-info{
   @apply flex flex-row justify-between gap-16 items-start mb-64;
 }
@@ -57,7 +57,7 @@
   );
   pointer-events: none; /* so the text is still selectable */
 }
-.card-fp-hidden-text{
+.js-card-fp-hidden-item{
   @apply hidden;
 }
 .card-fp-desc-bottom{
@@ -82,6 +82,9 @@
   @apply px-14 py-14;
 }
 
+.js-item-to-hide-desc.js-card-fp-hidden-item{
+  @apply hidden;
+}
 
 
 .card-fp-desc-buttons{
@@ -95,6 +98,8 @@
 .largeImg-wrapper{
   @apply relative;
   aspect-ratio: 1/1;
+  max-width: 50.4rem;
+  max-height: 50.4rem;
   flex-grow: 1;
 }
 .card-fullpage-tags{
@@ -106,9 +111,7 @@
   }
 }
 .largeImg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  @apply w-full h-full object-cover;
 }
 .thumbs{
   @apply flex flex-col gap-16;
@@ -135,6 +138,10 @@
 .more-down-button.js-mdb {
   @apply p-0;
 }
+.more-down-button.js-mdb-desc {
+  @apply p-0;
+  max-width: 17rem;
+}
 
 
 // карточки брендов
@@ -157,4 +164,94 @@
 }
 .card-fullpage-tabs{
   @apply mb-32;
+}
+
+// card-fullpage-desc-comp
+.card-item-to-hide{
+
+}
+.card-fullpage-desc-image{
+  @apply mb-64;
+  aspect-ratio: 2/1;
+}
+.js-card-fullpage-desc-image img {
+  @apply w-full h-full object-cover;
+}
+
+.js-card-fullpage-desc-description{
+  @apply flex flex-col gap-24 mb-64;
+}
+.js-card-fullpage-desc-description.gapped{
+  @apply gap-64;
+}
+
+.card-fullpage-desc-common{
+  @apply flex flex-col gap-24;
+  max-width: 81.6rem;
+}
+.card-fullpage-desc-common-2{
+  @apply flex flex-col gap-20;
+}
+.card-header-text{
+  @apply text-4xl font-medium;
+}
+.card-descr-text{
+  @apply text-15.20 font-normal;
+}
+.card-descr-text > ul > li {
+  padding-left: 1rem;
+}
+.card-descr-text > ul > li:before {
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.4rem;
+}
+.card-fullpage-desc-header{}
+.card-fullpage-desc-text{}
+.card-fullpage-desc-block{
+  @apply flex flex-row gap-20;
+}
+
+.card-fullpage-desc-block-img{
+  @apply w-1/2;
+  aspect-ratio: 4/3;
+}
+.card-fullpage-desc-block-img img{
+  @apply w-full h-full object-cover;
+}
+.card-fullpage-desc-block-text{
+  @apply w-1/2;
+}
+.more-card-header{}
+.more-card-text{}
+
+.card-fullpage-desc-more{
+  @apply flex flex-row gap-16;
+}
+.card-fullpage-desc-more-card{
+  @apply flex flex-col gap-20 w-1/3;
+}
+.card-fullpage-desc-more-card-image{
+  aspect-ratio: 4/3;
+  max-width: 40rem;
+}
+.card-fullpage-desc-more-card-image img{
+  @apply w-full h-full object-cover;
+}
+.card-fullpage-desc-more-card-text{}
+
+//
+//
+//
+// card video
+.card_video_item.full-width{
+  max-width: 100%;
+}
+.card_video_item.full-width > .card_video_title{
+  @apply hidden;
 }

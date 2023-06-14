@@ -126,7 +126,7 @@
                           нажми кнопку запуска. Блейд Эпик Лончер Стандарт светится при вращении и
                           нажатии на аватар. Порази соперника эпичностью
                         </p>
-                        <p class="card-fp-desc-text-top card-fp-hide card-fp-hidden-text">
+                        <p class="card-fp-desc-text-top card-fp-hide js-card-fp-hidden-item">
                           В комплект входит облегченный волчок для скоростного запуска.
                           Его можно пересобирать: все элементы взаимозаменяемы внутри линейки Эпик Лончер.
                           Вставь Надо в специальное отверстие до щелчка, раскрути волчок с помощью ножен,
@@ -205,9 +205,386 @@
           </div>
         </div>
 
-        <!-- контент первого таба ОПИСАНИЕ  -->
-        <!---->
+        @@include('toy-card-fullpage-desc-comp.html', { }, )
 
+        <div class="swiper">
+              <div class="swiper-header">
+                  <h3 class="head-3">Книги о которых все говорят<sup class="underline text-m">все</sup></h3>
+                  <div class="buttons">
+                      <div class="button-prev"></div>
+                      <div class="button-next"></div>
+                  </div>
+
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="toy_card item_card">
+                          <div class="toy_card_heading">
+                              <div class="item_card_tags bordered_tags">
+                                  <div class="item_card_tags_main bordered_tags_main">
+                                      <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                                          Бестселлер
+                                      </div>
+                                      <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                                          Новинка
+                                      </div>
+                                  </div>
+                                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                              </div>
+                              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                              <div class="toy_card_image item_card_image">
+                                  <img
+                                          class="toy_card_img item_card_img"
+                                          src="../../img/cards_toy.svg"
+                                          alt=""
+                                  />
+                              </div>
+                          </div>
+                          <div class="toy_card_info item_card_info">
+                              <div class="toy_card_name item_card_name">
+                                  Арена для баттлов Инфинити Надо
+                              </div>
+                              <div class="toy_card_more item_card_more">
+                                  <button class="toy_card_item_link item_card_link overline-button">
+                                      Подробнее
+                                  </button>
+                                  <button class="item_card_add_to_favourite"> </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        <!-- тут походу будет сепаратор наклоняющийся -->
+        <div class="swiper-image bg-yellow pb-60 my-64">
+              <div class="swiper-header">
+                  <h3 class="head-3">Фотогалерея</h3>
+                  <div class="buttons">
+                      <div class="button-prev"></div>
+                      <div class="button-next"></div>
+                  </div>
+
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="card_photogallery_item">
+                          <img src="../../img/cards_photogallery_item.svg" alt="" />
+                          <div class="cards_photogallery_eye_image">
+                              <img
+                                      class="cards_photogallery_eye_img"
+                                      src="../../img/cards_photogallery_eye.svg"
+                                      alt=""
+                              />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        <!-- тут походу будет сепаратор наклоняющийся -->
+        <div class="card_video_item full-width">
+              <div class="card_video_preview">
+                  <img src="../../img/cards_video_preview.svg" alt="" />
+                  <button class="card_video_play_button circle-button"></button>
+              </div>
+
+              <div class="card_video_info">
+              <span class="card_video_title"
+      >Как правильно выбрать книгу: наши советы для любителей книг</span
+      >
+              </div>
+          </div>
       </div>
     </div>
 </div>
