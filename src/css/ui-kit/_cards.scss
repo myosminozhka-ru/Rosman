@@ -36,11 +36,20 @@
 }
 .bordered_tags_main {
   @apply flex flex-row justify-between gap-8;
-
+  @media screen and (max-width: 400px){
+    @apply gap-6;
+  }
 }
 .bordered_tags_item {
   @apply px-12 py-4 body-s-bold;
   border: 1px solid #000000;
+}
+.bordered_tags_item:hover {
+  @apply bg-yellow;
+}
+.bordered_tags_item-smalled{
+  @apply px-4 py-4 text-11.14 text-center;
+  width: 7rem;
 }
 .toy_card_tags_first {
 }
@@ -199,10 +208,10 @@
   @apply flex flex-col flex-nowrap items-center justify-center gap-8;
 }
 .card_brand_all_items {
-  @apply block rounded-2xl bg-yellow px-8 py-4;
+  @apply block rounded-2xl text-xl bg-yellow px-8 py-4;
 }
 .card_brand_name {
-  @apply text-xl font-normal text-black;
+  @apply text-2.5xl font-normal text-black;
 }
 .card_brand_image {
   @apply block bg-white;
