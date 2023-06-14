@@ -133,9 +133,11 @@
   }
 }
 .footer-info-rss {
-  @apply flex flex-row flex-nowrap gap-8;
+  @apply flex flex-row flex-nowrap gap-8 cursor-pointer;
 }
-
+.footer-eng-info-rss{
+  @apply cursor-pointer;
+}
 .footer-info-rss-image {
   @apply block h-20 w-20;
   background: url("../../img/footer_rss.svg") no-repeat center;
@@ -258,7 +260,7 @@
   @apply flex flex-row items-center gap-12;
 }
 .footer-eng-info-rss-image {
-  @apply block h-20 w-20;
+  @apply block h-20 w-20 cursor-pointer;
   background: url("../../img/footer_rss.svg") no-repeat center;
   background-size: contain;
 }
