@@ -1,8 +1,7 @@
-
 // text
 
 body {
-  @apply font-tt-hoves-pro; 
+  @apply font-tt-hoves-pro;
 }
 
 h1,
@@ -11,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-black m-0;
+  @apply m-0 text-black;
 }
 
 p,
@@ -27,9 +26,8 @@ p {
   @apply m-0;
 }
 
-
 .head-1 {
-  @apply font-medium text-7xl tracking-tight;
+  @apply text-7xl font-medium tracking-tight;
 
   @media (max-width: 768px) {
     @apply text-4xl tracking-normal;
@@ -72,7 +70,8 @@ p {
   @apply text-2xl font-normal;
 }
 
-.body-l, .body-l-bold {
+.body-l,
+.body-l-bold {
   @apply text-l sm:text-m;
 }
 
@@ -80,7 +79,8 @@ p {
   @apply font-bold;
 }
 
-.body-m, .body-m-bold {
+.body-m,
+.body-m-bold {
   @apply text-m;
 }
 
@@ -88,7 +88,8 @@ p {
   @apply font-bold;
 }
 
-.body-s, .body-s-bold {
+.body-s,
+.body-s-bold {
   @apply text-s;
 }
 
@@ -96,18 +97,20 @@ p {
   @apply font-bold;
 }
 
-
 .overline-dashed {
   @apply overline decoration-dashed;
 }
 
 .link-m {
-  @apply text-m underline font-normal;
+  @apply cursor-pointer text-m font-normal underline;
+}
+.link-m-bold {
+  @apply cursor-pointer text-m font-medium underline;
 }
 
 .link-s {
-  @apply text-xl underline font-normal;
+  @apply cursor-pointer text-xl font-normal underline;
 }
 .link-s-bold {
-  @apply text-xl underline font-medium;
+  @apply cursor-pointer text-xl font-medium underline;
 }
