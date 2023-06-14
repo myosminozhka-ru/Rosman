@@ -73,7 +73,7 @@ document.addEventListener("mousemove", function(event) {
   let blockX = event.clientX - blockWidth / 2;
 
   // Вычисляем наклон блока в зависимости от позиции мыши
-  let tilt = -((blockX / windowWidth)) * 6;
+  let tilt = ((blockX / windowWidth)) * 6;
 
   // Применяем наклон к блоку с помощью свойства transform
    movingBlock.style.transform = `rotate(${tilt}deg)`;
@@ -84,9 +84,9 @@ document.addEventListener("mousemove", function(event) {
   let boxRect = movingBlock.getBoundingClientRect();
   let boxCenterX = boxRect.left + boxRect.width / 2;
   let boxCenterY = boxRect.top + boxRect.height / 10;
-  let offsetX = (mouseX - boxCenterX) * 0.1;
-  let offsetY = (mouseY - boxCenterY) * 0.1;
-  movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 20px 20px rgba(0, 0, 0, 0.2)';
+  let offsetX = -(mouseX - boxCenterX) * 0.1;
+  let offsetY = -(mouseY - boxCenterY) * 0.1;
+  movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 10px 5px rgba(0, 0, 0, 0.2)';
 })
 
 function toggleSearch() {
@@ -103,6 +103,18 @@ function toggleSearch() {
     searchInput.classList.add("hide");
   }
 
+}
+function changeLang(lang) {
+  let eng = document.querySelector('.eng-lang')
+  let rus = document.querySelector('.rus-lang')
+  console.log('event',lang)
+  if (lang ===  'eng') {
+    rus.classList.remove("active-js");
+    eng.classList.add("active-js");
+  } else {
+    rus.classList.add("active-js");
+    eng.classList.remove("active-js");
+  }
 }
 const yellowMovingBlock = document.getElementById("yellow-moving-block");
 
@@ -131,20 +143,7 @@ document.addEventListener("mousemove", function(event) {
   var newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
   newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
-  // Получаем ширину контейнера
-  var containerWidth = parent.offsetWidth;
 
-  // Получаем текущую позицию мыши
-  var mouseX = event.clientX;
-
-  // Вычисляем относительное положение мыши в контейнере
-  var relativeX = mouseX / containerWidth;
-
-  // Вычисляем значение числа на основе относительной позиции мыши
-  var number = Math.round(relativeX * 20) - 10;
-
-  // Выводим число
-  console.log(number);
   if (!isMoving) {
     isMoving = true;
     follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
