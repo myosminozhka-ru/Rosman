@@ -19,7 +19,7 @@
   }
 }
 
-.item_card:hover .bordered_tags_item {
+.bordered_tags_item:hover {
   @apply bg-yellow;
 }
 
@@ -35,10 +35,11 @@
   @apply flex flex-row flex-nowrap items-center justify-between;
 }
 .bordered_tags_main {
-  @apply flex flex-row flex-nowrap justify-between gap-8;
+  @apply flex flex-row justify-between gap-8;
+
 }
 .bordered_tags_item {
-  @apply px-12 py-4;
+  @apply px-12 py-4 body-s-bold;
   border: 1px solid #000000;
 }
 .toy_card_tags_first {
@@ -207,11 +208,11 @@
   @apply block bg-white;
   max-width: 15rem;
   max-height: 9rem;
-  @media screen and (max-width: 400px) {
-    width: 11rem;
-    height: 8.6rem;
-    background-size: contain;
-  }
+  //@media screen and (max-width: 400px) {
+  //  width: 11rem;
+  //  height: 8.6rem;
+  //  background-size: contain;
+  //}
 }
 
 .card_brand_img {
@@ -318,6 +319,30 @@
   height: 22.2rem;
   background-image: url("../../img/cards_brand_socials.svg");
   background-position: center center;
+}
+
+.card_brand_with_socs{
+  @apply relative;
+  max-width: 29.6rem;
+  & img {
+    @apply p-0;
+  }
+}
+.card_brand_with_socs_links{
+  @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
+  top: 6%;
+  left: 6%;
+}
+
+.card_brand_with_socs_item_page{
+  @apply absolute hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
+  bottom: 6%;
+  left: 6%;
+width: 88%;
+}
+
+.card_brand_with_socs:hover .card_brand_with_socs_item_page {
+  @apply block;
 }
 //
 //.card_brand_img {
@@ -518,7 +543,7 @@
 // карточка НАГРАД
 .card_awards_content {
   @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
-  max-width: 40rem;
+  max-width: 39rem;
 }
 .card_awards_image {
   max-width: 368px;
