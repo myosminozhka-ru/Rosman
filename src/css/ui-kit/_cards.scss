@@ -251,8 +251,8 @@
   @apply bg-yellow;
 }
 
-.card_career:hover .car_cond_item {
-  @apply bg-yellow;
+.car_cond_item:hover {
+  @apply bg-yellow cursor-pointer;
 }
 // 1
 .card_career_heading {
@@ -297,7 +297,7 @@
   @apply text-15.20 font-normal text-black ssm:text-15.20;
 }
 .card_career_cond_item_text:hover {
-  @apply bg-white;
+  @apply bg-yellow cursor-pointer;
 }
 // 3
 .card_career_description {
