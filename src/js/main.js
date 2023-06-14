@@ -25,9 +25,9 @@ document.addEventListener("click", function(event) {
   const block = document.querySelector(".more-down-button.out.active-js");
   const targetElement = event.target;
   if (block != null) {
-    if (!block.contains(targetElement)) {
+    if (!block.contains(targetElement) && !targetElement.parentNode.classList.contains('more-down-content')) {
     for (let i = 0; i < moreButtons.length; i++) {
-      if ( moreButtons[i].classList.contains("active-js")) {
+      if ( moreButtons[i].classList.contains("active-js") ) {
         moreButtons[i].nextElementSibling.classList.remove("active-js")
         moreButtons[i].classList.remove("active-js")
        }
@@ -107,7 +107,6 @@ function toggleSearch() {
 function changeLang(lang) {
   let eng = document.querySelector('.eng-lang')
   let rus = document.querySelector('.rus-lang')
-  console.log('event',lang)
   if (lang ===  'eng') {
     rus.classList.remove("active-js");
     eng.classList.add("active-js");
