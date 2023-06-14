@@ -204,7 +204,7 @@ header {
 }
 
 #above-block {
-  @apply relative z-1000 overflow-hidden p-24; // изменил отступ
+  @apply relative z-1000 overflow-hidden; // убрал отступ
 }
 .swiper-text {
   .swiper-slide {
