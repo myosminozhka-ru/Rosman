@@ -58,7 +58,6 @@ window.addEventListener("resize", function () {
     const borderedItems = parentElement.querySelectorAll('.bordered_tags_item');
     if (borderedItems) {
       borderedItems.forEach((item) => {
-        console.log(item);
         if (parentWidth <= 160) {
           item.classList.add('bordered_tags_item-smalled');
         } else {

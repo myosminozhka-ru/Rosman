@@ -25,9 +25,9 @@ document.addEventListener("click", function(event) {
   const block = document.querySelector(".more-down-button.out.active-js");
   const targetElement = event.target;
   if (block != null) {
-    if (!block.contains(targetElement)) {
+    if (!block.contains(targetElement) && !targetElement.parentNode.classList.contains('more-down-content')) {
     for (let i = 0; i < moreButtons.length; i++) {
-      if ( moreButtons[i].classList.contains("active-js")) {
+      if ( moreButtons[i].classList.contains("active-js") ) {
         moreButtons[i].nextElementSibling.classList.remove("active-js")
         moreButtons[i].classList.remove("active-js")
        }
@@ -107,7 +107,6 @@ function toggleSearch() {
 function changeLang(lang) {
   let eng = document.querySelector('.eng-lang')
   let rus = document.querySelector('.rus-lang')
-  console.log('event',lang)
   if (lang ===  'eng') {
     rus.classList.remove("active-js");
     eng.classList.add("active-js");
@@ -132,15 +131,16 @@ document.addEventListener("mousemove", function(event) {
   yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
 
 })
-var isMoving = false;
+
+let isMoving = false;
 
 document.addEventListener("mousemove", function(event) {
 
-  var follower = document.getElementById("follower");
-  var parent = document.getElementById("parent");
-  var parentRect = parent.getBoundingClientRect();
-  var x = event.clientX - parentRect.left;
-  var newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+  let follower = document.getElementById("follower");
+  let parent = document.getElementById("parent");
+  let parentRect = parent.getBoundingClientRect();
+  let x = event.clientX - parentRect.left;
+  let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
   newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
 
@@ -156,8 +156,8 @@ document.addEventListener("mousemove", function(event) {
   if (isMoving) {}
 });
 function scrollContent(direction) {
-  var container = document.getElementById('elephant-container');
-  var content = document.getElementById('elephant-slider');
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
 
   if (direction === 'left') {
     container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
