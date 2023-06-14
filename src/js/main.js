@@ -104,3 +104,101 @@ function toggleSearch() {
   }
 
 }
+const yellowMovingBlock = document.getElementById("yellow-moving-block");
+
+document.addEventListener("mousemove", function(event) {
+  const windowWidth = window.innerWidth;
+  const blockWidth = yellowMovingBlock.offsetWidth;
+
+  // Вычисляем позицию блока на основе позиции мыши и ширины окна
+  let blockX = event.clientX - blockWidth / 2;
+
+  // Вычисляем наклон блока в зависимости от позиции мыши
+  let tilt = -((blockX / windowWidth)) * 6;
+
+  // Применяем наклон к блоку с помощью свойства transform
+  yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
+
+})
+var isMoving = false;
+
+document.addEventListener("mousemove", function(event) {
+
+  var follower = document.getElementById("follower");
+  var parent = document.getElementById("parent");
+  var parentRect = parent.getBoundingClientRect();
+  var x = event.clientX - parentRect.left;
+  var newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+  newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
+
+  // Получаем ширину контейнера
+  var containerWidth = parent.offsetWidth;
+
+  // Получаем текущую позицию мыши
+  var mouseX = event.clientX;
+
+  // Вычисляем относительное положение мыши в контейнере
+  var relativeX = mouseX / containerWidth;
+
+  // Вычисляем значение числа на основе относительной позиции мыши
+  var number = Math.round(relativeX * 20) - 10;
+
+  // Выводим число
+  console.log(number);
+  if (!isMoving) {
+    isMoving = true;
+    follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
+
+
+    setTimeout(function() {
+      isMoving = false;
+    }, 500); // Задержка в 200 миллисекунд
+  }
+  if (isMoving) {}
+});
+function scrollContent(direction) {
+  var container = document.getElementById('elephant-container');
+  var content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}
+const elephantDownButtons = document.getElementsByClassName("elephant-more-down-button");
+const elephantUpButtons = document.getElementsByClassName("elephant-more-up-button");
+
+for (let i = 0; i < elephantDownButtons.length; i++) {
+  elephantDownButtons[i].addEventListener("click", function() {
+    const content = this.nextElementSibling;
+    if (this.classList.contains("active-js")) {
+      this.classList.remove("active-js")
+    } else {
+      this.classList.add("active-js");
+    }
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
+    } else {
+      // content.style.display = "block";
+      content.classList.add("active-js");
+    }
+  });
+}
+
+for (let i = 0; i < elephantUpButtons.length; i++) {
+  elephantUpButtons[i].addEventListener("click", function() {
+    const content = this.previousElementSibling;
+    if (this.classList.contains("active-js")) {
+      this.classList.remove("active-js")
+    } else {
+      this.classList.add("active-js");
+    }
+    if (content.classList.contains("active-js")) {
+      content.classList.remove("active-js");
+    } else {
+      // content.style.display = "block";
+      content.classList.add("active-js");
+    }
+  });
+}

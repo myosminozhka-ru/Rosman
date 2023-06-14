@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
     typography: require("@tailwindcss/typography"),
     forms: require("@tailwindcss/forms"),
-    containerQueries: require("@tailwindcss/container-queries"),
+    containerQueries: require("@tailwindcss/container-queries")
 };
 
 const plugins = Object.keys(allPlugins)
@@ -34,6 +34,8 @@ module.exports = {
             s: ["1.3rem", "1.8rem"],
             xl: ["1.3rem", "1.8rem"],
             '11.14': ["1.1rem", "1.4rem"],
+            // добавил класс для всплывашки у попапа
+            '12.20.4': ["1.2rem", "2.04rem"],
             "15.20": ["1.5rem", "2rem"],
             "2xl": ["2.1rem", "2.4rem"],
             "2.5xl": ["1.7rem", "2.4rem"],
@@ -96,6 +98,7 @@ module.exports = {
                 40: "4rem",
                 44: "4.4rem",
                 45: "4.5rem",
+                46: "4.6rem",
                 48: "4.8rem",
                 50: "5rem",
                 52: "5.2rem",
@@ -104,6 +107,7 @@ module.exports = {
                 60: "6rem",
                 64: "6.4rem",
                 68: "6.8rem",
+                70: "7rem",
                 90: "9rem",
                 95: "9.5rem",
                 96: "9.6rem",
@@ -111,15 +115,19 @@ module.exports = {
                 70: "10rem",
                 74: "14rem",
                 100: "25.9rem",
+                180: "39rem",
+                190: "45rem",
+                200: "45.9rem",
             },
 
+
+            borderRadius: {},
             zIndex: {
                 '100': '100',
                 '900': '900',
                 '1000': '1000',
-                9999: "9999",
+                '9999': "9999",
             },
-            borderRadius: {},
 
         },
     },
