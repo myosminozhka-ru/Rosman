@@ -21,25 +21,29 @@ let jsMdb = document.querySelector(".js-mdb")
 let cardTextToHide = document.querySelector(".card-fp-hide")
 let cartToTrans = document.querySelector(".card-fp-trans")
 
-jsMdb.onclick = function (event) {
-    cardTextToHide.classList.toggle("js-card-fp-hidden-item")
-    cartToTrans.classList.toggle("card-fp-transparent-text")
+if (jsMdb) {
+    jsMdb.onclick = function (event) {
+        cardTextToHide.classList.toggle("js-card-fp-hidden-item")
+        cartToTrans.classList.toggle("card-fp-transparent-text")
+    }
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
 const navButtons = document.querySelector(".navigation");
 
-navButtons.addEventListener("click", (event) => {
-    const currentChosen = navButtons.querySelector(".active-js");
-    const target = event.target.closest(".card-fullpage-tab");
+if (navButtons) {
+    navButtons.addEventListener("click", (event) => {
+        const currentChosen = navButtons.querySelector(".active-js");
+        const target = event.target.closest(".card-fullpage-tab");
 
-    if (!target || target === currentChosen) return;
+        if (!target || target === currentChosen) return;
 
-    if (currentChosen) {
-        currentChosen.classList.remove("active-js");
-    }
-    target.classList.add("active-js");
-});
+        if (currentChosen) {
+            currentChosen.classList.remove("active-js");
+        }
+        target.classList.add("active-js");
+    });
+}
 
 // для описания будет такая кнопка - js-mdb-desc
 // а для текста описания будет card-fp-desc-hidden-block
@@ -48,16 +52,18 @@ let jsMdbDesc = document.querySelector(".js-mdb-desc");
 let jsDescriptionWrapper = document.querySelector(".js-card-fullpage-desc-description");
 let jsItemsToHideDesc = document.querySelectorAll(".js-item-to-hide-desc");
 console.log(jsItemsToHideDesc);
-jsMdbDesc.onclick = function (event) {
-    jsItemsToHideDesc.forEach( item => {
-        item.classList.toggle("js-card-fp-hidden-item")
+if (jsMdbDesc) {
+    jsMdbDesc.onclick = function (event) {
+        jsItemsToHideDesc.forEach( item => {
+            item.classList.toggle("js-card-fp-hidden-item")
 
-    });
-    jsMdbDesc.innerHTML = jsMdbDesc.innerText ===
-    "Свернуть описание<span></span>" ? "Развернуть описание<span></span>" :
-        "Свернуть описание<span></span>";
+        });
+        jsMdbDesc.innerHTML = jsMdbDesc.innerText ===
+        "Свернуть описание<span></span>" ? "Развернуть описание<span></span>" :
+            "Свернуть описание<span></span>";
 
-    jsDescriptionWrapper.classList.toggle("gapped");
+        jsDescriptionWrapper.classList.toggle("gapped");
+    }
 }
 
 // убрать текст у видео при полной ширине экрана
