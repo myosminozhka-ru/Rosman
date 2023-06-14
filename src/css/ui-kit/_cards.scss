@@ -190,9 +190,12 @@
 .card_brands {
 }
 .card_brand_content {
-  @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24 ssm:gap-16;
+  @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
   max-width: 40rem;
   border: 1px solid #d9d9d9;
+  @media screen and (max-width: 400px){
+    @apply gap-12;
+  }
 }
 
 .card_brand_content:hover .card_brand_all_items {
