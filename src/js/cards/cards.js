@@ -44,3 +44,27 @@ for (let i = 0; i < traceableItems.length; i++) {
     this.style.backgroundColor = "white";
   });
 }
+
+
+// bordered_tags_item-smalled добавляем к bordered_tags_item,
+// если ширина карточки 160рх,
+
+
+
+window.addEventListener("resize", function () {
+  const parentElements = document.querySelectorAll('.js_item_card');
+  parentElements.forEach((parentElement) => {
+    const parentWidth = parentElement.offsetWidth;
+    const borderedItems = parentElement.querySelectorAll('.bordered_tags_item');
+    if (borderedItems) {
+      borderedItems.forEach((item) => {
+        console.log(item);
+        if (parentWidth <= 160) {
+          item.classList.add('bordered_tags_item-smalled');
+        } else {
+          item.classList.remove('bordered_tags_item-smalled');
+        }
+      });
+    }
+  });
+});

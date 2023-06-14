@@ -32,6 +32,9 @@
 
 .nav-btns{
   @apply flex flex-row flex-nowrap gap-14;
+  @media screen and (max-width: 500px){
+    @apply gap-8;
+  }
 }
 
 .js-rm-pag-nav-page-btn {
