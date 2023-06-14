@@ -131,15 +131,16 @@ document.addEventListener("mousemove", function(event) {
   yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
 
 })
-var isMoving = false;
+
+let isMoving = false;
 
 document.addEventListener("mousemove", function(event) {
 
-  var follower = document.getElementById("follower");
-  var parent = document.getElementById("parent");
-  var parentRect = parent.getBoundingClientRect();
-  var x = event.clientX - parentRect.left;
-  var newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+  let follower = document.getElementById("follower");
+  let parent = document.getElementById("parent");
+  let parentRect = parent.getBoundingClientRect();
+  let x = event.clientX - parentRect.left;
+  let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
   newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
 
@@ -155,8 +156,8 @@ document.addEventListener("mousemove", function(event) {
   if (isMoving) {}
 });
 function scrollContent(direction) {
-  var container = document.getElementById('elephant-container');
-  var content = document.getElementById('elephant-slider');
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
 
   if (direction === 'left') {
     container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
