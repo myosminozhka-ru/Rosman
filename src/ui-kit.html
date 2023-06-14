@@ -30,21 +30,58 @@
   <h3 class="accordion head-3">Popups</h3>
   <div class="panel block">
     @@include('components/ui-kit/popups/popups.html', { }, )
+    @@include('components/ui-kit/popups/popup-all-filters.html', { }, )
+    @@include('components/ui-kit/popups/popup-blockchain-eng.html', { }, )
+    @@include('components/ui-kit/popups/popup-blockchain-ru.html', { }, )
+    @@include('components/ui-kit/popups/popup-brand-description.html', { }, )
+    @@include('components/ui-kit/popups/popup-brand-landing.html', { }, )
+    @@include('components/ui-kit/popups/popup-brand-listing.html', { }, )
+    @@include('components/ui-kit/popups/popup-collaboration.html', { }, )
+    @@include('components/ui-kit/popups/popup-contact-us-eng.html', { }, )
+    @@include('components/ui-kit/popups/popup-contact-us-ru.html', { }, )
+    @@include('components/ui-kit/popups/popup-survey.html', { }, )
   </div>
 
+  <h3 class="accordion head-3">Footer ru</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+  </div>
+
+  <h3 class="accordion head-3">Footer eng</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/footer/footer-eng.html', { }, )
+  </div>
   <h3 class="accordion head-3">Cards</h3>
   <div class="panel block">
+    @@include('components/ui-kit/cards/card-article-medium-text.html', { }, )
+    @@include('components/ui-kit/cards/card-article-small-text.html', { }, )
+    @@include('components/ui-kit/cards/card-awards.html', { }, )
+    @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+    @@include('components/ui-kit/cards/card-books.html', { }, )
+    @@include('components/ui-kit/cards/card-brand.html', { }, )
+    @@include('components/ui-kit/cards/card-brand-socs.html', { }, )
+    @@include('components/ui-kit/cards/card-career.html', { }, )
+    @@include('components/ui-kit/cards/card-employee.html', { }, )
+    @@include('components/ui-kit/cards/card-interview.html', { }, )
+    @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+    @@include('components/ui-kit/cards/card-selection.html', { }, )
+    @@include('components/ui-kit/cards/card-toys.html', { }, )
+    @@include('components/ui-kit/cards/card-video.html', { }, )
     @@include('components/ui-kit/cards/cards.html', { }, )
   </div>
 
-  <h3 class="accordion head-3">Footer ru/eng</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/footer/footer.html', { }, )
-  </div>
-
-  <h3 class="accordion head-3">header</h3>
+  <h3 class="accordion head-3">Header</h3>
   <div class="panel block p-0">
-    @@include('components/ui-kit/components/header.html', { }, )
+    @@include('components/header/header.html', { }, )
+  </div>
+  <h3 class="accordion head-3">Header-2</h3>
+  <div class="panel block p-0">
+    @@include('components/header/header-books.html', { }, )
+  </div>
+  <h3 class="accordion head-3">Header-3</h3>
+  <div class="panel block p-0">
+    @@include('components/header/header-main.html', { }, )
+    @@include('components/ui-kit/movable-block/movable-block.html', { }, )
   </div>
   <h3 class="accordion head-3">Components</h3>
   <div class="panel block">
@@ -55,10 +92,18 @@
     @@include('components/ui-kit/Components/swiper.html', { }, )
   </div>
 
+
+  <!-- eleph-on-planets  -->
   <h3 class="accordion head-3">Elephant</h3>
   <div class="panel block">
     @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
   </div>
+
+  <h3 class="accordion head-3">Elephant on the planet</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', { }, )
+  </div>
+
 
   <h3 class="accordion head-3">Components</h3>
   <div class="panel block">
@@ -68,6 +113,15 @@
   <h3 class="accordion head-3">Pagination</h3>
   <div class="panel block">
     @@include('components/ui-kit/pagination/pagination.html', { }, )
+  </div>
+  <h3 class="accordion head-3">404</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/404-elephant.html', { }, )
+  </div>
+
+  <h3 class="accordion head-3">Running elephant on moon</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/Components/elephant-animation.html', { }, )
   </div>
 
   <style>
@@ -103,7 +157,7 @@
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/scripts.js"></script>
+  <script src="./js/scripts.js"></script>
 </body>
 
 </html>

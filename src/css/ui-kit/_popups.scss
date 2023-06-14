@@ -429,7 +429,7 @@
 }
 
 .js_popup_survey_submit_button {
-  @apply w-full bg-black text-15.20 text-white;
+  @apply w-full bg-black text-15.20 text-white cursor-pointer;
 
   &:hover {
     @apply bg-yellow text-black;
@@ -660,7 +660,7 @@
 
 // вторая страница
 .pup_format_header {
-  @apply text-15.20;
+  @apply text-15.20 mb-16;
   font-weight: 600;
 }
 
@@ -850,6 +850,9 @@
 .no-padds {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  @media screen and (max-width: 500px) {
+    @apply w-full;
+  }
 }
 
 .no-after::after {
@@ -870,7 +873,7 @@
 }
 
 .popup_brand_choose_search_selectors {
-  @apply flex flex-row justify-between;
+  @apply flex flex-row justify-between gap-32;
 
   @media screen and (max-width: 500px) {
     @apply flex-col gap-16;
@@ -890,7 +893,16 @@
     max-width: 45rem;
   }
 }
-
+.pup-br-no-pad{
+  @apply pl-20;
+  @media (min-width: 501px) {
+    @apply p-0;
+  }
+}
+.with-padds{
+  @apply font-medium text-xl;
+  padding-left: 4rem !important;
+}
 //.popup_brand_choose_search_line input::placeholder {
 //  @apply pl-32;
 //}
@@ -1216,11 +1228,12 @@ img {
   @media screen and (max-width: 700px) {
     @apply w-full;
   }
+  .more-down-button {
+    @apply w-full justify-between;
+  }
 }
 
-.more-down-button {
-  @apply w-full justify-between;
-}
+
 
 .more-down-content {
   @apply pl-12;

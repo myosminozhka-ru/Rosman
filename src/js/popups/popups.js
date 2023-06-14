@@ -1,4 +1,4 @@
-console.log("privet");
+
 const popup = function Popup(el, triggerButton) {
   this.el = el;
   this.triggerButton = triggerButton;
@@ -79,6 +79,14 @@ const jsPopupBrandChooseButton = document.querySelector(
 const jsPopupBrandChooseModal = document.querySelector(
   ".js_popup_brand_choose_modal"
 );
+
+const jsPopupBrandChooseListButton = document.querySelector(
+    ".js_popup_brand_choose_list_button"
+);
+const jsPopupBrandChooseListModal = document.querySelector(
+    ".js_popup_brand_choose_list_modal"
+);
+
 const jsPopupAllFiltersButton = document.querySelector(
   ".js_popup_all_filters_button"
 );
@@ -95,6 +103,7 @@ const popups = [
   [jsPopupSurveyModal, jsPopupSurveyButton],
   [jsPopupCollaborationModal, jsPopupCollaborationButton],
   [jsPopupBrandChooseModal, jsPopupBrandChooseButton],
+  [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
   [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
 ];
 
@@ -111,8 +120,6 @@ const dropdownTogglers = document.getElementsByClassName("dropdown_checkbox");
 for (let i = 0; i < dropdownTogglers.length; i++) {
   dropdownTogglers[i].addEventListener("click", function () {
     const content = this.parentNode.parentNode.nextElementSibling;
-    console.log(this);
-    console.log(content);
     if (this.classList.contains("active-js")) {
       this.classList.remove("active-js");
     } else {

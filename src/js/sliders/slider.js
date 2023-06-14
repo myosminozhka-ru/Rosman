@@ -41,3 +41,12 @@ const swiperText = new Swiper('.swiper-text', {
     slidesPerView: 1,
     spaceBetween: 30,
 });
+// const swiperElephant = new Swiper('.elephant-swiper', {
+//     // Optional parameters
+//     loop: true,
+//     // Navigation arrows
+//     navigation: {
+//         nextEl: '.button-next',
+//         prevEl: '.button-prev',
+//     },
+// });
