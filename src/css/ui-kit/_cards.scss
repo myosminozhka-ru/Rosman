@@ -286,28 +286,20 @@
   @apply flex flex-col flex-nowrap items-center justify-center gap-8;
 }
 .card_brand_all_items {
-  @apply block rounded-2xl bg-yellow px-8 py-4;
+  @apply block rounded-2xl text-xl bg-yellow px-8 py-4;
 }
 .card_brand_name {
-  @apply text-xl font-normal text-black;
+  @apply text-2.5xl font-normal text-black;
 }
 .card_brand_image {
-  @apply bg-white;
-  width: 15rem;
-  @apply block;
-  height: 9rem;
-  //background: url("../../img/brand_image.svg") no-repeat center;
-  //background-size: cover;
-  @media screen and (max-width: 400px) {
-    width: 11rem;
-    height: 8.6rem;
-    background-size: contain;
-  }
-}
-.card_brand_image{
-  @apply block;
-  max-width: 20rem;
-  max-height: 12rem;
+  @apply block bg-white;
+  max-width: 15rem;
+  max-height: 9rem;
+  //@media screen and (max-width: 400px) {
+  //  width: 11rem;
+  //  height: 8.6rem;
+  //  background-size: contain;
+  //}
 }
 
 .card_brand_img {

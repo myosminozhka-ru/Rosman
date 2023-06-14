@@ -165,7 +165,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative h-screen w-full items-center overflow-hidden; // убрал отступ
+  @apply relative w-full items-center overflow-hidden; // убрал отступ и  h-screen
 }
 
 #moving-block {

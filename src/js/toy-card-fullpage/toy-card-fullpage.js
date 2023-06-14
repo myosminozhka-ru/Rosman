@@ -20,3 +20,25 @@ thumbs.forEach(function(thumb) {
 let jsMdb = document.querySelector(".js-mdb")
 let cardTextToHide = document.querySelector(".card-fp-hide")
 let cartToTrans = document.querySelector(".card-fp-trans")
+
+jsMdb.onclick = function (event) {
+    cardTextToHide.classList.toggle("card-fp-hidden-text")
+    cartToTrans.classList.toggle("card-fp-transparent-text")
+}
+
+// для таба надо добавлять класс active-js, чтобы он подчеркивался
+const navButtons = document.querySelector(".navigation");
+
+navButtons.addEventListener("click", (event) => {
+    const currentChosen = navButtons.querySelector(".active-js");
+    const target = event.target.closest(".card-fullpage-tab");
+
+    if (!target || target === currentChosen) return;
+
+    if (currentChosen) {
+        currentChosen.classList.remove("active-js");
+    }
+    target.classList.add("active-js");
+});
+
+//
