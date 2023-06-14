@@ -250,6 +250,10 @@
 .card_career:hover {
   @apply bg-yellow;
 }
+
+.card_career:hover .car_cond_item {
+  @apply bg-yellow;
+}
 // 1
 .card_career_heading {
   @apply flex flex-row flex-wrap items-center  gap-12;
