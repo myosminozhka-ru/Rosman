@@ -21,34 +21,36 @@ for (let i = 0; i < moreButtons.length; i++) {
   });
 }
 const navbar = document.querySelector('.navigation')
-const contentNavBar = document.getElementsByClassName("navigation-content");
-const contentNavBarUl = document.querySelector(".nav-list");
-const activeP =  document.querySelector("p.active-js");
-const p =  contentNavBarUl.getElementsByTagName('p')
-
-navbar.addEventListener("click", function(event) {
-  if (activeP != null) {
-    if (!activeP.contains(event.target)) {
-      for (let i = 0; i < p.length; i++) {
-        if ( p[i].classList.contains("active-js")) {
-          p[i].classList.remove("active-js")
+if (navbar) {
+  navbar.addEventListener("click", function(event) {
+    const contentNavBar = document.getElementsByClassName("navigation-content");
+    const contentNavBarUl = document.querySelector(".nav-list");
+    const activeP =  document.querySelector("p.active-js");
+    const p =  contentNavBarUl.getElementsByTagName('p')
+    if (activeP != null) {
+      if (!activeP.contains(event.target)) {
+        for (let i = 0; i < p.length; i++) {
+          if ( p[i].classList.contains("active-js")) {
+            p[i].classList.remove("active-js")
+          }
         }
       }
-    }
-
-  }
-  for (let i = 0; i < contentNavBar.length; i++) {
-    if (contentNavBar[i].id === event.target.classList.value) {
-      contentNavBar[i].classList.add('active-js')
-      contentNavBar[i].classList.remove('hide')
-    } else {
-      contentNavBar[i].classList.remove('active-js')
-      contentNavBar[i].classList.add('hide')
 
     }
-  }
-  event.target.classList.add('active-js')
-});
+    for (let i = 0; i < contentNavBar.length; i++) {
+      if (contentNavBar[i].id === event.target.classList.value) {
+        contentNavBar[i].classList.add('active-js')
+        contentNavBar[i].classList.remove('hide')
+      } else {
+        contentNavBar[i].classList.remove('active-js')
+        contentNavBar[i].classList.add('hide')
+
+      }
+    }
+    event.target.classList.add('active-js')
+  });
+
+}
 
 function closeBar() {
   for (let i = 0; i < p.length; i++) {
@@ -105,30 +107,32 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 const movingBlock = document.getElementById("moving-block");
+if (movingBlock ) {
+  document.addEventListener("mousemove", function(event) {
+    const windowWidth = window.innerWidth;
+    const blockWidth = movingBlock.offsetWidth;
 
-document.addEventListener("mousemove", function(event) {
-  const windowWidth = window.innerWidth;
-  const blockWidth = movingBlock.offsetWidth;
+    // Вычисляем позицию блока на основе позиции мыши и ширины окна
+    let blockX = event.clientX - blockWidth / 2;
 
-  // Вычисляем позицию блока на основе позиции мыши и ширины окна
-  let blockX = event.clientX - blockWidth / 2;
+    // Вычисляем наклон блока в зависимости от позиции мыши
+    let tilt = ((blockX / windowWidth)) * 6;
 
-  // Вычисляем наклон блока в зависимости от позиции мыши
-  let tilt = ((blockX / windowWidth)) * 6;
+    // Применяем наклон к блоку с помощью свойства transform
+    movingBlock.style.transform = `rotate(${tilt}deg)`;
 
-  // Применяем наклон к блоку с помощью свойства transform
-   movingBlock.style.transform = `rotate(${tilt}deg)`;
+    // добавляем тень блоку в зависимости от расположения мышки
+    let mouseX = event.clientX;
+    let mouseY = event.clientY;
+    let boxRect = movingBlock.getBoundingClientRect();
+    let boxCenterX = boxRect.left + boxRect.width / 2;
+    let boxCenterY = boxRect.top + boxRect.height / 10;
+    let offsetX = -(mouseX - boxCenterX) * 0.1;
+    let offsetY = -(mouseY - boxCenterY) * 0.1;
+    movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 10px 5px rgba(0, 0, 0, 0.2)';
+  })
+}
 
-   // добавляем тень блоку в зависимости от расположения мышки
-  let mouseX = event.clientX;
-  let mouseY = event.clientY;
-  let boxRect = movingBlock.getBoundingClientRect();
-  let boxCenterX = boxRect.left + boxRect.width / 2;
-  let boxCenterY = boxRect.top + boxRect.height / 10;
-  let offsetX = -(mouseX - boxCenterX) * 0.1;
-  let offsetY = -(mouseY - boxCenterY) * 0.1;
-  movingBlock.style.boxShadow = offsetX + 'px ' + offsetY + 'px 10px 5px rgba(0, 0, 0, 0.2)';
-})
 
 function toggleSearch() {
   let headerNav = document.querySelector('.header-nav')
@@ -157,44 +161,47 @@ function changeLang(lang) {
   }
 }
 const yellowMovingBlock = document.getElementById("yellow-moving-block");
+if (yellowMovingBlock) {
+  document.addEventListener("mousemove", function(event) {
+    const windowWidth = window.innerWidth;
+    const blockWidth = yellowMovingBlock.offsetWidth;
 
-document.addEventListener("mousemove", function(event) {
-  const windowWidth = window.innerWidth;
-  const blockWidth = yellowMovingBlock.offsetWidth;
+    // Вычисляем позицию блока на основе позиции мыши и ширины окна
+    let blockX = event.clientX - blockWidth / 2;
 
-  // Вычисляем позицию блока на основе позиции мыши и ширины окна
-  let blockX = event.clientX - blockWidth / 2;
+    // Вычисляем наклон блока в зависимости от позиции мыши
+    let tilt = -((blockX / windowWidth)) * 6;
 
-  // Вычисляем наклон блока в зависимости от позиции мыши
-  let tilt = -((blockX / windowWidth)) * 6;
+    // Применяем наклон к блоку с помощью свойства transform
+    yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
 
-  // Применяем наклон к блоку с помощью свойства transform
-  yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
+  })
+}
 
-})
 
 let isMoving = false;
 
 document.addEventListener("mousemove", function(event) {
-
-  let follower = document.getElementById("follower");
   let parent = document.getElementById("parent");
-  let parentRect = parent.getBoundingClientRect();
-  let x = event.clientX - parentRect.left;
-  let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
-  newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
+  if (parent) {
+    let follower = document.getElementById("follower");
+    let parentRect = parent.getBoundingClientRect();
+    let x = event.clientX - parentRect.left;
+    let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+    newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
 
-  if (!isMoving) {
-    isMoving = true;
-    follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
+    if (!isMoving) {
+      isMoving = true;
+      follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
 
 
-    setTimeout(function() {
-      isMoving = false;
-    }, 500); // Задержка в 200 миллисекунд
+      setTimeout(function() {
+        isMoving = false;
+      }, 500); // Задержка в 200 миллисекунд
+    }
   }
-  if (isMoving) {}
+
 });
 function scrollContent(direction) {
   let container = document.getElementById('elephant-container');

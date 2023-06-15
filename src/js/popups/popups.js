@@ -136,35 +136,38 @@ for (let i = 0; i < dropdownTogglers.length; i++) {
 
 // функция для маски телефона
 let inp = document.querySelector('#phone');
-
-inp.onclick = function() {
-  inp.value = "+";
-}
-
-var old = 0;
-
-inp.onkeydown = function() {
-  var curLen = inp.value.length;
-
-  if (curLen < old){
-    old--;
-    return;
+if (inp) {
+  inp.onclick = function() {
+    inp.value = "+";
   }
 
-  if (curLen == 2)
-    inp.value = inp.value + "-";
 
-  if (curLen == 6)
-    inp.value = inp.value + "-";
+  var old = 0;
 
-  if (curLen == 10)
-    inp.value = inp.value + "-";
+  inp.onkeydown = function() {
+    var curLen = inp.value.length;
 
-  if (curLen == 13)
-    inp.value = inp.value + "-";
+    if (curLen < old){
+      old--;
+      return;
+    }
 
-  if (curLen > 15)
-    inp.value = inp.value.substring(0, inp.value.length - 1);
+    if (curLen == 2)
+      inp.value = inp.value + "-";
 
-  old++;
+    if (curLen == 6)
+      inp.value = inp.value + "-";
+
+    if (curLen == 10)
+      inp.value = inp.value + "-";
+
+    if (curLen == 13)
+      inp.value = inp.value + "-";
+
+    if (curLen > 15)
+      inp.value = inp.value.substring(0, inp.value.length - 1);
+
+    old++;
+  }
 }
+

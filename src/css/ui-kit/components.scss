@@ -206,8 +206,17 @@ header {
 
 #yellow-background {
   @apply relative h-screen w-full items-center overflow-hidden bg-yellow pt-60;
-}
 
+}
+#yellow-background:after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 50%;
+  bottom: 0;
+  background-color: #ffffff;
+  width: 100%;
+}
 #moving-block {
   @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
 }
@@ -250,6 +259,57 @@ header {
 
   }
 }
+.partners-stroke {
+  &.mobile {
+    @apply hidden;
+    @media screen and (max-width: 780px) {
+      @apply block;
+    }
+  }
+  .running-stroke {
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    white-space: nowrap;
+    .marquee {
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      .swiper-slide {
+        width: auto!important;
+      }
+      span {
+        @apply text-6xl uppercase;
+        color: #000000;
+      }
+      img {
+        display: inline;
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+  }
+
+
+  @keyframes marquee-partner {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee-partner-reverse {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+}
+
 
 .eleph-run-moon {
   display: flex;
@@ -565,10 +625,7 @@ header {
       left: -28rem;
       background: url("../../img/elephant-slider/elephant-body.png") no-repeat center;
       background-size: contain;
-      @media screen and (max-width: 500px) {
-        width: 6rem;
-        height: 6rem;
-      }
+
     }
     .trunk-one {
       @apply relative inline-block;
@@ -578,10 +635,7 @@ header {
       left: -41.3rem;
       background: url("../../img/elephant-slider/trunk-1.png") no-repeat center;
       background-size: contain;
-      @media screen and (max-width: 500px) {
-        width: 6rem;
-        height: 6rem;
-      }
+
     }
   }
 }
