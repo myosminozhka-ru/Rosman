@@ -1,8 +1,8 @@
 let largeImg = document.querySelector('.largeImg');
 let thumbs = document.querySelectorAll('.thumbs img');
 
-thumbs.forEach(function(thumb) {
-    thumb.addEventListener('click', function(event) {
+thumbs.forEach(function (thumb) {
+    thumb.addEventListener('click', function (event) {
         const currentChosen = document.querySelector(".thumbs .js-thumb-chosen");
         event.preventDefault();
         largeImg.src = thumb.getAttribute('src');
@@ -91,7 +91,7 @@ if (jsMdbDescButton) {
 
         if (isExpanded) {
             // Если элементы сворачиваются, выполняем прокрутку вниз до кнопки
-            jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
         }
     };
 }

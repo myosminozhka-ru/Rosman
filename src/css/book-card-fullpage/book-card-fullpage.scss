@@ -1,0 +1,49 @@
+.card-fp-desc-brand-small {
+  @apply w-auto;
+  max-width: max-content;
+}
+
+.card-fp-desc-brand-content-small {
+  @apply items-center gap-32 py-18 flex-row-reverse;
+}
+
+.card-fp-desc-brand-info-small {
+  @apply gap-8;
+}
+
+.card-fp-desc-brand-items-small {
+}
+
+.card-fp-desc-brand-name-small {
+}
+
+.card-fp-desc-brand-image-small {
+  @apply w-32 h-32 block;
+}
+
+// описание - большая картинка card-fullpage-desc-image
+.card-descr-text-flex-item {
+  @apply text-15.20;
+}
+
+.card-descr-text-flex {
+  @apply flex flex-col gap-24;
+}
+
+.book-card-fp-author {
+  @apply flex flex-row gap-32;
+}
+
+.author-avatar {
+  max-width: 8.8rem;
+  max-height: 8.8rem;
+}
+
+.book-card-fp-author-text {
+  @apply flex flex-col gap-20;
+  max-width: 70rem;
+}
+
+.book-card-fp-author-text-item {
+  @apply text-15.20;
+}
