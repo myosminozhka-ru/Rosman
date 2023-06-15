@@ -286,6 +286,9 @@
 }
 .card-header-text{
   @apply text-4xl font-medium;
+  @media screen and (max-width: 800px) {
+    @apply  text-2xl;
+  }
 }
 .card-descr-text{
   @apply text-15.20 font-normal;
@@ -307,30 +310,57 @@
 .card-fullpage-desc-text{}
 .card-fullpage-desc-block{
   @apply flex flex-row gap-20;
+  @media screen and (max-width: 800px) {
+    @apply flex-col;
+  }
 }
-
+.card-fullpage-desc-block-reversed{
+  @apply flex flex-row gap-20;
+  @media screen and (max-width: 800px) {
+    @apply flex-col-reverse;
+  }
+}
 .card-fullpage-desc-block-img{
   @apply w-1/2;
   aspect-ratio: 4/3;
+  @media screen and (max-width: 800px) {
+    @apply w-auto;
+  }
 }
 .card-fullpage-desc-block-img img{
   @apply w-full h-full object-cover;
 }
 .card-fullpage-desc-block-text{
   @apply w-1/2;
+  @media screen and (max-width: 800px) {
+    @apply w-auto;
+  }
 }
-.more-card-header{}
-.more-card-text{}
+.more-card-header{
+
+}
+.more-card-text{
+
+}
 
 .card-fullpage-desc-more{
   @apply flex flex-row gap-16;
+  @media screen and (max-width: 800px) {
+    @apply flex-col items-center;
+  }
 }
 .card-fullpage-desc-more-card{
   @apply flex flex-col gap-20 w-1/3;
+  @media screen and (max-width: 800px) {
+    @apply w-auto;
+  }
 }
 .card-fullpage-desc-more-card-image{
   aspect-ratio: 4/3;
   max-width: 40rem;
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  }
 }
 .card-fullpage-desc-more-card-image img{
   @apply w-full h-full object-cover;

@@ -72,20 +72,30 @@ let jsMdbDescButton = document.querySelector(".js-mdb-desc-button");
 let jsDescriptionWrapper = document.querySelector(".js-card-fullpage-desc-description");
 let jsItemsToHideDesc = document.querySelectorAll(".js-item-to-hide-desc");
 console.log(jsItemsToHideDesc);
+
 if (jsMdbDescButton) {
     jsMdbDescButton.onclick = function (event) {
-        jsItemsToHideDesc.forEach( item => {
-            item.classList.toggle("js-card-fp-hidden-item")
-
+        jsItemsToHideDesc.forEach((item) => {
+            item.classList.toggle("js-card-fp-hidden-item");
         });
-        jsMdbDescButton.innerHTML = jsMdbDescButton.innerText ===
-        "Свернуть описание<span></span>" ? "Развернуть описание<span></span>" :
-            "Свернуть описание<span></span>";
 
-        jsDescriptionWrapper.classList.toggle("gapped");
-        jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    }
+        const isExpanded = jsMdbDescButton.innerText.includes("Свернуть описание");
+
+        if (isExpanded) {
+            jsDescriptionWrapper.classList.remove("gapped");
+            jsMdbDescButton.innerHTML = "Развернуть описание<span></span>";
+        } else {
+            jsDescriptionWrapper.classList.add("gapped");
+            jsMdbDescButton.innerHTML = "Свернуть описание<span></span>";
+        }
+
+        if (isExpanded) {
+            // Если элементы сворачиваются, выполняем прокрутку вниз до кнопки
+            jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+    };
 }
+
 
 // убрать текст у видео при полной ширине экрана
 const videoItems = document.querySelectorAll('.card_video_item');
