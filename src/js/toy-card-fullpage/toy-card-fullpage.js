@@ -32,7 +32,12 @@ if (jsMdb) {
 const navButtons = document.querySelector(".navigation");
 
 if (navButtons) {
+    const descriptionComponent = document.querySelector(".card-fp-description");
+    const characteristicsComponent = document.querySelector(".card-fp-characteristics");
+    const instructionComponent = document.querySelector(".card-fp-instruction");
+
     navButtons.addEventListener("click", (event) => {
+        event.preventDefault()
         const currentChosen = navButtons.querySelector(".active-js");
         const target = event.target.closest(".card-fullpage-tab");
 
@@ -42,27 +47,43 @@ if (navButtons) {
             currentChosen.classList.remove("active-js");
         }
         target.classList.add("active-js");
+
+        // Скрыть все компоненты
+        descriptionComponent.classList.add("hidden");
+        characteristicsComponent.classList.add("hidden");
+        instructionComponent.classList.add("hidden");
+
+        // Показать выбранный компонент
+        if (target.classList.contains("card-fp-tab-desc")) {
+            descriptionComponent.classList.remove("hidden");
+        } else if (target.classList.contains("card-fp-tab-char")) {
+            characteristicsComponent.classList.remove("hidden");
+        } else if (target.classList.contains("card-fp-tab-instr")) {
+            instructionComponent.classList.remove("hidden");
+        }
     });
 }
+
 
 // для описания будет такая кнопка - js-mdb-desc
 // а для текста описания будет card-fp-desc-hidden-block
 // <div class="card-fullpage-desc-block card-fp-desc-hidden-block"></div>
-let jsMdbDesc = document.querySelector(".js-mdb-desc");
+let jsMdbDescButton = document.querySelector(".js-mdb-desc-button");
 let jsDescriptionWrapper = document.querySelector(".js-card-fullpage-desc-description");
 let jsItemsToHideDesc = document.querySelectorAll(".js-item-to-hide-desc");
 console.log(jsItemsToHideDesc);
-if (jsMdbDesc) {
-    jsMdbDesc.onclick = function (event) {
+if (jsMdbDescButton) {
+    jsMdbDescButton.onclick = function (event) {
         jsItemsToHideDesc.forEach( item => {
             item.classList.toggle("js-card-fp-hidden-item")
 
         });
-        jsMdbDesc.innerHTML = jsMdbDesc.innerText ===
+        jsMdbDescButton.innerHTML = jsMdbDescButton.innerText ===
         "Свернуть описание<span></span>" ? "Развернуть описание<span></span>" :
             "Свернуть описание<span></span>";
 
         jsDescriptionWrapper.classList.toggle("gapped");
+        jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
 }
 
@@ -75,4 +96,24 @@ videoItems.forEach((item) => {
         const titleElement = item.querySelector('.card_video_title');
         titleElement.style.display = 'none';
     }
+});
+
+// еще один слайдер
+const imageContainer = document.querySelector('.card-fullpage-image-container');
+const dots = document.querySelectorAll('.card-fullpage-dot');
+
+let currentImageIndex = 0;
+
+function setActiveImage(index) {
+    imageContainer.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentImageIndex = index;
+        setActiveImage(currentImageIndex);
+    });
 });

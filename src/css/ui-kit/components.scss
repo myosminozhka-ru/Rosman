@@ -1,11 +1,14 @@
 .filters-block {
   @apply w-1/4;
+  @media screen and (max-width: 768px) {
+    @apply  w-3/4;
+  }
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left;
   }
- .back-filter {
-   @apply text-s font-semibold flex gap-8 my-14;
- }
+  .back-filter {
+    @apply text-s font-semibold flex gap-8 my-14;
+  }
   .scroll-block {
     @apply h-74 overflow-y-auto	;
   }
@@ -167,21 +170,27 @@ header {
           @apply mx-6 my-3 text-s uppercase;
 
           span {
-             width: 0.6rem;
-             height: 0.6rem;
-             border-top: 0.2rem solid #000000;
-             border-right: 0.2rem solid #000000;
-             margin-left: 0.9rem;
-             transform: rotate(135deg);
+            width: 1rem;
+            height: 1rem;
+            border-top: 0.2rem solid #000000;
+            border-right: 0.2rem solid #000000;
+            margin-left: 0.9rem;
+            margin-bottom: 0.7rem;
+            transform: rotate(135deg);
+            vertical-align: middle;
+            display: inline-block;
           }
 
           &.active-js {
             span {
-              width: 0.6rem;
-              height: 0.6rem;
+              width: 1rem;
+              height: 1rem;
               border-top: 0.2rem solid #000000;
               border-right: 0.2rem solid #000000;
               margin-left: 0.9rem;
+              margin-bottom: 0rem;
+              vertical-align: middle;
+              display: inline-block;
               transform: rotate(-45deg);
             }
           }
@@ -196,7 +205,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative bg-yellow pt-16 w-full items-center overflow-hidden; // убрал отступ и  h-screen
+  @apply relative h-screen w-full items-center overflow-hidden bg-yellow pt-60;
 }
 
 #moving-block {
@@ -204,7 +213,7 @@ header {
 }
 
 #above-block {
-  @apply relative z-1000 overflow-hidden; // убрал отступ
+  @apply relative z-1000 overflow-hidden px-60 py-35;
 }
 .swiper-text {
   .swiper-slide {
@@ -215,14 +224,14 @@ header {
 .swiper, .swiper-text, .swiper-image {
   width: 100% !important;
   height: auto!important;
-  //padding: 0 3rem!important;
+  padding: 0 3rem!important;
   .card_career {
-  margin-top: 3rem;
+    margin-top: 3rem;
   }
   .swiper-header {
-    @apply flex justify-between pb-40 w-full; // поправил на всю ширину
+    @apply flex justify-between my-40 w-5/6;
     .buttons {
-      @apply flex justify-between w-44 gap-16; // и гэп по макету
+      @apply flex justify-between w-36 gap-8;
       .button-prev {
         display: block;
         background: url("../../img/prev.png") no-repeat center;

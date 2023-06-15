@@ -1,15 +1,60 @@
+// личные настройки
+#above-block.card-fullpage-modified-above-block{
+  @apply p-24;
+
+}
+#yellow-background.card-fullpage-modified-yellow-background{
+  @apply h-auto;
+}
+.card-fullpage-modified-yellow-background:after{
+  position: absolute;
+  content: "";
+  display: block;
+  height: 50%;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+}
+
+
+// остальные стили
 //.card-fullpage{
 //  @apply bg-white;
 //}
 .card-fullpage-main-info{
   @apply flex flex-row justify-between gap-16 items-start mb-64;
+  @media screen and (max-width: 900px) {
+    @apply flex-col;
+  }
 }
 .card-fullpage-images{
   @apply flex flex-row-reverse gap-16 items-center;
+  @media screen and (max-width: 500px) {
+    @apply hidden;
+  }
 }
+
+// breadcrumb-home.svg
+.breadcrumbs{
+  @media  (max-width: 801px){
+    @apply hidden;
+  }
+}
+.breadcrumbs-small-screen{
+  @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+  @media  (min-width: 802px){
+    @apply hidden;
+  }
+}
+.breadcrumbs-small-screen-image{
+  @apply w-20 h-20 block;
+  background: url("../../img/card-fullpage/breadcrumb-home.svg") no-repeat center;
+  background-size: contain;
+}
+
 .breadcrumbs-icons{
   @apply flex flex-row gap-16;
-  @media  (min-width: 500px){
+  @media  (min-width: 801px){
     @apply hidden;
   }
 }
@@ -25,7 +70,7 @@
 }
 .card-fp-desc-header{
   @apply text-6xl font-medium;
-  @media (min-width: 501px) and (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     @apply text-3xl
   }
 }
@@ -39,7 +84,9 @@
 .card-fp-desc-text{
   @apply flex flex-col gap-24 text-s;
 }
-.card-fp-desc-text-top{}
+.card-fp-desc-text-top{
+  @apply text-15.20;
+}
 .card-fp-desc-text-top{}
 .card-fp-transparent-text {
   @apply relative
@@ -62,6 +109,9 @@
 }
 .card-fp-desc-bottom{
   @apply flex flex-col items-start gap-16;
+  @media screen and (max-width: 500px) {
+    @apply items-stretch;
+  }
 }
 .card-fp-desc-buy{
   @apply text-2.5xl font-medium;
@@ -70,6 +120,9 @@
 
 .card-fp-desc-buy-buttons{
   @apply flex flex-row gap-16;
+  @media screen and (max-width: 500px) {
+    @apply justify-between;
+  }
 }
 .card-fp-desc-buy-btn{
   @apply  cursor-pointer;
@@ -77,9 +130,21 @@
 }
 .c-fp-d-b-btn-1{
   @apply px-24 py-14;
+  width: 9.8rem;
+  height: 4rem;
+  background: url("../../img/card-fullpage/ozon.svg") no-repeat center;
+  @media screen and (max-width: 500px) {
+    @apply w-1/2;
+  }
 }
+
 .c-fp-d-b-btn-2{
-  @apply px-14 py-14;
+  width: 15.5rem;
+  height: 4rem;
+  background: url("../../img/card-fullpage/wildberries.svg") no-repeat center;
+  @media screen and (max-width: 500px) {
+    @apply w-1/2;
+  }
 }
 
 .js-item-to-hide-desc.js-card-fp-hidden-item{
@@ -89,11 +154,18 @@
 
 .card-fp-desc-buttons{
   @apply flex flex-col items-center gap-24;
-  @media  (max-width: 500px){
+  @media screen and (max-width: 800px){
     @apply hidden;
   }
 }
-
+.bordered_tags_item-fp{
+  @apply text-15.20;
+}
+.item_card-external-link{
+  @apply w-20 h-20 block;
+  background: url("../../img/follow_the_link.svg") no-repeat center;
+  background-size: contain;
+}
 
 .largeImg-wrapper{
   @apply relative;
@@ -115,7 +187,12 @@
 }
 .thumbs{
   @apply flex flex-col gap-16;
+  //@media screen and (max-width: 800px) {
+  //  @apply hidden;
+  //}
 }
+
+
 .js-thumb-chosen{
   border: 3px solid #4498FC;
 }
@@ -147,9 +224,21 @@
 // карточки брендов
 .card-fullpage-card-brands{
   @apply  flex flex-row gap-16 flex-nowrap mb-64;
+  @media screen and (max-width: 900px) {
+    @apply flex-col items-center;
+  }
 }
 .card-fullpage-card-brand{
   @apply w-1/3;
+  @media (min-width: 801px) and (max-width: 1000px) {
+    @apply w-1/2;
+  }
+  @media (min-width: 601px) and (max-width: 800px) {
+    @apply w-2/3;
+  }
+  @media screen and (max-width: 600px) {
+    @apply w-full;
+  }
 }
 
 // navigation
@@ -183,6 +272,9 @@
 }
 .js-card-fullpage-desc-description.gapped{
   @apply gap-64;
+}
+.more-down-button.js-mdb-desc-button{
+  @apply justify-start p-0;
 }
 
 .card-fullpage-desc-common{
@@ -254,4 +346,147 @@
 }
 .card_video_item.full-width > .card_video_title{
   @apply hidden;
+}
+
+// photogallery wrapper
+#white-background.card-fullpage-w-bg-modified{
+  height: 61.9rem;
+  margin-bottom: 6.4rem;
+}
+
+#yellow-moving-block.card-fullpage-w-bg-modified{
+  height: 61.9rem;
+}
+
+#white-background{
+  .slide-el.card-fullpage-slide-el-mod {
+    bottom: 4rem;
+  }
+}
+
+
+// стили для таба ХАРАКТЕРИСТИКИ
+.card-fp-char-item{
+  @apply flex flex-row flex-nowrap justify-between relative;
+}
+.card-fp-char-title{
+  @apply text-15.20 text-text font-normal;
+}
+.card-fp-char-text{
+  @apply text-15.20;
+}
+.card-fp-char-item:after{
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  position: absolute;
+  bottom: -1.6rem;
+  left: 0;
+  background-color: #D9D9D9;
+}
+.card-fullpage-characteristics{
+  @apply flex flex-row justify-between gap-16 px-24;
+  @media screen and (max-width: 800px){
+    @apply flex-col gap-32;
+  }
+}
+.card-fp-char-items{
+  @apply flex flex-col gap-24;
+  flex-basis: 50.4rem;
+  flex-grow: 0;
+  margin-right: 12rem;
+  @media (min-width: 1001px) and (max-width: 1150px) {
+    margin-right: 6rem;
+  }
+  @media (max-width: 1000px) {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 800px){
+    flex-basis: auto;
+  }
+}
+
+
+// стили для компонента ИНСТРУКЦИИ
+.card-fullpage-instruction{
+  @apply flex flex-row gap-16 p-24  bg-yellow w-1/2;
+  @media (min-width: 901px) and (max-width: 1100px) {
+    @apply w-3/5;
+  }
+  @media (min-width: 701px) and (max-width: 900px) {
+    @apply w-3/4;
+  }
+  @media screen and (max-width: 700px){
+    @apply flex-col w-full;
+  }
+}
+.card-fullpage-instruction-text{
+  @apply flex flex-row flex-nowrap items-start gap-16;
+}
+.card-fullpage-instruction-text-image{
+  @apply w-20 h-20 block;
+  background: url("../../img/download.svg") no-repeat center;
+  background-size: contain;
+  flex-basis: 2rem;
+  flex-shrink: 0;
+}
+.card-fullpage-instruction-text-what{
+  @apply text-2.5xl font-medium;
+  flex-basis: 30rem;
+  @media screen and (max-width: 700px){
+    @apply text-15.20;
+    flex-basis: auto;
+  }
+}
+.card-fullpage-instruction-button{
+  @apply w-full text-15.20 font-medium p-0;
+  max-width: 19rem;
+  height: 4rem;
+  @media screen and (max-width: 700px){
+    max-width: unset;
+  }
+}
+
+
+// еще один слайдер
+.card-fullpage-image-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  @media (min-width: 501px) {
+    @apply  hidden;
+  }
+}
+
+.card-fullpage-image-container {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transition: transform 0.3s ease;
+}
+
+.card-fullpage-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.card-fullpage-dots-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.card-fullpage-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Настройте цвет и прозрачность точек */
+  margin: 0 5px;
+}
+
+.card-fullpage-dot.active {
+  background-color: rgba(0, 0, 0, 1); /* Настройте стиль активной точки */
 }
