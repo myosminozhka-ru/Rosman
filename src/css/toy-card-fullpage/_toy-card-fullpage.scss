@@ -484,6 +484,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   overflow: hidden;
+  margin-bottom: 3rem;
   @media (min-width: 501px) {
     @apply  hidden;
   }
@@ -510,13 +511,14 @@
 }
 
 .card-fullpage-dot {
-  width: 1rem;
-  height: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5); /* Настройте цвет и прозрачность точек */
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 0 5px;
+  border: 1px solid black;
 }
 
 .card-fullpage-dot.active {
-  background-color: rgba(0, 0, 0, 1); /* Настройте стиль активной точки */
+  background-color: rgba(0, 0, 0, 1);
 }
