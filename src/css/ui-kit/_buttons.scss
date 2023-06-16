@@ -133,6 +133,9 @@ button {
 
 .more-down-content {
   @apply hidden p-2;
+  &.new {
+    @apply  absolute bg-white w-full border-2 border-card-stroke z-1000;
+  }
 
   &.active-js {
     @apply block;
@@ -175,7 +178,7 @@ button {
 .sort-label {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
   max-width: 30rem;
-  min-width: 15rem;
+  min-width: 5rem;
 
   .count {
     @apply hidden align-middle	;
@@ -298,6 +301,38 @@ button {
     &:hover {
       @apply text-black;
     }
+  }
+}
+// breadcrumb-home.svg
+.breadcrumbs {
+  @media (max-width: 801px) {
+    @apply hidden;
+  }
+}
+
+.breadcrumbs-small-screen {
+  @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+  @media (min-width: 802px) {
+    @apply hidden;
+  }
+}
+
+.breadcrumbs-small-screen-image {
+  @apply w-20 h-20 block;
+  background: url("../../img/breadcrumb-home.svg") no-repeat center;
+  background-size: contain;
+}
+
+.breadcrumbs-arrow {
+}
+
+.breadcrumbs-path-hidden {
+}
+
+.breadcrumbs-icons {
+  @apply flex flex-row gap-16;
+  @media (min-width: 801px) {
+    @apply hidden;
   }
 }
 
