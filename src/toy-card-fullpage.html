@@ -15,7 +15,7 @@
     <div id="moving-block"></div>
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
-      <div class="flex mb-24 justify-between">
+      <div class="flex mb-24 items-center px-24 justify-between">
         <p class="breadcrumbs">
           <a href="#">Главная </a><span>/</span>
           <a href="#">Игрушки </a><span>/</span>
@@ -27,7 +27,17 @@
         </p>
         <div class="breadcrumbs-small-screen">
           <div class="breadcrumbs-small-screen-image"></div>
-          <div class="breadcrumbs-small-screen-dots">...</div>
+          <div class="breadcrumbs-small-screen-dots ">
+            ...
+            <div class="breadcrumbs-arrow"></div>
+            <div class="breadcrumbs-path-hidden-text">
+              <a href="#">Игрушки</a>
+              <a href="#">Все игрушки</a>
+              <a href="#">Волчки и блейды</a>
+              <a href="#">Арена</a>
+              <a href="#">Ещё уровень вложенности</a>
+            </div>
+          </div>
           <div class="breadcrumbs-small-screen-path">Волчок Эпик Лончер Стандарт Gold Phoenix</div>
         </div>
         <div class="breadcrumbs-icons">
@@ -36,7 +46,7 @@
         </div>
       </div>
 
-      <div class="card-fullpage-main-info top-info ">
+      <div class="card-fullpage-main-info px-24 top-info ">
         <div class="card-fullpage-images">
           <div class="largeImg-wrapper">
             <img class="largeImg" src="../../img/card-fullpage/img1.svg" alt="Large image">
@@ -143,7 +153,7 @@
         </div>
       </div>
 
-      <div class="card-fullpage-card-brands small-cards ">
+      <div class="card-fullpage-card-brands px-24 small-cards ">
         <div class="card_brand card-fullpage-card-brand">
           <div class="card_brand_content">
             <div class="card_brand_info">
@@ -179,7 +189,7 @@
         </div>
       </div>
 
-      <div class="card-fullpage-tabs ">
+      <div class="card-fullpage-tabs px-24">
         <div class="navigation">
           <ul class="navigation-flex">
             <li><a class="card-fullpage-tab card-fp-tab-desc active-js" href="#">Описание</a></li>
@@ -190,17 +200,17 @@
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description ">
+      <div class="card-fp-description px-24">
         @@include('toy-card-fullpage-desc-comp.html', { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden">
+      <div class="card-fp-characteristics hidden px-24">
         @@include('toy-card-fullpage-characteristics-comp.html', { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden">
+      <div class="card-fp-instruction hidden px-24">
         @@include('toy-card-fullpage-instruction-comp.html', { }, )
       </div>
 
@@ -583,7 +593,7 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item full-width  mb-64">
+      <div class="card_video_item full-width px-24 mb-64">
         <div class="card_video_preview">
           <img src="../../img/cards_video_preview.svg" alt=""/>
           <button class="card_video_play_button circle-button"></button>

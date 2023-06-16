@@ -1,6 +1,6 @@
 // личные настройки
 #above-block.card-fullpage-modified-above-block {
-  @apply p-24;
+  @apply p-0;
 
 }
 
@@ -49,6 +49,9 @@
   @media (min-width: 802px) {
     @apply hidden;
   }
+  @media screen and (max-width: 480px) {
+    @apply w-3/4;
+  }
 }
 
 .breadcrumbs-small-screen-image {
@@ -57,10 +60,48 @@
   background-size: contain;
 }
 
+.breadcrumbs-small-screen-dots {
+  @apply relative;
+}
+
+.breadcrumbs-arrow {
+  @apply absolute h-12 w-32 hidden;
+  left: -1.1rem;
+  background: url("../../img/card-fullpage/bread-arrow.svg") no-repeat center;
+  background-size: contain;
+}
+
+.breadcrumbs-path-hidden-text {
+  @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
+  border: 1px solid black;
+  width: 20rem;
+  top: 2.9rem;
+  left: -1.2rem;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-arrow {
+  @apply block;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-path-hidden-text {
+  @apply block;
+}
+
+
 .breadcrumbs-icons {
   @apply flex flex-row gap-16;
   @media (min-width: 801px) {
     @apply hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .breadcrumbs-small-screen-path {
+    @apply overflow-hidden whitespace-nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(80%);
   }
 }
 
@@ -226,11 +267,8 @@
 }
 
 .thumbs a {
-  max-width: 8.8rem;
-  max-height: 8.8rem;
+  max-width: 8.1rem;
   aspect-ratio: 1/1;
-  flex-grow: 1;
-  flex-shrink: 1;
 }
 
 .thumbs a:hover {
@@ -458,18 +496,6 @@
 
 
 // стили для таба ХАРАКТЕРИСТИКИ
-.card-fp-char-item {
-  @apply flex flex-row flex-nowrap justify-between relative;
-}
-
-.card-fp-char-title {
-  @apply text-15.20 text-text font-normal;
-}
-
-.card-fp-char-text {
-  @apply text-15.20;
-}
-
 .card-fp-char-item:after {
   content: "";
   width: 100%;

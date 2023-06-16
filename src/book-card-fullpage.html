@@ -14,19 +14,37 @@
     <div id="moving-block"></div>
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
-      <div class="flex mb-24 justify-between">
-        <p class="breadcrumbs">
+      <div class="card-fullpage-filter-links mb-0 px-24">
+        <a href="#" class="card-fullpage-filter-link">0-3</a>
+        <a href="#" class="card-fullpage-filter-link">4-6</a>
+        <a href="#" class="card-fullpage-filter-link">7-9</a>
+        <a href="#" class="card-fullpage-filter-link">10-15</a>
+        <a href="#" class="card-fullpage-filter-link">15+</a>
+        <a href="#" class="card-fullpage-filter-link">Новинки</a>
+        <a href="#" class="card-fullpage-filter-link">Хиты</a>
+        <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
+      </div>
+      <div class="flex justify-between px-24 items-center">
+        <p class="breadcrumbs p-24">
           <a href="#">Главная </a><span>/</span>
           <a href="#">Книги </a><span>/</span>
           <a href="#">Все книги </a><span>/</span>
           <a href="#">Художественная литература </a><span>/</span>
           <a href="#">Русские народные сказки</a><span>/</span>
           <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
-
         </p>
-        <div class="breadcrumbs-small-screen">
+        <div class="breadcrumbs-small-screen my-24">
           <div class="breadcrumbs-small-screen-image"></div>
-          <div class="breadcrumbs-small-screen-dots">...</div>
+          <div class="breadcrumbs-small-screen-dots ">
+            ...
+            <div class="breadcrumbs-arrow"></div>
+            <div class="breadcrumbs-path-hidden-text">
+              <a class="text-s" href="#">Книги</a>
+              <a class="text-s" href="#">Все книги</a>
+              <a class="text-s" href="#">Художественная литература</a>
+              <a class="text-s" href="#">Русские народные сказки</a>
+            </div>
+          </div>
           <div class="breadcrumbs-small-screen-path">Безработный Дед Мороз. Волшебный круговорот</div>
         </div>
         <div class="breadcrumbs-icons">
@@ -35,7 +53,7 @@
         </div>
       </div>
 
-      <div class="card-fullpage-main-info top-info ">
+      <div class="card-fullpage-main-info top-info px-24">
         <div class="card-fullpage-images">
           <div class="largeImg-wrapper">
             <img class="largeImg" src="../../img/card-fullpage/img1.svg" alt="Large image">
@@ -416,7 +434,7 @@
           </div>
         </div>
       </div>
-      <div class="card-fullpage-tabs ">
+      <div class="card-fullpage-tabs px-24">
         <div class="navigation">
           <ul class="navigation-flex">
             <li><a class="card-fullpage-tab card-fp-tab-desc active-js" href="#">Описание</a></li>
@@ -427,17 +445,17 @@
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description ">
+      <div class="card-fp-description px-24">
         @@include('book-card-fullpage-desc-comp.html', { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden">
+      <div class="card-fp-characteristics hidden px-24">
         @@include('book-card-fullpage-characteristics-comp.html', { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden">
+      <div class="card-fp-instruction hidden px-24">
         @@include('book-card-fullpage-about.html', { }, )
       </div>
 
@@ -829,7 +847,7 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item full-width  mb-64">
+      <div class="card_video_item full-width px-24 mb-64">
         <div class="card_video_preview">
           <img src="../../img/cards_video_preview.svg" alt=""/>
           <button class="card_video_play_button circle-button"></button>
