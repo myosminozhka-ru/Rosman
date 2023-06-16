@@ -266,9 +266,6 @@
 
 .thumbs {
   @apply flex flex-col gap-16;
-  //@media screen and (max-width: 800px) {
-  //  @apply hidden;
-  //}
 }
 
 
@@ -276,10 +273,6 @@
   border: 3px solid #4498FC;
 }
 
-.thumbs a {
-  max-width: 8.1rem;
-  aspect-ratio: 1/1;
-}
 
 .thumbs a:hover {
 }
