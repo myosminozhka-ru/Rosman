@@ -303,7 +303,6 @@ button {
     }
   }
 }
-// breadcrumb-home.svg
 .breadcrumbs {
   @media (max-width: 801px) {
     @apply hidden;
@@ -315,19 +314,46 @@ button {
   @media (min-width: 802px) {
     @apply hidden;
   }
+  @media screen and (max-width: 480px) {
+    @apply w-3/4;
+  }
 }
 
 .breadcrumbs-small-screen-image {
   @apply w-20 h-20 block;
-  background: url("../../img/breadcrumb-home.svg") no-repeat center;
+  background: url("../../img/card-fullpage/breadcrumb-home.svg") no-repeat center;
   background-size: contain;
 }
 
-.breadcrumbs-arrow {
+.breadcrumbs-small-screen-dots {
+  @apply relative;
 }
 
-.breadcrumbs-path-hidden {
+.breadcrumbs-arrow {
+  @apply absolute h-12 w-32 hidden;
+  left: -1.1rem;
+  background: url("../../img/card-fullpage/bread-arrow.svg") no-repeat center;
+  background-size: contain;
 }
+
+.breadcrumbs-path-hidden-text {
+  @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
+  border: 1px solid black;
+  width: 20rem;
+  top: 2.9rem;
+  left: -1.2rem;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-arrow {
+  @apply block;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-path-hidden-text {
+  @apply block;
+}
+
 
 .breadcrumbs-icons {
   @apply flex flex-row gap-16;
@@ -336,6 +362,13 @@ button {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .breadcrumbs-small-screen-path {
+    @apply overflow-hidden whitespace-nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(80%);
+  }
+}
 .dropdown {
   @apply relative inline-block h-44 w-auto max-w-menu border-2 border-black bg-yellow px-4 py-2;
 
