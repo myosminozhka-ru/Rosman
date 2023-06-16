@@ -23,7 +23,9 @@ let cartToTrans = document.querySelector(".card-fp-trans")
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
-    cardTextToHide.classList.toggle("js-card-fp-hidden-item")
+    if (cardTextToHide) {
+      cardTextToHide.classList.toggle("js-card-fp-hidden-item")
+    }
     if (cartToTrans) {
       cartToTrans.classList.toggle("card-fp-transparent-text")
     }
@@ -80,7 +82,6 @@ if (jsMdbDescButton) {
     jsItemsToHideDesc.forEach((item) => {
       item.classList.toggle("js-card-fp-hidden-item");
     });
-    console.log("nen")
     const isExpanded = jsMdbDescButton.innerText.includes("Свернуть описание");
 
     if (isExpanded) {
@@ -92,11 +93,25 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      // Если элементы сворачиваются, выполняем прокрутку вниз до кнопки
       jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
 
   };
+}
+
+let jsMdbAuthorButton = document.querySelector(".js-mdb-author-button")
+if (jsMdbAuthorButton) {
+  jsMdbAuthorButton.onclick = function (event) {
+    let prevElemSib = jsMdbAuthorButton.previousElementSibling;
+    prevElemSib.classList.toggle("hidden");
+    const isExpanded = jsMdbAuthorButton.innerText.includes("Свернуть описание");
+
+    if (isExpanded) {
+      jsMdbAuthorButton.innerHTML = "Развернуть описание<span></span>";
+    } else {
+      jsMdbAuthorButton.innerHTML = "Свернуть описание<span></span>";
+    }
+  }
 }
 
 

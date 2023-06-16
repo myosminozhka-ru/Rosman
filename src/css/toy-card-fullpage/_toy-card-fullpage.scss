@@ -145,6 +145,16 @@
 .card-fp-desc-text-top {
 }
 
+.js-mdb-author-button {
+  @apply p-0 justify-start;
+}
+
+.card-fp-desc-text-full {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
 .card-fp-transparent-text {
   @apply relative
 }
@@ -481,16 +491,19 @@
 // photogallery wrapper
 #white-background.card-fullpage-w-bg-modified {
   height: 61.9rem;
+  padding: 0;
+  width: 100%;
   margin-bottom: 6.4rem;
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
   height: 61.9rem;
+  width: 100%;
 }
 
 #white-background {
   .slide-el.card-fullpage-slide-el-mod {
-    bottom: 4rem;
+    bottom: -1.5rem;
   }
 }
 
