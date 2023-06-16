@@ -268,9 +268,12 @@
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
   max-width: 40rem;
   border: 1px solid #d9d9d9;
-  @media screen and (max-width: 400px){
+  @media (min-width: 291px) and (max-width: 400px){
     @apply gap-12;
   }
+  //@media screen and (max-width: 290px){
+  //  @apply flex-col;
+  //}
 }
 
 .card_brand_content:hover .card_brand_all_items {
@@ -286,20 +289,22 @@
   @apply flex flex-col flex-nowrap items-center justify-center gap-8;
 }
 .card_brand_all_items {
-  @apply block rounded-2xl text-xl bg-yellow px-8 py-4;
+  @apply block rounded-2xl text-xl bg-yellow px-8 py-4 text-center;
+  @media screen and (max-width: 359px){
+    @apply text-s
+  }
 }
 .card_brand_name {
-  @apply text-2.5xl font-normal text-black;
+  @apply text-2.5xl font-normal text-black text-center;
+  @media screen and (max-width: 359px){
+    @apply text-xl;
+  }
 }
 .card_brand_image {
   @apply block bg-white;
-  max-width: 15rem;
+  //max-width: 15rem;
   max-height: 9rem;
-  //@media screen and (max-width: 400px) {
-  //  width: 11rem;
-  //  height: 8.6rem;
-  //  background-size: contain;
-  //}
+  aspect-ratio: 16/9;
 }
 
 .card_brand_img {
