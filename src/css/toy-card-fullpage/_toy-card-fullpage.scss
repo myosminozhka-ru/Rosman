@@ -490,14 +490,16 @@
 
 // photogallery wrapper
 #white-background.card-fullpage-w-bg-modified {
-  height: 61.9rem;
-  padding: 0;
+  height: 51.9rem;
   width: 100%;
+  padding: 0;
   margin-bottom: 6.4rem;
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
-  height: 61.9rem;
+  height: 51.9rem;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -507,6 +509,16 @@
   }
 }
 
+.swiper-image.swiper-header.sw-head-mod {
+  @apply w-full mx-0;
+}
+
+#above-block.above-block-mod {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+}
 
 // стили для таба ХАРАКТЕРИСТИКИ
 .card-fp-char-item:after {
