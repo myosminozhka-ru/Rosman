@@ -57,54 +57,6 @@
 
 }
 
-.partners-stroke {
-  .running-stroke {
-    width: 100%;
-    overflow: hidden;
-    top: 0;
-    white-space: nowrap;
-    .marquee {
-      white-space: nowrap;
-      display: flex;
-      justify-content: center;
-      &.further {
-        animation: marquee-partner 20s linear infinite;
-      }
-      &.reverse {
-        animation: marquee-partner-reverse 20s linear infinite;
-      }
-      span {
-        @apply text-6xl uppercase;
-        margin: 0.1rem 1rem;
-        color: #000000;
-      }
-      img {
-        display: inline;
-        width: 5.5rem;
-        height: 5.5rem;
-      }
-    }
-  }
-
-
-  @keyframes marquee-partner {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  @keyframes marquee-partner-reverse {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-}
 
 .bordered_tags {
   @apply flex flex-row flex-nowrap items-center justify-between;
