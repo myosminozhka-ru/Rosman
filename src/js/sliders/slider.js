@@ -54,7 +54,7 @@ const runStroke = new Swiper('.swiper-container', {
     loop: false,
     autoplay: {
         delay: 20,
-        disableOnInteraction: true, // Включаем автоматическую прокрутку при взаимодействии пользователя
+        disableOnInteraction: false, // Включаем автоматическую прокрутку при взаимодействии пользователя
     },
    speed: 6000,
     slidesPerView: 6,
@@ -63,21 +63,9 @@ const runStrokeReverse = new Swiper('.swiper-container-reverse', {
     loop: false,
     autoplay: {
         delay: 20,
-        disableOnInteraction: true, // Включаем автоматическую прокрутку при взаимодействии пользователя
+        disableOnInteraction: false, // Включаем автоматическую прокрутку при взаимодействии пользователя
         reverseDirection: true, // Прокрутка в обратном направлении
     },
     speed: 6000,
     slidesPerView: 6,
-});
-runStroke.on('touchStart', function() {
-    runStroke.params.speed = 200; // Изменение скорости прокрутки при взаимодействии
-});
-
-// Обработчик события, когда пользователь перестает взаимодействовать
-runStroke.on('touchEnd', function() {
-    runStroke.autoplay.delay = 20;
-    runStroke.autoplay.start();
-    runStroke.params.speed = 7000; // Возврат к начальной скорости прокрутки
-    console.log('end')
-    runStroke.autoplay.start();
 });

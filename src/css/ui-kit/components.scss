@@ -10,7 +10,7 @@
    @apply text-s font-semibold flex gap-8 my-14;
  }
   .scroll-block {
-    @apply h-74 overflow-y-auto	;
+    @apply h-140 overflow-y-auto;
   }
 }
 .more-down-filters {
@@ -344,7 +344,7 @@ header {
 }
 
 #white-background {
-  @apply relative h-200  w-full items-center overflow-hidden bg-white pt-60 px-70 mb-20;
+  @apply relative h-200  w-full items-center overflow-hidden bg-white pt-60  mb-20;
   .slide-el {
     width: 10.4rem;
     z-index: 1000;
@@ -356,7 +356,7 @@ header {
 }
 
 #yellow-moving-block {
-  @apply absolute z-100 mx-auto my-0 h-180 w-10/12	 overflow-hidden bg-white bg-yellow;
+  @apply absolute z-100 mx-auto my-0 h-180 w-full overflow-hidden bg-white bg-yellow;
 }
 #parent {
   width: 99%;
@@ -651,8 +651,8 @@ header {
       @apply relative items-center flex justify-center;
       width: 25rem;
       video {
-        @apply absolute h-74;
-        bottom: -2rem;
+        @apply absolute h-150;
+        bottom: -1.8rem;
         width: 25rem;
         left: -1rem;
       }
