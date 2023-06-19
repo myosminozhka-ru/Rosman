@@ -321,7 +321,7 @@ button {
 
 .breadcrumbs-small-screen-image {
   @apply w-20 h-20 block;
-  background: url("../../img/card-fullpage/breadcrumb-home.svg") no-repeat center;
+  background: url("../../img/breadcrumb-home.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -332,7 +332,7 @@ button {
 .breadcrumbs-arrow {
   @apply absolute h-12 w-32 hidden;
   left: -1.1rem;
-  background: url("../../img/card-fullpage/bread-arrow.svg") no-repeat center;
+  background: url("../../img/bread-arrow.svg") no-repeat center;
   background-size: contain;
 }
 

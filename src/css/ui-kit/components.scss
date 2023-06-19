@@ -17,6 +17,7 @@
 
   @media screen and (max-width: 768px) {
     display: flex;
+    margin: 1rem auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -27,12 +28,12 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-image: url(../../img/filter.svg);
     background-repeat: no-repeat;
     background-position: 0.5rem 50%;
-    background-size: 1.5rem 1.5rem;
+    background-size: 2.5rem 2.5rem;
   }
 
 }
@@ -82,8 +83,10 @@
     position:fixed;
     top:0;
     background: white;
-    width: 100%;
+    width: 100%!important;
     z-index: 1000;
+    left: 0;
+    padding: 2rem;
   }
 
 }
@@ -287,7 +290,35 @@ header {
 
 #yellow-background {
   @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-60;
-
+  @media screen and (max-width: 768px) {
+    @apply  pt-10;
+  }
+  #moving-block {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .width-75 {
+    width: 75%;
+    @media screen and (max-width: 768px) {
+      width:100%;
+    }
+  }
+  .brand_choose_brands {
+    @media screen and (max-width: 768px) {
+      display: flex !important;
+      display: -webkit-flex !important;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      overflow: scroll;
+      width: 100%;
+      gap: 2rem;
+      .image_container_brand {
+        min-width: 50%;
+        width:50%;
+      }
+    }
+  }
 }
 #yellow-background:after {
   position: absolute;
@@ -297,9 +328,16 @@ header {
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
+
 }
+
 #moving-block {
   @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+}
+#white-mobile-background {
+  @media screen and (max-width: 768px) {
+    @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+  }
 }
 #moving-block:after {
   position: absolute;

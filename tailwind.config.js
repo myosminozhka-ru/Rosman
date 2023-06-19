@@ -26,6 +26,7 @@ module.exports = {
         },
         screens: {
             sm: { max: "639px" },
+            md: { max: "768px" },
             ssm: { max: "400px" },
         },
         fontSize: {

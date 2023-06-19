@@ -15,6 +15,7 @@
 @@include('components/header/header-main.html', { }, )
 <div id="yellow-background">
     <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
     <div id="above-block">
         <div class="flex justify-between">
             <p class="breadcrumbs p-24">
@@ -36,41 +37,41 @@
             </div>
         </div>
         <div class="flex"><h1 class="head-1 px-25 mb-64">Все игрушки</h1><sup class="text-text text-l">1 222 323</sup></div>
-        <div class="flex flex-row gap-22 px-25">
+        <div class="flex flex-row gap-22 px-25 md:px-0">
             @@include('components/ui-kit/filters/filter-2.html', { }, )
-            <div class="w-3/4">
-                <div class="popup_brand_choose_brands">
-                    <div class="image_container">
+            <div class="width-75">
+                <div class="brand_choose_brands">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <div class="image_container">
+                    <div class="image_container_brand">
                         <a href="#" class="popup_brand_choose_brand_image">
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
@@ -105,7 +106,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="popup_all_filters_filters">
+                <div class="popup_all_filters_filters md:hidden">
                     <div class="popup_all_filters_filter">
                         <input type="checkbox" id="novelty" class="sort-checkbox" />
                         <label class="sort-label" for="novelty"
@@ -610,13 +611,13 @@
                 </div>
             </div>
             <div id="above-el-block">
-                <h1 class="head-2 px-25 w-2/4 text-center mx-auto mt-40">Подписаться на рассылку</h1>
+                <h1 class="head-2 px-25 w-2/4 md:w-full text-center mx-auto mt-40 md:mt-2">Подписаться на рассылку</h1>
                 <p class="text-center  mx-auto body-m">Как принято считать, непосредственные участники технического прогресса призывают<br> нас к новым свершениям, которые, в свою очередь, должны быть описаны максимально подробно.</p>
-              <div class="mx-auto w-2/4  flex justify-center mt-40">
+              <div class="mx-auto w-2/4 md:w-full flex justify-center mt-40 md:mt-2">
                   <input class="input items-center w-full" type="text" placeholder="Электронная почта" />
                   <button class="button-black">Подписаться</button>
               </div>
-                <div class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-2/6 justify-center">
+                <div class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 md:mt-2 w-2/6 md:w-full justify-center">
                     <input
                             class="js-footer-heading-checkbox checkbox__input_main"
                             type="checkbox"
