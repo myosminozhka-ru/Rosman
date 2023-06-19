@@ -97,6 +97,69 @@
 
   }
 }
+.header[data-header='main'] {
+  .rosmen {
+    display: none;
+  }
+  .company {
+    display: none;
+  }
+  .news {
+    display: none;
+  }
+  .books-news {
+    display: none;
+  }
+  .NDK {
+    display: none;
+  }
+  .author {
+    display: none;
+  }
+}
+.header[data-header='toys'] {
+  .books-news {
+    display: none;
+  }
+  .NDK {
+    display: none;
+  }
+  .author {
+    display: none;
+  }
+  .about {
+    display: none;
+  }
+  .career {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+  .publisher {
+    display: none;
+  }
+}
+.header[data-header='books'] {
+  .company {
+    display: none;
+  }
+  .about {
+    display: none;
+  }
+  .career {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+  .news {
+    display: none;
+  }
+  .toys {
+    display: none;
+  }
+}
 .main-block{
   @apply w-1/4;
   //@media screen and (max-width: 768px) {
@@ -130,7 +193,21 @@ header {
       @apply hidden;
     }
   }
+  .hide-mobile {
+    .search-button {
+      @media screen and (max-width: 780px) {
+        @apply hidden;
+      }
+    }
 
+    .micro-button {
+      @media screen and (max-width: 780px) {
+        @apply hidden;
+      }
+    }
+
+
+  }
   .search-button {
     display: inline-block;
     background: url("../../img/search.svg") no-repeat center;
@@ -173,9 +250,15 @@ header {
     opacity: 1;
     padding: 5px;
     width: 40%;
+    @media screen and (max-width: 780px) {
+      width: 60%;
+    }
 
     input {
       @apply w-full border-0 bg-yellow;
+       @media screen and (max-width: 780px) {
+        padding: 0;
+      }
     }
 
     span {
@@ -188,6 +271,10 @@ header {
       background-size: 1rem 1rem;
       width: 1rem;
       height: 2rem;
+      @media screen and (max-width: 780px) {
+        width: 2rem;
+      }
+
     }
 
     .micro-icon {
@@ -196,6 +283,9 @@ header {
       background-size: 2rem 2rem;
       width: 1rem;
       height: 2rem;
+      @media screen and (max-width: 780px) {
+        width: 2rem;
+      }
     }
 
     .cross-icon {
@@ -205,6 +295,9 @@ header {
       background-size: 1rem 1rem;
       width: 1rem;
       height: 2rem;
+      @media screen and (max-width: 780px) {
+        width: 2rem;
+      }
     }
 
     &.hide {
