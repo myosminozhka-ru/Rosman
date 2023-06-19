@@ -137,10 +137,13 @@ if (movingBlock ) {
 function toggleSearch() {
   let headerNav = document.querySelector('.header-nav')
   let searchInput = document.querySelector('.search-input')
+  let headerbtn = document.querySelector('.header-btn')
   if (headerNav.classList.contains("hide")) {
     headerNav.classList.remove("hide");
+    headerbtn.classList.remove("hide-mobile");
   } else {
     headerNav.classList.add("hide");
+    headerbtn.classList.add("hide-mobile");
   }
   if (searchInput.classList.contains("hide")) {
     searchInput.classList.remove("hide");
