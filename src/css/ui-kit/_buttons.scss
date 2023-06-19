@@ -133,6 +133,9 @@ button {
 
 .more-down-content {
   @apply hidden p-2;
+  &.new {
+    @apply  absolute bg-white w-full border-2 border-card-stroke z-1000;
+  }
 
   &.active-js {
     @apply block;
@@ -175,7 +178,7 @@ button {
 .sort-label {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
   max-width: 30rem;
-  min-width: 15rem;
+  min-width: 5rem;
 
   .count {
     @apply hidden align-middle	;
@@ -300,7 +303,72 @@ button {
     }
   }
 }
+.breadcrumbs {
+  @media (max-width: 801px) {
+    @apply hidden;
+  }
+}
 
+.breadcrumbs-small-screen {
+  @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+  @media (min-width: 802px) {
+    @apply hidden;
+  }
+  @media screen and (max-width: 480px) {
+    @apply w-3/4;
+  }
+}
+
+.breadcrumbs-small-screen-image {
+  @apply w-20 h-20 block;
+  background: url("../../img/breadcrumb-home.svg") no-repeat center;
+  background-size: contain;
+}
+
+.breadcrumbs-small-screen-dots {
+  @apply relative;
+}
+
+.breadcrumbs-arrow {
+  @apply absolute h-12 w-32 hidden;
+  left: -1.1rem;
+  background: url("../../img/bread-arrow.svg") no-repeat center;
+  background-size: contain;
+}
+
+.breadcrumbs-path-hidden-text {
+  @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
+  border: 1px solid black;
+  width: 20rem;
+  top: 2.9rem;
+  left: -1.2rem;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-arrow {
+  @apply block;
+}
+
+.breadcrumbs-small-screen-dots:hover
+.breadcrumbs-path-hidden-text {
+  @apply block;
+}
+
+
+.breadcrumbs-icons {
+  @apply flex flex-row gap-16;
+  @media (min-width: 801px) {
+    @apply hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .breadcrumbs-small-screen-path {
+    @apply overflow-hidden whitespace-nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(80%);
+  }
+}
 .dropdown {
   @apply relative inline-block h-44 w-auto max-w-menu border-2 border-black bg-yellow px-4 py-2;
 

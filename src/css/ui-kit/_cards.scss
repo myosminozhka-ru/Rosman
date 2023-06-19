@@ -11,7 +11,7 @@
 // card's top
 .toy_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 29.6rem;
+  max-width: 26.6rem;
 }
 .item_card_tags.bordered_tags {
   @media screen and (max-width: 400px) {
