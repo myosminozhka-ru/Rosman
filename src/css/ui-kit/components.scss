@@ -10,6 +10,84 @@
     @apply h-140 overflow-y-auto;
   }
 }
+.mobile-filter {
+  @media screen and (min-width: 768px) {
+    @apply hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../../img/filter.svg);
+    background-repeat: no-repeat;
+    background-position: 0.5rem 50%;
+    background-size: 1.5rem 1.5rem;
+  }
+
+}
+.mobile-p {
+  @media screen and (min-width: 768px) {
+    @apply hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    @apply text-2xl inline-block;
+  }
+
+
+}
+#close-filter {
+  @media screen and (min-width: 768px) {
+    @apply hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    background: url("../../img/close.svg") no-repeat right;
+    background-size: 1rem 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+
+
+}
+.filter {
+  @media screen and (min-width: 768px) {
+    @apply flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    @apply hidden;
+  }
+
+}
+.open-filter {
+
+  @media screen and (max-width: 768px) {
+    display: flex!important;
+    position:fixed;
+    top:0;
+    background: white;
+    width: 100%;
+    z-index: 1000;
+  }
+
+}
+
 .more-down-filters {
   .filters-block {
     @apply w-full;
