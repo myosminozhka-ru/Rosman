@@ -614,3 +614,55 @@ button {
 //    // background-image: "img/svg/icon20/black-arrow_down.svg";
 //  }
 //}
+
+// кнопка "связаться с нами"
+.custom-box {
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  width: 17.4rem;
+  height: 2.4rem;
+  z-index: 5;
+  top: 30rem;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+
+.custom-box span {
+  @apply w-20 h-14 block;
+  background: url("../../img/envelope-white.svg") no-repeat center;
+  background-size: contain;
+  transform: rotate(90deg);
+  z-index: 4;
+}
+
+
+.custom-before {
+  //content: ;
+  position: absolute;
+  bottom: -0.3rem;
+  left: -8%;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  background-image: url("../../img/custom-before.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.custom-after {
+  //content: ;
+  position: absolute;
+  bottom: -0.3rem;
+  transform: rotate(90deg);
+  left: 84.5%;
+  width: 4rem;
+  height: 4rem;
+  background-image: url("../../img/custom-after.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
