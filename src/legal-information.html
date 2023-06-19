@@ -8,9 +8,15 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div class="legal-information-wrapper">
+<div class="legal-information-wrapper relative">
   @@include('components/header/header-main.html', { }, )
-  <div id="yellow-background" class="!h-auto !pt-24 !mb-24">
+  <div class="custom-box !z-1 !fixed">
+    <span></span>
+    <div class="custom-before"></div>
+    <a href="mailto:rosman@rosman.ru">Написать нам</a>
+    <div class="custom-after"></div>
+  </div>
+  <div id="yellow-background" class="!h-auto !pt-24 !mb-24 !z-0">
     <div id="moving-block"></div>
     <div id="above-block" class="!p-24 flex flex-col gap-16 !sm:p-12">
       <div class="flex justify-between items-center">
