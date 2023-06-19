@@ -1,4 +1,3 @@
-
 const popup = function Popup(el, triggerButton) {
   this.el = el;
   this.triggerButton = triggerButton;
@@ -81,10 +80,10 @@ const jsPopupBrandChooseModal = document.querySelector(
 );
 
 const jsPopupBrandChooseListButton = document.querySelector(
-    ".js_popup_brand_choose_list_button"
+  ".js_popup_brand_choose_list_button"
 );
 const jsPopupBrandChooseListModal = document.querySelector(
-    ".js_popup_brand_choose_list_modal"
+  ".js_popup_brand_choose_list_modal"
 );
 
 const jsPopupAllFiltersButton = document.querySelector(
@@ -161,4 +160,3 @@ if (phoneNumber) {
     old++;
   }
 }
-

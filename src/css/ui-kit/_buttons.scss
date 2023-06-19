@@ -55,6 +55,19 @@ button {
   }
 }
 
+.rounded-arrow-button {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url("../../img/rounded-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 54% 50%;
+  background-size: 3rem 3rem;
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/rounded-arrow.svg");
+  }
+}
+
 .overline-button {
   @apply flex flex-row items-center justify-center px-40 py-10 text-m underline;
 
@@ -163,7 +176,7 @@ button {
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1rem;
-      @apply ml-4 inline-block text-left align-middle	;
+      @apply ml-4 inline-block text-left align-middle    ;
     }
 
     .count {
@@ -178,7 +191,7 @@ button {
   min-width: 15rem;
 
   .count {
-    @apply hidden align-middle	;
+    @apply hidden align-middle    ;
   }
 
   &:hover {
@@ -210,6 +223,7 @@ button {
   @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold;
   min-width: 5rem;
   max-width: 15rem;
+
   &.age {
     @apply w-55 justify-center;
   }
@@ -600,3 +614,59 @@ button {
 //    // background-image: "img/svg/icon20/black-arrow_down.svg";
 //  }
 //}
+
+// кнопка "связаться с нами"
+.custom-box {
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  width: 17.4rem;
+  height: 2.4rem;
+  z-index: 5;
+  top: 30rem;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+
+.custom-box span {
+  @apply w-20 h-14 block;
+  background: url("../../img/envelope-white.svg") no-repeat center;
+  background-size: contain;
+  transform: rotate(90deg);
+  z-index: 4;
+}
+
+.custom-box a {
+  color: white;
+  z-index: 4;
+}
+
+.custom-before {
+  //content: ;
+  position: absolute;
+  bottom: -0.3rem;
+  left: -8%;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  background-image: url("../../img/custom-before.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.custom-after {
+  //content: ;
+  position: absolute;
+  bottom: -0.3rem;
+  transform: rotate(90deg);
+  left: 84.5%;
+  width: 4rem;
+  height: 4rem;
+  background-image: url("../../img/custom-after.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
