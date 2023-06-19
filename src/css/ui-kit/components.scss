@@ -398,6 +398,11 @@ header {
     }
   }
   .brand_choose_brands {
+    display: flex !important;
+    display: -webkit-flex !important;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    gap: 2rem;
     @media screen and (max-width: 768px) {
       display: flex !important;
       display: -webkit-flex !important;
