@@ -145,3 +145,11 @@ dots.forEach((dot, index) => {
     setActiveImage(currentImageIndex);
   });
 });
+
+
+// для описания книги, чтобы там было многоточие
+const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
+const jsBookTextContainer = document.querySelector(".js-book-text-container");
+jsBookToggleButton.addEventListener('click', function () {
+  jsBookTextContainer.classList.toggle('h-full');
+});
