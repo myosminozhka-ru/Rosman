@@ -137,10 +137,13 @@ if (movingBlock ) {
 function toggleSearch() {
   let headerNav = document.querySelector('.header-nav')
   let searchInput = document.querySelector('.search-input')
+  let headerbtn = document.querySelector('.header-btn')
   if (headerNav.classList.contains("hide")) {
     headerNav.classList.remove("hide");
+    headerbtn.classList.remove("hide-mobile");
   } else {
     headerNav.classList.add("hide");
+    headerbtn.classList.add("hide-mobile");
   }
   if (searchInput.classList.contains("hide")) {
     searchInput.classList.remove("hide");
@@ -232,6 +235,16 @@ for (let i = 0; i < elephantDownButtons.length; i++) {
     }
   });
 }
+
+const filterOpen = document.getElementById('open-filter')
+const filterClose = document.getElementById('close-filter')
+const filter = document.getElementById('filter')
+filterOpen.addEventListener("click", function() {
+filter.classList.add('open-filter')
+});
+filterClose.addEventListener("click", function() {
+filter.classList.remove('open-filter')
+});
 
 for (let i = 0; i < elephantUpButtons.length; i++) {
   elephantUpButtons[i].addEventListener("click", function() {
