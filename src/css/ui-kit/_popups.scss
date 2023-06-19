@@ -168,7 +168,7 @@
 
 .popup_blockchain_transaction_info_question_img:hover {
   background-image: url("../../img/questions_white.svg");
-  background-color: black; /* Заменяем @apply на отдельное свойство */
+  background-color: black;
 }
 
 .popup_blockchain_transaction_hash {
@@ -183,7 +183,7 @@
 }
 
 .popup_blockchain_transaction_info_question_img:hover
-  .popup_blockchain_transaction_hash {
+.popup_blockchain_transaction_hash {
   display: block;
 }
 
@@ -192,6 +192,7 @@
   border: 1px solid #d9d9d9;
   background: url("../../img/cards.svg") no-repeat center;
   background-size: contain;
+
   &:active {
     @apply bg-yellow;
   }
@@ -220,11 +221,13 @@
   @apply flex-grow text-15.20;
   flex-basis: 0;
 }
+
 .go-out-btn:hover > .go_out_black_img {
   @apply block h-24 w-24 cursor-pointer pl-32;
   background: url("../../img/go_out_black.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_blockchain_etherscan_button {
   @apply bg-black text-white;
 }
@@ -347,6 +350,7 @@
   background: url("../../img/vkcom.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_brand_description_vk:hover {
   background-image: url("../../img/vkcom-yellow.svg");
 }
@@ -356,17 +360,21 @@
   background: url("../../img/tiktok.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_brand_description_tiktok:hover {
   background-image: url("../../img/tiktok-yellow.svg");
 }
+
 .popup_brand_description_youtube {
   @apply block h-16 w-16 cursor-pointer pl-32;
   background: url("../../img/youtube.svg") no-repeat center;
   background-size: contain;
 }
+
 .popup_brand_description_youtube:hover {
   background-image: url("../../img/youtube-yellow.svg");
 }
+
 // ----
 .popup_brand_description_site {
 }
@@ -893,16 +901,19 @@
     max-width: 45rem;
   }
 }
-.pup-br-no-pad{
+
+.pup-br-no-pad {
   @apply pl-20;
   @media (min-width: 501px) {
     @apply p-0;
   }
 }
-.with-padds{
+
+.with-padds {
   @apply font-medium text-xl;
   padding-left: 4rem !important;
 }
+
 //.popup_brand_choose_search_line input::placeholder {
 //  @apply pl-32;
 //}
@@ -1228,11 +1239,11 @@ img {
   @media screen and (max-width: 700px) {
     @apply w-full;
   }
+
   .more-down-button {
     @apply w-full justify-between;
   }
 }
-
 
 
 .more-down-content {
@@ -1243,6 +1254,7 @@ img {
 .null-margin > .toggle-switch {
   margin: 0;
 }
+
 .more-down-button.justify-btwn {
   justify-content: space-between;
 }
