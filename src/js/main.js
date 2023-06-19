@@ -236,12 +236,16 @@ for (let i = 0; i < elephantDownButtons.length; i++) {
 const filterOpen = document.getElementById('open-filter')
 const filterClose = document.getElementById('close-filter')
 const filter = document.getElementById('filter')
-filterOpen.addEventListener("click", function() {
-  filter.classList.add('open-filter')
-});
-filterClose.addEventListener("click", function() {
-  filter.classList.remove('open-filter')
-});
+if (filterOpen !== null) {
+  filterOpen.addEventListener("click", function() {
+    filter.classList.add('open-filter')
+  });
+}
+if (filterClose !== null) {
+  filterClose.addEventListener("click", function () {
+    filter.classList.remove('open-filter')
+  });
+}
 
 for (let i = 0; i < elephantUpButtons.length; i++) {
   elephantUpButtons[i].addEventListener("click", function() {
