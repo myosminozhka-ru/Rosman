@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // init Swiper:
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    loop: true,
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.button-next',
@@ -18,7 +18,7 @@ const swiper = new Swiper('.swiper', {
 });
 const swiperImage = new Swiper('.swiper-image', {
     // Optional parameters
-    loop: true,
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.button-next',
@@ -31,7 +31,7 @@ const swiperImage = new Swiper('.swiper-image', {
 // init Swiper:
 const swiperText = new Swiper('.swiper-text', {
     // Optional parameters
-    loop: true,
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.button-next',
@@ -50,3 +50,22 @@ const swiperText = new Swiper('.swiper-text', {
 //         prevEl: '.button-prev',
 //     },
 // });
+const runStroke = new Swiper('.swiper-container', {
+    loop: false,
+    autoplay: {
+        delay: 20,
+        disableOnInteraction: false, // Включаем автоматическую прокрутку при взаимодействии пользователя
+    },
+   speed: 6000,
+    slidesPerView: 6,
+});
+const runStrokeReverse = new Swiper('.swiper-container-reverse', {
+    loop: false,
+    autoplay: {
+        delay: 20,
+        disableOnInteraction: false, // Включаем автоматическую прокрутку при взаимодействии пользователя
+        reverseDirection: true, // Прокрутка в обратном направлении
+    },
+    speed: 6000,
+    slidesPerView: 6,
+});
