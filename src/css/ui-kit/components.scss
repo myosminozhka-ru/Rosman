@@ -172,7 +172,7 @@ header {
 
     input {
       @apply w-full border-0 bg-yellow;
-      @media screen and (max-width: 780px) {
+       @media screen and (max-width: 780px) {
         padding: 0;
       }
     }
