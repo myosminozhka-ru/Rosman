@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Юридическая информация</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="legal-information-wrapper">
+  @@include('components/header/header-main.html', { }, )
+  <div id="yellow-background">
+    <div id="moving-block"></div>
+    <div id="above-block">
+      <div class="flex justify-between px-24 items-center">
+        <p class="breadcrumbs p-24">
+          <a href="#">Главная </a><span>/</span>
+          <a href="#">Книги </a><span>/</span>
+          <a href="#">Все книги </a><span>/</span>
+          <a href="#">Художественная литература </a><span>/</span>
+          <a href="#">Русские народные сказки</a><span>/</span>
+          <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
+        </p>
+        <div class="breadcrumbs-small-screen my-24">
+          <div class="breadcrumbs-small-screen-image"></div>
+          <div class="breadcrumbs-small-screen-dots ">
+            ...
+            <div class="breadcrumbs-arrow"></div>
+            <div class="breadcrumbs-path-hidden-text">
+              <a class="text-s" href="#">Книги</a>
+              <a class="text-s" href="#">Все книги</a>
+              <a class="text-s" href="#">Художественная литература</a>
+              <a class="text-s" href="#">Русские народные сказки</a>
+            </div>
+          </div>
+          <div class="breadcrumbs-small-screen-path">Безработный Дед Мороз. Волшебный круговорот</div>
+        </div>
+        <div class="breadcrumbs-icons">
+          <a href="#" class="item_card-external-link"></a>
+          <button class="item_card_add_to_favourite"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
