@@ -134,7 +134,6 @@ for (let i = 0; i < dropdownTogglers.length; i++) {
 }
 
 // функция для маски телефона
-let inp = document.querySelector('#phone');
 let phoneNumber = document.querySelector('#phone');
 
 if (phoneNumber) {

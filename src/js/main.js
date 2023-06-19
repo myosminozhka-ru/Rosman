@@ -137,10 +137,13 @@ if (movingBlock) {
 function toggleSearch() {
     let headerNav = document.querySelector('.header-nav')
     let searchInput = document.querySelector('.search-input')
+    let headerbtn = document.querySelector('.header-btn')
     if (headerNav.classList.contains("hide")) {
         headerNav.classList.remove("hide");
+        headerbtn.classList.remove("hide-mobile");
     } else {
         headerNav.classList.add("hide");
+        headerbtn.classList.add("hide-mobile");
     }
     if (searchInput.classList.contains("hide")) {
         searchInput.classList.remove("hide");
@@ -161,6 +164,7 @@ function changeLang(lang) {
         eng.classList.remove("active-js");
     }
 }
+
 const yellowMovingBlock = document.getElementById("yellow-moving-block");
 if (yellowMovingBlock) {
     document.addEventListener("mousemove", function(event) {
@@ -215,6 +219,7 @@ function scrollContent(direction) {
         container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
     }
 }
+
 const elephantDownButtons = document.getElementsByClassName("elephant-more-down-button");
 const elephantUpButtons = document.getElementsByClassName("elephant-more-up-button");
 
