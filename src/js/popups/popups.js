@@ -143,32 +143,23 @@ if (phoneNumber) {
   phoneNumber.onclick = function () {
     phoneNumber.value = "+";
   }
-
   var old = 0;
-
   phoneNumber.onkeydown = function () {
     var curLen = phoneNumber.value.length;
-
     if (curLen < old) {
       old--;
       return;
     }
-
     if (curLen === 2)
       phoneNumber.value = phoneNumber.value + "-";
-
     if (curLen === 6)
       phoneNumber.value = phoneNumber.value + "-";
-
     if (curLen === 10)
       phoneNumber.value = phoneNumber.value + "-";
-
     if (curLen === 13)
       phoneNumber.value = phoneNumber.value + "-";
-
     if (curLen > 15)
       phoneNumber.value = phoneNumber.value.substring(0, phoneNumber.value.length - 1);
-
     old++;
   }
 }
