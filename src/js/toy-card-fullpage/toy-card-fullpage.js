@@ -150,6 +150,8 @@ dots.forEach((dot, index) => {
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
 const jsBookTextContainer = document.querySelector(".js-book-text-container");
-jsBookToggleButton.addEventListener('click', function () {
-  jsBookTextContainer.classList.toggle('h-full');
-});
+if (jsBookToggleButton && jsBookTextContainer) {
+  jsBookToggleButton.addEventListener('click', function () {
+    jsBookTextContainer.classList.toggle('h-full');
+  });
+}
