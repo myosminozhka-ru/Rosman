@@ -81,10 +81,10 @@ const jsPopupBrandChooseModal = document.querySelector(
 );
 
 const jsPopupBrandChooseListButton = document.querySelector(
-    ".js_popup_brand_choose_list_button"
+  ".js_popup_brand_choose_list_button"
 );
 const jsPopupBrandChooseListModal = document.querySelector(
-    ".js_popup_brand_choose_list_modal"
+  ".js_popup_brand_choose_list_modal"
 );
 
 const jsPopupAllFiltersButton = document.querySelector(
@@ -137,36 +137,38 @@ for (let i = 0; i < dropdownTogglers.length; i++) {
 }
 
 // функция для маски телефона
-let inp = document.querySelector('#phone');
+let phoneNumber = document.querySelector('#phone');
 
-inp.onclick = function() {
-  inp.value = "+";
-}
-
-var old = 0;
-
-inp.onkeydown = function() {
-  var curLen = inp.value.length;
-
-  if (curLen < old){
-    old--;
-    return;
+if (phoneNumber) {
+  phoneNumber.onclick = function () {
+    phoneNumber.value = "+";
   }
 
-  if (curLen == 2)
-    inp.value = inp.value + "-";
+  var old = 0;
 
-  if (curLen == 6)
-    inp.value = inp.value + "-";
+  phoneNumber.onkeydown = function () {
+    var curLen = phoneNumber.value.length;
 
-  if (curLen == 10)
-    inp.value = inp.value + "-";
+    if (curLen < old) {
+      old--;
+      return;
+    }
 
-  if (curLen == 13)
-    inp.value = inp.value + "-";
+    if (curLen === 2)
+      phoneNumber.value = phoneNumber.value + "-";
 
-  if (curLen > 15)
-    inp.value = inp.value.substring(0, inp.value.length - 1);
+    if (curLen === 6)
+      phoneNumber.value = phoneNumber.value + "-";
 
-  old++;
+    if (curLen === 10)
+      phoneNumber.value = phoneNumber.value + "-";
+
+    if (curLen === 13)
+      phoneNumber.value = phoneNumber.value + "-";
+
+    if (curLen > 15)
+      phoneNumber.value = phoneNumber.value.substring(0, phoneNumber.value.length - 1);
+
+    old++;
+  }
 }
