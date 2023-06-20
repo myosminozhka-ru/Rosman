@@ -266,14 +266,11 @@
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
-  max-width: 40rem;
+  width: 100%;
   border: 1px solid #d9d9d9;
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;
   }
-  //@media screen and (max-width: 290px){
-  //  @apply flex-col;
-  //}
 }
 
 .card_brand_content:hover .card_brand_all_items {
