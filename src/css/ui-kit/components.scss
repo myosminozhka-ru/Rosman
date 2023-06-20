@@ -1,9 +1,6 @@
 .filters-block {
-  @apply w-1/4;
+  @apply w-full;
 
-  @media screen and (max-width: 768px) {
-    @apply w-3/4;
-  }
 
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left;
@@ -99,7 +96,53 @@
     @apply w-full;
   }
 }
+.toolbar {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    background-color: #ffffff;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1rem #D9D9D9 solid;
+    position: fixed; /* Зафиксируем позицию */
+    bottom: 0; /* Разместим внизу экрана */
+    width: 100%; /* Займем всю доступную ширину */
+    z-index: 100000;
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
 
+/* Стили кнопок */
+.toolbar-button {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    color: #808080;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    font-size: 1.1rem;
+  }
+}
+
+/* Стили активной кнопки */
+.toolbar-button.active {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    color: #535353;
+    background-color: #ffffff;
+  }
+}
 .header[data-header='main'] {
   .rosmen {
     display: none;
