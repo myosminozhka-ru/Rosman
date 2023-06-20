@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Результаты поиска - новости/статьи</title>
+  <title>Результаты поиска - бренды</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
@@ -33,7 +33,8 @@
         <div class="flex flex-row justify-between">
           <div class="text-4xl sm:text-15.20">По запросу «дикие скричеры» нашлось 790 результатов</div>
           <div class="w-30 h-24 cursor-pointer hidden md:block">
-            <img class="block h-full w-full" src="../../img/filter-brands-mobile.svg" alt="">
+            <img class="block h-full w-full js_popup_brand_filters_button" src="../../img/filter-brands-mobile.svg"
+                 alt="">
           </div>
         </div>
         <div class="flex justify-start ">
@@ -270,6 +271,7 @@
           </div>
         </div>
       </div>
+      @@include('components/ui-kit/popups/popup-filters-brand-results.html', { }, )
       <section class="!px-24 !mb-64 pagination rm-pag">
         <div class="pagination-seen js-rm-pag-seen">
           Просмотрено авторов: 12 из 456
