@@ -1040,17 +1040,30 @@ header {
     img {
       width: 18rem;
       height: 24rem;
+      @media screen and (max-width: 768px) {
+        width: 5rem;
+        height: 6rem;
+      }
     }
 
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
+      @media screen and (max-width: 768px) {
+        width: 6rem;
+      }
 
       video {
         @apply absolute h-150;
         bottom: -1.8rem;
         width: 25rem;
         left: -1rem;
+        @media screen and (max-width: 768px) {
+          height: 8rem;
+          bottom: -2.4rem;
+          width: 6rem;
+          left: -0.3rem;
+        }
       }
     }
   }
