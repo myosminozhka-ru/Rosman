@@ -308,15 +308,14 @@
 
 .card_brand_image {
   @apply block bg-white;
-  //max-width: 15rem;
-  max-height: 9rem;
-  aspect-ratio: 16/9;
+  max-width: 15rem;
+  //max-height: 9rem;
+  //aspect-ratio: 16/9;
 }
 
-.card_brand_img {
-  @apply px-20 py-14;
+.card_brand_image img {
   @apply w-full;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 // КАТАЛОГ КНИГ КАРТОЧКА
