@@ -78,6 +78,16 @@
   }
 }
 
+.filter-2 {
+  @media screen and (min-width: 768px) {
+    @apply flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    @apply hidden;
+  }
+}
+
 .open-filter {
   @media screen and (max-width: 768px) {
     display: flex !important;
