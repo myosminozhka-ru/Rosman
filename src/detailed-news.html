@@ -15,11 +15,12 @@
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
     <div id="above-block" class="!p-0 relative">
-      <div class="absolute right-0 top-64 bg-black
+      <!--   боковая штучка с соцсетями   -->
+      <div class="absolute right-[2.4rem] top-64 bg-black
                   rounded-full
                   flex flex-row
                   gap-16 px-12 py-8
-                  sm:!flex-col px-8">
+                  sm:!flex-col px-8 !right-[1.2rem]">
         <a href="#" class="block w-16 h-16">
           <img class="w-full h-full" src="../../img/YT.svg" alt="">
         </a>
@@ -47,27 +48,31 @@
           </div>
         </div>
       </div>
-      <div class="custom-box !z-1 !fixed">
+      <div class="custom-box !z-1 !fixed sm:!hidden">
         <span></span>
         <div class="custom-before"></div>
         <a href="mailto:rosman@rosman.ru">Написать нам</a>
         <div class="custom-after"></div>
       </div>
       <!--   тут будет контент   -->
-      <!--   хэдэр  с доп инфой -->
-      <div class="text-center mx-auto w-9/12 mb-34 px-24 relative">
-        <div class="text-6xl mb-16">Мелочь, а приятно: героям были возданы соответствующие почести</div>
-        <!--    просмотрено и дата релиза    -->
-        <div class="flex flex-row justify-center items-center flex-nowrap gap-16">
+      <!--   хэдэр -->
+      <div class="text-center mx-auto w-9/12 mb-34 px-24 relative sm: !mb-10 !px-12 text-start mx-0 w-10/12">
+        <div class="text-6xl mb-16 sm:text-4xl w-full !mb-0">Мелочь, а приятно: героям были возданы соответствующие
+          почести
+        </div>
+      </div>
+      <div class="text-center px-24 sm:!p-12">
+        <!--  сколько просмотрено и дата релиза    -->
+        <div class="flex flex-row justify-center items-center flex-nowrap gap-16 sm:gap-4 justify-between">
 
           <div class="px-12 py-4 rounded-3xl border border-black text-s font-medium">
             Кругозор
           </div>
 
-          <div>|</div>
+          <div class="sm:!hidden">|</div>
 
-          <div class="text-text text-15.20 flex flex-row flex-nowrap gap-24">
-            <div class="flex flex-row flex-nowrap gap-8">
+          <div class="text-text text-15.20 flex flex-row flex-nowrap gap-24 sm:gap-8">
+            <div class="flex flex-row flex-nowrap gap-8 sm: !justify-between">
               <div class="block w-20 h-20">
                 <img class="w-full h-full" src="../../img/release-cal.svg" alt="">
               </div>
@@ -85,7 +90,33 @@
         </div>
       </div>
 
+      <!--   main picture   -->
+      <div class="px-24 !mb-[3.2rem] w-full h-[40rem] sm: !px-12 !h-[34rem] !mb-[1.6rem]">
+        <img src="../../img/detailed-news-main-pic.svg" class=" w-full h-full object-cover" alt="">
+      </div>
 
+      <!--   tags   -->
+      <div class="text-center mx-0">
+        <div class="flex flex-col justify-center flex-wrap gap-8 p-24 content-around">
+          <div class="flex flex-row flex-wrap gap-8">
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Вдохновение
+            </div>
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Личная
+              эффективность
+            </div>
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Психология</div>
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Путешествия
+            </div>
+          </div>
+          <div class="flex flex-row flex-wrap gap-8">
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Наши авторы
+            </div>
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Интервью</div>
+            <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">История книг
+            </div>
+          </div>
+        </div>
+      </div>
       <!--   ниже только футер   -->
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
