@@ -28,7 +28,7 @@
             <div class="breadcrumbs-small-screen-path">Избранное</div>
           </div>
         </div>
-        <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-between mb-14 items-center sm:!mb-0">
           <div class="text-7xl sm:text-4xl">Избранное</div>
         </div>
       </div>
@@ -96,9 +96,9 @@
             <div
               class="more-down-filters
               md:hidden
-              no-padds no-after border-0
-              border-b-2 border-card-stroke ssm: !w-5/12 !border-0">
-              <button class="more-down-button !bg-none !pl-0 new">
+              no-padds no-after
+              border-card-stroke !border-0 !border-b-2 ssm:!w-5/12">
+              <button class="more-down-button !bg-none !px-12 new">
                 Сначала новые<span></span>
               </button>
               <!--  more-down -->
@@ -125,18 +125,22 @@
                 </label>
               </div>
             </div>
-            <div class="flex flex-nowrap flex-row items-center w-1/4 justify-between
-                       ssm: w-5/12
-                       js_popup_wishlist_sort_button
-                       font-normal
-                       ">
+
+            <div class="
+              flex flex-nowrap flex-row items-center w-1/4 justify-between
+              ssm: w-5/12
+              md:flex
+              hidden
+              js_popup_wishlist_sort_button
+              font-normal
+              ">
               <span class="text-xl">Сначала новые</span>
               <span class="w-20 h-20 block">
                 <img src="../../img/arrow-down-20.svg" alt="">
               </span>
             </div>
             
-            
+
             <div class="flex flex-row flex-nowrap gap-8 items-center justify-end bs:gap-4">
               <a href="#" class="text-15.20 bs:hidden">Поделиться списком</a>
               <a href="#" class="item_card-external-link md:w-32 h-32"></a>
