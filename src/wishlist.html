@@ -14,13 +14,13 @@
   <div id="yellow-background">
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
-    <div id="above-block">
-      <div class="flex flex-col gap-24 !p-24 !sm:p-12">
+    <div id="above-block" class="!p-0">
+      <div class="flex flex-col gap-24 !p-24 sm:!p-12">
         <div class="flex justify-between  items-center">
           <p class="breadcrumbs">
             <a class="text-s" href="#">Главная </a><span>/</span>
             <a class="text-s" href="#">Избранное</a>
-
+          
           </p>
           <div class="breadcrumbs-small-screen">
             <div class="breadcrumbs-small-screen-image"></div>
@@ -30,15 +30,11 @@
         </div>
         <div class="flex flex-row justify-between items-center">
           <div class="text-7xl sm:text-4xl">Избранное</div>
-          <div class="w-30 h-24 cursor-pointer hidden md:block">
-            <img class="block h-full w-full js_popup_brand_filters_button" src="../../img/filter-brands-mobile.svg"
-                 alt="">
-          </div>
         </div>
       </div>
-
+      
       <!--   тут будет контент   -->
-      <div class="flex flex-row flex-nowrap gap-16 !p-24 sm:!p-12">
+      <div class="flex flex-row flex-nowrap gap-16 !p-24 mb-40 sm:!p-12">
         <form id="filter-form-1" class="filters-block filter-form-brands-result w-1/4 md:hidden">
           <p class="mobile-p">Фильтры</p> <span id="close-filter"> </span>
           <div class="more-down">
@@ -70,7 +66,7 @@
                 Для праздника
               </label>
             </div>
-
+            
             <div class="p-10">
               <h3 class="body-l mb-14 font-semibold">Наличие товаров</h3>
               <label class="checkbox-container">
@@ -93,12 +89,16 @@
             </div>
           </div>
         </form>
-
-        <div class="flex flex-col gap-64 w-full">
-          <div class="flex flex-row flex-nowrap justify-between items-center ">
-            <!--            filters-->
-            <div class="more-down-filters no-padds no-after border border-card-stroke">
-              <button class="more-down-button with-padds new">
+        
+        <div class="flex flex-col gap-64 w-full sm:gap-24">
+          <div class="flex flex-row gap-16 flex-nowrap justify-between items-center ">
+            <!--filters-->
+            <div
+              class="more-down-filters
+              md:hidden
+              no-padds no-after border-0
+              border-b-2 border-card-stroke ssm: !w-5/12 !border-0">
+              <button class="more-down-button !bg-none !pl-0 new">
                 Сначала новые<span></span>
               </button>
               <!--  more-down -->
@@ -125,13 +125,29 @@
                 </label>
               </div>
             </div>
-            <!-- share -->
-            <div class="flex flex-row flex-nowrap gap-8 items-center">
-              <span class="text-15.20">Поделиться списком</span>
-              <a href="#" class="item_card-external-link"></a>
+            <div class="flex flex-nowrap flex-row items-center w-1/4 justify-between
+                       ssm: w-5/12
+                       js_popup_wishlist_sort_button
+                       font-normal
+                       ">
+              <span class="text-xl">Сначала новые</span>
+              <span class="w-20 h-20 block">
+                <img src="../../img/arrow-down-20.svg" alt="">
+              </span>
+            </div>
+            
+            
+            <div class="flex flex-row flex-nowrap gap-8 items-center justify-end bs:gap-4">
+              <a href="#" class="text-15.20 bs:hidden">Поделиться списком</a>
+              <a href="#" class="item_card-external-link md:w-32 h-32"></a>
+              <div class="w-30 h-24 cursor-pointer hidden md:block">
+                <img class="block h-full w-full js_popup_wishlist_filters_button"
+                     src="../../img/filter-brands-mobile.svg"
+                     alt="">
+              </div>
             </div>
           </div>
-          <div class="h-max flex flex-wrap items-end flex-row gap-16 sm:gap-8">
+          <div class="h-max flex flex-wrap items-end flex-row gap-16 justify-between sm:gap-8">
             <div class="stuff-search-result-item">
               <div class="toy_card item_card">
                 <div class="toy_card_heading">
@@ -330,13 +346,14 @@
                 </div>
               </div>
             </div>
-
+          
           </div>
         </div>
-
-
+      
+      
       </div>
       @@include('components/ui-kit/popups/popup-filters-wishlist.html', { }, )
+      @@include('components/ui-kit/popups/popup-sort-wishlist.html', { }, )
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
   </div>
