@@ -489,7 +489,17 @@ header {
       width: 100%;
     }
   }
-
+  .popup-btn {
+    margin: 0;
+    padding: 0;
+    width: 8rem;
+    height: 8rem;
+    background: none;
+    color:#808080;
+    border: #808080 0.2rem solid;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+  }
   .brand_choose_brands {
     display: flex !important;
     display: -webkit-flex !important;

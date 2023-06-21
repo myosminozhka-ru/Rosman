@@ -76,7 +76,16 @@
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
+                    <div class="image_container_brand">
+                        <a href="#" class="popup_brand_choose_brand_image">
+                            <img src="../../img/brand_nado.svg" alt="" />
+                        </a>
+                    </div>
+                    <button class="js_popup_brand_choose_list_button popup-btn">
+                       все бренды
+                    </button>
                 </div>
+                @@include('components/ui-kit/popups/popup-brand-listing.html', { }, )
                 <div id="open-filter" class="mobile-filter"> </div>
                 <div class="more-down-filters no-padds no-after border border-card-stroke mt-40 mb-16">
                     <button class="more-down-button with-padds new">
@@ -158,23 +167,24 @@
                                 <div class="toy_card_tags_age body-s-bold">8+</div>
                             </div>
                             <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                            <div class="running-stroke">
-                                <div class="marquee">
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                    <span>скидка 15%</span>
-                                </div>
-                            </div>
+
                             <div class="toy_card_image item_card_image">
+                                <div class="running-stroke">
+                                    <div class="marquee">
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                        <span>скидка 15%</span>
+                                    </div>
+                                </div>
                                 <img
                                         class="toy_card_img item_card_img"
                                         src="../../img/cards_toy.svg"
