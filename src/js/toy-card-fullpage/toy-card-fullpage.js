@@ -116,17 +116,17 @@ if (jsMdbAuthorButton) {
 
 
 // убрать текст у видео при полной ширине экрана
-const videoItems = document.querySelectorAll('.card_video_item');
-
-// Перебираем каждый элемент
-if (videoItems) {
-  videoItems.forEach((item) => {
-    if (item.classList.contains('full-width')) {
-      const titleElement = item.querySelector('.card_video_title');
-      titleElement.style.display = 'none';
-    }
-  });
-}
+// const videoItems = document.querySelectorAll('.card_video_item');
+//
+// // Перебираем каждый элемент
+// if (videoItems) {
+//   videoItems.forEach((item) => {
+//     if (item.classList.contains('full-width')) {
+//       const titleElement = item.querySelector('.card_video_title');
+//       titleElement.style.display = 'none';
+//     }
+//   });
+// }
 
 // еще один слайдер
 const imageContainer = document.querySelector('.card-fullpage-image-container');
