@@ -714,11 +714,11 @@ button {
 
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl  bg-black text-white text-2.5xl;
   width: 17.4rem;
   height: 2.4rem;
-  z-index: 5;
-  top: 30rem;
+  z-index: 1000;
+  top: 80rem;
   transform: rotate(-90deg);
   transform-origin: left top;
 }
