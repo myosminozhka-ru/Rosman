@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Детальная страница новости</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div class="search-result-wrapper">
+  @@include('components/header/header-main.html', { }, )
+  <div id="yellow-background">
+    <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="!p-0 relative">
+      <!--   боковая штучка с соцсетями   -->
+      <div class="absolute right-[2.4rem] top-64 bg-black
+                  rounded-full
+                  flex flex-row
+                  gap-16 px-12 py-8
+                  sm:!flex-col px-8 !right-[1.2rem]">
+        <a href="#" class="block w-16 h-16">
+          <img class="w-full h-full" src="../../img/YT.svg" alt="">
+        </a>
+        <a href="#" class="block w-16 h-16">
+          <img class="w-full h-full" src="../../img/VK.svg" alt="">
+        </a>
+        <a href="#" class="block w-16 h-16">
+          <img class="w-full h-full" src="../../img/VK.svg" alt="">
+        </a>
+      </div>
+      <div class="flex flex-col gap-24 !p-24 sm:!p-12">
+        <div class="flex justify-between  items-center">
+          <p class="breadcrumbs">
+            <a class="text-s" href="#">Главная </a><span>/</span>
+            <a class="text-s text-text" href="#">Каталог новостей </a><span>/</span>
+            <a class="text-s !text-black" href="#">Новость</a>
+
+          </p>
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots ">/</div>
+            <a class="breadcrumbs-small-screen-path text-text">Каталог новостей</a>
+            <span>/</span>
+            <a class="breadcrumbs-small-screen-path">Новость</a>
+          </div>
+        </div>
+      </div>
+      <div class="custom-box !z-1 !fixed sm:!hidden">
+        <span></span>
+        <div class="custom-before"></div>
+        <a href="mailto:rosman@rosman.ru">Написать нам</a>
+        <div class="custom-after"></div>
+      </div>
+      <!--   тут будет контент   -->
+      <!--   хэдэр -->
+      <div class="mx-auto max-w-[80rem] mb-34 px-24 relative sm:!mb-10 !px-12 text-start w-4/5 sm:mx-0">
+        <div class="text-6xl mb-16 w-full text-center sm:text-4xl !mb-0 sm:text-start">
+          Оказывается, базовый вектор развития ни к чему нас не обязывает
+        </div>
+      </div>
+      <div class="text-center px-24 sm:!p-12">
+        <!--  сколько просмотрено и дата релиза    -->
+        <div
+          class="mx-auto mb-32 flex flex-row max-w-[36rem]
+          justify-center items-center flex-nowrap gap-16 sm:gap-4 sm:mb-0 sm:justify-between sm:max-w-full">
+
+          <div class="px-12 py-4 rounded-3xl border border-black text-s font-medium">
+            Психология
+          </div>
+
+          <div class="sm:!hidden">|</div>
+
+          <div class="text-text text-15.20 flex flex-row flex-nowrap gap-24 sm:gap-8">
+            <div class="flex flex-row flex-nowrap gap-8 sm: !justify-between">
+              <div class="block w-20 h-20">
+                <img class="w-full h-full" src="../../img/release-cal.svg" alt="">
+              </div>
+              <div class="sm:!text-s">10 февраля 2023</div>
+            </div>
+
+            <div class="flex flex-row flex-nowrap gap-8">
+              <div class="block w-20 h-20">
+                <img class="w-full h-full" src="../../img/eye-seen.svg" alt="">
+              </div>
+              <div class="sm:!text-s">12 809</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--   main picture   -->
+      <div class="px-24 !mb-[3.2rem] w-full h-[40rem] sm: !px-12 !h-[34rem] !mb-[1.6rem]">
+        <img src="../../img/detailed-news-main-pic.svg" class=" w-full h-full object-cover" alt="">
+      </div>
+
+      <!--   tags   -->
+      <div class="flex flex-row justify-center items-center !mb-[3.2rem] sm:!mb-[2.4rem]">
+        <div class="flex flex-row justify-start flex-wrap gap-8 content-around max-w-[60rem] sm:!px-12">
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Вдохновение
+          </div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Личная
+            эффективность
+          </div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Психология</div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Путешествия
+          </div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Наши авторы
+          </div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Интервью</div>
+          <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">История книг
+          </div>
+        </div>
+      </div>
+
+      <!--   news' text is here   -->
+      <div class="flex flex-col justify-center gap-16 px-24 sm:!px-12 items-center relative">
+        <!--    photo absolute pos   -->
+        <div class="absolute hidden top-[1%] right-[3%]
+                    border-card-stroke
+                    py-24 max-w-[25.5rem]
+                    flex flex-col
+                    !justify-start gap-16
+                    ">
+          <div class="head-5">Читайте так же</div>
+          <div class="flex flex-col gap-8">
+            <a href="#" class="link-m">
+              Логотип крупнейшей компании по производству мыльных пузырей связывает нас с нашим прошлым
+            </a>
+            <a href="#" class="link-m">
+              Высококачественный прототип будущего проекта оправдал надежды граждан
+            </a>
+            <a href="#" class="link-m">
+              Допустим, средства индивидуальной защиты оказались бесполезны
+            </a>
+          </div>
+        </div>
+        <div class="absolute top-[0%] right-[3%]">
+          <div class="flex flex-row flex-nowrap mb-16 items-center justify-start gap-16 md:hidden">
+            <div class="block h-[5.6rem] w-[5.6rem]
+                          sm: h-[4.4rem] w-[4.4rem]">
+              <img class="w-full h-full rounded-full"
+                   src="../../img/detailed-news-main-pic.svg" alt="">
+            </div>
+            <div class="link-m">Иван Иванов</div>
+          </div>
+        </div>
+        <!--     main text     -->
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+          <div class="head-3">
+            Оказывается, коронованный герцог графства бодрит
+          </div>
+          <div class="text-15.20 font-medium">
+            <div class="flex flex-row flex-nowrap mb-16 items-center justify-start gap-16 hidden md:flex">
+              <div class="block h-[5.6rem] w-[5.6rem]
+                          sm: h-[4.4rem] w-[4.4rem]">
+                <img class="w-full h-full rounded-full"
+                     src="../../img/detailed-news-main-pic.svg" alt="">
+              </div>
+              <div class="link-m">Иван Иванов</div>
+            </div>
+            Предварительные выводы неутешительны: укрепление и развитие внутренней структуры требует от нас анализа
+            дальнейших направлений развития. Сложно сказать, почему элементы политического процесса ограничены
+            исключительно образом мышления. Но понимание сути ресурсосберегающих технологий способствует подготовке и
+            реализации новых предложений. Принимая во внимание показатели успешности, высококачественный прототип
+            будущего проекта однозначно определяет каждого участника как способного принимать собственные решения
+            касаемо системы массового участия.
+          </div>
+          <!--    news navigation    -->
+          <div class="flex flex-col justify-center mb-24">
+            <div class="border-y border-card-stroke py-24 max-w-[60rem] flex flex-col !justify-start gap-16">
+              <div class="head-5">Навигация по новости</div>
+              <div class="flex flex-col gap-8">
+                <a href="#" class="link-m">
+                  Доблесть наших правозащитников стала доступной ширнармассам
+                </a>
+                <a href="#" class="link-m">
+                  Небо темнеет
+                </a>
+                <a href="#" class="link-m">
+                  Все чаще появляется информация о том, что светлый лик
+                  правового взаимодействия даёт нам право
+                  принимать самостоятельные решения
+                </a>
+                <a href="#" class="link-m">
+                  Реализация намеченных плановых заданий позволила расправить крылья
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-15.20 font-medium">
+            Повседневная практика показывает, что современная методология разработки создаёт необходимость включения в
+            производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по
+            своей масштабности и грандиозности. Как уже неоднократно упомянуто, элементы политического процесса
+            заблокированы в рамках своих собственных рациональных ограничений. Для современного мира экономическая
+            повестка сегодняшнего дня предоставляет широкие возможности для прогресса профессионального сообщества.
+          </div>
+          <div class="text-15.20 font-medium">
+            Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса
+            представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены
+            исключительно в разрезе маркетинговых и финансовых предпосылок. Имеется спорная точка зрения, гласящая
+            примерно следующее: непосредственные участники технического прогресса представляют собой не что иное, как
+            квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе маркетинговых
+            и финансовых предпосылок. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные
+            участники технического прогресса представляют собой не что иное, как квинтэссенцию победы маркетинга над
+            разумом и должны
+          </div>
+        </div>
+        <!--    тут будет текст, который будет заменяться плавающим сбоку    -->
+        <div class="border-y
+                    hidden
+                    border-card-stroke
+                    py-24 max-w-[60rem]
+                    flex flex-col
+                    !justify-start gap-16
+                    bs:flex
+                    ">
+          <div class="head-5">Читайте так же</div>
+          <div class="flex flex-col gap-8">
+            <a href="#" class="link-m">
+              Логотип крупнейшей компании по производству мыльных пузырей связывает нас с нашим прошлым
+            </a>
+            <a href="#" class="link-m">
+              Высококачественный прототип будущего проекта оправдал надежды граждан
+            </a>
+            <a href="#" class="link-m">
+              Допустим, средства индивидуальной защиты оказались бесполезны
+            </a>
+          </div>
+        </div>
+
+        <!--    quoted text    -->
+        <div class="flex flex-col gap-24 mb-8 max-w-[60rem] !items-center mt-8">
+          <div class="flex flex-col gap-16 items-start justify-start p-24 bg-background rounded-[3rem]">
+            <div class="block w-[1.8rem] h-[1.4rem]">
+              <img class="w-full h-full" src="../../img/quotes.svg" alt="">
+            </div>
+            <div class="text-3xl font-medium">
+              Приятно, граждане, наблюдать, как сторонники тоталитаризма
+              в науке призывают нас к новым свершениям,
+              которые, в свою очередь, должны быть ассоциативно
+              распределены по отраслям.
+            </div>
+            <div class="flex flex-row flex-nowrap items-center gap-16">
+              <div class="block h-[5.6rem] w-[5.6rem]
+                          sm: h-[4.4rem] w-[4.4rem]">
+                <img class="w-full h-full rounded-full"
+                     src="../../img/detailed-news-main-pic.svg" alt="">
+              </div>
+              <div class="link-m">Иван Иванов</div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--    block with secondary img    -->
+        <div class="flex flex-col gap-24 mb-8 max-w-[60rem]">
+          <div class="text-15.20">
+            Повседневная практика показывает, что современная методология разработки создаёт необходимость включения в
+            производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по
+            своей масштабности и грандиозности. Как уже неоднократно упомянуто, элементы политического процесса
+            заблокированы в рамках своих собственных рациональных ограничений. Для современного мира экономическая
+            повестка сегодняшнего дня предоставляет широкие возможности для прогресса профессионального сообщества.
+          </div>
+          <div class="flex flex-col gap-16">
+            <div class="w-full !h-auto">
+              <img class="w-full h-full" src="../../img/detailed-news-secondary-img.svg" alt="">
+            </div>
+            <div class="text-15.20 flex flex-row">
+              Фото с подписью и &nbsp<a class="link-m" href="#">ссылкой</a>
+            </div>
+          </div>
+          <div class="text-15.20">
+            Банальные, но неопровержимые выводы, а также диаграммы связей, инициированные исключительно синтетически,
+            объявлены нарушающими общечеловеческие нормы этики и морали.
+          </div>
+          <div class="font-medium text-3xl p-24 bg-yellow">
+            Выделенный акцентный текст. Возможно важная мысль из предыдущего блока, резюме вышесказанного, важная
+            тнформация и т.д.
+          </div>
+        </div>
+
+        <!--     main text  again   -->
+        <div class="flex flex-col gap-24 max-w-[60rem] mb-8 !items-center">
+          <div class="head-3">
+            Все чаще появляется информация о том, что курс на социально-ориентированный национальный
+            проект не стал ограничивающим фактором
+          </div>
+          <div class="text-15.20 font-medium">
+            А ещё сделанные на базе интернет-аналитики выводы объективно рассмотрены соответствующими инстанциями.
+            Задача организации, в особенности же синтетическое тестирование способствует повышению качества позиций,
+            занимаемых участниками в отношении поставленных задач. Сложно сказать, почему независимые государства
+            обнародованы. Мы вынуждены отталкиваться от того, что курс на социально-ориентированный национальный проект,
+            в своём классическом представлении, допускает внедрение кластеризации усилий. С другой стороны, граница
+            обучения кадров говорит о возможностях анализа существующих паттернов поведения.
+          </div>
+        </div>
+        <!--    quoted text  again  -->
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+          <div class="flex flex-col gap-16 items-start justify-start p-24 bg-background rounded-[3rem]">
+            <div class="block w-[1.8rem] h-[1.4rem]">
+              <img class="w-full h-full" src="../../img/quotes.svg" alt="">
+            </div>
+            <div class="text-3xl font-medium">
+              Цитата или прямая речь. В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление
+              влечет за собой процесс внедрения и модернизации.
+            </div>
+            <div class="flex flex-row flex-nowrap items-center gap-16">
+              <div class="block h-[5.6rem] w-[5.6rem]
+                          sm: h-[4.4rem] w-[4.4rem]">
+                <img class="w-full h-full rounded-full"
+                     src="../../img/detailed-news-main-pic.svg" alt="">
+              </div>
+              <div class="link-m">Иван Иванов</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+          <div class="text-15.20">
+            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада, в
+            своём классическом представлении, допускает внедрение своевременного выполнения сверхзадачи.
+          </div>
+          <div class="flex flex-col gap-16 w-full">
+            <div class="card_video_item full-width ">
+              <div class="card_video_preview sm: !aspect-auto h-[34rem]">
+                <img src="../../img/cards_video_preview.svg" alt=""/>
+                <button class="card_video_play_button circle-button"></button>
+              </div>
+            </div>
+            <div class="text-15.20 flex flex-row">
+              Видео с подписью и &nbsp;<a class="link-m" href="#">ссылкой</a>
+            </div>
+          </div>
+          <div class="text-15.20">
+            Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса
+            представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены
+            исключительно в разрезе маркетинговых и финансовых предпосылок.
+          </div>
+        </div>
+        <!--    тут будет свипер    -->
+
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+          <div class="swiper-detailed-page-video">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full max-w-[40rem] ssm:max-w-[29.6rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-header !w-full items-center sm:!mt-8 sm:!my-0 ssm:max-w-[29.6rem]">
+              <div class="text-15.20 flex flex-row flex-wrap ssm:max-w-[16.6rem]">
+                Слайдер с видео или фото c подписью и&nbsp<a class="link-m" href="#">ссылкой</a>
+              </div>
+              <div class="buttons !gap-24 !w-[6rem]">
+                <div class="button-prev"></div>
+                <div class="button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--   тут конечные итоги типа тэгов и т.д.   -->
+        <div class="flex flex-col gap-24 mb-24 max-w-[60rem] !items-center">
+          <div class="text-15.20">
+            Не следует, однако, забывать, что внедрение современных методик играет определяющее значение для
+            инновационных методов управления процессами. Для современного мира сплочённость команды профессионалов
+            требует анализа кластеризации усилий.
+          </div>
+          <div class="text-15.20 w-full flex flex-col gap-8">
+            <div class="flex flex-row">
+              <span class="text-15.20 font-medium">По материалам:&nbsp</span>
+              <a href="#" class="link-m">Ссылка на источник</a>
+            </div>
+            <div class="flex flex-row">
+              <span class="text-15.20 font-medium">Обложка статьи:&nbsp</span>
+              <a href="#" class="link-m">Ссылка на источник</a>
+            </div>
+          </div>
+
+
+          <div class="flex flex-col gap-8">
+            <div class="text-15.20">Теги</div>
+            <div class="flex flex-row justify-start flex-wrap gap-8 content-around max-w-[60rem]">
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Вдохновение
+              </div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Личная
+                эффективность
+              </div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Психология
+              </div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Путешествия
+              </div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Наши авторы
+              </div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">Интервью</div>
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">История книг
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 w-full">
+            <div class="text-15.20">Рубрика</div>
+            <div class="flex flex-row justify-start flex-wrap gap-8 content-around max-w-[60rem]">
+              <div class="text-s font-medium border border-black rounded-full px-12 py-4 sm:!font-normal">
+                Кругозор
+              </div>
+            </div>
+          </div>
+          <!--    Похожие новости    -->
+
+        </div>
+        <div class="flex flex-col gap-40 md:!gap-24 w-full mb-[6.4rem] sm:mb-[4.8rem]">
+          <div class="text-5xl font-medium md:hidden">Похожие новости</div>
+          <div class="flex flex-row flex-nowrap gap-16 md:hidden">
+            <!--  карточки СТАТЬИ маленький размер текста  -->
+            <div class="card_articles js_traceable_item">
+              <a href="#" class="card_articles_image item_card_image">
+                <img
+                  src="../../img/cards_article_small_fs.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div class="card_articles_description js-bg-changeable">
+                <div class="card_articles_tags dotted_tags">
+                  <a href="#" class="card_articles_category dotted_tags_category"
+                  >Статьи</a
+                  >
+                  <div class="card_articles_separator dotted_tags_separator">•</div>
+                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                </div>
+                <a href="#" class="card_articles_info card_sel_info">
+                  <div class="card_articles_name_sfs card_sel_name">
+                    Новый закон накладывает вето на полуночный
+                  </div>
+                  <div class="card_articles_text_sfs card_sel_text">
+                    Противоположная точка зрения подразумевает, что явные признаки победы
+                    институционализации лишь добавляют фракционных разногласий и объявлены
+                    нарушающими общечеловеческие нормы этики и морали.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!--  карточки СТАТЬИ маленький размер текста  -->
+            <div class="card_articles js_traceable_item">
+              <a href="#" class="card_articles_image item_card_image">
+                <img
+                  src="../../img/cards_article_small_fs.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div class="card_articles_description js-bg-changeable">
+                <div class="card_articles_tags dotted_tags">
+                  <a href="#" class="card_articles_category dotted_tags_category"
+                  >Статьи</a
+                  >
+                  <div class="card_articles_separator dotted_tags_separator">•</div>
+                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                </div>
+                <a href="#" class="card_articles_info card_sel_info">
+                  <div class="card_articles_name_sfs card_sel_name">
+                    Новый закон накладывает вето на полуночный
+                  </div>
+                  <div class="card_articles_text_sfs card_sel_text">
+                    Противоположная точка зрения подразумевает, что явные признаки победы
+                    институционализации лишь добавляют фракционных разногласий и объявлены
+                    нарушающими общечеловеческие нормы этики и морали.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!--  карточки СТАТЬИ маленький размер текста  -->
+            <div class="card_articles js_traceable_item">
+              <a href="#" class="card_articles_image item_card_image">
+                <img
+                  src="../../img/cards_article_small_fs.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div class="card_articles_description js-bg-changeable">
+                <div class="card_articles_tags dotted_tags">
+                  <a href="#" class="card_articles_category dotted_tags_category"
+                  >Статьи</a
+                  >
+                  <div class="card_articles_separator dotted_tags_separator">•</div>
+                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                </div>
+                <a href="#" class="card_articles_info card_sel_info">
+                  <div class="card_articles_name_sfs card_sel_name">
+                    Новый закон накладывает вето на полуночный
+                  </div>
+                  <div class="card_articles_text_sfs card_sel_text">
+                    Противоположная точка зрения подразумевает, что явные признаки победы
+                    институционализации лишь добавляют фракционных разногласий и объявлены
+                    нарушающими общечеловеческие нормы этики и морали.
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden  md:!block">
+            <div class="swiper-detailed-page">
+              <div class="swiper-header !w-full  sm:!mt-12">
+                <h3 class="head-3 ">Похожие новости</h3>
+                <div class="buttons">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_article_small_fs.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a href="#" class="card_articles_category dotted_tags_category"
+                        >Статьи</a
+                        >
+                        <div class="card_articles_separator dotted_tags_separator">•</div>
+                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name_sfs card_sel_name">
+                          Новый закон накладывает вето на полуночный
+                        </div>
+                        <div class="card_articles_text_sfs card_sel_text">
+                          Противоположная точка зрения подразумевает, что явные признаки победы
+                          институционализации лишь добавляют фракционных разногласий и объявлены
+                          нарушающими общечеловеческие нормы этики и морали.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--   ниже только футер   -->
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    </div>
+  </div>
+
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
+
+
+<!-- элемент карточки, -->
