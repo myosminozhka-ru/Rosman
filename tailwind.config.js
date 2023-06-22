@@ -1,72 +1,73 @@
 const options = require("./config"); //options from config.js
 
 const allPlugins = {
-    typography: require("@tailwindcss/typography"),
-    forms: require("@tailwindcss/forms"),
-    containerQueries: require("@tailwindcss/container-queries")
+  typography: require("@tailwindcss/typography"),
+  forms: require("@tailwindcss/forms"),
+  containerQueries: require("@tailwindcss/container-queries")
 };
 
 const plugins = Object.keys(allPlugins)
-    .filter((k) => options.plugins[k])
-    .map((k) => {
-        if (k in options.plugins && options.plugins[k]) {
-            return allPlugins[k];
-        }
-    });
+  .filter((k) => options.plugins[k])
+  .map((k) => {
+    if (k in options.plugins && options.plugins[k]) {
+      return allPlugins[k];
+    }
+  });
 
 // /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{html,js,php}"],
-    darkMode: "class",
-    theme: {
-        maxWidth: {
-            'menu': '165px',
-            'inner-menu': '216px',
-            "5xl": '115rem',
-            "8.8": "8.8rem"
-        },
-        screens: {
-            sm: { max: "639px" },
-            md: { max: "768px" },
-            ssm: { max: "400px" },
-        },
-        fontSize: {
-            l: ["1.7rem", "2.4rem"],
-            m: ["1.5rem", "2rem"],
-            s: ["1.3rem", "1.8rem"],
-            xl: ["1.3rem", "1.8rem"],
-            '11.14': ["1.1rem", "1.4rem"],
-            // добавил класс для всплывашки у попапа
-            '12.20.4': ["1.2rem", "2.04rem"],
-            "15.20": ["1.5rem", "2rem"],
-            "2xl": ["2.1rem", "2.4rem"],
-            "2.5xl": ["1.7rem", "2.4rem"],
-            "3xl": ["2.4rem", "2.8rem"],
-            "4xl": ["2.7rem", "3.2rem"],
-            "5xl": ["3.4rem", "4rem"],
-            "6xl": ["4.3rem", "4.8rem"],
-            "7xl": ["5.5rem", "6rem"],
-            "8xl": ["9.6rem", "6rem"],
-        },
-        colors: {
-            "purple-1": "#06083D",
-            "purple-2": "#311166",
-            "purple-3": "#1F1871",
-            "purple-4": "#4B65CD",
-            "purple-5": "#AF74E9",
-            "blue-1": "#0070EA",
-            "blue-2": "#4498FC",
-            green: "#33C15B",
-            yellow: "#FFF145",
-            black: "#000000",
-            text: "#808080",
-            "card-stroke": "#D9D9D9",
-            background: "#F5F5F5",
-            white: "#ffffff",
-            grey: "#E3E3E2",
-            red: "#FF0053",
-            orange: "#FF8500",
-            "orange-text": "#F46300",
+  content: ["./src/**/*.{html,js,php}"],
+  darkMode: "class",
+  theme: {
+    maxWidth: {
+      'menu': '165px',
+      'inner-menu': '216px',
+      "5xl": '115rem',
+      "8.8": "8.8rem"
+    },
+    screens: {
+      sm: {max: "639px"},
+      md: {max: "768px"},
+      ssm: {max: "400px"},
+      bs: {max: "999px"},
+      hs: {max: "1500px"}
+    },
+    fontSize: {
+      l: ["1.7rem", "2.4rem"],
+      m: ["1.5rem", "2rem"],
+      s: ["1.3rem", "1.8rem"],
+      xl: ["1.3rem", "1.8rem"],
+      '11.14': ["1.1rem", "1.4rem"],
+      // добавил класс для всплывашки у попапа
+      '12.20.4': ["1.2rem", "2.04rem"],
+      "15.20": ["1.5rem", "2rem"],
+      "2xl": ["2.1rem", "2.4rem"],
+      "2.5xl": ["1.7rem", "2.4rem"],
+      "3xl": ["2.4rem", "2.8rem"],
+      "4xl": ["2.7rem", "3.2rem"],
+      "5xl": ["3.4rem", "4rem"],
+      "6xl": ["4.3rem", "4.8rem"],
+      "7xl": ["5.5rem", "6rem"],
+    },
+    colors: {
+      "purple-1": "#06083D",
+      "purple-2": "#311166",
+      "purple-3": "#1F1871",
+      "purple-4": "#4B65CD",
+      "purple-5": "#AF74E9",
+      "blue-1": "#0070EA",
+      "blue-2": "#4498FC",
+      green: "#33C15B",
+      yellow: "#FFF145",
+      black: "#000000",
+      text: "#808080",
+      "card-stroke": "#D9D9D9",
+      background: "#F5F5F5",
+      white: "#ffffff",
+      grey: "#E3E3E2",
+      red: "#FF0053",
+      orange: "#FF8500",
+      "orange-text": "#F46300",
 
             // base-transition: 0.2s ease,
         },
@@ -126,15 +127,15 @@ module.exports = {
             },
 
 
-            borderRadius: {},
-            zIndex: {
-                '100': '100',
-                '900': '900',
-                '1000': '1000',
-                '9999': "9999",
-            },
+      borderRadius: {},
+      zIndex: {
+        '100': '100',
+        '900': '900',
+        '1000': '1000',
+        '9999': "9999",
+      },
 
-        },
     },
-    plugins: plugins,
+  },
+  plugins: plugins,
 };
