@@ -135,10 +135,10 @@
 
 /* Стили активной кнопки */
 .toolbar-button.active {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 880px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 880px) {
     color: #535353;
     background-color: #ffffff;
   }
@@ -239,7 +239,7 @@ header {
     @apply ml-24;
     @apply block;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
@@ -247,32 +247,32 @@ header {
   .mobile-logo {
     @apply hidden;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply block;
     }
   }
 
   .dropdown {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .header-nav {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .hide-mobile {
     .search-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
 
     .micro-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
@@ -1032,7 +1032,7 @@ header {
 }
 
 .quest-eleph {
-  @apply bg-yellow items-center h-screen;
+  @apply bg-yellow items-center h-full;
 
   .images-block {
     @apply flex justify-center flex-row;
