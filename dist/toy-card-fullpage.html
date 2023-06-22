@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Игрушки. Карточка товара.</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="card-fullpage">
+  <header id="header" class="bottom header" data-header="toys">
+    <div class="logo "><img src="../../img/logo.png"></div>
+    <div class="mobile-logo "><img src="../../img/mobile-logo.png"></div>
+    <div class="dropdown">
+        <button><div class="icon"></div>Каталог</button>
+        <div class="content">
+            <a href="#"><div class="menu-icon-book"></div>Книги</a>
+            <a href="#"><div class="menu-icon-toys"></div>Игрушки</a>
+        </div>
+    </div>
+    <nav class="header-nav ">
+        <ul>
+            <li class="company"><a href="#">Бренды</a></li>
+            <li class="news"><a href="#">Новости</a></li>
+            <li class="about"><a href="#">О компании</a></li>
+            <li class="publisher"><a href="#">Издательство</a></li>
+            <li class="books-news"><a href="#">Новости книг</a></li>
+            <li class="NDK"><a href="#">НДК</a></li>
+            <li class="rosmen">
+                <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
+                <div class="more-down-content out">
+                    <p>Содержимое 1</p>
+                    <p>Содержимое 1</p>
+                    <p>Содержимое 1</p>
+                </div>
+            </li>
+            <li class="toys"><a href="#">Игрушки</a></li>
+            <li class="career"><a href="#">Карьера</a></li>
+            <li class="contacts"><a href="#">Контакты</a></li>
+            <li class="author"><a href="#">Авторы</a></li>
+            <li class="partners"><a href="#">Партнерам</a></li>
+        </ul>
+    </nav>
+    <div class="search-input hide">
+        <span class="search-icon"></span>
+        <span class="micro-icon"></span>
+        <input type="text"  placeholder="Введите поисковый запрос">
+        <span class="cross-icon" onclick="toggleSearch()"></span>
+    </div>
+    <div class="header-btn ">
+        <span class="search-button" onclick="toggleSearch()"></span>
+        <span class="micro-button"></span>
+        <span class="heart-button"></span>
+        <div class="language">
+            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+        </div>
+    </div>
+</header>
+
+  <div id="yellow-background" class="card-fullpage-modified-yellow-background">
+    <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="card-fullpage-modified-above-block">
+      <!--    тут будет контент по карточке    -->
+
+      <div class="custom-box">
+        <span></span>
+        <div class="custom-before"></div>
+        <a href="mailto:rosman@rosman.ru">Написать нам</a>
+        <div class="custom-after"></div>
+      </div>
+
+      <div class="flex my-24 items-center px-24 justify-between">
+        <p class="breadcrumbs">
+          <a href="#">Главная </a><span>/</span>
+          <a href="#">Игрушки </a><span>/</span>
+          <a href="#">Все игрушки </a><span>/</span>
+          <a href="#">Волчки и блейды </a><span>/</span>
+          <a href="#">Арена</a><span>/</span>
+          <a href="#">Ещё уровень вложенности</a><span>/</span>
+          <a href="#">Волчок Эпик Лончер Стандарт Gold Phoenix</a>
+        </p>
+        <div class="breadcrumbs-small-screen">
+          <div class="breadcrumbs-small-screen-image"></div>
+          <div class="breadcrumbs-small-screen-dots ">
+            ...
+            <div class="breadcrumbs-arrow"></div>
+            <div class="breadcrumbs-path-hidden-text">
+              <a href="#">Игрушки</a>
+              <a href="#">Все игрушки</a>
+              <a href="#">Волчки и блейды</a>
+              <a href="#">Арена</a>
+              <a href="#">Ещё уровень вложенности</a>
+            </div>
+          </div>
+          <div class="breadcrumbs-small-screen-path">Волчок Эпик Лончер Стандарт Gold Phoenix</div>
+        </div>
+        <div class="breadcrumbs-icons">
+          <a href="#" class="item_card-external-link"></a>
+          <button class="item_card_add_to_favourite"></button>
+        </div>
+      </div>
+
+      <div class="card-fullpage-main-info px-24 top-info ">
+        <div class="card-fullpage-images">
+          <div class="largeImg-wrapper">
+            <img class="largeImg" src="../../img/card-fullpage/img1.svg" alt="Large image">
+            <div class="card-fullpage-tags bordered_tags_main">
+              <a href="#" class="bordered_tags_item ">Хит</a>
+              <a href="#" class="bordered_tags_item ">Новинка</a>
+              <a href="#" class="bordered_tags_item bordered_tags_item-hidden">5+</a>
+            </div>
+          </div>
+          <ul class="thumbs">
+            <li>
+              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img1.svg" title="Image 2"><img
+                src="../../img/card-fullpage/img1.svg"></a>
+            </li>
+            <li>
+              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img2.svg" title="Image 3"><img
+                src="../../img/card-fullpage/img2.svg"></a>
+            </li>
+            <li class="relative">
+              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img3.svg" title="Image 4"><img
+                src="../../img/card-fullpage/img3.svg">
+              </a>
+              <button class="circle-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
+            </li>
+            <li class="relative">
+              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img4.svg" title="Image 5"><img
+                src="../../img/card-fullpage/img4.svg">
+              </a>
+              <button class="rounded-arrow-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
+            </li>
+            <li>
+              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img5.svg" title="Image 6"><img
+                src="../../img/card-fullpage/img5.svg"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-fullpage-image-slider">
+          <div class="card-fullpage-image-container">
+            <img src="../../img/card-fullpage/img1.svg" alt="Image 1">
+            <img src="../../img/card-fullpage/img2.svg" alt="Image 2">
+            <img src="../../img/card-fullpage/img3.svg" alt="Image 3">
+            <img src="../../img/card-fullpage/img4.svg" alt="Image 3">
+            <img src="../../img/card-fullpage/img5.svg" alt="Image 3">
+          </div>
+          <div class="card-fullpage-dots-container">
+            <span class="card-fullpage-dot active"></span>
+            <span class="card-fullpage-dot"></span>
+            <span class="card-fullpage-dot"></span>
+            <span class="card-fullpage-dot"></span>
+            <span class="card-fullpage-dot"></span>
+          </div>
+        </div>
+        <div class="card-fullpage-description">
+          <div class="card-fp-desc-main">
+            <div class="card-fp-desc-top">
+              <div class="card-fp-desc-header">Инфинити Надо.
+                Волчок Эпик Лончер Стандарт Gold Phoenix
+              </div>
+              <div class="card-fp-desc-vendor-code">Артикул: 40599</div>
+              <div class="card-fp-desc-target-aud">Для мальчиков</div>
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Сильви Мишле</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">Sylvie Michelet</a>
+              </div>
+              <div class="card-fp-desc-text">
+                <p class="card-fp-desc-text-top">
+                  Инфинити Надо – самый мощный блейд для крутейших баттлов!
+                  Эпик Лончер – новое представление о пусковых установках и волчках!
+                  Готовься к самому эпичному запуску блейдов Инфинити Надо Мечом Эпик
+                  Лончер Стандарт, 39 см! Он помогает точнее запустить блейд на арену.
+                  Меч не только пусковая установка, но и монтажный инструмент.
+                </p>
+                <p class="card-fp-desc-text-top card-fp-trans card-fp-transparent-text">
+                  В комплект входит облегченный волчок для скоростного запуска.
+                  Его можно пересобирать: все элементы взаимозаменяемы внутри линейки Эпик Лончер.
+                  Вставь Надо в специальное отверстие до щелчка, раскрути волчок с помощью ножен,
+                  нажми кнопку запуска. Блейд Эпик Лончер Стандарт светится при вращении и
+                  нажатии на аватар. Порази соперника эпичностью
+                </p>
+                <p class="card-fp-desc-text-top card-fp-hide js-card-fp-hidden-item">
+                  В комплект входит облегченный волчок для скоростного запуска.
+                  Его можно пересобирать: все элементы взаимозаменяемы внутри линейки Эпик Лончер.
+                  Вставь Надо в специальное отверстие до щелчка, раскрути волчок с помощью ножен,
+                  нажми кнопку запуска. Блейд Эпик Лончер Стандарт светится при вращении и
+                  нажатии на аватар. Порази соперника эпичностью
+                </p>
+              </div>
+              <button class="more-down-button js-mdb">Подробное описание, характеристики<span></span>
+              </button>
+
+            </div>
+            <div class="card-fp-desc-bottom">
+              <div class="card-fp-desc-buy">Купить игрушку</div>
+              <div class="card-fp-desc-buy-buttons">
+                <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-1"></a>
+                <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-2"></a>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="card-fp-desc-buttons">
+            <a href="#" class="bordered_tags_item-fp">5+</a>
+            <a href="#" class="item_card-external-link"></a>
+            <button class="item_card_add_to_favourite"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-fullpage-card-brands px-24 small-cards ">
+        <div class="card_brand card-fullpage-card-brand">
+          <div class="card_brand_content">
+            <div class="card_brand_info">
+              <div class="card_brand_all_items">Товары бренда</div>
+              <div class="card_brand_name">Инфинити Надо</div>
+            </div>
+            <a href="#" class="card_brand_image">
+              <img src="../../img/card-fullpage/infinity-nado.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="card_brand card-fullpage-card-brand">
+          <div class="card_brand_content">
+            <div class="card_brand_info">
+              <div class="card_brand_all_items">Товары коллекции</div>
+              <div class="card_brand_name">Дикие Скричеры</div>
+            </div>
+            <a href="#" class="card_brand_image">
+              <img src="../../img/card-fullpage/wild-screeches.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="card_brand card-fullpage-card-brand">
+          <div class="card_brand_content">
+            <div class="card_brand_info">
+              <div class="card_brand_all_items">Товары серии</div>
+              <div class="card_brand_name">Трансформеры</div>
+            </div>
+            <a href="#" class="card_brand_image">
+              <img src="../../img/card-fullpage/infinity-nado.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-fullpage-tabs px-24">
+        <div class="navigation">
+          <ul class="navigation-flex">
+            <li><a class="card-fullpage-tab card-fp-tab-desc active-js" href="#">Описание</a></li>
+            <li><a class="card-fullpage-tab card-fp-tab-char" href="#">Характеристики</a></li>
+            <li><a class="card-fullpage-tab card-fp-tab-instr" href="#">Инструкция</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--компонент из таба ОПИСАНИЕ-->
+      <div class="card-fp-description px-24">
+        <!-- контент первого таба ОПИСАНИЕ  -->
+<div class="card-fullpage-desc-image ">
+    <img src="../../img/card-fullpage/fullpage-desc-image.svg" alt="">
+</div>
+
+<div class="js-card-fullpage-desc-description ">
+
+    <div class="card-fullpage-desc-common">
+       <div class="card-fullpage-desc-header card-header-text">Пусковая установка Эпик Лончер Стандарт</div>
+       <div class="card-fullpage-desc-text card-descr-text">Готовься к самому эпичному запуску блейдов
+           Инфинити Надо Мечом Эпик Лончер Стандарт! Пусковая установка подарит
+           совершенно новый опыт запуска волчка на арену даже самому умелому игроку надо!
+           Вставь свой Надо в специальное отверстие до щелчка, раскрути волчок и
+           нажми на кнопку запуска. Меч это не только пусковая установка, но и монтажный инструмент.
+       </div>
+    </div>
+    <!--  блок фото - картинка  -->
+    <div class="card-fullpage-desc-block js-item-to-hide-desc js-card-fp-hidden-item">
+        <div class="card-fullpage-desc-block-img">
+            <img src="../../img/card-fullpage/holding-the-sword.svg" alt="">
+        </div>
+        <div class="card-fullpage-desc-block-text card-fullpage-desc-common-2">
+            <div class="more-card-header card-header-text">
+                Что входит в комплект Инфинити Надо Эпик Лончер Стандарт?
+            </div>
+            <div class="more-card-text card-descr-text">
+                Волчок Infinity Nado линейки Эпик Лончер Стандарт состоит из
+                5 основных частей: аватара Надо, верхнее кольцо, соединитель,
+                нижнее кольцо и наконечника. Эти элементы являются взаимозаменяемыми
+                со всеми волчками серий коллекции Эпик Лончер: Стартер, Стандарт
+                и Адвандс.
+            </div>
+            <div class="more-card-text card-descr-text">
+                <span>В набор входят:</span>
+                <ul>
+                  <li>1 светящийся волчок</li>
+                  <li>1 пусковая установка Эпик Лончер Стандарт</li>
+                  <li>1 монтажный инструмент</li>
+                  <li>1 инструкция на русском языке</li>
+                </ul>
+            </div>
+            <div class="more-card-text card-descr-text">
+                Все элементы взаимозаменяемы со всеми волчками серий коллекции Эпик Лончер.
+            </div>
+
+        </div>
+    </div>
+    <!--  блок фото - картинка  -->
+    <div class="card-fullpage-desc-block-reversed js-item-to-hide-desc js-card-fp-hidden-item">
+        <div class="card-fullpage-desc-block-text card-fullpage-desc-common-2">
+
+            <div class="more-card-header card-header-text">
+                Какая цена Инфинити Надо Эпик Лончер Стандарт?
+            </div>
+
+            <div class="more-card-text card-descr-text">
+                Инфинити Надо Эпик Лончер Стандарт — технологичная линейка
+                новой коллекции для ценителей и продвинутых игроков.
+                Наличие и стоимость блейдов уточняйте на сайтах
+                официальных магазинов-партнеров.
+            </div>
+
+        </div>
+        <div class="card-fullpage-desc-block-img">
+            <img src="../../img/card-fullpage/sword-with-adds.svg" alt="">
+        </div>
+    </div>
+
+    <!--  блок карточек  -->
+    <div class="card-fullpage-desc-more js-item-to-hide-desc js-card-fp-hidden-item">
+        <!--  карточки  -->
+        <div class="card-fullpage-desc-more-card card-descr-text">
+            <div class="card-fullpage-desc-more-card-image">
+                <img src="../../img/card-fullpage/sword-with-circle-box.svg" alt="">
+            </div>
+            <div class="card-fullpage-desc-more-card-text">
+                Забавная новогодняя история о том,
+                что все желания исполняются и чудо
+                непременно получится, если сделать его своими руками!
+            </div>
+        </div>
+        <div class="card-fullpage-desc-more-card card-descr-text">
+            <div class="card-fullpage-desc-more-card-image">
+                <img src="../../img/card-fullpage/circle.svg" alt="">
+            </div>
+            <div class="card-fullpage-desc-more-card-text">
+                Забавная новогодняя история о том,
+                что все желания исполняются и чудо непременно
+                получится, если сделать его своими руками!
+            </div>
+        </div>
+        <div class="card-fullpage-desc-more-card card-descr-text">
+            <div class="card-fullpage-desc-more-card-image">
+                <img src="../../img/card-fullpage/box.svg" alt="">
+            </div>
+            <div class="card-fullpage-desc-more-card-text">
+                Забавная новогодняя история о том,
+                что все желания исполняются и чудо непременно получится,
+                если сделать его своими руками!
+            </div>
+        </div>
+    </div>
+
+    <button class="more-down-button js-mdb-desc-button">Развернуть описание<span></span></button>
+
+</div>
+      </div>
+
+      <!--    характеристики   -->
+      <div class="card-fp-characteristics hidden px-24">
+        <div class="card-fullpage-characteristics">
+  <div class="card-fp-char-items">
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Тип</div>
+      <div class="body-m ">Пусковая игрушка</div>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Размер</div>
+      <div class="body-m">14*40*7 см</div>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Производитель</div>
+      <a href="#" class="body-m link-m-bold">Alfa Group</a>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Бренд</div>
+      <a href="#" class="body-m link-m-bold">Infinity Nado</a>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Материал</div>
+      <a href="#" class="body-m link-m-bold">Металл, Пластик</a>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Страна-изготовитель</div>
+      <div class="body-m">Китай</div>
+    </div>
+  </div>
+
+  <!--second page-->
+  <div class="card-fp-char-items">
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Артикул</div>
+      <div class="body-m">40599</div>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Персонаж</div>
+      <div class="body-m">Эпик Лончер</div>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Цвет</div>
+      <a href="#" class="body-m link-m-bold">Оранжевый, красный, голубой</a>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Минимальный возраст ребенка</div>
+      <div class="body-m">От 5 лет</div>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Пол ребенка</div>
+      <a href="#" class="body-m link-m-bold">Мальчик</a>
+    </div>
+
+    <div class="card-fp-char-item flex flex-row flex-nowrap justify-between relative">
+      <div class="body-m text-text">Максимальный возраст ребенка</div>
+      <a href="#" class="body-m link-m-bold">До 12 лет</a>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <!--   инструкция      -->
+      <div class="card-fp-instruction hidden px-24">
+        <div class="card-fullpage-instruction">
+  <div class="card-fullpage-instruction-text">
+    <div class="card-fullpage-instruction-text-image"></div>
+    <div class="card-fullpage-instruction-text-what">
+      Инструкция. Машинка-трансформер Роки Вульф S1 ТМ.pdf
+    </div>
+  </div>
+  <button class="card-fullpage-instruction-button button-black">
+    Скачать
+  </button>
+</div>
+      </div>
+
+      <!--компонент с карточками КНИГ И ИГРУШЕК-->
+      <div class="swiper">
+        <div class="swiper-header !w-full">
+          <h3 class="head-3">С этой игрушкой часто покупают</h3>
+          <div class="buttons">
+            <div class="button-prev"></div>
+            <div class="button-next"></div>
+          </div>
+
+        </div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="toy_card item_card">
+              <div class="toy_card_heading">
+                <div class="item_card_tags bordered_tags">
+                  <div class="item_card_tags_main bordered_tags_main">
+                    <div class="toy_card_tags_first bordered_tags_item body-s-bold">
+                      Бестселлер
+                    </div>
+                    <div class="toy_card_tags_second bordered_tags_item body-s-bold">
+                      Новинка
+                    </div>
+                  </div>
+                  <div class="toy_card_tags_age body-s-bold">8+</div>
+                </div>
+                <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                <div class="toy_card_image item_card_image">
+                  <img
+                    class="toy_card_img item_card_img"
+                    src="../../img/cards_toy.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="toy_card_info item_card_info">
+                <div class="toy_card_name item_card_name">
+                  Арена для баттлов Инфинити Надо
+                </div>
+                <div class="toy_card_more item_card_more">
+                  <button class="toy_card_item_link item_card_link overline-button">
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- тут наклоняющаяся фотогалерея -->
+      <div id="white-background" class="card-fullpage-w-bg-modified">
+        <div id="yellow-moving-block" class="card-fullpage-w-bg-modified">
+          <div id="parent">
+            <img id="follower" class="slide-el card-fullpage-slide-el-mod"
+                 src="../../img/running-elephant/slide-el.png">
+          </div>
+        </div>
+        <div id="above-block" class="above-block-mod">
+          <div class="swiper-image pb-60 my-0">
+            <div class="swiper-header !w-full sw-head-mod">
+              <h3 class="head-3">Фотогалерея</h3>
+              <div class="buttons">
+                <div class="button-prev"></div>
+                <div class="button-next"></div>
+              </div>
+
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card_photogallery_item">
+                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
+                  <div class="cards_photogallery_eye_image">
+                    <img
+                      class="cards_photogallery_eye_img"
+                      src="../../img/cards_photogallery_eye.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- тут ниже видео блок -->
+      <div class="card_video_item full-width px-24 mb-64">
+        <div class="card_video_preview">
+          <img src="../../img/cards_video_preview.svg" alt=""/>
+          <button class="card_video_play_button circle-button"></button>
+        </div>
+
+        <div class="card_video_info">
+          <span class="card_video_title">Как правильно выбрать книгу: наши советы для любителей книг</span>
+        </div>
+      </div>
+
+      <!-- тут ниже футер -->
+      <div class="footer rosman-footer-ru">
+  <div class="footer-container">
+    <div class="footer-heading">
+      <div class="footer-heading-main">
+        <span class="footer-heading-image"></span>
+        <div class="footer-heading-subscription">
+          <div class="drop-down-discover-rosman">
+            <div href="#" class="more-down-button disc-rosman-button">
+              Книги<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-14 text-grey"/>
+            <div href="#" class="more-down-button disc-rosman-button">
+              Игрушки<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-14 text-grey"/>
+          </div>
+          <div class="footer-heading-subs-title">
+            Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
+            раз в неделю. Бесплатно, по делу
+          </div>
+          <div class="footer-heading-subs-inputs">
+            <div class="footer-heading-subs-inputs-main">
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="footer-heading-subs-input input"
+              />
+              <button class="footer-heading-subs-button button-yellow">
+                Подписаться
+              </button>
+            </div>
+            <div class="js-footer-heading-policy-agreement checkbox_main">
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности</a
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-heading-discover-rosman">
+        <div class="footer_heading_about footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Компания</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >О компании</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Партнёрам</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Карьера в РОСМЭН</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Контакты</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_books footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Книги</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >Каталог книг</a>
+
+            <a href="#" class="footer-section-item common-text body-s"
+            >Авторы РОСМЭН</a>
+
+            <a href="#" class="footer-section-item common-text body-s"
+            >Об издательстве</a
+            >
+            <a href="#" class="footer-section-item common-text body-s">НДК</a>
+            <a href="#" class="footer-section-item common-text body-s"
+            >Писательская школа</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Проект раз</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Проект два</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_toys footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Игрушки</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >Каталог игрушек</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Бренды</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Новости игрушек</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="text-grey"/>
+    <div class="footer-info">
+      <div class="footer-info-main">
+        <div class="footer-info-rss common-text">
+          <a href="#" class="footer-info-rss-image"></a>RSS рассылка
+        </div>
+        <div class="footer-info-contacts">
+          <div class="footer-info-address ft-inf-item common-text">
+            17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+            помещ. II, 1 этаж
+          </div>
+          <div class="footer-info-directs ft-inf-item">
+            <a href="tel:+74959337130" class="footer-info-tel common-text">+7 495 933-71-30</a>
+            <a href="mailto:rosman@rosman.ru" class="footer-info-email-one common-text">
+              rosman@rosman.ru
+            </a>
+          </div>
+          <div class="footer-info-address ft-inf-item common-text">
+            127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
+            Роща
+          </div>
+          <a href="mailto:rosman@rosman.ru" class="footer-info-email-two common-text">rosman@rosman.ru</a>
+        </div>
+      </div>
+      <hr class="text-grey"/>
+      <div class="footer-extras">
+        <div class="footer-extras-creators">
+          <div class="footer-extras-idea common-text">
+            © 1992–2023 ООО РОСМЭН. Все права защищены.
+          </div>
+          <div class="footer-extras-maker common-text">
+            Разработка сайта: Осьминожка
+          </div>
+        </div>
+        <div class="footer-extras-links">
+          <div class="footer-extras-link common-text link-m-bold">
+            Политика конфиденциальности
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">
+            Пользовательское соглашение
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script type="module" src="./js/scripts.js"></script>
+</body>
+</html>
