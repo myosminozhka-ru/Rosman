@@ -12,12 +12,15 @@ const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
   breakpoints: {
     950: {
       slidesPerView: 3,
+      spaceBetween: 16,
     },
     500: {
       slidesPerView: 2,
+      spaceBetween: 8,
     },
     0: {
       slidesPerView: 1,
+      spaceBetween: 8,
     },
   },
 });
