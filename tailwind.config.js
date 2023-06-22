@@ -30,6 +30,9 @@ module.exports = {
       md: {max: "768px"},
       ssm: {max: "400px"},
       bs: {max: "999px"},
+      bsmax: {max: "1099px"},
+      bsmin: {min: "1100px"},
+      shs: {max: "1200"},
       hs: {max: "1500px"}
     },
     fontSize: {

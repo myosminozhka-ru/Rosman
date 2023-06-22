@@ -118,6 +118,7 @@
       <!--   news' text is here   -->
       <div class="flex flex-col justify-center gap-16 px-24 sm:!px-12 items-center relative">
         <!--    photo absolute pos   -->
+
         <div class="absolute top-[0%] right-[3%]">
           <div class="flex flex-row flex-nowrap mb-16 items-center justify-start gap-16 md:hidden">
             <div class="block h-[5.6rem] w-[5.6rem]
@@ -160,8 +161,31 @@
             разумом и должны
           </div>
         </div>
+        <!--    тут будет текст, который будет заменяться плавающим сбоку    -->
+        <div class="border-y
+                    hidden
+                    border-card-stroke
+                    py-24 max-w-[60rem]
+                    flex flex-col
+                    !justify-start gap-16
+                    bs:flex
+                    ">
+          <div class="head-5">Читайте так же</div>
+          <div class="flex flex-col gap-8">
+            <a href="#" class="link-m">
+              Логотип крупнейшей компании по производству мыльных пузырей связывает нас с нашим прошлым
+            </a>
+            <a href="#" class="link-m">
+              Высококачественный прототип будущего проекта оправдал надежды граждан
+            </a>
+            <a href="#" class="link-m">
+              Допустим, средства индивидуальной защиты оказались бесполезны
+            </a>
+          </div>
+        </div>
+
         <!--    quoted text    -->
-        <div class="flex flex-col gap-24 mb-24 max-w-[60rem] !items-center">
+        <div class="flex flex-col gap-24 mb-8 max-w-[60rem] !items-center">
           <div class="flex flex-col gap-16 items-start justify-start p-24 bg-background rounded-[3rem]">
             <div class="block w-[1.8rem] h-[1.4rem]">
               <img class="w-full h-full" src="../../img/quotes.svg" alt="">
@@ -268,7 +292,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-24 mb-24 max-w-[60rem] !items-center">
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
           <div class="text-15.20">
             Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада, в
             своём классическом представлении, допускает внедрение своевременного выполнения сверхзадачи.
@@ -291,7 +315,82 @@
           </div>
         </div>
         <!--    тут будет свипер    -->
-        <div></div>
+
+        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+          <div class="swiper-detailed-page-video">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !w-full !max-w-[40rem]">
+                <div class="card_video_item !max-w-[40rem]">
+                  <div class="card_video_preview">
+                    <img src="../../img/cards_video_preview.svg" alt=""/>
+                    <button class="card_video_play_button circle-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-header !w-full items-center">
+              <div class="text-15.20 flex flex-row">
+                Слайдер с видео или фото и&nbsp<a class="link-m" href="#">ссылкой</a>
+              </div>
+              <div class="buttons">
+                <div class="button-prev"></div>
+                <div class="button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!--   тут конечные итоги типа тэгов и т.д.   -->
         <div class="flex flex-col gap-24 mb-24 max-w-[60rem] !items-center">
           <div class="text-15.20">
@@ -432,15 +531,14 @@
               </div>
             </div>
           </div>
-          <div class="hidden md: !flex">
-            <div class="swiper">
-              <div class="swiper-header">
-                <h3 class="head-3">Книги о которых все говорят<sup class="underline text-m">все</sup></h3>
+          <div class="hidden  md:!block">
+            <div class="swiper-detailed-page">
+              <div class="swiper-header !w-full">
+                <h3 class="head-3">Похожие новости</h3>
                 <div class="buttons">
                   <div class="button-prev"></div>
                   <div class="button-next"></div>
                 </div>
-
               </div>
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
@@ -657,7 +755,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <!--   ниже только футер   -->

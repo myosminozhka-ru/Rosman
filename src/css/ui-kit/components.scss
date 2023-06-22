@@ -465,8 +465,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -486,8 +485,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -510,7 +508,9 @@ header {
 
 .swiper,
 .swiper-text,
-.swiper-image {
+.swiper-image,
+.swiper-detailed-page,
+.swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
   padding: 0 3rem !important;
@@ -542,6 +542,12 @@ header {
       }
     }
   }
+}
+
+// добавил,т.к. в html !p-0 не переопределял стили
+.swiper-detailed-page,
+.swiper-detailed-page-video {
+  padding: 0 !important;
 }
 
 .partners-stroke {

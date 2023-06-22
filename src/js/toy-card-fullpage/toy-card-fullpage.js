@@ -119,12 +119,14 @@ if (jsMdbAuthorButton) {
 const videoItems = document.querySelectorAll('.card_video_item');
 
 // Перебираем каждый элемент
-videoItems.forEach((item) => {
-  if (item.classList.contains('full-width')) {
-    const titleElement = item.querySelector('.card_video_title');
-    titleElement.style.display = 'none';
-  }
-});
+if (videoItems) {
+  videoItems.forEach((item) => {
+    if (item.classList.contains('full-width')) {
+      const titleElement = item.querySelector('.card_video_title');
+      titleElement.style.display = 'none';
+    }
+  });
+}
 
 // еще один слайдер
 const imageContainer = document.querySelector('.card-fullpage-image-container');
