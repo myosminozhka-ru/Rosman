@@ -118,7 +118,25 @@
       <!--   news' text is here   -->
       <div class="flex flex-col justify-center gap-16 px-24 sm:!px-12 items-center relative">
         <!--    photo absolute pos   -->
-
+        <div class="absolute hidden top-[1%] right-[3%]
+                    border-card-stroke
+                    py-24 max-w-[25.5rem]
+                    flex flex-col
+                    !justify-start gap-16
+                    ">
+          <div class="head-5">Читайте так же</div>
+          <div class="flex flex-col gap-8">
+            <a href="#" class="link-m">
+              Логотип крупнейшей компании по производству мыльных пузырей связывает нас с нашим прошлым
+            </a>
+            <a href="#" class="link-m">
+              Высококачественный прототип будущего проекта оправдал надежды граждан
+            </a>
+            <a href="#" class="link-m">
+              Допустим, средства индивидуальной защиты оказались бесполезны
+            </a>
+          </div>
+        </div>
         <div class="absolute top-[0%] right-[3%]">
           <div class="flex flex-row flex-nowrap mb-16 items-center justify-start gap-16 md:hidden">
             <div class="block h-[5.6rem] w-[5.6rem]
@@ -757,9 +775,10 @@
             </div>
           </div>
         </div>
-        <!--   ниже только футер   -->
-        @@include('components/ui-kit/footer/footer-ru.html', { }, )
+
       </div>
+      <!--   ниже только футер   -->
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
   </div>
 

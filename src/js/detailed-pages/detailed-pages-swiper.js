@@ -24,7 +24,7 @@ const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
 
 const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
   // Optional parameters
-  loop: true,
+  loop: false,
   // Navigation arrows
   navigation: {
     nextEl: '.button-next',
