@@ -100,6 +100,20 @@ const jsPopupBrandFiltersModal = document.querySelector(
   ".js_popup_brand_filters_button"
 );
 
+const jsPopupWishlistFiltersButton = document.querySelector(
+  ".js_popup_wishlist_filters_modal"
+);
+const jsPopupWishlistFiltersModal = document.querySelector(
+  ".js_popup_wishlist_filters_button"
+);
+
+const jsPopupWishlistSortButton = document.querySelector(
+  ".js_popup_wishlist_sort_modal"
+);
+const jsPopupWishlistSortModal = document.querySelector(
+  ".js_popup_wishlist_sort_button"
+);
+
 const popups = [
   [jsPopupContactUsRuModal, jsContactUsRuPopupButton],
   [jsPopupContactUsEngModal, jsContactUsEngPopupButton],
@@ -112,6 +126,8 @@ const popups = [
   [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
   [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
   [jsPopupBrandFiltersButton, jsPopupBrandFiltersModal],
+  [jsPopupWishlistFiltersButton, jsPopupWishlistFiltersModal],
+  [jsPopupWishlistSortButton, jsPopupWishlistSortModal],
 ];
 
 for (let i = 0; i < popups.length; i++) {
