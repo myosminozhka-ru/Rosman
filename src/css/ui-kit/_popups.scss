@@ -738,7 +738,7 @@
 }
 
 .pup_btn {
-  @apply text-15.20;
+  @apply text-15.20   max-h-40;
   white-space: nowrap;
 }
 
@@ -837,6 +837,13 @@
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    grid-gap: 0.6rem;
+  }
+}
+
+.rowed-buttons {
+  @media screen and (max-width: 600px) {
+    flex-direction: row !important;
     grid-gap: 0.6rem;
   }
 }
