@@ -1,5 +1,5 @@
 .container-elephant-on-planets {
-  @apply my-70 flex flex-col items-center px-40;
+  @apply mb-70 mt-100 flex flex-col items-center px-40;
   @media (min-width: 701px) and (max-width: 900px) {
     @apply px-20;
   }

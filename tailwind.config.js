@@ -48,6 +48,7 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
+      "8xl": ["9.6rem", "6rem"],
     },
     colors: {
       "purple-1": "#06083D",

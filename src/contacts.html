@@ -48,8 +48,8 @@
                 <p class="text-l">+7 495 933-71-30</p>
             </div>
         </div>
-        <iframe class="mobile-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg" width="300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe class="desktop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="mobile-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="desktop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="flex flex-row md:flex-col  justify-between px-24 my-42">
             <div class="flex flex-col  gap-16 w-1/4 md:w-full">
                 <img src="../../img/toys.svg" class="w-58 h-58">
@@ -83,29 +83,10 @@
             </div>
         </div>
         <div class="flex flex-row md:flex-col  justify-between">
-            <p class="text-l text-text w-1/12 md:w-full">Для вопросов и предложений</p>
+            <p class="text-l ml-4 text-text w-1/12 md:w-full">Для вопросов и предложений</p>
             <p class="text-8xl md:text-5xl"> rosman@rosman.ru</p>
         </div>
-        <div class="eleph-run-moon my-60">
-            <video id="movie" width="145" height="110" preload="auto" autoplay="autoplay" loop="loop">
-                <source src="../../img/running-elephant/run.webm" type='video/webm; codecs="vp8, vorbis"' />
-            </video>
-            <img class="spinning-moon" src="../../img/running-elephant/moon.png">
-            <img class="spinning-moon moon-1" src="../../img/running-elephant/moon-2.png">
-            <img class="spinning-moon moon-2" src="../../img/running-elephant/moon-3.png">
-            <div class="text-on-moon">
-                <p class="text-7xl md:text-5xl">Вакансии</p>
-                <a class="text-m overline-button">Все вакансии</a>
-            </div>
-            <div class="text-on-moon moon-1">
-                <p class="text-7xl md:text-5xl">Для Авторов</p>
-                <a class="text-m overline-button">Перейти</a>
-            </div>
-            <div class="text-on-moon moon-2">
-                <p class="text-7xl md:text-5xl">Для оптовых <br> продаж</p>
-                <a class="text-m overline-button">Оставить заявку</a>
-            </div>
-        </div>
+        @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', { }, )
     </div>
 </div>
 <div class="custom-box !fixed">
