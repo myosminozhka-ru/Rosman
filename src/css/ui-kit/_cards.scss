@@ -21,7 +21,7 @@
 }
 
 .bordered_tags_item:hover {
-  @apply bg-yellow;
+  @apply bg-yellow border border-yellow;
 }
 
 .book_card {
@@ -167,10 +167,7 @@
 }
 
 .dotted_tags_category {
-  @apply text-15.20 font-normal text-black;
-  @media screen and (max-width: 400px) {
-    @apply text-xl;
-  }
+  @apply text-xl font-normal text-black;
 }
 
 .dotted_tags_separator {
@@ -367,7 +364,7 @@
 }
 
 .card_career_title {
-  @apply text-4xl ssm:text-2xl;
+  @apply text-4xl font-medium ssm:text-2xl;
 }
 
 .card_career_tags {
@@ -375,7 +372,7 @@
 }
 
 .card_career_tag {
-  @apply rounded-3xl bg-yellow px-12 py-4 ssm:text-s;
+  @apply rounded-3xl text-s bg-yellow px-12 py-4;
 }
 
 .card_career:hover .card_career_tag {
