@@ -14,3 +14,10 @@
     padding: 0.4rem !important;
   }
 }
+
+.bordered_tags_item {
+  @media (min-width: 769px) and (max-width: 1000px) {
+    @apply text-11.14;
+    padding: 0.4rem !important;
+  }
+}
