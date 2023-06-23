@@ -192,7 +192,6 @@ button {
 
 .sort-label {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
-  max-width: 30rem;
   min-width: 5rem;
 
   .count {

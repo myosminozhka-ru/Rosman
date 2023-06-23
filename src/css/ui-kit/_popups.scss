@@ -1127,15 +1127,14 @@ img {
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
   @apply relative m-20 flex flex-col gap-24 bg-white p-40;
-  max-width: 100rem;
   margin: auto;
 
   @media screen and (max-width: 500px) {
-    @apply m-24 gap-24 p-24;
+    @apply m-0 gap-24 p-12;
   }
 
   @media (min-width: 501px) and (max-width: 800px) {
-    @apply m-24 gap-24 p-24;
+    @apply m-0 gap-24 p-12;
   }
 }
 
@@ -1152,7 +1151,22 @@ img {
 }
 
 .popup_all_filters_filters {
-  @apply flex flex-row flex-wrap gap-8;
+  @apply flex flex-row flex-nowrap gap-8;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.popup_all_filters_filters::-webkit-scrollbar {
+  display: none;
+}
+
+.popup_all_filters_filters {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.popup_all_filters_filters::-webkit-scrollbar {
+  display: none;
 }
 
 .popup_all_filters_filter {
@@ -1185,20 +1199,18 @@ img {
 }
 
 .popup_all_filters_filter_not_found {
-  @apply text-center;
+  @apply text-center font-medium;
 }
 
 // filter block
 .js_popup_all_filters_modal {
-  @apply mx-10;
-
   @media (min-width: 701px) and (max-width: 1000px) {
     @apply px-10;
   }
 }
 
 .popup_all_filters_block_filter {
-  @apply flex grow flex-row gap-56;
+  @apply flex grow flex-row gap-56 bs:gap-0 ;
 
   @media (min-width: 901px) and (max-width: 1000px) {
     @apply gap-16;

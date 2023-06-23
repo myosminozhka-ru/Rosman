@@ -70,6 +70,15 @@
   display: none;
 }
 
+.card-fullpage-filter-links {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-fullpage-filter-links::-webkit-scrollbar {
+  display: none;
+}
+
 .card-fullpage-filter-link {
   @apply px-12 py-4 inline-block;
   border-radius: 1.5rem;
