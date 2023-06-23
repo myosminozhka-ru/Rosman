@@ -95,7 +95,8 @@
 
   @media screen and (max-width: 600px) {
     margin: 0 2rem;
-    padding: 1.6rem;
+    padding: 1.2rem;
+    grid-gap: 1.6rem;
   }
 }
 
@@ -106,6 +107,9 @@
 .popup_blockchain_body {
   @apply flex flex-col;
   grid-gap: 4rem;
+  @media screen and (max-width: 600px) {
+    grid-gap: 1.6rem;
+  }
 }
 
 .popup_blockchain_text_fields {
