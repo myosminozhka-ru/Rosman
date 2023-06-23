@@ -11,7 +11,7 @@
 // card's top
 .toy_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 26.6rem;
+  width: 100%;
 }
 
 .item_card_tags.bordered_tags {
@@ -76,6 +76,9 @@
 .bordered_tags_item {
   @apply px-12 py-4 body-s-bold;
   border: 1px solid #000000;
+  @media screen and (max-width: 900px) {
+    @apply px-4;
+  }
 }
 
 .bordered_tags_item:hover {

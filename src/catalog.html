@@ -81,9 +81,11 @@
                             <img src="../../img/brand_nado.svg" alt="" />
                         </a>
                     </div>
-                    <button class="js_popup_brand_choose_list_button popup-btn">
-                       все бренды
-                    </button>
+                    <div class="image_container_brand js_popup_brand_choose_list_button">
+                        <div class="all-brands">
+                           <p> Все бренды</p>
+                        </div>
+                    </div>
                 </div>
                 @@include('components/ui-kit/popups/popup-brand-listing.html', { }, )
                 <div id="open-filter" class="mobile-filter"> </div>
@@ -152,7 +154,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-around gap-16 my-40">
+                <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-16  my-40">
                     <div class="toy_card item_card">
                         <div class="toy_card_heading">
                             <div class="item_card_tags bordered_tags">

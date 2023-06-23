@@ -489,36 +489,50 @@ header {
       width: 100%;
     }
   }
-  .popup-btn {
-    margin: 0;
-    padding: 0;
-    width: 8rem;
-    height: 8rem;
+  .image_container_brand {
+    width: 100%;
+    height: 100%;
+    max-width: 8rem;
+    max-height: 8rem;
+  }
+  .all-brands {
     background: none;
     color:#808080;
     border: #808080 0.2rem solid;
     border-radius: 1rem;
+    text-align: center;
     font-size: 1.5rem;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding: 1.2rem 0;
+    p {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      white-space: normal;
+    }
   }
   .brand_choose_brands {
-    display: flex !important;
-    display: -webkit-flex !important;
-    flex-direction: row;
-    -webkit-flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     gap: 2rem;
-
-    @media screen and (max-width: 768px) {
-      display: flex !important;
-      display: -webkit-flex !important;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      overflow: scroll;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    white-space: nowrap;
+    .image_container_brand {
       width: 100%;
-      gap: 2rem;
-
-      .image_container_brand {
-        min-width: 50%;
-        width: 50%;
+      height: 8rem;
+      border-radius: 1rem;
+      a {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        img {
+          border-radius: 1rem;
+        }
       }
     }
   }
