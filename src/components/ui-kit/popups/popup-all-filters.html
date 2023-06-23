@@ -11,7 +11,7 @@
       <div class="popup_all_filters_filters">
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="novelty" class="sort-checkbox"/>
-          <label class="sort-label" for="novelty"
+          <label class="sort-label !font-medium" for="novelty"
           >Новинка<span class="count">12</span> <span class="cross"></span>
           </label>
         </div>
@@ -21,14 +21,14 @@
             id="interactive_features"
             class="sort-checkbox"
           />
-          <label class="sort-label" for="interactive_features"
+          <label class="sort-label !font-medium" for="interactive_features"
           >Интерактивные функции<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="sound_effects" class="sort-checkbox"/>
-          <label class="sort-label" for="sound_effects"
+          <label class="sort-label !font-medium" for="sound_effects"
           >Звуковые эффекты<span class="count">12</span>
             <span class="cross"></span>
           </label>
@@ -39,7 +39,7 @@
             id="erase_all_filters"
             class="sort-checkbox_erase"
           />
-          <label class="sort-label_erase" for="erase_all_filters"
+          <label class="sort-label_erase !font-medium" for="erase_all_filters"
           >Сбросить все
             <span class="cross"></span>
           </label>
@@ -80,8 +80,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex h-40 justify-between px-10">
-            <span class="my-auto text-15.20">Новинка</span>
+          <div class="my-4 flex flex h-40 justify-between pr-10">
+            <span class="my-auto font-medium  text-15.20">Новинка</span>
 
             <label class="toggle-switch">
               <input type="checkbox"/>
@@ -89,8 +89,8 @@
             </label>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex h-40 justify-between px-10">
-            <span class="my-auto text-15.20">Скоро в продаже</span>
+          <div class="my-4 flex flex h-40 justify-between pr-10">
+            <span class="my-auto font-medium  text-15.20">Скоро в продаже</span>
             <label class="toggle-switch">
               <input type="checkbox"/>
               <span class="slider"></span>
@@ -258,8 +258,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex justify-between px-10">
-            <span class="my-auto text-15.20">Подарок мечты</span>
+          <div class="my-4 flex flex justify-between pr-10">
+            <span class="my-auto font-medium text-15.20">Подарок мечты</span>
             <label class="toggle-switch">
               <input type="checkbox"/>
               <span class="slider"></span>
@@ -452,12 +452,39 @@
             </div>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex h-36 justify-between px-10">
-            <span class="my-auto text-15.20">Электронные функции</span>
-            <label class="toggle-switch">
-              <input type="checkbox"/>
-              <span class="slider"></span>
-            </label>
+          <div class="more-down-button justify-btwn null-margin">
+            Электронные функции<label class="toggle-switch">
+            <input type="checkbox" class="dropdown_checkbox"/>
+            <p class="slider"></p>
+          </label>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_100"
+              />
+              <label
+                for="popup_brands_checkbox_1_100"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_101"
+              />
+              <label
+                for="popup_brands_checkbox_1_101"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
           </div>
           <hr class="my-14 text-grey"/>
           <div class="more-down-button justify-btwn">Механизм<span></span></div>
@@ -490,8 +517,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex h-40 justify-between px-10">
-            <span class="my-auto text-15.20">Влагозащита</span>
+          <div class="my-4 flex flex h-40 justify-between pr-10">
+            <span class="my-auto font-medium text-15.20">Влагозащита</span>
             <label class="toggle-switch">
               <input type="checkbox"/>
               <span class="slider"></span>
@@ -690,8 +717,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey"/>
-          <div class="my-4 flex flex justify-between px-10">
-            <span class="my-auto text-15.20">Световые эффекты</span>
+          <div class="my-4 flex flex justify-between pr-10">
+            <span class="my-auto font-medium text-15.20">Световые эффекты</span>
             <label class="toggle-switch">
               <input type="checkbox"/>
               <span class="slider"></span>
