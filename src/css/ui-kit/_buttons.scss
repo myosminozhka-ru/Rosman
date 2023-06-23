@@ -147,7 +147,7 @@ button {
 .more-down-content {
   @apply hidden p-2;
   &.new {
-    @apply  absolute bg-white w-full border-2 border-card-stroke z-1000;
+    @apply absolute bg-white w-full border-2 border-card-stroke z-1000;
   }
 
   &.active-js {
@@ -317,6 +317,7 @@ button {
     }
   }
 }
+
 .breadcrumbs {
   @media (max-width: 801px) {
     @apply hidden;
@@ -383,6 +384,7 @@ button {
     max-width: calc(80%);
   }
 }
+
 .dropdown {
   @apply relative inline-block h-44 w-auto max-w-menu border-2 border-black bg-yellow px-4 py-2;
 
@@ -481,9 +483,11 @@ button {
       }
     }
   }
+
   .navigation-content {
     @apply bg-white z-9999;
     position: absolute;
+
     .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 1rem 1rem;
@@ -491,19 +495,23 @@ button {
       height: 1rem;
       right: 0;
       position: absolute;
-      @apply ml-4 inline-block text-left align-middle	cursor-pointer;
+      @apply ml-4 inline-block text-left align-middle    cursor-pointer;
     }
+
     &.hide {
-      @apply opacity-0 hidden transition-all duration-500 ease-linear	;
+      @apply opacity-0 hidden transition-all duration-500 ease-linear    ;
     }
+
     &.active-js {
-      @apply opacity-100 block  transition-all duration-500 ease-linear	;
+      @apply opacity-100 block  transition-all duration-500 ease-linear    ;
     }
+
     .content-layer {
       @apply flex;
       .picture {
         @apply w-3/12;
       }
+
       .name {
         @apply w-9/12 p-10 text-m;
       }
