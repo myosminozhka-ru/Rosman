@@ -154,12 +154,15 @@
 
 // карточка БОЛЬШАЯ ПОДБОРКИ
 .card_selection {
-  @apply flex flex-col gap-24;
+  @apply flex flex-col;
   max-width: 60.8rem;
 }
 
 .card_selection_description {
-  @apply flex flex-col gap-16 px-16 pb-16;
+  @apply flex flex-col gap-16 p-16 pt-24 border-x border-card-stroke border-b box-border sm:pt-16;
+  &:hover {
+    @apply border-0
+  }
 }
 
 .dotted_tags {
@@ -198,7 +201,7 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row gap-16 sm:flex-col;
+  @apply flex flex-row sm:flex-col;
   max-width: 60.8rem;
 }
 
@@ -211,12 +214,15 @@
 }
 
 .card_interview_description {
-  @apply flex flex-col gap-12 py-16 pr-16;
+  @apply flex flex-col gap-12 p-16 border-y border-card-stroke border-r box-border sm:border-x sm:border-b sm:border-t-0 ;
+  &:hover {
+    @apply border-0;
+  }
 }
 
 // Карточки ВЕРТИКАЛЬНЫЕ НЕБОЛЬШИЕ
 .card_articles {
-  @apply flex flex-col gap-24;
+  @apply flex flex-col;
   max-width: 40rem;
 }
 
@@ -237,7 +243,10 @@
 //}
 
 .card_articles_description {
-  @apply flex flex-col px-12 pb-12;
+  @apply flex flex-col px-12 pb-12 pt-16 gap-12  border-x border-card-stroke border-b box-border;
+  &:hover {
+    @apply border-0
+  }
 }
 
 .card_articles_name {
@@ -422,6 +431,11 @@
 // 4
 .card_career_more_info {
   @apply flex flex-row flex-nowrap items-center bg-black;
+  padding: 1.3rem 2rem;
+
+  &:hover {
+    background-color: #4d4d4d;
+  }
 }
 
 .card_career_text {
@@ -593,7 +607,12 @@
 }
 
 .card_employee_info {
-  @apply flex flex-col gap-8 p-20;
+  @apply flex flex-col gap-8 p-20 border-x border-card-stroke border-b;
+  &:hover {
+    @apply border-white;
+    background: var(--gray-scale-white, #FFF);
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
 }
 
 .card_employee_name {
