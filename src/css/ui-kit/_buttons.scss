@@ -48,12 +48,14 @@ button {
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
     background-image: url("../../img/play-fill.svg");
   }
 }
+
 
 .rounded-arrow-button {
   @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
