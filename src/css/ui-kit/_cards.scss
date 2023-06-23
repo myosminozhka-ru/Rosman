@@ -11,7 +11,9 @@
 // card's top
 .toy_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 26.6rem;
+  &:hover {
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
 }
 
 .item_card_tags.bordered_tags {
@@ -26,7 +28,17 @@
 
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 26rem;
+  &:hover {
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
+}
+
+.book_card:hover .item_card_image {
+  @apply bg-white;
+}
+
+.toy_card:hover .item_card_image {
+  @apply bg-white;
 }
 
 .toy_card_heading {
@@ -98,7 +110,6 @@
 // соотношение сторон - хз, надо проработать
 .item_card_image {
   @apply relative w-full bg-background;
-  //aspect-ratio: 342 / 296;
   &:hover {
     @apply bg-white;
   }
@@ -155,7 +166,6 @@
 // карточка БОЛЬШАЯ ПОДБОРКИ
 .card_selection {
   @apply flex flex-col;
-  max-width: 60.8rem;
 }
 
 .card_selection_description {
@@ -202,7 +212,6 @@
 //
 .card_interview {
   @apply flex flex-row sm:flex-col;
-  max-width: 60.8rem;
 }
 
 .card_interview_name {
@@ -223,7 +232,6 @@
 // Карточки ВЕРТИКАЛЬНЫЕ НЕБОЛЬШИЕ
 .card_articles {
   @apply flex flex-col;
-  max-width: 40rem;
 }
 
 //.card_articles {
@@ -272,7 +280,6 @@
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
-  max-width: 40rem;
   border: 1px solid #d9d9d9;
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;
@@ -327,7 +334,6 @@
 // КАТАЛОГ КНИГ КАРТОЧКА
 .card_book_catalog {
   @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm:p-16;
-  max-width: 60.8rem;
   border: 1px solid #d9d9d9;
 }
 
@@ -459,7 +465,6 @@
 
 .card_brand_with_socs {
   @apply relative;
-  max-width: 29.6rem;
 
   & img {
     @apply p-0;
@@ -511,8 +516,6 @@
 // КАРТОЧКА ФОТОГАЛЕРЕИ
 .card_photogallery_item {
   @apply relative relative cursor-pointer;
-  max-width: 29.6rem;
-  max-height: 29.6rem;
   aspect-ratio: 1/1;
 }
 
@@ -556,7 +559,6 @@
 // КАРТОЧКА ВИДЕО
 .card_video_item {
   @apply flex flex-col gap-16;
-  //max-width: 29.6rem;
 }
 
 .card_video_preview {
@@ -598,7 +600,6 @@
 // Карточка сотрудника
 .card_employee {
   @apply relative flex flex-col flex-nowrap;
-  max-width: 39.4rem;
 }
 
 .card_employee_image {
@@ -606,13 +607,14 @@
   max-width: 100%;
 }
 
+.card_employee:hover .card_employee_info {
+  @apply border-white;
+  background: var(--gray-scale-white, #FFF);
+  box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+}
+
 .card_employee_info {
   @apply flex flex-col gap-8 p-20 border-x border-card-stroke border-b;
-  &:hover {
-    @apply border-white;
-    background: var(--gray-scale-white, #FFF);
-    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
-  }
 }
 
 .card_employee_name {
@@ -713,11 +715,9 @@
 // карточка НАГРАД
 .card_awards_content {
   @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
-  max-width: 39rem;
 }
 
 .card_awards_image {
-  max-width: 368px;
   height: 128px;
   background-size: cover;
   background-position: center;
@@ -733,7 +733,6 @@
 
 .card_awards_title {
   @apply text-3xl font-medium ssm:text-2xl;
-  max-width: 33rem;
 }
 
 .card_awards_description {
