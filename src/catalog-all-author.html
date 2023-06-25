@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог Авторов</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+@@include('components/header/header-main.html', { }, )
+<div id="yellow-background">
+    <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block">
+        <div class="flex justify-between">
+            <p class="breadcrumbs p-24">
+                <a href="#">Главная </a><span>/</span>
+                <a href="#">Книги </a><span>/</span>
+                <a class="active-js" href="#">Авторы</a>
+            </p>
+            <div class="breadcrumbs-small-screen px-24">
+                <div class="breadcrumbs-small-screen-image"></div>
+                <div class="breadcrumbs-small-screen-dots">
+                    ...
+                    <div class="breadcrumbs-arrow"></div>
+                    <div class="breadcrumbs-path-hidden"></div>
+                </div>
+                <div class="breadcrumbs-small-screen-path">Авторы</div>
+            </div>
+            <div class="breadcrumbs-icons">
+                <a href="#" class="item_card-external-link"></a>
+                <button class="item_card_add_to_favourite"></button>
+            </div>
+        </div>
+        <div class="flex"><h1 class="head-1 px-25 mb-32">Авторы РОСМЭН</h1><sup class="text-text text-l">12 987</sup></div>
+        <div class="popup_all_filters_filters px-25  md:hidden">
+            <div class="popup_all_filters_filter">
+                <input type="checkbox" id="novelty" class="sort-checkbox" />
+                <label class="sort-label" for="novelty"
+                >Все авторы<span class="count">12</span> <span class="cross"></span>
+                </label>
+            </div>
+            <div class="popup_all_filters_filter">
+                <input
+                        type="checkbox"
+                        id="interactive_features"
+                        class="sort-checkbox"
+                />
+                <label class="sort-label" for="interactive_features"
+                >Детские авторы<span class="count">12</span>
+                    <span class="cross"></span>
+                </label>
+            </div>
+            <div class="popup_all_filters_filter">
+                <input type="checkbox" id="sound_effects" class="sort-checkbox" />
+                <label class="sort-label" for="sound_effects"
+                >Молодежные авторы<span class="count">12</span>
+                    <span class="cross"></span>
+                </label>
+            </div>
+            <div class="popup_all_filters_filter">
+                <input type="checkbox" id="new" class="sort-checkbox" />
+                <label class="sort-label" for="new"
+                >Новые авторы<span class="count">12</span>
+                    <span class="cross"></span>
+                </label>
+            </div>
+            <div class="popup_all_filters_filter">
+                <input type="checkbox" id="popular" class="sort-checkbox" />
+                <label class="sort-label" for="popular"
+                >Популярные авторы<span class="count">12</span>
+                    <span class="cross"></span>
+                </label>
+            </div>
+        </div>
+        <a href="" class="link-m px-25  my-24">Показать все направления</a>
+        <div class="more-down-filters w-full no-padds no-after border border-card-stroke mt-40 mb-16 hidden md:block">
+            <button class="more-down-button with-padds new">A<span></span></button>
+            <!--  more-down -->
+            <div class="more-down-content new">
+                <ul class="list-none p-0 m-0 whitespace-nowrap flex flex-col justify-between px-25 ">
+                    <li class="inline-block mr-6 text-2xl p-4">А</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Б</li>
+                    <li class="inline-block mr-6 text-2xl p-4">В</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Г</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Д</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Е</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ё</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ж</li>
+                    <li class="inline-block mr-6 text-2xl p-4">З</li>
+                    <li class="inline-block mr-6 text-2xl p-4">И</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Й</li>
+                    <li class="inline-block mr-6 text-2xl p-4">К</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Л</li>
+                    <li class="inline-block mr-6 text-2xl p-4">М</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Н</li>
+                    <li class="inline-block mr-6 text-2xl p-4">О</li>
+                    <li class="inline-block mr-6 text-2xl p-4">П</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Р</li>
+                    <li class="inline-block mr-6 text-2xl p-4">С</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Т</li>
+                    <li class="inline-block mr-6 text-2xl p-4">У</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ф</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Х</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ц</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ч</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ш</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Щ</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ъ</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ы</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ь</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Э</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Ю</li>
+                    <li class="inline-block mr-6 text-2xl p-4">Я</li>
+                    <li class="inline-block mr-6 text-2xl p-4">A-Z</li>
+                </ul>
+            </div>
+        </div>
+        <ul class="list-none p-0 m-0 whitespace-nowrap flex flex-row justify-between px-25 md:hidden">
+            <li class="inline-block mr-6 text-2xl p-4">А</li>
+            <li class="inline-block mr-6 text-2xl p-4">Б</li>
+            <li class="inline-block mr-6 text-2xl p-4">В</li>
+            <li class="inline-block mr-6 text-2xl p-4">Г</li>
+            <li class="inline-block mr-6 text-2xl p-4">Д</li>
+            <li class="inline-block mr-6 text-2xl p-4">Е</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ё</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ж</li>
+            <li class="inline-block mr-6 text-2xl p-4">З</li>
+            <li class="inline-block mr-6 text-2xl p-4">И</li>
+            <li class="inline-block mr-6 text-2xl p-4">Й</li>
+            <li class="inline-block mr-6 text-2xl p-4">К</li>
+            <li class="inline-block mr-6 text-2xl p-4">Л</li>
+            <li class="inline-block mr-6 text-2xl p-4">М</li>
+            <li class="inline-block mr-6 text-2xl p-4">Н</li>
+            <li class="inline-block mr-6 text-2xl p-4">О</li>
+            <li class="inline-block mr-6 text-2xl p-4">П</li>
+            <li class="inline-block mr-6 text-2xl p-4">Р</li>
+            <li class="inline-block mr-6 text-2xl p-4">С</li>
+            <li class="inline-block mr-6 text-2xl p-4">Т</li>
+            <li class="inline-block mr-6 text-2xl p-4">У</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ф</li>
+            <li class="inline-block mr-6 text-2xl p-4">Х</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ц</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ч</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ш</li>
+            <li class="inline-block mr-6 text-2xl p-4">Щ</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ъ</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ы</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ь</li>
+            <li class="inline-block mr-6 text-2xl p-4">Э</li>
+            <li class="inline-block mr-6 text-2xl p-4">Ю</li>
+            <li class="inline-block mr-6 text-2xl p-4">Я</li>
+            <li class="inline-block mr-6 text-2xl p-4">A-Z</li>
+        </ul>
+        <div class="grid auto-rows-auto	 gap-17  px-25 mt-40">
+            <div class=" ">
+                <div class="text-5xl mb-10">А</div>
+                <ul class="list-none grid grid-cols-3 md:grid-cols-none	 gap-x-17">
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                </ul>
+            </div>
+            <div class=" ">
+                <div class="text-5xl mb-10">Б</div>
+                <ul class="list-none grid grid-cols-3 md:grid-cols-none gap-x-17 ">
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                </ul>
+            </div>
+            <div class=" ">
+                <div class="text-5xl mb-10">В</div>
+                <ul class="list-none grid grid-cols-3 md:grid-cols-none gap-x-17 ">
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                </ul>
+            </div>
+            <div class=" ">
+                <div class="text-5xl mb-10">Г</div>
+                <ul class="list-none grid grid-cols-3 md:grid-cols-none gap-x-17 ">
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                    <li class="text-l text-text">А-Кун Дидье (1 книга)</li>
+                    <li class="text-l text-text">Ааронович Бен (1 книга)</li>
+                    <li class="text-l text-text">Абакумов Олег Александрович (1 книга)</li>
+                    <li class="text-l text-text">Абалмасова Дарья Александровна (1 книга)</li>
+                </ul>
+            </div>
+            <section class="pagination rm-pag my-40">
+                <div class="pagination-seen js-rm-pag-seen">
+                    Просмотрено авторов: 12 из 456
+                </div>
+                <button class="pagination-more-button js-rm-pag-more-btn">
+                    Показать ещё
+                </button>
+                <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+                    <button class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt">
+                        <span></span>Назад
+                    </button>
+                    <div class="nav-btns">
+                        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                            1
+                        </button>
+
+                        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                            2
+                        </button>
+
+                        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                            3
+                        </button>
+
+                        <button
+                                class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                        >
+                            4
+                        </button>
+
+                        <button
+                                class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                        >
+                            5
+                        </button>
+                    </div>
+
+                    <button class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt">
+                        Вперёд <span></span>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <div class="bg-background flex flex-row md:flex-col mx-24">
+            <div class="m-40">
+                <h3 class="head-2 py-8">Хотите стать автором РОСМЭН?</h3>
+                <p  class="text-l py-8">В своём стремлении повысить качество жизни, они забывают, что существующая теория требует анализа приоретизации разума над эмоциями.</p>
+                <button class="button-white bottom-0">Стать автором</button>
+            </div>
+            <img src="../../img/elephant-on-bricks.png">
+        </div>
+        @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
