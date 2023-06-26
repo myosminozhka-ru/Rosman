@@ -69,10 +69,10 @@ button {
 }
 
 .overline-button {
-  @apply flex flex-row items-center justify-center px-40 py-10 text-m underline;
+  @apply leading-none flex flex-row items-center justify-center p-0  text-m border-b-2 border-black;
 
   &:hover {
-    @apply no-underline;
+    @apply border-0  mb-1;
   }
 }
 
