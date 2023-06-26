@@ -389,13 +389,33 @@ button {
   button {
     @apply flex flex w-full flex-row items-center justify-between p-1 pb-16 text-l;
   }
+  &.menu {
+    @apply border-0 p-0 py-6;
+    &.hide {
+      @apply hidden;
+    }
+    &:hover .icon {
+      background: url("../../img/burger.svg") no-repeat center;
+      background-size: contain;
+    }
+    .icon {
+      @apply mb-1 h-24 w-24;
+      background: url("../../img/burger.svg") no-repeat center;
+      background-size: contain;
+
+    }
+  }
 
   .icon {
     @apply mb-1 h-24 w-24;
     background: url("../../img/menu-1.svg") no-repeat center;
     background-size: contain;
-  }
 
+  }
+  &:hover .icon {
+    background: url("../../img/menu-2.svg") no-repeat center;
+    background-size: contain;
+  }
   .content {
     @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-12;
 
@@ -440,10 +460,6 @@ button {
     @apply block;
   }
 
-  &:hover .icon {
-    background: url("../../img/menu-2.svg") no-repeat center;
-    background-size: contain;
-  }
 }
 
 .navigation {

@@ -135,6 +135,7 @@ if (movingBlock) {
 
 
 function toggleSearch() {
+    let mobileMenu = document.getElementById('mobile-menu')
     let headerNav = document.querySelector('.header-nav')
     let searchInput = document.querySelector('.search-input')
     let headerbtn = document.querySelector('.header-btn')
@@ -154,18 +155,26 @@ function toggleSearch() {
         searchInput.classList.add("hide");
     }
 
+    if (mobileMenu.classList.contains("hide")) {
+        mobileMenu.classList.remove("hide");
+    } else {
+        mobileMenu.classList.add("hide");
+    }
 }
 
 function changeLang(lang) {
-    let eng = document.querySelector('.eng-lang')
-    let rus = document.querySelector('.rus-lang')
-    if (lang === 'eng') {
-        rus.classList.remove("active-js");
-        eng.classList.add("active-js");
-    } else {
-        rus.classList.add("active-js");
-        eng.classList.remove("active-js");
+    let eng = document.querySelectorAll('.eng-lang')
+    let rus = document.querySelectorAll('.rus-lang')
+    for (let i = 0; i < rus.length; i++) {
+        if (lang === 'eng') {
+            rus[i].classList.remove("active-js");
+            eng[i].classList.add("active-js");
+        } else {
+            rus[i].classList.add("active-js");
+            eng[i].classList.remove("active-js");
+        }
     }
+
 }
 
 const yellowMovingBlock = document.getElementById("yellow-moving-block");

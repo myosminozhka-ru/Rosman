@@ -392,7 +392,20 @@ header {
   }
 
   .header-btn {
-    @apply inline-flex items-center;
+    @apply items-center;
+
+    &.dekstop {
+        @apply inline-flex;
+        @media screen and (max-width: 768px) {
+        @apply hidden;
+      }
+    }
+    &.mobile {
+      @apply hidden;
+      @media screen and (max-width: 768px) {
+        @apply inline-flex;
+      }
+    }
 
     span {
       @apply mr-10;
