@@ -1,10 +1,14 @@
-.pagination {}
+.pagination {
+}
 
-.pagination-seen {}
+.pagination-seen {
+}
 
-.pagination-more-button {}
+.pagination-more-button {
+}
 
-.pagination-nav-page-buttons {}
+.pagination-nav-page-buttons {
+}
 
 // паддинги не стал задавать, ведь мб контейнер будет ограничивать?
 .rm-pag {
@@ -36,7 +40,7 @@
 }
 
 .nav-btns {
-  @apply flex flex-row flex-nowrap gap-14;
+  @apply flex flex-row flex-nowrap gap-14 items-center;
 
   @media screen and (max-width: 500px) {
     @apply gap-8;
@@ -72,7 +76,7 @@
 }
 
 .js-rm-pag-nav-page-more-bnt {
-  @apply flex flex-row px-0 text-15.20;
+  @apply flex flex-row p-0 text-15.20;
 
   &:hover {
     @apply underline;
