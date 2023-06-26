@@ -1,0 +1,23 @@
+.stuff-search-result-item {
+  width: 30%;
+  @media (max-width: 900px) {
+    width: 47%;
+  }
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+}
+
+.bordered_tags_item {
+  @media screen and (max-width: 480px) {
+    @apply text-11.14;
+    padding: 0.4rem !important;
+  }
+}
+
+.bordered_tags_item {
+  @media (min-width: 769px) and (max-width: 1000px) {
+    @apply text-11.14;
+    padding: 0.4rem !important;
+  }
+}

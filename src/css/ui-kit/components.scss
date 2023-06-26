@@ -1,9 +1,6 @@
 .filters-block {
-  @apply w-1/4;
+  @apply w-full;
 
-  @media screen and (max-width: 768px) {
-    @apply w-3/4;
-  }
 
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left;
@@ -99,7 +96,53 @@
     @apply w-full;
   }
 }
+.toolbar {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    background-color: #ffffff;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1rem #D9D9D9 solid;
+    position: fixed; /* Зафиксируем позицию */
+    bottom: 0; /* Разместим внизу экрана */
+    width: 100%; /* Займем всю доступную ширину */
+    z-index: 100000;
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
 
+/* Стили кнопок */
+.toolbar-button {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    color: #808080;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    font-size: 1.1rem;
+  }
+}
+
+/* Стили активной кнопки */
+.toolbar-button.active {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    color: #535353;
+    background-color: #ffffff;
+  }
+}
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -465,8 +508,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -486,8 +528,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -510,7 +551,9 @@ header {
 
 .swiper,
 .swiper-text,
-.swiper-image {
+.swiper-image,
+.swiper-detailed-page,
+.swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
   padding: 0 3rem !important;
@@ -542,6 +585,12 @@ header {
       }
     }
   }
+}
+
+// добавил,т.к. в html !p-0 не переопределял стили
+.swiper-detailed-page,
+.swiper-detailed-page-video {
+  padding: 0 !important;
 }
 
 .partners-stroke {
@@ -997,17 +1046,30 @@ header {
     img {
       width: 18rem;
       height: 24rem;
+      @media screen and (max-width: 768px) {
+        width: 5rem;
+        height: 6rem;
+      }
     }
 
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
+      @media screen and (max-width: 768px) {
+        width: 6rem;
+      }
 
       video {
         @apply absolute h-150;
         bottom: -1.8rem;
         width: 25rem;
         left: -1rem;
+        @media screen and (max-width: 768px) {
+          height: 8rem;
+          bottom: -2.4rem;
+          width: 6rem;
+          left: -0.3rem;
+        }
       }
     }
   }
