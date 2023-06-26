@@ -33,6 +33,9 @@ module.exports = {
       md: {max: "768px"},
       ssm: {max: "400px"},
       bs: {max: "999px"},
+      bsmax: {max: "1099px"},
+      bsmin: {min: "1100px"},
+      shs: {max: "1200"},
       hs: {max: "1500px"}
     },
     fontSize: {
@@ -51,6 +54,7 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
+      "8xl": ["9.6rem", "6rem"],
     },
     colors: {
       "purple-1": "#06083D",
@@ -105,6 +109,7 @@ module.exports = {
         35: "3.5rem",
         36: "3.6rem",
         40: "4rem",
+        42: "4.2rem",
         44: "4.4rem",
         45: "4.5rem",
         46: "4.6rem",
@@ -113,6 +118,7 @@ module.exports = {
         52: "5.2rem",
         55: "5.5rem",
         56: "5.6rem",
+        58: "5.8rem",
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",

@@ -148,7 +148,7 @@ button {
 .more-down-content {
   @apply hidden p-2;
   &.new {
-    @apply  absolute bg-white w-full border-2 border-card-stroke z-1000;
+    @apply absolute bg-white w-full border-2 border-card-stroke z-1000;
   }
 
   &.active-js {
@@ -190,6 +190,7 @@ button {
 }
 
 .sort-label {
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal whitespace-nowrap;
   max-width: 30rem;
   min-width: 5rem;
@@ -384,6 +385,7 @@ button {
     max-width: calc(80%);
   }
 }
+
 .dropdown {
   @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
   width: 14.4rem;
@@ -502,9 +504,11 @@ button {
       }
     }
   }
+
   .navigation-content {
     @apply bg-white z-9999;
     position: absolute;
+
     .cross {
       background: url("../../img/close.svg") no-repeat center right;
       background-size: 1rem 1rem;
@@ -512,19 +516,23 @@ button {
       height: 1rem;
       right: 0;
       position: absolute;
-      @apply ml-4 inline-block text-left align-middle	cursor-pointer;
+      @apply ml-4 inline-block text-left align-middle    cursor-pointer;
     }
+
     &.hide {
-      @apply opacity-0 hidden transition-all duration-500 ease-linear	;
+      @apply opacity-0 hidden transition-all duration-500 ease-linear    ;
     }
+
     &.active-js {
-      @apply opacity-100 block  transition-all duration-500 ease-linear	;
+      @apply opacity-100 block  transition-all duration-500 ease-linear    ;
     }
+
     .content-layer {
       @apply flex;
       .picture {
         @apply w-3/12;
       }
+
       .name {
         @apply w-9/12 p-10 text-m;
       }
@@ -734,11 +742,11 @@ button {
 
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl  bg-black text-white text-2.5xl;
   width: 17.4rem;
   height: 2.4rem;
-  z-index: 5;
-  top: 30rem;
+  z-index: 1000;
+  top: 80rem;
   transform: rotate(-90deg);
   transform-origin: left top;
 }
