@@ -194,7 +194,7 @@ if (brandPopupCheckboxes) {
       if (this.checked) {
         checkboxPpb.style.display = "block"
       } else {
-        checkboxPpb.style.display = "none"
+        checkboxPpb.style.display = ""
       }
     })
   }
