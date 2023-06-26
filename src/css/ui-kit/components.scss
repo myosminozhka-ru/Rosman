@@ -290,32 +290,32 @@ header {
   .search-button {
     display: inline-block;
     background: url("../../img/search.svg") no-repeat center;
-    background-size: 1rem 1rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
   .micro-button {
     display: inline-block;
     background: url("../../img/micro.svg") no-repeat center;
-    background-size: 2rem 2rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 3.6rem 3.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
   .heart-button {
     display: inline-block;
     background: url("../../img/heart.svg") no-repeat center;
-    background-size: 1rem 1rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
   .language {
-    @apply inline-block;
+    @apply inline-block text-l;
 
     .active-js {
       color: rgba(160, 168, 47, 0.69);
@@ -351,24 +351,25 @@ header {
     .search-icon {
       display: block;
       background: url("../../img/search.svg") no-repeat center;
-      background-size: 1rem 1rem;
-      width: 1rem;
-      height: 2rem;
+      background-size: 1.6rem 1.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      cursor: pointer;
 
       @media screen and (max-width: 780px) {
-        width: 2rem;
+        width: 1.6rem;
       }
     }
 
     .micro-icon {
       display: block;
       background: url("../../img/micro.svg") no-repeat center;
-      background-size: 2rem 2rem;
-      width: 1rem;
-      height: 2rem;
-
+      background-size: 3.6rem 3.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      cursor: pointer;
       @media screen and (max-width: 780px) {
-        width: 2rem;
+        width: 1.6rem;
       }
     }
 
@@ -376,18 +377,20 @@ header {
       cursor: pointer;
       display: block;
       background: url("../../img/close.svg") no-repeat center;
-      background-size: 1rem 1rem;
-      width: 1rem;
-      height: 2rem;
-
+      background-size: 1.6rem 1.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
       @media screen and (max-width: 780px) {
-        width: 2rem;
+        width: 1.6rem;
       }
     }
 
     &.hide {
       width: 0;
       opacity: 0;
+      span {
+        display: none;
+      }
     }
   }
 
