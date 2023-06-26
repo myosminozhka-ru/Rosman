@@ -184,3 +184,18 @@ if (phoneNumber) {
     old++;
   }
 }
+
+const brandPopupCheckboxes = document.querySelectorAll(".checkbox_overlay")
+
+if (brandPopupCheckboxes) {
+  for (let i = 0; i < brandPopupCheckboxes.length; i++) {
+    brandPopupCheckboxes[i].addEventListener("click", function (event) {
+      const checkboxPpb = this.nextElementSibling;
+      if (this.checked) {
+        checkboxPpb.style.display = "block"
+      } else {
+        checkboxPpb.style.display = "none"
+      }
+    })
+  }
+}
