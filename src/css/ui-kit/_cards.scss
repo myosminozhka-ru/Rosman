@@ -334,8 +334,8 @@
 .card_brand_image {
   @apply block bg-white;
   max-width: 15rem;
-  //max-height: 9rem;
-  //aspect-ratio: 16/9;
+  max-height: 9rem;
+  aspect-ratio: 15/9;
 }
 
 .card_brand_image img {
