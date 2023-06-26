@@ -95,7 +95,8 @@
 
   @media screen and (max-width: 600px) {
     margin: 0 2rem;
-    padding: 1.6rem;
+    padding: 1.2rem;
+    grid-gap: 1.6rem;
   }
 }
 
@@ -106,6 +107,9 @@
 .popup_blockchain_body {
   @apply flex flex-col;
   grid-gap: 4rem;
+  @media screen and (max-width: 600px) {
+    grid-gap: 1.6rem;
+  }
 }
 
 .popup_blockchain_text_fields {
@@ -180,6 +184,10 @@
     width: 20rem;
     left: -800%;
   }
+}
+
+.hit_boxshadow {
+  box-shadow: 0 15px 14px -3px rgba(48, 48, 48, 0.07);
 }
 
 .popup_blockchain_transaction_info_question_img:hover
@@ -467,65 +475,62 @@
 }
 
 // checkbox
-.checkbox_main {
-  position: relative;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-
-.checkbox__input_main {
-  -webkit-appearance: none;
-  appearance: none;
-  display: none;
-  position: absolute;
-}
-
-.checkbox__label_main {
-  padding-left: 1rem;
-  color: #444;
-  cursor: pointer;
-}
-
-.checkbox__label_main:before {
-  content: "";
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid black;
-  background-color: #fff;
-  border-radius: 0.3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  /*transition: background 0.1s linear, border 0.1s linear;*/
-}
-
-.checkbox__label_main:after {
-  content: "";
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url("../../img/check_new.png") no-repeat;
-  background-size: 1.3rem 1.3rem;
-  opacity: 0;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-  transition: opacity 0.1s linear;
-}
-
-.checkbox__input_main:checked + .checkbox__label_main:before {
-  border: 1px solid black;
-  background: white;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.checkbox__input_main:checked + .checkbox__label_main:after {
-  opacity: 1;
-}
+//.checkbox_main {
+//  position: relative;
+//  display: inline-block;
+//}
+//
+//.checkbox__input_main {
+//  -webkit-appearance: none;
+//  appearance: none;
+//  display: none;
+//  position: absolute;
+//}
+//
+//.checkbox__label_main {
+//  padding-left: 1rem;
+//  color: #444;
+//  cursor: pointer;
+//}
+//
+//.checkbox__label_main:before {
+//  content: "";
+//  display: block;
+//  width: 1.5rem;
+//  height: 1.5rem;
+//  border: 1px solid black;
+//  background-color: #fff;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  z-index: 1;
+//}
+//
+//.checkbox__label_main:after {
+//  content: "";
+//  display: block;
+//  width: 1.5rem;
+//  height: 1.5rem;
+//  background: url("../../img/chnew.svg") no-repeat;
+//  background-size: 1.3rem 1.3rem;
+//  opacity: 0;
+//  position: absolute;
+//  top: 1rem;
+//  left: 1rem;
+//  z-index: 2;
+//  transition: opacity 0.1s linear;
+//}
+//
+//.checkbox__input_main:checked + .checkbox__label_main:before {
+//  border: 1px solid black;
+//  background: white;
+//  width: 1.5rem;
+//  height: 1.5rem;
+//}
+//
+//.checkbox__input_main:checked + .checkbox__label_main:after {
+//  opacity: 1;
+//}
 
 // попап заявка на сотрудничество -
 // общее
@@ -730,7 +735,7 @@
 }
 
 .pup_btn {
-  @apply text-15.20;
+  @apply text-15.20   max-h-40;
   white-space: nowrap;
 }
 
@@ -764,7 +769,6 @@
   height: 1.5rem;
   border: 1px solid black;
   background-color: #fff;
-  border-radius: 0.3rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -778,7 +782,7 @@
   width: 1.5rem;
   height: 1.5rem;
   background: url("../../img/check_new.png") no-repeat;
-  background-size: 1.3rem 1.3rem;
+  background-size: 1.2rem 1.2rem;
   opacity: 0;
   position: absolute;
   top: 0.1rem;
@@ -833,6 +837,13 @@
   }
 }
 
+.rowed-buttons {
+  @media screen and (max-width: 600px) {
+    flex-direction: row !important;
+    grid-gap: 0.6rem;
+  }
+}
+
 .popup_collab_final_text {
   @media screen and (max-width: 500px) {
     @apply text-2xl;
@@ -841,17 +852,17 @@
 
 // brand popup
 .popup_brand_choose_content {
-  @apply flex flex-col gap-40 bg-white p-48;
+  @apply flex flex-col gap-40 bg-white p-48 pt-40;
   max-width: 84.6rem;
   position: relative;
   margin: auto;
 
   @media screen and (max-width: 500px) {
-    @apply gap-16 p-16;
+    @apply gap-16 px-12 pb-48 pt-24;
   }
 
   @media (min-width: 501px) and (max-width: 800px) {
-    @apply m-20 p-16;
+    @apply m-0 px-12 pb-48 pt-24;
   }
 }
 
@@ -948,13 +959,116 @@
 //}
 .popup_brand_choose_brands {
   @apply flex flex-row flex-wrap justify-between gap-20;
+  @media screen and (max-width: 600px) {
+    @apply gap-8 ;
+  }
 }
 
-.image-container {
-  width: 9rem;
-  height: 9rem;
+.image_container {
+  max-width: 9rem;
   aspect-ratio: 1/1;
+  position: relative;
+  display: inline-block;
+
+  @media screen and (max-width: 600px) {
+    max-width: 7rem;
+  }
 }
+
+.image_container {
+  @apply relative;
+}
+
+.check-ppb-label {
+  @apply absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  width: 2rem;
+  height: 2rem;
+}
+
+.checkbox_overlay {
+  @apply hidden;
+}
+
+.image_container:hover .check-ppb-label {
+  display: block;
+  cursor: pointer;
+}
+
+.check-ppb-label:before {
+  content: "";
+  border: 0.1rem solid black;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+
+.check-ppb-label:after {
+  content: "";
+  border: 0.1rem solid black;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  background: url("../../img/check_new.png") no-repeat center;
+  background-size: contain;
+  display: none;
+}
+
+.checkbox_overlay:checked ~ .check-ppb-label:after {
+  display: block;
+}
+
+//.checkbox_overlay {
+//  display: none;
+//}
+//
+//.image_container {
+//  position: relative;
+//}
+//
+//.image_container:hover:before {
+//  display: block;
+//  cursor: pointer;
+//}
+//
+//
+//.image_container:before {
+//  content: "";
+//  position: absolute;
+//  display: none;
+//  top: 0;
+//  left: 0;
+//  width: 2rem;
+//  height: 2rem;
+//  background-color: yellow;
+//  border-top-left-radius: 0.8rem;
+//}
+//
+//.image_container:after {
+//  content: "";
+//  display: none;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 2rem;
+//  height: 2rem;
+//  border-top-left-radius: 0.8rem;
+//  background-color: yellow;
+//  background: url("../../img/check_new.png") no-repeat center;
+//  background-size: contain;
+//}
+//
+//.checkbox_overlay:checked ~ .image_container:after {
+//  display: block;
+//}
+
 
 .search-container {
   @apply flex flex-row items-center;
@@ -1112,15 +1226,14 @@ img {
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
   @apply relative m-20 flex flex-col gap-24 bg-white p-40;
-  max-width: 100rem;
   margin: auto;
 
   @media screen and (max-width: 500px) {
-    @apply m-24 gap-24 p-24;
+    @apply m-0 gap-16 p-12;
   }
 
   @media (min-width: 501px) and (max-width: 800px) {
-    @apply m-24 gap-24 p-24;
+    @apply m-0 gap-16 p-12;
   }
 }
 
@@ -1133,11 +1246,26 @@ img {
 }
 
 .popup_all_filters_header_text {
-  @apply text-4xl;
+  @apply text-4xl font-medium;
 }
 
 .popup_all_filters_filters {
-  @apply flex flex-row flex-wrap gap-8;
+  @apply flex flex-row flex-nowrap gap-8;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.popup_all_filters_filters::-webkit-scrollbar {
+  display: none;
+}
+
+.popup_all_filters_filters {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.popup_all_filters_filters::-webkit-scrollbar {
+  display: none;
 }
 
 .popup_all_filters_filter {
@@ -1170,20 +1298,24 @@ img {
 }
 
 .popup_all_filters_filter_not_found {
-  @apply text-center;
+  @apply text-center font-medium;
 }
 
 // filter block
 .js_popup_all_filters_modal {
-  @apply mx-10;
-
   @media (min-width: 701px) and (max-width: 1000px) {
     @apply px-10;
   }
 }
 
+.js_popup_all_filters_modal.modal {
+  @media screen and (max-width: 900px) {
+    @apply pt-0;
+  }
+}
+
 .popup_all_filters_block_filter {
-  @apply flex grow flex-row gap-56;
+  @apply flex grow flex-row gap-56 bs:gap-0 ;
 
   @media (min-width: 901px) and (max-width: 1000px) {
     @apply gap-16;
@@ -1256,7 +1388,7 @@ img {
 }
 
 .more-down-button.justify-btwn {
-  justify-content: space-between;
+  @apply font-medium justify-between pl-0;
 }
 
 //.more-down-content.pad-left {
