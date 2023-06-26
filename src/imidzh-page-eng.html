@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion page</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="legal-information-wrapper relative">
+  @@include('components/header/header-eng.html', { }, )
+  <div class="custom-box !z-1 !fixed">
+    <span></span>
+    <div class="custom-before"></div>
+    <a href="mailto:rosman@rosman.ru">Write to us</a>
+    <div class="custom-after"></div>
+  </div>
+  <div id="yellow-background" class="!h-auto !pt-24 !mb-24 !z-0">
+    <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="!p-24 flex flex-col gap-16 !sm:p-12">
+    </div>
+  </div>
+
+  @@include('components/ui-kit/footer/footer-eng.html', { }, )
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
