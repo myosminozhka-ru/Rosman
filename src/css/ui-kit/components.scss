@@ -624,6 +624,11 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
       .button-next {
@@ -632,6 +637,11 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -811,6 +821,11 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
       .button-next {
@@ -819,6 +834,11 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
