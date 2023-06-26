@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="w-full relative">
         <img src="../../img/imidzh-book-2.png" alt="">
         <div class="absolute top-[2.4rem] left-[2.4rem] flex flex-col gap-20 bs:gap-12">
@@ -57,7 +57,7 @@
           <div class="button-prev" onclick="scrollContent('left')"></div>
           <div class="button-next" onclick="scrollContent('right')"></div>
         </div>
-
+      
       </div>
       <div id="elephant-container" class="!overflow-hidden">
         <div id="elephant-slider">
@@ -73,7 +73,7 @@
                   </p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@
                   <p class="text-m p-16 whitespace-normal">Издательство становится профильным детским издательством</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
                   <p class="text-m p-16 whitespace-normal">РОСМЭН крупнейшее профильное детское издательство России</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
                   <p class="text-m p-16 whitespace-normal">Открытие направления Игрушки</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@
                   <p class="text-m p-16 whitespace-normal">«Свинка Пеппа» – игрушечный бренд №1 в России по обороту*</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@
                     игрушек</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@
                     игрушек</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@
                     игрушек</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
@@ -179,14 +179,14 @@
                     игрушек</p>
                 </div>
                 <button class="elephant-more-up-button"><span></span></button> <!--  more-up -->
-
+              
               </div>
             </div>
           </div>
           <div class="elephant-dropdown bottom  first">
             <div class="color-block bottom">
               <div class="elephant-more-down">
-
+                
                 <button class="elephant-more-down-button"><span></span></button> <!--  more-up -->
                 <div class="elephant-more-down-content">
                   <p class="text-m p-16 whitespace-normal">Основание издательства</p>
@@ -197,7 +197,7 @@
           <div class="elephant-dropdown bottom  second">
             <div class="color-block bottom">
               <div class="elephant-more-down">
-
+                
                 <button class="elephant-more-down-button"><span></span></button> <!--  more-up -->
                 <div class="elephant-more-down-content">
                   <p class="text-m p-16 whitespace-normal">Основание издательства</p>
@@ -208,7 +208,7 @@
           <div class="elephant-dropdown bottom  third">
             <div class="color-block bottom">
               <div class="elephant-more-down">
-
+                
                 <button class="elephant-more-down-button"><span></span></button> <!--  more-up -->
                 <div class="elephant-more-down-content">
                   <p class="text-m p-16 whitespace-normal">Основание издательства</p>
@@ -219,7 +219,7 @@
           <div class="elephant-dropdown bottom  fourth">
             <div class="color-block bottom">
               <div class="elephant-more-down">
-
+                
                 <button class="elephant-more-down-button"><span></span></button> <!--  more-up -->
                 <div class="elephant-more-down-content">
                   <p class="text-m p-16 whitespace-normal">Основание издательства</p>
@@ -230,7 +230,7 @@
           <div class="elephant-dropdown bottom  fifth">
             <div class="color-block bottom">
               <div class="elephant-more-down">
-
+                
                 <button class="elephant-more-down-button"><span></span></button> <!--  more-up -->
                 <div class="elephant-more-down-content">
                   <p class="text-m p-16 whitespace-normal">Основание издательства</p>
@@ -252,7 +252,7 @@
         @@include('components/ui-kit/cards/card-employee.html', { }, )
       </div>
       <div class="hidden  md:!block">
-        <div class="swiper-detailed-page">
+        <div class="swiper-detailed-page overflow-hidden">
           <div class="swiper-header !w-full  sm:!mt-12">
             <h3 class="head-3 ">Key persons</h3>
             <div class="buttons">
@@ -289,103 +289,155 @@
       </div>
     </div>
     <!-- тут будут контакты -->
-    <div class="text-5xl font-medium md:hidden px-24 sm:px-12">Key persons</div>
-    <div class="grid grid-cols-4 gap-16 px-24 sm:px-12">
-      <div class="flex flex-col gap-24 items-start justify-start">
-        <div class="flex flex-col gap-8">
-          <div class="w-[5.8rem]">
-            <img src="../../img/imidzh-ho.svg">
+    <div class="flex flex-col gap-64 sm:flex-col">
+      <div class="text-5xl  font-medium md:hidden px-24 sm:px-12">Contacts</div>
+      <div class="grid grid-cols-4 gap-16 px-24 sm:px-12 sm:grid-cols-1">
+        <div class="flex flex-col gap-24 items-start justify-start">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-ho.svg">
+            </div>
+            <div class="head-4">Head Office</div>
           </div>
-          <div class="head-4">Head Office</div>
-        </div>
-
-        <div class="flex flex-col gap-16">
-          <div>
-            <div class="text-text text-2.5xl">Address</div>
-            <div class="text-15.20 font-medium">127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya, Maryina Grove
+          
+          <div class="flex flex-col gap-16">
+            <div>
+              <div class="text-text text-2.5xl">Address</div>
+              <div class="text-15.20 font-medium">127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya, Maryina Grove
+              </div>
+            </div>
+            
+            <div>
+              <div class="text-text text-2.5xl">Telephone</div>
+              <div class="text-15.20 font-medium">+7 495 933-71-30</div>
+            </div>
+            
+            <div>
+              <div class="text-text text-2.5xl">Email address</div>
+              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
             </div>
           </div>
-
-          <div>
-            <div class="text-text text-2.5xl">Telephone</div>
-            <div class="text-15.20 font-medium">+7 495 933-71-30</div>
-          </div>
-
-          <div>
-            <div class="text-text text-2.5xl">Email address</div>
-            <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-          </div>
         </div>
-      </div>
-      <div class="flex flex-col gap-24 items-start justify-start">
-        <div class="flex flex-col gap-8">
-          <div class="w-[5.8rem]">
-            <img src="../../img/imidzh-toys.svg">
+        <div class="flex flex-col gap-24 items-start justify-start">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-toys.svg">
+            </div>
+            <div class="head-4">Toys</div>
           </div>
-          <div class="head-4">Toys</div>
-        </div>
-
-        <div class="flex flex-col gap-16">
-          <div>
-            <div class="text-text text-2.5xl">Telephone</div>
-            <div class="text-15.20 font-medium">+7 495 933-71-30</div>
-          </div>
-
-          <div>
-            <div class="text-text text-2.5xl">Email address</div>
-            <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-24 items-start justify-start">
-        <div class="flex flex-col gap-8">
-          <div class="w-[5.8rem]">
-            <img src="../../img/imidzh-books.svg">
-          </div>
-          <div class="head-4">Books</div>
-        </div>
-
-        <div class="flex flex-col gap-16">
-          <div>
-            <div class="text-text text-2.5xl">Telephone</div>
-            <div class="text-15.20 font-medium">
-              +7 495 933-71-30
+          
+          <div class="flex flex-col gap-16">
+            <div>
+              <div class="text-text text-2.5xl">Telephone</div>
+              <div class="text-15.20 font-medium">+7 495 933-71-30</div>
+            </div>
+            
+            <div>
+              <div class="text-text text-2.5xl">Email address</div>
+              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
             </div>
           </div>
-          <div>
-            <div class="text-text text-2.5xl">Email address</div>
-            <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-          </div>
         </div>
-      </div>
-      <div class="flex flex-col gap-24 items-start justify-start">
-        <div class="flex flex-col gap-8">
-          <div class="w-[5.8rem]">
-            <img src="../../img/imidzh-rld.svg">
+        <div class="flex flex-col gap-24 items-start justify-start">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-books.svg">
+            </div>
+            <div class="head-4">Books</div>
           </div>
-          <div class="head-4">Rights and Licenses Department</div>
-        </div>
-
-        <div class="flex flex-col gap-16">
-          <div>
-            <div class="text-text text-2.5xl">Telephone</div>
-            <div class="text-15.20 font-medium">
-              +7 495 933-71-30
+          
+          <div class="flex flex-col gap-16">
+            <div>
+              <div class="text-text text-2.5xl">Telephone</div>
+              <div class="text-15.20 font-medium">
+                +7 495 933-71-30
+              </div>
+            </div>
+            <div>
+              <div class="text-text text-2.5xl">Email address</div>
+              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
             </div>
           </div>
-
-          <div>
-            <div class="text-text text-2.5xl">Email address</div>
-            <div class="text-15.20 font-medium">rosman@rosman.ru</div>
+        </div>
+        <div class="flex flex-col gap-24 items-start justify-start">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-rld.svg">
+            </div>
+            <div class="head-4">Rights and Licenses Department</div>
           </div>
-
+          
+          <div class="flex flex-col gap-16">
+            <div>
+              <div class="text-text text-2.5xl">Telephone</div>
+              <div class="text-15.20 font-medium">
+                +7 495 933-71-30
+              </div>
+            </div>
+            
+            <div>
+              <div class="text-text text-2.5xl">Email address</div>
+              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
+            </div>
+          
+          </div>
         </div>
       </div>
     </div>
+    
     <!-- тут будет фидбек -->
+    <div class="relative bg-yellow py-[10rem] mb-64">
+      <div class="absolute bg-white
+      overflow-hidden h-46 top-0
+      left-0 right-0 origin-top-right skew-y-[2deg]
+      shadow-lg
+      "></div>
+      
+      <div class="absolute bg-white
+      overflow-hidden h-46 bottom-0
+      left-0 right-0 origin-bottom-left skew-y-2
+      shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]
+      "></div>
+      
+      <div class="w-[14rem] h-[10rem] block absolute bottom-[1.1%] right-[10%]">
+        <img src="../../img/elephant-figure-skating.svg" alt="">
+      </div>
+      
+      
+      <div class=" mx-auto flex flex-col items-center gap-40 max-w-[40rem] sm:items-start">
+        <div class="text-5xl font-medium">Feedback</div>
+        <div class=" flex flex-col gap-24 items-start w-full">
+          <input class="input w-full" placeholder="Name*">
+          <input class="input w-full" placeholder="Surname*">
+          <input class="input w-full" placeholder="Email address*">
+          <input class="input w-full" placeholder="Telephone*">
+          <input class="input w-full" placeholder="Message*">
+          <div class="js-footer-heading-policy-agreement checkbox_main">
+            <input
+              class="js-footer-heading-checkbox checkbox__input_main"
+              type="checkbox"
+              id="footer-heading-checkbox-eng"
+            />
+            <label
+              for="footer-heading-checkbox-eng"
+              class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+            >
+              <span>I agree with the &nbsp</span>
+              <a
+                href="#"
+                class="footer-heading-policy-agreement-link link-m-bold">
+                privacy policy
+              </a>
+            </label>
+          </div>
+          <button class="button-black w-full">Send</button>
+        </div>
+      </div>
+    
+    </div>
   </div>
-
-
+  
+  
   @@include('components/ui-kit/footer/footer-eng.html', { }, )
 
 </div>
