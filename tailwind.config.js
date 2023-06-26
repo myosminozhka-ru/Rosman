@@ -25,6 +25,9 @@ module.exports = {
       "5xl": '115rem',
       "8.8": "8.8rem"
     },
+    minWidth: {
+      '4': '4rem',
+    },
     screens: {
       sm: {max: "639px"},
       md: {max: "768px"},
