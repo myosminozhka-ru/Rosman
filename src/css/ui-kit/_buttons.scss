@@ -384,8 +384,8 @@ button {
   }
 }
 .dropdown {
-  @apply relative inline-block h-44 w-auto max-w-menu border-2 border-black bg-yellow px-4 py-2;
-
+  @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
+  width: 14.4rem;
   button {
     @apply flex flex w-full flex-row items-center justify-between p-1 pb-16 text-l;
   }
