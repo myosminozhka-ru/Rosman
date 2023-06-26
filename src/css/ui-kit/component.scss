@@ -506,6 +506,10 @@ header {
     height: 100%;
     margin: auto;
     padding: 1.2rem 0;
+    @media screen and (max-width: 900px) {
+      height: 7rem;
+      padding: 0.4rem 0;
+    }
     p {
       width: 100%;
       height: 100%;
@@ -516,23 +520,29 @@ header {
     }
   }
   .brand_choose_brands {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    display: flex !important;
+    display: -webkit-flex !important;
+    flex-direction: row;
+    -webkit-flex-direction: row;
     gap: 2rem;
-    grid-auto-flow: column;
-    overflow-x: auto;
-    white-space: nowrap;
-    .image_container_brand {
+
+    @media screen and (max-width: 900px) {
+      display: flex !important;
+      display: -webkit-flex !important;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      overflow: scroll;
       width: 100%;
-      height: 8rem;
-      border-radius: 1rem;
-      a {
+      gap: 2rem;
+      height: 9rem;
+
+      .image_container_brand {
+        min-width: 7rem;
+        max-width: 13rem;
         width: 100%;
         height: 100%;
-        border-radius: 1rem;
-        img {
-          border-radius: 1rem;
-        }
+        min-height: 7rem;
+        max-height: 13rem;;
       }
     }
   }
