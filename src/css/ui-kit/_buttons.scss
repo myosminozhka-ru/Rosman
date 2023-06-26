@@ -387,7 +387,7 @@ button {
   @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
   width: 14.4rem;
   button {
-    @apply flex flex w-full flex-row items-center justify-between p-1 pb-16 text-l;
+    @apply flex flex w-full flex-row gap-8 items-center p-1 pb-10 text-l;
   }
   &.menu {
     @apply border-0 p-0 py-6;
@@ -417,19 +417,21 @@ button {
     background-size: contain;
   }
   .content {
-    @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-12;
-
+    @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-24 left-0;
+    a:not(:last-child) {
+     @apply mb-20;
+    }
     a {
       @apply flex w-full justify-start p-1 text-l;
 
       .menu-icon-book {
-        @apply h-20 w-20;
+        @apply h-20 w-20 mr-16;
         background: url("../../img/book.svg") no-repeat center;
         background-size: contain;
       }
 
       .menu-icon-toys {
-        @apply h-20 w-20;
+        @apply h-20 w-20 mr-16;
         background: url("../../img/toys.svg") no-repeat center;
         background-size: contain;
       }
@@ -437,19 +439,21 @@ button {
   }
 
   .content-open-js {
-    @apply absolute z-50 block w-auto max-w-inner-menu bg-white p-12;
-
+    @apply absolute z-50 block w-auto max-w-inner-menu bg-white p-24 left-0;
+    a:not(:last-child) {
+      @apply mb-20;
+    }
     a {
       @apply flex w-full justify-start p-1 text-l;
 
       .menu-icon-book {
-        @apply h-20 w-20;
+        @apply h-20 w-20 mr-16;
         background: url("../../img/book.svg") no-repeat center;
         background-size: contain;
       }
 
       .menu-icon-toys {
-        @apply h-20 w-20;
+        @apply h-20 w-20 mr-16;
         background: url("../../img/toys.svg") no-repeat center;
         background-size: contain;
       }
