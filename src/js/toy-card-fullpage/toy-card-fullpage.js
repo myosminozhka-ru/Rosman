@@ -151,9 +151,9 @@ dots.forEach((dot, index) => {
 
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".js-book-text-container");
+const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
 if (jsBookToggleButton && jsBookTextContainer) {
   jsBookToggleButton.addEventListener('click', function () {
-    jsBookTextContainer.classList.toggle('h-full');
+    jsBookTextContainer.classList.toggle('line-clamp-none');
   });
 }
