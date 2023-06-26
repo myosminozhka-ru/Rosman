@@ -25,6 +25,7 @@
 
 .js-rm-pag-more-btn {
   @apply w-full bg-grey py-10 text-15.20 font-medium;
+
   &:hover {
     @apply bg-card-stroke;
   }
@@ -32,27 +33,33 @@
 
 .js-rm-pag-nav-page-btns {
   @apply flex flex-row flex-nowrap gap-14;
+
   @media screen and (max-width: 500px) {
     @apply gap-0 justify-between w-full;
   }
 }
 
 .nav-btns {
-  @apply flex flex-row flex-nowrap gap-8;
+  @apply flex flex-row flex-nowrap gap-14 items-center;
+
   @media screen and (max-width: 500px) {
     @apply gap-8;
   }
 }
 
-
 .js-rm-pag-nav-page-btn {
   @apply h-40 w-40 border-2 border-b-black bg-white p-0 text-15.20;
+
   @media screen and (max-width: 500px) {
     @apply w-30 h-30 border-card-stroke;
   }
 
   &:hover {
     border-color: #fff145;
+  }
+
+  @media screen and (max-width: 500px) {
+    @apply h-30 w-30 border-card-stroke;
   }
 }
 
@@ -62,13 +69,15 @@
 
 .pag-hidden {
   @apply hidden;
+
   @media screen and (max-width: 500px) {
     @apply block;
   }
 }
 
 .js-rm-pag-nav-page-more-bnt {
-  @apply flex flex-row px-0 text-15.20;
+  @apply flex flex-row p-0 text-15.20;
+
   &:hover {
     @apply underline;
   }
@@ -83,6 +92,7 @@
 // добавил кнопку на всякий случай
 .js-rm-pag-nav-page-back-bnt {
   @apply flex flex-row px-0 items-center text-15.20 hidden;
+
   &:hover {
     @apply underline;
   }
