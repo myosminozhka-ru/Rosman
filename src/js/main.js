@@ -141,9 +141,12 @@ function toggleSearch() {
     if (headerNav.classList.contains("hide")) {
         headerNav.classList.remove("hide");
         headerbtn.classList.remove("hide-mobile");
+        headerbtn.classList.remove("hide-icon");
+
     } else {
         headerNav.classList.add("hide");
         headerbtn.classList.add("hide-mobile");
+        headerbtn.classList.add("hide-icon");
     }
     if (searchInput.classList.contains("hide")) {
         searchInput.classList.remove("hide");

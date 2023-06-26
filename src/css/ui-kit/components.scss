@@ -16,11 +16,11 @@
 }
 
 .mobile-filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex;
     margin: 1rem auto;
     cursor: pointer;
@@ -43,21 +43,21 @@
 }
 
 .mobile-p {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @apply text-2xl inline-block;
   }
 }
 
 #close-filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     float: right;
     cursor: pointer;
     display: inline-block;
@@ -69,17 +69,17 @@
 }
 
 .filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply flex;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
 
 .open-filter {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex !important;
     position: fixed;
     top: 0;
@@ -97,10 +97,10 @@
   }
 }
 .toolbar {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     background-color: #ffffff;
     padding: 0;
     display: flex;
@@ -121,10 +121,10 @@
 
 /* Стили кнопок */
 .toolbar-button {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     color: #808080;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -135,10 +135,10 @@
 
 /* Стили активной кнопки */
 .toolbar-button.active {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     color: #535353;
     background-color: #ffffff;
   }
@@ -239,7 +239,7 @@ header {
     @apply ml-24;
     @apply block;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
@@ -247,20 +247,29 @@ header {
   .mobile-logo {
     @apply hidden;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       @apply block;
     }
   }
 
   .dropdown {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
 
   .header-nav {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       @apply hidden;
+    }
+  }
+  .hide-icon {
+    .search-button {
+        @apply hidden;
+    }
+
+    .micro-button {
+        @apply hidden;
     }
   }
 
@@ -1049,7 +1058,7 @@ header {
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         width: 6rem;
       }
 
@@ -1058,7 +1067,7 @@ header {
         bottom: -1.8rem;
         width: 25rem;
         left: -1rem;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 900px) {
           height: 8rem;
           bottom: -2.4rem;
           width: 6rem;
