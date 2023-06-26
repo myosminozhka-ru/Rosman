@@ -124,22 +124,23 @@ button {
   @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
 
   span {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-top: 0.2rem solid #000000;
-    border-right: 0.2rem solid #000000;
+    background-image: url("../../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     margin-left: 1rem;
-    transform: rotate(135deg);
   }
 
   &.active-js {
     span {
-      width: 0.8rem;
-      height: 0.8rem;
-      border-top: 0.2rem solid #000000;
-      border-right: 0.2rem solid #000000;
+      background-image: url("../../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: 1.6rem 1.6rem;
+      width: 1.6rem;
+      height: 1.6rem;
       margin-left: 1rem;
-      transform: rotate(-45deg);
+      transform: rotate(180deg);
     }
   }
 }
