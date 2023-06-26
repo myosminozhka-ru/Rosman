@@ -145,10 +145,10 @@
 
 /* Стили активной кнопки */
 .toolbar-button.active {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 880px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 880px) {
     color: #535353;
     background-color: #ffffff;
   }
@@ -249,7 +249,7 @@ header {
     @apply ml-24;
     @apply block;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
@@ -257,32 +257,32 @@ header {
   .mobile-logo {
     @apply hidden;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply block;
     }
   }
 
   .dropdown {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .header-nav {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .hide-mobile {
     .search-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
 
     .micro-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
@@ -552,8 +552,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -573,8 +572,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -597,7 +595,9 @@ header {
 
 .swiper,
 .swiper-text,
-.swiper-image {
+.swiper-image,
+.swiper-detailed-page,
+.swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
   padding: 0 3rem !important;
@@ -629,6 +629,12 @@ header {
       }
     }
   }
+}
+
+// добавил,т.к. в html !p-0 не переопределял стили
+.swiper-detailed-page,
+.swiper-detailed-page-video {
+  padding: 0 !important;
 }
 
 .partners-stroke {
@@ -693,6 +699,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   video {
     margin: 0 auto;
@@ -706,13 +713,74 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
+    @media screen and (max-width: 768px) {
+      width: 32.4rem;
+      height: 31.4rem;
+    }
+    &.moon-1 {
+      width: 44.4rem;
+      height: 44.4rem;
+      left: 9rem;
+      top: 4rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        width: 32.4rem;
+        height: 31.4rem;
+        position: relative;
+        left: 0;
+        top: auto;
+      }
+    }
+    &.moon-2 {
+      width: 44.4rem;
+      height: 44.4rem;
+      right: 9rem;
+      top: 4rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        width: 32.4rem;
+        height: 31.4rem;
+        position: relative;
+        right: 0;
+        top: auto;
+      }
+    }
   }
 
   .text-on-moon {
     margin: 0 auto;
-    bottom: 290px;
+    bottom: 29rem;
     position: relative;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      bottom: 85rem;
+    }
+    &.moon-1 {
+      width: 44.4rem;
+      height: 44.4rem;
+      left: 9rem;
+      top: 20rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        bottom: 17rem;
+        left: 0;
+        right: 0;
+        top: auto;
+      }
+    }
+    &.moon-2 {
+      width: 44.4rem;
+      height: 44.4rem;
+      right: 9rem;
+      top: 20rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        bottom: -12rem;
+        left: 0;
+        right: 0;
+        top: auto;
+      }
+    }
   }
 }
 
@@ -1076,7 +1144,7 @@ header {
 }
 
 .quest-eleph {
-  @apply bg-yellow items-center h-screen;
+  @apply bg-yellow items-center h-full;
 
   .images-block {
     @apply flex justify-center flex-row;
@@ -1110,5 +1178,21 @@ header {
         }
       }
     }
+  }
+}
+.desktop-map {
+  @apply block;
+  width: 100%;
+  height: 50rem;
+  @media screen and (max-width: 768px) {
+    @apply hidden;
+  }
+}
+.mobile-map {
+  @apply hidden;
+  @media screen and (max-width: 768px) {
+    @apply block mx-auto;
+    width: 100%;
+    height: 45rem;
   }
 }
