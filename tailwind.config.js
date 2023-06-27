@@ -81,6 +81,10 @@ module.exports = {
       "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        'prev-arrow': "url('../../img/prev.png')",
+        'next-arrow': "url('../../img/next.png')",
+      },
       spacing: {
         4: "0.4rem",
         6: "0.6rem",
