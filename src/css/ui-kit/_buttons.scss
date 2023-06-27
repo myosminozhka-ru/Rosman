@@ -559,7 +559,7 @@ button {
   @apply w-3/5;
 
   .collapse-button {
-    @apply flex w-full cursor-pointer flex-row items-center justify-between border-none bg-background p-24 text-left text-l transition-all duration-500 ease-in-out;
+    @apply flex w-full cursor-pointer flex-row items-center justify-between border-none bg-background p-24 text-left text-l transition-all duration-500 ease-in-out my-8;
 
     span {
       background-image: url("../../img/arrow-down.svg");
@@ -586,10 +586,10 @@ button {
   }
 
   .collapse-content {
-    @apply block h-0 overflow-hidden bg-white px-6 py-0 text-l opacity-0 transition-all duration-500 ease-in-out;
+    @apply block h-0 overflow-hidden bg-white px-24 py-0 text-l opacity-0 transition-all duration-500 ease-in-out;
 
     p {
-      @apply m-0 text-l;
+      @apply m-0 text-m;
     }
 
     &.active {
