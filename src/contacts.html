@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Контакты</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body class="bg-gray-50">
+@@include('components/header/header.html')
+
+<div id="yellow-background">
+    <div id="moving-block"></div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block">
+        <div class="flex justify-between">
+            <p class="breadcrumbs p-24">
+                <a href="#">Главная </a><span>/</span>
+                <a class="active-js" href="#">Контакты</a>
+            </p>
+            <div class="breadcrumbs-small-screen px-24">
+                <div class="breadcrumbs-small-screen-image"></div>
+                <div class="breadcrumbs-small-screen-dots">
+                    ...
+                    <div class="breadcrumbs-arrow"></div>
+                    <div class="breadcrumbs-path-hidden"></div>
+                </div>
+                <div class="breadcrumbs-small-screen-path">Контакты</div>
+            </div>
+            <div class="breadcrumbs-icons">
+                <a href="#" class="item_card-external-link"></a>
+                <button class="item_card_add_to_favourite"></button>
+            </div>
+        </div>
+        <div class="flex"><h1 class="head-1 px-24 mb-64">Контакты</h1></div>
+        <div class="flex flex-row md:flex-col justify-between px-24 mb-42">
+            <div class="flex flex-col gap-32 w-1/4 md:w-full">
+                <p class="text-l text-text">Адрес</p>
+                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
+            </div>
+            <div class="flex flex-col gap-32 w-1/4 md:w-full">
+                <p class="text-l text-text">Юридический адрес</p>
+                <p class="text-l">17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1, помещ. II, 1 этаж</p>
+            </div>
+            <div class="flex flex-col gap-32 w-1/4 md:w-full">
+                <p class="text-l text-text">Телефон</p>
+                <p class="text-l">+7 495 933-71-30</p>
+            </div>
+        </div>
+        <iframe class="mobile-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="desktop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="flex flex-row md:flex-col  justify-between px-24 my-42">
+            <div class="flex flex-col  gap-16 w-1/4 md:w-full">
+                <img src="../../img/toys.svg" class="w-58 h-58">
+                <p class="text-4xl">Игрушки.СМИ и блогеры</p>
+                <p class="text-l text-text">Адрес</p>
+                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
+                <p class="text-l text-text">Телефон</p>
+                <p class="text-l">+7 495 933-71-30</p>
+                <p class="text-l text-text">Электронный адрес</p>
+                <p class="text-l">rosman@rosman.ru</p>
+            </div>
+            <div class="flex flex-col gap-16 w-1/4 md:w-full">
+                <img src="../../img/book.svg" class="w-58 h-58">
+                <p class="text-4xl">Книги</p>
+                <p class="text-l text-text">Адрес</p>
+                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
+                <p class="text-l text-text">Телефон</p>
+                <p class="text-l">+7 495 933-71-30</p>
+                <p class="text-l text-text">Электронный адрес</p>
+                <p class="text-l">rosman@rosman.ru</p>
+            </div>
+            <div class="flex flex-col gap-16 w-1/4 md:w-full">
+                <img src="../../img/document.svg" class="w-58 h-58">
+                <p class="text-4xl">Отдел прав и лицензий</p>
+                <p class="text-l text-text">Адрес</p>
+                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
+                <p class="text-l text-text">Телефон</p>
+                <p class="text-l">+7 495 933-71-30</p>
+                <p class="text-l text-text">Электронный адрес</p>
+                <p class="text-l">rosman@rosman.ru</p>
+            </div>
+        </div>
+        <div class="flex flex-row md:flex-col px-24 justify-between">
+            <p class="text-l ml-4 text-text w-1/12 md:w-full">Для вопросов и предложений</p>
+            <p class="text-8xl md:text-5xl"> rosman@rosman.ru</p>
+        </div>
+        @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', { }, )
+    </div>
+</div>
+<div class="custom-box !fixed">
+    <span></span>
+    <div class="custom-before"></div>
+    <a href="mailto:rosman@rosman.ru">Написать нам</a>
+    <div class="custom-after"></div>
+</div>
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>

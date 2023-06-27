@@ -79,7 +79,7 @@ button {
 }
 
 .more-down-filters {
-  @apply w-100;
+  @apply w-full;
 
   .more-down-button {
     &.filters {
@@ -227,6 +227,15 @@ button {
   @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold;
   min-width: 5rem;
   max-width: 15rem;
+  &.header {
+    border-color: black;
+    justify-content: center;
+    cursor: auto;
+    white-space: nowrap;
+    &:hover {
+      border-color: black;
+    }
+  }
 
   &.age {
     @apply w-55 justify-center;
@@ -723,11 +732,11 @@ button {
 
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl  bg-black text-white text-2.5xl;
   width: 17.4rem;
   height: 2.4rem;
-  z-index: 5;
-  top: 30rem;
+  z-index: 1000;
+  top: 80rem;
   transform: rotate(-90deg);
   transform-origin: left top;
 }

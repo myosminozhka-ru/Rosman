@@ -78,6 +78,16 @@
   }
 }
 
+.filter-2 {
+  @media screen and (min-width: 768px) {
+    @apply flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    @apply hidden;
+  }
+}
+
 .open-filter {
   @media screen and (max-width: 768px) {
     display: flex !important;
@@ -136,10 +146,10 @@
 
 /* Стили активной кнопки */
 .toolbar-button.active {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 880px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 880px) {
     color: #535353;
     background-color: #ffffff;
   }
@@ -288,7 +298,7 @@ header {
     @apply ml-24;
     @apply block;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
@@ -296,32 +306,32 @@ header {
   .mobile-logo {
     @apply hidden;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply block;
     }
   }
 
   .dropdown {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .header-nav {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 880px) {
       @apply hidden;
     }
   }
 
   .hide-mobile {
     .search-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
 
     .micro-button {
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 880px) {
         @apply hidden;
       }
     }
@@ -537,7 +547,36 @@ header {
       width: 100%;
     }
   }
-
+  .image_container_brand {
+    width: 100%;
+    height: 100%;
+    max-width: 8rem;
+    max-height: 8rem;
+  }
+  .all-brands {
+    background: none;
+    color:#808080;
+    border: #808080 0.2rem solid;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding: 1.2rem 0;
+    @media screen and (max-width: 900px) {
+      height: 7rem;
+      padding: 0.4rem 0;
+    }
+    p {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      white-space: normal;
+    }
+  }
   .brand_choose_brands {
     display: flex !important;
     display: -webkit-flex !important;
@@ -545,7 +584,7 @@ header {
     -webkit-flex-direction: row;
     gap: 2rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       display: flex !important;
       display: -webkit-flex !important;
       flex-direction: row;
@@ -553,10 +592,15 @@ header {
       overflow: scroll;
       width: 100%;
       gap: 2rem;
+      height: 9rem;
 
       .image_container_brand {
-        min-width: 50%;
-        width: 50%;
+        min-width: 7rem;
+        max-width: 13rem;
+        width: 100%;
+        height: 100%;
+        min-height: 7rem;
+        max-height: 13rem;;
       }
     }
   }
@@ -713,6 +757,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   video {
     margin: 0 auto;
@@ -726,13 +771,74 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
+    @media screen and (max-width: 768px) {
+      width: 32.4rem;
+      height: 31.4rem;
+    }
+    &.moon-1 {
+      width: 44.4rem;
+      height: 44.4rem;
+      left: 9rem;
+      top: 4rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        width: 32.4rem;
+        height: 31.4rem;
+        position: relative;
+        left: 0;
+        top: auto;
+      }
+    }
+    &.moon-2 {
+      width: 44.4rem;
+      height: 44.4rem;
+      right: 9rem;
+      top: 4rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        width: 32.4rem;
+        height: 31.4rem;
+        position: relative;
+        right: 0;
+        top: auto;
+      }
+    }
   }
 
   .text-on-moon {
     margin: 0 auto;
-    bottom: 290px;
+    bottom: 29rem;
     position: relative;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      bottom: 85rem;
+    }
+    &.moon-1 {
+      width: 44.4rem;
+      height: 44.4rem;
+      left: 9rem;
+      top: 20rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        bottom: 17rem;
+        left: 0;
+        right: 0;
+        top: auto;
+      }
+    }
+    &.moon-2 {
+      width: 44.4rem;
+      height: 44.4rem;
+      right: 9rem;
+      top: 20rem;
+      position: absolute;
+      @media screen and (max-width: 768px) {
+        bottom: -12rem;
+        left: 0;
+        right: 0;
+        top: auto;
+      }
+    }
   }
 }
 
@@ -1127,7 +1233,7 @@ header {
 }
 
 .quest-eleph {
-  @apply bg-yellow items-center h-screen;
+  @apply bg-yellow items-center h-full;
 
   .images-block {
     @apply flex justify-center flex-row;
@@ -1161,5 +1267,21 @@ header {
         }
       }
     }
+  }
+}
+.desktop-map {
+  @apply block;
+  width: 100%;
+  height: 50rem;
+  @media screen and (max-width: 768px) {
+    @apply hidden;
+  }
+}
+.mobile-map {
+  @apply hidden;
+  @media screen and (max-width: 768px) {
+    @apply block mx-auto;
+    width: 100%;
+    height: 45rem;
   }
 }
