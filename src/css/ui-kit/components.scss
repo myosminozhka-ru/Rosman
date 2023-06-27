@@ -900,6 +900,22 @@ header {
       &.bottom {
         top: 59rem;
 
+        &.zero-one {
+          left: 49.5rem;
+          top: 44rem;
+        }
+
+        &.zero-two {
+          left: 117.5rem;
+          top: 44rem;
+        }
+
+        &.zero-three {
+          left: 183rem;
+          top: 44rem;
+        }
+
+
         &.first {
           left: 83rem;
         }
@@ -931,10 +947,10 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 64.5rem;
+        bottom: 63.5rem;
 
         &.first {
-          left: 30.5rem;
+          left: 30rem;
         }
 
         &.second {
@@ -972,6 +988,21 @@ header {
 
       &.bottom {
         top: 58rem;
+
+        &.zero-one {
+          left: 43.5rem;
+          top: 43rem;
+        }
+
+        &.zero-two {
+          left: 110.5rem;
+          top: 43rem;
+        }
+
+        &.zero-three {
+          left: 177rem;
+          top: 43rem;
+        }
 
         &.first {
           left: 77.5rem;
