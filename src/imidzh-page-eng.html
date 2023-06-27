@@ -10,7 +10,7 @@
 <body>
 <div class="legal-information-wrapper relative">
   @@include('components/header/header-eng.html', { }, )
-  <div class="custom-box !z-1 !fixed">
+  <div class="custom-box !z-1 !fixed sm:hidden">
     <span></span>
     <div class="custom-before"></div>
     <a href="mailto:rosman@rosman.ru">Write to us</a>
@@ -18,7 +18,7 @@
   </div>
   <div class="flex flex-col gap-64">
     <!-- тут будут бренды и публикации -->
-    <div class="grid grid-cols-2 gap-24 p-24 bg-[#FFF145] sm:grid-cols-1">
+    <div class="grid grid-cols-2 gap-24 p-24 bg-[#FFF145] sm:grid-cols-1 sm:p-12">
       <div class="w-full relative">
         <img src="../../img/imidzh-car.jpg" alt="">
         <div class="absolute top-[2.4rem] left-[2.4rem] flex flex-col gap-20 bs:gap-12">
@@ -194,7 +194,8 @@
     </div>
     
     <!-- тут будет фидбек -->
-    <div class="relative bg-yellow py-[10rem] mb-64">
+    <div class="relative bg-yellow px-24 py-[10rem] mb-64 bs:py-[15rem] sm:px-12">
+
       <div class="absolute bg-white
       overflow-hidden h-46 top-0
       left-0 right-0 origin-top-right skew-y-[2deg]
@@ -202,17 +203,25 @@
       "></div>
       
       <div class="absolute bg-white
+      z-10
       overflow-hidden h-46 bottom-0
       left-0 right-0 origin-bottom-left skew-y-2
       shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]
-      "></div>
-      
-      <div class="w-[14rem] h-[10rem] block absolute bottom-[1.1%] right-[10%]">
-        <img src="../../img/elephant-figure-skating.svg" alt="">
+      ">
       </div>
-      
+
+      <div class="relative h-[1rem] rotate-2
+      bottom-[-57rem] left-0 right-0
+      bs:bottom-[-61rem]
+      msm:!bottom-[-62.5rem]
+      ">
+        <div class="z-2 w-[14rem] h-[10rem] block absolute bottom-0 right-[12%]">
+          <img src="../../img/elephant-figure-skating.svg" alt="">
+        </div>
+      </div>
+
       <!--   контентная часть   -->
-      <div class=" mx-auto flex flex-col items-center gap-40 max-w-[40rem] sm:items-start">
+      <div class="relative mx-auto flex flex-col items-center gap-40 max-w-[40rem] sm:items-start">
         <div class="text-5xl font-medium">Feedback</div>
         <div class=" flex flex-col gap-24 items-start w-full">
           <input class="input w-full" placeholder="Name*">
@@ -238,10 +247,11 @@
               </a>
             </label>
           </div>
-          <button class="button-black w-full">Send</button>
+          <button class="button-black w-full font-medium text-15.20">Send</button>
         </div>
+
       </div>
-    
+
     </div>
   </div>
   
