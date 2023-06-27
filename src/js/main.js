@@ -255,14 +255,23 @@ for (let i = 0; i < elephantDownButtons.length; i++) {
 const filterOpen = document.getElementById('open-filter')
 const filterClose = document.getElementById('close-filter')
 const filter = document.getElementById('filter')
+const filter2 = document.getElementById('filter-2')
 if (filterOpen !== null) {
     filterOpen.addEventListener("click", function() {
-        filter.classList.add('open-filter')
+        if (filter !== null) {
+            filter.classList.add('open-filter')
+        } else  if (filter2 !== null) {
+            filter2.classList.add('open-filter')
+        }
     });
 }
 if (filterClose !== null) {
     filterClose.addEventListener("click", function() {
-        filter.classList.remove('open-filter')
+        if (filter !== null) {
+            filter.classList.remove('open-filter')
+        } else  if (filter2 !== null) {
+            filter2.classList.remove('open-filter')
+        }
     });
 }
 

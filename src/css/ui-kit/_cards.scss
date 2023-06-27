@@ -7,6 +7,7 @@
 }
 
 // карточка игрушки и книги
+
 // card's top
 .toy_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12 w-full;
@@ -89,6 +90,9 @@
   border: 1px solid #000000;
   @media screen and (max-width: 400px) {
     @apply text-center w-1/2;
+  }
+  @media screen and (max-width: 900px) {
+    @apply px-4;
   }
 }
 
@@ -221,7 +225,8 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row sm:flex-col;
+  @apply flex flex-row gap-16 sm:flex-col;
+  max-width: 60.8rem;
 }
 
 .card_interview_name {
@@ -690,6 +695,7 @@
 
 .emp_soc_fb {
   background: url("../../img/icon-white-facebook.svg") no-repeat;
+
 }
 
 .emp_soc_fb:hover {
