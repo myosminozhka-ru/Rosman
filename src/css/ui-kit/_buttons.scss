@@ -1,5 +1,5 @@
 button {
-  @apply flex flex-row items-center justify-center px-40 py-10 min-w-4 whitespace-nowrap;
+  @apply flex flex-row items-center justify-center px-40 py-10 min-w-4 whitespace-nowrap text-m;
 }
 
 .button-black {
@@ -26,7 +26,7 @@ button {
 }
 
 .button-white {
-  @apply flex flex-row items-center justify-center border border-black bg-white px-40 py-10 text-black min-w-4 whitespace-nowrap;
+  @apply flex flex-row items-center justify-center border border-black bg-white px-40 py-10 text-black min-w-4 whitespace-nowrap text-m;
 
   &:hover {
     @apply border-yellow bg-yellow text-black;
@@ -258,7 +258,7 @@ button {
 }
 
 .checkbox-container {
-  @apply my-10 flex cursor-pointer items-center text-l text-black;
+  @apply my-10 flex cursor-pointer items-center text-s text-black;
 
   input[type="radio"] {
     @apply hidden;
