@@ -321,14 +321,14 @@ header {
   }
 
   .language {
-    @apply inline-block text-l;
+    @apply inline-block text-l whitespace-nowrap;
 
     .active-js {
       color: rgba(160, 168, 47, 0.69);
     }
 
     span {
-      @apply cursor-pointer mx-3;
+      @apply cursor-pointer;
     }
   }
 
@@ -338,8 +338,8 @@ header {
     padding: 5px;
     width: 40%;
 
-    @media screen and (max-width: 780px) {
-      width: 60%;
+    @media screen and (max-width: 900px) {
+      width: 45%;
     }
 
     input {
@@ -366,13 +366,17 @@ header {
         box-shadow: none;
       }
 
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 900px) {
         padding: 0;
+        width: 70%;
       }
     }
 
     span {
       @apply ml-5;
+      @media screen and (max-width: 900px) {
+        @apply ml-6;
+      }
     }
 
     .search-icon {
@@ -383,8 +387,10 @@ header {
       height: 2.6rem;
       cursor: pointer;
 
-      @media screen and (max-width: 780px) {
-        width: 1.6rem;
+      @media screen and (max-width: 900px) {
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
@@ -395,8 +401,10 @@ header {
       width: 2.6rem;
       height: 2.6rem;
       cursor: pointer;
-      @media screen and (max-width: 780px) {
-        width: 1.6rem;
+      @media screen and (max-width: 900px) {
+        background-size: 2rem 2rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
@@ -407,8 +415,10 @@ header {
       background-size: 1.6rem 1.6rem;
       width: 2.6rem;
       height: 2.6rem;
-      @media screen and (max-width: 780px) {
-        width: 1.6rem;
+      @media screen and (max-width: 900px) {
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
@@ -426,19 +436,22 @@ header {
 
     &.dekstop {
         @apply inline-flex;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 900px) {
         @apply hidden;
       }
     }
     &.mobile {
       @apply hidden;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
     }
 
     span {
-      @apply mr-10;
+      @apply mr-6;
+      @media screen and (max-width: 900px) {
+        @apply mr-4;
+      }
     }
   }
 
@@ -531,7 +544,7 @@ header {
   .width-75 {
     width: 75%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       width: 100%;
     }
   }
@@ -543,7 +556,7 @@ header {
     -webkit-flex-direction: row;
     gap: 2rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       display: flex !important;
       display: -webkit-flex !important;
       flex-direction: row;
@@ -669,7 +682,7 @@ header {
   &.mobile {
     @apply hidden;
 
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 900px) {
       @apply block;
     }
   }
@@ -741,7 +754,7 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       width: 32.4rem;
       height: 32.4rem;
     }
@@ -755,7 +768,8 @@ header {
       left: 9rem;
       top: 4rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (max-width: 900px) {
         width: 32.4rem;
         height: 32.4rem;
         position: relative;
@@ -770,7 +784,7 @@ header {
       right: 9rem;
       top: 4rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         width: 32.4rem;
         height: 32.4rem;
         position: relative;
@@ -785,8 +799,8 @@ header {
     bottom: 29rem;
     position: relative;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      bottom: 85rem;
+    @media screen and (max-width: 900px) {
+      bottom: 20rem;
     }
     @media screen and (max-width: 350px) {
       bottom: 15rem;
@@ -797,7 +811,7 @@ header {
       left: 9rem;
       top: 20rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         bottom: 17rem;
         left: 0;
         right: 0;
@@ -810,7 +824,7 @@ header {
       right: 9rem;
       top: 20rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         bottom: -12rem;
         left: 0;
         right: 0;
