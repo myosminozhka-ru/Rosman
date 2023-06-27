@@ -151,9 +151,37 @@ dots.forEach((dot, index) => {
 
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".js-book-text-container");
+const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
 if (jsBookToggleButton && jsBookTextContainer) {
   jsBookToggleButton.addEventListener('click', function () {
-    jsBookTextContainer.classList.toggle('h-full');
+    jsBookTextContainer.classList.toggle('line-clamp-none');
   });
 }
+
+// swiper fullpage
+const swiperImage2 = new Swiper('.swiper-image-2', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+  },
+});

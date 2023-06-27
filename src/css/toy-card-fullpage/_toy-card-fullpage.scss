@@ -261,9 +261,9 @@
   @apply w-full h-full object-cover;
 }
 
-.thumbs {
-  @apply flex flex-col gap-16;
-}
+//.thumbs {
+//  @apply flex flex-col gap-14;
+//}
 
 
 .js-thumb-chosen {
@@ -276,6 +276,7 @@
 
 .thumbs li {
   list-style: none;
+  max-width: 7rem;
 }
 
 .thumbs {
@@ -316,18 +317,24 @@
 
 // navigation
 .navigation-flex {
-  @apply flex-wrap flex-nowrap gap-16 items-start;
+  @apply flex-wrap flex-nowrap gap-16 items-center;
   @media screen and (max-width: 500px) {
-    @apply justify-between;
+    @apply grid grid-cols-3 text-s justify-between;
   }
 }
 
 .card-fullpage-tab {
   @apply text-15.20 font-medium py-10 px-16;
+  @media screen and (max-width: 500px) {
+    @apply text-s px-0;
+  }
 }
 
 .card-fullpage-tabs {
   @apply mb-32;
+  @media screen and (max-width: 500px) {
+    @apply mb-16;
+  }
 }
 
 // card-fullpage-desc-comp

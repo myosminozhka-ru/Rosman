@@ -106,6 +106,7 @@
     @apply w-full;
   }
 }
+
 .toolbar {
   @media screen and (min-width: 768px) {
     display: none;
@@ -153,6 +154,7 @@
     background-color: #ffffff;
   }
 }
+
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -596,6 +598,7 @@ header {
 .swiper,
 .swiper-text,
 .swiper-image,
+.swiper-image-2,
 .swiper-detailed-page,
 .swiper-detailed-page-video {
   width: 100% !important;
