@@ -7,6 +7,21 @@ button {
 
   &:hover {
     @apply bg-yellow text-black;
+    &.arrow-span {
+      span {
+        visibility: hidden;
+      }
+    }
+  }
+  &.arrow-span {
+    span {
+      background-image: url(../../img/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      margin-left: 1rem;
+    }
   }
 }
 

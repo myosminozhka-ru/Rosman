@@ -3,9 +3,11 @@
 
 
   .more-down-button {
-    @apply text-l font-semibold w-full justify-between text-left;
+    @apply text-l font-semibold w-full justify-between text-left px-0;
   }
-
+  .more-down-content {
+    @apply  px-0;
+  }
   .back-filter {
     @apply text-s font-semibold flex gap-8 my-14;
   }
@@ -13,6 +15,10 @@
   .scroll-block {
     @apply h-140 overflow-y-auto;
   }
+  .scroll-block::-webkit-scrollbar-track {border-radius: 0.4rem;}
+  .scroll-block::-webkit-scrollbar {width: 0.6rem;}
+  .scroll-block::-webkit-scrollbar-thumb {border-radius: 0.4rem;background: #acadad;}
+  .scroll-block:hover::-webkit-scrollbar-thumb {background: #555555;}
 }
 
 .mobile-filter {
@@ -607,10 +613,15 @@ header {
 .swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
-  padding: 0 3rem !important;
+  padding: 0rem !important;
 
   .card_career {
     margin-top: 3rem;
+    @media screen and (max-width: 768px) {
+      @apply py-4;
+      margin-top: 0;
+      gap: 0;
+    }
   }
 
   .swiper-header {
@@ -732,7 +743,11 @@ header {
     animation: spin 20s linear infinite;
     @media screen and (max-width: 768px) {
       width: 32.4rem;
-      height: 31.4rem;
+      height: 32.4rem;
+    }
+    @media screen and (max-width: 350px) {
+      width: 22.4rem;
+      height: 22.4rem;
     }
     &.moon-1 {
       width: 44.4rem;
@@ -742,11 +757,12 @@ header {
       position: absolute;
       @media screen and (max-width: 768px) {
         width: 32.4rem;
-        height: 31.4rem;
+        height: 32.4rem;
         position: relative;
         left: 0;
         top: auto;
       }
+
     }
     &.moon-2 {
       width: 44.4rem;
@@ -756,7 +772,7 @@ header {
       position: absolute;
       @media screen and (max-width: 768px) {
         width: 32.4rem;
-        height: 31.4rem;
+        height: 32.4rem;
         position: relative;
         right: 0;
         top: auto;
@@ -771,6 +787,9 @@ header {
     text-align: center;
     @media screen and (max-width: 768px) {
       bottom: 85rem;
+    }
+    @media screen and (max-width: 350px) {
+      bottom: 15rem;
     }
     &.moon-1 {
       width: 44.4rem;
@@ -918,6 +937,10 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
+  &::-webkit-scrollbar-track {border-radius: 0.2rem;}
+  &::-webkit-scrollbar {width: 0.4rem;}
+  &::-webkit-scrollbar-thumb {border-radius: 0.2rem;background: #acadad;}
+  &:hover::-webkit-scrollbar-thumb {background: #555555;}
 
   #elephant-slider {
     background-size: auto;
@@ -1072,19 +1095,73 @@ header {
       }
 
       .color-block {
+
         &.bottom {
           padding-top: 9rem;
+          &.first {
+            background-color: #FFF145;
+          }
+
+          &.second {
+            background-color:  #33C15B;
+          }
+
+          &.third {
+            background-color: #FF0053;
+          }
+
+          &.fourth {
+            background-color: #FF8500;
+          }
+
+          &.fifth {
+            background-color: #4498FC;
+          }
         }
 
         &.upper {
           padding-bottom: 9rem;
+          &.first {
+            background-color: #FFF145;
+          }
+
+          &.second {
+            background-color:  #33C15B;
+          }
+
+          &.third {
+            background-color: #FF0053;
+          }
+
+          &.fourth {
+            background-color: #FF8500;
+          }
+
+          &.fifth {
+            background-color: #4498FC;
+          }
+
+          &.sixth {
+            background-color: #FFF145;
+          }
+
+          &.seventh {
+            background-color: #33C15B;
+          }
+
+          &.nine {
+            background-color: #FF0053;
+          }
+          &.ten {
+            background-color: #FF8500;
+          }
         }
 
         height: auto;
-        background-color: #FFF145;
+
 
         .elephant-more-up-button {
-          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-start;
+          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
 
           span {
             background-image: url("../../img/arrow-down.svg");
@@ -1092,7 +1169,8 @@ header {
             background-size: 1.6rem 1.6rem;
             width: 1.6rem;
             height: 1.6rem;
-            margin-left: 1rem;
+            margin-right: 1rem;
+
           }
 
           &.active-js {
@@ -1102,8 +1180,9 @@ header {
               background-size: 1.6rem 1.6rem;
               width: 1.6rem;
               height: 1.6rem;
-              margin-left: 1rem;
+              margin-right: 1rem;
               transform: rotate(180deg);
+
             }
           }
         }
@@ -1190,7 +1269,7 @@ header {
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 768px) {
         width: 6rem;
       }
 
@@ -1199,7 +1278,7 @@ header {
         bottom: -1.8rem;
         width: 25rem;
         left: -1rem;
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 768px) {
           height: 8rem;
           bottom: -2.4rem;
           width: 6rem;
