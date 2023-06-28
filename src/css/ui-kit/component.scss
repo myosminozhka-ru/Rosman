@@ -491,15 +491,17 @@ header {
       width: 100%;
     }
   }
+
   .image_container_brand {
     width: 100%;
     height: 100%;
     max-width: 8rem;
     max-height: 8rem;
   }
+
   .all-brands {
     background: none;
-    color:#808080;
+    color: #808080;
     border: #808080 0.2rem solid;
     border-radius: 1rem;
     text-align: center;
@@ -512,6 +514,7 @@ header {
       height: 7rem;
       padding: 0.4rem 0;
     }
+
     p {
       width: 100%;
       height: 100%;
@@ -521,6 +524,7 @@ header {
       white-space: normal;
     }
   }
+
   .brand_choose_brands {
     display: flex !important;
     display: -webkit-flex !important;
@@ -599,6 +603,7 @@ header {
 .swiper-text,
 .swiper-image,
 .swiper-image-2,
+.swiper-book-fragment,
 .swiper-detailed-page,
 .swiper-detailed-page-video {
   width: 100% !important;
@@ -720,6 +725,7 @@ header {
       width: 32.4rem;
       height: 31.4rem;
     }
+
     &.moon-1 {
       width: 44.4rem;
       height: 44.4rem;
@@ -734,6 +740,7 @@ header {
         top: auto;
       }
     }
+
     &.moon-2 {
       width: 44.4rem;
       height: 44.4rem;
@@ -758,6 +765,7 @@ header {
     @media screen and (max-width: 768px) {
       bottom: 85rem;
     }
+
     &.moon-1 {
       width: 44.4rem;
       height: 44.4rem;
@@ -771,6 +779,7 @@ header {
         top: auto;
       }
     }
+
     &.moon-2 {
       width: 44.4rem;
       height: 44.4rem;
@@ -1183,6 +1192,7 @@ header {
     }
   }
 }
+
 .desktop-map {
   @apply block;
   width: 100%;
@@ -1191,6 +1201,7 @@ header {
     @apply hidden;
   }
 }
+
 .mobile-map {
   @apply hidden;
   @media screen and (max-width: 768px) {
