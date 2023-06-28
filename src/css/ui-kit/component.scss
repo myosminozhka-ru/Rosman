@@ -1,9 +1,12 @@
 .filters-block {
   @apply w-full;
 
-
   .more-down-button {
-    @apply text-l font-semibold w-full justify-between text-left;
+    @apply text-l font-semibold w-full justify-between text-left px-0;
+  }
+
+  .more-down-content {
+    @apply px-0;
   }
 
   .back-filter {
@@ -13,14 +16,31 @@
   .scroll-block {
     @apply h-140 overflow-y-auto;
   }
+
+  .scroll-block::-webkit-scrollbar-track {
+    border-radius: 0.4rem;
+  }
+
+  .scroll-block::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+
+  .scroll-block::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background: #acadad;
+  }
+
+  .scroll-block:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 }
 
 .mobile-filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex;
     margin: 1rem auto;
     cursor: pointer;
@@ -43,21 +63,21 @@
 }
 
 .mobile-p {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @apply text-2xl inline-block;
   }
 }
 
 #close-filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     float: right;
     cursor: pointer;
     display: inline-block;
@@ -69,11 +89,11 @@
 }
 
 .filter {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply flex;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
@@ -89,7 +109,7 @@
 }
 
 .open-filter {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex !important;
     position: fixed;
     top: 0;
@@ -108,20 +128,25 @@
 }
 
 .toolbar {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 900px) {
     background-color: #ffffff;
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 0.1rem #D9D9D9 solid;
-    position: fixed; /* Зафиксируем позицию */
-    bottom: 0; /* Разместим внизу экрана */
-    width: 100%; /* Займем всю доступную ширину */
+    position: fixed;
+    /* Зафиксируем позицию */
+    bottom: 0;
+    /* Разместим внизу экрана */
+    width: 100%;
+    /* Займем всю доступную ширину */
     z-index: 100000;
+
     img {
       width: 2rem;
       height: 2rem;
@@ -130,12 +155,15 @@
   }
 }
 
+
 /* Стили кнопок */
+
 .toolbar-button {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 900px) {
     color: #808080;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -144,12 +172,15 @@
   }
 }
 
+
 /* Стили активной кнопки */
+
 .toolbar-button.active {
-  @media screen and (min-width: 880px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
-  @media screen and (max-width: 880px) {
+
+  @media screen and (max-width: 900px) {
     color: #535353;
     background-color: #ffffff;
   }
@@ -283,7 +314,6 @@
   }
 }
 
-
 .main-block {
   @apply w-1/4;
   //@media screen and (max-width: 768px) {
@@ -298,7 +328,7 @@ header {
     @apply ml-24;
     @apply block;
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
@@ -306,19 +336,29 @@ header {
   .mobile-logo {
     @apply hidden;
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 900px) {
       @apply block;
     }
   }
 
   .dropdown {
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
 
   .header-nav {
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 900px) {
+      @apply hidden;
+    }
+  }
+
+  .hide-icon {
+    .search-button {
+      @apply hidden;
+    }
+
+    .micro-button {
       @apply hidden;
     }
   }
@@ -340,27 +380,27 @@ header {
   .search-button {
     display: inline-block;
     background: url("../../img/search.svg") no-repeat center;
-    background-size: 1rem 1rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
   .micro-button {
     display: inline-block;
     background: url("../../img/micro.svg") no-repeat center;
-    background-size: 2rem 2rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 3.6rem 3.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
   .heart-button {
     display: inline-block;
     background: url("../../img/heart.svg") no-repeat center;
-    background-size: 1rem 1rem;
-    width: 1rem;
-    height: 2rem;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
   }
 
@@ -374,14 +414,14 @@ header {
   }
 
   .language {
-    @apply inline-block;
+    @apply inline-block text-l whitespace-nowrap;
 
     .active-js {
       color: rgba(160, 168, 47, 0.69);
     }
 
     span {
-      @apply cursor-pointer mx-3;
+      @apply cursor-pointer;
     }
   }
 
@@ -391,43 +431,78 @@ header {
     padding: 5px;
     width: 40%;
 
-    @media screen and (max-width: 780px) {
-      width: 60%;
+    @media screen and (max-width: 900px) {
+      width: 45%;
     }
 
     input {
       @apply w-full border-0 bg-yellow;
 
-      @media screen and (max-width: 780px) {
+      &:focus {
+        border-style: none;
+        outline: none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        border-style: none;
+        outline: none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &:active {
+        border-style: none;
+        outline: none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      @media screen and (max-width: 900px) {
         padding: 0;
+        width: 70%;
       }
     }
 
     span {
       @apply ml-5;
+
+      @media screen and (max-width: 900px) {
+        @apply ml-6;
+      }
     }
 
     .search-icon {
       display: block;
       background: url("../../img/search.svg") no-repeat center;
-      background-size: 1rem 1rem;
-      width: 1rem;
-      height: 2rem;
+      background-size: 1.6rem 1.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      cursor: pointer;
 
-      @media screen and (max-width: 780px) {
-        width: 2rem;
+      @media screen and (max-width: 900px) {
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
     .micro-icon {
       display: block;
       background: url("../../img/micro.svg") no-repeat center;
-      background-size: 2rem 2rem;
-      width: 1rem;
-      height: 2rem;
+      background-size: 3.6rem 3.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      cursor: pointer;
 
-      @media screen and (max-width: 780px) {
-        width: 2rem;
+      @media screen and (max-width: 900px) {
+        background-size: 2rem 2rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
@@ -435,26 +510,52 @@ header {
       cursor: pointer;
       display: block;
       background: url("../../img/close.svg") no-repeat center;
-      background-size: 1rem 1rem;
-      width: 1rem;
-      height: 2rem;
+      background-size: 1.6rem 1.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
 
-      @media screen and (max-width: 780px) {
-        width: 2rem;
+      @media screen and (max-width: 900px) {
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
 
     &.hide {
       width: 0;
       opacity: 0;
+
+      span {
+        display: none;
+      }
     }
   }
 
   .header-btn {
-    @apply inline-flex items-center;
+    @apply items-center;
+
+    &.dekstop {
+      @apply inline-flex;
+
+      @media screen and (max-width: 900px) {
+        @apply hidden;
+      }
+    }
+
+    &.mobile {
+      @apply hidden;
+
+      @media screen and (max-width: 900px) {
+        @apply inline-flex;
+      }
+    }
 
     span {
-      @apply mr-10;
+      @apply mr-6;
+
+      @media screen and (max-width: 900px) {
+        @apply mr-4;
+      }
     }
   }
 
@@ -493,34 +594,40 @@ header {
           @apply mx-6 my-3 text-s uppercase;
 
           span {
-            width: 1rem;
-            height: 1rem;
-            border-top: 0.2rem solid #000000;
-            border-right: 0.2rem solid #000000;
-            margin-left: 0.9rem;
-            margin-bottom: 0.7rem;
-            transform: rotate(135deg);
+            background-image: url("../../img/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-size: 1.6rem 1.6rem;
+            width: 1.6rem;
+            height: 1.6rem;
             vertical-align: middle;
             display: inline-block;
           }
 
           &.active-js {
             span {
-              width: 1rem;
-              height: 1rem;
-              border-top: 0.2rem solid #000000;
-              border-right: 0.2rem solid #000000;
-              margin-left: 0.9rem;
+              background-image: url("../../img/arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: 1.6rem 1.6rem;
+              width: 1.6rem;
+              height: 1.6rem;
               margin-bottom: 0rem;
               vertical-align: middle;
               display: inline-block;
-              transform: rotate(-45deg);
+              transform: rotate(180deg);
             }
           }
         }
 
         .more-down-content {
-          @apply absolute z-1000 bg-white;
+          @apply absolute z-1000 bg-white p-24;
+
+          p {
+            @apply text-m;
+          }
+
+          p:not(:last-child) {
+            @apply mb-16;
+          }
         }
       }
     }
@@ -543,7 +650,7 @@ header {
   .width-75 {
     width: 75%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       width: 100%;
     }
   }
@@ -566,6 +673,7 @@ header {
     height: 100%;
     margin: auto;
     padding: 1.2rem 0;
+
     @media screen and (max-width: 900px) {
       height: 7rem;
       padding: 0.4rem 0;
@@ -604,7 +712,8 @@ header {
         width: 100%;
         height: 100%;
         min-height: 7rem;
-        max-height: 13rem;;
+        max-height: 13rem;
+        ;
       }
     }
   }
@@ -614,7 +723,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);;
+  height: calc(100% - 145rem);
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -634,7 +743,8 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);;
+  height: calc(100% - 145rem);
+  ;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -661,12 +771,18 @@ header {
 .swiper-detailed-page,
 .swiper-imidzh-page,
 .swiper-detailed-page-video {
+
   //width: 100% !important;
   //height: auto !important;
   //padding: 0 3rem !important;
-
   .card_career {
     margin-top: 3rem;
+
+    @media screen and (max-width: 768px) {
+      @apply py-4;
+      margin-top: 0;
+      gap: 0;
+    }
   }
 
   .swiper-header {
@@ -681,6 +797,12 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
       .button-next {
@@ -689,6 +811,12 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -704,7 +832,7 @@ header {
   &.mobile {
     @apply hidden;
 
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 900px) {
       @apply block;
     }
   }
@@ -766,8 +894,8 @@ header {
 
   video {
     margin: 0 auto;
-    top: 35px;
     position: relative;
+    width: 15rem;
   }
 
   /* Применяем анимацию к элементу */
@@ -776,9 +904,15 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 900px) {
       width: 32.4rem;
-      height: 31.4rem;
+      height: 32.4rem;
+    }
+
+    @media screen and (max-width: 350px) {
+      width: 22.4rem;
+      height: 22.4rem;
     }
 
     &.moon-1 {
@@ -787,9 +921,10 @@ header {
       left: 9rem;
       top: 4rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (max-width: 900px) {
         width: 32.4rem;
-        height: 31.4rem;
+        height: 32.4rem;
         position: relative;
         left: 0;
         top: auto;
@@ -802,9 +937,10 @@ header {
       right: 9rem;
       top: 4rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (max-width: 900px) {
         width: 32.4rem;
-        height: 31.4rem;
+        height: 32.4rem;
         position: relative;
         right: 0;
         top: auto;
@@ -817,8 +953,13 @@ header {
     bottom: 29rem;
     position: relative;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      bottom: 85rem;
+
+    @media screen and (max-width: 900px) {
+      bottom: 20rem;
+    }
+
+    @media screen and (max-width: 350px) {
+      bottom: 15rem;
     }
 
     &.moon-1 {
@@ -827,7 +968,8 @@ header {
       left: 9rem;
       top: 20rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (max-width: 900px) {
         bottom: 17rem;
         left: 0;
         right: 0;
@@ -841,7 +983,8 @@ header {
       right: 9rem;
       top: 20rem;
       position: absolute;
-      @media screen and (max-width: 768px) {
+
+      @media screen and (max-width: 900px) {
         bottom: -12rem;
         left: 0;
         right: 0;
@@ -940,6 +1083,12 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
       .button-next {
@@ -948,6 +1097,12 @@ header {
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -958,6 +1113,23 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.2rem;
+    background: #acadad;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 
   #elephant-slider {
     background-size: auto;
@@ -1029,7 +1201,6 @@ header {
           left: 183rem;
           top: 44rem;
         }
-
 
         &.first {
           left: 83rem;
@@ -1144,36 +1315,96 @@ header {
 
       .color-block {
         &.bottom {
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
+
+          &.first {
+            background-color: #FFF145;
+          }
+
+          &.second {
+            background-color: #33C15B;
+          }
+
+          &.third {
+            background-color: #FF0053;
+          }
+
+          &.fourth {
+            background-color: #FF8500;
+          }
+
+          &.fifth {
+            background-color: #4498FC;
+          }
         }
 
         &.upper {
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
           padding-bottom: 9rem;
+
+          &.first {
+            background-color: #FFF145;
+          }
+
+          &.second {
+            background-color: #33C15B;
+          }
+
+          &.third {
+            background-color: #FF0053;
+          }
+
+          &.fourth {
+            background-color: #FF8500;
+          }
+
+          &.fifth {
+            background-color: #4498FC;
+          }
+
+          &.sixth {
+            background-color: #FFF145;
+          }
+
+          &.seventh {
+            background-color: #33C15B;
+          }
+
+          &.nine {
+            background-color: #FF0053;
+          }
+
+          &.ten {
+            background-color: #FF8500;
+          }
         }
 
         height: auto;
-        background-color: #FFF145;
 
         .elephant-more-up-button {
-          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-start;
+          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
 
           span {
-            width: 0.8rem;
-            height: 0.8rem;
-            border-top: 0.2rem solid #000000;
-            border-right: 0.2rem solid #000000;
-            margin-left: 1rem;
-            transform: rotate(-45deg);
+            background-image: url("../../img/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-size: 1.6rem 1.6rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 1rem;
           }
 
           &.active-js {
             span {
-              width: 0.8rem;
-              height: 0.8rem;
-              border-top: 0.2rem solid #000000;
-              border-right: 0.2rem solid #000000;
-              margin-left: 1rem;
-              transform: rotate(135deg);
+              background-image: url("../../img/arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: 1.6rem 1.6rem;
+              width: 1.6rem;
+              height: 1.6rem;
+              margin-right: 1rem;
+              transform: rotate(180deg);
             }
           }
         }
@@ -1190,22 +1421,23 @@ header {
           @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
 
           span {
-            width: 0.8rem;
-            height: 0.8rem;
-            border-top: 0.2rem solid #000000;
-            border-right: 0.2rem solid #000000;
+            background-image: url("../../img/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-size: 1.6rem 1.6rem;
+            width: 1.6rem;
+            height: 1.6rem;
             margin-left: 1rem;
-            transform: rotate(135deg);
           }
 
           &.active-js {
             span {
-              width: 0.8rem;
-              height: 0.8rem;
-              border-top: 0.2rem solid #000000;
-              border-right: 0.2rem solid #000000;
+              background-image: url("../../img/arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: 1.6rem 1.6rem;
+              width: 1.6rem;
+              height: 1.6rem;
               margin-left: 1rem;
-              transform: rotate(-45deg);
+              transform: rotate(180deg);
             }
           }
         }
@@ -1250,6 +1482,7 @@ header {
     img {
       width: 18rem;
       height: 24rem;
+
       @media screen and (max-width: 768px) {
         width: 5rem;
         height: 6rem;
@@ -1259,20 +1492,19 @@ header {
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
+
       @media screen and (max-width: 768px) {
         width: 6rem;
       }
 
       video {
-        @apply absolute h-150;
-        bottom: -1.8rem;
+        @apply absolute;
+        height: 27rem;
         width: 25rem;
-        left: -1rem;
+
         @media screen and (max-width: 768px) {
-          height: 8rem;
-          bottom: -2.4rem;
+          height: 11rem;
           width: 6rem;
-          left: -0.3rem;
         }
       }
     }
@@ -1283,6 +1515,7 @@ header {
   @apply block;
   width: 100%;
   height: 50rem;
+
   @media screen and (max-width: 768px) {
     @apply hidden;
   }
@@ -1290,6 +1523,7 @@ header {
 
 .mobile-map {
   @apply hidden;
+
   @media screen and (max-width: 768px) {
     @apply block mx-auto;
     width: 100%;

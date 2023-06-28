@@ -25,6 +25,9 @@ module.exports = {
       "5xl": '115rem',
       "8.8": "8.8rem"
     },
+    minWidth: {
+      '4': '4rem',
+    },
     screens: {
       sm: {max: "639px"},
       md: {max: "868px"},
@@ -63,7 +66,7 @@ module.exports = {
       "purple-5": "#AF74E9",
       "blue-1": "#0070EA",
       "blue-2": "#4498FC",
-      green: "#33C15B",
+      green: "#35CC66",
       yellow: "#FFF145",
       black: "#000000",
       text: "#808080",
@@ -84,6 +87,7 @@ module.exports = {
     },
     extend: {
       spacing: {
+        1: "0.1rem",
         4: "0.4rem",
         6: "0.6rem",
         8: "0.8rem",
