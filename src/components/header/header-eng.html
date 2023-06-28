@@ -1,4 +1,4 @@
-<header id="header2" class="bottom header" data-header="books">
+<header id="header3" class="bottom header" data-header="eng">
   <div class="logo "><img src="../../img/logos/main-logo-big.svg"></div>
   <div class="mobile-logo "><img src="../../img/logos/main-logo-mobile.svg"></div>
   <div class="dropdown">
@@ -15,53 +15,24 @@
         Игрушки</a>
     </div>
   </div>
-  <div class="dropdown menu hide" id="mobile-menu">
-    <button><div class="icon"></div></button>
-    <div class="content">
-      <ul>
-        <li class="company"><a href="#">Бренды</a></li>
-        <li class="news"><a href="#">Новости</a></li>
-        <li class="about"><a href="#">О компании</a></li>
-        <li class="publisher"><a href="#">Издательство</a></li>
-        <li class="books-news"><a href="#">Новости книг</a></li>
-        <li class="NDK"><a href="#">НДК</a></li>
-        <li class="rosmen">
-          <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-          <div class="more-down-content out">
-            <p>О компании</p>
-            <p>Карьера в РОСМЭН</p>
-            <p>Игрушки</p>
-            <p>Видео</p>
-            <p>Контакты</p>
-          </div>
-        </li>
-        <li class="toys"><a href="#">Игрушки</a></li>
-        <li class="career"><a href="#">Карьера</a></li>
-        <li class="contacts"><a href="#">Контакты</a></li>
-        <li class="author"><a href="#">Авторы</a></li>
-        <li class="partners"><a href="#">Партнерам</a></li>
-      </ul>
-    </div>
-  </div>
   <nav class="header-nav ">
     <ul>
       <li class="company"><a href="#">Бренды</a></li>
       <li class="news"><a href="#">Новости</a></li>
-      <li class="about"><a href="#">О компании</a></li>
+      <li class="about font-medium"><a href="#">About</a></li>
       <li class="publisher"><a href="#">Издательство</a></li>
       <li class="books-news"><a href="#">Новости книг</a></li>
       <li class="NDK"><a href="#">НДК</a></li>
       <li class="rosmen">
         <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
         <div class="more-down-content out">
-          <p>О компании</p>
-          <p>Карьера в РОСМЭН</p>
-          <p>Игрушки</p>
-          <p>Видео</p>
-          <p>Контакты</p>
+          <p>Содержимое 1</p>
+          <p>Содержимое 1</p>
+          <p>Содержимое 1</p>
         </div>
       </li>
-      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="toys font-medium"><a href="#">Toys</a></li>
+      <li class="books font-medium"><a href="#">Books</a></li>
       <li class="career"><a href="#">Карьера</a></li>
       <li class="contacts"><a href="#">Контакты</a></li>
       <li class="author"><a href="#">Авторы</a></li>
@@ -74,23 +45,16 @@
     <input type="text" placeholder="Введите поисковый запрос">
     <span class="cross-icon" onclick="toggleSearch()"></span>
   </div>
-  <div class="header-btn dekstop">
-    <span class="search-button" onclick="toggleSearch()"></span>
-    <span class="micro-button"></span>
-    <span class="heart-button"></span>
+  <div class="header-btn">
     <div class="language">
       <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
       <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-  </div>
-  <div class="header-btn mobile ">
-    <div class="language">
-      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-    </div>
-    <span class="heart-button"></span>
-    <span class="search-button" onclick="toggleSearch()"></span>
 
+    <span class="micro-button !hidden"></span>
+    <span class="envelope-button sm:!hidden"></span>
+    <span class="heart-button"></span>
+    <span class="search-button !hidden sm:!block" onclick="toggleSearch()"></span>
   </div>
 </header>
 <div class="toolbar">
