@@ -788,8 +788,8 @@ header {
 
   video {
     margin: 0 auto;
-    top: 35px;
     position: relative;
+    width: 15rem;
   }
 
   /* Применяем анимацию к элементу */
@@ -1332,15 +1332,12 @@ header {
       }
 
       video {
-        @apply absolute h-150;
-        bottom: -1.8rem;
+        @apply absolute;
+        height: 27rem;
         width: 25rem;
-        left: -1rem;
         @media screen and (max-width: 768px) {
-          height: 8rem;
-          bottom: -2.4rem;
+          height: 11rem;
           width: 6rem;
-          left: -0.3rem;
         }
       }
     }
