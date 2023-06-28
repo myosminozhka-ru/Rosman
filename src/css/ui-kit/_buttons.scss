@@ -240,7 +240,7 @@ button {
 }
 
 .filter-label {
-  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold whitespace-nowrap;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center rounded-3xl border border-card-stroke px-6 text-s font-semibold whitespace-nowrap;
   min-width: 5rem;
   max-width: 15rem;
   &.header {
