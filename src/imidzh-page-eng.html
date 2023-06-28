@@ -52,18 +52,18 @@
     <!-- тут будет слон -->
     @@include('components/ui-kit/sliders/elephant-history.html', { }, )
     <!-- тут будут карточки сотрудников и их слайдер -->
-    <div class="flex flex-col gap-40 px-24 sm:px-12">
-      <div class="text-5xl font-medium md:hidden px-24 sm:px-12">Key persons</div>
+    <div class="flex flex-col gap-32 px-24 ssm:px-12 ssm:pr-0">
+      <div class="text-5xl font-medium md:hidden">Key persons</div>
       <div class="grid grid-cols-3 gap-x-24 items-center md:hidden">
         @@include('components/ui-kit/cards/card-employee.html', { }, )
         @@include('components/ui-kit/cards/card-employee.html', { }, )
         @@include('components/ui-kit/cards/card-employee.html', { }, )
       </div>
       <div class="hidden  md:!block">
-        <div class="swiper-detailed-page overflow-hidden">
-          <div class="swiper-header !w-full  sm:!mt-12">
-            <h3 class="head-3 ">Key persons</h3>
-            <div class="buttons">
+        <div class="swiper-imidzh-page overflow-hidden">
+          <div class="swiper-header !w-full !mb-0 !mt-0 sm:pr-12">
+            <h3 class="head-3 pb-24 ">Key persons</h3>
+            <div class="buttons !gap-24 !w-[5rem] ">
               <div class="button-prev"></div>
               <div class="button-next"></div>
             </div>
@@ -71,26 +71,159 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            <div class="swiper-slide ssm:!w-[28rem]">
+              <div class="card_employee">
+                <div class="card_employee_image">
+                  <img src="../../img/cards_employee.svg" alt=""/>
+                  <div class="card_employee_socials">
+                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+                  </div>
+                </div>
+
+                <div class="card_employee_info">
+                  <div class="card_employee_name">Ivan Ivanov</div>
+                  <div class="card_employee_occupation">Writer</div>
+                  <div class="card_employee_text">
+                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
+                    add.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
