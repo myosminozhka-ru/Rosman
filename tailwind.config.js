@@ -34,6 +34,7 @@ module.exports = {
       ssm: {max: "400px"},
       msm: {max: "500px"},
       bs: {max: "999px"},
+      ipadmini: {max: "768px"},
       bsmax: {max: "1099px"},
       bsmin: {min: "1100px"},
       shs: {max: "1200"},

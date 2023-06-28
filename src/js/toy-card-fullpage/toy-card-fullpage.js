@@ -197,6 +197,10 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev' // кнопка Prev
   },
+  pagination: {                       //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
   breakpoints: { // условия для разных размеров окна браузера
     0: { // при 0px и выше
@@ -218,6 +222,10 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev' // кнопка Prev
   },
+  pagination: {                       //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
   grabCursor: true, // менять иконку курсора
   thumbs: { // указываем на превью слайдер
     swiper: sliderThumbs // указываем имя превью слайдера
