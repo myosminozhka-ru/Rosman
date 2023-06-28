@@ -28,55 +28,12 @@
     background: url("../../img/success.png") no-repeat 90% 50%;
   }
   &.search {
-    background: url("../../img/search.svg") no-repeat 95% 50%;
-    background-size: 40px 40px;
+    background: url("../../img/search.svg") no-repeat 99% 50%;
+    background-size: 2rem 2rem;
 
   }
 }
-.collapse-q {
-  @apply w-3/5;
-  .collapse-button {
-    @apply flex text-l flex-row items-center justify-between w-full p-24 bg-background border-none	text-left cursor-pointer transition-all duration-500 ease-in-out;
-    span {
-      width: 8px;
-      height: 8px;
-      border-top: 2px solid #000000;
-      border-right: 2px solid #000000;
-      margin-left: 10px;
-      transform: rotate(135deg);
-      transition: all 0.5s ease-in-out;
-    }
-    &.active {
-      @apply bg-yellow;
-      span {
-        width: 8px;
-        height: 8px;
-        border-top: 2px solid #000000;
-        border-right: 2px solid #000000;
-        margin-left: 10px;
-        transform: rotate(-45deg);
-        transition: all 0.5s ease-in-out;
-      }
-    }
-  }
-  .collapse-content {
-    @apply px-6 py-0 block text-l bg-white h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out;
-    p {
-      @apply m-0 text-l;
-    }
-    &.active {
-      @apply  py-6 opacity-100 h-68 transition-all  duration-500 ease-in-out;
-      span {
-        width: 8px;
-        height: 8px;
-        border-top: 2px solid #000000;
-        border-right: 2px solid #000000;
-        margin-left: 10px;
-        transform: rotate(-45deg);
-      }
-    }
-  }
-}
+
 
 
 
