@@ -189,7 +189,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 14, // расстояние между слайдами
@@ -209,7 +209,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -235,10 +235,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
 const sliderMain = document.querySelector(".slider-main")
 const slideMainContainer = document.querySelector(".slide-main-cont")
 const sliderPage = document.querySelector(".slider-page")
+const sliderPage2 = document.querySelector(".slider-page-2")
 sliderPage.innerHTML = sliderMain.value;
+sliderPage2.innerHTML = sliderMain.value;
 
 window.addEventListener("mousemove", function () {
   const sliderValue = sliderMain.value;
+  sliderPage2.innerHTML = sliderMain.value;
   const max = sliderMain.max;
 
   const percentage = (sliderValue / max) * 100;
@@ -249,6 +252,7 @@ window.addEventListener("mousemove", function () {
 sliderMain.addEventListener("input", function () {
   const sliderValue = sliderMain.value;
   sliderPage.innerHTML = sliderMain.value;
+  sliderPage2.innerHTML = sliderMain.value;
   const max = sliderMain.max;
   const percentage = (sliderValue / max) * 100;
   const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
