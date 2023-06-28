@@ -1155,6 +1155,8 @@ header {
       .color-block {
 
         &.bottom {
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
           &.first {
             background-color: #FFF145;
@@ -1178,6 +1180,8 @@ header {
         }
 
         &.upper {
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
           padding-bottom: 9rem;
           &.first {
             background-color: #FFF145;
