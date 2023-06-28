@@ -1,13 +1,12 @@
 .filters-block {
   @apply w-full;
 
-
   .more-down-button {
-    @apply text-l font-semibold w-full justify-between text-left;
+    @apply w-full justify-between text-left text-l font-semibold;
   }
 
   .back-filter {
-    @apply text-s font-semibold flex gap-8 my-14;
+    @apply my-14 flex gap-8 text-s font-semibold;
   }
 
   .scroll-block {
@@ -48,7 +47,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    @apply text-2xl inline-block;
+    @apply inline-block text-2xl;
   }
 }
 
@@ -106,7 +105,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.1rem #D9D9D9 solid;
+    border: 0.1rem #d9d9d9 solid;
     position: fixed; /* Зафиксируем позицию */
     bottom: 0; /* Разместим внизу экрана */
     width: 100%; /* Займем всю доступную ширину */
@@ -143,7 +142,7 @@
     background-color: #ffffff;
   }
 }
-.header[data-header='main'] {
+.header[data-header="main"] {
   .rosmen {
     display: none;
   }
@@ -169,7 +168,7 @@
   }
 }
 
-.header[data-header='toys'] {
+.header[data-header="toys"] {
   .books-news {
     display: none;
   }
@@ -199,7 +198,7 @@
   }
 }
 
-.header[data-header='books'] {
+.header[data-header="books"] {
   .company {
     display: none;
   }
@@ -233,7 +232,7 @@
 }
 
 header {
-  @apply flex h-60 items-center justify-between bg-yellow px-10 p-4;
+  @apply flex h-60 items-center justify-between bg-yellow p-4 px-10;
 
   .logo {
     @apply ml-24;
@@ -313,7 +312,7 @@ header {
     }
 
     span {
-      @apply cursor-pointer mx-3;
+      @apply mx-3 cursor-pointer;
     }
   }
 
@@ -508,7 +507,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);;
+  height: calc(100% - 145rem);
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -528,7 +527,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);;
+  height: calc(100% - 145rem);
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -554,34 +553,41 @@ header {
 .swiper-image,
 .swiper-detailed-page,
 .swiper-detailed-page-video {
-  width: 100% !important;
-  height: auto !important;
-  padding: 0 3rem !important;
+  // width: 100% !important;
+  // height: auto !important;
+  // padding: 0 3rem !important;
 
   .card_career {
     margin-top: 3rem;
   }
 
   .swiper-header {
-    @apply flex justify-between my-40 w-5/6;
+    @apply flex justify-between;
 
     .buttons {
-      @apply flex justify-between w-36 gap-8;
+      @apply flex items-center justify-between gap-8;
 
-      .button-prev {
-        display: block;
-        background: url("../../img/prev.png") no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-      }
-
+      .button-prev,
       .button-next {
         display: block;
-        background: url("../../img/next.png") no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
+        background-size: 3.6rem;
+        width: 4rem;
+        height: 4rem;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 768px) {
+          height: 2.8rem;
+          width: 2.8rem;
+          background-size: 2.2rem;
+        }
+      }
+
+      .button-prev {
+        background-image: url("../../img/prev.png");
+      }
+      .button-next {
+        background-image: url("../../img/next.png");
       }
     }
   }
@@ -751,7 +757,7 @@ header {
 }
 
 #white-background {
-  @apply relative h-200 w-full items-center overflow-hidden bg-white pt-60 mb-20;
+  @apply relative mb-20 h-200 w-full items-center overflow-hidden bg-white pt-60;
 
   .slide-el {
     width: 10.4rem;
@@ -818,10 +824,10 @@ header {
 //}
 .elephant-history {
   .slider-header {
-    @apply flex justify-between my-40 w-5/6;
+    @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex justify-between w-36 gap-8;
+      @apply flex w-36 justify-between gap-8;
 
       .button-prev {
         display: block;
@@ -1010,10 +1016,10 @@ header {
         }
 
         height: auto;
-        background-color: #FFF145;
+        background-color: #fff145;
 
         .elephant-more-up-button {
-          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-start;
+          @apply flex w-full cursor-pointer flex-row items-center justify-start p-10 text-left text-m transition-all duration-500;
 
           span {
             width: 0.8rem;
@@ -1083,7 +1089,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url("../../img/elephant-slider/elephant-body.png") no-repeat center;
+      background: url("../../img/elephant-slider/elephant-body.png") no-repeat
+        center;
       background-size: contain;
     }
 
@@ -1100,10 +1107,10 @@ header {
 }
 
 .quest-eleph {
-  @apply bg-yellow items-center h-full;
+  @apply h-full items-center bg-yellow;
 
   .images-block {
-    @apply flex justify-center flex-row;
+    @apply flex flex-row justify-center;
 
     img {
       width: 18rem;
@@ -1115,7 +1122,7 @@ header {
     }
 
     .zero {
-      @apply relative items-center flex justify-center;
+      @apply relative flex items-center justify-center;
       width: 25rem;
       @media screen and (max-width: 768px) {
         width: 6rem;
@@ -1147,7 +1154,7 @@ header {
 .mobile-map {
   @apply hidden;
   @media screen and (max-width: 768px) {
-    @apply block mx-auto;
+    @apply mx-auto block;
     width: 100%;
     height: 45rem;
   }
