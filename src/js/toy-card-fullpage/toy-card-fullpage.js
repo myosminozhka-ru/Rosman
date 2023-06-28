@@ -189,7 +189,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 14, // расстояние между слайдами
@@ -209,7 +209,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -230,4 +230,64 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
       direction: 'vertical', // вертикальная прокрутка
     }
   }
+});
+
+// const passwordInput = document.querySelector(".password-box input"),
+//   copyIcon = document.querySelector(".password-box .copy-icon"),
+//   rangeInput = document.querySelector(".range-box input"),
+//   // sliderNumber = document.querySelector(".range-box .slider-number"),
+//   generateButton = document.querySelector(".generate-button");
+//
+// //Characters of alphabet(a-z/A-Z), numbers(0-9) and Symbols($%&[]...)
+// let allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^!$%&|[](){}:;.,*+-#@<>~";
+//
+// //this function will be called on, page reload, generateButton clicked & rangeInput slide
+// const generatePassword = () => {
+//   let newPassword = "";
+//
+//   //for loop will run till rangeInput value
+//   for (let i = 0; i < rangeInput.value; i++) {
+//     let randomNumbers = Math.floor(Math.random() * allCharacters.length);
+//     newPassword += allCharacters[randomNumbers];
+//   }
+//   passwordInput.value = newPassword;
+//   copyIcon.classList.replace("uil-file-check-alt", "uil-copy"); //replace icon
+// };
+//
+// // rangeInput.addEventListener("input", () => {
+// //   sliderNumber.innerText = rangeInput.value;
+// //   generatePassword();
+// // });
+//
+// //copy passInput's value on copyIcon click
+// //copy passInput's value on copyIcon click
+// copyIcon.addEventListener("click", () => {
+//   navigator.clipboard.writeText(passwordInput.value);
+//   copyIcon.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
+// });
+//
+// generatePassword();
+// generateButton.addEventListener("click", generatePassword);
+
+const sliderMain = document.querySelector(".slider-main")
+const slideMainContainer = document.querySelector(".slide-main-cont")
+const sliderPage = document.querySelector(".slider-page")
+sliderPage.innerHTML = sliderMain.value;
+
+window.addEventListener("mousemove", function () {
+  const sliderValue = sliderMain.value;
+  const max = sliderMain.max;
+
+  const percentage = (sliderValue / max) * 100;
+  const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+  sliderMain.style.background = color;
+});
+
+sliderMain.addEventListener("input", function () {
+  const sliderValue = sliderMain.value;
+  sliderPage.innerHTML = sliderMain.value;
+  const max = sliderMain.max;
+  const percentage = (sliderValue / max) * 100;
+  const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+  sliderMain.style.background = color;
 });
