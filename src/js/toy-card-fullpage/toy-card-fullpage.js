@@ -258,6 +258,8 @@ if (sliderPages && sliderMain) {
       sliderPage.textContent = sliderValue;
     });
 
+    const slideNumber = parseInt(this.value) - 1;
+    swiperBookFragment.slideTo(slideNumber);
     const max = sliderMain.max;
     const percentage = (sliderValue / max) * 100;
     const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
