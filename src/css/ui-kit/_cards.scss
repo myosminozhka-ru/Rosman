@@ -626,6 +626,10 @@
   max-width: 100%;
 }
 
+.card_employee_image:hover {
+  box-shadow: -1.505px 0px 0px 0px lightgray;
+}
+
 .card_employee:hover .card_employee_info {
   @apply border-white;
   background: var(--gray-scale-white, #FFF);
