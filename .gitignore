@@ -27,7 +27,7 @@ package-lock.json
 
 
 dist/
-src/
+build/
 config.js
 gulpfile.js
 LICENSE

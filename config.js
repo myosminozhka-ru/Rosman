@@ -22,7 +22,7 @@ const plugins = {
 };
 
 // base folder paths
-const basePaths = ["src", "dist", "build"];
+const basePaths = ["src", "dist", "build", "docs"];
 
 // folder assets paths
 const folders = ["css", "js", "img", "fonts", "third-party"];

@@ -34,7 +34,7 @@
     "dev": "gulp",
     "build": "gulp prod",
     "prod": "gulp prod",
-    "prod-github": "gulp prodGithub"
+    "build-git": "gulp prodGithub"
   },
   "repository": {
     "type": "git",
