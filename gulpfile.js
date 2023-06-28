@@ -16,6 +16,7 @@ const { src, dest, watch, series, parallel } = require("gulp");
 const clean = require("gulp-clean"); //For Cleaning build/dist for fresh export
 const options = require("./config"); //paths and other options from config.js
 const browserSync = require("browser-sync").create();
+const replace = require("gulp-replace");
 
 const sass = require("gulp-sass")(require("sass")); //For Compiling SASS files
 const postcss = require("gulp-postcss"); //For Compiling tailwind utilities with tailwind config
@@ -79,11 +80,11 @@ function devImages() {
   );
 }
 
-function devImages() {
-  return src(`${options.paths.src.img}/**/*`).pipe(
-    dest(options.paths.dist.img)
-  );
-}
+// function devImages() {
+//   return src(`${options.paths.src.img}/**/*`).pipe(
+//     dest(options.paths.dist.img)
+//   );
+// }
 
 function devFonts() {
   return src(`${options.paths.src.fonts}/**/*`).pipe(
@@ -146,21 +147,23 @@ function prodStyles() {
         cssnano(),
       ])
     )
-    // .pipe(
-    //   purgecss({
-    //     ...options.config.purgecss,
-    //     defaultExtractor: (content) => {
-    //       // without arbitray selectors
-    //       // const v2Regex = /[\w-:./]+(?<!:)/g;
-    //       // with arbitray selectors
-    //       const v3Regex = /[(\([&*\])|\w)-:./]+(?<!:)/g;
-    //       const broadMatches = content.match(v3Regex) || [];
-    //       const innerMatches =
-    //         content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-    //       return broadMatches.concat(innerMatches);
-    //     },
-    //   })
-    // )
+    .pipe(concat({ path: "style.css" }))
+    .pipe(
+      purgecss({
+        ...options.config.purgecss,
+        defaultExtractor: (content) => {
+          // without arbitray selectors
+          // const v2Regex = /[\w-:./]+(?<!:)/g;
+          // with arbitray selectors
+          const v3Regex = /[(\([&*\])|\w)-:./]+(?<!:)/g;
+          const broadMatches = content.match(v3Regex) || [];
+          const innerMatches =
+            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+          return broadMatches.concat(innerMatches);
+        },
+      })
+    )
+    .pipe(replace("../../", "../"))
     .pipe(dest(options.paths.build.css));
 }
 
@@ -213,6 +216,46 @@ function prodClean() {
   );
 }
 
+function prodGitHubStyles() {
+  const tailwindcss = require("tailwindcss");
+  const autoprefixer = require("autoprefixer");
+  const cssnano = require("cssnano");
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(
+      postcss([
+        tailwindcss(options.config.tailwindjs),
+        autoprefixer(),
+        cssnano(),
+      ])
+    )
+    .pipe(concat({ path: "style.css" }))
+    .pipe(
+      purgecss({
+        ...options.config.purgecss,
+        defaultExtractor: (content) => {
+          // without arbitray selectors
+          // const v2Regex = /[\w-:./]+(?<!:)/g;
+          // with arbitray selectors
+          const v3Regex = /[(\([&*\])|\w)-:./]+(?<!:)/g;
+          const broadMatches = content.match(v3Regex) || [];
+          const innerMatches =
+            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+          return broadMatches.concat(innerMatches);
+        },
+      })
+    )
+    .pipe(replace("../../", "../"))
+    .pipe(dest(options.paths.build.css));
+}
+
+function prodGithubHTML() {
+  return src(`${options.paths.src.base}/**/*.{html,php}`)
+    .pipe(includePartials())
+    .pipe(replace("../../", "./"))
+    .pipe(dest(options.paths.build.base));
+}
+
 function buildFinish(done) {
   console.log(
     "\n\t" + logSymbols.info,
@@ -235,6 +278,19 @@ exports.prod = series(
     prodScripts,
     prodImages,
     prodHTML,
+    prodFonts,
+    prodThirdParty
+  ), //Run All tasks in parallel
+  buildFinish
+);
+
+exports.prodGithub = series(
+  prodClean, // Clean Build Folder
+  parallel(
+    prodGitHubStyles,
+    prodScripts,
+    prodImages,
+    prodGithubHTML,
     prodFonts,
     prodThirdParty
   ), //Run All tasks in parallel
