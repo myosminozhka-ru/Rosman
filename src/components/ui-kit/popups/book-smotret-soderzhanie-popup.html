@@ -1,19 +1,24 @@
-<div class="js_popup_all_filters_modal modal">
-  <div class="popup_all_filters_content !fixed left-0 right-0 bottom-0 !gap-40 !p-0 sm:!static">
+<div class="js_popup_all_filters_modal modal sm:!pt-[20rem]">
+  <div class="popup_all_filters_content
+  !pb-60 !fixed left-0
+  right-0 bottom-0
+  !gap-40 !p-0
+  sm:!static sm:bg-grey sm:!pb-32">
+
     <div class="popup_all_filters_heading bg-background px-24 py-16 !gap-16">
       <div class="popup_all_filters_header !items-center">
         <div class="flex flex-row flex-nowrap items-center gap-16">
           
-          <div class="flex flex-row flex-nowrap items-center gap-8 sm:gap-4">
+          <div class="flex flex-row flex-nowrap items-center">
             <button class="p-0 h-20 w-20 block">
-              <img class="h-10 w-10" src="../../img/card-fullpage/arrow-small-backward.svg" alt="">
+              <img class="h-10 w-6" src="../../img/card-fullpage/arrow-small-backward.svg" alt="">
             </button>
             <div class="text-s">
               Евгений Гаглоев. «Иллюзион» фрагмент
             </div>
           </div>
-          
-          <div class="button-black cursor-pointer block sm:hidden">
+
+          <div class="button-black !px-16 !py-12 text-15.20 font-medium cursor-pointer block sm:hidden">
             Купить полную версию
           </div>
         </div>
@@ -27,7 +32,7 @@
 
       <div class="hidden flex flex-nowrap flex-row justify-between items-center sm:flex">
         <div class="link-s-bold">Купить полную версию</div>
-        <div class="text-s">5 из 13</div>
+        <div class="text-s">5 из 456</div>
       </div>
     
     </div>
@@ -40,10 +45,14 @@
     </div>
 
     <!--  основное описание и часть текста книги  -->
-    <div class="grid grid-cols-2 gap-24 sm:grid-cols-1 px-24 sm:px-12">
+    <div class="grid grid-cols-2 gap-24 sm:grid-cols-1 px-24 sm:px-12 sm:gap-16">
       <!--   тут имя автора, название книги и некоторый текст   -->
-      <div class="flex flex-col gap-32 items-start justify-start max-w-[50.4rem]">
-        <div class="text-5xl font-medium">Евгений Гаглоев Иллюзион</div>
+      <div class="flex flex-col
+      gap-32 items-start
+      justify-start max-w-[50.4rem]
+      sm:bg-white sm:max-w-[100rem] sm:p-12
+      ">
+        <div class="text-5xl font-medium sm:text-3xl">Евгений Гаглоев Иллюзион</div>
         <div class="text-15.20">…Иногда в нашу жизнь вторгается волшебство. Таинственные скрипы, странные шорохи в
           пустых комнатах… Зеркала
           отражают совсем не то, что должны… В ночном небе появляются диковинные создания, а в темных подворотнях можно
@@ -56,8 +65,12 @@
         </div>
       </div>
       <!--тут будет уже текст из книги-->
-      <div class="flex flex-col gap-32 items-start justify-start max-w-[50.4rem]">
-        <div class="text-5xl font-medium flex flex-col gap-0 items-start justify-start">
+      <div class="flex flex-col
+      gap-32 items-start
+      justify-start max-w-[50.4rem]
+      sm:bg-white sm:max-w-[100rem] sm:p-12
+      ">
+        <div class="text-5xl sm:text-3xl font-medium flex flex-col gap-0 items-start justify-start">
           <div>Глава первая</div>
           <div>Буря над стеклянным городом</div>
         </div>
@@ -79,20 +92,20 @@
     </div>
 
     <!--  тут будет ползунок для  прокрутки -->
-    <div class="px-24 sm:px-12 mb-60 flex flex-col gap-8 items-end relative">
+    <div class="px-24
+    sm:px-12 flex
+    flex-col gap-8 items-end
+    relative
+    block sm:hidden
+    ">
 
 
-      <!--      <div class="range-box">-->
-      <!--        <input type="range" min="1" max="456" value="5"/>-->
-      <!--        <span class="slider-number hidden">8</span>-->
-      <!--      </div>-->
       <div class="slide-main-cont w-full">
         <input type="range"
                min="1" max="456"
                value="5" id="my-range-main"
                class="slider-main w-full">
       </div>
-
       <div class="text-2.5xl text-text flex flex-row flex-nowrap">
         Страница: &nbsp <span class="slider-page">5</span>&nbspиз&nbsp<span> 456 </span>
       </div>

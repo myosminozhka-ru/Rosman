@@ -93,29 +93,6 @@
   }
 }
 
-//.range-box {
-//  display: flex;
-//  align-items: center;
-//  width: 100%;
-//}
-//
-//.range-box input {
-//  width: 100%;
-//  height: 0.4rem;
-//  background-color: #E3E3E2;
-//  accent-color: black;
-//  cursor: pointer;
-//}
-//
-//.range-box .slider-number {
-//  min-width: 30px;
-//  text-align: right;
-//  font-size: 17px;
-//  color: #707070;
-//}
-
-.slide-main-cont {
-}
 
 .slider-main {
   -webkit-appearance: none;
@@ -127,20 +104,19 @@
 .slider-main::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   background-color: #fff;
-  border: 0.1rem solid black;
+  border: 0.2rem solid black;
   cursor: pointer;
 }
 
 .slider-main::-moz-range-thumb {
-
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   background-color: #fff;
-  border: 0.1rem solid black;
+  border: 0.2rem solid black;
   cursor: pointer;
 }
