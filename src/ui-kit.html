@@ -72,11 +72,16 @@
 
   <h3 class="accordion head-3">Header</h3>
   <div class="panel block p-0">
-    @@include('components/header/header.html', { }, )
+    <div class="h-150">
+      @@include('components/header/header.html', { }, )
+    </div>
+
   </div>
   <h3 class="accordion head-3">Header-2</h3>
   <div class="panel block p-0">
+    <div class="h-150">
     @@include('components/header/header-books.html', { }, )
+    </div>
   </div>
   <h3 class="accordion head-3">Header-3</h3>
   <div class="panel block p-0">
@@ -88,6 +93,7 @@
     @@include('components/ui-kit/filters/filter-1.html', { }, )
   </div>
   <h3 class="accordion head-3">Filter-2</h3>
+  <div id="open-filter" class="mobile-filter"> </div>
   <div class="panel block">
     @@include('components/ui-kit/filters/filter-2.html', { }, )
   </div>
@@ -95,8 +101,8 @@
   <div class="panel block">
     @@include('components/ui-kit/filters/filter-3.html', { }, )
   </div>
-  <h3 class="accordion head-3">Filter-4</h3>
-  <div class="panel block">
+  <h3 class="accordion head-3 ">Filter-4</h3>
+  <div class="panel block  !pb-150">
     @@include('components/ui-kit/filters/filter-4.html', { }, )
   </div>
   <h3 class="accordion head-3">slider-1</h3>

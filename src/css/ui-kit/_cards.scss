@@ -9,7 +9,7 @@
 // карточка игрушки и книги
 // card's top
 .toy_card {
-  @apply flex flex-col justify-start gap-24 bg-white pb-12;
+  @apply flex flex-col justify-start gap-24 bg-white pb-12 w-full;
 
   &:hover {
     box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
@@ -80,13 +80,21 @@
   @apply flex flex-row justify-between gap-8;
 
   @media screen and (max-width: 400px) {
-    @apply gap-6;
+    @apply gap-6 justify-between w-full;
   }
 }
 
 .bordered_tags_item {
   @apply px-12 py-4 body-s-bold;
   border: 1px solid #000000;
+
+  @media screen and (max-width: 400px) {
+    @apply text-center w-1/2;
+  }
+
+  @media screen and (max-width: 900px) {
+    @apply px-4;
+  }
 }
 
 .bordered_tags_item:hover {
@@ -173,7 +181,8 @@
 }
 
 .card_selection_description {
-  @apply flex flex-col gap-16 p-16 pt-24 border-x border-card-stroke border-b box-border;
+  @apply flex flex-col gap-16 p-16 pt-24 border-x border-card-stroke border-b box-border sm:pt-16;
+
   @media screen and (max-width: 639px) {
     padding-top: 1.6rem;
   }

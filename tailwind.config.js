@@ -25,9 +25,12 @@ module.exports = {
       "5xl": '115rem',
       "8.8": "8.8rem"
     },
+    minWidth: {
+      '4': '4rem',
+    },
     screens: {
       sm: {max: "639px"},
-      md: {max: "768px"},
+      md: {max: "868px"},
       ssm: {max: "400px"},
       bs: {max: "999px"},
       bsmax: {max: "1099px"},
@@ -51,6 +54,7 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
+      "8xl": ["9.6rem", "6rem"],
     },
     colors: {
       "purple-1": "#06083D",
@@ -60,7 +64,7 @@ module.exports = {
       "purple-5": "#AF74E9",
       "blue-1": "#0070EA",
       "blue-2": "#4498FC",
-      green: "#33C15B",
+      green: "#35CC66",
       yellow: "#FFF145",
       black: "#000000",
       text: "#808080",
@@ -81,7 +85,9 @@ module.exports = {
     },
     extend: {
       spacing: {
+        1: "0.1rem",
         4: "0.4rem",
+        6: "0.6rem",
         8: "0.8rem",
         10: "1rem",
         12: "1.2rem",
@@ -103,6 +109,7 @@ module.exports = {
         35: "3.5rem",
         36: "3.6rem",
         40: "4rem",
+        42: "4.2rem",
         44: "4.4rem",
         45: "4.5rem",
         46: "4.6rem",
@@ -111,6 +118,7 @@ module.exports = {
         52: "5.2rem",
         55: "5.5rem",
         56: "5.6rem",
+        58: "5.8rem",
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",

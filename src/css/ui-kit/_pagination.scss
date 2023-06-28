@@ -40,7 +40,7 @@
 }
 
 .nav-btns {
-  @apply flex flex-row flex-nowrap gap-14;
+  @apply flex flex-row flex-nowrap gap-14 items-center;
 
   @media screen and (max-width: 500px) {
     @apply gap-8;
