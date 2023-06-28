@@ -244,15 +244,44 @@ function prodImages() {
     .pipe(dest(options.paths.build.img));
 }
 
+function prodGitImages() {
+  const pngQuality = Array.isArray(options.config.imagemin.png)
+    ? options.config.imagemin.png
+    : [0.7, 0.7];
+  const jpgQuality = Number.isInteger(options.config.imagemin.jpeg)
+    ? options.config.imagemin.jpeg
+    : 70;
+  const plugins = [
+    pngquant({ quality: pngQuality }),
+    mozjpeg({ quality: jpgQuality }),
+  ];
+
+  return src(options.paths.src.img + "/**/*")
+    .pipe(imagemin([...plugins]))
+    .pipe(dest(options.paths.docs.img));
+}
+
 function prodFonts() {
   return src(`${options.paths.src.fonts}/**/*`).pipe(
     dest(options.paths.build.fonts)
   );
 }
 
+function prodGitFonts() {
+  return src(`${options.paths.src.fonts}/**/*`).pipe(
+    dest(options.paths.docs.fonts)
+  );
+}
+
 function prodThirdParty() {
   return src(`${options.paths.src.thirdParty}/**/*`).pipe(
     dest(options.paths.build.thirdParty)
+  );
+}
+
+function prodGitThirdParty() {
+  return src(`${options.paths.src.thirdParty}/**/*`).pipe(
+    dest(options.paths.docs.thirdParty)
   );
 }
 
@@ -298,11 +327,11 @@ exports.prodGithub = series(
   prodClean, // Clean Build Folder
   parallel(
     prodGitStyles,
-    prodScripts,
-    prodImages,
+    prodGitScripts,
+    prodGitImages,
     prodGitHTML,
-    prodFonts,
-    prodThirdParty
+    prodGitFonts,
+    prodGitThirdParty
   ), //Run All tasks in parallel
   buildFinish
 );
