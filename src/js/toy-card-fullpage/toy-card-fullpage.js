@@ -189,7 +189,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 14, // расстояние между слайдами
@@ -209,7 +209,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -232,67 +232,9 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
   }
 });
 
-const sliderMain = document.querySelector(".slider-main");
-const sliderPages = document.querySelectorAll(".slider-page");
-
-if (sliderPages && sliderMain) {
-  sliderPages.forEach(function (sliderPage) {
-    sliderPage.textContent = sliderMain.value;
-  });
-
-  window.addEventListener("mousemove", function () {
-    const sliderValue = sliderMain.value;
-    sliderPages.forEach(function (sliderPage) {
-      sliderPage.textContent = sliderValue;
-    });
-
-    const max = sliderMain.max;
-    const percentage = (sliderValue / max) * 100;
-    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
-    sliderMain.style.background = color;
-  });
-
-  sliderMain.addEventListener("input", function () {
-    const sliderValue = sliderMain.value;
-    sliderPages.forEach(function (sliderPage) {
-      sliderPage.textContent = sliderValue;
-    });
-
-    const slideNumber = parseInt(this.value) - 1;
-    swiperBookFragment.slideTo(slideNumber);
-    const max = sliderMain.max;
-    const percentage = (sliderValue / max) * 100;
-    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
-    sliderMain.style.background = color;
-  });
-}
-
-const nextButtonFragment = document.querySelector(".bg-next-arrow")
-const prevButtonFragment = document.querySelector(".bg-prev-arrow")
-
-if (nextButtonFragment) {
-  nextButtonFragment.onclick = function () {
-    sliderMain.value = parseInt(sliderMain.value) + 1
-    const event = new Event('input');
-    sliderMain.dispatchEvent(event);
-    console.log(sliderMain.value)
-  }
-}
-
-if (prevButtonFragment) {
-  prevButtonFragment.onclick = function () {
-    sliderMain.value = parseInt(sliderMain.value) - 1
-    const event = new Event('input');
-    sliderMain.dispatchEvent(event);
-    console.log(sliderMain.value)
-  }
-}
-
 // слайдер - смотреть фрагмент книги
 const swiperBookFragment = new Swiper('.swiper-book-fragment', {
-  // Optional parameters
   loop: false,
-  // Navigation arrows
   preventInteractionOnTransition: true,
   navigation: {
     nextEl: '.button-next',
@@ -302,18 +244,76 @@ const swiperBookFragment = new Swiper('.swiper-book-fragment', {
   allowTouchMove: false,
   slidesPerView: 1,
   spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 1,
-      spaceBetween: 16,
-    },
-    600: {
-      slidesPerView: 1,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 8,
-    },
-  },
 });
+
+const sliderMain = document.querySelector(".slider-main");
+const sliderPages = document.querySelectorAll(".slider-page");
+
+if (sliderPages && sliderMain) {
+  sliderPages.forEach(function (sliderPage) {
+    sliderPage.textContent = sliderMain.value;
+  });
+  const max = sliderMain.max;
+  const step = 100 / (max - 1);
+  window.addEventListener("mousemove", function () {
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(sliderMain.value) - 1;
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+
+  sliderMain.addEventListener("input", function () {
+
+    const sliderValue = sliderMain.value;
+    console.log(sliderValue)
+    const currentValue = parseInt(this.value);
+    if (currentValue > swiperBookFragment.slides.length) {
+      this.value = swiperBookFragment.slides.length; // Запрещаем переключение значения выше количества слайдов
+    }
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(this.value) - 1;
+    if (slideNumber <= swiperBookFragment.slides.length) {
+      swiperBookFragment.slideTo(slideNumber);
+    }
+
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+}
+
+// тут кнопки для переключения слайдов,
+// события перестают генерироваться, если значение инпута больше количества слайдов
+const nextButtonFragment = document.querySelector(".bg-next-arrow")
+const prevButtonFragment = document.querySelector(".bg-prev-arrow")
+if (nextButtonFragment) {
+  nextButtonFragment.onclick = function () {
+    const nextValue = parseInt(sliderMain.value) + 1;
+    if (nextValue <= swiperBookFragment.slides.length) {
+      sliderMain.value = nextValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
+
+if (prevButtonFragment) {
+  prevButtonFragment.onclick = function () {
+    const prevValue = parseInt(sliderMain.value) - 1;
+    if (prevValue >= 1) {
+      sliderMain.value = prevValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
