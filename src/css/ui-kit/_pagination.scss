@@ -13,10 +13,6 @@
 // паддинги не стал задавать, ведь мб контейнер будет ограничивать?
 .rm-pag {
   @apply flex flex-col items-start gap-16;
-
-  @media screen and (max-width: 500px) {
-    @apply px-12
-  }
 }
 
 .js-rm-pag-seen {
