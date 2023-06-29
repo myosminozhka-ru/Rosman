@@ -115,48 +115,11 @@
         </div>
       </div>
 
-      <div class="card-fullpage-main-info px-24 top-info ">
-        <div class="card-fullpage-images">
-          <div class="largeImg-wrapper">
-            <img class="largeImg" src="../../img/card-fullpage/img1.svg" alt="Large image">
-            <div class="card-fullpage-tags bordered_tags_main">
-              <a href="#" class="bordered_tags_item ">Хит</a>
-              <a href="#" class="bordered_tags_item ">Новинка</a>
-              <a href="#" class="bordered_tags_item bordered_tags_item-hidden">5+</a>
-            </div>
-          </div>
-          <div class="thumbs grid grid-cols-1 gap-16 max-h-[50.4rem]">
-            <div class="max-w-[8rem] w-full">
-              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img1.svg" title="Image 2">
-                <img src="../../img/card-fullpage/img1.svg" alt="">
-              </a>
-            </div>
-            <div class="max-w-[8rem] w-full">
-              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img2.svg" title="Image 3">
-                <img src="../../img/card-fullpage/img2.svg" alt="">
-              </a>
-            </div>
-            <div class="relative max-w-[8rem] w-full">
-              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img3.svg" title="Image 4">
-                <img src="../../img/card-fullpage/img3.svg" alt="">
-              </a>
-              <button class="circle-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
-            </div>
-            <div class="relative max-w-[8em] w-full">
-              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img4.svg" title="Image 5">
-                <img src="../../img/card-fullpage/img4.svg" alt="">
-              </a>
-              <button class="rounded-arrow-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
-            </div>
-            <div class="max-w-[8rem] w-full">
-              <a class="aspect-square max-w-8.8" href="../../img/card-fullpage/img5.svg" title="Image 6">
-                <img src="../../img/card-fullpage/img5.svg" alt="">
-              </a>
-            </div>
-          </div>
+
+      <div class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1">
+        <div class="pl-24 ipadmini:px-12">
+          @@include('components/ui-kit/cards/my-swiper.html', { }, )
         </div>
-
-
         <div class="card-fullpage-description">
           <div class="card-fp-desc-main">
             <div class="card-fp-desc-top">
@@ -666,8 +629,10 @@
         </div>
       </div>
 
-      @@include('components/ui-kit/cards/my-swiper.html', { }, )
-
+      <!--      @@include('components/ui-kit/cards/my-swiper.html', { }, )-->
+      <br>
+      <br>
+      <br>
       <!-- тут ниже футер -->
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
 
