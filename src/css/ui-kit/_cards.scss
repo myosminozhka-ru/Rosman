@@ -230,7 +230,7 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row sm:flex-col;
+  @apply flex flex-row gap-16 sm:flex-col;
 }
 
 .card_interview_name {
@@ -379,7 +379,6 @@
 // КАРТОЧКА КАРЬЕРА
 .card_career {
   @apply flex flex-col flex-nowrap items-start gap-16 bg-white px-32 pb-60 pt-32;
-  max-width: 60rem;
   border: 1px solid #d9d9d9;
 }
 
@@ -743,7 +742,6 @@
 }
 
 .card_awards_image {
-  height: 128px;
   background-size: cover;
   background-position: center;
 }

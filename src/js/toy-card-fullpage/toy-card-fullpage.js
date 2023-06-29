@@ -243,3 +243,89 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
     }
   }
 });
+
+// слайдер - смотреть фрагмент книги
+const swiperBookFragment = new Swiper('.swiper-book-fragment', {
+  loop: false,
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  allowTouchMove: false,
+  slidesPerView: 1,
+  spaceBetween: 16,
+});
+
+const sliderMain = document.querySelector(".slider-main");
+const sliderPages = document.querySelectorAll(".slider-page");
+
+if (sliderPages && sliderMain) {
+  sliderPages.forEach(function (sliderPage) {
+    sliderPage.textContent = sliderMain.value;
+  });
+  const max = sliderMain.max;
+  const step = 100 / (max - 1);
+  window.addEventListener("mousemove", function () {
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(sliderMain.value) - 1;
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+
+  sliderMain.addEventListener("input", function () {
+
+
+    const currentValue = parseInt(this.value);
+    if (currentValue > swiperBookFragment.slides.length) {
+      this.value = swiperBookFragment.slides.length;
+    }
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(this.value) - 1;
+    if (slideNumber <= swiperBookFragment.slides.length) {
+      swiperBookFragment.slideTo(slideNumber);
+    }
+
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+}
+
+// тут кнопки для переключения слайдов,
+// события перестают генерироваться, если значение инпута больше количества слайдов
+const nextButtonFragment = document.querySelector(".bg-next-arrow")
+const prevButtonFragment = document.querySelector(".bg-prev-arrow")
+if (nextButtonFragment) {
+  nextButtonFragment.onclick = function () {
+    const nextValue = parseInt(sliderMain.value) + 1;
+    if (nextValue <= swiperBookFragment.slides.length) {
+      sliderMain.value = nextValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
+
+if (prevButtonFragment) {
+  prevButtonFragment.onclick = function () {
+    const prevValue = parseInt(sliderMain.value) - 1;
+    if (prevValue >= 1) {
+      sliderMain.value = prevValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
