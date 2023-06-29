@@ -13,6 +13,7 @@ button {
       }
     }
   }
+
   &.arrow-span {
     span {
       background-image: url(../../img/arrow-right.svg);
@@ -63,6 +64,21 @@ button {
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/play-fill.svg");
+  }
+}
+
+.circle-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url("../../img/play.svg");
+  background-repeat: no-repeat;
+  background-position: 60% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
@@ -76,6 +92,21 @@ button {
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/rounded-arrow.svg");
+  }
+}
+
+.rounded-arrow-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url("../../img/rounded-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 54% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
@@ -243,11 +274,13 @@ button {
   @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center rounded-3xl border border-card-stroke px-6 text-s font-semibold whitespace-nowrap;
   min-width: 5rem;
   max-width: 15rem;
+
   &.header {
     border-color: black;
     justify-content: center;
     cursor: auto;
     white-space: nowrap;
+
     &:hover {
       border-color: black;
     }
@@ -343,6 +376,7 @@ button {
     }
   }
 }
+
 .breadcrumbs {
   @media (max-width: 801px) {
     @apply hidden;
@@ -413,18 +447,22 @@ button {
 .dropdown {
   @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
   width: 14.4rem;
+
   button {
     @apply flex flex w-full flex-row gap-8 items-center p-1 pb-10 text-l;
   }
+
   &.menu {
     @apply border-0 p-0 py-6;
     &.hide {
       @apply hidden;
     }
+
     &:hover .icon {
       background: url("../../img/burger.svg") no-repeat center;
       background-size: contain;
     }
+
     .icon {
       @apply mb-1 h-24 w-24;
       background: url("../../img/burger.svg") no-repeat center;
@@ -439,15 +477,18 @@ button {
     background-size: contain;
 
   }
+
   &:hover .icon {
     background: url("../../img/menu-2.svg") no-repeat center;
     background-size: contain;
   }
+
   .content {
     @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-24 left-0;
     a:not(:last-child) {
-     @apply mb-20;
+      @apply mb-20;
     }
+
     a {
       @apply flex w-full justify-start p-1 text-l;
 
@@ -470,6 +511,7 @@ button {
     a:not(:last-child) {
       @apply mb-20;
     }
+
     a {
       @apply flex w-full justify-start p-1 text-l;
 
