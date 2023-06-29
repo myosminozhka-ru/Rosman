@@ -48,6 +48,7 @@
 
   @media screen and (max-width: 500px) {
     @apply w-30 h-30 border-card-stroke;
+    min-width: 3rem !important;
   }
 
   &:hover {
