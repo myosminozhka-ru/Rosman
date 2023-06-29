@@ -86,6 +86,7 @@ module.exports = {
     extend: {
       spacing: {
         1: "0.1rem",
+        2: "0.2rem",
         4: "0.4rem",
         6: "0.6rem",
         8: "0.8rem",
@@ -134,7 +135,9 @@ module.exports = {
         190: "45rem",
         200: "50.9rem",
       },
-
+      lineHeight: {
+        'sup': '4.4rem',
+      },
 
       borderRadius: {},
       zIndex: {
