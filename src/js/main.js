@@ -189,7 +189,7 @@ if (yellowMovingBlock) {
         let blockX = event.clientX - blockWidth / 2;
 
         // Вычисляем наклон блока в зависимости от позиции мыши
-        let tilt = -((blockX / windowWidth)) * 6;
+        let tilt = ((blockX / windowWidth)) * 6;
 
         // Применяем наклон к блоку с помощью свойства transform
         yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
@@ -212,7 +212,7 @@ document.addEventListener("mousemove", function(event) {
 
         if (!isMoving) {
             isMoving = true;
-            follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
+            follower.style.transform = "translateX(" + x + "px)"; // Используем translateX для перемещения блока
 
 
             setTimeout(function() {
