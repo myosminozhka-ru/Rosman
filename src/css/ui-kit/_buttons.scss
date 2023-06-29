@@ -120,6 +120,7 @@ button {
   &:hover {
     @apply border-0  mb-1;
   }
+
   @media (max-width: 802px) {
     &:hover {
       @apply mb-2;
@@ -808,14 +809,24 @@ button {
   top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
+
+  &:hover {
+    @apply bg-yellow text-black;
+  }
 }
 
-.custom-box span {
-  @apply w-20 h-14 block;
+.custom-box-span {
+  @apply w-20 h-18 block;
   background: url("../../img/envelope-white.svg") no-repeat center;
   background-size: contain;
   transform: rotate(90deg);
   z-index: 4;
+}
+
+.custom-box:hover .custom-box-span {
+  @apply w-14 h-18 block;
+  background: url("../../img/envelope-black.png") no-repeat center;
+
 }
 
 .custom-box a {
@@ -826,8 +837,8 @@ button {
 .custom-before {
   //content: ;
   position: absolute;
-  bottom: -0.3rem;
-  left: -8%;
+  bottom: -0.2rem;
+  left: -8.3%;
   width: 4rem;
   height: 4rem;
   transform: rotate(90deg);
@@ -838,12 +849,16 @@ button {
 
 }
 
+.custom-box:hover .custom-before {
+  background-image: url("../../img/custom-before-yellow.svg");
+}
+
 .custom-after {
   //content: ;
   position: absolute;
-  bottom: -0.3rem;
+  bottom: -0.2rem;
   transform: rotate(90deg);
-  left: 84.5%;
+  left: 85.1%;
   width: 4rem;
   height: 4rem;
   background-image: url("../../img/custom-after.svg");
@@ -853,4 +868,6 @@ button {
   z-index: -1;
 }
 
-
+.custom-box:hover .custom-after {
+  background-image: url("../../img/custom-after-yellow.svg");
+}

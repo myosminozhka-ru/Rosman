@@ -186,7 +186,7 @@
   }
 
   &:hover {
-    @apply border-0
+    border-color: transparent;
   }
 }
 
@@ -209,6 +209,10 @@
   }
 }
 
+.js_traceable_item:hover .dotted_tags_date {
+  @apply text-black
+}
+
 .card_sel_info {
   @apply flex flex-col gap-12;
 }
@@ -228,8 +232,9 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row gap-16 sm:flex-col;
+  @apply flex flex-row sm:flex-col;
 }
+
 
 .card_interview_name {
   @apply text-15.20 font-medium text-black;
@@ -243,7 +248,7 @@
   @apply flex flex-col gap-12 p-16 border-y border-card-stroke border-r box-border sm:border-x sm:border-b sm:border-t-0;
 
   &:hover {
-    @apply border-0;
+    border-color: transparent;
   }
 }
 
@@ -271,9 +276,10 @@
   @apply flex flex-col px-12 pb-12 pt-16 gap-12 border-x border-card-stroke border-b box-border;
 
   &:hover {
-    @apply border-0
+    border-color: transparent;
   }
 }
+
 
 .card_articles_name {
   @apply text-2.5xl font-medium;
@@ -361,7 +367,7 @@
 }
 
 .card_book_image {
-  @apply h-40 w-40 w-56 ssm:h-56;
+  @apply h-40 w-40;
 }
 
 .card_book_img {
@@ -372,6 +378,7 @@
 }
 
 .card_book_link {
+  @apply w-max;
 }
 
 // КАРТОЧКА КАРЬЕРА
