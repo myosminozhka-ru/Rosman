@@ -749,6 +749,10 @@
   @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
 }
 
+.card_awards:hover .card_awards_year {
+  @apply bg-white
+}
+
 .card_awards_title {
   @apply text-3xl font-medium ssm:text-2xl;
 }
