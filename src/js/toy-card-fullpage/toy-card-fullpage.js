@@ -189,7 +189,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
-                                                                         // задаем параметры
+  // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 14, // расстояние между слайдами
@@ -209,7 +209,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
-                                                                         // задаем параметры
+  // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -269,12 +269,12 @@ if (sliderPages && sliderMain) {
 
   sliderMain.addEventListener("input", function () {
 
-    const sliderValue = sliderMain.value;
-    console.log(sliderValue)
+
     const currentValue = parseInt(this.value);
     if (currentValue > swiperBookFragment.slides.length) {
-      this.value = swiperBookFragment.slides.length; // Запрещаем переключение значения выше количества слайдов
+      this.value = swiperBookFragment.slides.length;
     }
+    const sliderValue = sliderMain.value;
     sliderPages.forEach(function (sliderPage) {
       sliderPage.textContent = sliderValue;
     });
