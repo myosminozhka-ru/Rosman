@@ -13,8 +13,15 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.button-prev',
     },
     autoHeight:true,
-    slidesPerView: 5,
-    spaceBetween: 30,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {// настройки для разных разрешений
+        900: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+
+        },
+    }
 });
 const swiperImage = new Swiper('.swiper-image', {
     // Optional parameters
@@ -25,8 +32,15 @@ const swiperImage = new Swiper('.swiper-image', {
         prevEl: '.button-prev',
     },
     autoHeight:true,
-    slidesPerView: 4,
-    spaceBetween: 30,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {// настройки для разных разрешений
+        900: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+
+        },
+    }
 });
 // init Swiper:
 const swiperText = new Swiper('.swiper-text', {
@@ -38,8 +52,14 @@ const swiperText = new Swiper('.swiper-text', {
         prevEl: '.button-prev',
     },
     autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    breakpoints: {// настройки для разных разрешений
+        900: {
+            slidesPerView: 1,
+            spaceBetween: 60,
+        },
+    }
 });
 // const swiperElephant = new Swiper('.elephant-swiper', {
 //     // Optional parameters
@@ -56,7 +76,7 @@ const runStroke = new Swiper('.swiper-container', {
         delay: 20,
         disableOnInteraction: false, // Включаем автоматическую прокрутку при взаимодействии пользователя
     },
-   speed: 6000,
+    speed: 6000,
     slidesPerView: 6,
 });
 const runStrokeReverse = new Swiper('.swiper-container-reverse', {
