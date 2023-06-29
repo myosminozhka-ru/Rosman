@@ -30,6 +30,8 @@ module.exports = {
     },
     screens: {
       sm: {max: "639px"},
+      ipadmini: {max: "768px"},
+      surfaceduo: {"max": "500px"},
       md: {max: "868px"},
       ssm: {max: "400px"},
       bs: {max: "999px"},
@@ -84,6 +86,10 @@ module.exports = {
       "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        'prev-arrow': "url('../../img/prev.png')",
+        'next-arrow': "url('../../img/next.png')",
+      },
       spacing: {
         1: "0.1rem",
         4: "0.4rem",

@@ -13,10 +13,6 @@
 // паддинги не стал задавать, ведь мб контейнер будет ограничивать?
 .rm-pag {
   @apply flex flex-col items-start gap-16;
-
-  @media screen and (max-width: 500px) {
-    @apply px-12
-  }
 }
 
 .js-rm-pag-seen {
@@ -52,14 +48,11 @@
 
   @media screen and (max-width: 500px) {
     @apply w-30 h-30 border-card-stroke;
+    min-width: 3rem !important;
   }
 
   &:hover {
     border-color: #fff145;
-  }
-
-  @media screen and (max-width: 500px) {
-    @apply h-30 w-30 border-card-stroke;
   }
 }
 
