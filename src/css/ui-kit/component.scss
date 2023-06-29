@@ -10,7 +10,17 @@
   }
   .back-filter {
     @apply text-s font-semibold flex gap-8 my-14;
+    span {
+      background-image: url("../../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: 1rem 1.6rem;
+      width: 1rem;
+      height: 1.9rem;
+      transform: rotate(90deg);
+    }
   }
+
+
 
   .scroll-block {
     @apply h-140 overflow-y-auto;
@@ -1099,7 +1109,7 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 64.5rem;
+        bottom: 63.5rem;
 
         &.first {
           left: 30.5rem;
@@ -1159,7 +1169,7 @@ header {
         }
 
         &.fifth {
-          left: 269.5rem;
+          left: 270rem;
           top: 56rem;
         }
       }
@@ -1270,7 +1280,7 @@ header {
         }
 
         .elephant-more-down-button {
-          @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
+          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
 
           span {
             background-image: url("../../img/arrow-down.svg");
@@ -1278,7 +1288,7 @@ header {
             background-size: 1.6rem 1.6rem;
             width: 1.6rem;
             height: 1.6rem;
-            margin-left: 1rem;
+            margin-right: 1rem;
           }
 
           &.active-js {
@@ -1288,7 +1298,7 @@ header {
               background-size: 1.6rem 1.6rem;
               width: 1.6rem;
               height: 1.6rem;
-              margin-left: 1rem;
+              margin-right: 1rem;
               transform: rotate(180deg);
             }
           }

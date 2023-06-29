@@ -138,6 +138,8 @@ function toggleSearch() {
     let mobileMenu = document.getElementById('mobile-menu')
     let headerNav = document.querySelector('.header-nav')
     let searchInput = document.querySelector('.search-input')
+    let input = document.querySelector('.search-input input')
+    input.value = ''
     let headerbtn = document.querySelector('.header-btn')
     if (headerNav.classList.contains("hide")) {
         headerNav.classList.remove("hide");
