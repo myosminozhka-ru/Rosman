@@ -227,16 +227,58 @@
           </div>
 
           <div class="card_video_info">
-      <span class="card_video_title"
-      >Как правильно выбрать книгу: наши советы для любителей книг</span
-      >
+            <span class="card_video_title">
+              Как правильно выбрать книгу: наши советы для любителей книг
+            </span>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-  @@include('components/ui-kit/pagination/pagination.html', { }, )
+  <section class="pagination rm-pag mb-64 sm:mb-48">
+    <div class="pagination-seen js-rm-pag-seen">
+      Просмотрено авторов: 12 из 456
+    </div>
+    <button class="pagination-more-button js-rm-pag-more-btn">
+      Показать ещё
+    </button>
+    <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+      <button class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt">
+        <span></span>Назад
+      </button>
+      <div class="nav-btns">
+        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+          1
+        </button>
+
+        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+          2
+        </button>
+
+        <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+          3
+        </button>
+
+        <button
+          class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+        >
+          4
+        </button>
+
+        <button
+          class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+        >
+          5
+        </button>
+      </div>
+
+      <button class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt">
+        Вперёд <span></span>
+      </button>
+    </div>
+  </section>
+
   @@include('components/ui-kit/footer/footer-ru.html', { }, )
 
 </div>
