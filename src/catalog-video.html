@@ -4,13 +4,13 @@
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Юридическая информация</title>
+  <title>Каталог видео</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <div class="legal-information-wrapper relative">
   @@include('components/header/header-main.html', { }, )
-  <div class="custom-box !fixed js_contact_us_ru_popup_button">
+  <div class="custom-box !fixed js_contact_us_ru_popup_button sm:hidden">
     <span></span>
     <div class="custom-before"></div>
     <a href="mailto:rosman@rosman.ru">Написать нам</a>
@@ -19,12 +19,11 @@
   <div id="yellow-background" class="!h-auto !pt-24 !mb-24 !z-0">
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
-    <div id="above-block" class="!p-24 flex flex-col gap-16 !sm:p-12">
-      <div class="flex justify-between items-center">
+    <div id="above-block" class="p-24 sm:p-12 !pt-24 sm:!pt-12">
+      <div class="flex justify-between items-center pb-24 sm:pb-12">
         <p class="breadcrumbs">
           <a class="text-s" href="#">Главная </a><span>/</span>
           <a class="text-s" href="#">Видео </a>
-
         </p>
         <div class="breadcrumbs-small-screen">
           <div class="breadcrumbs-small-screen-image"></div>
@@ -36,7 +35,10 @@
       </div>
 
       <div class="grid grid-cols-4 gap-x-16 gap-y-40
-        bs:grid-cols-3
+        sm:gap-y-32
+        md:grid-cols-3
+        ipadmini:!grid-cols-2
+        surfaceduo:!grid-cols-1
         ">
         @@include('components/ui-kit/cards/card-video.html', { }, )
         @@include('components/ui-kit/cards/card-video.html', { }, )
