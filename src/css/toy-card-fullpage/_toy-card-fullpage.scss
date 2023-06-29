@@ -701,9 +701,11 @@ body {
 }
 
 .slider__images {
-  max-width: 50.4rem;
-  max-height: 50.4rem;
+  width: 50.4rem;
   aspect-ratio: 1/1;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .slider__images .slider__image img {
@@ -749,4 +751,13 @@ body {
     height: auto;
     width: 32px;
   }
+}
+
+// пагинация для свипера главных картинок
+.swiper-pagination .swiper-pagination-bullet {
+  @apply w-[0.5rem] h-[0.5rem] border border-black bg-white;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-black;
 }

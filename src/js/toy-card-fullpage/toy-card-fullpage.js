@@ -187,7 +187,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 });
 
 
-// Инициализация превью слайдера
+// Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
@@ -196,9 +196,6 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
   navigation: { // задаем кнопки навигации
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev' // кнопка Prev
-  },
-  pagination: {                       //pagination(dots)
-    el: '.swiper-pagination',
   },
   clickable: true,
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
@@ -233,9 +230,16 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищ
   breakpoints: { // условия для разных размеров окна браузера
     0: { // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
+      mousewheel: false,
+      pagination: {
+        clickable: true,
+        el: '.slider__images .swiper-pagination',
+      }
     },
     768: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
+      pagination: false,
+      mousewheel: true,
     }
   }
 });

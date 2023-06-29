@@ -12,23 +12,25 @@
           <div class="swiper-container-3 "> <!-- Слайдер с превью -->
             <div class="swiper-wrapper ">
 
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem] cursor-pointer">
+              <div class="swiper-slide !max-h-[8.3rem] !max-w-[8.3rem] cursor-pointer">
                 <div class="slider__image "><img src="../../img/card-fullpage/img1.svg" alt=""/></div>
               </div>
 
-              <div class="swiper-slide !h-8.3rem] !w-[8.3rem]  cursor-pointer">
+              <div class="swiper-slide !max-h-[8.3rem] !max-w-[8.3rem]  cursor-pointer">
                 <div class="slider__image"><img src="../../img/card-fullpage/img2.svg" alt=""/></div>
               </div>
 
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem]  cursor-pointer">
+              <div class="swiper-slide relative !max-h-[8.3rem] !max-w-[8.3rem]  cursor-pointer">
                 <div class="slider__image"><img src="../../img/card-fullpage/img3.svg" alt=""/></div>
+                <button class="circle-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
               </div>
 
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem]  cursor-pointer">
-                <div class="slider__image"><img src="../../img/card-fullpage/img5.svg" alt=""/></div>
+              <div class="swiper-slide relative !max-h-[8.3rem] !max-w-[8.3rem]  cursor-pointer">
+                <div class="slider__image"><img src="../../img/card-fullpage/img4.svg" alt=""/></div>
+                <button class="rounded-arrow-button absolute !opacity-50 !inset-0 !m-auto !m-0 !h-40 !w-40"></button>
               </div>
 
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem]  cursor-pointer">
+              <div class="swiper-slide !max-h-[8.3rem] !max-w-[8.3rem]  cursor-pointer">
                 <div class="slider__image"><img src="../../img/card-fullpage/img5.svg" alt=""/></div>
               </div>
 
@@ -39,11 +41,9 @@
         <div class="slider__next absolute bottom-[4%] left-[20%] z-100 cursor-pointer">
           <img class="p-4" src="../../img/arrow-down-20.svg" alt="">
         </div>
-        <!-- Кнопка для переключения на следующий слайд -->
-      
       </div>
       
-      <div class="slider__images overflow-hidden relative">
+      <div class="slider__images overflow-hidden relative max-w-[100rem]">
         <div class="card-fullpage-tags bordered_tags_main z-100">
           <a href="#" class="bordered_tags_item ">Хит</a>
           <a href="#" class="bordered_tags_item ">Новинка</a>
@@ -75,4 +75,4 @@
   </div>
 </section>
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+<!--<script src="js/main.js"></script>-->
