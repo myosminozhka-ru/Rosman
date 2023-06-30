@@ -252,7 +252,7 @@
 }
 
 .bordered_tags_item-hidden {
-  @media (min-width: 500px) {
+  @media (min-width: 769px) {
     @apply hidden;
   }
 }
