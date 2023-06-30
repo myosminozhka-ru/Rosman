@@ -206,13 +206,13 @@ document.addEventListener("mousemove", function(event) {
         let follower = document.getElementById("follower");
         let parentRect = parent.getBoundingClientRect();
         let x = event.clientX - parentRect.left;
-        let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+        let newX =  x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
         newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
 
         if (!isMoving) {
             isMoving = true;
-            follower.style.transform = "translateX(" + x + "px)"; // Используем translateX для перемещения блока
+            follower.style.transform = "translateX(" + newX + "px)"; // Используем translateX для перемещения блока
 
 
             setTimeout(function() {
