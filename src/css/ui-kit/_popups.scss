@@ -9,7 +9,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -79,11 +79,17 @@
 }
 
 .contact_us_popup_item_arrow {
-  @apply h-12 w-16;
+  @apply h-20 w-20 block;
+  transition: transform 0.3s ease;
 
-  @media screen and (max-width: 500px) {
-    @apply h-16 w-16;
+  &:hover {
+    transform: scale(1.4);
   }
+}
+
+.contact_us_popup_item_arrow img {
+  @apply w-full h-full;
+
 }
 
 // blockchain popups
@@ -757,7 +763,6 @@
 }
 
 .checkbox__label_main {
-  padding-left: 1rem;
   color: #444;
   cursor: pointer;
 }
@@ -770,8 +775,8 @@
   border: 1px solid black;
   background-color: #fff;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.2rem;
+  left: -0.2rem;
   z-index: 1;
   /*transition: background 0.1s linear, border 0.1s linear;*/
 }
@@ -782,11 +787,11 @@
   width: 1.5rem;
   height: 1.5rem;
   background: url("../../img/check_new.png") no-repeat;
-  background-size: 1.2rem 1.2rem;
+  background-size: 1.1rem 1.1rem;
   opacity: 0;
   position: absolute;
-  top: 0.1rem;
-  left: 0.1rem;
+  top: 0.4rem;
+  left: 0;
   z-index: 2;
   transition: opacity 0.1s linear;
 }
@@ -1277,7 +1282,7 @@ img {
 }
 
 .sort-label_erase {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke bg-background px-6 text-s font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl  bg-background px-6 text-s font-normal;
 
   span {
     @apply ml-10 block h-12 w-12 cursor-pointer;
@@ -1378,19 +1383,10 @@ img {
 }
 
 
-.more-down-content {
-  @apply pl-12;
-  //border: 1px solid #D9D9D9;
-}
-
 .null-margin > .toggle-switch {
   margin: 0;
 }
 
 .more-down-button.justify-btwn {
-  @apply font-medium justify-between pl-0;
+  @apply font-medium justify-between px-0;
 }
-
-//.more-down-content.pad-left {
-//  @apply pl-12;
-//}

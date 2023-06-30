@@ -54,10 +54,6 @@
   &:hover {
     border-color: #fff145;
   }
-
-  @media screen and (max-width: 500px) {
-    @apply h-30 w-30 border-card-stroke;
-  }
 }
 
 .js-chosen-nav-btn {
