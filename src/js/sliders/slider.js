@@ -22,7 +22,7 @@ const personsSLider = new Swiper(".persons-slider", {
     nextEl: ".button-next",
     prevEl: ".button-prev",
   },
-  // autoHeight: true,
+  autoHeight: true,
   slidesPerView: 1.2,
   spaceBetween: 24,
   // breakpoints: {
