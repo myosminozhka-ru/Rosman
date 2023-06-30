@@ -13,6 +13,7 @@ button {
       }
     }
   }
+
   &.arrow-span {
     span {
       background-image: url(../../img/arrow-right.svg);
@@ -63,6 +64,21 @@ button {
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/play-fill.svg");
+  }
+}
+
+.circle-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url("../../img/play.svg");
+  background-repeat: no-repeat;
+  background-position: 60% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
@@ -76,6 +92,21 @@ button {
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url("../../img/rounded-arrow.svg");
+  }
+}
+
+.rounded-arrow-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url("../../img/rounded-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 54% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
@@ -87,7 +118,7 @@ button {
   @apply leading-none flex flex-row items-center justify-center p-0  text-m border-b-2 border-black;
 
   &:hover {
-    @apply border-0  mb-1;
+    @apply border-b-2 border-transparent;
   }
 }
 
@@ -96,22 +127,10 @@ button {
 
   .more-down-button {
     &.filters {
-      @apply w-full justify-between pl-24;
+      @apply w-full justify-between pl-30;
       background-image: url("../../img/filter.svg");
       background-repeat: no-repeat;
-      background-position: 0.5rem 50%;
-      background-size: 1.5rem 1.5rem;
-
-      &.active-js {
-        @apply bg-yellow;
-      }
-    }
-
-    &.new {
-      @apply w-full justify-between pl-24;
-      background-image: url("../../img/sort.svg");
-      background-repeat: no-repeat;
-      background-position: 0.5rem 50%;
+      background-position: 3% 50%;
       background-size: 1.5rem 1.5rem;
 
       &.active-js {
@@ -125,7 +144,7 @@ button {
       background-image: url("../../img/sort.svg");
       background-repeat: no-repeat;
       /*поправил на 1.5 рем, чтобы красиво встало*/
-      background-position: 1.5rem 50%;
+      background-position: 3% 50%;
       background-size: 1.5rem 1.5rem;
 
       &.active-js {
@@ -141,8 +160,8 @@ button {
   span {
     background-image: url("../../img/arrow-down.svg");
     background-repeat: no-repeat;
-    background-size: 1.6rem 1.6rem;
-    width: 1.6rem;
+    background-size: 1rem 1.6rem;
+    width: 1rem;
     height: 1.6rem;
     margin-left: 1rem;
   }
@@ -151,8 +170,8 @@ button {
     span {
       background-image: url("../../img/arrow-down.svg");
       background-repeat: no-repeat;
-      background-size: 1.6rem 1.6rem;
-      width: 1.6rem;
+      background-size: 1rem 1.6rem;
+      width: 1rem;
       height: 1.6rem;
       margin-left: 1rem;
       transform: rotate(180deg);
@@ -205,8 +224,7 @@ button {
 }
 
 .sort-label {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal whitespace-nowrap;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-center rounded-3xl border border-card-stroke px-12 text-s font-normal whitespace-nowrap;
   max-width: 30rem;
   min-width: 5rem;
 
@@ -223,7 +241,7 @@ button {
   @apply hidden;
 
   &:checked + .filter-label {
-    @apply bg-yellow border-0;
+    @apply bg-yellow border-0 justify-between;
 
     .cross {
       background: url("../../img/close.svg") no-repeat center right;
@@ -240,14 +258,16 @@ button {
 }
 
 .filter-label {
-  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center rounded-3xl border border-card-stroke px-6 text-s font-semibold whitespace-nowrap;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center rounded-3xl border border-card-stroke px-12 text-s font-semibold whitespace-nowrap;
   min-width: 5rem;
   max-width: 15rem;
+
   &.header {
     border-color: black;
     justify-content: center;
     cursor: auto;
     white-space: nowrap;
+
     &:hover {
       border-color: black;
     }
@@ -343,6 +363,7 @@ button {
     }
   }
 }
+
 .breadcrumbs {
   @media (max-width: 801px) {
     @apply hidden;
@@ -413,25 +434,12 @@ button {
 .dropdown {
   @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
   width: 14.4rem;
+
   button {
     @apply flex flex w-full flex-row gap-8 items-center p-1 pb-10 text-l;
   }
-  &.menu {
-    @apply border-0 p-0 py-6;
-    &.hide {
-      @apply hidden;
-    }
-    &:hover .icon {
-      background: url("../../img/burger.svg") no-repeat center;
-      background-size: contain;
-    }
-    .icon {
-      @apply mb-1 h-24 w-24;
-      background: url("../../img/burger.svg") no-repeat center;
-      background-size: contain;
 
-    }
-  }
+
 
   .icon {
     @apply mb-1 h-24 w-24;
@@ -439,15 +447,18 @@ button {
     background-size: contain;
 
   }
+
   &:hover .icon {
     background: url("../../img/menu-2.svg") no-repeat center;
     background-size: contain;
   }
+
   .content {
     @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-24 left-0;
     a:not(:last-child) {
-     @apply mb-20;
+      @apply mb-20;
     }
+
     a {
       @apply flex w-full justify-start p-1 text-l;
 
@@ -470,6 +481,7 @@ button {
     a:not(:last-child) {
       @apply mb-20;
     }
+
     a {
       @apply flex w-full justify-start p-1 text-l;
 
@@ -573,8 +585,8 @@ button {
     span {
       background-image: url("../../img/arrow-down.svg");
       background-repeat: no-repeat;
-      background-size: 1.6rem 1.6rem;
-      width: 1.6rem;
+      background-size: 1rem 1.6rem;
+      width: 1rem;
       height: 1.6rem;
       margin-left: 1rem;
     }
@@ -585,8 +597,8 @@ button {
       span {
         background-image: url("../../img/arrow-down.svg");
         background-repeat: no-repeat;
-        background-size: 1.6rem 1.6rem;
-        width: 1.6rem;
+        background-size: 1rem 1.6rem;
+        width: 1rem;
         height: 1.6rem;
         margin-left: 1rem;
         transform: rotate(180deg);
@@ -769,8 +781,8 @@ button {
   @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl  bg-black text-white text-2.5xl;
   width: 17.4rem;
   height: 2.4rem;
-  z-index: 1000;
-  top: 80rem;
+  z-index: 1002;
+  top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
 }
