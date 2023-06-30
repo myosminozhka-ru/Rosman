@@ -251,6 +251,22 @@ for (let i = 0; i < elephantDownButtons.length; i++) {
         }
     });
 }
+////////////////////////////////
+// второй вариант истории Росмэна со слоном
+
+const yearTexts = document.querySelectorAll(".year-text");
+yearTexts.forEach(function(yearText) {
+    yearText.addEventListener("click", function() {
+        const dataInfo = this.getAttribute("data-info");
+        const infoBlock = document.getElementById(dataInfo);
+        if (infoBlock) {
+            infoBlock.classList.toggle("active-js");
+        }
+    });
+});
+
+///////////////////////////
+
 
 const filterOpen = document.getElementById('open-filter')
 const filterClose = document.getElementById('close-filter')
@@ -260,7 +276,7 @@ if (filterOpen !== null) {
     filterOpen.addEventListener("click", function() {
         if (filter !== null) {
             filter.classList.add('open-filter')
-        } else  if (filter2 !== null) {
+        } else if (filter2 !== null) {
             filter2.classList.add('open-filter')
         }
     });
@@ -269,7 +285,7 @@ if (filterClose !== null) {
     filterClose.addEventListener("click", function() {
         if (filter !== null) {
             filter.classList.remove('open-filter')
-        } else  if (filter2 !== null) {
+        } else if (filter2 !== null) {
             filter2.classList.remove('open-filter')
         }
     });

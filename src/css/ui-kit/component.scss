@@ -1,13 +1,14 @@
 .filters-block {
   @apply w-full;
 
-
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left px-0;
   }
+
   .more-down-content {
-    @apply  px-0;
+    @apply px-0;
   }
+
   .back-filter {
     @apply text-s font-semibold flex gap-8 my-14;
   }
@@ -15,10 +16,23 @@
   .scroll-block {
     @apply h-140 overflow-y-auto;
   }
-  .scroll-block::-webkit-scrollbar-track {border-radius: 0.4rem;}
-  .scroll-block::-webkit-scrollbar {width: 0.6rem;}
-  .scroll-block::-webkit-scrollbar-thumb {border-radius: 0.4rem;background: #acadad;}
-  .scroll-block:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  .scroll-block::-webkit-scrollbar-track {
+    border-radius: 0.4rem;
+  }
+
+  .scroll-block::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+
+  .scroll-block::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background: #acadad;
+  }
+
+  .scroll-block:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 }
 
 .mobile-filter {
@@ -117,6 +131,7 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     background-color: #ffffff;
     padding: 0;
@@ -124,10 +139,14 @@
     justify-content: space-between;
     align-items: center;
     border: 0.1rem #D9D9D9 solid;
-    position: fixed; /* Зафиксируем позицию */
-    bottom: 0; /* Разместим внизу экрана */
-    width: 100%; /* Займем всю доступную ширину */
+    position: fixed;
+    /* Зафиксируем позицию */
+    bottom: 0;
+    /* Разместим внизу экрана */
+    width: 100%;
+    /* Займем всю доступную ширину */
     z-index: 100000;
+
     img {
       width: 2rem;
       height: 2rem;
@@ -136,11 +155,14 @@
   }
 }
 
+
 /* Стили кнопок */
+
 .toolbar-button {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #808080;
     text-decoration: none;
@@ -150,11 +172,14 @@
   }
 }
 
+
 /* Стили активной кнопки */
+
 .toolbar-button.active {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #535353;
     background-color: #ffffff;
@@ -243,6 +268,52 @@
   }
 }
 
+.header[data-header='eng'] {
+  .rosmen {
+    display: none;
+  }
+
+  .company {
+    display: none;
+  }
+
+  .news {
+    display: none;
+  }
+
+  .books-news {
+    display: none;
+  }
+
+  .NDK {
+    display: none;
+  }
+
+  .author {
+    display: none;
+  }
+
+  .publisher {
+    display: none;
+  }
+
+  .career {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .partners {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+}
+
 .main-block {
   @apply w-1/4;
   //@media screen and (max-width: 768px) {
@@ -281,13 +352,14 @@ header {
       @apply hidden;
     }
   }
+
   .hide-icon {
     .search-button {
-        @apply hidden;
+      @apply hidden;
     }
 
     .micro-button {
-        @apply hidden;
+      @apply hidden;
     }
   }
 
@@ -332,6 +404,15 @@ header {
     cursor: pointer;
   }
 
+  .envelope-button {
+    display: inline-block;
+    background: url("../../img/envelope-header.svg") no-repeat center;
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
   .language {
     @apply inline-block text-l whitespace-nowrap;
 
@@ -356,6 +437,7 @@ header {
 
     input {
       @apply w-full border-0 bg-yellow;
+
       &:focus {
         border-style: none;
         outline: none;
@@ -363,6 +445,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:hover {
         border-style: none;
         outline: none;
@@ -370,6 +453,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:active {
         border-style: none;
         outline: none;
@@ -386,6 +470,7 @@ header {
 
     span {
       @apply ml-5;
+
       @media screen and (max-width: 900px) {
         @apply ml-6;
       }
@@ -413,6 +498,7 @@ header {
       width: 2.6rem;
       height: 2.6rem;
       cursor: pointer;
+
       @media screen and (max-width: 900px) {
         background-size: 2rem 2rem;
         width: 1rem;
@@ -427,6 +513,7 @@ header {
       background-size: 1.6rem 1.6rem;
       width: 2.6rem;
       height: 2.6rem;
+
       @media screen and (max-width: 900px) {
         background-size: 1rem 1rem;
         width: 1rem;
@@ -437,6 +524,7 @@ header {
     &.hide {
       width: 0;
       opacity: 0;
+
       span {
         display: none;
       }
@@ -447,13 +535,16 @@ header {
     @apply items-center;
 
     &.dekstop {
-        @apply inline-flex;
-        @media screen and (max-width: 900px) {
+      @apply inline-flex;
+
+      @media screen and (max-width: 900px) {
         @apply hidden;
       }
     }
+
     &.mobile {
       @apply hidden;
+
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
@@ -461,6 +552,7 @@ header {
 
     span {
       @apply mr-6;
+
       @media screen and (max-width: 900px) {
         @apply mr-4;
       }
@@ -528,9 +620,11 @@ header {
 
         .more-down-content {
           @apply absolute z-1000 bg-white p-24;
+
           p {
             @apply text-m;
           }
+
           p:not(:last-child) {
             @apply mb-16;
           }
@@ -579,6 +673,7 @@ header {
     height: 100%;
     margin: auto;
     padding: 1.2rem 0;
+
     @media screen and (max-width: 900px) {
       height: 7rem;
       padding: 0.4rem 0;
@@ -617,7 +712,8 @@ header {
         width: 100%;
         height: 100%;
         min-height: 7rem;
-        max-height: 13rem;;
+        max-height: 13rem;
+        ;
       }
     }
   }
@@ -675,13 +771,15 @@ header {
 .swiper-image-2,
 .swiper-book-fragment,
 .swiper-detailed-page,
+.swiper-imidzh-page,
 .swiper-detailed-page-video {
-  width: 100% !important;
-  height: auto !important;
-  padding: 0rem !important;
 
+  //width: 100% !important;
+  //height: auto !important;
+  //padding: 0 3rem !important;
   .card_career {
     margin-top: 3rem;
+
     @media screen and (max-width: 768px) {
       @apply py-4;
       margin-top: 0;
@@ -703,6 +801,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -716,6 +815,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -806,10 +906,12 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
+
     @media screen and (max-width: 900px) {
       width: 32.4rem;
       height: 32.4rem;
     }
+
     @media screen and (max-width: 350px) {
       width: 22.4rem;
       height: 22.4rem;
@@ -829,7 +931,6 @@ header {
         left: 0;
         top: auto;
       }
-
     }
 
     &.moon-2 {
@@ -838,6 +939,7 @@ header {
       right: 9rem;
       top: 4rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         width: 32.4rem;
         height: 32.4rem;
@@ -853,9 +955,11 @@ header {
     bottom: 29rem;
     position: relative;
     text-align: center;
+
     @media screen and (max-width: 900px) {
       bottom: 20rem;
     }
+
     @media screen and (max-width: 350px) {
       bottom: 15rem;
     }
@@ -866,6 +970,7 @@ header {
       left: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: 17rem;
         left: 0;
@@ -880,6 +985,7 @@ header {
       right: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: -12rem;
         left: 0;
@@ -981,6 +1087,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -994,6 +1101,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -1007,10 +1115,23 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
-  &::-webkit-scrollbar-track {border-radius: 0.2rem;}
-  &::-webkit-scrollbar {width: 0.4rem;}
-  &::-webkit-scrollbar-thumb {border-radius: 0.2rem;background: #acadad;}
-  &:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.2rem;
+    background: #acadad;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 
   #elephant-slider {
     background-size: auto;
@@ -1068,6 +1189,21 @@ header {
       &.bottom {
         top: 59rem;
 
+        &.zero-one {
+          left: 49.5rem;
+          top: 44rem;
+        }
+
+        &.zero-two {
+          left: 117.5rem;
+          top: 44rem;
+        }
+
+        &.zero-three {
+          left: 183rem;
+          top: 44rem;
+        }
+
         &.first {
           left: 83rem;
         }
@@ -1099,10 +1235,10 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 64.5rem;
+        bottom: 63.5rem;
 
         &.first {
-          left: 30.5rem;
+          left: 30rem;
         }
 
         &.second {
@@ -1141,6 +1277,21 @@ header {
       &.bottom {
         top: 58rem;
 
+        &.zero-one {
+          left: 43.5rem;
+          top: 43rem;
+        }
+
+        &.zero-two {
+          left: 110.5rem;
+          top: 43rem;
+        }
+
+        &.zero-three {
+          left: 177rem;
+          top: 43rem;
+        }
+
         &.first {
           left: 77.5rem;
         }
@@ -1165,17 +1316,17 @@ header {
       }
 
       .color-block {
-
         &.bottom {
           border-bottom-left-radius: 0.5rem;
           border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
+
           &.first {
             background-color: #FFF145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33C15B;
           }
 
           &.third {
@@ -1195,12 +1346,13 @@ header {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           padding-bottom: 9rem;
+
           &.first {
             background-color: #FFF145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33C15B;
           }
 
           &.third {
@@ -1226,13 +1378,13 @@ header {
           &.nine {
             background-color: #FF0053;
           }
+
           &.ten {
             background-color: #FF8500;
           }
         }
 
         height: auto;
-
 
         .elephant-more-up-button {
           @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
@@ -1244,7 +1396,6 @@ header {
             width: 1.6rem;
             height: 1.6rem;
             margin-right: 1rem;
-
           }
 
           &.active-js {
@@ -1256,7 +1407,6 @@ header {
               height: 1.6rem;
               margin-right: 1rem;
               transform: rotate(180deg);
-
             }
           }
         }
@@ -1334,6 +1484,7 @@ header {
     img {
       width: 18rem;
       height: 24rem;
+
       @media screen and (max-width: 768px) {
         width: 5rem;
         height: 6rem;
@@ -1343,6 +1494,7 @@ header {
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
+
       @media screen and (max-width: 768px) {
         width: 6rem;
       }
@@ -1351,6 +1503,7 @@ header {
         @apply absolute;
         height: 27rem;
         width: 25rem;
+
         @media screen and (max-width: 768px) {
           height: 11rem;
           width: 6rem;
@@ -1364,6 +1517,7 @@ header {
   @apply block;
   width: 100%;
   height: 50rem;
+
   @media screen and (max-width: 768px) {
     @apply hidden;
   }
@@ -1371,6 +1525,7 @@ header {
 
 .mobile-map {
   @apply hidden;
+
   @media screen and (max-width: 768px) {
     @apply block mx-auto;
     width: 100%;
