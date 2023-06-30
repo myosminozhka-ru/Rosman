@@ -261,10 +261,12 @@
 }
 
 header {
-  @apply flex h-60 items-center justify-between bg-yellow px-10 p-4;
-
+  @apply flex h-60 items-center bg-yellow px-10 p-4;
+  @media screen and (max-width: 900px) {
+    @apply justify-between;
+  }
   .logo {
-    @apply ml-24;
+    @apply m-24 basis-1/10;
     @apply block;
 
     @media screen and (max-width: 900px) {
@@ -287,6 +289,7 @@ header {
   }
 
   .header-nav {
+    @apply basis-6/10;
     @media screen and (max-width: 900px) {
       @apply hidden;
     }
@@ -327,7 +330,7 @@ header {
   .micro-button {
     display: inline-block;
     background: url("../../img/micro.svg") no-repeat center;
-    background-size: 3.6rem 3.6rem;
+    background-size: 3.6rem 3rem;
     width: 1.6rem;
     height: 1.6rem;
     cursor: pointer;
@@ -342,24 +345,12 @@ header {
     cursor: pointer;
   }
 
-  .language {
-    @apply inline-block text-l whitespace-nowrap;
 
-    .active-js {
-      color: rgba(160, 168, 47, 0.69);
-    }
-
-    span {
-      @apply cursor-pointer;
-    }
-  }
 
   .search-input {
-    @apply flex flex-row border-0 border-b-2 border-solid border-black transition-all duration-300;
+    @apply flex flex-row border-0 border-b-2 border-solid border-black transition-all duration-300 basis-5/10;
     opacity: 1;
     padding: 5px;
-    width: 40%;
-
     @media screen and (max-width: 900px) {
       width: 45%;
     }
@@ -419,7 +410,7 @@ header {
     .micro-icon {
       display: block;
       background: url("../../img/micro.svg") no-repeat center;
-      background-size: 3.6rem 3.6rem;
+      background-size: 3.6rem 3rem;
       width: 2.6rem;
       height: 2.6rem;
       cursor: pointer;
@@ -445,8 +436,12 @@ header {
     }
 
     &.hide {
+      @apply p-0 basis-0;
       width: 0;
       opacity: 0;
+      input {
+        @apply p-0;
+      }
       span {
         display: none;
       }
@@ -454,7 +449,7 @@ header {
   }
 
   .header-btn {
-    @apply items-center;
+    @apply items-center basis-1/4 justify-end mr-10;
 
     &.dekstop {
         @apply inline-flex;
@@ -468,21 +463,108 @@ header {
         @apply inline-flex;
       }
     }
+    .language {
+      @apply inline-block text-l whitespace-nowrap;
 
+      .active-js {
+        color: rgba(160, 168, 47, 0.69);
+      }
+
+      span {
+        @apply cursor-pointer m-2 mr-2 ml-2;
+      }
+    }
     span {
-      @apply mr-6;
+      @apply mr-20;
       @media screen and (max-width: 900px) {
-        @apply mr-4;
+        @apply mr-12;
       }
     }
   }
+  .more-down-button {
+    @apply mx-6 my-3 text-s uppercase;
 
+    span {
+      background-image: url("../../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: 1.6rem 1.6rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    &.active-js {
+      span {
+        background-image: url("../../img/arrow-down.svg");
+        background-repeat: no-repeat;
+        background-size: 1.6rem 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-bottom: 0rem;
+        vertical-align: middle;
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .more-down-content {
+    @apply absolute z-1001 bg-white p-24;
+    .more-down-button {
+      @apply m-0 p-0;
+    }
+    .more-down-content {
+      @apply relative p-0;
+    }
+    p {
+      @apply text-m;
+    }
+    p:not(:last-child) {
+      @apply mb-16;
+    }
+    li {
+      @apply text-m;
+    }
+    li:not(:last-child) {
+      @apply mb-16;
+    }
+  }
+  .menu {
+    @apply border-0 p-0 py-6 basis-1/10 flex justify-center;
+    .more-down-content {
+      a {
+        @apply text-m;
+      }
+      .more-down-content {
+        a {
+          @apply text-s;
+        }
+      }
+    }
+    &.hide {
+      @apply hidden;
+    }
+
+
+    &:hover .icon {
+      background: url("../../img/burger.svg") no-repeat center;
+      background-size: contain;
+    }
+
+    .icon {
+      @apply mb-1 h-24 w-24;
+      background: url("../../img/burger.svg") no-repeat center;
+      background-size: contain;
+
+    }
+  }
   nav {
-    @apply flex justify-start transition-all duration-300;
+    @apply flex justify-start transition-all duration-300 whitespace-nowrap;
     width: 65rem;
     opacity: 1;
 
     &.hide {
+      @apply p-0 basis-0;
       width: 0;
       opacity: 0;
       margin: 0;
@@ -502,49 +584,17 @@ header {
 
     ul {
       @apply m-0 flex list-none p-0;
-
+      p {
+        a {
+          @apply m-0;
+        }
+      }
       li {
         a {
           @apply mx-17 my-16 text-s;
         }
 
-        .more-down-button {
-          @apply mx-6 my-3 text-s uppercase;
 
-          span {
-            background-image: url("../../img/arrow-down.svg");
-            background-repeat: no-repeat;
-            background-size: 1.6rem 1.6rem;
-            width: 1.6rem;
-            height: 1.6rem;
-            vertical-align: middle;
-            display: inline-block;
-          }
-
-          &.active-js {
-            span {
-              background-image: url("../../img/arrow-down.svg");
-              background-repeat: no-repeat;
-              background-size: 1.6rem 1.6rem;
-              width: 1.6rem;
-              height: 1.6rem;
-              margin-bottom: 0rem;
-              vertical-align: middle;
-              display: inline-block;
-              transform: rotate(180deg);
-            }
-          }
-        }
-
-        .more-down-content {
-          @apply absolute z-1000 bg-white p-24;
-          p {
-            @apply text-m;
-          }
-          p:not(:last-child) {
-            @apply mb-16;
-          }
-        }
       }
     }
   }
@@ -676,6 +726,7 @@ header {
   .swiper-slide {
     display: flex;
     justify-content: center;
+
   }
 }
 
@@ -692,13 +743,23 @@ header {
 
   .card_career {
     margin-top: 3rem;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 930px) {
       @apply py-4;
       margin-top: 0;
-      gap: 0;
+      gap: 2.6rem;
     }
   }
+  .slider-hits {
+    .toy_card {
+      @apply pb-0 justify-center;
+    }
+    @media screen and (max-width: 930px) {
+      .card_career {
+        @apply py-4 mt-0;
+      }
 
+    }
+  }
   .swiper-header {
     @apply flex justify-between my-40 w-5/6;
 
@@ -1028,13 +1089,16 @@ header {
     height: 95rem;
     position: relative;
     display: list-item;
+    @media screen and (max-width: 768px) {
+     left: -25rem;
+    }
+
 
     .year-text {
       @apply text-5xl text-white;
       display: inline-block;
       position: absolute;
       z-index: 1001;
-
       &.up {
         bottom: 64.5rem;
 
@@ -1345,8 +1409,8 @@ header {
       width: 18rem;
       height: 24rem;
       @media screen and (max-width: 768px) {
-        width: 5rem;
-        height: 6rem;
+        width: 10rem;
+        height: 12rem;
       }
     }
 
@@ -1354,7 +1418,7 @@ header {
       @apply relative items-center flex justify-center;
       width: 25rem;
       @media screen and (max-width: 768px) {
-        width: 6rem;
+        width: 13rem;
       }
 
       video {
@@ -1362,8 +1426,8 @@ header {
         height: 27rem;
         width: 25rem;
         @media screen and (max-width: 768px) {
-          height: 11rem;
-          width: 6rem;
+          height: 13rem;
+          width: 13rem;
         }
       }
     }
