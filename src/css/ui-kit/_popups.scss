@@ -9,7 +9,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -1277,7 +1277,7 @@ img {
 }
 
 .sort-label_erase {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke bg-background px-6 text-s font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl  bg-background px-6 text-s font-normal;
 
   span {
     @apply ml-10 block h-12 w-12 cursor-pointer;

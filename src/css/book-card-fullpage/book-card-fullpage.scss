@@ -92,3 +92,31 @@
     @apply bg-yellow
   }
 }
+
+
+.slider-main {
+  -webkit-appearance: none;
+  height: 0.4rem;
+  background: linear-gradient(90deg, black 60%, #E3E3E2 60%);
+  outline: none;
+}
+
+.slider-main::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  cursor: pointer;
+}
+
+.slider-main::-moz-range-thumb {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  cursor: pointer;
+}
