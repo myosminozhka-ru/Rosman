@@ -99,7 +99,7 @@
         <p class="breadcrumbs">
           <a class="text-s" href="#">Главная </a><span>/</span>
           <a class="text-s" href="#">Книги </a><span>/</span>
-          <a class="text-s" href="#">Каталог проектов </a>
+          <a class="text-s !text-black" href="#">Каталог проектов </a>
 
         </p>
         <div class="breadcrumbs-small-screen">
@@ -107,7 +107,7 @@
           <div class="breadcrumbs-small-screen-dots ">/</div>
           <div class="breadcrumbs-small-screen-path">Книги</div>
           <span>/</span>
-          <div class="breadcrumbs-small-screen-path">Каталог проектов</div>
+          <div class="breadcrumbs-small-screen-path !text-black">Каталог проектов</div>
         </div>
       </div>
 
@@ -122,28 +122,46 @@
             книг. Здесь же вы найдёте информацию о наших писательских премиях и тематических проектах с участием целого
             ряда писателей из нашего издательства.
           </div>
+          <div class="card-fullpage-filter-links ">
+            <div>
+              <input type="checkbox" id="all-projects" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium !px-12 !py-4 !w-max" for="all-projects">Все проекты
+                <div><span class="count">12</span> <span class="cross"></span></div>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="contest" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="contest">Конкурсы
+                <div><span class="count">12</span> <span class="cross"></span></div>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="courses" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="courses">Курсы
+                <div><span class="count">12</span> <span class="cross"></span></div>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="project-1" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-1">Проект 1<span
+                class="cross"></span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="project-2" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-2">Проект 2<span
+                class="cross"></span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="project-3" class="sort-checkbox">
+              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-3">Проект 3<span
+                class="cross"></span>
+              </label>
+            </div>
+          </div>
           <div class="flex flex-row flex-nowrap gap-8">
-            <input type="checkbox" id="all-projects" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="all-projects">Все проекты
-              <div><span class="count">12</span> <span class="cross"></span></div>
-            </label>
-            <input type="checkbox" id="contest" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="contest">Конкурсы
-              <div><span class="count">12</span> <span class="cross"></span></div>
-            </label>
-            <input type="checkbox" id="courses" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="courses">Курсы
-              <div><span class="count">12</span> <span class="cross"></span></div>
-            </label>
-            <input type="checkbox" id="project-1" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="project-1">Проект 1<span class="cross"></span>
-            </label>
-            <input type="checkbox" id="project-2" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="project-2">Проект 2<span class="cross"></span>
-            </label>
-            <input type="checkbox" id="project-3" class="sort-checkbox">
-            <label class="sort-label !px-12 !py-4 !w-max" for="project-3">Проект 3<span class="cross"></span>
-            </label>
+
           </div>
         </div>
 
@@ -173,7 +191,7 @@
                   </div>
                 </div>
                 <a class="" href="#">
-                  <button class="button-white max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
+                  <button class="button-white font-medium max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
                 </a>
               </div>
             </div>
@@ -201,7 +219,7 @@
                   </div>
                 </div>
                 <a href="#">
-                  <button class="button-white max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
+                  <button class="button-white font-medium max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
                 </a>
               </div>
             </div>
@@ -226,7 +244,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -252,7 +270,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -278,7 +296,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -304,7 +322,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -330,7 +348,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -356,7 +374,7 @@
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    Кругозор
+                    КРУГОЗОР
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
                   <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -396,7 +414,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -424,7 +442,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -452,7 +470,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -480,7 +498,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -508,7 +526,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -536,7 +554,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
@@ -564,7 +582,7 @@
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
                         <a href="#" class="card_articles_category dotted_tags_category">
-                          Кругозор
+                          КРУГОЗОР
                         </a>
                         <div class="card_articles_separator dotted_tags_separator">•</div>
                         <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
