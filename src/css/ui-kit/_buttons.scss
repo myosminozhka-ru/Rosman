@@ -65,7 +65,12 @@ button {
   background-position: 54% 50%;
   background-size: 3rem 3rem;
   background-color: rgba(255, 255, 255, 0.5);
-
+  &.author-button {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    background-color: yellow;
+  }
   &:hover {
     @apply bg-yellow;
     background-image: url("../../img/play-fill.svg");

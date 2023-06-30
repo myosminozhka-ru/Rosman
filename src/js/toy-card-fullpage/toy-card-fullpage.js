@@ -150,12 +150,14 @@ dots.forEach((dot, index) => {
 
 
 // для описания книги, чтобы там было многоточие
-const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
+const jsBookToggleButton = document.querySelectorAll(".js-book-toggle-button");
+const jsBookTextContainer = document.querySelectorAll(".card-fp-desc-text-top");
 if (jsBookToggleButton && jsBookTextContainer) {
-  jsBookToggleButton.addEventListener('click', function () {
-    jsBookTextContainer.classList.toggle('line-clamp-none');
-  });
+  for (let i = 0; i < jsBookTextContainer.length; i++) {
+    jsBookToggleButton[i].addEventListener('click', function () {
+      jsBookTextContainer[i].classList.toggle('line-clamp-none');
+    });
+  }
 }
 
 // swiper fullpage

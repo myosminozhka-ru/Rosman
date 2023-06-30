@@ -144,6 +144,9 @@ module.exports = {
         190: "45rem",
         200: "50.9rem",
       },
+      lineClamp: {
+        10: '10',
+      },
       lineHeight: {
         'sup': '4.4rem',
         'sup-2': '3.4rem',
