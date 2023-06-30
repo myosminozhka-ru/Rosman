@@ -529,7 +529,7 @@
 }
 
 .card-fullpage-characteristics {
-  @apply flex flex-row justify-between gap-16 px-24;
+  @apply flex flex-row justify-between gap-16;
   @media screen and (max-width: 800px) {
     @apply flex-col gap-32;
   }
