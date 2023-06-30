@@ -189,7 +189,7 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
 
 // Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 9, // расстояние между слайдами
@@ -210,7 +210,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищ
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-4', { // ищем слайдер превью по селектору
-  // задаем параметры
+                                                                         // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -238,7 +238,10 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', { // ищ
     },
     768: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
-      pagination: false,
+      pagination: {
+        clickable: true,
+        el: '.slider__images .swiper-pagination',
+      },
       mousewheel: true,
     }
   }
