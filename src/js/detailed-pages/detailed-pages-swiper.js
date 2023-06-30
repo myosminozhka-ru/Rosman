@@ -73,3 +73,27 @@ const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
     },
   },
 });
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
