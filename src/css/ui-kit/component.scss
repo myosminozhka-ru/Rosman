@@ -1,15 +1,17 @@
 .filters-block {
   @apply w-full;
 
-
   .more-down-button {
     @apply text-l font-semibold w-full justify-between text-left px-0;
   }
+
   .more-down-content {
-    @apply  px-0;
+    @apply px-0;
   }
+
   .back-filter {
     @apply text-s font-semibold flex gap-8 my-14;
+
     span {
       background-image: url("../../img/arrow-down.svg");
       background-repeat: no-repeat;
@@ -20,15 +22,26 @@
     }
   }
 
-
-
   .scroll-block {
     @apply h-140 overflow-y-auto;
   }
-  .scroll-block::-webkit-scrollbar-track {border-radius: 0.4rem;}
-  .scroll-block::-webkit-scrollbar {width: 0.6rem;}
-  .scroll-block::-webkit-scrollbar-thumb {border-radius: 0.4rem;background: #acadad;}
-  .scroll-block:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  .scroll-block::-webkit-scrollbar-track {
+    border-radius: 0.4rem;
+  }
+
+  .scroll-block::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+
+  .scroll-block::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background: #acadad;
+  }
+
+  .scroll-block:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 }
 
 .mobile-filter {
@@ -127,6 +140,7 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     background-color: #ffffff;
     padding: 0;
@@ -134,10 +148,14 @@
     justify-content: space-between;
     align-items: center;
     border: 0.1rem #D9D9D9 solid;
-    position: fixed; /* Зафиксируем позицию */
-    bottom: 0; /* Разместим внизу экрана */
-    width: 100%; /* Займем всю доступную ширину */
+    position: fixed;
+    /* Зафиксируем позицию */
+    bottom: 0;
+    /* Разместим внизу экрана */
+    width: 100%;
+    /* Займем всю доступную ширину */
     z-index: 100000;
+
     img {
       width: 2rem;
       height: 2rem;
@@ -146,11 +164,14 @@
   }
 }
 
+
 /* Стили кнопок */
+
 .toolbar-button {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #808080;
     text-decoration: none;
@@ -160,11 +181,14 @@
   }
 }
 
+
 /* Стили активной кнопки */
+
 .toolbar-button.active {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #535353;
     background-color: #ffffff;
@@ -262,9 +286,11 @@
 
 header {
   @apply flex h-60 items-center bg-yellow px-10 p-4;
+
   @media screen and (max-width: 900px) {
     @apply justify-between;
   }
+
   .logo {
     @apply m-24 basis-1/10;
     @apply block;
@@ -290,17 +316,19 @@ header {
 
   .header-nav {
     @apply basis-6/10;
+
     @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
+
   .hide-icon {
     .search-button {
-        @apply hidden;
+      @apply hidden;
     }
 
     .micro-button {
-        @apply hidden;
+      @apply hidden;
     }
   }
 
@@ -345,18 +373,18 @@ header {
     cursor: pointer;
   }
 
-
-
   .search-input {
     @apply flex flex-row border-0 border-b-2 border-solid border-black transition-all duration-300 basis-5/10;
     opacity: 1;
     padding: 5px;
+
     @media screen and (max-width: 900px) {
       width: 45%;
     }
 
     input {
       @apply w-full border-0 bg-yellow;
+
       &:focus {
         border-style: none;
         outline: none;
@@ -364,6 +392,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:hover {
         border-style: none;
         outline: none;
@@ -371,6 +400,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:active {
         border-style: none;
         outline: none;
@@ -387,6 +417,7 @@ header {
 
     span {
       @apply ml-5;
+
       @media screen and (max-width: 900px) {
         @apply ml-6;
       }
@@ -414,6 +445,7 @@ header {
       width: 2.6rem;
       height: 2.6rem;
       cursor: pointer;
+
       @media screen and (max-width: 900px) {
         background-size: 2rem 2rem;
         width: 1rem;
@@ -428,6 +460,7 @@ header {
       background-size: 1.6rem 1.6rem;
       width: 2.6rem;
       height: 2.6rem;
+
       @media screen and (max-width: 900px) {
         background-size: 1rem 1rem;
         width: 1rem;
@@ -439,9 +472,11 @@ header {
       @apply p-0 basis-0;
       width: 0;
       opacity: 0;
+
       input {
         @apply p-0;
       }
+
       span {
         display: none;
       }
@@ -452,17 +487,21 @@ header {
     @apply items-center basis-1/4 justify-end mr-10;
 
     &.dekstop {
-        @apply inline-flex;
-        @media screen and (max-width: 900px) {
+      @apply inline-flex;
+
+      @media screen and (max-width: 900px) {
         @apply hidden;
       }
     }
+
     &.mobile {
       @apply hidden;
+
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
     }
+
     .language {
       @apply inline-block text-l whitespace-nowrap;
 
@@ -474,13 +513,16 @@ header {
         @apply cursor-pointer m-2 mr-2 ml-2;
       }
     }
+
     span {
       @apply mr-20;
+
       @media screen and (max-width: 900px) {
         @apply mr-12;
       }
     }
   }
+
   .more-down-button {
     @apply mx-6 my-3 text-s uppercase;
 
@@ -508,43 +550,53 @@ header {
       }
     }
   }
+
   .more-down-content {
     @apply absolute z-1001 bg-white p-24;
+
     .more-down-button {
       @apply m-0 p-0;
     }
+
     .more-down-content {
       @apply relative p-0;
     }
+
     p {
       @apply text-m;
     }
+
     p:not(:last-child) {
       @apply mb-16;
     }
+
     li {
       @apply text-m;
     }
+
     li:not(:last-child) {
       @apply mb-16;
     }
   }
+
   .menu {
     @apply border-0 p-0 py-6 basis-1/10 flex justify-center;
+
     .more-down-content {
       a {
         @apply text-m;
       }
+
       .more-down-content {
         a {
           @apply text-s;
         }
       }
     }
+
     &.hide {
       @apply hidden;
     }
-
 
     &:hover .icon {
       background: url("../../img/burger.svg") no-repeat center;
@@ -555,9 +607,9 @@ header {
       @apply mb-1 h-24 w-24;
       background: url("../../img/burger.svg") no-repeat center;
       background-size: contain;
-
     }
   }
+
   nav {
     @apply flex justify-start transition-all duration-300 whitespace-nowrap;
     width: 65rem;
@@ -584,17 +636,17 @@ header {
 
     ul {
       @apply m-0 flex list-none p-0;
+
       p {
         a {
           @apply m-0;
         }
       }
+
       li {
         a {
           @apply mx-17 my-16 text-s;
         }
-
-
       }
     }
   }
@@ -639,6 +691,7 @@ header {
     height: 100%;
     margin: auto;
     padding: 1.2rem 0;
+
     @media screen and (max-width: 900px) {
       height: 7rem;
       padding: 0.4rem 0;
@@ -707,8 +760,7 @@ header {
   position: absolute;
   content: "";
   display: block;
-  height: calc(100% - 145rem);
-  ;
+  height: calc(100% - 145rem);;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -726,7 +778,6 @@ header {
   .swiper-slide {
     display: flex;
     justify-content: center;
-
   }
 }
 
@@ -736,6 +787,7 @@ header {
 .swiper-image-2,
 .swiper-book-fragment,
 .swiper-detailed-page,
+.swiper-catalog-projects,
 .swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
@@ -743,23 +795,26 @@ header {
 
   .card_career {
     margin-top: 3rem;
+
     @media screen and (max-width: 930px) {
       @apply py-4;
       margin-top: 0;
       gap: 2.6rem;
     }
   }
+
   .slider-hits {
     .toy_card {
       @apply pb-0 justify-center;
     }
+
     @media screen and (max-width: 930px) {
       .card_career {
         @apply py-4 mt-0;
       }
-
     }
   }
+
   .swiper-header {
     @apply flex justify-between my-40 w-5/6;
 
@@ -774,6 +829,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -787,6 +843,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -877,10 +934,12 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
+
     @media screen and (max-width: 900px) {
       width: 32.4rem;
       height: 32.4rem;
     }
+
     @media screen and (max-width: 350px) {
       width: 22.4rem;
       height: 22.4rem;
@@ -900,7 +959,6 @@ header {
         left: 0;
         top: auto;
       }
-
     }
 
     &.moon-2 {
@@ -909,6 +967,7 @@ header {
       right: 9rem;
       top: 4rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         width: 32.4rem;
         height: 32.4rem;
@@ -924,9 +983,11 @@ header {
     bottom: 29rem;
     position: relative;
     text-align: center;
+
     @media screen and (max-width: 900px) {
       bottom: 20rem;
     }
+
     @media screen and (max-width: 350px) {
       bottom: 15rem;
     }
@@ -937,6 +998,7 @@ header {
       left: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: 17rem;
         left: 0;
@@ -951,6 +1013,7 @@ header {
       right: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: -12rem;
         left: 0;
@@ -1052,6 +1115,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -1065,6 +1129,7 @@ header {
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -1078,10 +1143,23 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
-  &::-webkit-scrollbar-track {border-radius: 0.2rem;}
-  &::-webkit-scrollbar {width: 0.4rem;}
-  &::-webkit-scrollbar-thumb {border-radius: 0.2rem;background: #acadad;}
-  &:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.2rem;
+    background: #acadad;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 
   #elephant-slider {
     background-size: auto;
@@ -1089,16 +1167,17 @@ header {
     height: 95rem;
     position: relative;
     display: list-item;
-    @media screen and (max-width: 768px) {
-     left: -25rem;
-    }
 
+    @media screen and (max-width: 768px) {
+      left: -25rem;
+    }
 
     .year-text {
       @apply text-5xl text-white;
       display: inline-block;
       position: absolute;
       z-index: 1001;
+
       &.up {
         bottom: 64.5rem;
 
@@ -1239,17 +1318,17 @@ header {
       }
 
       .color-block {
-
         &.bottom {
           border-bottom-left-radius: 0.5rem;
           border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
+
           &.first {
             background-color: #FFF145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33C15B;
           }
 
           &.third {
@@ -1269,12 +1348,13 @@ header {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           padding-bottom: 9rem;
+
           &.first {
             background-color: #FFF145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33C15B;
           }
 
           &.third {
@@ -1300,13 +1380,13 @@ header {
           &.nine {
             background-color: #FF0053;
           }
+
           &.ten {
             background-color: #FF8500;
           }
         }
 
         height: auto;
-
 
         .elephant-more-up-button {
           @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
@@ -1318,7 +1398,6 @@ header {
             width: 1.6rem;
             height: 1.6rem;
             margin-right: 1rem;
-
           }
 
           &.active-js {
@@ -1330,7 +1409,6 @@ header {
               height: 1.6rem;
               margin-right: 1rem;
               transform: rotate(180deg);
-
             }
           }
         }
@@ -1408,6 +1486,7 @@ header {
     img {
       width: 18rem;
       height: 24rem;
+
       @media screen and (max-width: 768px) {
         width: 10rem;
         height: 12rem;
@@ -1417,6 +1496,7 @@ header {
     .zero {
       @apply relative items-center flex justify-center;
       width: 25rem;
+
       @media screen and (max-width: 768px) {
         width: 13rem;
       }
@@ -1425,6 +1505,7 @@ header {
         @apply absolute;
         height: 27rem;
         width: 25rem;
+
         @media screen and (max-width: 768px) {
           height: 13rem;
           width: 13rem;
@@ -1438,6 +1519,7 @@ header {
   @apply block;
   width: 100%;
   height: 50rem;
+
   @media screen and (max-width: 768px) {
     @apply hidden;
   }
@@ -1445,9 +1527,19 @@ header {
 
 .mobile-map {
   @apply hidden;
+
   @media screen and (max-width: 768px) {
     @apply block mx-auto;
     width: 100%;
     height: 45rem;
   }
+}
+
+.envelope-button {
+  display: inline-block;
+  background: url("../../img/envelope-header.svg") no-repeat center;
+  background-size: 1rem 1rem;
+  width: 1rem;
+  height: 2rem;
+  cursor: pointer;
 }
