@@ -7,6 +7,7 @@ button {
 
   &:hover {
     @apply bg-yellow text-black;
+
     &.arrow-span {
       span {
         visibility: hidden;
@@ -115,7 +116,7 @@ button {
 }
 
 .overline-button {
-  @apply leading-none flex flex-row items-center justify-center p-0  text-m border-b-2 border-black;
+  @apply leading-none flex flex-row items-center justify-center p-0 text-m border-b-2 border-black;
 
   &:hover {
     @apply border-b-2 border-transparent;
@@ -181,6 +182,7 @@ button {
 
 .more-down-content {
   @apply hidden p-2;
+
   &.new {
     @apply absolute bg-white w-full border-2 border-card-stroke z-1000;
   }
@@ -206,7 +208,7 @@ button {
 .sort-checkbox {
   @apply hidden;
 
-  &:checked + .sort-label {
+  &:checked+.sort-label {
     @apply bg-yellow border-0;
 
     .cross {
@@ -240,7 +242,7 @@ button {
 .filter-checkbox {
   @apply hidden;
 
-  &:checked + .filter-label {
+  &:checked+.filter-label {
     @apply bg-yellow border-0 justify-between;
 
     .cross {
@@ -252,7 +254,7 @@ button {
     }
 
     .count {
-      @apply ml-4 inline-block  w-auto text-left text-s font-normal;
+      @apply ml-4 inline-block w-auto text-left text-s font-normal;
     }
   }
 }
@@ -293,11 +295,11 @@ button {
     @apply hidden;
   }
 
-  input[type="radio"]:checked + .checkmark {
+  input[type="radio"]:checked+.checkmark {
     @apply flex justify-center border-none bg-yellow;
   }
 
-  input[type="radio"]:checked + .checkmark::after {
+  input[type="radio"]:checked+.checkmark::after {
     content: "";
     display: block;
     width: 0.7rem;
@@ -318,11 +320,11 @@ button {
   input[type="checkbox"] {
     @apply hidden;
 
-    &:checked + .slider {
+    &:checked+.slider {
       @apply bg-yellow;
     }
 
-    &:checked + .slider:before {
+    &:checked+.slider:before {
       transform: translateX(2rem);
       background-color: #000000;
     }
@@ -372,9 +374,11 @@ button {
 
 .breadcrumbs-small-screen {
   @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+
   @media (min-width: 802px) {
     @apply hidden;
   }
+
   @media screen and (max-width: 480px) {
     @apply w-3/4;
   }
@@ -405,19 +409,17 @@ button {
   left: -1.2rem;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-arrow {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-path-hidden-text {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
   @apply block;
 }
-
 
 .breadcrumbs-icons {
   @apply flex flex-row gap-16;
+
   @media (min-width: 801px) {
     @apply hidden;
   }
@@ -432,20 +434,17 @@ button {
 }
 
 .dropdown {
-  @apply relative inline-block h-44  max-w-menu border-2 border-black bg-yellow px-4 py-6;
+  @apply relative inline-block h-44 max-w-menu border-2 border-black bg-yellow px-4 py-6;
   width: 14.4rem;
 
   button {
     @apply flex flex w-full flex-row gap-8 items-center p-1 pb-10 text-l;
   }
 
-
-
   .icon {
     @apply mb-1 h-24 w-24;
     background: url("../../img/menu-1.svg") no-repeat center;
     background-size: contain;
-
   }
 
   &:hover .icon {
@@ -455,6 +454,7 @@ button {
 
   .content {
     @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-24 left-0;
+
     a:not(:last-child) {
       @apply mb-20;
     }
@@ -478,6 +478,7 @@ button {
 
   .content-open-js {
     @apply absolute z-50 block w-auto max-w-inner-menu bg-white p-24 left-0;
+
     a:not(:last-child) {
       @apply mb-20;
     }
@@ -502,11 +503,9 @@ button {
   &:hover .content {
     @apply block;
   }
-
 }
 
 .navigation {
-
   ul {
     @apply m-0 flex list-none p-0;
   }
@@ -552,19 +551,20 @@ button {
       height: 1rem;
       right: 0;
       position: absolute;
-      @apply ml-4 inline-block text-left align-middle    cursor-pointer;
+      @apply ml-4 inline-block text-left align-middle cursor-pointer;
     }
 
     &.hide {
-      @apply opacity-0 hidden transition-all duration-500 ease-linear    ;
+      @apply opacity-0 hidden transition-all duration-500 ease-linear;
     }
 
     &.active-js {
-      @apply opacity-100 block  transition-all duration-500 ease-linear    ;
+      @apply opacity-100 block transition-all duration-500 ease-linear;
     }
 
     .content-layer {
       @apply flex;
+
       .picture {
         @apply w-3/12;
       }
@@ -775,24 +775,32 @@ button {
 //    // background-image: "img/svg/icon20/black-arrow_down.svg";
 //  }
 //}
-
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl  bg-black text-white text-2.5xl;
+  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl bg-black text-white text-2.5xl;
   width: 17.4rem;
   height: 2.4rem;
   z-index: 1002;
   top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
+
+  &:hover {
+    @apply bg-yellow text-black;
+  }
 }
 
-.custom-box span {
-  @apply w-20 h-14 block;
+.custom-box-span {
+  @apply w-20 h-[1.9rem] mr-1 block;
   background: url("../../img/envelope-white.svg") no-repeat center;
   background-size: contain;
   transform: rotate(90deg);
   z-index: 4;
+}
+
+.custom-box:hover .custom-box-span {
+  @apply w-20 h-22 block;
+  background: url("../../img/envelope-black.png") no-repeat center;
 }
 
 .custom-box a {
@@ -803,8 +811,8 @@ button {
 .custom-before {
   //content: ;
   position: absolute;
-  bottom: -0.3rem;
-  left: -8%;
+  bottom: -0.2rem;
+  left: -8.3%;
   width: 4rem;
   height: 4rem;
   transform: rotate(90deg);
@@ -812,15 +820,18 @@ button {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
 
+.custom-box:hover .custom-before {
+  background-image: url("../../img/custom-before-yellow.svg");
 }
 
 .custom-after {
   //content: ;
   position: absolute;
-  bottom: -0.3rem;
+  bottom: -0.2rem;
   transform: rotate(90deg);
-  left: 84.5%;
+  left: 85.1%;
   width: 4rem;
   height: 4rem;
   background-image: url("../../img/custom-after.svg");
@@ -830,4 +841,6 @@ button {
   z-index: -1;
 }
 
-
+.custom-box:hover .custom-after {
+  background-image: url("../../img/custom-after-yellow.svg");
+}
