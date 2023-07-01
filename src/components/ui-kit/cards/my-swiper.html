@@ -1,22 +1,22 @@
-<section class="slider-2 overflow-hidden">
-  <div class="container">
-    <div class="slider__flex">
-      <div class="slider__col relative !block ipadmini:!hidden">
-        
+<section class="slider-2 overflow-hidden ">
+  <div class="container ">
+    <div class="slider__flex ">
+      <div class="slider__col relative block ipadmini:hidden">
+
         <div class="slider__prev absolute top-[-2%] z-100 left-[20%] cursor-pointer">
           <img class="p-4 rotate-180" src="../../img/arrow-down-20.svg" alt="">
         </div>
         <!-- Кнопка для переключения на предыдущий слайд -->
         <div class="slider__thumbs ">
-          <div class="swiper-pagination"></div>
+
           <div class="swiper-container-3 "> <!-- Слайдер с превью -->
             <div class="swiper-wrapper">
 
-              <div class="swiper-slide !h-auto cursor-pointer">
+              <div class="swiper-slide max-h-[8.8rem] aspect-square cursor-pointer">
                 <div class="slider__image "><img src="../../img/card-fullpage/img1.svg" alt=""/></div>
               </div>
 
-              <div class="swiper-slide  cursor-pointer">
+              <div class="swiper-slide cursor-pointer">
                 <div class="slider__image"><img src="../../img/card-fullpage/img2.svg" alt=""/></div>
               </div>
 
@@ -43,7 +43,7 @@
         </div>
       </div>
       
-      <div class="slider__images overflow-hidden relative">
+      <div class="slider__images overflow-hidden relative ipadmini:!hidden">
         <div class="flex flex-row flex-nowrap gap-8 absolute top-0 left-0 bg-white z-100">
           <a href="#" class="bordered_tags_item-2 !px-12 ">Хит</a>
           <a href="#" class="bordered_tags_item-2 !px-12 ">Новинка</a>
@@ -71,16 +71,17 @@
         </div>
       </div>
 
-      <div class="overflow-hidden relative">
+      <div class="h-full w-full overflow-hidden relative hidden ipadmini:block">
+
         <div class="flex flex-row flex-nowrap gap-8 absolute top-0 left-0 bg-white z-100">
           <a href="#" class="bordered_tags_item-2 !px-12 ">Хит</a>
           <a href="#" class="bordered_tags_item-2 !px-12 ">Новинка</a>
           <a href="#" class="bordered_tags_item-2 !px-12 bordered_tags_item-hidden">5+</a>
         </div>
+
+
         <div class="swiper-container image-slider"> <!-- Слайдер с изображениями -->
-          <div class="swiper-pagination"></div>
-          <div class="swiper-scrollbar"></div>
-          <div class="swiper-wrapper image-slider__wrapper">
+          <div class="swiper-wrapper image-slider__wrapper mb-16">
             <div class="swiper-slide cursor-pointer image-slider__slide">
               <div class="image-slider__image"><img src="../../img/card-fullpage/img1.svg" alt=""/></div>
             </div>
@@ -97,9 +98,11 @@
               <div class="image-slider__image"><img src="../../img/card-fullpage/img5.svg" alt=""/></div>
             </div>
           </div>
+          <div class="swiper-pagination-2 text-center"></div>
         </div>
+
       </div>
-    
+
     </div>
   </div>
 </section>
