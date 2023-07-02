@@ -706,9 +706,6 @@
 .slider__images {
   width: 50.4rem;
   aspect-ratio: 1/1;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
 }
 
 .slider__images .slider__image img {
