@@ -74,7 +74,7 @@
 .breadcrumbs-path-hidden-text {
   @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
   border: 1px solid black;
-  width: 20rem;
+  width: max-content;
   top: 2.9rem;
   left: -1.2rem;
 }
