@@ -10,14 +10,16 @@
 <body>
 <div class="card-fullpage">
   @@include('components/header/header-books.html', { }, )
-  <div id="yellow-background" class="card-fullpage-modified-yellow-background">
+  <div
+    id="yellow-background"
+    class="card-fullpage-modified-yellow-background !pt-10"
+  >
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
 
-
-      <div class="custom-box !fixed js_contact_us_ru_popup_button">
+      <div class="custom-box js_contact_us_ru_popup_button !fixed">
         <span></span>
         <div class="custom-before"></div>
         <a>Написать нам</a>
@@ -34,19 +36,25 @@
           </div>
           <div class="js_contact_us_popup_body">
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Письмо директору</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Письмо директору</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../..//img/popup_arrow.svg" alt=""/>
               </div>
             </div>
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Заявка на партнерство</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Заявка на партнерство</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../../img/popup_arrow.svg" alt=""/>
               </div>
             </div>
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Отправить резюме</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Отправить резюме</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../../img/popup_arrow.svg" alt=""/>
               </div>
@@ -82,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="card-fullpage-filter-links mb-0 mt-24 px-24">
+      <div class="card-fullpage-filter-links mb-0 mt-16 px-24 sm:px-12">
         <a href="#" class="card-fullpage-filter-link">0-3</a>
         <a href="#" class="card-fullpage-filter-link">4-6</a>
         <a href="#" class="card-fullpage-filter-link">7-9</a>
@@ -92,18 +100,17 @@
         <a href="#" class="card-fullpage-filter-link">Хиты</a>
         <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
       </div>
-      <div class="flex justify-between items-center">
+      <div class="flex items-center justify-between">
         <p class="breadcrumbs p-24">
-          <a href="#">Главная </a><span>/</span>
-          <a href="#">Книги </a><span>/</span>
-          <a href="#">Все книги </a><span>/</span>
+          <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
+        ><span>/</span> <a href="#">Все книги </a><span>/</span>
           <a href="#">Художественная литература </a><span>/</span>
           <a href="#">Русские народные сказки</a><span>/</span>
           <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
         </p>
-        <div class="breadcrumbs-small-screen my-24">
+        <div class="breadcrumbs-small-screen my-24 pl-12">
           <div class="breadcrumbs-small-screen-image"></div>
-          <div class="breadcrumbs-small-screen-dots ">
+          <div class="breadcrumbs-small-screen-dots">
             ...
             <div class="breadcrumbs-arrow"></div>
             <div class="breadcrumbs-path-hidden-text">
@@ -113,9 +120,11 @@
               <a class="text-s" href="#">Русские народные сказки</a>
             </div>
           </div>
-          <div class="breadcrumbs-small-screen-path">Безработный Дед Мороз. Волшебный круговорот</div>
+          <div class="breadcrumbs-small-screen-path">
+            Безработный Дед Мороз. Волшебный круговорот
+          </div>
         </div>
-        <div class="breadcrumbs-icons">
+        <div class="breadcrumbs-icons sm:gap-0">
           <a href="#" class="item_card-external-link"></a>
           <button class="item_card_add_to_favourite"></button>
         </div>
@@ -129,31 +138,41 @@
         <div class="card-fullpage-description">
           <div class="card-fp-desc-main">
             <div class="card-fp-desc-top">
-              <div class="card-fp-desc-header">Часодеи. Часовой ключ. Книга 1
+              <div class="card-fp-desc-header">
+                Часодеи. Часовой ключ. Книга 1
               </div>
               <div class="card-fp-desc-vendor-code">Артикул: 649576977</div>
               <div class="card_articles_tags dotted_tags">
-                <a href="#" class="card_articles_category dotted_tags_category">Наталья Щерба</a>
-                <div class="card_articles_separator dotted_tags_separator">•</div>
-                <a href="#" class="card_articles_date dotted_tags_date">Nataliya Sherba</a>
+                <a
+                  href="#"
+                  class="card_articles_category dotted_tags_category"
+                >Наталья Щерба</a
+                >
+                <div class="card_articles_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_articles_date dotted_tags_date"
+                >Nataliya Sherba</a
+                >
               </div>
-              <div class="overflow-hidden text-ellipsis js-book-text-container">
-                <span class="card-fp-desc-text-top
-                line-clamp-2
-                text-ellipsis">
-                  Первая книга фэнтези-бестселлера для подростков с уникальным сказочным миром,
-                  по популярности приближающегося к «Гарри Поттеру» и Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Dicta distinctio
-                  ducimus esse explicabo, labore officiis perferendis
-                  quam quas quos unde? Beatae consequatur distinctio
-                  ipsa laborum maxime nisi possimus quibusdam, unde?
-                </span>
+              <div
+                class="js-book-text-container overflow-hidden text-ellipsis"
+              >
+                    <span
+                      class="card-fp-desc-text-top line-clamp-2 text-ellipsis"
+                    >
+                      Первая книга фэнтези-бестселлера для подростков с
+                      уникальным сказочным миром, по популярности
+                      приближающегося к «Гарри Поттеру» и Lorem ipsum dolor sit
+                      amet, consectetur adipisicing elit. Dicta distinctio
+                      ducimus esse explicabo, labore officiis perferendis quam
+                      quas quos unde? Beatae consequatur distinctio ipsa laborum
+                      maxime nisi possimus quibusdam, unde?
+                    </span>
               </div>
-              <button class="more-down-button js-book-toggle-button !p-0">Подробное описание,
-                характеристики<span></span>
+              <button class="more-down-button js-book-toggle-button !p-0">
+                Подробное описание, характеристики<span></span>
               </button>
-
-
             </div>
             <div class="card-fp-desc-bottom">
               <div class="card-fp-desc-buy">Купить книгу</div>
@@ -165,20 +184,34 @@
 
             <!--  карточки БРЕНДЫ  -->
             <div class="card_brand card-fp-desc-brand-small">
-              <div class="card_brand_content  card-fp-desc-brand-content-small">
+              <div
+                class="card_brand_content card-fp-desc-brand-content-small"
+              >
                 <div class="card_brand_info card-fp-desc-brand-info-small">
-                  <a href="#" class="card_brand_all_items card-fp-desc-brand-items-small !py-2">Книги серии</a>
-                  <div class="card_brand_name card-fp-desc-brand-name-small">Часодеи</div>
+                  <a
+                    href="#"
+                    class="card_brand_all_items card-fp-desc-brand-items-small !py-2"
+                  >Книги серии</a
+                  >
+                  <div
+                    class="card_brand_name card-fp-desc-brand-name-small !font-medium"
+                  >
+                    Часодеи
+                  </div>
                 </div>
-                <a href="#" class="card_brand_image card-fp-desc-brand-image-small">
-                  <img src="../../img/elephant-card.svg" alt="">
+                <a
+                  href="#"
+                  class="card_brand_image m-w-[3rem] card-fp-desc-brand-image-small aspect-square"
+                >
+                  <img src="../../img/elephant-card.svg" alt=""/>
                 </a>
-
               </div>
             </div>
           </div>
           <div class="card-fp-desc-buttons pr-24">
-            <a href="#" class="bordered_tags_item-fp bordered_tags_item ">5+</a>
+            <a href="#" class="bordered_tags_item-fp bordered_tags_item"
+            >5+</a
+            >
             <a href="#" class="item_card-external-link"></a>
             <button class="item_card_add_to_favourite"></button>
           </div>
@@ -189,17 +222,16 @@
       <div class="swiper-image-2 mb-48">
         <div class="swiper-header !w-full">
           <h3 class="head-3 flex flex-row flex-nowrap items-center">
-            Все книги серии&nbsp <a href="#" class="text-5xl underline">Часодеи</a>
-
+            Все книги серии&nbsp
+            <a href="#" class="text-5xl underline">Часодеи</a>
           </h3>
           <div class="flex flex-row items-center gap-16">
-            <a class="underline text-15.20 font-medium">Смотреть все</a>
+            <a class="text-15.20 font-medium underline">Смотреть все</a>
             <div class="buttons">
               <div class="button-prev"></div>
               <div class="button-next"></div>
             </div>
           </div>
-
         </div>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -209,10 +241,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -233,7 +271,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -246,10 +286,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -270,7 +316,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -283,10 +331,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -307,7 +361,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -320,10 +376,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -344,7 +406,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -357,10 +421,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -381,7 +451,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -394,10 +466,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -418,7 +496,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -431,10 +511,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -455,7 +541,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -466,11 +554,25 @@
         </div>
       </div>
       <div class="card-fullpage-tabs px-24 sm:px-12">
-        <div class="navigation ">
+        <div class="navigation">
           <ul class="navigation-flex">
-            <li><a class="card-fullpage-tab card-fp-tab-desc active-js" href="#">Описание</a></li>
-            <li><a class="card-fullpage-tab card-fp-tab-char" href="#">Характеристики</a></li>
-            <li><a class="card-fullpage-tab card-fp-tab-instr" href="#">Об авторах</a></li>
+            <li>
+              <a
+                class="card-fullpage-tab card-fp-tab-desc active-js"
+                href="#"
+              >Описание</a
+              >
+            </li>
+            <li>
+              <a class="card-fullpage-tab card-fp-tab-char" href="#"
+              >Характеристики</a
+              >
+            </li>
+            <li>
+              <a class="card-fullpage-tab card-fp-tab-instr" href="#"
+              >Об авторах</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -493,16 +595,13 @@
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
       <div class="swiper-image-2">
         <div class="swiper-header !w-full">
-          <h3 class="head-3">
-            С этой книгой часто покупают
-          </h3>
+          <h3 class="head-3">С этой книгой часто покупают</h3>
           <div class="flex flex-row items-center gap-16">
             <div class="buttons">
               <div class="button-prev"></div>
               <div class="button-next"></div>
             </div>
           </div>
-
         </div>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper !items-end">
@@ -512,10 +611,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -536,7 +641,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -549,10 +656,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -573,7 +686,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -586,10 +701,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -610,7 +731,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -623,10 +746,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -647,7 +776,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -660,10 +791,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -684,7 +821,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -697,10 +836,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -721,7 +866,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -734,10 +881,16 @@
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
-                    <a href="#" class="book_card_tags_first bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_first bordered_tags_item"
+                    >
                       Бестселлер
                     </a>
-                    <a href="#" class="book_card_tags_second bordered_tags_item">
+                    <a
+                      href="#"
+                      class="book_card_tags_second bordered_tags_item"
+                    >
                       Новинка
                     </a>
                   </div>
@@ -758,7 +911,9 @@
                 </div>
                 <div class="book_card_author">Щерба Н. В.</div>
                 <div class="book_card_more item_card_more">
-                  <button class="book_card_item_link item_card_link overline-button">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
                     Подробнее
                   </button>
                   <button class="item_card_add_to_favourite"></button>
@@ -768,33 +923,49 @@
           </div>
         </div>
       </div>
-      <div class="card-fullpage-tabs ">
+      <div class="card-fullpage-tabs">
         <div class="navigation">
           <ul class="navigation-flex">
-            <li><a class="card-fullpage-tab card-fp-tab-desc active-js" href="#">Описание</a></li>
-            <li><a class="card-fullpage-tab card-fp-tab-char" href="#">Характеристики</a></li>
-            <li><a class="card-fullpage-tab card-fp-tab-instr" href="#">Об авторах</a></li>
+            <li>
+              <a
+                class="card-fullpage-tab card-fp-tab-desc active-js"
+                href="#"
+              >Описание</a
+              >
+            </li>
+            <li>
+              <a class="card-fullpage-tab card-fp-tab-char" href="#"
+              >Характеристики</a
+              >
+            </li>
+            <li>
+              <a class="card-fullpage-tab card-fp-tab-instr" href="#"
+              >Об авторах</a
+              >
+            </li>
           </ul>
         </div>
       </div>
 
       <!-- тут наклоняющаяся фотогалерея -->
       <div id="white-background" class="card-fullpage-w-bg-modified">
-        <div id="yellow-moving-block" class="card-fullpage-w-bg-modified ">
+        <div id="yellow-moving-block" class="card-fullpage-w-bg-modified">
           <div id="parent">
-            <img id="follower" class="slide-el card-fullpage-slide-el-mod"
-                 src="../../img/running-elephant/slide-el.png">
+            <img
+              id="follower"
+              class="slide-el card-fullpage-slide-el-mod"
+              src="../../img/running-elephant/slide-el.png"
+            />
           </div>
         </div>
-        <div id="above-block" class="above-block-mod ">
-          <div class="swiper-image-2 my-0 mb-24 pb-60 ">
-            <div class="swiper-header !w-full sw-head-mod">
-              <h3 class="head-3 ">Фотогалерея</h3>
+        <div id="above-block" class="above-block-mod">
+          <div class="swiper-image-2 my-0 mb-24 pb-60">
+            <div class="swiper-header sw-head-mod !w-full">
+              <h3 class="head-3">Фотогалерея</h3>
               <div class="buttons">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
               </div>
-
             </div>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper !items-end">
@@ -889,24 +1060,31 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item full-width px-24 mb-64 sm:px-12">
+      <div class="card_video_item full-width mb-64 px-24 sm:px-12">
         <div class="card_video_preview">
           <img src="../../img/cards_video_preview.svg" alt=""/>
           <button class="card_video_play_button circle-button"></button>
         </div>
 
         <div class="card_video_info">
-          <span class="card_video_title">Как правильно выбрать книгу: наши советы для любителей книг</span>
+              <span class="card_video_title"
+              >Как правильно выбрать книгу: наши советы для любителей
+                книг</span
+              >
         </div>
       </div>
 
       <!-- тут ниже футер -->
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
-      @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html', { }, )
+      @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
+      { }, )
     </div>
   </div>
 </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="module" src="./js/scripts.js"></script>
 </body>
