@@ -1,10 +1,10 @@
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+const swiperDetailedPage = new Swiper(".swiper-detailed-page", {
   // Optional parameters
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
   },
   autoHeight: true,
   slidesPerView: 3,
@@ -25,13 +25,13 @@ const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
   },
 });
 
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+const swiperDetailedPageVideo = new Swiper(".swiper-detailed-page-video", {
   // Optional parameters
   loop: false,
   // Navigation arrows
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
   },
   autoHeight: true,
   slidesPerView: 2,
@@ -49,13 +49,13 @@ const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
   },
 });
 
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+const swiperImidzhPageEmps = new Swiper(".swiper-imidzh-page", {
   // Optional parameters
   loop: false,
   // Navigation arrows
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
   },
   autoHeight: true,
   slidesPerView: 2,
@@ -68,7 +68,7 @@ const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
       slidesPerView: 2,
     },
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.25,
       spaceBetween: 24,
     },
   },
