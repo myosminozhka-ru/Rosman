@@ -135,15 +135,21 @@ if (movingBlock) {
 
 
 function toggleSearch() {
+    let mobileMenu = document.getElementById('mobile-menu')
     let headerNav = document.querySelector('.header-nav')
     let searchInput = document.querySelector('.search-input')
+    let input = document.querySelector('.search-input input')
+    input.value = ''
     let headerbtn = document.querySelector('.header-btn')
     if (headerNav.classList.contains("hide")) {
         headerNav.classList.remove("hide");
         headerbtn.classList.remove("hide-mobile");
+        headerbtn.classList.remove("hide-icon");
+
     } else {
         headerNav.classList.add("hide");
         headerbtn.classList.add("hide-mobile");
+        headerbtn.classList.add("hide-icon");
     }
     if (searchInput.classList.contains("hide")) {
         searchInput.classList.remove("hide");
@@ -151,18 +157,26 @@ function toggleSearch() {
         searchInput.classList.add("hide");
     }
 
+    if (mobileMenu.classList.contains("hide")) {
+        mobileMenu.classList.remove("hide");
+    } else {
+        mobileMenu.classList.add("hide");
+    }
 }
 
 function changeLang(lang) {
-    let eng = document.querySelector('.eng-lang')
-    let rus = document.querySelector('.rus-lang')
-    if (lang === 'eng') {
-        rus.classList.remove("active-js");
-        eng.classList.add("active-js");
-    } else {
-        rus.classList.add("active-js");
-        eng.classList.remove("active-js");
+    let eng = document.querySelectorAll('.eng-lang')
+    let rus = document.querySelectorAll('.rus-lang')
+    for (let i = 0; i < rus.length; i++) {
+        if (lang === 'eng') {
+            rus[i].classList.remove("active-js");
+            eng[i].classList.add("active-js");
+        } else {
+            rus[i].classList.add("active-js");
+            eng[i].classList.remove("active-js");
+        }
     }
+
 }
 
 const yellowMovingBlock = document.getElementById("yellow-moving-block");
@@ -175,7 +189,7 @@ if (yellowMovingBlock) {
         let blockX = event.clientX - blockWidth / 2;
 
         // Вычисляем наклон блока в зависимости от позиции мыши
-        let tilt = -((blockX / windowWidth)) * 6;
+        let tilt = ((blockX / windowWidth)) * 6;
 
         // Применяем наклон к блоку с помощью свойства transform
         yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
@@ -192,7 +206,7 @@ document.addEventListener("mousemove", function(event) {
         let follower = document.getElementById("follower");
         let parentRect = parent.getBoundingClientRect();
         let x = event.clientX - parentRect.left;
-        let newX = parentRect.width - x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+        let newX =  x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
         newX = Math.max(0, Math.min(newX, parentRect.width - follower.offsetWidth));
 
 
@@ -239,18 +253,43 @@ for (let i = 0; i < elephantDownButtons.length; i++) {
         }
     });
 }
+////////////////////////////////
+// второй вариант истории Росмэна со слоном
+
+const yearTexts = document.querySelectorAll(".year-text");
+yearTexts.forEach(function(yearText) {
+    yearText.addEventListener("click", function() {
+        const dataInfo = this.getAttribute("data-info");
+        const infoBlock = document.getElementById(dataInfo);
+        if (infoBlock) {
+            infoBlock.classList.toggle("active-js");
+        }
+    });
+});
+
+///////////////////////////
+
 
 const filterOpen = document.getElementById('open-filter')
 const filterClose = document.getElementById('close-filter')
 const filter = document.getElementById('filter')
+const filter2 = document.getElementById('filter-2')
 if (filterOpen !== null) {
     filterOpen.addEventListener("click", function() {
-        filter.classList.add('open-filter')
+        if (filter !== null) {
+            filter.classList.add('open-filter')
+        } else if (filter2 !== null) {
+            filter2.classList.add('open-filter')
+        }
     });
 }
 if (filterClose !== null) {
     filterClose.addEventListener("click", function() {
-        filter.classList.remove('open-filter')
+        if (filter !== null) {
+            filter.classList.remove('open-filter')
+        } else if (filter2 !== null) {
+            filter2.classList.remove('open-filter')
+        }
     });
 }
 

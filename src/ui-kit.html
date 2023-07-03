@@ -32,12 +32,12 @@
     @@include('components/ui-kit/popups/popups.html', { }, )
     @@include('components/ui-kit/popups/popup-all-filters.html', { }, )
     @@include('components/ui-kit/popups/popup-blockchain-eng.html', { }, )
-    @@include('components/ui-kit/popups/popup-blockchain-ru.html', { }, )
-    @@include('components/ui-kit/popups/popup-brand-description.html', { }, )
+    @@include('components/ui-kit/popups/popup-blockchain-ru.html',
+    { }, ) @@include('components/ui-kit/popups/popup-brand-description.html', { }, )
     @@include('components/ui-kit/popups/popup-brand-landing.html', { }, )
     @@include('components/ui-kit/popups/popup-brand-listing.html', { }, )
-    @@include('components/ui-kit/popups/popup-collaboration.html', { }, )
-    @@include('components/ui-kit/popups/popup-contact-us-eng.html', { }, )
+    @@include('components/ui-kit/popups/popup-collaboration.html',
+    { }, ) @@include('components/ui-kit/popups/popup-contact-us-eng.html', { }, )
     @@include('components/ui-kit/popups/popup-contact-us-ru.html', { }, )
     @@include('components/ui-kit/popups/popup-survey.html', { }, )
   </div>
@@ -52,31 +52,81 @@
     @@include('components/ui-kit/footer/footer-eng.html', { }, )
   </div>
   <h3 class="accordion head-3">Cards</h3>
-  <div class="panel block">
-    @@include('components/ui-kit/cards/card-article-medium-text.html', { }, )
-    @@include('components/ui-kit/cards/card-article-small-text.html', { }, )
-    @@include('components/ui-kit/cards/card-awards.html', { }, )
-    @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-    @@include('components/ui-kit/cards/card-books.html', { }, )
-    @@include('components/ui-kit/cards/card-brand.html', { }, )
-    @@include('components/ui-kit/cards/card-brand-socs.html', { }, )
-    @@include('components/ui-kit/cards/card-career.html', { }, )
-    @@include('components/ui-kit/cards/card-employee.html', { }, )
-    @@include('components/ui-kit/cards/card-interview.html', { }, )
-    @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
-    @@include('components/ui-kit/cards/card-selection.html', { }, )
-    @@include('components/ui-kit/cards/card-toys.html', { }, )
-    @@include('components/ui-kit/cards/card-video.html', { }, )
-    @@include('components/ui-kit/cards/cards.html', { }, )
+  <div class="panel flex flex-col gap-40 !px-40">
+    <div class="max-w-[40rem]">
+      @@include('components/ui-kit/cards/card-article-medium-text.html', { }, )
+    </div>
+    <div class="max-w-[40rem]">
+      @@include('components/ui-kit/cards/card-article-small-text.html', { }, )
+    </div>
+    <div class="max-w-[40rem]">
+      @@include('components/ui-kit/cards/card-awards.html', { }, )
+    </div>
+    <div class="max-w-[60.8rem]">
+      @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/card-books.html', { }, )
+    </div>
+
+    <div class="max-w-[40rem]">
+      @@include('components/ui-kit/cards/card-brand.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/card-brand-socs.html', { }, )
+    </div>
+
+    <div class="max-w-[60rem]">
+      @@include('components/ui-kit/cards/card-career.html', { }, )
+    </div>
+
+    <div class="max-w-[39.3rem]">
+      @@include('components/ui-kit/cards/card-employee.html', { }, )
+    </div>
+
+    <div class="max-w-[60.8rem]">
+      @@include('components/ui-kit/cards/card-interview.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+    </div>
+
+    <div class="max-w-[60.8rem]">
+      @@include('components/ui-kit/cards/card-selection.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/card-toys.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/card-video.html', { }, )
+    </div>
+
+    <div class="max-w-[29.6rem]">
+      @@include('components/ui-kit/cards/cards.html', { }, )
+    </div>
+
   </div>
 
+  <h3 class="accordion head-3">Header ENG</h3>
+  <div class="panel block p-0">
+    @@include('components/header/header-eng.html', { }, )
+  </div>
   <h3 class="accordion head-3">Header</h3>
   <div class="panel block p-0">
-    @@include('components/header/header.html', { }, )
+    <div class="h-180">
+      @@include('components/header/header.html', { }, )
+    </div>
   </div>
   <h3 class="accordion head-3">Header-2</h3>
   <div class="panel block p-0">
-    @@include('components/header/header-books.html', { }, )
+    <div class="h-180">
+      @@include('components/header/header-books.html', { }, )
+    </div>
   </div>
   <h3 class="accordion head-3">Header-3</h3>
   <div class="panel block p-0">
@@ -88,6 +138,7 @@
     @@include('components/ui-kit/filters/filter-1.html', { }, )
   </div>
   <h3 class="accordion head-3">Filter-2</h3>
+  <div id="open-filter" class="mobile-filter"></div>
   <div class="panel block">
     @@include('components/ui-kit/filters/filter-2.html', { }, )
   </div>
@@ -110,6 +161,10 @@
   <h3 class="accordion head-3">slider-3</h3>
   <div class="panel block">
     @@include('components/ui-kit/sliders/slider-3.html', { }, )
+  </div>
+  <h3 class="accordion head-3">skating elephant</h3>
+  <div class="panel block">
+    @@include('components/ui-kit/skewed-yellow-block.html', { }, )
   </div>
   <h3 class="accordion head-3">slider-elephant</h3>
   <div class="panel block">

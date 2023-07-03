@@ -1,12 +1,20 @@
 .container-elephant-on-planets {
-  @apply my-70 flex flex-col items-center px-40;
-  @media (min-width: 701px) and (max-width: 900px) {
+  @apply flex flex-col items-center px-40;
+  margin-bottom: 6.4rem;
+  margin-top: 10.4rem;
+  @media (min-width: 700px) and (max-width: 900px) {
     @apply px-20;
+    margin-bottom: 4.8rem;
+    margin-top: 15.4rem;
   }
   @media screen and (max-width: 500px) {
     @apply px-12;
   }
+  @media screen and (max-width: 699px) {
+    margin-bottom: 4.8rem;
+  }
 }
+
 .elephant-planet-central-img {
   max-width: 13.4rem;
   @media (min-width: 701px) and (max-width: 900px) {
@@ -35,7 +43,7 @@
   }
 }
 
-.wrapper-second{
+.wrapper-second {
   top: -10rem;
   right: 2rem;
   flex-basis: 40rem;
@@ -57,12 +65,13 @@
 
 }
 
-.static-text{
+.static-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .planet {
   @apply relative;
   @media screen and (max-width: 700px) {
@@ -122,6 +131,7 @@
   top: 99%;
   transform: translateX(-50%) scaleX(-1) scaleY(-1);
 }
+
 .elephant-secondary-img {
   position: absolute;
   left: 50%;
@@ -188,11 +198,11 @@
     opacity: 1;
     visibility: visible;
   }
-  2%{
+  2% {
     opacity: 1;
     visibility: visible;
   }
-  2.01%{
+  2.01% {
     opacity: 0;
     visibility: hidden;
   }
@@ -253,19 +263,19 @@
     opacity: 1;
     visibility: visible;
   }
-  13.99% {
+  14% {
     opacity: 1;
     visibility: visible;
   }
-  14% {
+  14.01% {
     opacity: 0;
     visibility: hidden;
   }
-  48% {
+  47.5% {
     opacity: 0;
     visibility: hidden;
   }
-  48.01% {
+  47.51% {
     opacity: 1;
     visibility: visible;
   }
