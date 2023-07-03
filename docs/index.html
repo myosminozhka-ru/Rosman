@@ -7,101 +7,124 @@
     <title>Gulp with TailwindCSS v3</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
+
   <body class="bg-gray-50">
     <header id="header" class="bottom header" data-header="toys">
-    <div class="logo "><img src="./img/logo.svg"></div>
-    <div class="mobile-logo "><img src="./img/mobile-logo.svg"></div>
-    <div class="dropdown">
-        <button><div class="icon"></div>Каталог</button>
-        <div class="content">
-            <a href="#"><div class="menu-icon-book"></div>Книги</a>
-            <a href="#"><div class="menu-icon-toys"></div>Игрушки</a>
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги</a
+      >
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки</a
+      >
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content mt-60">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
         </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="search-input hide">
+    <span class="search-icon"></span>
+    <span class="micro-icon"></span>
+    <input type="text" placeholder="Введите поисковый запрос" />
+    <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button" onclick="toggleSearch()"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <div class="dropdown menu hide" id="mobile-menu">
-        <button><div class="icon"></div></button>
-        <div class="content">
-            <ul>
-                <li class="company"><a href="#">Бренды</a></li>
-                <li class="news"><a href="#">Новости</a></li>
-                <li class="about"><a href="#">О компании</a></li>
-                <li class="publisher"><a href="#">Издательство</a></li>
-                <li class="books-news"><a href="#">Новости книг</a></li>
-                <li class="NDK"><a href="#">НДК</a></li>
-                <li class="rosmen">
-                    <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-                    <div class="more-down-content out">
-                        <p>О компании</p>
-                        <p>Карьера в РОСМЭН</p>
-                        <p>Игрушки</p>
-                        <p>Видео</p>
-                        <p>Контакты</p>
-                    </div>
-                </li>
-                <li class="toys"><a href="#">Игрушки</a></li>
-                <li class="career"><a href="#">Карьера</a></li>
-                <li class="contacts"><a href="#">Контакты</a></li>
-                <li class="author"><a href="#">Авторы</a></li>
-                <li class="partners"><a href="#">Партнерам</a></li>
-            </ul>
-        </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <nav class="header-nav ">
-        <ul>
-            <li class="company"><a href="#">Бренды</a></li>
-            <li class="news"><a href="#">Новости</a></li>
-            <li class="about"><a href="#">О компании</a></li>
-            <li class="publisher"><a href="#">Издательство</a></li>
-            <li class="books-news"><a href="#">Новости книг</a></li>
-            <li class="NDK"><a href="#">НДК</a></li>
-            <li class="rosmen">
-                <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-                <div class="more-down-content out">
-                    <p>О компании</p>
-                    <p>Карьера в РОСМЭН</p>
-                    <p>Игрушки</p>
-                    <p>Видео</p>
-                    <p>Контакты</p>
-                </div>
-            </li>
-            <li class="toys"><a href="#">Игрушки</a></li>
-            <li class="career"><a href="#">Карьера</a></li>
-            <li class="contacts"><a href="#">Контакты</a></li>
-            <li class="author"><a href="#">Авторы</a></li>
-            <li class="partners"><a href="#">Партнерам</a></li>
-        </ul>
-    </nav>
-    <div class="search-input hide">
-        <span class="search-icon"></span>
-        <span class="micro-icon"></span>
-        <input type="text"  placeholder="Введите поисковый запрос">
-        <span class="cross-icon" onclick="toggleSearch()"></span>
-    </div>
-    <div class="header-btn dekstop">
-        <span class="search-button" onclick="toggleSearch()"></span>
-        <span class="micro-button"></span>
-        <span class="heart-button"></span>
-        <div class="language">
-            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-        </div>
-    </div>
-    <div class="header-btn mobile ">
-        <div class="language">
-            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-        </div>
-        <span class="heart-button"></span>
-        <span class="search-button" onclick="toggleSearch()"></span>
-
-    </div>
+    <span class="heart-button"></span>
+    <span class="search-button" onclick="toggleSearch()"></span>
+  </div>
 </header>
 <div class="toolbar">
-    <a href="#" class="toolbar-button active"> <img src="./img/toolbar-book.png">Главная</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-home.png">Игрушки</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-menu.png">Книги</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-toys.png">Меню</a>
+  <a href="#" class="toolbar-button active">
+    <img src="./img/toolbar-book.png" />Главная</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-home.png" />Игрушки</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-menu.png" />Книги</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-toys.png" />Меню</a
+  >
 </div>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -110,26 +133,123 @@
     <script src="./js/scripts.js"></script>
 
     <div class="flex flex-col">
-      <a href="/404-page.html" class="text-2xl text-blue-1">404</a>
-      <a href="/articles.html" class="text-2xl text-blue-1">articles</a>
-      <a href="/brands-search-result.html" class="text-2xl text-blue-1"
-        >brands search result</a
+      <a target="_blank" href="/404-page.html" class="text-2xl text-blue-1"
+        >404</a
       >
-      <a href="/catalog.html" class="text-2xl text-blue-1">catalog</a>
-      <a href="/catalog-letter.html" class="text-2xl text-blue-1">catalog one letter</a>
-      <a href="/catalog-all-author.html" class="text-2xl text-blue-1">catalog all author</a>
-      <a href="/legal-information.html" class="text-2xl text-blue-1"
+      <a target="_blank" href="/articles.html" class="text-2xl text-blue-1"
+        >articles</a
+      >
+      <a
+        target="_blank"
+        href="/brands-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        brands search result</a
+      >
+      <a target="_blank" href="/catalog.html" class="text-2xl text-blue-1"
+        >catalog</a
+      >
+      <a target="_blank" href="/catalog-video.html" class="text-2xl text-blue-1"
+        >catalog video</a
+      >
+      <a
+        target="_blank"
+        href="/catalog-projects.html"
+        class="text-2xl text-blue-1"
+        >catalog projects</a
+      >
+
+      <a
+        target="_blank"
+        href="/legal-information.html"
+        class="text-2xl text-blue-1"
         >legal info</a
       >
-      <a href="/news-articles-search-result.html" class="text-2xl text-blue-1"
+      <a
+        target="_blank"
+        href="/news-articles-search-result.html"
+        class="text-2xl text-blue-1"
         >news articles search result</a
       >
-      <a href="/stuff-search-result.html" class="text-2xl text-blue-1"
+      <a
+        target="_blank"
+        href="/stuff-search-result.html"
+        class="text-2xl text-blue-1"
         >stuff search reuslt</a
       >
-      <a href="/contacts.html" class="text-2xl text-blue-1"
-        >contacts</a
+      <a
+        target="_blank"
+        href="/book-card-fullpage.html"
+        class="text-2xl text-blue-1"
       >
+        book-card-fullpage
+      </a>
+      <a
+        target="_blank"
+        href="/brands-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        brands-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-articles.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-articles
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-interview-one.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-interview-one
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-interview-two.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-interview-two
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-news.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-news
+      </a>
+      <a
+        target="_blank"
+        href="/legal-information.html"
+        class="text-2xl text-blue-1"
+      >
+        legal-information
+      </a>
+      <a
+        target="_blank"
+        href="/news-articles-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        news-articles-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/stuff-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        stuff-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/toy-card-fullpage.html"
+        class="text-2xl text-blue-1"
+      >
+        toy-card-fullpage
+      </a>
+      <a target="_blank" href="/wishlist.html" class="text-2xl text-blue-1">
+        wishlist
+      </a>
     </div>
     <div class="footer rosman-footer-ru">
   <div class="footer-container">
@@ -150,7 +270,7 @@
               <a href="#" class="disc-rosman-item">Каталог книг</a>
               <a href="#" class="disc-rosman-item">Каталог книг</a>
             </div>
-            <hr class="my-8 text-grey"/>
+            <hr class="my-8 text-grey" />
             <div href="#" class="more-down-button disc-rosman-button">
               Игрушки<span></span>
             </div>
@@ -163,7 +283,7 @@
               <a href="#" class="disc-rosman-item">Каталог книг</a>
               <a href="#" class="disc-rosman-item">Каталог книг</a>
             </div>
-            <hr class="mt-8 mb-0 text-grey"/>
+            <hr class="mb-0 mt-8 text-grey" />
           </div>
           <div class="footer-heading-subs-title">
             Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
@@ -193,7 +313,8 @@
                 <span>Соглашаюсь с &nbsp</span>
                 <a
                   href="#"
-                  class="footer-heading-policy-agreement-link link-m-bold">
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
                   политикой конфиденциальности
                 </a>
               </label>
@@ -206,16 +327,16 @@
           <a href="#" class="footer-section-header head-6">Компания</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >О компании</a
+              >О компании</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Партнёрам</a
+              >Партнёрам</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Карьера в РОСМЭН</a
+              >Карьера в РОСМЭН</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Контакты</a
+              >Контакты</a
             >
           </div>
         </div>
@@ -223,23 +344,25 @@
           <a href="#" class="footer-section-header head-6">Книги</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >Каталог книг</a>
+              >Каталог книг</a
+            >
 
             <a href="#" class="footer-section-item common-text body-s"
-            >Авторы РОСМЭН</a>
+              >Авторы РОСМЭН</a
+            >
 
             <a href="#" class="footer-section-item common-text body-s"
-            >Об издательстве</a
+              >Об издательстве</a
             >
             <a href="#" class="footer-section-item common-text body-s">НДК</a>
             <a href="#" class="footer-section-item common-text body-s"
-            >Писательская школа</a
+              >Писательская школа</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Проект раз</a
+              >Проект раз</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Проект два</a
+              >Проект два</a
             >
           </div>
         </div>
@@ -247,19 +370,19 @@
           <a href="#" class="footer-section-header head-6">Игрушки</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >Каталог игрушек</a
+              >Каталог игрушек</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Бренды</a
+              >Бренды</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Новости игрушек</a
+              >Новости игрушек</a
             >
           </div>
         </div>
       </div>
     </div>
-    <hr class="text-black"/>
+    <hr class="text-black" />
     <div class="footer-info">
       <div class="footer-info-main">
         <div class="footer-info-rss common-text">
@@ -271,8 +394,13 @@
             помещ. II, 1 этаж
           </div>
           <div class="footer-info-directs ft-inf-item">
-            <a href="tel:+74959337130" class="footer-info-tel common-text">+7 495 933-71-30</a>
-            <a href="mailto:rosman@rosman.ru" class="footer-info-email-one common-text">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+              >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
               rosman@rosman.ru
             </a>
           </div>
@@ -280,10 +408,14 @@
             127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
             Роща
           </div>
-          <a href="mailto:rosman@rosman.ru" class="footer-info-email-two common-text">rosman@rosman.ru</a>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+            >rosman@rosman.ru</a
+          >
         </div>
       </div>
-      <hr class="text-black"/>
+      <hr class="text-black" />
       <div class="footer-extras">
         <div class="footer-extras-creators">
           <div class="footer-extras-idea common-text">

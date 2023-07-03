@@ -1,306 +1,357 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 62.5%">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Контакты</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-<body class="bg-gray-50">
-<header id="header" class="bottom header" data-header="toys">
-    <div class="logo "><img src="./img/logo.svg"></div>
-    <div class="mobile-logo "><img src="./img/mobile-logo.svg"></div>
-    <div class="dropdown">
-        <button><div class="icon"></div>Каталог</button>
-        <div class="content">
-            <a href="#"><div class="menu-icon-book"></div>Книги</a>
-            <a href="#"><div class="menu-icon-toys"></div>Игрушки</a>
+  </head>
+  <body class="bg-gray-50">
+    <header id="header" class="bottom header" data-header="toys">
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги</a
+      >
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки</a
+      >
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content mt-60">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
         </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="search-input hide">
+    <span class="search-icon"></span>
+    <span class="micro-icon"></span>
+    <input type="text" placeholder="Введите поисковый запрос" />
+    <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button" onclick="toggleSearch()"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <div class="dropdown menu hide" id="mobile-menu">
-        <button><div class="icon"></div></button>
-        <div class="content">
-            <ul>
-                <li class="company"><a href="#">Бренды</a></li>
-                <li class="news"><a href="#">Новости</a></li>
-                <li class="about"><a href="#">О компании</a></li>
-                <li class="publisher"><a href="#">Издательство</a></li>
-                <li class="books-news"><a href="#">Новости книг</a></li>
-                <li class="NDK"><a href="#">НДК</a></li>
-                <li class="rosmen">
-                    <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-                    <div class="more-down-content out">
-                        <p>О компании</p>
-                        <p>Карьера в РОСМЭН</p>
-                        <p>Игрушки</p>
-                        <p>Видео</p>
-                        <p>Контакты</p>
-                    </div>
-                </li>
-                <li class="toys"><a href="#">Игрушки</a></li>
-                <li class="career"><a href="#">Карьера</a></li>
-                <li class="contacts"><a href="#">Контакты</a></li>
-                <li class="author"><a href="#">Авторы</a></li>
-                <li class="partners"><a href="#">Партнерам</a></li>
-            </ul>
-        </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <nav class="header-nav ">
-        <ul>
-            <li class="company"><a href="#">Бренды</a></li>
-            <li class="news"><a href="#">Новости</a></li>
-            <li class="about"><a href="#">О компании</a></li>
-            <li class="publisher"><a href="#">Издательство</a></li>
-            <li class="books-news"><a href="#">Новости книг</a></li>
-            <li class="NDK"><a href="#">НДК</a></li>
-            <li class="rosmen">
-                <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-                <div class="more-down-content out">
-                    <p>О компании</p>
-                    <p>Карьера в РОСМЭН</p>
-                    <p>Игрушки</p>
-                    <p>Видео</p>
-                    <p>Контакты</p>
-                </div>
-            </li>
-            <li class="toys"><a href="#">Игрушки</a></li>
-            <li class="career"><a href="#">Карьера</a></li>
-            <li class="contacts"><a href="#">Контакты</a></li>
-            <li class="author"><a href="#">Авторы</a></li>
-            <li class="partners"><a href="#">Партнерам</a></li>
-        </ul>
-    </nav>
-    <div class="search-input hide">
-        <span class="search-icon"></span>
-        <span class="micro-icon"></span>
-        <input type="text"  placeholder="Введите поисковый запрос">
-        <span class="cross-icon" onclick="toggleSearch()"></span>
-    </div>
-    <div class="header-btn dekstop">
-        <span class="search-button" onclick="toggleSearch()"></span>
-        <span class="micro-button"></span>
-        <span class="heart-button"></span>
-        <div class="language">
-            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-        </div>
-    </div>
-    <div class="header-btn mobile ">
-        <div class="language">
-            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-        </div>
-        <span class="heart-button"></span>
-        <span class="search-button" onclick="toggleSearch()"></span>
-
-    </div>
+    <span class="heart-button"></span>
+    <span class="search-button" onclick="toggleSearch()"></span>
+  </div>
 </header>
 <div class="toolbar">
-    <a href="#" class="toolbar-button active"> <img src="./img/toolbar-book.png">Главная</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-home.png">Игрушки</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-menu.png">Книги</a>
-    <a href="#" class="toolbar-button"><img src="./img/toolbar-toys.png">Меню</a>
+  <a href="#" class="toolbar-button active">
+    <img src="./img/toolbar-book.png" />Главная</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-home.png" />Игрушки</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-menu.png" />Книги</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-toys.png" />Меню</a
+  >
 </div>
 
-<div id="yellow-background">
-    <div id="moving-block"></div>
-    <div id="white-mobile-background"></div>
-    <div id="above-block">
+
+    <div id="yellow-background">
+      <div id="moving-block"></div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
         <div class="flex justify-between">
-            <p class="breadcrumbs p-24">
-                <a href="#">Главная </a><span>/</span>
-                <a class="active-js" href="#">Контакты</a>
+          <p class="breadcrumbs p-24">
+            <a href="#">Главная </a><span>/</span>
+            <a class="active-js" href="#">Контакты</a>
+          </p>
+          <div class="breadcrumbs-small-screen px-24">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">
+              ...
+              <div class="breadcrumbs-arrow"></div>
+              <div class="breadcrumbs-path-hidden"></div>
+            </div>
+            <div class="breadcrumbs-small-screen-path">Контакты</div>
+          </div>
+          <div class="breadcrumbs-icons">
+            <a href="#" class="item_card-external-link"></a>
+            <button class="item_card_add_to_favourite"></button>
+          </div>
+        </div>
+        <div class="flex"><h1 class="head-1 mb-64 px-24">Контакты</h1></div>
+        <div class="mb-42 flex flex-row justify-between px-24 md:flex-col">
+          <div class="flex w-1/4 flex-col gap-32 md:w-full">
+            <p class="text-l text-text">Адрес</p>
+            <p class="text-l">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
+              Марьина Роща
             </p>
-            <div class="breadcrumbs-small-screen px-24">
-                <div class="breadcrumbs-small-screen-image"></div>
-                <div class="breadcrumbs-small-screen-dots">
-                    ...
-                    <div class="breadcrumbs-arrow"></div>
-                    <div class="breadcrumbs-path-hidden"></div>
-                </div>
-                <div class="breadcrumbs-small-screen-path">Контакты</div>
-            </div>
-            <div class="breadcrumbs-icons">
-                <a href="#" class="item_card-external-link"></a>
-                <button class="item_card_add_to_favourite"></button>
-            </div>
+          </div>
+          <div class="flex w-1/4 flex-col gap-32 md:w-full">
+            <p class="text-l text-text">Юридический адрес</p>
+            <p class="text-l">
+              17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+              помещ. II, 1 этаж
+            </p>
+          </div>
+          <div class="flex w-1/4 flex-col gap-32 md:w-full">
+            <p class="text-l text-text">Телефон</p>
+            <p class="text-l">+7 495 933-71-30</p>
+          </div>
         </div>
-        <div class="flex"><h1 class="head-1 px-24 mb-64">Контакты</h1></div>
-        <div class="flex flex-row md:flex-col justify-between px-24 mb-42">
-            <div class="flex flex-col gap-32 w-1/4 md:w-full">
-                <p class="text-l text-text">Адрес</p>
-                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
-            </div>
-            <div class="flex flex-col gap-32 w-1/4 md:w-full">
-                <p class="text-l text-text">Юридический адрес</p>
-                <p class="text-l">17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1, помещ. II, 1 этаж</p>
-            </div>
-            <div class="flex flex-col gap-32 w-1/4 md:w-full">
-                <p class="text-l text-text">Телефон</p>
-                <p class="text-l">+7 495 933-71-30</p>
-            </div>
+        <iframe
+          class="mobile-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <iframe
+          class="desktop-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="my-42 flex flex-row justify-between px-24 md:flex-col">
+          <div class="flex w-1/4 flex-col gap-16 md:w-full">
+            <img src="./img/toys.svg" class="h-58 w-58" />
+            <p class="text-4xl">Игрушки.СМИ и блогеры</p>
+            <p class="text-l text-text">Адрес</p>
+            <p class="text-l">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
+              Марьина Роща
+            </p>
+            <p class="text-l text-text">Телефон</p>
+            <p class="text-l">+7 495 933-71-30</p>
+            <p class="text-l text-text">Электронный адрес</p>
+            <p class="text-l">rosman@rosman.ru</p>
+          </div>
+          <div class="flex w-1/4 flex-col gap-16 md:w-full">
+            <img src="./img/book.svg" class="h-58 w-58" />
+            <p class="text-4xl">Книги</p>
+            <p class="text-l text-text">Адрес</p>
+            <p class="text-l">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
+              Марьина Роща
+            </p>
+            <p class="text-l text-text">Телефон</p>
+            <p class="text-l">+7 495 933-71-30</p>
+            <p class="text-l text-text">Электронный адрес</p>
+            <p class="text-l">rosman@rosman.ru</p>
+          </div>
+          <div class="flex w-1/4 flex-col gap-16 md:w-full">
+            <img src="./img/document.svg" class="h-58 w-58" />
+            <p class="text-4xl">Отдел прав и лицензий</p>
+            <p class="text-l text-text">Адрес</p>
+            <p class="text-l">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
+              Марьина Роща
+            </p>
+            <p class="text-l text-text">Телефон</p>
+            <p class="text-l">+7 495 933-71-30</p>
+            <p class="text-l text-text">Электронный адрес</p>
+            <p class="text-l">rosman@rosman.ru</p>
+          </div>
         </div>
-        <iframe class="mobile-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe class="desktop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="flex flex-row md:flex-col  justify-between px-24 my-42">
-            <div class="flex flex-col  gap-16 w-1/4 md:w-full">
-                <img src="./img/toys.svg" class="w-58 h-58">
-                <p class="text-4xl">Игрушки.СМИ и блогеры</p>
-                <p class="text-l text-text">Адрес</p>
-                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
-                <p class="text-l text-text">Телефон</p>
-                <p class="text-l">+7 495 933-71-30</p>
-                <p class="text-l text-text">Электронный адрес</p>
-                <p class="text-l">rosman@rosman.ru</p>
-            </div>
-            <div class="flex flex-col gap-16 w-1/4 md:w-full">
-                <img src="./img/book.svg" class="w-58 h-58">
-                <p class="text-4xl">Книги</p>
-                <p class="text-l text-text">Адрес</p>
-                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
-                <p class="text-l text-text">Телефон</p>
-                <p class="text-l">+7 495 933-71-30</p>
-                <p class="text-l text-text">Электронный адрес</p>
-                <p class="text-l">rosman@rosman.ru</p>
-            </div>
-            <div class="flex flex-col gap-16 w-1/4 md:w-full">
-                <img src="./img/document.svg" class="w-58 h-58">
-                <p class="text-4xl">Отдел прав и лицензий</p>
-                <p class="text-l text-text">Адрес</p>
-                <p class="text-l">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</p>
-                <p class="text-l text-text">Телефон</p>
-                <p class="text-l">+7 495 933-71-30</p>
-                <p class="text-l text-text">Электронный адрес</p>
-                <p class="text-l">rosman@rosman.ru</p>
-            </div>
-        </div>
-        <div class="flex flex-row md:flex-col px-24 justify-between">
-            <p class="text-l ml-4 text-text w-1/12 md:w-full">Для вопросов и предложений</p>
-            <p class="text-8xl md:text-5xl"> rosman@rosman.ru</p>
+        <div class="flex flex-row justify-between px-24 md:flex-col">
+          <p class="ml-4 w-1/12 text-l text-text md:w-full">
+            Для вопросов и предложений
+          </p>
+          <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
         </div>
         <div class="container-elephant-on-planets">
   <div class="relative">
-
     <div class="pl-wrapper relative z-10">
-
       <div class="wrapper wrapper-first relative">
         <div class="planet planet-secondary-left elephant-planet-left relative">
           <img
             class="planet-img-all"
             src="./img/elephant-planet/planet-left.svg"
             alt="Planet 1"
-            />
+          />
         </div>
 
         <div class="static-text">
-            <div class="text-3xl text-center">Для авторов</div>
-            <a href="#" class="link-m-bold text-center"> Перейти</a>
+          <div class="text-center text-3xl">Для авторов</div>
+          <div class="mx-auto flex items-center">
+            <a href="#" class="link-m-bold mx-auto text-center"> Перейти</a>
+          </div>
         </div>
       </div>
 
       <div class="wrapper wrapper-central relative">
         <div class="planet elephant-planet-central">
-              <img
-                      class="elephant-planet-cantral-img planet-img-all relative"
-                      src="./img/elephant-planet/planet-central.svg"
-                      alt="Planet 1"
-              />
+          <img
+            class="elephant-planet-cantral-img planet-img-all relative"
+            src="./img/elephant-planet/planet-central.svg"
+            alt="Planet 1"
+          />
+        </div>
+        <div class="static-text">
+          <div class="text-center text-3xl">Вакансии</div>
+          <div class="mx-auto flex items-center">
+            <a href="#" class="link-m-bold mx-auto text-center">Все вакансии</a>
           </div>
-          <div class="static-text">
-              <div class="text-3xl text-center">Вакансии</div>
-              <a href="#" class="link-m-bold text-center">Все вакансии</a>
-          </div>
+        </div>
       </div>
 
-
-
       <div class="wrapper wrapper-second relative">
-        <div class="planet planet-secondary-right elephant-planet-right relative">
+        <div
+          class="planet planet-secondary-right elephant-planet-right relative"
+        >
           <img
             class="planet-img-all"
             src="./img/elephant-planet/planet-right.svg"
             alt="Planet 2"
-            />
-          </div>
+          />
+        </div>
         <div class="static-text">
-              <div class="text-3xl text-center">Для оптовых продаж</div>
-              <a href="#" class="link-m-bold text-center">Оставить заявку</a>
+          <div class="text-center text-3xl">Для оптовых продаж</div>
+          <div class="mx-auto flex items-center">
+            <a href="#" class="link-m-bold mx-auto text-center"
+              >Оставить заявку</a
+            >
           </div>
         </div>
-
-
-
+      </div>
     </div>
 
     <div class="pl-wrapper absolute top-0 z-0">
-
       <div class="wrapper wrapper-first relative">
         <div class="planet planet-secondary-left elephant-planet-left relative">
           <img
             class="planet-img-all"
             src="./img/elephant-planet/planet-left.svg"
             alt="Planet 1"
-              />
-            <div class="el-img elephant-planet-left-img elephant-secondary-img">
-              <img src="./img/elephant-planet/el-standing.svg" alt="" />
-            </div>
+          />
+          <div class="el-img elephant-planet-left-img elephant-secondary-img">
+            <img src="./img/elephant-planet/el-standing.svg" alt="" />
+          </div>
         </div>
-
       </div>
 
       <div class="wrapper wrapper-central relative">
         <div class="planet elephant-planet-central">
-              <img
-                      class="elephant-planet-cantral-img planet-img-all relative"
-                      src="./img/elephant-planet/planet-central.svg"
-                      alt="Planet 1"
-              />
-              <div class="el-img elephant-planet-central-img elephant-central-img">
-                  <img src="./img/elephant-planet/el-standing.svg" alt="" />
-              </div>
-          </div>
-          <div class="static-text">
-              <div class="text-3xl text-center">Вакансии</div>
-              <a href="#" class="link-m-bold text-center">Все вакансии</a>
-          </div>
-      </div>
-
-
-
-      <div class="wrapper wrapper-second relative">
-          <div class="planet planet-secondary-right elephant-planet-right relative">
-            <img
-              class="planet-img-all"
-              src="./img/elephant-planet/planet-right.svg"
-              alt="Planet 2"
-              />
-
-            <div class="el-img elephant-planet-right-img elephant-secondary-img">
-              <img src="./img/elephant-planet/el-standing.svg" alt="" />
-            </div>
-          </div>
-          <div class="static-text">
-              <div class="text-3xl text-center">Для оптовых продаж</div>
-              <a href="#" class="link-m-bold text-center">Оставить заявку</a>
+          <img
+            class="elephant-planet-cantral-img planet-img-all relative"
+            src="./img/elephant-planet/planet-central.svg"
+            alt="Planet 1"
+          />
+          <div class="el-img elephant-planet-central-img elephant-central-img">
+            <img src="./img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
+        <div class="static-text">
+          <div class="text-center text-3xl">Вакансии</div>
+          <a href="#" class="link-m-bold text-center">Все вакансии</a>
+        </div>
+      </div>
 
+      <div class="wrapper wrapper-second relative">
+        <div
+          class="planet planet-secondary-right elephant-planet-right relative"
+        >
+          <img
+            class="planet-img-all"
+            src="./img/elephant-planet/planet-right.svg"
+            alt="Planet 2"
+          />
 
-
+          <div class="el-img elephant-planet-right-img elephant-secondary-img">
+            <img src="./img/elephant-planet/el-standing.svg" alt="" />
+          </div>
+        </div>
+        <div class="static-text">
+          <div class="text-center text-3xl">Для оптовых продаж</div>
+          <a href="#" class="link-m-bold text-center">Оставить заявку</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+      </div>
     </div>
-</div>
-<div class="custom-box !fixed">
-    <span></span>
-    <div class="custom-before"></div>
-    <a href="mailto:rosman@rosman.ru">Написать нам</a>
-    <div class="custom-after"></div>
-</div>
-<div class="footer rosman-footer-ru">
+    <div class="custom-box !fixed">
+      <span></span>
+      <div class="custom-before"></div>
+      <a href="mailto:rosman@rosman.ru">Написать нам</a>
+      <div class="custom-after"></div>
+    </div>
+    <div class="footer rosman-footer-ru">
   <div class="footer-container">
     <div class="footer-heading">
       <div class="footer-heading-main">
@@ -319,7 +370,7 @@
               <a href="#" class="disc-rosman-item">Каталог книг</a>
               <a href="#" class="disc-rosman-item">Каталог книг</a>
             </div>
-            <hr class="my-8 text-grey"/>
+            <hr class="my-8 text-grey" />
             <div href="#" class="more-down-button disc-rosman-button">
               Игрушки<span></span>
             </div>
@@ -332,7 +383,7 @@
               <a href="#" class="disc-rosman-item">Каталог книг</a>
               <a href="#" class="disc-rosman-item">Каталог книг</a>
             </div>
-            <hr class="mt-8 mb-0 text-grey"/>
+            <hr class="mb-0 mt-8 text-grey" />
           </div>
           <div class="footer-heading-subs-title">
             Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
@@ -362,7 +413,8 @@
                 <span>Соглашаюсь с &nbsp</span>
                 <a
                   href="#"
-                  class="footer-heading-policy-agreement-link link-m-bold">
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
                   политикой конфиденциальности
                 </a>
               </label>
@@ -375,16 +427,16 @@
           <a href="#" class="footer-section-header head-6">Компания</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >О компании</a
+              >О компании</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Партнёрам</a
+              >Партнёрам</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Карьера в РОСМЭН</a
+              >Карьера в РОСМЭН</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Контакты</a
+              >Контакты</a
             >
           </div>
         </div>
@@ -392,23 +444,25 @@
           <a href="#" class="footer-section-header head-6">Книги</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >Каталог книг</a>
+              >Каталог книг</a
+            >
 
             <a href="#" class="footer-section-item common-text body-s"
-            >Авторы РОСМЭН</a>
+              >Авторы РОСМЭН</a
+            >
 
             <a href="#" class="footer-section-item common-text body-s"
-            >Об издательстве</a
+              >Об издательстве</a
             >
             <a href="#" class="footer-section-item common-text body-s">НДК</a>
             <a href="#" class="footer-section-item common-text body-s"
-            >Писательская школа</a
+              >Писательская школа</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Проект раз</a
+              >Проект раз</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Проект два</a
+              >Проект два</a
             >
           </div>
         </div>
@@ -416,19 +470,19 @@
           <a href="#" class="footer-section-header head-6">Игрушки</a>
           <div class="footer-section-items">
             <a href="#" class="footer-section-item common-text body-s"
-            >Каталог игрушек</a
+              >Каталог игрушек</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Бренды</a
+              >Бренды</a
             >
             <a href="#" class="footer-section-item common-text body-s"
-            >Новости игрушек</a
+              >Новости игрушек</a
             >
           </div>
         </div>
       </div>
     </div>
-    <hr class="text-black"/>
+    <hr class="text-black" />
     <div class="footer-info">
       <div class="footer-info-main">
         <div class="footer-info-rss common-text">
@@ -440,8 +494,13 @@
             помещ. II, 1 этаж
           </div>
           <div class="footer-info-directs ft-inf-item">
-            <a href="tel:+74959337130" class="footer-info-tel common-text">+7 495 933-71-30</a>
-            <a href="mailto:rosman@rosman.ru" class="footer-info-email-one common-text">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+              >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
               rosman@rosman.ru
             </a>
           </div>
@@ -449,10 +508,14 @@
             127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
             Роща
           </div>
-          <a href="mailto:rosman@rosman.ru" class="footer-info-email-two common-text">rosman@rosman.ru</a>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+            >rosman@rosman.ru</a
+          >
         </div>
       </div>
-      <hr class="text-black"/>
+      <hr class="text-black" />
       <div class="footer-extras">
         <div class="footer-extras-creators">
           <div class="footer-extras-idea common-text">
@@ -476,8 +539,11 @@
   </div>
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="./js/scripts.js"></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

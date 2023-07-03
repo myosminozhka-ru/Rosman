@@ -1,6 +1,5 @@
 .input {
-
-  @apply text-xl py-10 px-16 border border-card-stroke;
+  @apply border border-card-stroke px-16 py-10 text-xl;
   &:hover {
     @apply border-black;
   }
@@ -11,7 +10,7 @@
     @apply border-black shadow-none ring-0 ring-black;
   }
   &:disabled {
-    @apply text-grey border-grey shadow-none ring-0 ring-grey;
+    @apply border-grey text-grey shadow-none ring-0 ring-grey;
   }
   &.hover {
     @apply border-black;
@@ -21,22 +20,17 @@
   }
   &.error {
     @apply border-red;
-    background: url("../../img/error.png") no-repeat 90% 50%;
+    background: url('../../img/error.png') no-repeat 90% 50%;
   }
   &.success {
     @apply border-green;
-    background: url("../../img/success.png") no-repeat 90% 50%;
+    background: url('../../img/success.png') no-repeat 90% 50%;
   }
   &.search {
-    background: url("../../img/search.svg") no-repeat 99% 50%;
+    background: url('../../img/search.svg') no-repeat 99% 50%;
     background-size: 2rem 2rem;
-
   }
 }
-
-
-
-
 
 //.ui-form-input {
 //  font-weight: 400;

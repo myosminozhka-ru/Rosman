@@ -1,24 +1,47 @@
 .filters-block {
   @apply w-full;
 
-
   .more-down-button {
-    @apply text-l font-semibold w-full justify-between text-left px-0;
+    @apply w-full justify-between px-0 text-left text-l font-semibold;
   }
+
   .more-down-content {
-    @apply  px-0;
+    @apply px-0;
   }
+
   .back-filter {
-    @apply text-s font-semibold flex gap-8 my-14;
+    @apply my-14 flex gap-8 text-s font-semibold;
+
+    span {
+      background-image: url('../../img/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 1rem 1.6rem;
+      width: 1rem;
+      height: 1.9rem;
+      transform: rotate(90deg);
+    }
   }
 
   .scroll-block {
     @apply h-140 overflow-y-auto;
   }
-  .scroll-block::-webkit-scrollbar-track {border-radius: 0.4rem;}
-  .scroll-block::-webkit-scrollbar {width: 0.6rem;}
-  .scroll-block::-webkit-scrollbar-thumb {border-radius: 0.4rem;background: #acadad;}
-  .scroll-block:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  .scroll-block::-webkit-scrollbar-track {
+    border-radius: 0.4rem;
+  }
+
+  .scroll-block::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+
+  .scroll-block::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background: #acadad;
+  }
+
+  .scroll-block:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 }
 
 .mobile-filter {
@@ -54,7 +77,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    @apply text-2xl inline-block;
+    @apply inline-block text-2xl;
   }
 }
 
@@ -67,7 +90,7 @@
     float: right;
     cursor: pointer;
     display: inline-block;
-    background: url("../../img/close.svg") no-repeat right;
+    background: url('../../img/close.svg') no-repeat right;
     background-size: 1rem 1rem;
     width: 2rem;
     height: 2rem;
@@ -112,21 +135,27 @@
     @apply w-full;
   }
 }
+
 .toolbar {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     background-color: #ffffff;
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.1rem #D9D9D9 solid;
-    position: fixed; /* Зафиксируем позицию */
-    bottom: 0; /* Разместим внизу экрана */
-    width: 100%; /* Займем всю доступную ширину */
+    border: 0.1rem #d9d9d9 solid;
+    position: fixed;
+    /* Зафиксируем позицию */
+    bottom: 0;
+    /* Разместим внизу экрана */
+    width: 100%;
+    /* Займем всю доступную ширину */
     z-index: 100000;
+
     img {
       width: 2rem;
       height: 2rem;
@@ -136,10 +165,12 @@
 }
 
 /* Стили кнопок */
+
 .toolbar-button {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #808080;
     text-decoration: none;
@@ -150,15 +181,18 @@
 }
 
 /* Стили активной кнопки */
+
 .toolbar-button.active {
   @media screen and (min-width: 900px) {
     display: none;
   }
+
   @media screen and (max-width: 900px) {
     color: #535353;
     background-color: #ffffff;
   }
 }
+
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -249,10 +283,14 @@
 }
 
 header {
-  @apply flex h-60 items-center justify-between bg-yellow px-10 p-4;
+  @apply flex h-60 items-center bg-yellow p-4 px-10;
+
+  @media screen and (max-width: 900px) {
+    @apply justify-between;
+  }
 
   .logo {
-    @apply ml-24;
+    @apply m-24 basis-1/10;
     @apply block;
 
     @media screen and (max-width: 900px) {
@@ -275,17 +313,20 @@ header {
   }
 
   .header-nav {
+    @apply basis-6/10;
+
     @media screen and (max-width: 900px) {
       @apply hidden;
     }
   }
+
   .hide-icon {
     .search-button {
-        @apply hidden;
+      @apply hidden;
     }
 
     .micro-button {
-        @apply hidden;
+      @apply hidden;
     }
   }
 
@@ -305,7 +346,7 @@ header {
 
   .search-button {
     display: inline-block;
-    background: url("../../img/search.svg") no-repeat center;
+    background: url('../../img/search.svg') no-repeat center;
     background-size: 1.6rem 1.6rem;
     width: 1.6rem;
     height: 1.6rem;
@@ -314,8 +355,8 @@ header {
 
   .micro-button {
     display: inline-block;
-    background: url("../../img/micro.svg") no-repeat center;
-    background-size: 3.6rem 3.6rem;
+    background: url('../../img/micro.svg') no-repeat center;
+    background-size: 3.6rem 3rem;
     width: 1.6rem;
     height: 1.6rem;
     cursor: pointer;
@@ -323,30 +364,17 @@ header {
 
   .heart-button {
     display: inline-block;
-    background: url("../../img/heart.svg") no-repeat center;
+    background: url('../../img/heart.svg') no-repeat center;
     background-size: 1.6rem 1.6rem;
     width: 1.6rem;
     height: 1.6rem;
     cursor: pointer;
   }
 
-  .language {
-    @apply inline-block text-l whitespace-nowrap;
-
-    .active-js {
-      color: rgba(160, 168, 47, 0.69);
-    }
-
-    span {
-      @apply cursor-pointer;
-    }
-  }
-
   .search-input {
-    @apply flex flex-row border-0 border-b-2 border-solid border-black transition-all duration-300;
+    @apply flex basis-5/10 flex-row border-0 border-b-2 border-solid border-black transition-all duration-300;
     opacity: 1;
     padding: 5px;
-    width: 40%;
 
     @media screen and (max-width: 900px) {
       width: 45%;
@@ -354,6 +382,7 @@ header {
 
     input {
       @apply w-full border-0 bg-yellow;
+
       &:focus {
         border-style: none;
         outline: none;
@@ -361,6 +390,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:hover {
         border-style: none;
         outline: none;
@@ -368,6 +398,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
       }
+
       &:active {
         border-style: none;
         outline: none;
@@ -384,6 +415,7 @@ header {
 
     span {
       @apply ml-5;
+
       @media screen and (max-width: 900px) {
         @apply ml-6;
       }
@@ -391,7 +423,7 @@ header {
 
     .search-icon {
       display: block;
-      background: url("../../img/search.svg") no-repeat center;
+      background: url('../../img/search.svg') no-repeat center;
       background-size: 1.6rem 1.6rem;
       width: 2.6rem;
       height: 2.6rem;
@@ -406,11 +438,12 @@ header {
 
     .micro-icon {
       display: block;
-      background: url("../../img/micro.svg") no-repeat center;
-      background-size: 3.6rem 3.6rem;
+      background: url('../../img/micro.svg') no-repeat center;
+      background-size: 3.6rem 3rem;
       width: 2.6rem;
       height: 2.6rem;
       cursor: pointer;
+
       @media screen and (max-width: 900px) {
         background-size: 2rem 2rem;
         width: 1rem;
@@ -421,10 +454,11 @@ header {
     .cross-icon {
       cursor: pointer;
       display: block;
-      background: url("../../img/close.svg") no-repeat center;
+      background: url('../../img/close.svg') no-repeat center;
       background-size: 1.6rem 1.6rem;
       width: 2.6rem;
       height: 2.6rem;
+
       @media screen and (max-width: 900px) {
         background-size: 1rem 1rem;
         width: 1rem;
@@ -433,8 +467,14 @@ header {
     }
 
     &.hide {
+      @apply basis-0 p-0;
       width: 0;
       opacity: 0;
+
+      input {
+        @apply p-0;
+      }
+
       span {
         display: none;
       }
@@ -442,35 +482,139 @@ header {
   }
 
   .header-btn {
-    @apply items-center;
+    @apply mr-10 basis-1/4 items-center justify-end;
 
     &.dekstop {
-        @apply inline-flex;
-        @media screen and (max-width: 900px) {
+      @apply inline-flex;
+
+      @media screen and (max-width: 900px) {
         @apply hidden;
       }
     }
+
     &.mobile {
       @apply hidden;
+
       @media screen and (max-width: 900px) {
         @apply inline-flex;
+      }
+    }
+
+    .language {
+      @apply inline-block whitespace-nowrap text-l;
+
+      .active-js {
+        color: rgba(160, 168, 47, 0.69);
+      }
+
+      span {
+        @apply m-2 ml-2 mr-2 cursor-pointer;
       }
     }
 
     span {
-      @apply mr-6;
+      @apply mr-20;
+
       @media screen and (max-width: 900px) {
-        @apply mr-4;
+        @apply mr-12;
       }
     }
   }
 
+  .more-down-button {
+    @apply mx-6 my-3 text-s uppercase;
+
+    span {
+      background-image: url('../../img/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 1.6rem 1.6rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    &.active-js {
+      span {
+        background-image: url('../../img/arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: 1.6rem 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-bottom: 0rem;
+        vertical-align: middle;
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .more-down-content {
+    @apply absolute z-1001 bg-white p-24;
+
+    .more-down-button {
+      @apply m-0 p-0;
+    }
+
+    .more-down-content {
+      @apply relative p-0;
+    }
+
+    p {
+      @apply text-m;
+    }
+
+    p:not(:last-child) {
+      @apply mb-16;
+    }
+
+    li {
+      @apply text-m;
+    }
+
+    li:not(:last-child) {
+      @apply mb-16;
+    }
+  }
+
+  .menu {
+    @apply flex basis-1/10 justify-center border-0 p-0 py-6;
+
+    .more-down-content {
+      a {
+        @apply text-m;
+      }
+
+      .more-down-content {
+        a {
+          @apply text-s;
+        }
+      }
+    }
+
+    &.hide {
+      @apply hidden;
+    }
+
+    &:hover .icon {
+      background: url('../../img/burger.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    .icon {
+      @apply mb-1 h-24 w-24;
+      background: url('../../img/burger.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+
   nav {
-    @apply flex justify-start transition-all duration-300;
+    @apply flex justify-start whitespace-nowrap transition-all duration-300;
     width: 65rem;
     opacity: 1;
 
     &.hide {
+      @apply basis-0 p-0;
       width: 0;
       opacity: 0;
       margin: 0;
@@ -491,47 +635,15 @@ header {
     ul {
       @apply m-0 flex list-none p-0;
 
+      p {
+        a {
+          @apply m-0;
+        }
+      }
+
       li {
         a {
           @apply mx-17 my-16 text-s;
-        }
-
-        .more-down-button {
-          @apply mx-6 my-3 text-s uppercase;
-
-          span {
-            background-image: url("../../img/arrow-down.svg");
-            background-repeat: no-repeat;
-            background-size: 1.6rem 1.6rem;
-            width: 1.6rem;
-            height: 1.6rem;
-            vertical-align: middle;
-            display: inline-block;
-          }
-
-          &.active-js {
-            span {
-              background-image: url("../../img/arrow-down.svg");
-              background-repeat: no-repeat;
-              background-size: 1.6rem 1.6rem;
-              width: 1.6rem;
-              height: 1.6rem;
-              margin-bottom: 0rem;
-              vertical-align: middle;
-              display: inline-block;
-              transform: rotate(180deg);
-            }
-          }
-        }
-
-        .more-down-content {
-          @apply absolute z-1000 bg-white p-24;
-          p {
-            @apply text-m;
-          }
-          p:not(:last-child) {
-            @apply mb-16;
-          }
         }
       }
     }
@@ -558,15 +670,17 @@ header {
       width: 100%;
     }
   }
+
   .image_container_brand {
     width: 100%;
     height: 100%;
     max-width: 8rem;
     max-height: 8rem;
   }
+
   .all-brands {
     background: none;
-    color:#808080;
+    color: #808080;
     border: #808080 0.2rem solid;
     border-radius: 1rem;
     text-align: center;
@@ -575,10 +689,12 @@ header {
     height: 100%;
     margin: auto;
     padding: 1.2rem 0;
+
     @media screen and (max-width: 900px) {
       height: 7rem;
       padding: 0.4rem 0;
     }
+
     p {
       width: 100%;
       height: 100%;
@@ -588,6 +704,7 @@ header {
       white-space: normal;
     }
   }
+
   .brand_choose_brands {
     display: flex !important;
     display: -webkit-flex !important;
@@ -611,7 +728,7 @@ header {
         width: 100%;
         height: 100%;
         min-height: 7rem;
-        max-height: 13rem;;
+        max-height: 13rem;
       }
     }
   }
@@ -619,7 +736,7 @@ header {
 
 #yellow-background:after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   height: calc(100% - 145rem);
   bottom: 0;
@@ -639,10 +756,9 @@ header {
 
 #moving-block:after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   height: calc(100% - 145rem);
-  ;
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
@@ -666,7 +782,10 @@ header {
 .swiper,
 .swiper-text,
 .swiper-image,
+.swiper-image-2,
+.swiper-book-fragment,
 .swiper-detailed-page,
+.swiper-catalog-projects,
 .swiper-detailed-page-video {
   width: 100% !important;
   height: auto !important;
@@ -674,27 +793,41 @@ header {
 
   .card_career {
     margin-top: 3rem;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 930px) {
       @apply py-4;
       margin-top: 0;
-      gap: 0;
+      gap: 2.6rem;
+    }
+  }
+
+  .slider-hits {
+    .toy_card {
+      @apply justify-center pb-0;
+    }
+
+    @media screen and (max-width: 930px) {
+      .card_career {
+        @apply mt-0 py-4;
+      }
     }
   }
 
   .swiper-header {
-    @apply flex justify-between my-40 w-5/6;
+    @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex justify-between w-36 gap-8;
+      @apply flex w-36 justify-between gap-8;
 
       .button-prev {
         display: block;
-        background: url("../../img/prev.png") no-repeat center;
+        background: url('../../img/prev.png') no-repeat center;
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -702,12 +835,13 @@ header {
 
       .button-next {
         display: block;
-        background: url("../../img/next.png") no-repeat center;
+        background: url('../../img/next.png') no-repeat center;
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -798,14 +932,17 @@ header {
     width: 50.4rem;
     height: 50.4rem;
     animation: spin 20s linear infinite;
+
     @media screen and (max-width: 900px) {
       width: 32.4rem;
       height: 32.4rem;
     }
+
     @media screen and (max-width: 350px) {
       width: 22.4rem;
       height: 22.4rem;
     }
+
     &.moon-1 {
       width: 44.4rem;
       height: 44.4rem;
@@ -820,14 +957,15 @@ header {
         left: 0;
         top: auto;
       }
-
     }
+
     &.moon-2 {
       width: 44.4rem;
       height: 44.4rem;
       right: 9rem;
       top: 4rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         width: 32.4rem;
         height: 32.4rem;
@@ -843,18 +981,22 @@ header {
     bottom: 29rem;
     position: relative;
     text-align: center;
+
     @media screen and (max-width: 900px) {
       bottom: 20rem;
     }
+
     @media screen and (max-width: 350px) {
       bottom: 15rem;
     }
+
     &.moon-1 {
       width: 44.4rem;
       height: 44.4rem;
       left: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: 17rem;
         left: 0;
@@ -862,12 +1004,14 @@ header {
         top: auto;
       }
     }
+
     &.moon-2 {
       width: 44.4rem;
       height: 44.4rem;
       right: 9rem;
       top: 20rem;
       position: absolute;
+
       @media screen and (max-width: 900px) {
         bottom: -12rem;
         left: 0;
@@ -889,7 +1033,7 @@ header {
 }
 
 #white-background {
-  @apply relative h-200 w-full items-center overflow-hidden bg-white pt-60 mb-20;
+  @apply relative mb-20 h-200 w-full items-center overflow-hidden bg-white pt-60;
 
   .slide-el {
     width: 10.4rem;
@@ -956,19 +1100,20 @@ header {
 //}
 .elephant-history {
   .slider-header {
-    @apply flex justify-between my-40 w-5/6;
+    @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex justify-between w-36 gap-8;
+      @apply flex w-36 justify-between gap-8;
 
       .button-prev {
         display: block;
-        background: url("../../img/prev.png") no-repeat center;
+        background: url('../../img/prev.png') no-repeat center;
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -976,12 +1121,13 @@ header {
 
       .button-next {
         display: block;
-        background: url("../../img/next.png") no-repeat center;
+        background: url('../../img/next.png') no-repeat center;
         background-size: 2rem 2rem;
         width: 2rem;
         height: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+
         &:hover {
           transform: scale(1.2);
         }
@@ -995,10 +1141,23 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
-  &::-webkit-scrollbar-track {border-radius: 0.2rem;}
-  &::-webkit-scrollbar {width: 0.4rem;}
-  &::-webkit-scrollbar-thumb {border-radius: 0.2rem;background: #acadad;}
-  &:hover::-webkit-scrollbar-thumb {background: #555555;}
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.2rem;
+    background: #acadad;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #555555;
+  }
 
   #elephant-slider {
     background-size: auto;
@@ -1006,6 +1165,10 @@ header {
     height: 95rem;
     position: relative;
     display: list-item;
+
+    @media screen and (max-width: 768px) {
+      left: -25rem;
+    }
 
     .year-text {
       @apply text-5xl text-white;
@@ -1087,7 +1250,7 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 64.5rem;
+        bottom: 63.5rem;
 
         &.first {
           left: 30.5rem;
@@ -1147,35 +1310,35 @@ header {
         }
 
         &.fifth {
-          left: 269.5rem;
+          left: 270rem;
           top: 56rem;
         }
       }
 
       .color-block {
-
         &.bottom {
           border-bottom-left-radius: 0.5rem;
           border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
+
           &.first {
-            background-color: #FFF145;
+            background-color: #fff145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33c15b;
           }
 
           &.third {
-            background-color: #FF0053;
+            background-color: #ff0053;
           }
 
           &.fourth {
-            background-color: #FF8500;
+            background-color: #ff8500;
           }
 
           &.fifth {
-            background-color: #4498FC;
+            background-color: #4498fc;
           }
         }
 
@@ -1183,68 +1346,67 @@ header {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           padding-bottom: 9rem;
+
           &.first {
-            background-color: #FFF145;
+            background-color: #fff145;
           }
 
           &.second {
-            background-color:  #33C15B;
+            background-color: #33c15b;
           }
 
           &.third {
-            background-color: #FF0053;
+            background-color: #ff0053;
           }
 
           &.fourth {
-            background-color: #FF8500;
+            background-color: #ff8500;
           }
 
           &.fifth {
-            background-color: #4498FC;
+            background-color: #4498fc;
           }
 
           &.sixth {
-            background-color: #FFF145;
+            background-color: #fff145;
           }
 
           &.seventh {
-            background-color: #33C15B;
+            background-color: #33c15b;
           }
 
           &.nine {
-            background-color: #FF0053;
+            background-color: #ff0053;
           }
+
           &.ten {
-            background-color: #FF8500;
+            background-color: #ff8500;
           }
         }
 
         height: auto;
 
-
         .elephant-more-up-button {
-          @apply flex cursor-pointer flex-row items-center p-10 text-left text-m transition-all duration-500 w-full justify-end;
+          @apply flex w-full cursor-pointer flex-row items-center justify-end p-10 text-left text-m transition-all duration-500;
 
           span {
-            background-image: url("../../img/arrow-down.svg");
+            background-image: url('../../img/arrow-down.svg');
             background-repeat: no-repeat;
             background-size: 1.6rem 1.6rem;
             width: 1.6rem;
             height: 1.6rem;
             margin-right: 1rem;
-
           }
 
           &.active-js {
             span {
-              background-image: url("../../img/arrow-down.svg");
+              background-image: url('../../img/arrow-down.svg');
               background-repeat: no-repeat;
               background-size: 1.6rem 1.6rem;
               width: 1.6rem;
               height: 1.6rem;
               margin-right: 1rem;
               transform: rotate(180deg);
-
             }
           }
         }
@@ -1258,25 +1420,25 @@ header {
         }
 
         .elephant-more-down-button {
-          @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
+          @apply flex w-full cursor-pointer flex-row items-center justify-end p-10 text-left text-m transition-all duration-500;
 
           span {
-            background-image: url("../../img/arrow-down.svg");
+            background-image: url('../../img/arrow-down.svg');
             background-repeat: no-repeat;
             background-size: 1.6rem 1.6rem;
             width: 1.6rem;
             height: 1.6rem;
-            margin-left: 1rem;
+            margin-right: 1rem;
           }
 
           &.active-js {
             span {
-              background-image: url("../../img/arrow-down.svg");
+              background-image: url('../../img/arrow-down.svg');
               background-repeat: no-repeat;
               background-size: 1.6rem 1.6rem;
               width: 1.6rem;
               height: 1.6rem;
-              margin-left: 1rem;
+              margin-right: 1rem;
               transform: rotate(180deg);
             }
           }
@@ -1297,7 +1459,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url("../../img/elephant-slider/elephant-body.png") no-repeat center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
+        center;
       background-size: contain;
     }
 
@@ -1307,59 +1470,75 @@ header {
       width: 304rem;
       height: 42rem;
       left: -41.3rem;
-      background: url("../../img/elephant-slider/trunk-1.png") no-repeat center;
+      background: url('../../img/elephant-slider/trunk-1.png') no-repeat center;
       background-size: contain;
     }
   }
 }
 
 .quest-eleph {
-  @apply bg-yellow items-center h-full;
+  @apply h-full items-center bg-yellow;
 
   .images-block {
-    @apply flex justify-center flex-row;
+    @apply flex flex-row justify-center;
 
     img {
       width: 18rem;
       height: 24rem;
+
       @media screen and (max-width: 768px) {
-        width: 5rem;
-        height: 6rem;
+        width: 10rem;
+        height: 12rem;
       }
     }
 
     .zero {
-      @apply relative items-center flex justify-center;
+      @apply relative flex items-center justify-center;
       width: 25rem;
+
       @media screen and (max-width: 768px) {
-        width: 6rem;
+        width: 13rem;
       }
 
       video {
         @apply absolute;
         height: 27rem;
         width: 25rem;
+
         @media screen and (max-width: 768px) {
-          height: 11rem;
-          width: 6rem;
+          height: 13rem;
+          width: 13rem;
         }
       }
     }
   }
 }
+
 .desktop-map {
   @apply block;
   width: 100%;
   height: 50rem;
+
   @media screen and (max-width: 768px) {
     @apply hidden;
   }
 }
+
 .mobile-map {
   @apply hidden;
+
   @media screen and (max-width: 768px) {
-    @apply block mx-auto;
+    @apply mx-auto block;
     width: 100%;
     height: 45rem;
   }
+}
+
+.envelope-button {
+  display: inline-block;
+  background: url('../../img/envelope-header.svg') no-repeat center;
+  background-size: 1rem 1rem;
+  width: 1rem;
+  height: 2rem;
+  cursor: pointer;
 }
