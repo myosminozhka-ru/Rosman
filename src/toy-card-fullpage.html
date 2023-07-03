@@ -18,7 +18,7 @@
       <!--    тут будет контент по карточке    -->
 
 
-      <div class="custom-box !fixed js_contact_us_ru_popup_button">
+      <div class="custom-box !fixed js_contact_us_ru_popup_button md:hidden">
         <span></span>
         <div class="custom-before"></div>
         <a>Написать нам</a>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="flex my-24 items-center px-24 justify-between">
+      <div class="flex my-24 items-center px-24 justify-between sm:my-16 sm:px-12">
         <p class="breadcrumbs">
           <a href="#">Главная </a><span>/</span>
           <a href="#">Игрушки </a><span>/</span>
@@ -116,7 +116,7 @@
       </div>
 
 
-      <div class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-18">
+      <div class="grid grid-cols-2 gap-24 mb-64 ipadmini:grid-cols-1 ipadmini:gap-16 ipadmini:mb-48">
         <div class="pl-24 ipadmini:px-12">
           @@include('components/ui-kit/cards/my-swiper.html', { }, )
         </div>
@@ -629,10 +629,6 @@
         </div>
       </div>
 
-      <!--      @@include('components/ui-kit/cards/my-swiper.html', { }, )-->
-      <br>
-      <br>
-      <br>
       <!-- тут ниже футер -->
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
 

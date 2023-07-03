@@ -343,7 +343,7 @@
 }
 
 .card-fullpage-desc-image {
-  @apply mb-64 w-full;
+  @apply mb-64 w-full sm:mb-48;
 }
 
 .js-card-fullpage-desc-image img {
@@ -351,11 +351,11 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply flex flex-col gap-24 mb-64;
+  @apply flex flex-col gap-24 mb-64 md:gap-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
-  @apply gap-64;
+  @apply gap-64 md:gap-48;
 }
 
 .more-down-button.js-mdb-desc-button {
@@ -363,7 +363,7 @@
 }
 
 .card-fullpage-desc-common {
-  @apply flex flex-col gap-24;
+  @apply flex flex-col gap-24 sm:gap-16;
   max-width: 81.6rem;
 }
 
@@ -452,7 +452,7 @@
 }
 
 .card-fullpage-desc-more-card {
-  @apply flex flex-col gap-20 w-1/3;
+  @apply flex flex-col gap-20 w-1/3 sm:gap-16;
   @media screen and (max-width: 800px) {
     @apply w-auto;
   }

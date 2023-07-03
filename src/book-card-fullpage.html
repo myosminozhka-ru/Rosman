@@ -19,7 +19,7 @@
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
 
-      <div class="custom-box js_contact_us_ru_popup_button !fixed flex sm:hidden">
+      <div class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden">
         <span></span>
         <div class="custom-before"></div>
         <a>Написать нам</a>
@@ -90,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="card-fullpage-filter-links mb-0 mt-16 px-24 sm:px-12">
+      <div class="card-fullpage-filter-links mb-0 mt-16 px-24 ipadmini:px-12">
         <a href="#" class="card-fullpage-filter-link">0-3</a>
         <a href="#" class="card-fullpage-filter-link">4-6</a>
         <a href="#" class="card-fullpage-filter-link">7-9</a>
@@ -100,15 +100,15 @@
         <a href="#" class="card-fullpage-filter-link">Хиты</a>
         <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
       </div>
-      <div class="flex items-center justify-between">
-        <p class="breadcrumbs p-24">
+      <div class="flex items-center justify-between text-s">
+        <p class="breadcrumbs bs:hidden p-24">
           <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
         ><span>/</span> <a href="#">Все книги </a><span>/</span>
           <a href="#">Художественная литература </a><span>/</span>
           <a href="#">Русские народные сказки</a><span>/</span>
           <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
         </p>
-        <div class="breadcrumbs-small-screen my-24 pl-12">
+        <div class="breadcrumbs-small-screen bs:flex my-24 pl-24 ipadmini:pl-12">
           <div class="breadcrumbs-small-screen-image"></div>
           <div class="breadcrumbs-small-screen-dots">
             ...
@@ -130,12 +130,13 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1">
+      <div class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-16">
         <div class="pl-24 ipadmini:px-12">
           @@include('components/ui-kit/cards/my-swiper-books.html', { }, )
         </div>
 
-        <div class="card-fullpage-description">
+        <div class="card-fullpage-description ipadmini:px-12 sm:!px-0">
+
           <div class="card-fp-desc-main">
             <div class="card-fp-desc-top">
               <div class="card-fp-desc-header">
@@ -183,9 +184,9 @@
             </div>
 
             <!--  карточки БРЕНДЫ  -->
-            <div class="card_brand card-fp-desc-brand-small">
+            <div class="card_brand card-fp-desc-brand-small ssm:!max-w-[100rem]">
               <div
-                class="card_brand_content card-fp-desc-brand-content-small"
+                class="card_brand_content card-fp-desc-brand-content-small ssm:!items-start ssm:!justify-end ssm:px-16 ssm:!py-16"
               >
                 <div class="card_brand_info card-fp-desc-brand-info-small">
                   <a
