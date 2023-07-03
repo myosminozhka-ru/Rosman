@@ -25,7 +25,7 @@
   @apply block;
   height: 8.8rem;
   width: 8.3rem;
-  background: url("../../img/footer_elephant.svg") no-repeat center;
+  background: url('../../img/footer_elephant.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .disc-rosman-item {
-  @apply py-8 px-0 text-xl;
+  @apply px-0 py-8 text-xl;
   @media (min-width: 501px) and (max-width: 800px) {
     @apply p-8 text-xl;
   }
@@ -51,11 +51,11 @@
 }
 
 .disc-rosman-button {
-  @apply justify-between py-0 px-0  text-15.20;
+  @apply justify-between px-0 py-0  text-15.20;
 }
 
 .disc-rosman-content {
-  @apply pt-8 pb-0 px-0;
+  @apply px-0 pb-0 pt-8;
 }
 
 .footer-eng-subscr {
@@ -101,9 +101,9 @@
 }
 
 .footer-heading-policy-agreement-text {
-  @apply ml-16 flex flex-row flex-nowrap text-s font-medium;
+  @apply ml-16 flex flex-row flex-nowrap items-end text-s font-medium;
   @media screen and (max-width: 500px) {
-    @apply flex flex-col;
+    @apply flex flex-col items-start;
   }
 }
 
@@ -141,7 +141,7 @@
 }
 
 .footer-section-item {
-  @apply py-8;
+  @apply w-max py-8;
 }
 
 //.footer_heading_about,
@@ -162,7 +162,7 @@
 }
 
 .footer-info-rss {
-  @apply flex flex-row flex-nowrap gap-8 cursor-pointer;
+  @apply flex cursor-pointer flex-row flex-nowrap gap-8;
 }
 
 .footer-eng-info-rss {
@@ -171,7 +171,7 @@
 
 .footer-info-rss-image {
   @apply block h-20 w-20;
-  background: url("../../img/footer_rss.svg") no-repeat center;
+  background: url('../../img/footer_rss.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -310,7 +310,7 @@
 
 .footer-eng-info-rss-image {
   @apply block h-20 w-20 cursor-pointer;
-  background: url("../../img/footer_rss.svg") no-repeat center;
+  background: url('../../img/footer_rss.svg') no-repeat center;
   background-size: contain;
 }
 

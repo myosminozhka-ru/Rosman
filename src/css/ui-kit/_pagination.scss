@@ -31,12 +31,12 @@
   @apply flex flex-row flex-nowrap gap-14;
 
   @media screen and (max-width: 500px) {
-    @apply gap-0 justify-between w-full;
+    @apply w-full justify-between gap-0;
   }
 }
 
 .nav-btns {
-  @apply flex flex-row flex-nowrap gap-14 items-center;
+  @apply flex flex-row flex-nowrap items-center gap-14;
 
   @media screen and (max-width: 500px) {
     @apply gap-8;
@@ -47,7 +47,7 @@
   @apply h-40 w-40 border-2 border-b-black bg-white p-0 text-15.20;
 
   @media screen and (max-width: 500px) {
-    @apply w-30 h-30 border-card-stroke;
+    @apply h-30 w-30 border-card-stroke;
     min-width: 3rem !important;
   }
 
@@ -76,15 +76,15 @@
   }
 }
 
-.js-rm-pag-nav-page-more-bnt span {
+.arrow-left-black {
   @apply block h-20 w-20;
-  background: url("../../img/go-forth.svg") no-repeat center;
+  background: url('../../img/go-forth.svg') no-repeat center;
   background-size: contain;
 }
 
 // добавил кнопку на всякий случай
 .js-rm-pag-nav-page-back-bnt {
-  @apply flex flex-row px-0 items-center text-15.20 hidden;
+  @apply flex hidden flex-row items-center px-0 text-15.20;
 
   &:hover {
     @apply underline;
@@ -93,6 +93,6 @@
 
 .js-rm-pag-nav-page-back-bnt span {
   @apply block h-20 w-20;
-  background: url("../../img/go-back.svg") no-repeat center;
+  background: url('../../img/go-back.svg') no-repeat center;
   background-size: contain;
 }
