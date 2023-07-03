@@ -35,6 +35,7 @@ module.exports = {
       surfaceduo: {"max": "500px"},
       md: {max: "868px"},
       ssm: {max: "400px"},
+      msm: {max: "500px"},
       bs: {max: "999px"},
       bsmax: {max: "1099px"},
       bsmin: {min: "1100px"},
@@ -57,6 +58,7 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
+      "60.104": ["6rem", "104%"],
       "8xl": ["9.6rem", "6rem"],
     },
     colors: {
