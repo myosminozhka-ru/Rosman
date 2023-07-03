@@ -10,7 +10,7 @@
 
 // card's top
 .toy_card {
-  @apply flex flex-col justify-start gap-24 bg-white pb-12 w-full;
+  @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
 
   &:hover {
     box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
@@ -24,7 +24,7 @@
 }
 
 .bordered_tags_item:hover {
-  @apply bg-yellow border border-yellow;
+  @apply border border-yellow bg-yellow;
 }
 
 .book_card {
@@ -57,7 +57,7 @@
 
       span {
         margin: 0.1rem 1rem;
-        color: #FFF145;
+        color: #fff145;
       }
     }
   }
@@ -81,15 +81,15 @@
   @apply flex flex-row justify-between gap-8;
 
   @media screen and (max-width: 400px) {
-    @apply gap-6 justify-between w-full;
+    @apply w-full justify-between gap-6;
   }
 }
 
 .bordered_tags_item {
-  @apply px-12 py-4 body-s-bold;
+  @apply body-s-bold px-12 py-4;
   border: 1px solid #000000;
   @media screen and (max-width: 400px) {
-    @apply text-center w-1/2;
+    @apply w-1/2 text-center;
   }
   @media screen and (max-width: 900px) {
     @apply px-4;
@@ -101,7 +101,7 @@
 }
 
 .bordered_tags_item-smalled {
-  @apply px-4 py-4 text-11.14 text-center;
+  @apply px-4 py-4 text-center text-11.14;
   width: 7rem;
 }
 
@@ -155,12 +155,12 @@
 
 .item_card_add_to_favourite {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_white.svg") no-repeat center;
+  background: url('../../img/heart_white.svg') no-repeat center;
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_black.svg") no-repeat center;
+  background: url('../../img/heart_black.svg') no-repeat center;
 }
 
 .add_to_favourite_img {
@@ -180,7 +180,7 @@
 }
 
 .card_selection_description {
-  @apply flex flex-col gap-16 p-16 pt-24 border-x border-card-stroke border-b box-border sm:pt-16;
+  @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm:pt-16;
   @media screen and (max-width: 639px) {
     padding-top: 1.6rem;
   }
@@ -210,7 +210,7 @@
 }
 
 .js_traceable_item:hover .dotted_tags_date {
-  @apply text-black
+  @apply text-black;
 }
 
 .card_sel_info {
@@ -235,7 +235,6 @@
   @apply flex flex-row sm:flex-col;
 }
 
-
 .card_interview_name {
   @apply text-15.20 font-medium text-black;
 }
@@ -245,7 +244,7 @@
 }
 
 .card_interview_description {
-  @apply flex flex-col gap-12 p-16 border-y border-card-stroke border-r box-border sm:border-x sm:border-b sm:border-t-0;
+  @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm:border-x sm:border-b sm:border-t-0;
 
   &:hover {
     border-color: transparent;
@@ -273,13 +272,12 @@
 //  }
 //}
 .card_articles_description {
-  @apply flex flex-col px-12 pb-12 pt-16 gap-12 border-x border-card-stroke border-b box-border;
+  @apply box-border flex flex-col gap-12 border-x border-b border-card-stroke px-12 pb-12 pt-16;
 
   &:hover {
     border-color: transparent;
   }
 }
-
 
 .card_articles_name {
   @apply text-2.5xl font-medium;
@@ -329,15 +327,15 @@
 }
 
 .card_brand_all_items {
-  @apply block rounded-2xl text-xl bg-yellow px-8 py-4 text-center;
+  @apply block rounded-2xl bg-yellow px-8 py-4 text-center text-xl;
 
   @media screen and (max-width: 359px) {
-    @apply text-s
+    @apply text-s;
   }
 }
 
 .card_brand_name {
-  @apply text-2.5xl font-normal text-black text-center;
+  @apply text-center text-2.5xl font-normal text-black;
 
   @media screen and (max-width: 359px) {
     @apply text-xl;
@@ -392,7 +390,7 @@
 }
 
 .car_cond_item:hover {
-  @apply bg-yellow cursor-pointer;
+  @apply cursor-pointer bg-yellow;
 }
 
 // 1
@@ -413,7 +411,7 @@
 }
 
 .card_career_tag {
-  @apply rounded-3xl text-s bg-yellow px-12 py-4;
+  @apply rounded-3xl bg-yellow px-12 py-4 text-s;
 }
 
 .card_career:hover .card_career_tag {
@@ -453,7 +451,7 @@
 }
 
 .card_career_cond_item_text:hover {
-  @apply bg-yellow cursor-pointer;
+  @apply cursor-pointer bg-yellow;
 }
 
 // 3
@@ -477,7 +475,7 @@
 
 .card_career_img {
   @apply block h-20 w-20;
-  background: url("../../img/cards_career_arrow.svg") no-repeat center;
+  background: url('../../img/cards_career_arrow.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -486,7 +484,7 @@
   @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
   width: 29.6rem;
   height: 22.2rem;
-  background-image: url("../../img/cards_brand_socials.svg");
+  background-image: url('../../img/cards_brand_socials.svg');
   background-position: center center;
 }
 
@@ -505,7 +503,7 @@
 }
 
 .card_brand_links {
-  @apply  inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+  @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
   img {
     width: 2rem;
     height: 2rem;
@@ -555,7 +553,7 @@
 }
 
 .card_photogallery_item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -617,7 +615,7 @@
 }
 
 .card_video_preview::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -648,12 +646,12 @@
 
 .card_employee:hover .card_employee_info {
   @apply border-white;
-  background: var(--gray-scale-white, #FFF);
+  background: var(--gray-scale-white, #fff);
   box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
 }
 
 .card_employee_info {
-  @apply flex flex-col gap-8 p-20 border-x border-card-stroke border-b;
+  @apply flex flex-col gap-8 border-x border-b border-card-stroke p-20;
 }
 
 .card_employee_name {
@@ -669,7 +667,7 @@
 }
 
 .card_employee_image::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -714,39 +712,38 @@
 }
 
 .emp_soc_fb {
-  background: url("../../img/icon-white-facebook.svg") no-repeat;
-
+  background: url('../../img/icon-white-facebook.svg') no-repeat;
 }
 
 .emp_soc_fb:hover {
-  background-image: url("../../img/icon-black-facebook.svg");
+  background-image: url('../../img/icon-black-facebook.svg');
   background-position: center center;
 }
 
 .emp_soc_twit {
-  background: url("../../img/icon-white-twitter.svg") no-repeat;
+  background: url('../../img/icon-white-twitter.svg') no-repeat;
 }
 
 .emp_soc_twit:hover {
-  background-image: url("../../img/icon-black-twitter.svg");
+  background-image: url('../../img/icon-black-twitter.svg');
   background-position: center center;
 }
 
 .emp_soc_pint {
-  background: url("../../img/icon-white-pint.svg") no-repeat;
+  background: url('../../img/icon-white-pint.svg') no-repeat;
 }
 
 .emp_soc_pint:hover {
-  background-image: url("../../img/icon-black-pinterest.svg");
+  background-image: url('../../img/icon-black-pinterest.svg');
   background-position: center center;
 }
 
 .emp_soc_inst {
-  background: url("../../img/icon-white-inst.svg") no-repeat;
+  background: url('../../img/icon-white-inst.svg') no-repeat;
 }
 
 .emp_soc_inst:hover {
-  background-image: url("../../img/icon-black-instagram.svg");
+  background-image: url('../../img/icon-black-instagram.svg');
   background-position: center center;
 }
 
@@ -769,7 +766,7 @@
 }
 
 .card_awards:hover .card_awards_year {
-  @apply bg-white
+  @apply bg-white;
 }
 
 .card_awards_title {
