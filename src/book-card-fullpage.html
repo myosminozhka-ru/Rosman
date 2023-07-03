@@ -19,7 +19,9 @@
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
 
-      <div class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden">
+      <div
+        class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden"
+      >
         <span></span>
         <div class="custom-before"></div>
         <a>Написать нам</a>
@@ -90,7 +92,9 @@
           </div>
         </div>
       </div>
-      <div class="card-fullpage-filter-links mb-0 mt-16 px-24 ipadmini:px-12">
+      <div
+        class="card-fullpage-filter-links mb-0 mt-16 px-24 ipadmini:px-12"
+      >
         <a href="#" class="card-fullpage-filter-link">0-3</a>
         <a href="#" class="card-fullpage-filter-link">4-6</a>
         <a href="#" class="card-fullpage-filter-link">7-9</a>
@@ -101,14 +105,16 @@
         <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
       </div>
       <div class="flex items-center justify-between text-s">
-        <p class="breadcrumbs bs:hidden p-24">
+        <p class="breadcrumbs p-24 bs:hidden">
           <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
         ><span>/</span> <a href="#">Все книги </a><span>/</span>
           <a href="#">Художественная литература </a><span>/</span>
           <a href="#">Русские народные сказки</a><span>/</span>
           <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
         </p>
-        <div class="breadcrumbs-small-screen bs:flex my-24 pl-24 ipadmini:pl-12">
+        <div
+          class="breadcrumbs-small-screen my-24 pl-24 ipadmini:pl-12 bs:flex"
+        >
           <div class="breadcrumbs-small-screen-image"></div>
           <div class="breadcrumbs-small-screen-dots">
             ...
@@ -130,13 +136,14 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-16">
+      <div
+        class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-16"
+      >
         <div class="pl-24 ipadmini:px-12">
           @@include('components/ui-kit/cards/my-swiper-books.html', { }, )
         </div>
 
-        <div class="card-fullpage-description ipadmini:px-12 sm:!px-0">
-
+        <div class="card-fullpage-description sm:!px-0 ipadmini:px-12">
           <div class="card-fp-desc-main">
             <div class="card-fp-desc-top">
               <div class="card-fp-desc-header">
@@ -184,14 +191,16 @@
             </div>
 
             <!--  карточки БРЕНДЫ  -->
-            <div class="card_brand card-fp-desc-brand-small ssm:!max-w-[100rem]">
+            <div
+              class="card_brand card-fp-desc-brand-small ssm:!max-w-[100rem]"
+            >
               <div
-                class="card_brand_content card-fp-desc-brand-content-small ssm:!items-start ssm:!justify-end ssm:px-16 ssm:!py-16"
+                class="card_brand_content card-fp-desc-brand-content-small !px-32 ssm:!items-start ssm:!justify-end ssm:!py-16 ssm:!px-16"
               >
                 <div class="card_brand_info card-fp-desc-brand-info-small">
                   <a
                     href="#"
-                    class="card_brand_all_items card-fp-desc-brand-items-small !py-2"
+                    class="card_brand_all_items  card-fp-desc-brand-items-small"
                   >Книги серии</a
                   >
                   <div
@@ -210,7 +219,9 @@
             </div>
           </div>
           <div class="card-fp-desc-buttons pr-24">
-            <a href="#" class="bordered_tags_item-fp bordered_tags_item"
+            <a
+              href="#"
+              class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
             >5+</a
             >
             <a href="#" class="item_card-external-link"></a>
@@ -220,15 +231,20 @@
       </div>
 
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
-      <div class="swiper-image-2 mb-48">
-        <div class="swiper-header !w-full">
-          <h3 class="head-3 flex flex-row flex-nowrap items-center">
-            Все книги серии&nbsp
-            <a href="#" class="text-5xl underline">Часодеи</a>
-          </h3>
-          <div class="flex flex-row items-center gap-16">
-            <a class="text-15.20 font-medium underline">Смотреть все</a>
-            <div class="buttons">
+      <div class="swiper-image-2 mb-48 px-24 ipadmini:px-12">
+        <div class="swiper-header !w-full msm:!items-start">
+          <div class="flex flex-row msm:flex-col">
+            <h3 class="head-3">Все книги серии&nbsp</h3>
+            <a href="#" class="head-3 underline">Часодеи</a>
+            <a class="link-m-bold hidden text-15.20 font-medium msm:block"
+            >Смотреть все</a
+            >
+          </div>
+          <div class="flex flex-row items-center gap-20">
+            <a class="link-m-bold text-15.20 font-medium msm:hidden"
+            >Смотреть все</a
+            >
+            <div class="buttons !w-[5.2rem] !gap-24">
               <div class="button-prev"></div>
               <div class="button-next"></div>
             </div>
@@ -594,14 +610,20 @@
       </div>
 
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
-      <div class="swiper-image-2">
-        <div class="swiper-header !w-full">
-          <h3 class="head-3">С этой книгой часто покупают</h3>
-          <div class="flex flex-row items-center gap-16">
-            <div class="buttons">
-              <div class="button-prev"></div>
-              <div class="button-next"></div>
+      <div class="swiper-image-2 px-24 ipadmini:px-12">
+        <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
+          <h3
+            class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+          >
+            С этой игрушкой часто покупают
+            <div class="link-s-bold inline-block hidden sm:inline-block">
+              Все
             </div>
+          </h3>
+
+          <div class="buttons !w-[5.2rem] !gap-24">
+            <div class="button-prev"></div>
+            <div class="button-next"></div>
           </div>
         </div>
         <!-- Additional required wrapper -->
@@ -926,8 +948,8 @@
       </div>
       <div class="card-fullpage-tabs">
         <div class="navigation">
-          <ul class="navigation-flex">
-            <li>
+          <ul class="navigation-flex px-24 ipadmini:!px-12">
+            <li class="!m-0">
               <a
                 class="card-fullpage-tab card-fp-tab-desc active-js"
                 href="#"
@@ -960,10 +982,10 @@
           </div>
         </div>
         <div id="above-block" class="above-block-mod">
-          <div class="swiper-image-2 my-0 mb-24 pb-60">
+          <div class="swiper-image-2 my-0 mb-24 px-24 pb-60 ipadmini:px-12">
             <div class="swiper-header sw-head-mod !w-full">
               <h3 class="head-3">Фотогалерея</h3>
-              <div class="buttons">
+              <div class="buttons !w-[5.2rem] !gap-24">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
               </div>
@@ -1061,17 +1083,10 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item full-width mb-64 px-24 sm:px-12">
+      <div class="card_video_item full-width mb-64 px-24 ipadmini:px-12">
         <div class="card_video_preview">
           <img src="../../img/cards_video_preview.svg" alt=""/>
           <button class="card_video_play_button circle-button"></button>
-        </div>
-
-        <div class="card_video_info">
-              <span class="card_video_title"
-              >Как правильно выбрать книгу: наши советы для любителей
-                книг</span
-              >
         </div>
       </div>
 
