@@ -14,14 +14,14 @@
   <div id="yellow-background">
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
-    <div id="above-block">
-      <div class="flex flex-col gap-24 !p-24">
+    <div id="above-block" class="!pt-0">
+      <div class="flex flex-col gap-24 p-24 md:p-12">
         <div class="flex justify-between  items-center">
           <p class="breadcrumbs">
             <a class="text-s" href="#">Главная </a><span>/</span>
             <a class="text-s" href="#">Новости </a><span>/</span>
             <a class="text-s" href="#">Результаты поиска </a>
-          
+
           </p>
           <div class="breadcrumbs-small-screen">
             <div class="breadcrumbs-small-screen-image"></div>
@@ -45,7 +45,7 @@
                 <p class="other !py-10 text-15.20 font-medium">Бренды&nbsp&nbsp
                   <span class="!text-15.20">1</span>
                 </p>
-              
+
               </li>
               <li class="flex flex-row !px-16 flex-nowrap gap-4 !m-0 !items-center">
                 <p class="news  !py-10 text-15.20 font-medium">Товары&nbsp&nbsp
@@ -66,7 +66,7 @@
                 <p class="collection  !py-10 text-15.20 font-medium">Подборки&nbsp&nbsp
                   <span class="text-15.20"></span>
                 </p>
-              
+
               </li>
             </ul>
             <div class="navigation-content hide" id="collection">
@@ -104,20 +104,20 @@
                 <p class="name">Книжка Общее</p>
               </div>
             </div>
-          
+
           </div>
         </div>
       </div>
-      
+
       <!--   тут будет контент   -->
-      <div class="flex flex-row flex-nowrap gap-16 !p-24 !sm:items-center">
-        <form id="filter-form-1" class="filters-block filter-form-brands-result w-1/3 md:hidden">
+      <div class="flex flex-row flex-nowrap gap-16 p-24 pt-16 md:p-12">
+        <form id="filter-form-1" class="filters-block filter-form-brands-result !w-1/3 md:hidden">
           <p class="mobile-p">Фильтры</p> <span id="close-filter"> </span>
           <div class="more-down">
             <div class="more-down-button">Жанр<span></span></div>
-            <div class="more-down-content">
-              <div class="back-filter"><span>&lt;</span>Все Книги</div>
-              <div class="back-filter"><span>&lt;</span>Художественная литература</div>
+            <div class="more-down-content !pl-0">
+              <div class="back-filter pl-10"><span>&lt;</span>Все Книги</div>
+              <div class="back-filter pl-10"><span>&lt;</span>Художественная литература</div>
               <input type="checkbox" id="sort-5" class="sort-checkbox">
               <label class="sort-label my-14" for="sort-5">Русские народные сказки</label>
               <input type="checkbox" id="sort-6" class="sort-checkbox">
@@ -130,7 +130,7 @@
             </div>
             <hr class="my-14 text-grey">
             <div class="more-down-button">Авторы<span></span></div>
-            <div class="more-down-content">
+            <div class="more-down-content  !pl-0">
               <input class="input search w-full" type="text" placeholder="Поиск">
               <div class="scroll-block">
                 <input type="checkbox" id="sort-9" class="sort-checkbox">
@@ -149,7 +149,7 @@
             </div>
             <hr class="my-14 text-grey">
             <div class="more-down-button">Популярное<span></span></div>
-            <div class="more-down-content">
+            <div class="more-down-content  !pl-0">
               <input type="checkbox" id="filter-4" class="filter-checkbox">
               <label class="filter-label" for="filter-4">Хиты<span class="count">1</span> <span class="cross"></span>
               </label>
@@ -181,7 +181,7 @@
             </div>
             <hr class="my-14 text-grey">
             <div class="more-down-button">Возраст<span></span></div>
-            <div class="more-down-content">
+            <div class="more-down-content  !pl-0">
               <input type="checkbox" id="filter-12" class="filter-checkbox">
               <label class="filter-label age" for="filter-12">0+ </label>
               <input type="checkbox" id="filter-13" class="filter-checkbox">
@@ -251,7 +251,7 @@
             </div>
           </div>
         </form>
-        <div class="h-max flex flex-wrap flex-row gap-16">
+        <div class="h-max w-full grid grid-cols-2 sm:grid-cols-1 gap-16 sm:mb-48">
           <div class="brands-search-result-items">
             @@include('components/ui-kit/cards/card-brand.html', { }, )
           </div>
@@ -273,7 +273,7 @@
         </div>
       </div>
       @@include('components/ui-kit/popups/popup-filters-brand-results.html', { }, )
-      <section class="!px-24 !mb-64 pagination rm-pag">
+      <section class="!px-24 !mb-64 pagination rm-pag sm:hidden">
         <div class="pagination-seen js-rm-pag-seen">
           Просмотрено авторов: 12 из 456
         </div>
@@ -288,28 +288,28 @@
             <button class="pagination-nav-page-button js-chosen-nav-btn js-rm-pag-nav-page-btn">
               1
             </button>
-            
+
             <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
               2
             </button>
-            
+
             <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
               3
             </button>
-            
+
             <button
               class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
             >
               4
             </button>
-            
+
             <button
               class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
             >
               5
             </button>
           </div>
-          
+
           <button class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt">
             Вперёд <span></span>
           </button>
