@@ -504,6 +504,14 @@
   left: 6%;
 }
 
+.card_brand_links {
+  @apply  inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .card_brand_with_socs_item_page {
   @apply absolute hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
   bottom: 6%;
