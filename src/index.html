@@ -1,69 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 62.5%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gulp with TailwindCSS v3</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Gulp with TailwindCSS v3</title>
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
+  <body class="bg-gray-50">
+    @@include('components/header/header.html')
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
 
-<body class="bg-gray-50">
-  @@include('components/header/header.html')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="./js/scripts.js"></script>
+    <div class="flex flex-col">
+      <a target="_blank" href="/404-page.html" class="text-2xl text-blue-1"
+        >404</a
+      >
+      <a target="_blank" href="/author.html" class="text-2xl text-blue-1"
+        >author</a
+      >
+      <a target="_blank" href="/articles.html" class="text-2xl text-blue-1"
+        >articles</a
+      >
+      <a
+        target="_blank"
+        href="/brands-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        brands search result</a
+      >
+      <a target="_blank" href="/catalog.html" class="text-2xl text-blue-1"
+        >catalog</a
+      >
+      <a target="_blank" href="/catalog-video.html" class="text-2xl text-blue-1"
+        >catalog video</a
+      >
+      <a
+        target="_blank"
+        href="/catalog-projects.html"
+        class="text-2xl text-blue-1"
+        >catalog projects</a
+      >
 
-  <div class="flex flex-col">
-    <a target="_blank" href="/404-page.html" class="text-2xl text-blue-1">404</a>
-    <a target="_blank" href="/author.html" class="text-2xl text-blue-1">author</a>
-    <a target="_blank" href="/articles.html" class="text-2xl text-blue-1">articles</a>
-    <a target="_blank" href="/brands-search-result.html" class="text-2xl text-blue-1">
-      brands search result</a>
-    <a target="_blank" href="/catalog.html" class="text-2xl text-blue-1">catalog</a>
-    <a target="_blank" href="/catalog-video.html" class="text-2xl text-blue-1">catalog video</a>
-    <a target="_blank" href="/catalog-projects.html" class="text-2xl text-blue-1">catalog projects</a>
-
-    <a target="_blank" href="/legal-information.html" class="text-2xl text-blue-1">legal info</a>
-    <a target="_blank" href="/news-articles-search-result.html" class="text-2xl text-blue-1">news articles search
-      result</a>
-    <a target="_blank" href="/stuff-search-result.html" class="text-2xl text-blue-1">stuff search reuslt</a>
-    <a target="_blank" href="/book-card-fullpage.html" class="text-2xl text-blue-1">
-      book-card-fullpage
-    </a>
-    <a target="_blank" href="/brands-search-result.html" class="text-2xl text-blue-1">
-      brands-search-result
-    </a>
-    <a target="_blank" href="/detailed-articles.html" class="text-2xl text-blue-1">
-      detailed-articles
-    </a>
-    <a target="_blank" href="/detailed-interview-one.html" class="text-2xl text-blue-1">
-      detailed-interview-one
-    </a>
-    <a target="_blank" href="/detailed-interview-two.html" class="text-2xl text-blue-1">
-      detailed-interview-two
-    </a>
-    <a target="_blank" href="/detailed-news.html" class="text-2xl text-blue-1">
-      detailed-news
-    </a>
-    <a target="_blank" href="/legal-information.html" class="text-2xl text-blue-1">
-      legal-information
-    </a>
-    <a target="_blank" href="/news-articles-search-result.html" class="text-2xl text-blue-1">
-      news-articles-search-result
-    </a>
-    <a target="_blank" href="/stuff-search-result.html" class="text-2xl text-blue-1">
-      stuff-search-result
-    </a>
-    <a target="_blank" href="/toy-card-fullpage.html" class="text-2xl text-blue-1">
-      toy-card-fullpage
-    </a>
-    <a target="_blank" href="/wishlist.html" class="text-2xl text-blue-1">
-      wishlist
-    </a>
-  </div>
-  @@include('components/ui-kit/footer/footer-ru.html', { }, )
-</body>
-
+      <a
+        target="_blank"
+        href="/legal-information.html"
+        class="text-2xl text-blue-1"
+        >legal info</a
+      >
+      <a
+        target="_blank"
+        href="/news-articles-search-result.html"
+        class="text-2xl text-blue-1"
+        >news articles search result</a
+      >
+      <a
+        target="_blank"
+        href="/stuff-search-result.html"
+        class="text-2xl text-blue-1"
+        >stuff search reuslt</a
+      >
+      <a
+        target="_blank"
+        href="/book-card-fullpage.html"
+        class="text-2xl text-blue-1"
+      >
+        book-card-fullpage
+      </a>
+      <a
+        target="_blank"
+        href="/brands-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        brands-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-articles.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-articles
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-interview-one.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-interview-one
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-interview-two.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-interview-two
+      </a>
+      <a
+        target="_blank"
+        href="/detailed-news.html"
+        class="text-2xl text-blue-1"
+      >
+        detailed-news
+      </a>
+      <a
+        target="_blank"
+        href="/legal-information.html"
+        class="text-2xl text-blue-1"
+      >
+        legal-information
+      </a>
+      <a
+        target="_blank"
+        href="/news-articles-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        news-articles-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/stuff-search-result.html"
+        class="text-2xl text-blue-1"
+      >
+        stuff-search-result
+      </a>
+      <a
+        target="_blank"
+        href="/toy-card-fullpage.html"
+        class="text-2xl text-blue-1"
+      >
+        toy-card-fullpage
+      </a>
+      <a target="_blank" href="/wishlist.html" class="text-2xl text-blue-1">
+        wishlist
+      </a>
+    </div>
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+  </body>
 </html>
