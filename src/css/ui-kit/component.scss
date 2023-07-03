@@ -760,36 +760,38 @@ header {
 
     }
   }
-  .swiper-header {
-    @apply flex justify-between my-40 w-5/6;
 
-    .buttons {
-      @apply flex justify-between w-36 gap-8;
+}
 
-      .button-prev {
-        display: block;
-        background: url("../../img/prev.png") no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        &:hover {
-          transform: scale(1.2);
-        }
+.swiper-header {
+  @apply flex justify-between;
+
+  .buttons {
+    @apply flex justify-between w-36 gap-8;
+
+    .button-prev {
+      display: block;
+      background: url("../../img/prev.png") no-repeat center;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
       }
+    }
 
-      .button-next {
-        display: block;
-        background: url("../../img/next.png") no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        &:hover {
-          transform: scale(1.2);
-        }
+    .button-next {
+      display: block;
+      background: url("../../img/next.png") no-repeat center;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }

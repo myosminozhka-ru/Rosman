@@ -86,7 +86,7 @@
 }
 
 .bordered_tags_item {
-  @apply px-12 py-4 body-s-bold;
+  @apply px-12 py-4 body-s-bold bg-white;
   border: 1px solid #000000;
   @media screen and (max-width: 400px) {
     @apply text-center w-1/2;
