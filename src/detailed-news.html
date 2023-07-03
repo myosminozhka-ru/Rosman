@@ -11,7 +11,7 @@
 <body>
 <div class="search-result-wrapper">
   @@include('components/header/header-main.html', { }, )
-  <div id="yellow-background">
+  <div id="yellow-background " class="!pt-10">
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
     <div id="above-block" class="!p-0 relative">
@@ -138,6 +138,7 @@
             </a>
           </div>
         </div>
+
         <div class="absolute top-[0%] right-[3%]">
           <div class="flex flex-row flex-nowrap mb-16 items-center justify-start gap-16 md:hidden">
             <div class="block h-[5.6rem] w-[5.6rem]
@@ -150,7 +151,7 @@
         </div>
         <!--     main text     -->
         <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
-          <div class="head-3">Финансовый мир очнулся:
+          <div class="head-3 md:hidden">Финансовый мир очнулся:
             семантический разбор внешних противодействий ни к чему нас не обязывает
           </div>
           <div class="text-15.20 font-medium">
@@ -161,6 +162,9 @@
                      src="../../img/detailed-news-main-pic.svg" alt="">
               </div>
               <div class="link-m">Иван Иванов</div>
+            </div>
+            <div class="head-3 mb-16 hidden md:block">Финансовый мир очнулся:
+              семантический разбор внешних противодействий ни к чему нас не обязывает
             </div>
             Предварительные выводы неутешительны: укрепление и развитие внутренней структуры требует от нас анализа
             дальнейших направлений развития. Сложно сказать, почему элементы политического процесса ограничены
@@ -335,7 +339,7 @@
         </div>
         <!--    тут будет свипер    -->
 
-        <div class="flex flex-col gap-24 max-w-[60rem] !items-center">
+        <div class="flex flex-col gap-24 max-w-[60rem] ssm:!items-start !items-center">
           <div class="swiper-detailed-page-video">
 
             <!-- Additional required wrapper -->
