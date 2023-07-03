@@ -10,12 +10,14 @@
 <body>
 <div class="card-fullpage">
   @@include('components/header/header-books.html', { }, )
-  <div id="yellow-background" class="card-fullpage-modified-yellow-background">
+  <div
+    id="yellow-background"
+    class="card-fullpage-modified-yellow-background"
+  >
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
     <div id="above-block" class="card-fullpage-modified-above-block">
       <!--    тут будет контент по карточке    -->
-
 
       <!--   модалка - связаться с нами   -->
       <div class="js_popup_contact_us_ru_modal modal">
@@ -28,19 +30,25 @@
           </div>
           <div class="js_contact_us_popup_body">
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Письмо директору</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Письмо директору</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../..//img/popup_arrow.svg" alt=""/>
               </div>
             </div>
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Заявка на партнерство</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Заявка на партнерство</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../../img/popup_arrow.svg" alt=""/>
               </div>
             </div>
             <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Отправить резюме</a>
+              <a href="#" class="contact_us_popup_item_text"
+              >Отправить резюме</a
+              >
               <div class="contact_us_popup_item_arrow">
                 <img src="../../img/popup_arrow.svg" alt=""/>
               </div>
@@ -76,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="custom-box !fixed js_contact_us_ru_popup_button">
+      <div class="custom-box js_contact_us_ru_popup_button !fixed hidden">
         <span></span>
         <div class="custom-before"></div>
         <div>Написать нам</div>
@@ -84,176 +92,237 @@
       </div>
       <!--      -->
 
-      <div class="card-fullpage-filter-links mb-0 mt-16 mb-16 px-24">
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">0-3</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">4-6</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">7-9</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">10-15</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">15+</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">Новинки</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">Хиты</a>
-        <a href="#" class="card-fullpage-filter-link text-s font-medium">Случайная книга</a>
-      </div>
+      <div class="flex flex-col sm:flex-col-reverse">
+        <div class="card-fullpage-filter-links mb-0 mb-16 mt-16 px-24 sm:px-12 sm:mt-0">
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >0-3</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >4-6</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >7-9</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >10-15</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >15+</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Новинки</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Хиты</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Случайная книга</a
+          >
+        </div>
 
-      <div class="flex justify-between px-24 pt-10 pb-24 items-center sm:px-12 sm:py-16">
-        <p class="breadcrumbs">
-          <a class="text-s" href="#">Главная </a><span>/</span>
-          <a class="text-s" href="#">Книги </a><span>/</span>
-          <a class="text-s !text-black" href="#">Каталог проектов </a>
-
-        </p>
-        <div class="breadcrumbs-small-screen">
-          <div class="breadcrumbs-small-screen-image"></div>
-          <div class="breadcrumbs-small-screen-dots ">/</div>
-          <div class="breadcrumbs-small-screen-path">Книги</div>
-          <span>/</span>
-          <div class="breadcrumbs-small-screen-path !text-black">Каталог проектов</div>
+        <div
+          class="flex items-center justify-between px-24 pb-24 pt-10 sm:px-12 sm:py-16"
+        >
+          <p class="breadcrumbs">
+            <a class="text-s" href="#">Главная </a><span>/</span>
+            <a class="text-s" href="#">Книги </a><span>/</span>
+            <a class="text-s !text-black" href="#">Каталог проектов </a>
+          </p>
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">/</div>
+            <div class="breadcrumbs-small-screen-path">Книги</div>
+            <span>/</span>
+            <div class="breadcrumbs-small-screen-path !text-black">
+              Каталог проектов
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="px-24 flex flex-col gap-56 sm:px-12">
+
+      <div class="flex flex-col gap-56 px-24 sm:px-12">
         <!--    заголовок, описание, теги    -->
         <div class="flex flex-col">
-          <div class="font-medium text-7xl sm:text-4xl max-w-[82rem] mb-24">
+          <div class="mb-24 max-w-[82rem] text-7xl font-medium sm:text-4xl">
             Добро пожаловать на страницу с каталогом наших проектов
           </div>
-          <div class="text-15.20 font-normal max-w-[108rem] mb-32">
-            Здесь представлено собрание уникальных активностей, позволяющих профессионально развиваться в издательстве
-            книг. Здесь же вы найдёте информацию о наших писательских премиях и тематических проектах с участием целого
-            ряда писателей из нашего издательства.
+          <div class="mb-32 max-w-[108rem] text-15.20 font-normal">
+            Здесь представлено собрание уникальных активностей, позволяющих
+            профессионально развиваться в издательстве книг. Здесь же вы
+            найдёте информацию о наших писательских премиях и тематических
+            проектах с участием целого ряда писателей из нашего
+            издательства.
           </div>
-          <div class="card-fullpage-filter-links ">
+          <div class="card-fullpage-filter-links">
             <div>
-              <input type="checkbox" id="all-projects" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium !px-12 !py-4 !w-max" for="all-projects">Все проекты
-                <div><span class="count">12</span> <span class="cross"></span></div>
+              <input
+                type="checkbox"
+                id="all-projects"
+                class="sort-checkbox"
+              />
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="all-projects"
+              >Все проекты
+                <div>
+                  <span class="count">12</span> <span class="cross"></span>
+                </div>
               </label>
             </div>
             <div>
-              <input type="checkbox" id="contest" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="contest">Конкурсы
-                <div><span class="count">12</span> <span class="cross"></span></div>
+              <input type="checkbox" id="contest" class="sort-checkbox"/>
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="contest"
+              >Конкурсы
+                <div>
+                  <span class="count">12</span> <span class="cross"></span>
+                </div>
               </label>
             </div>
             <div>
-              <input type="checkbox" id="courses" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="courses">Курсы
-                <div><span class="count">12</span> <span class="cross"></span></div>
+              <input type="checkbox" id="courses" class="sort-checkbox"/>
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="courses"
+              >Курсы
+                <div>
+                  <span class="count">12</span> <span class="cross"></span>
+                </div>
               </label>
             </div>
             <div>
-              <input type="checkbox" id="project-1" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-1">Проект 1<span
-                class="cross"></span>
+              <input type="checkbox" id="project-1" class="sort-checkbox"/>
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="project-1"
+              >Проект 1<span class="cross"></span>
               </label>
             </div>
             <div>
-              <input type="checkbox" id="project-2" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-2">Проект 2<span
-                class="cross"></span>
+              <input type="checkbox" id="project-2" class="sort-checkbox"/>
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="project-2"
+              >Проект 2<span class="cross"></span>
               </label>
             </div>
             <div>
-              <input type="checkbox" id="project-3" class="sort-checkbox">
-              <label class="sort-label !border-black !font-medium  !px-12 !py-4 !w-max" for="project-3">Проект 3<span
-                class="cross"></span>
+              <input type="checkbox" id="project-3" class="sort-checkbox"/>
+              <label
+                class="sort-label !w-max !border-black !px-12 !py-4 !font-medium"
+                for="project-3"
+              >Проект 3<span class="cross"></span>
               </label>
             </div>
           </div>
-          <div class="flex flex-row flex-nowrap gap-8">
-
-          </div>
+          <div class="flex flex-row flex-nowrap gap-8"></div>
         </div>
 
         <!--    два проекта    -->
         <div class="grid grid-cols-1 gap-y-32">
           <div class="grid grid-cols-2 sm:grid-cols-1">
             <div class="block w-full">
-              <img class="w-full h-full block" src="../../img/catalog-project/catalog-project-pr-1.png" alt="">
+              <img
+                class="block h-full w-full"
+                src="../../img/catalog-project/catalog-project-pr-1.png"
+                alt=""
+              />
             </div>
-            <div class="h-auto w-full flex items-center justify-center
-            border
-            border-y-card-stroke
-            border-r-card-stroke border-l-white
-            sm:border-0
-            sm:justify-start sm:items-start
-            ">
-              <div class="flex flex-col gap-48 max-w-[52.8rem]
-               p-16 sm:gap-24
-               sm:max-w-[100rem] sm:px-0 sm:pb-0
-               ">
+            <div
+              class="flex h-auto w-full items-center justify-center border border-y-card-stroke border-l-white border-r-card-stroke sm:items-start sm:justify-start sm:border-0"
+            >
+              <div
+                class="flex max-w-[52.8rem] flex-col gap-48 p-16 sm:max-w-[100rem] sm:gap-24 sm:px-0 sm:pb-0"
+              >
                 <div class="flex flex-col gap-16 sm:gap-8">
                   <div class="text-4xl font-medium sm:text-2xl">
                     Писательская школа РОСМЭН
                   </div>
                   <div class="text-15.20 text-text">
-                    Писательская школа Росмэн это платформа онлайн-обучения для начинающих писателей.
+                    Писательская школа Росмэн это платформа онлайн-обучения
+                    для начинающих писателей.
                   </div>
                 </div>
                 <a class="" href="#">
-                  <button class="button-white font-medium max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
+                  <button
+                    class="button-white max-w-[16rem] font-medium sm:w-full sm:max-w-[100rem]"
+                  >
+                    Подробнее
+                  </button>
                 </a>
               </div>
             </div>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-1">
-            <div class="h-auto w-full flex items-center justify-center
-            border
-            border-y-card-stroke
-            border-l-card-stroke border-r-white
-            sm:border-0 sm:order-2
-            sm:justify-start sm:items-start
-            ">
-              <div class="flex flex-col gap-48 max-w-[52.8rem]
-                p-16 sm:gap-24
-                sm:max-w-[100rem] sm:px-0 sm:pb-0
-                ">
+            <div
+              class="flex h-auto w-full items-center justify-center border border-y-card-stroke border-l-card-stroke border-r-white sm:order-2 sm:items-start sm:justify-start sm:border-0"
+            >
+              <div
+                class="flex max-w-[52.8rem] flex-col gap-48 p-16 sm:max-w-[100rem] sm:gap-24 sm:px-0 sm:pb-0"
+              >
                 <div class="flex flex-col gap-16 sm:gap-8">
                   <div class="text-4xl font-medium sm:text-2xl">
                     Новая детская книга
                   </div>
                   <div class="text-15.20 text-text">
-                    Издательство «РОСМЭН»проводит XIV ежегодный литературный конкурс «Новая детская книга». Цели
-                    конкурса – привлечь внимание читателей к современной литературе, написанной на русском языке,
-                    открыть для широкой общественности новых талантливых авторов и иллюстраторов детских книг.
+                    Издательство «РОСМЭН»проводит XIV ежегодный литературный
+                    конкурс «Новая детская книга». Цели конкурса – привлечь
+                    внимание читателей к современной литературе, написанной
+                    на русском языке, открыть для широкой общественности
+                    новых талантливых авторов и иллюстраторов детских книг.
                   </div>
                 </div>
                 <a href="#">
-                  <button class="button-white font-medium max-w-[16rem] sm:w-full sm:max-w-[100rem]">Подробнее</button>
+                  <button
+                    class="button-white max-w-[16rem] font-medium sm:w-full sm:max-w-[100rem]"
+                  >
+                    Подробнее
+                  </button>
                 </a>
               </div>
             </div>
             <div class="block w-full sm:order-1">
-              <img class="w-full h-full block" src="../../img/catalog-project/catalog-project-2.png" alt="">
+              <img
+                class="block h-full w-full"
+                src="../../img/catalog-project/catalog-project-2.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
 
         <!--    похожие новости    -->
-        <div class="flex flex-col gap-40 mb-64">
+        <div class="mb-64 flex flex-col gap-40">
           <div class="text-5xl font-medium md:hidden">Похожие новости</div>
-          <div class="grid grid-cols-3 gap-x-16 gap-y-40 items-center md:hidden">
+          <div
+            class="grid grid-cols-3 items-center gap-x-16 gap-y-40 md:hidden"
+          >
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
@@ -262,24 +331,27 @@
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
@@ -288,24 +360,27 @@
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
@@ -314,24 +389,27 @@
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
@@ -340,24 +418,27 @@
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
@@ -366,35 +447,39 @@
             <div class="card_articles js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
                 <img
-                  src="../../img/cards_articles.svg"
+                  src="../../img/cards_article_small_fs.svg"
                   alt=""
                   class="articles_card_img item_card_img"
                 />
               </a>
+
               <div class="card_articles_description js-bg-changeable">
                 <div class="card_articles_tags dotted_tags">
                   <a href="#" class="card_articles_category dotted_tags_category">
-                    КРУГОЗОР
+                    СТАТЬИ
                   </a>
                   <div class="card_articles_separator dotted_tags_separator">•</div>
-                  <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                  <a href="#" class="card_articles_date dotted_tags_date">
+                    30.11.2022
+                  </a>
                 </div>
                 <a href="#" class="card_articles_info card_sel_info">
-                  <div class="card_articles_name card_sel_name">
+                  <div class="card_articles_name_sfs card_sel_name">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
-                  <div class="card_articles_text card_sel_text">
+                  <div class="card_articles_text_sfs card_sel_text">
                     Мелочь, а приятно: героям были возданы соответствующие почести
                   </div>
                 </a>
               </div>
             </div>
+
           </div>
-          <div class="hidden  md:!block">
+          <div class="hidden md:!block">
             <div class="swiper-catalog-projects overflow-hidden">
-              <div class="swiper-header !w-full !mb-0 !mt-0 sm:pr-12">
-                <h3 class="head-3 pb-24 ">Key persons</h3>
-                <div class="buttons !gap-24 !w-[5rem] ">
+              <div class="swiper-header !mb-0 !mt-0 !w-full sm:pr-12">
+                <h3 class="head-3 pb-24">Key persons</h3>
+                <div class="buttons !w-[5rem] !gap-24">
                   <div class="button-prev"></div>
                   <div class="button-next"></div>
                 </div>
@@ -402,7 +487,7 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide ">
+                <div class="swiper-slide">
                   <div class="card_articles js_traceable_item">
                     <a href="#" class="card_articles_image item_card_image">
                       <img
@@ -413,102 +498,31 @@
                     </a>
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
                           КРУГОЗОР
                         </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
                       </div>
                       <a href="#" class="card_articles_info card_sel_info">
                         <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                         <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="card_articles js_traceable_item">
-                    <a href="#" class="card_articles_image item_card_image">
-                      <img
-                        src="../../img/cards_articles.svg"
-                        alt=""
-                        class="articles_card_img item_card_img"
-                      />
-                    </a>
-                    <div class="card_articles_description js-bg-changeable">
-                      <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
-                          КРУГОЗОР
-                        </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
-                      </div>
-                      <a href="#" class="card_articles_info card_sel_info">
-                        <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                        <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="card_articles js_traceable_item">
-                    <a href="#" class="card_articles_image item_card_image">
-                      <img
-                        src="../../img/cards_articles.svg"
-                        alt=""
-                        class="articles_card_img item_card_img"
-                      />
-                    </a>
-                    <div class="card_articles_description js-bg-changeable">
-                      <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
-                          КРУГОЗОР
-                        </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
-                      </div>
-                      <a href="#" class="card_articles_info card_sel_info">
-                        <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                        <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="card_articles js_traceable_item">
-                    <a href="#" class="card_articles_image item_card_image">
-                      <img
-                        src="../../img/cards_articles.svg"
-                        alt=""
-                        class="articles_card_img item_card_img"
-                      />
-                    </a>
-                    <div class="card_articles_description js-bg-changeable">
-                      <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
-                          КРУГОЗОР
-                        </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
-                      </div>
-                      <a href="#" class="card_articles_info card_sel_info">
-                        <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
-                        </div>
-                        <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                       </a>
                     </div>
@@ -525,24 +539,37 @@
                     </a>
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
                           КРУГОЗОР
                         </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
                       </div>
                       <a href="#" class="card_articles_info card_sel_info">
                         <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                         <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide ">
+                <div class="swiper-slide">
                   <div class="card_articles js_traceable_item">
                     <a href="#" class="card_articles_image item_card_image">
                       <img
@@ -553,24 +580,37 @@
                     </a>
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
                           КРУГОЗОР
                         </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
                       </div>
                       <a href="#" class="card_articles_info card_sel_info">
                         <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                         <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide ">
+                <div class="swiper-slide">
                   <div class="card_articles js_traceable_item">
                     <a href="#" class="card_articles_image item_card_image">
                       <img
@@ -581,18 +621,154 @@
                     </a>
                     <div class="card_articles_description js-bg-changeable">
                       <div class="card_articles_tags dotted_tags">
-                        <a href="#" class="card_articles_category dotted_tags_category">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
                           КРУГОЗОР
                         </a>
-                        <div class="card_articles_separator dotted_tags_separator">•</div>
-                        <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
                       </div>
                       <a href="#" class="card_articles_info card_sel_info">
                         <div class="card_articles_name card_sel_name">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                         <div class="card_articles_text card_sel_text">
-                          Мелочь, а приятно: героям были возданы соответствующие почести
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_articles.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
+                          КРУГОЗОР
+                        </a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name card_sel_name">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                        <div class="card_articles_text card_sel_text">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_articles.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
+                          КРУГОЗОР
+                        </a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name card_sel_name">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                        <div class="card_articles_text card_sel_text">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_articles js_traceable_item">
+                    <a href="#" class="card_articles_image item_card_image">
+                      <img
+                        src="../../img/cards_articles.svg"
+                        alt=""
+                        class="articles_card_img item_card_img"
+                      />
+                    </a>
+                    <div class="card_articles_description js-bg-changeable">
+                      <div class="card_articles_tags dotted_tags">
+                        <a
+                          href="#"
+                          class="card_articles_category dotted_tags_category"
+                        >
+                          КРУГОЗОР
+                        </a>
+                        <div
+                          class="card_articles_separator dotted_tags_separator"
+                        >
+                          •
+                        </div>
+                        <a
+                          href="#"
+                          class="card_articles_date dotted_tags_date"
+                        >30.11.2022</a
+                        >
+                      </div>
+                      <a href="#" class="card_articles_info card_sel_info">
+                        <div class="card_articles_name card_sel_name">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
+                        </div>
+                        <div class="card_articles_text card_sel_text">
+                          Мелочь, а приятно: героям были возданы
+                          соответствующие почести
                         </div>
                       </a>
                     </div>
@@ -601,11 +777,12 @@
               </div>
             </div>
           </div>
-          <button class="block sm:hidden pagination-more-button js-rm-pag-more-btn">
+          <button
+            class="pagination-more-button js-rm-pag-more-btn block sm:hidden"
+          >
             Ещё новости
           </button>
         </div>
-
       </div>
 
       <!-- тут ниже футер -->
@@ -614,7 +791,10 @@
     </div>
   </div>
 </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="module" src="./js/scripts.js"></script>
 </body>
