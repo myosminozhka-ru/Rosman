@@ -1,0 +1,68 @@
+.input {
+  @apply border border-card-stroke px-16 py-10 text-xl;
+  &:hover {
+    @apply border-black;
+  }
+  &:active {
+    @apply border-black;
+  }
+  &:focus {
+    @apply border-black shadow-none ring-0 ring-black;
+  }
+  &:disabled {
+    @apply border-grey text-grey shadow-none ring-0 ring-grey;
+  }
+  &.hover {
+    @apply border-black;
+  }
+  &.input-active {
+    @apply border-black;
+  }
+  &.error {
+    @apply border-red;
+    background: url('../../img/error.png') no-repeat 90% 50%;
+  }
+  &.success {
+    @apply border-green;
+    background: url('../../img/success.png') no-repeat 90% 50%;
+  }
+  &.search {
+    background: url('../../img/search.svg') no-repeat 99% 50%;
+    background-size: 2rem 2rem;
+  }
+}
+
+//.ui-form-input {
+//  font-weight: 400;
+//  font-size: 13px;
+//  line-height: em(18, 13);
+//  color: #808080;
+//  border: 1px solid #d9d9d9;
+//  padding: em(11, 13) em(9, 13);
+//  outline: none;
+//
+//  &::placeholder {
+//    color: #000000;
+//  }
+//
+//  &:hover {
+//    border-color: $black;
+//  }
+//
+//  &:disabled:hover {
+//    border-color: #d9d9d9;
+//  }
+//
+//  &:focus {
+//    border-color: $black;
+//    color: $black;
+//  }
+//
+//  &.--error {
+//    border-color: $red;
+//  }
+//
+//  &.--success {
+//    border-color: $green;
+//  }
+//}

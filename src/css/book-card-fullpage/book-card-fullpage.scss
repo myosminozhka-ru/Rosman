@@ -1,0 +1,121 @@
+.card-fp-desc-brand-small {
+  @apply w-auto bg-background;
+  max-width: max-content;
+}
+
+#above-block.card-fullpage-modified-above-block {
+  @apply p-0;
+}
+
+.card-fp-desc-brand-content-small {
+  @apply flex-row-reverse items-center gap-32 bg-background py-18;
+}
+
+.card-fp-desc-brand-info-small {
+  @apply gap-8;
+}
+
+.card_brand_all_items.card-fp-desc-brand-items-small {
+  @apply py-2 text-s;
+}
+
+.card-fp-desc-brand-name-small {
+  @apply text-2xl;
+}
+
+.card-fp-desc-brand-image-small {
+  @apply block h-32 w-32;
+}
+
+// описание - большая картинка card-fullpage-desc-image
+.card-descr-text-flex-item {
+  @apply text-15.20;
+}
+
+.card-descr-text-flex {
+  @apply flex flex-col gap-24;
+}
+
+.book-card-fp-author {
+  @apply flex flex-row gap-32 sm:flex-col;
+}
+
+.author-avatar {
+  width: 8.8rem;
+  height: 8.8rem;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+.book-card-fp-author-text {
+  @apply flex w-7/12 flex-col gap-20 sm:w-full;
+}
+
+.book-card-fp-author-text-item {
+  @apply text-15.20;
+}
+
+// фильтры по возрастам или это быстрый переход к поиску
+.card-fullpage-filter-links {
+  @apply flex flex-row gap-8;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.card-fullpage-filter-links::-webkit-scrollbar {
+  display: none;
+}
+
+.card-fullpage-filter-links {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-fullpage-filter-links::-webkit-scrollbar {
+  display: none;
+}
+
+.card-fullpage-filter-link {
+  @apply inline-block px-12 py-4;
+  border-radius: 1.5rem;
+  border: 1px solid black;
+
+  &:hover {
+    border-color: yellow;
+  }
+
+  &:active {
+    @apply bg-yellow;
+  }
+}
+
+.slider-main {
+  -webkit-appearance: none;
+  height: 0.4rem;
+  background: linear-gradient(90deg, black 60%, #e3e3e2 60%);
+  outline: none;
+}
+
+.slider-main::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  cursor: pointer;
+}
+
+.slider-main::-moz-range-thumb {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  cursor: pointer;
+}

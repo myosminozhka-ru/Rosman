@@ -1,0 +1,105 @@
+<!-- js_traceable_item будет применяться к всей карточке целиком -->
+<!-- а js-hovered только к элементам с изменяющимся фоном с классом js-bg-changeable-->
+
+<div class="cards_wrapper">
+  <!-- карточка ИГРУШКИ -->
+  <div class="toy_card item_card">
+    <div class="toy_card_heading">
+      <div class="item_card_tags bordered_tags">
+        <div class="item_card_tags_main bordered_tags_main">
+          <a
+            href="#"
+            class="toy_card_tags_first bordered_tags_item body-s-bold"
+          >
+            Бестселлер
+          </a>
+          <a
+            href="#"
+            class="toy_card_tags_second bordered_tags_item body-s-bold"
+          >
+            Новинка
+          </a>
+        </div>
+        <div class="toy_card_tags_age body-s-bold">8+</div>
+      </div>
+      <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+      <div class="running-stroke">
+        <div class="marquee">
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+          <span>скидка 15%</span>
+        </div>
+      </div>
+      <div class="toy_card_image item_card_image">
+        <img
+          class="toy_card_img item_card_img"
+          src="./img/cards_toy.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="toy_card_info item_card_info">
+      <div class="toy_card_name item_card_name">
+        Арена для баттлов Инфинити Надо
+      </div>
+      <div class="toy_card_more item_card_more">
+        <button class="toy_card_item_link item_card_link overline-button">
+          Подробнее
+        </button>
+        <button class="item_card_add_to_favourite"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- карточка КНИГИ -->
+  <div class="book_card js_item_card item_card">
+    <div class="book_card_heading">
+      <div class="item_card_tags bordered_tags">
+        <div class="item_card_tags_main bordered_tags_main">
+          <a
+            href="#"
+            class="book_card_tags_first bordered_tags_item body-s-bold"
+          >
+            Бестселлер
+          </a>
+          <a
+            href="#"
+            class="book_card_tags_second bordered_tags_item body-s-bold"
+          >
+            Новинка
+          </a>
+        </div>
+        <div class="book_card_tags_age body-s-bold">8+</div>
+      </div>
+
+      <div class="book_card_image item_card_image">
+        <img
+          class="book_card_img item_card_img"
+          src="./img/cards_book.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="book_card_info item_card_info">
+      <div class="book_card_name item_card_name">
+        Чародол. Весь цикл в одном томе
+      </div>
+      <div class="book_card_author">Щерба Н. В.</div>
+      <div class="book_card_more item_card_more">
+        <button class="book_card_item_link item_card_link overline-button">
+          Подробнее
+        </button>
+        <button class="item_card_add_to_favourite"></button>
+      </div>
+    </div>
+  </div>
+</div>

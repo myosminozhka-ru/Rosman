@@ -26,7 +26,6 @@ yarn.lock
 package-lock.json
 
 
-src/
 dist/
 build/
 config.js
