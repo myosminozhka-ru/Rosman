@@ -23,13 +23,23 @@ module.exports = {
       'menu': '165px',
       'inner-menu': '216px',
       "5xl": '115rem',
-      "8.8": "8.8rem"
+      "8.8": "8.8rem",
+      "25": "25rem"
+    },
+    minWidth: {
+      '4': '4rem',
     },
     screens: {
       sm: {max: "639px"},
-      md: {max: "768px"},
+      ipadmini: {max: "768px"},
+      surfaceduo: {"max": "500px"},
+      md: {max: "868px"},
       ssm: {max: "400px"},
+      msm: {max: "500px"},
       bs: {max: "999px"},
+      bsmax: {max: "1099px"},
+      bsmin: {min: "1100px"},
+      shs: {max: "1200"},
       hs: {max: "1500px"}
     },
     fontSize: {
@@ -48,8 +58,11 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
+      "60.104": ["6rem", "104%"],
+      "8xl": ["9.6rem", "6rem"],
     },
     colors: {
+      "transparent": "transparent",
       "purple-1": "#06083D",
       "purple-2": "#311166",
       "purple-3": "#1F1871",
@@ -57,7 +70,7 @@ module.exports = {
       "purple-5": "#AF74E9",
       "blue-1": "#0070EA",
       "blue-2": "#4498FC",
-      green: "#33C15B",
+      green: "#35CC66",
       yellow: "#FFF145",
       black: "#000000",
       text: "#808080",
@@ -77,8 +90,16 @@ module.exports = {
       "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        'prev-arrow': "url('../../img/prev.png')",
+        'next-arrow': "url('../../img/next.png')",
+      },
       spacing: {
+        '2px': '2px',
+        1: "0.1rem",
+        2: "0.2rem",
         4: "0.4rem",
+        6: "0.6rem",
         8: "0.8rem",
         10: "1rem",
         12: "1.2rem",
@@ -100,6 +121,7 @@ module.exports = {
         35: "3.5rem",
         36: "3.6rem",
         40: "4rem",
+        42: "4.2rem",
         44: "4.4rem",
         45: "4.5rem",
         46: "4.6rem",
@@ -108,6 +130,7 @@ module.exports = {
         52: "5.2rem",
         55: "5.5rem",
         56: "5.6rem",
+        58: "5.8rem",
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",
@@ -123,13 +146,21 @@ module.exports = {
         190: "45rem",
         200: "50.9rem",
       },
-
-
+      lineHeight: {
+        'sup': '4.4rem',
+        'sup-2': '3.4rem',
+      },
+      flexBasis: {
+        '1/10': '10%',
+        '5/10': '50%',
+        '6/10': '60%',
+      },
       borderRadius: {},
       zIndex: {
         '100': '100',
         '900': '900',
         '1000': '1000',
+        '1001': '1001',
         '9999': "9999",
       },
 

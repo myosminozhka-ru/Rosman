@@ -116,15 +116,17 @@ if (jsMdbAuthorButton) {
 
 
 // убрать текст у видео при полной ширине экрана
-const videoItems = document.querySelectorAll('.card_video_item');
-
-// Перебираем каждый элемент
-videoItems.forEach((item) => {
-  if (item.classList.contains('full-width')) {
-    const titleElement = item.querySelector('.card_video_title');
-    titleElement.style.display = 'none';
-  }
-});
+// const videoItems = document.querySelectorAll('.card_video_item');
+//
+// // Перебираем каждый элемент
+// if (videoItems) {
+//   videoItems.forEach((item) => {
+//     if (item.classList.contains('full-width')) {
+//       const titleElement = item.querySelector('.card_video_title');
+//       titleElement.style.display = 'none';
+//     }
+//   });
+// }
 
 // еще один слайдер
 const imageContainer = document.querySelector('.card-fullpage-image-container');
@@ -149,9 +151,169 @@ dots.forEach((dot, index) => {
 
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".js-book-text-container");
+const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
 if (jsBookToggleButton && jsBookTextContainer) {
   jsBookToggleButton.addEventListener('click', function () {
-    jsBookTextContainer.classList.toggle('h-full');
+    jsBookTextContainer.classList.toggle('line-clamp-none');
   });
+}
+
+// swiper fullpage
+const swiperImage2 = new Swiper('.swiper-image-2', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+  },
+});
+
+
+// Инициализация превью слайдера
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 5, // показывать по 3 превью
+  spaceBetween: 14, // расстояние между слайдами
+  navigation: { // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev' // кнопка Prev
+  },
+  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  breakpoints: { // условия для разных размеров окна браузера
+    0: { // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+    },
+    768: { // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    }
+  }
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 14, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: { // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev' // кнопка Prev
+  },
+  grabCursor: true, // менять иконку курсора
+  thumbs: { // указываем на превью слайдер
+    swiper: sliderThumbs // указываем имя превью слайдера
+  },
+  breakpoints: { // условия для разных размеров окна браузера
+    0: { // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+    },
+    768: { // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    }
+  }
+});
+
+// слайдер - смотреть фрагмент книги
+const swiperBookFragment = new Swiper('.swiper-book-fragment', {
+  loop: false,
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  allowTouchMove: false,
+  slidesPerView: 1,
+  spaceBetween: 16,
+});
+
+const sliderMain = document.querySelector(".slider-main");
+const sliderPages = document.querySelectorAll(".slider-page");
+
+if (sliderPages && sliderMain) {
+  sliderPages.forEach(function (sliderPage) {
+    sliderPage.textContent = sliderMain.value;
+  });
+  const max = sliderMain.max;
+  const step = 100 / (max - 1);
+  window.addEventListener("mousemove", function () {
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(sliderMain.value) - 1;
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+
+  sliderMain.addEventListener("input", function () {
+
+
+    const currentValue = parseInt(this.value);
+    if (currentValue > swiperBookFragment.slides.length) {
+      this.value = swiperBookFragment.slides.length;
+    }
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(this.value) - 1;
+    if (slideNumber <= swiperBookFragment.slides.length) {
+      swiperBookFragment.slideTo(slideNumber);
+    }
+
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+}
+
+// тут кнопки для переключения слайдов,
+// события перестают генерироваться, если значение инпута больше количества слайдов
+const nextButtonFragment = document.querySelector(".bg-next-arrow")
+const prevButtonFragment = document.querySelector(".bg-prev-arrow")
+if (nextButtonFragment) {
+  nextButtonFragment.onclick = function () {
+    const nextValue = parseInt(sliderMain.value) + 1;
+    if (nextValue <= swiperBookFragment.slides.length) {
+      sliderMain.value = nextValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
+
+if (prevButtonFragment) {
+  prevButtonFragment.onclick = function () {
+    const prevValue = parseInt(sliderMain.value) - 1;
+    if (prevValue >= 1) {
+      sliderMain.value = prevValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
 }

@@ -1,0 +1,96 @@
+<div class="js_popup_all_filters_modal modal sm:!pt-[20rem]">
+  <div class="popup_all_filters_content
+  !pb-60
+  !gap-40 !p-0
+ sm:bg-grey sm:!pb-32">
+
+    <div class="popup_all_filters_heading bg-background px-24 py-16 !gap-16">
+      <div class="popup_all_filters_header !items-center">
+        <div class="flex flex-row flex-nowrap items-center gap-16">
+          
+          <div class="flex flex-row flex-nowrap items-center">
+            <button class="p-0 h-20 w-20 block">
+              <img class="h-10 w-6" src="../../img/card-fullpage/arrow-small-backward.svg" alt="">
+            </button>
+            <div class="text-s">
+              Евгений Гаглоев. «Иллюзион» фрагмент
+            </div>
+          </div>
+
+          <div class="button-black !px-16 !py-12 text-15.20 font-medium cursor-pointer block sm:hidden">
+            Купить полную версию
+          </div>
+        </div>
+        
+        <div
+          class="js_popup_all_filters_close_button
+           ui-popup-close-button"
+        ></div>
+      
+      </div>
+
+      <div class="hidden flex flex-nowrap flex-row justify-between items-center sm:flex">
+        <div class="link-s-bold">Купить полную версию</div>
+        <div class="text-s flex flex-row flex-nowrap">
+          Страница: &nbsp <span class="slider-page">5</span>&nbspиз&nbsp<span> 456 </span>
+        </div>
+      </div>
+    
+    </div>
+
+
+    <!--  основное описание и часть текста книги  -->
+
+    <div class="swiper-book-fragment overflow-hidden">
+      <div class="flex flex-row flex-nowrap items-center justify-end sm:hidden">
+        <div class="pup-buttons flex flex-row flex-nowrap gap-16 pr-24">
+          <div class="bg-prev-arrow button-prev bg-center h-20 w-20 block"></div>
+          <div class="bg-next-arrow button-next bg-center h-20 w-20 block"></div>
+        </div>
+      </div>
+      <div class="swiper-header !w-full sw-head-mod">
+      </div>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper !items-end">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-1.html', {})
+        </div>
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-2.html', {})
+        </div>
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-3.html', {})
+        </div>
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-1.html', {})
+        </div>
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-2.html', {})
+        </div>
+        <div class="swiper-slide">
+          @@include('../../ui-kit/popups/soderzh-pages/page-3.html', {})
+        </div>
+      </div>
+    </div>
+    <!--  тут будет ползунок для  прокрутки -->
+    <div class="px-24
+    sm:px-12 flex
+    flex-col gap-8 items-end
+    relative
+    block sm:hidden
+    ">
+
+
+      <div class="slide-main-cont w-full">
+        <input type="range"
+               min="1" max="456"
+               value="1" id="my-range-main"
+               class="slider-main w-full">
+      </div>
+      <div class="text-2.5xl text-text flex flex-row flex-nowrap">
+        Страница: &nbsp <span class="slider-page">5</span>&nbspиз&nbsp<span> 456 </span>
+      </div>
+    </div>
+  </div>
+</div>

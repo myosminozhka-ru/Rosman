@@ -100,6 +100,20 @@ const jsPopupBrandFiltersModal = document.querySelector(
   ".js_popup_brand_filters_button"
 );
 
+const jsPopupWishlistFiltersButton = document.querySelector(
+  ".js_popup_wishlist_filters_modal"
+);
+const jsPopupWishlistFiltersModal = document.querySelector(
+  ".js_popup_wishlist_filters_button"
+);
+
+const jsPopupWishlistSortButton = document.querySelector(
+  ".js_popup_wishlist_sort_modal"
+);
+const jsPopupWishlistSortModal = document.querySelector(
+  ".js_popup_wishlist_sort_button"
+);
+
 const popups = [
   [jsPopupContactUsRuModal, jsContactUsRuPopupButton],
   [jsPopupContactUsEngModal, jsContactUsEngPopupButton],
@@ -112,6 +126,8 @@ const popups = [
   [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
   [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
   [jsPopupBrandFiltersButton, jsPopupBrandFiltersModal],
+  [jsPopupWishlistFiltersButton, jsPopupWishlistFiltersModal],
+  [jsPopupWishlistSortButton, jsPopupWishlistSortModal],
 ];
 
 for (let i = 0; i < popups.length; i++) {
@@ -166,5 +182,20 @@ if (phoneNumber) {
     if (curLen > 15)
       phoneNumber.value = phoneNumber.value.substring(0, phoneNumber.value.length - 1);
     old++;
+  }
+}
+
+const brandPopupCheckboxes = document.querySelectorAll(".checkbox_overlay")
+
+if (brandPopupCheckboxes) {
+  for (let i = 0; i < brandPopupCheckboxes.length; i++) {
+    brandPopupCheckboxes[i].addEventListener("click", function (event) {
+      const checkboxPpb = this.nextElementSibling;
+      if (this.checked) {
+        checkboxPpb.style.display = "block"
+      } else {
+        checkboxPpb.style.display = ""
+      }
+    })
   }
 }
