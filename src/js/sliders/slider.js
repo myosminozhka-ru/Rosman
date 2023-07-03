@@ -1,23 +1,22 @@
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded swiper");
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('Loaded swiper');
 });
-
 
 const swiper = new Swiper('.swiper', {
   loop: false,
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   autoHeight: true,
   slidesPerView: 5,
   spaceBetween: 30,
 });
 
-const personsSLider = new Swiper(".persons-slider", {
+const personsSLider = new Swiper('.persons-slider', {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   autoHeight: true,
   slidesPerView: 1.2,
@@ -34,7 +33,6 @@ const personsSLider = new Swiper(".persons-slider", {
   //   },
   // },
 });
-
 
 const swiperImage = new Swiper('.swiper-image', {
   loop: false,
@@ -73,19 +71,18 @@ const runStroke = new Swiper('.swiper-container', {
   loop: false,
   autoplay: {
     delay: 20,
-    disableOnInteraction: false, 
+    disableOnInteraction: false,
   },
   speed: 6000,
   slidesPerView: 6,
 });
 
-
 const runStrokeReverse = new Swiper('.swiper-container-reverse', {
   loop: false,
   autoplay: {
     delay: 20,
-    disableOnInteraction: false, 
-    reverseDirection: true, 
+    disableOnInteraction: false,
+    reverseDirection: true,
   },
   speed: 6000,
   slidesPerView: 6,
