@@ -89,6 +89,7 @@
   @media screen and (max-width: 700px) {
     top: 0.5rem;
     rotate: 160deg;
+    animation: rotate-secondary-2 6s linear infinite;
   }
   @media (min-width: 1500px) {
     left: 0.5rem;
@@ -103,6 +104,7 @@
   @media screen and (max-width: 700px) {
     top: -0.5rem;
     rotate: 160deg;
+    animation: rotate-secondary-2 6s linear infinite;
   }
   @media (min-width: 1500px) {
     right: 0.5rem;
@@ -168,6 +170,24 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-secondary-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-central-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
