@@ -843,9 +843,9 @@
           <h3 class="head-3">Где купить</h3>
           <h6 class="head-6 mt-12 text-text">РОСМЕН на маркетплейсах:</h6>
 
-          <div class="mt-40 grid grid-cols-12 gap-16 sm:mt-24">
+          <div class="mt-40 grid grid-cols-12 gap-16 md:grid-cols-1 sm:mt-24">
             <div
-              class="col-span-3 flex flex-col items-center justify-center gap-16 border-[0.1rem] border-solid border-grey bg-yellow sm:gap-24"
+              class="col-span-3 flex min-h-[18rem] flex-col items-center justify-center gap-16 border-[0.1rem] border-solid border-grey bg-yellow px-10 bs:col-span-4 md:col-span-1 sm:gap-24"
             >
               <p class="body-l text-center">
                 Выберите бренд, и мы покажем, где его купить
@@ -854,39 +854,46 @@
             </div>
 
             <div
-              class="col-span-9 grid grid-cols-2 border-[0.1rem] border-solid border-grey px-40"
+              class="col-span-9 grid grid-cols-2 gap-16 border-[0.1rem] border-solid border-grey bg-background px-40 py-20 bs:col-span-8 md:col-span-1 sm:px-20"
             >
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/card-fullpage/ozon.svg"
                 alt="marketplace"
               />
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/card-fullpage/wildberries.svg"
                 alt="marketplace"
               />
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/yandex-market.svg"
                 alt="marketplace"
               />
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/card-fullpage/ozon.svg"
                 alt="marketplace"
               />
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/yandex-market.svg"
                 alt="marketplace"
               />
               <img
-                class="object-contain px-10 py-20"
+                class="h-[8rem] w-[52rem] object-contain px-10 py-24 grayscale sm:h-[4rem] sm:py-10"
                 src="./img/card-fullpage/ozon.svg"
                 alt="marketplace"
               />
             </div>
+          </div>
+        </div>
+
+        <div class="mb-88 mt-88 sm:mb-48 sm:mt-48">
+          <h2 class="head-2 px-24 sm:px-12">Наши партнёры</h2>
+          <div class="mt-56 sm:mt-24">
+            @@include('components/ui-kit/sliders/run-stroke.html', { }, )
           </div>
         </div>
 

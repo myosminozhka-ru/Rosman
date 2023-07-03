@@ -831,19 +831,18 @@ header {
       }
     }
 
-      .button-prev,
-      .button-next {
-        display: block;
-        background: url('../../img/next.png') no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+    .button-prev,
+    .button-next {
+      display: block;
+      background: url('../../img/next.png') no-repeat center;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
 
-        &:hover {
-          transform: scale(1.2);
-        }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
