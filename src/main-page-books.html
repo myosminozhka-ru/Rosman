@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог Авторов</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    @@include('components/header/header-main.html', { }, )
+    <div id="yellow-background">
+      <div id="moving-block"></div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div class="flex flex-wrap justify-start px-24">
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">4-6</p>
+          <p class="filter-label header">7-9</p>
+          <p class="filter-label header">10-15</p>
+          <p class="filter-label header">15+</p>
+          <p class="filter-label header">Новинки</p>
+          <p class="filter-label header">Хиты</p>
+          <p class="filter-label header">Случайная карта</p>
+        </div>
+
+        <div class="flex justify-between">
+          <p class="breadcrumbs p-24">
+            <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
+            ><span>/</span>
+            <a class="active-js" href="#">Книги</a>
+          </p>
+          <div class="breadcrumbs-small-screen px-24">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">
+              ...
+              <div class="breadcrumbs-arrow"></div>
+              <div class="breadcrumbs-path-hidden"></div>
+            </div>
+            <div class="breadcrumbs-small-screen-path">Книги</div>
+          </div>
+          <div class="breadcrumbs-icons">
+            <a href="#" class="item_card-external-link"></a>
+            <button class="item_card_add_to_favourite"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
