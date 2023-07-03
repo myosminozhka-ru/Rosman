@@ -16,17 +16,8 @@
         <div id="white-mobile-background"></div>
         <div id="above-block" class="!p-0">
           <div class="flex flex-col gap-24 !p-24 sm:!p-12">
-            <div class="flex items-center justify-between">
-              <p class="breadcrumbs">
-                <a class="text-s" href="#">Главная </a><span>/</span>
-                <a class="text-s" href="#">Избранное</a>
-              </p>
-              <div class="breadcrumbs-small-screen">
-                <div class="breadcrumbs-small-screen-image"></div>
-                <div class="breadcrumbs-small-screen-dots">/</div>
-                <div class="breadcrumbs-small-screen-path">Избранное</div>
-              </div>
-            </div>
+            @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+
             <div
               class="mb-14 flex flex-row items-center justify-between sm:!mb-0"
             >
@@ -38,7 +29,7 @@
           <div class="mb-40 flex flex-row flex-nowrap gap-16 !p-24 sm:!p-12">
             <form
               id="filter-form-1"
-              class="filters-block filter-form-brands-result !w-[1%] md:hidden"
+              class="filters-block filter-form-brands-result w-1/4 md:hidden"
             >
               <p class="mobile-p">Фильтры</p>
               <span id="close-filter"> </span>

@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries")
+  containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -20,36 +20,35 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      'menu': '165px',
-      'inner-menu': '216px',
-      "5xl": '115rem',
+      menu: "165px",
+      "inner-menu": "216px",
+      "5xl": "115rem",
       "8.8": "8.8rem",
       "25": "25rem"
     },
+    screens: {
+      hs: { max: "1500px" },
+      shs: { max: "1200" },
+      bsmin: { min: "1100px" },
+      bsmax: { max: "1099px" },
+      bs: { max: "999px" },
+      ipadmini: {max: "768px"},
+      md: { max: "768px" },
+      sm: { max: "639px" },
+      surfaceduo: {"max": "500px"},
+      msm: {max: "500px"},
+      ssm: { max: "400px" },
+    },
     minWidth: {
       '4': '4rem',
-    },
-    screens: {
-      sm: {max: "639px"},
-      ipadmini: {max: "768px"},
-      surfaceduo: {"max": "500px"},
-      md: {max: "868px"},
-      ssm: {max: "400px"},
-      msm: {max: "500px"},
-      bs: {max: "999px"},
-      bsmax: {max: "1099px"},
-      bsmin: {min: "1100px"},
-      shs: {max: "1200"},
-      hs: {max: "1500px"}
     },
     fontSize: {
       l: ["1.7rem", "2.4rem"],
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
       xl: ["1.3rem", "1.8rem"],
-      '11.14': ["1.1rem", "1.4rem"],
-      // добавил класс для всплывашки у попапа
-      '12.20.4': ["1.2rem", "2.04rem"],
+      11.14: ["1.1rem", "1.4rem"],
+      "12.20.4": ["1.2rem", "2.04rem"],
       "15.20": ["1.5rem", "2rem"],
       "2xl": ["2.1rem", "2.4rem"],
       "2.5xl": ["1.7rem", "2.4rem"],
@@ -81,12 +80,8 @@ module.exports = {
       red: "#FF0053",
       orange: "#FF8500",
       "orange-text": "#F46300",
-
-      // base-transition: 0.2s ease,
     },
     fontFamily: {
-      // sans: ['Graphik', 'sans-serif'],
-      // serif: ['Merriweather', 'serif'],
       "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
@@ -166,7 +161,6 @@ module.exports = {
         '1001': '1001',
         '9999': "9999",
       },
-
     },
   },
   plugins: plugins,
