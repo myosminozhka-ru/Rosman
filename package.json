@@ -32,7 +32,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp prod",
-    "prod": "gulp prod"
+    "prod": "gulp prod",
+    "pretty": "prettier --write \"src/**/*.{js,css,scss,html,json}\""
   },
   "repository": {
     "type": "git",

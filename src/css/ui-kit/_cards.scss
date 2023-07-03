@@ -7,6 +7,7 @@
 }
 
 // карточка игрушки и книги
+
 // card's top
 .toy_card {
   @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
@@ -30,7 +31,7 @@
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
 
   &:hover {
-    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+    box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
   }
 }
 
@@ -89,6 +90,9 @@
   border: 1px solid #000000;
   @media screen and (max-width: 400px) {
     @apply w-1/2 text-center;
+  }
+  @media screen and (max-width: 900px) {
+    @apply px-4;
   }
 }
 
@@ -151,12 +155,12 @@
 
 .item_card_add_to_favourite {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_white.svg") no-repeat center;
+  background: url('../../img/heart_white.svg') no-repeat center;
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_black.svg") no-repeat center;
+  background: url('../../img/heart_black.svg') no-repeat center;
 }
 
 .add_to_favourite_img {
@@ -177,9 +181,12 @@
 
 .card_selection_description {
   @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm:pt-16;
+  @media screen and (max-width: 639px) {
+    padding-top: 1.6rem;
+  }
 
   &:hover {
-    @apply border-0;
+    border-color: transparent;
   }
 }
 
@@ -188,7 +195,7 @@
 }
 
 .dotted_tags_category {
-  @apply text-xl font-normal text-black;
+  @apply text-xl font-medium text-black;
 }
 
 .dotted_tags_separator {
@@ -200,6 +207,10 @@
   @media screen and (max-width: 400px) {
     @apply text-xl;
   }
+}
+
+.js_traceable_item:hover .dotted_tags_date {
+  @apply text-black;
 }
 
 .card_sel_info {
@@ -236,7 +247,7 @@
   @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm:border-x sm:border-b sm:border-t-0;
 
   &:hover {
-    @apply border-0;
+    border-color: transparent;
   }
 }
 
@@ -264,7 +275,7 @@
   @apply box-border flex flex-col gap-12 border-x border-b border-card-stroke px-12 pb-12 pt-16;
 
   &:hover {
-    @apply border-0;
+    border-color: transparent;
   }
 }
 
@@ -334,8 +345,8 @@
 .card_brand_image {
   @apply block bg-white;
   max-width: 15rem;
-  //max-height: 9rem;
-  //aspect-ratio: 16/9;
+  max-height: 9rem;
+  aspect-ratio: 15/9;
 }
 
 .card_brand_image img {
@@ -354,7 +365,7 @@
 }
 
 .card_book_image {
-  @apply h-40 w-40 w-56 ssm:h-56;
+  @apply h-40 w-40;
 }
 
 .card_book_img {
@@ -365,12 +376,12 @@
 }
 
 .card_book_link {
+  @apply w-max;
 }
 
 // КАРТОЧКА КАРЬЕРА
 .card_career {
   @apply flex flex-col flex-nowrap items-start gap-16 bg-white px-32 pb-60 pt-32;
-  max-width: 60rem;
   border: 1px solid #d9d9d9;
 }
 
@@ -464,7 +475,7 @@
 
 .card_career_img {
   @apply block h-20 w-20;
-  background: url("../../img/cards_career_arrow.svg") no-repeat center;
+  background: url('../../img/cards_career_arrow.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -473,7 +484,7 @@
   @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
   width: 29.6rem;
   height: 22.2rem;
-  background-image: url("../../img/cards_brand_socials.svg");
+  background-image: url('../../img/cards_brand_socials.svg');
   background-position: center center;
 }
 
@@ -489,6 +500,14 @@
   @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
   top: 6%;
   left: 6%;
+}
+
+.card_brand_links {
+  @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .card_brand_with_socs_item_page {
@@ -534,7 +553,7 @@
 }
 
 .card_photogallery_item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -592,11 +611,11 @@
 }
 
 .card_video_title {
-  @apply text-2.5xl;
+  @apply text-2.5xl sm:text-15.20;
 }
 
 .card_video_preview::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -619,6 +638,10 @@
 .card_employee_image {
   @apply relative cursor-pointer;
   max-width: 100%;
+}
+
+.card_employee_image:hover {
+  box-shadow: -1.505px 0px 0px 0px lightgray;
 }
 
 .card_employee:hover .card_employee_info {
@@ -652,7 +675,7 @@
 }
 
 .card_employee_image::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -697,38 +720,38 @@
 }
 
 .emp_soc_fb {
-  background: url("../../img/icon-white-facebook.svg") no-repeat;
+  background: url('../../img/icon-white-facebook.svg') no-repeat;
 }
 
 .emp_soc_fb:hover {
-  background-image: url("../../img/icon-black-facebook.svg");
+  background-image: url('../../img/icon-black-facebook.svg');
   background-position: center center;
 }
 
 .emp_soc_twit {
-  background: url("../../img/icon-white-twitter.svg") no-repeat;
+  background: url('../../img/icon-white-twitter.svg') no-repeat;
 }
 
 .emp_soc_twit:hover {
-  background-image: url("../../img/icon-black-twitter.svg");
+  background-image: url('../../img/icon-black-twitter.svg');
   background-position: center center;
 }
 
 .emp_soc_pint {
-  background: url("../../img/icon-white-pint.svg") no-repeat;
+  background: url('../../img/icon-white-pint.svg') no-repeat;
 }
 
 .emp_soc_pint:hover {
-  background-image: url("../../img/icon-black-pinterest.svg");
+  background-image: url('../../img/icon-black-pinterest.svg');
   background-position: center center;
 }
 
 .emp_soc_inst {
-  background: url("../../img/icon-white-inst.svg") no-repeat;
+  background: url('../../img/icon-white-inst.svg') no-repeat;
 }
 
 .emp_soc_inst:hover {
-  background-image: url("../../img/icon-black-instagram.svg");
+  background-image: url('../../img/icon-black-instagram.svg');
   background-position: center center;
 }
 
@@ -738,7 +761,6 @@
 }
 
 .card_awards_image {
-  height: 128px;
   background-size: cover;
   background-position: center;
 }
@@ -749,6 +771,10 @@
 
 .card_awards_year {
   @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
+}
+
+.card_awards:hover .card_awards_year {
+  @apply bg-white;
 }
 
 .card_awards_title {

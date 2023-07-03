@@ -148,43 +148,46 @@
                   >
                 </div>
               </div>
-              <ul class="thumbs">
-                <li>
+              <div class="thumbs grid max-h-[50.4rem] grid-cols-1 gap-16">
+                <div class="w-full max-w-[8rem]">
                   <a
-                    class="aspect-square max-w-8.8"
+                    class="aspect-square w-full"
                     href="../../img/card-fullpage/img1.svg"
                     title="Image 2"
-                    ><img src="../../img/card-fullpage/img1.svg"
-                  /></a>
-                </li>
-                <li>
+                  >
+                    <img src="../../img/card-fullpage/img1.svg" alt="" />
+                  </a>
+                </div>
+                <div class="w-full max-w-[8rem]">
                   <a
-                    class="aspect-square max-w-8.8"
+                    class="aspect-square w-full"
                     href="../../img/card-fullpage/img2.svg"
                     title="Image 3"
-                    ><img src="../../img/card-fullpage/img2.svg"
-                  /></a>
-                </li>
-                <li>
+                  >
+                    <img src="../../img/card-fullpage/img2.svg" alt="" />
+                  </a>
+                </div>
+                <div class="w-full max-w-[8rem]">
                   <a
-                    class="aspect-square max-w-8.8"
+                    class="aspect-square w-full"
                     href="../../img/card-fullpage/img3.svg"
                     title="Image 4"
-                    ><img src="../../img/card-fullpage/img3.svg" />
+                  >
+                    <img src="../../img/card-fullpage/img2.svg" alt="" />
                   </a>
-                </li>
-                <li>
+                </div>
+                <div class="w-full max-w-[8rem]">
                   <a
-                    class="aspect-square max-w-8.8"
+                    class="aspect-square w-full"
                     href="../../img/card-fullpage/img4.svg"
                     title="Image 5"
-                    ><img src="../../img/card-fullpage/img4.svg"
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex aspect-square max-w-8.8 flex-col flex-nowrap items-center justify-center gap-4 bg-background"
+                  >
+                    <img src="../../img/card-fullpage/img4.svg" alt="" />
+                  </a>
+                </div>
+                <div class="w-full max-w-[8rem]">
+                  <div
+                    class="js_popup_all_filters_button flex aspect-square max-w-8.8 cursor-pointer flex-col flex-nowrap items-center justify-center gap-4 bg-background"
                   >
                     <img
                       class="block h-20 w-20"
@@ -193,9 +196,9 @@
                     <div class="text-11.12 text-center">
                       Смотреть содержание
                     </div>
-                  </a>
-                </li>
-              </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="card-fullpage-image-slider">
               <div class="card-fullpage-image-container">
@@ -233,9 +236,11 @@
                       >Nataliya Sherba</a
                     >
                   </div>
-                  <div class="js-book-text-container h-40 overflow-hidden">
-                    <p
-                      class="card-fp-desc-text-top h-full w-full overflow-hidden text-ellipsis"
+                  <div
+                    class="js-book-text-container overflow-hidden text-ellipsis"
+                  >
+                    <span
+                      class="card-fp-desc-text-top line-clamp-2 text-ellipsis"
                     >
                       Первая книга фэнтези-бестселлера для подростков с
                       уникальным сказочным миром, по популярности
@@ -244,7 +249,7 @@
                       ducimus esse explicabo, labore officiis perferendis quam
                       quas quos unde? Beatae consequatur distinctio ipsa laborum
                       maxime nisi possimus quibusdam, unde?
-                    </p>
+                    </span>
                   </div>
                   <button class="more-down-button js-book-toggle-button !p-0">
                     Подробное описание, характеристики<span></span>
@@ -295,7 +300,7 @@
           </div>
 
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
-          <div class="swiper">
+          <div class="swiper-image-2 mb-48">
             <div class="swiper-header !w-full">
               <h3 class="head-3 flex flex-row flex-nowrap items-center">
                 Все книги серии&nbsp
@@ -669,7 +674,7 @@
           </div>
 
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
-          <div class="swiper">
+          <div class="swiper-image-2">
             <div class="swiper-header !w-full">
               <h3 class="head-3">С этой книгой часто покупают</h3>
               <div class="flex flex-row items-center gap-16">
@@ -680,7 +685,7 @@
               </div>
             </div>
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper items-end">
+            <div class="swiper-wrapper !items-end">
               <!-- Slides -->
               <div class="swiper-slide">
                 <div class="book_card js_item_card item_card">
@@ -1035,7 +1040,7 @@
               </div>
             </div>
             <div id="above-block" class="above-block-mod">
-              <div class="swiper-image my-0 pb-60">
+              <div class="swiper-image-2 my-0 mb-24 pb-60">
                 <div class="swiper-header sw-head-mod !w-full">
                   <h3 class="head-3">Фотогалерея</h3>
                   <div class="buttons">
@@ -1044,7 +1049,7 @@
                   </div>
                 </div>
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper !items-end">
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <div class="card_photogallery_item">
@@ -1142,7 +1147,7 @@
               <button class="card_video_play_button circle-button"></button>
             </div>
 
-            <div class="card_video_info">
+            <div class="card_video_info hidden sm:block">
               <span class="card_video_title"
                 >Как правильно выбрать книгу: наши советы для любителей
                 книг</span
@@ -1152,6 +1157,8 @@
 
           <!-- тут ниже футер -->
           @@include('components/ui-kit/footer/footer-ru.html', { }, )
+          @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
+          { }, )
         </div>
       </div>
     </div>

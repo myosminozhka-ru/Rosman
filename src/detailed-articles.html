@@ -11,11 +11,13 @@
   <body>
     <div class="search-result-wrapper">
       @@include('components/header/header-main.html', { }, )
-      <div id="yellow-background">
+      <div id="yellow-background" class="!pt-10">
         <div id="moving-block"></div>
         <div id="white-mobile-background"></div>
+
         <div id="above-block" class="relative !p-0">
           <!--   боковая штучка с соцсетями   -->
+
           <div
             class="absolute !right-[1.2rem] right-[2.4rem] top-64 flex flex-row gap-16 rounded-full bg-black px-12 px-8 py-8 sm:!flex-col"
           >
@@ -35,7 +37,7 @@
                 <a class="text-s" href="#">Главная </a><span>/</span>
                 <a class="text-s text-text" href="#">Каталог новостей </a
                 ><span>/</span>
-                <a class="text-s !text-black" href="#">Новость</a>
+                <a class="text-s !text-black" href="#">Статья</a>
               </p>
               <div class="breadcrumbs-small-screen">
                 <div class="breadcrumbs-small-screen-image"></div>
@@ -44,7 +46,7 @@
                   >Каталог новостей</a
                 >
                 <span>/</span>
-                <a class="breadcrumbs-small-screen-path">Новость</a>
+                <a class="breadcrumbs-small-screen-path">Статья</a>
               </div>
             </div>
           </div>
@@ -57,7 +59,7 @@
           <!--   тут будет контент   -->
           <!--   хэдэр -->
           <div
-            class="relative mx-auto mb-34 w-4/5 max-w-[80rem] !px-12 px-24 text-start sm:mx-0 sm:!mb-10"
+            class="relative mx-auto mb-34 w-4/5 max-w-[85rem] !px-12 px-24 text-start sm:mx-0 sm:!mb-10"
           >
             <div
               class="!mb-0 mb-16 w-full text-center text-6xl sm:text-start sm:text-4xl"
@@ -169,8 +171,7 @@
             class="relative flex flex-col items-center justify-center gap-16 px-24 sm:!px-12"
           >
             <!--    photo absolute pos   -->
-
-            <div class="absolute right-[3%] top-[0%]">
+            <div class="absolute right-[8%] top-[0%]">
               <div
                 class="mb-16 flex flex-row flex-nowrap items-center justify-start gap-16 md:hidden"
               >
@@ -186,14 +187,119 @@
                 <div class="link-m">Иван Иванов</div>
               </div>
             </div>
-            <!--     main text     -->
 
-            <div class="flex max-w-[60rem] flex-col !items-center gap-24">
-              <div class="head-3">
-                Оказывается, коронованный герцог графства бодрит
+            <div
+              class="relative flex flex-col items-center justify-center gap-16"
+            >
+              <!--     sticky     -->
+              <!--          <div class="sticky float-right top-0">-->
+              <!--            <div-->
+              <!--              class="flex max-w-[25.5rem] flex-col !justify-start gap-16 border-card-stroke py-24"-->
+              <!--            >-->
+              <!--              <div class="head-5">Читайте так же</div>-->
+              <!--              <div class="flex flex-col gap-8">-->
+              <!--                <a href="#" class="link-m">-->
+              <!--                  Логотип крупнейшей компании по производству мыльных пузырей-->
+              <!--                  связывает нас с нашим прошлым-->
+              <!--                </a>-->
+              <!--                <a href="#" class="link-m">-->
+              <!--                  Высококачественный прототип будущего проекта оправдал-->
+              <!--                  надежды граждан-->
+              <!--                </a>-->
+              <!--                <a href="#" class="link-m">-->
+              <!--                  Допустим, средства индивидуальной защиты оказались-->
+              <!--                  бесполезны-->
+              <!--                </a>-->
+              <!--              </div>-->
+              <!--            </div>-->
+              <!--          </div>-->
+              <!--     main text     -->
+
+              <div class="flex max-w-[60rem] flex-col !items-center gap-24">
+                <div class="head-3">
+                  Оказывается, коронованный герцог графства бодрит
+                </div>
+
+                <div class="text-15.20 font-medium">
+                  <div
+                    class="mb-16 flex hidden flex-row flex-nowrap items-center justify-start gap-16 md:flex"
+                  >
+                    <div
+                      class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
+                    >
+                      <img
+                        class="h-full w-full rounded-full"
+                        src="../../img/detailed-news-main-pic.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="link-m">Иван Иванов</div>
+                  </div>
+                  Предварительные выводы неутешительны: укрепление и развитие
+                  внутренней структуры требует от нас анализа дальнейших
+                  направлений развития. Сложно сказать, почему элементы
+                  политического процесса ограничены исключительно образом
+                  мышления. Но понимание сути ресурсосберегающих технологий
+                  способствует подготовке и реализации новых предложений.
+                  Принимая во внимание показатели успешности, высококачественный
+                  прототип будущего проекта однозначно определяет каждого
+                  участника как способного принимать собственные решения касаемо
+                  системы массового участия.
+                </div>
+                <!--    news navigation    -->
+                <div class="mb-24 flex flex-col justify-center sm:mb-0">
+                  <div
+                    class="flex max-w-[60rem] flex-col !justify-start gap-16 border-y border-card-stroke py-24"
+                  >
+                    <div class="head-5">Навигация по новости</div>
+                    <div class="flex flex-col gap-8">
+                      <a href="#" class="link-m">
+                        Доблесть наших правозащитников стала доступной
+                        ширнармассам
+                      </a>
+                      <a href="#" class="link-m"> Небо темнеет </a>
+                      <a href="#" class="link-m">
+                        Все чаще появляется информация о том, что светлый лик
+                        правового взаимодействия даёт нам право принимать
+                        самостоятельные решения
+                      </a>
+                      <a href="#" class="link-m">
+                        Реализация намеченных плановых заданий позволила
+                        расправить крылья
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-15.20 font-medium">
+                  Повседневная практика показывает, что современная методология
+                  разработки создаёт необходимость включения в производственный
+                  план целого ряда внеочередных мероприятий с учётом комплекса
+                  экспериментов, поражающих по своей масштабности и
+                  грандиозности. Как уже неоднократно упомянуто, элементы
+                  политического процесса заблокированы в рамках своих
+                  собственных рациональных ограничений. Для современного мира
+                  экономическая повестка сегодняшнего дня предоставляет широкие
+                  возможности для прогресса профессионального сообщества.
+                </div>
+                <div class="text-15.20 font-medium">
+                  Имеется спорная точка зрения, гласящая примерно следующее:
+                  непосредственные участники технического прогресса представляют
+                  собой не что иное, как квинтэссенцию победы маркетинга над
+                  разумом и должны быть рассмотрены исключительно в разрезе
+                  маркетинговых и финансовых предпосылок. Имеется спорная точка
+                  зрения, гласящая примерно следующее: непосредственные
+                  участники технического прогресса представляют собой не что
+                  иное, как квинтэссенцию победы маркетинга над разумом и должны
+                  быть рассмотрены исключительно в разрезе маркетинговых и
+                  финансовых предпосылок. Имеется спорная точка зрения, гласящая
+                  примерно следующее: непосредственные участники технического
+                  прогресса представляют собой не что иное, как квинтэссенцию
+                  победы маркетинга над разумом и должны
+                </div>
               </div>
+              <!--    тут будет текст, который будет заменяться плавающим сбоку    -->
               <div
-                class="sticky top-[10%] flex max-w-[25.5rem] flex-col !justify-start gap-16 border-card-stroke py-24"
+                class="flex hidden max-w-[60rem] flex-col !justify-start gap-16 border-y border-card-stroke py-24 bs:flex"
               >
                 <div class="head-5">Читайте так же</div>
                 <div class="flex flex-col gap-8">
@@ -211,258 +317,160 @@
                   </a>
                 </div>
               </div>
-              <div class="text-15.20 font-medium">
-                <div
-                  class="mb-16 flex hidden flex-row flex-nowrap items-center justify-start gap-16 md:flex"
-                >
-                  <div
-                    class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
-                  >
-                    <img
-                      class="h-full w-full rounded-full"
-                      src="../../img/detailed-news-main-pic.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="link-m">Иван Иванов</div>
-                </div>
-                Предварительные выводы неутешительны: укрепление и развитие
-                внутренней структуры требует от нас анализа дальнейших
-                направлений развития. Сложно сказать, почему элементы
-                политического процесса ограничены исключительно образом
-                мышления. Но понимание сути ресурсосберегающих технологий
-                способствует подготовке и реализации новых предложений. Принимая
-                во внимание показатели успешности, высококачественный прототип
-                будущего проекта однозначно определяет каждого участника как
-                способного принимать собственные решения касаемо системы
-                массового участия.
-              </div>
-              <!--    news navigation    -->
-              <div class="mb-24 flex flex-col justify-center">
-                <div
-                  class="flex max-w-[60rem] flex-col !justify-start gap-16 border-y border-card-stroke py-24"
-                >
-                  <div class="head-5">Навигация по новости</div>
-                  <div class="flex flex-col gap-8">
-                    <a href="#" class="link-m">
-                      Доблесть наших правозащитников стала доступной
-                      ширнармассам
-                    </a>
-                    <a href="#" class="link-m"> Небо темнеет </a>
-                    <a href="#" class="link-m">
-                      Все чаще появляется информация о том, что светлый лик
-                      правового взаимодействия даёт нам право принимать
-                      самостоятельные решения
-                    </a>
-                    <a href="#" class="link-m">
-                      Реализация намеченных плановых заданий позволила
-                      расправить крылья
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="text-15.20 font-medium">
-                Повседневная практика показывает, что современная методология
-                разработки создаёт необходимость включения в производственный
-                план целого ряда внеочередных мероприятий с учётом комплекса
-                экспериментов, поражающих по своей масштабности и грандиозности.
-                Как уже неоднократно упомянуто, элементы политического процесса
-                заблокированы в рамках своих собственных рациональных
-                ограничений. Для современного мира экономическая повестка
-                сегодняшнего дня предоставляет широкие возможности для прогресса
-                профессионального сообщества.
-              </div>
-              <div class="text-15.20 font-medium">
-                Имеется спорная точка зрения, гласящая примерно следующее:
-                непосредственные участники технического прогресса представляют
-                собой не что иное, как квинтэссенцию победы маркетинга над
-                разумом и должны быть рассмотрены исключительно в разрезе
-                маркетинговых и финансовых предпосылок. Имеется спорная точка
-                зрения, гласящая примерно следующее: непосредственные участники
-                технического прогресса представляют собой не что иное, как
-                квинтэссенцию победы маркетинга над разумом и должны быть
-                рассмотрены исключительно в разрезе маркетинговых и финансовых
-                предпосылок. Имеется спорная точка зрения, гласящая примерно
-                следующее: непосредственные участники технического прогресса
-                представляют собой не что иное, как квинтэссенцию победы
-                маркетинга над разумом и должны
-              </div>
-            </div>
-            <!--    тут будет текст, который будет заменяться плавающим сбоку    -->
-            <div
-              class="flex hidden max-w-[60rem] flex-col !justify-start gap-16 border-y border-card-stroke py-24 bs:flex"
-            >
-              <div class="head-5">Читайте так же</div>
-              <div class="flex flex-col gap-8">
-                <a href="#" class="link-m">
-                  Логотип крупнейшей компании по производству мыльных пузырей
-                  связывает нас с нашим прошлым
-                </a>
-                <a href="#" class="link-m">
-                  Высококачественный прототип будущего проекта оправдал надежды
-                  граждан
-                </a>
-                <a href="#" class="link-m">
-                  Допустим, средства индивидуальной защиты оказались бесполезны
-                </a>
-              </div>
-            </div>
 
-            <!--    quoted text    -->
-            <div
-              class="mb-8 mt-8 flex max-w-[60rem] flex-col !items-center gap-24"
-            >
+              <!--    quoted text    -->
               <div
-                class="flex flex-col items-start justify-start gap-16 rounded-[3rem] bg-background p-24"
+                class="mb-8 mt-8 flex max-w-[60rem] flex-col !items-center gap-24"
               >
-                <div class="block h-[1.4rem] w-[1.8rem]">
-                  <img
-                    class="h-full w-full"
-                    src="../../img/quotes.svg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-3xl font-medium">
-                  Приятно, граждане, наблюдать, как сторонники тоталитаризма в
-                  науке призывают нас к новым свершениям, которые, в свою
-                  очередь, должны быть ассоциативно распределены по отраслям.
-                </div>
-                <div class="flex flex-row flex-nowrap items-center gap-16">
-                  <div
-                    class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
-                  >
+                <div
+                  class="flex flex-col items-start justify-start gap-16 rounded-[3rem] bg-background p-24"
+                >
+                  <div class="block h-[1.4rem] w-[1.8rem]">
                     <img
-                      class="h-full w-full rounded-full"
-                      src="../../img/detailed-news-main-pic.svg"
+                      class="h-full w-full"
+                      src="../../img/quotes.svg"
                       alt=""
                     />
                   </div>
-                  <div class="link-m">Иван Иванов</div>
+                  <div class="text-3xl font-medium">
+                    Приятно, граждане, наблюдать, как сторонники тоталитаризма в
+                    науке призывают нас к новым свершениям, которые, в свою
+                    очередь, должны быть ассоциативно распределены по отраслям.
+                  </div>
+                  <div class="flex flex-row flex-nowrap items-center gap-16">
+                    <div
+                      class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
+                    >
+                      <img
+                        class="h-full w-full rounded-full"
+                        src="../../img/detailed-news-main-pic.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="link-m">Иван Иванов</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!--    block with secondary img    -->
-            <div class="mb-8 flex max-w-[60rem] flex-col gap-24">
-              <div class="text-15.20">
-                Повседневная практика показывает, что современная методология
-                разработки создаёт необходимость включения в производственный
-                план целого ряда внеочередных мероприятий с учётом комплекса
-                экспериментов, поражающих по своей масштабности и грандиозности.
-                Как уже неоднократно упомянуто, элементы политического процесса
-                заблокированы в рамках своих собственных рациональных
-                ограничений. Для современного мира экономическая повестка
-                сегодняшнего дня предоставляет широкие возможности для прогресса
-                профессионального сообщества.
-              </div>
-              <div class="flex flex-col gap-16">
-                <div class="!h-auto w-full">
-                  <img
-                    class="h-full w-full"
-                    src="../../img/detailed-news-secondary-img.svg"
-                    alt=""
-                  />
+              <!--    block with secondary img    -->
+              <div class="mb-8 flex max-w-[60rem] flex-col gap-24">
+                <div class="flex flex-col gap-16">
+                  <div class="!h-auto w-full">
+                    <img
+                      class="h-full w-full"
+                      src="../../img/detailed-news-secondary-img.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-row text-15.20">
+                    Фото с подписью и &nbsp<a class="link-m" href="#"
+                      >ссылкой</a
+                    >
+                  </div>
                 </div>
-                <div class="flex flex-row text-15.20">
-                  Фото с подписью и &nbsp<a class="link-m" href="#">ссылкой</a>
+                <div class="text-15.20">
+                  Банальные, но неопровержимые выводы, а также диаграммы связей,
+                  инициированные исключительно синтетически, объявлены
+                  нарушающими общечеловеческие нормы этики и морали.
+                </div>
+                <div class="bg-yellow p-24 text-3xl font-medium">
+                  Выделенный акцентный текст. Возможно важная мысль из
+                  предыдущего блока, резюме вышесказанного, важная тнформация и
+                  т.д.
                 </div>
               </div>
-              <div class="text-15.20">
-                Банальные, но неопровержимые выводы, а также диаграммы связей,
-                инициированные исключительно синтетически, объявлены нарушающими
-                общечеловеческие нормы этики и морали.
-              </div>
-              <div class="bg-yellow p-24 text-3xl font-medium">
-                Выделенный акцентный текст. Возможно важная мысль из предыдущего
-                блока, резюме вышесказанного, важная тнформация и т.д.
-              </div>
-            </div>
 
-            <!--     main text  again   -->
-            <div class="mb-8 flex max-w-[60rem] flex-col !items-center gap-24">
-              <div class="head-3">
-                Все чаще появляется информация о том, что курс на
-                социально-ориентированный национальный проект не стал
-                ограничивающим фактором
-              </div>
-              <div class="text-15.20 font-medium">
-                А ещё сделанные на базе интернет-аналитики выводы объективно
-                рассмотрены соответствующими инстанциями. Задача организации, в
-                особенности же синтетическое тестирование способствует повышению
-                качества позиций, занимаемых участниками в отношении
-                поставленных задач. Сложно сказать, почему независимые
-                государства обнародованы. Мы вынуждены отталкиваться от того,
-                что курс на социально-ориентированный национальный проект, в
-                своём классическом представлении, допускает внедрение
-                кластеризации усилий. С другой стороны, граница обучения кадров
-                говорит о возможностях анализа существующих паттернов поведения.
-              </div>
-            </div>
-            <!--    quoted text  again  -->
-            <div class="flex max-w-[60rem] flex-col !items-center gap-24">
+              <!--     main text  again   -->
               <div
-                class="flex flex-col items-start justify-start gap-16 rounded-[3rem] bg-background p-24"
+                class="mb-8 flex max-w-[60rem] flex-col !items-center gap-24"
               >
-                <div class="block h-[1.4rem] w-[1.8rem]">
-                  <img
-                    class="h-full w-full"
-                    src="../../img/quotes.svg"
-                    alt=""
-                  />
+                <div class="head-3">
+                  Все чаще появляется информация о том, что курс на
+                  социально-ориентированный национальный проект не стал
+                  ограничивающим фактором
                 </div>
-                <div class="text-3xl font-medium">
-                  Цитата или прямая речь. В целом, конечно, разбавленное
-                  изрядной долей эмпатии, рациональное мышление влечет за собой
-                  процесс внедрения и модернизации.
+                <div class="text-15.20 font-medium">
+                  А ещё сделанные на базе интернет-аналитики выводы объективно
+                  рассмотрены соответствующими инстанциями. Задача организации,
+                  в особенности же синтетическое тестирование способствует
+                  повышению качества позиций, занимаемых участниками в отношении
+                  поставленных задач. Сложно сказать, почему независимые
+                  государства обнародованы. Мы вынуждены отталкиваться от того,
+                  что курс на социально-ориентированный национальный проект, в
+                  своём классическом представлении, допускает внедрение
+                  кластеризации усилий. С другой стороны, граница обучения
+                  кадров говорит о возможностях анализа существующих паттернов
+                  поведения.
                 </div>
-                <div class="flex flex-row flex-nowrap items-center gap-16">
-                  <div
-                    class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
-                  >
+              </div>
+              <!--    quoted text  again  -->
+              <div class="flex max-w-[60rem] flex-col !items-center gap-24">
+                <div
+                  class="flex flex-col items-start justify-start gap-16 rounded-[3rem] bg-background p-24"
+                >
+                  <div class="block h-[1.4rem] w-[1.8rem]">
                     <img
-                      class="h-full w-full rounded-full"
-                      src="../../img/detailed-news-main-pic.svg"
+                      class="h-full w-full"
+                      src="../../img/quotes.svg"
                       alt=""
                     />
                   </div>
-                  <div class="link-m">Иван Иванов</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex max-w-[60rem] flex-col !items-center gap-24">
-              <div class="text-15.20">
-                Наше дело не так однозначно, как может показаться:
-                высокотехнологичная концепция общественного уклада, в своём
-                классическом представлении, допускает внедрение своевременного
-                выполнения сверхзадачи.
-              </div>
-              <div class="flex w-full flex-col gap-16">
-                <div class="card_video_item full-width">
-                  <div class="card_video_preview sm: !aspect-auto h-[34rem]">
-                    <img src="../../img/cards_video_preview.svg" alt="" />
-                    <button
-                      class="card_video_play_button circle-button"
-                    ></button>
+                  <div class="text-3xl font-medium">
+                    Цитата или прямая речь. В целом, конечно, разбавленное
+                    изрядной долей эмпатии, рациональное мышление влечет за
+                    собой процесс внедрения и модернизации.
+                  </div>
+                  <div class="flex flex-row flex-nowrap items-center gap-16">
+                    <div
+                      class="sm: block h-[4.4rem] h-[5.6rem] w-[4.4rem] w-[5.6rem]"
+                    >
+                      <img
+                        class="h-full w-full rounded-full"
+                        src="../../img/detailed-news-main-pic.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="link-m">Иван Иванов</div>
                   </div>
                 </div>
-                <div class="flex flex-row text-15.20">
-                  Видео с подписью и &nbsp;<a class="link-m" href="#"
-                    >ссылкой</a
-                  >
-                </div>
               </div>
-              <div class="text-15.20">
-                Имеется спорная точка зрения, гласящая примерно следующее:
-                непосредственные участники технического прогресса представляют
-                собой не что иное, как квинтэссенцию победы маркетинга над
-                разумом и должны быть рассмотрены исключительно в разрезе
-                маркетинговых и финансовых предпосылок.
+
+              <div class="flex max-w-[60rem] flex-col !items-center gap-24">
+                <div class="text-15.20">
+                  Наше дело не так однозначно, как может показаться:
+                  высокотехнологичная концепция общественного уклада, в своём
+                  классическом представлении, допускает внедрение своевременного
+                  выполнения сверхзадачи.
+                </div>
+                <div class="flex w-full flex-col gap-16">
+                  <div class="card_video_item full-width">
+                    <div class="card_video_preview sm: !aspect-auto h-[34rem]">
+                      <img src="../../img/cards_video_preview.svg" alt="" />
+                      <button
+                        class="card_video_play_button circle-button"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="flex flex-row text-15.20">
+                    Видео с подписью и &nbsp;<a class="link-m" href="#"
+                      >ссылкой</a
+                    >
+                  </div>
+                </div>
+                <div class="text-15.20">
+                  Имеется спорная точка зрения, гласящая примерно следующее:
+                  непосредственные участники технического прогресса представляют
+                  собой не что иное, как квинтэссенцию победы маркетинга над
+                  разумом и должны быть рассмотрены исключительно в разрезе
+                  маркетинговых и финансовых предпосылок.
+                </div>
               </div>
             </div>
 
             <!--    тут будет свипер    -->
-            <div class="flex max-w-[60rem] flex-col !items-center gap-24">
+            <div
+              class="flex max-w-[60rem] flex-col !items-center gap-24 ssm:!items-start"
+            >
               <div class="swiper-detailed-page-video">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
@@ -1071,6 +1079,7 @@
                       </div>
                     </div>
                   </div>
+                  <div class="link-m">Иван Иванов</div>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@
   <body>
     <div class="search-result-wrapper">
       @@include('components/header/header-main.html', { }, )
-      <div id="yellow-background">
+      <div id="yellow-background" class="!pt-10">
         <div id="moving-block"></div>
         <div id="white-mobile-background"></div>
         <div id="above-block" class="relative !p-0">
@@ -29,9 +29,10 @@
               <img class="h-full w-full" src="../../img/VK.svg" alt="" />
             </a>
           </div>
+          
 
           <div class="flex flex-col gap-24 !p-24 sm:!p-12">
-            @@include('components/ui-kit/filters/filter-2.html', { }, )
+            @@include('components/ui-kit/breadcrumbs/index.html', { }, )
           </div>
 
           <div class="custom-box !z-1 !fixed sm:!hidden">
