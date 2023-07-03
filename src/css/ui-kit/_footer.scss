@@ -101,9 +101,9 @@
 }
 
 .footer-heading-policy-agreement-text {
-  @apply ml-16 flex flex-row flex-nowrap text-s font-medium;
+  @apply ml-16 flex flex-row flex-nowrap text-s font-medium items-end;
   @media screen and (max-width: 500px) {
-    @apply flex flex-col;
+    @apply flex flex-col items-start;
   }
 }
 

@@ -195,7 +195,7 @@
 }
 
 .dotted_tags_category {
-  @apply text-xl font-normal text-black;
+  @apply text-xl font-medium text-black;
 }
 
 .dotted_tags_separator {
@@ -502,6 +502,14 @@
   @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
   top: 6%;
   left: 6%;
+}
+
+.card_brand_links {
+  @apply  inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .card_brand_with_socs_item_page {

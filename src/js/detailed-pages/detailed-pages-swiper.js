@@ -18,8 +18,14 @@ const swiperDetailedPage = new Swiper(".swiper-detailed-page", {
             slidesPerView: 2,
             spaceBetween: 8,
         },
-        0: {
+        0: { <<
+            << << < HEAD
             slidesPerView: 1.25,
+            ===
+            === =
+            slidesPerView: 1,
+            >>>
+            >>> > main
             spaceBetween: 8,
         },
     },
@@ -68,7 +74,7 @@ const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
             slidesPerView: 2,
         },
         0: {
-            slidesPerView: 1,
+            slidesPerView: 1.25,
             spaceBetween: 24,
         },
     },
