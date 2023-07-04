@@ -14,25 +14,8 @@
       <div id="moving-block"></div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
-        <div class="flex justify-between">
-          <p class="breadcrumbs p-24">
-            <a href="#">Главная </a><span>/</span>
-            <a class="active-js" href="#">Контакты</a>
-          </p>
-          <div class="breadcrumbs-small-screen px-24">
-            <div class="breadcrumbs-small-screen-image"></div>
-            <div class="breadcrumbs-small-screen-dots">
-              ...
-              <div class="breadcrumbs-arrow"></div>
-              <div class="breadcrumbs-path-hidden"></div>
-            </div>
-            <div class="breadcrumbs-small-screen-path">Контакты</div>
-          </div>
-          <div class="breadcrumbs-icons">
-            <a href="#" class="item_card-external-link"></a>
-            <button class="item_card_add_to_favourite"></button>
-          </div>
-        </div>
+        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+
         <div class="flex"><h1 class="head-1 mb-64 px-24">Контакты</h1></div>
         <div class="mb-42 flex flex-row justify-between px-24 md:flex-col">
           <div class="flex w-1/4 flex-col gap-32 md:w-full">
@@ -54,6 +37,7 @@
             <p class="text-l">+7 495 933-71-30</p>
           </div>
         </div>
+
         <iframe
           class="mobile-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg"
@@ -85,6 +69,7 @@
             <p class="text-l text-text">Электронный адрес</p>
             <p class="text-l">rosman@rosman.ru</p>
           </div>
+
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
             <img src="../../img/book.svg" class="h-58 w-58" />
             <p class="text-4xl">Книги</p>
@@ -98,6 +83,7 @@
             <p class="text-l text-text">Электронный адрес</p>
             <p class="text-l">rosman@rosman.ru</p>
           </div>
+
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
             <img src="../../img/document.svg" class="h-58 w-58" />
             <p class="text-4xl">Отдел прав и лицензий</p>
@@ -112,6 +98,7 @@
             <p class="text-l">rosman@rosman.ru</p>
           </div>
         </div>
+
         <div class="flex flex-row justify-between px-24 md:flex-col">
           <p class="ml-4 w-1/12 text-l text-text md:w-full">
             Для вопросов и предложений

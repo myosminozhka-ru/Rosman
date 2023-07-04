@@ -149,11 +149,8 @@
     align-items: center;
     border: 0.1rem #d9d9d9 solid;
     position: fixed;
-    /* Зафиксируем позицию */
     bottom: 0;
-    /* Разместим внизу экрана */
     width: 100%;
-    /* Займем всю доступную ширину */
     z-index: 100000;
 
     img {
@@ -787,9 +784,9 @@ header {
 .swiper-detailed-page,
 .swiper-catalog-projects,
 .swiper-detailed-page-video {
-  width: 100% !important;
-  height: auto !important;
-  padding: 0rem !important;
+  // width: 100% !important;
+  // height: auto !important;
+  // padding: 0 3rem !important;
 
   .card_career {
     margin-top: 3rem;
@@ -832,19 +829,20 @@ header {
           transform: scale(1.2);
         }
       }
+    }
 
-      .button-next {
-        display: block;
-        background: url('../../img/next.png') no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+    .button-prev,
+    .button-next {
+      display: block;
+      background: url('../../img/next.png') no-repeat center;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
 
-        &:hover {
-          transform: scale(1.2);
-        }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
@@ -854,6 +852,16 @@ header {
 .swiper-detailed-page,
 .swiper-detailed-page-video {
   padding: 0 !important;
+}
+
+.partners-ticker {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @media screen and (max-width: 780px) {
+    gap: 1.8rem;
+  }
 }
 
 .partners-stroke {
@@ -883,13 +891,18 @@ header {
       span {
         @apply text-6xl uppercase;
         color: #000000;
+
+        @media screen and (max-width: 780px) {
+          font-size: 2.7rem;
+          line-height: 3.2rem;
+        }
       }
 
-      img {
-        display: inline;
-        width: 4.8rem;
-        height: 4.8rem;
-      }
+      // img {
+      //   display: inline;
+      //   width: 4.8rem;
+      //   height: 4.8rem;
+      // }
     }
   }
 
@@ -1070,6 +1083,7 @@ header {
   /* Скрыть содержимое, выходящее за границы блока */
 }
 
+// rjvvtyndslfjslkf
 //.elephant-swiper {
 //  width: 100% !important;
 //  height: auto!important;

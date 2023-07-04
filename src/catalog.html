@@ -12,35 +12,20 @@
 
   <body>
     @@include('components/header/header-main.html', { }, )
+
     <div id="yellow-background">
       <div id="moving-block"></div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
-        <div class="flex justify-between">
-          <p class="breadcrumbs p-24">
-            <a href="#">Главная </a><span>/</span>
-            <a class="active-js" href="#">Игрушки</a>
-          </p>
-          <div class="breadcrumbs-small-screen px-24">
-            <div class="breadcrumbs-small-screen-image"></div>
-            <div class="breadcrumbs-small-screen-dots">
-              ...
-              <div class="breadcrumbs-arrow"></div>
-              <div class="breadcrumbs-path-hidden"></div>
-            </div>
-            <div class="breadcrumbs-small-screen-path">Игрушки</div>
-          </div>
-          <div class="breadcrumbs-icons">
-            <a href="#" class="item_card-external-link"></a>
-            <button class="item_card_add_to_favourite"></button>
-          </div>
-        </div>
+        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+
         <div class="flex">
           <h1 class="head-1 mb-64 px-25">Все игрушки</h1>
           <sup class="text-l text-text">1 222 323</sup>
         </div>
         <div class="flex flex-row gap-22 px-25 md:px-0">
           @@include('components/ui-kit/filters/filter-2.html', { }, )
+
           <div class="width-75">
             <div class="brand_choose_brands">
               <div class="image_container_brand">
@@ -169,7 +154,7 @@
               </div>
             </div>
             <div
-              class="my-40 grid grid-cols-3 gap-16 sm:grid-cols-1 md:grid-cols-2"
+              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
             >
               <div class="toy_card item_card">
                 <div class="toy_card_heading">

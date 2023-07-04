@@ -86,7 +86,7 @@
 }
 
 .bordered_tags_item {
-  @apply body-s-bold px-12 py-4;
+  @apply px-12 py-4 body-s-bold bg-white;
   border: 1px solid #000000;
   @media screen and (max-width: 400px) {
     @apply w-1/2 text-center;
@@ -648,6 +648,14 @@
   @apply border-white;
   background: var(--gray-scale-white, #fff);
   box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+
+  @media (max-width: 660px) {
+    border-bottom: 1px solid #e3e3e2;
+    border-left: 1px solid #e3e3e2;
+    border-right: 1px solid #e3e3e2;
+
+    box-shadow: none;
+  }
 }
 
 .card_employee_info {

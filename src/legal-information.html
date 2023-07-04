@@ -84,24 +84,14 @@
       <div id="yellow-background" class="!z-0 !mb-24 !h-auto !pt-24">
         <div id="moving-block"></div>
         <div id="white-mobile-background"></div>
+
         <div id="above-block" class="!sm:p-12 flex flex-col gap-16 !p-24">
-          <div class="flex items-center justify-between">
-            <p class="breadcrumbs">
-              <a class="text-s" href="#">Главная </a><span>/</span>
-              <a class="text-s" href="#">Политика конфиденциальности </a>
-            </p>
-            <div class="breadcrumbs-small-screen">
-              <div class="breadcrumbs-small-screen-image"></div>
-              <div class="breadcrumbs-small-screen-dots">/</div>
-              <div class="breadcrumbs-small-screen-path">
-                Политика конфиденциальности
-              </div>
-            </div>
-          </div>
-          <div class="conf-pol flex max-w-[108rem] flex-col gap-48">
+          @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+
+          <div class="conf-pol flex flex-col gap-48">
             <div class="conf-pol-heading flex flex-col gap-16">
-              <p class="head-1">Политика конфиденциальности</p>
-              <p class="text-2.5xl sm:text-15.20">
+              <p class="head-4">Политика конфиденциальности</p>
+              <p class="text-15.20">
                 Настоящий документ «Политика конфиденциальности» (далее
                 по тексту – «Политика») представляет собой правила использования
                 /указать владельца сайта/ (далее – «мы» и/или «Администрация»)
