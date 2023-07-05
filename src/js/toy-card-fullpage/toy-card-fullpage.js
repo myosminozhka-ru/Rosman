@@ -3,13 +3,13 @@ let thumbs = document.querySelectorAll('.thumbs img');
 
 thumbs.forEach(function (thumb) {
   thumb.addEventListener('click', function (event) {
-    const currentChosen = document.querySelector(".thumbs .js-thumb-chosen");
+    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
     event.preventDefault();
     largeImg.src = thumb.getAttribute('src');
     if (currentChosen) {
-      currentChosen.classList.remove("js-thumb-chosen");
+      currentChosen.classList.remove('js-thumb-chosen');
     }
-    thumb.classList.add("js-thumb-chosen")
+    thumb.classList.add('js-thumb-chosen');
   });
 });
 
@@ -17,103 +17,104 @@ thumbs.forEach(function (thumb) {
 // после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
 // а у card-fp-trans появляется или удаляется card-fp-transparent-text,
 
-let jsMdb = document.querySelector(".js-mdb")
-let cardTextToHide = document.querySelector(".card-fp-hide")
-let cartToTrans = document.querySelector(".card-fp-trans")
+let jsMdb = document.querySelector('.js-mdb');
+let cardTextToHide = document.querySelector('.card-fp-hide');
+let cartToTrans = document.querySelector('.card-fp-trans');
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
     if (cardTextToHide) {
-      cardTextToHide.classList.toggle("js-card-fp-hidden-item")
+      cardTextToHide.classList.toggle('js-card-fp-hidden-item');
     }
     if (cartToTrans) {
-      cartToTrans.classList.toggle("card-fp-transparent-text")
+      cartToTrans.classList.toggle('card-fp-transparent-text');
     }
-  }
+  };
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
-const navButtons = document.querySelector(".navigation");
+const navButtons = document.querySelector('.navigation');
 
 if (navButtons) {
-  const descriptionComponent = document.querySelector(".card-fp-description");
-  const characteristicsComponent = document.querySelector(".card-fp-characteristics");
-  const instructionComponent = document.querySelector(".card-fp-instruction");
+  const descriptionComponent = document.querySelector('.card-fp-description');
+  const characteristicsComponent = document.querySelector(
+    '.card-fp-characteristics'
+  );
+  const instructionComponent = document.querySelector('.card-fp-instruction');
 
-  navButtons.addEventListener("click", (event) => {
-    event.preventDefault()
-    const currentChosen = navButtons.querySelector(".active-js");
-    const target = event.target.closest(".card-fullpage-tab");
+  navButtons.addEventListener('click', (event) => {
+    event.preventDefault();
+    const currentChosen = navButtons.querySelector('.active-js');
+    const target = event.target.closest('.card-fullpage-tab');
 
     if (!target || target === currentChosen) return;
 
     if (currentChosen) {
-      currentChosen.classList.remove("active-js");
+      currentChosen.classList.remove('active-js');
     }
-    target.classList.add("active-js");
+    target.classList.add('active-js');
 
     // Скрыть все компоненты
-    descriptionComponent.classList.add("hidden");
-    characteristicsComponent.classList.add("hidden");
-    instructionComponent.classList.add("hidden");
+    descriptionComponent.classList.add('hidden');
+    characteristicsComponent.classList.add('hidden');
+    instructionComponent.classList.add('hidden');
 
     // Показать выбранный компонент
-    if (target.classList.contains("card-fp-tab-desc")) {
-      descriptionComponent.classList.remove("hidden");
-    } else if (target.classList.contains("card-fp-tab-char")) {
-      characteristicsComponent.classList.remove("hidden");
-    } else if (target.classList.contains("card-fp-tab-instr")) {
-      instructionComponent.classList.remove("hidden");
+    if (target.classList.contains('card-fp-tab-desc')) {
+      descriptionComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-char')) {
+      characteristicsComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-instr')) {
+      instructionComponent.classList.remove('hidden');
     }
   });
 }
 
-
 // для описания будет такая кнопка - js-mdb-desc
 // а для текста описания будет card-fp-desc-hidden-block
 // <div class="card-fullpage-desc-block card-fp-desc-hidden-block"></div>
-let jsMdbDescButton = document.querySelector(".js-mdb-desc-button");
-let jsDescriptionWrapper = document.querySelector(".js-card-fullpage-desc-description");
-let jsItemsToHideDesc = document.querySelectorAll(".js-item-to-hide-desc");
+let jsMdbDescButton = document.querySelector('.js-mdb-desc-button');
+let jsDescriptionWrapper = document.querySelector(
+  '.js-card-fullpage-desc-description'
+);
+let jsItemsToHideDesc = document.querySelectorAll('.js-item-to-hide-desc');
 
 if (jsMdbDescButton) {
-
   jsMdbDescButton.onclick = function (event) {
     jsItemsToHideDesc.forEach((item) => {
-      item.classList.toggle("js-card-fp-hidden-item");
+      item.classList.toggle('js-card-fp-hidden-item');
     });
-    const isExpanded = jsMdbDescButton.innerText.includes("Свернуть описание");
+    const isExpanded = jsMdbDescButton.innerText.includes('Свернуть описание');
 
     if (isExpanded) {
-      jsDescriptionWrapper.classList.remove("gapped");
-      jsMdbDescButton.innerHTML = "Развернуть описание<span></span>";
+      jsDescriptionWrapper.classList.remove('gapped');
+      jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
     } else {
-      jsDescriptionWrapper.classList.add("gapped");
-      jsMdbDescButton.innerHTML = "Свернуть описание<span></span>";
+      jsDescriptionWrapper.classList.add('gapped');
+      jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
+      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
-
   };
 }
 
-let jsMdbAuthorButton = document.querySelector(".js-mdb-author-button")
+let jsMdbAuthorButton = document.querySelector('.js-mdb-author-button');
 if (jsMdbAuthorButton) {
   jsMdbAuthorButton.onclick = function (event) {
     let prevElemSib = jsMdbAuthorButton.previousElementSibling;
-    prevElemSib.classList.toggle("hidden");
-    const isExpanded = jsMdbAuthorButton.innerText.includes("Свернуть описание");
+    prevElemSib.classList.toggle('hidden');
+    const isExpanded =
+      jsMdbAuthorButton.innerText.includes('Свернуть описание');
 
     if (isExpanded) {
-      jsMdbAuthorButton.innerHTML = "Развернуть описание<span></span>";
+      jsMdbAuthorButton.innerHTML = 'Развернуть описание<span></span>';
     } else {
-      jsMdbAuthorButton.innerHTML = "Свернуть описание<span></span>";
+      jsMdbAuthorButton.innerHTML = 'Свернуть описание<span></span>';
     }
-  }
+  };
 }
-
 
 // убрать текст у видео при полной ширине экрана
 // const videoItems = document.querySelectorAll('.card_video_item');
@@ -148,14 +149,15 @@ dots.forEach((dot, index) => {
   });
 });
 
-
 // для описания книги, чтобы там было многоточие
-const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
+const jsBookToggleButton = document.querySelectorAll('.js-book-toggle-button');
+const jsBookTextContainer = document.querySelectorAll('.card-fp-desc-text-top');
 if (jsBookToggleButton && jsBookTextContainer) {
-  jsBookToggleButton.addEventListener('click', function () {
-    jsBookTextContainer.classList.toggle('line-clamp-none');
-  });
+  for (let i = 0; i < jsBookTextContainer.length; i++) {
+    jsBookToggleButton[i].addEventListener('click', function () {
+      jsBookTextContainer[i].classList.toggle('line-clamp-none');
+    });
+  }
 }
 
 // swiper fullpage
@@ -186,50 +188,60 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
   },
 });
 
-
 // Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', { // ищем слайдер превью по селектору
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
+  // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 14, // расстояние между слайдами
-  navigation: { // задаем кнопки навигации
+  navigation: {
+    // задаем кнопки навигации
     nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev' // кнопка Prev
+    prevEl: '.slider__prev', // кнопка Prev
   },
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
-  breakpoints: { // условия для разных размеров окна браузера
-    0: { // при 0px и выше
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
     },
-    768: { // при 768px и выше
+    768: {
+      // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
-    }
-  }
+    },
+  },
 });
 // Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container-3', { // ищем слайдер превью по селектору
+const sliderImages = new Swiper('.slider__images .swiper-container-3', {
+  // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
-  navigation: { // задаем кнопки навигации
+  navigation: {
+    // задаем кнопки навигации
     nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev' // кнопка Prev
+    prevEl: '.slider__prev', // кнопка Prev
   },
   grabCursor: true, // менять иконку курсора
-  thumbs: { // указываем на превью слайдер
-    swiper: sliderThumbs // указываем имя превью слайдера
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs, // указываем имя превью слайдера
   },
-  breakpoints: { // условия для разных размеров окна браузера
-    0: { // при 0px и выше
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
     },
-    768: { // при 768px и выше
+    768: {
+      // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
-    }
-  }
+    },
+  },
 });
 
 // слайдер - смотреть фрагмент книги
@@ -246,8 +258,8 @@ const swiperBookFragment = new Swiper('.swiper-book-fragment', {
   spaceBetween: 16,
 });
 
-const sliderMain = document.querySelector(".slider-main");
-const sliderPages = document.querySelectorAll(".slider-page");
+const sliderMain = document.querySelector('.slider-main');
+const sliderPages = document.querySelectorAll('.slider-page');
 
 if (sliderPages && sliderMain) {
   sliderPages.forEach(function (sliderPage) {
@@ -255,7 +267,7 @@ if (sliderPages && sliderMain) {
   });
   const max = sliderMain.max;
   const step = 100 / (max - 1);
-  window.addEventListener("mousemove", function () {
+  window.addEventListener('mousemove', function () {
     const sliderValue = sliderMain.value;
     sliderPages.forEach(function (sliderPage) {
       sliderPage.textContent = sliderValue;
@@ -267,9 +279,7 @@ if (sliderPages && sliderMain) {
     sliderMain.style.background = color;
   });
 
-  sliderMain.addEventListener("input", function () {
-
-
+  sliderMain.addEventListener('input', function () {
     const currentValue = parseInt(this.value);
     if (currentValue > swiperBookFragment.slides.length) {
       this.value = swiperBookFragment.slides.length;
@@ -292,8 +302,8 @@ if (sliderPages && sliderMain) {
 
 // тут кнопки для переключения слайдов,
 // события перестают генерироваться, если значение инпута больше количества слайдов
-const nextButtonFragment = document.querySelector(".bg-next-arrow")
-const prevButtonFragment = document.querySelector(".bg-prev-arrow")
+const nextButtonFragment = document.querySelector('.bg-next-arrow');
+const prevButtonFragment = document.querySelector('.bg-prev-arrow');
 if (nextButtonFragment) {
   nextButtonFragment.onclick = function () {
     const nextValue = parseInt(sliderMain.value) + 1;

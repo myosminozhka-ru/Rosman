@@ -6,8 +6,9 @@
   @apply relative inline-block;
   width: 8rem;
   height: 8rem;
-  background: url("../../img/elephant/elephant-big.svg") no-repeat center;
+  background: url('../../img/elephant/elephant-big.svg') no-repeat center;
   background-size: contain;
+
   @media screen and (max-width: 500px) {
     width: 6rem;
     height: 6rem;
@@ -16,7 +17,7 @@
 
 .el-leg {
   @apply absolute inline-block h-50 w-50;
-  background: url("../../img/elephant/elephant-leg-1.svg") no-repeat center;
+  background: url('../../img/elephant/elephant-leg-1.svg') no-repeat center;
   background-size: contain;
   top: 5.4rem;
   left: -0.5rem;
@@ -25,6 +26,7 @@
   animation-timing-function: ease;
   animation-iteration-count: infinite;
   transform-origin: top top;
+
   @media screen and (max-width: 500px) {
     width: 4rem;
     height: 4rem;
@@ -36,11 +38,13 @@
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(-80deg);
     top: 5.4rem;
     left: 1rem;
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -51,11 +55,13 @@
     0% {
       transform: rotate(0deg);
     }
+
     50% {
       transform: rotate(-80deg);
       top: 4rem;
       left: 0.5rem;
     }
+
     100% {
       transform: rotate(0deg);
     }
@@ -73,6 +79,7 @@
   animation-duration: 2s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+
   @media screen and (max-width: 500px) {
     width: 2rem;
     height: 2rem;
@@ -85,26 +92,28 @@
   position: absolute;
   right: 3px;
   bottom: 3px;
-  content: "";
+  content: '';
   display: block;
   width: 1.1rem;
   height: 1.1rem;
   background: black;
   border-radius: 50%;
+
   @media screen and (max-width: 500px) {
     width: 0.8rem;
     height: 0.8rem;
   }
 }
 
-
 @keyframes rotating-2 {
   0% {
     transform: rotate(30deg) translateY(0);
   }
+
   50% {
     transform: rotate(-50deg) translateY(0);
   }
+
   100% {
     transform: rotate(30deg) translateY(0);
   }
@@ -115,9 +124,11 @@
     0% {
       transform: rotate(50deg) translateY(0);
     }
+
     50% {
       transform: rotate(-50deg) translateY(0);
     }
+
     100% {
       transform: rotate(50deg) translateY(0);
     }
