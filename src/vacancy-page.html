@@ -8,7 +8,31 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div class="vacancy-page-wrapper">
+<div class="vacancy-page-wrapper flex flex-col gap-64">
+
+
+  <div class="flex flex-col sm:gap-16">
+    @@include('components/header/header-main.html', { }, )
+    @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+    <div class="flex flex-col gap-68 px-24 sm:px-12 sm:gap-16">
+      <h1 class="head-1">Бренд-менеджер</h1>
+      <div class="flex flex-col gap-20">
+        <div class="flex-col flex gap-8">
+          <span class="text-2.5xl text-text">Опыт работы</span>
+          <h4 class="head-4">От 3 до 6 лет</h4>
+        </div>
+        <div class="flex-col flex gap-8">
+          <span class="text-2.5xl text-text">График работы</span>
+          <h4 class="head-4">Полный день</h4>
+        </div>
+        <div class="flex-col flex gap-8">
+          <span class="text-2.5xl text-text">Занятость</span>
+          <h4 class="head-4">Полная занятость</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="flex flex-col gap-64 sm:gap-48">
     <!--  ОБЯЗАННОСТИ - МАЛЫЙ БЛОК  -->
     <div class="flex flex-col gap-24 px-24 sm:hidden sm:gap-16 sm:px-12">
@@ -189,7 +213,7 @@
       </div>
       <div class="flex flex-col rotate-3 sm:rotate-0 gap-24 pr-24 pl-44 sm:pl-32 sm:gap-16 sm:pr-12 sm:skew-y-3">
         <h3 class="head-3">Требования</h3>
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 max-w-[81.6rem]">
             <span class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
             >Опыт работы на аналогичной должности от 3-х лет</span
             >
@@ -490,7 +514,7 @@
     </div>
     <!-- БЛОК ОТКЛИКА НА ВАКАНСИЮ -->
     <div
-      class="relative mb-64 bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
+      class="relative bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
     >
       <div class="absolute rotate-2 w-full bottom-20 right-0 bg-green"></div>
       <div
