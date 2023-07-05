@@ -72,9 +72,11 @@
   }
 }
 
+// 05.07 - добавил прозрачную границу снизу
 .bordered_tags_item {
   @apply px-12 py-4 body-s-bold;
   border: 1px solid #000000;
+  border-bottom: transparent;
 }
 
 .bordered_tags_item:hover {
