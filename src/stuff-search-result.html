@@ -11,11 +11,11 @@
 <body>
 <div class="search-result-wrapper">
   @@include('components/header/header-main.html', { }, )
-  <div id="yellow-background">
+  <div id="yellow-background" class="!pt-10">
     <div id="moving-block"></div>
     <div id="white-mobile-background"></div>
-    <div id="above-block">
-      <div class="flex flex-col gap-24 p-24 sm:p-12 sm:pt-0">
+    <div id="above-block" class="!pt-0">
+      <div class="flex flex-col gap-24 sm:gap-16 p-24 sm:p-12 sm:!pb-0">
         <div class="flex justify-between  items-center">
           <p class="breadcrumbs">
             <a class="text-s" href="#">Главная </a><span>/</span>
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="flex flex-row justify-between">
-          <div class="text-4xl sm:text-15.20">По запросу «дикие скричеры» нашлось 790 результатов</div>
+          <div class="text-4xl sm:text-15.20 font-medium">По запросу «дикие скричеры» нашлось 790 результатов</div>
           <div class="w-30 h-24 cursor-pointer hidden md:block">
             <img class="block h-full w-full js_popup_brand_filters_button" src="../../img/filter-brands-mobile.svg"
                  alt="">
@@ -200,7 +200,7 @@
               <label class="filter-label age" for="filter-19">7+ </label>
               <button class="button-yellow-full my-14">Показать ещё</button>
             </div>
-            <div class="p-10">
+            <div class="">
               <h3 class="body-l my-14 font-semibold">Категории</h3>
               <label class="checkbox-container">
                 <input type="radio" name="category">
@@ -229,7 +229,7 @@
               </label>
             </div>
 
-            <div class="p-10">
+            <div class="">
               <h3 class="body-l my-14 font-semibold">Наличие товаров</h3>
               <label class="checkbox-container">
                 <input type="radio" name="exist">
