@@ -1,12 +1,12 @@
-.stuff-search-result-item {
-  width: 30%;
-  @media (max-width: 900px) {
-    width: 47%;
-  }
-  @media (max-width: 768px) {
-    width: 48%;
-  }
-}
+//.stuff-search-result-item {
+//  @apply w-1/3;
+//  @media (max-width: 900px) {
+//    width: 47%;
+//  }
+//  @media (max-width: 768px) {
+//    width: 48%;
+//  }
+//}
 
 .bordered_tags_item {
   @media screen and (max-width: 480px) {

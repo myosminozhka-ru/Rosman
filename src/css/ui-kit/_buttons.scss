@@ -1,17 +1,34 @@
 button {
-  @apply flex flex-row items-center justify-center px-40 py-10;
+  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap px-40 py-10 text-m;
 }
 
 .button-black {
-  @apply flex flex-row items-center justify-center bg-black px-40 py-10 text-white;
+  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap bg-black px-40 py-10 text-white;
 
   &:hover {
     @apply bg-yellow text-black;
+
+    &.arrow-span {
+      span {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &.arrow-span {
+    span {
+      background-image: url(../../img/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      margin-left: 1rem;
+    }
   }
 }
 
 .button-white {
-  @apply flex flex-row items-center justify-center border border-black bg-white px-40 py-10 text-black;
+  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap border border-black bg-white px-40 py-10 text-m text-black;
 
   &:hover {
     @apply border-yellow bg-yellow text-black;
@@ -19,7 +36,7 @@ button {
 }
 
 .button-yellow {
-  @apply flex flex-row items-center justify-center bg-yellow px-40 py-10 text-black;
+  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap bg-yellow px-40 py-10 text-black;
 
   &:hover {
     @apply bg-black text-white;
@@ -27,7 +44,7 @@ button {
 }
 
 .button-yellow-full {
-  @apply mx-auto flex w-full flex-row items-center justify-center bg-yellow bg-opacity-50 px-90 py-10 text-black;
+  @apply mx-auto flex w-full min-w-4 flex-row items-center justify-center whitespace-nowrap bg-yellow bg-opacity-50 px-40 py-10 text-black;
 
   &:hover {
     @apply bg-opacity-100 text-black;
@@ -35,7 +52,7 @@ button {
 }
 
 .button-purple {
-  @apply flex flex-row items-center justify-center bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3 px-40 py-10 text-white;
+  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap bg-gradient-to-r from-purple-1 via-purple-2 to-purple-3 px-40 py-10 text-white;
 
   &:hover {
     @apply bg-gradient-to-r from-purple-4 to-purple-5;
@@ -44,59 +61,82 @@ button {
 
 .circle-button {
   @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
-  background-image: url("../../img/play.svg");
+  background-image: url('../../img/play.svg');
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  &.author-button {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    background-color: yellow;
+  }
+  &:hover {
+    @apply bg-yellow;
+    background-image: url('../../img/play-fill.svg');
+  }
+}
+
+.circle-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url('../../img/play.svg');
+  background-repeat: no-repeat;
+  background-position: 60% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
-    background-image: url("../../img/play-fill.svg");
+    background-image: url('../../img/play-fill.svg');
   }
 }
 
 .rounded-arrow-button {
   @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
-  background-image: url("../../img/rounded-arrow.svg");
+  background-image: url('../../img/rounded-arrow.svg');
   background-repeat: no-repeat;
   background-position: 54% 50%;
   background-size: 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
 
   &:hover {
     @apply bg-yellow;
-    background-image: url("../../img/rounded-arrow.svg");
+    background-image: url('../../img/rounded-arrow.svg');
+  }
+}
+
+.rounded-arrow-button-small {
+  @apply m-6 flex flex h-64 w-64 flex-row items-center items-center justify-center justify-center rounded-full bg-card-stroke px-20 py-10;
+  background-image: url('../../img/rounded-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 54% 50%;
+  background-size: 2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    @apply bg-yellow;
+    background-image: url('../../img/rounded-arrow.svg');
   }
 }
 
 .overline-button {
-  @apply flex flex-row items-center justify-center px-40 py-10 text-m underline;
+  @apply flex flex-row items-center justify-center border-b-2 border-black p-0 text-m leading-none;
 
   &:hover {
-    @apply no-underline;
+    @apply border-b-2 border-transparent;
   }
 }
 
 .more-down-filters {
-  @apply w-100;
+  @apply w-full;
 
   .more-down-button {
     &.filters {
-      @apply w-full justify-between pl-24;
-      background-image: url("../../img/filter.svg");
+      @apply w-full justify-between pl-30;
+      background-image: url('../../img/filter.svg');
       background-repeat: no-repeat;
-      background-position: 0.5rem 50%;
-      background-size: 1.5rem 1.5rem;
-
-      &.active-js {
-        @apply bg-yellow;
-      }
-    }
-
-    &.new {
-      @apply w-full justify-between pl-24;
-      background-image: url("../../img/sort.svg");
-      background-repeat: no-repeat;
-      background-position: 0.5rem 50%;
+      background-position: 3% 50%;
       background-size: 1.5rem 1.5rem;
 
       &.active-js {
@@ -107,10 +147,10 @@ button {
     &.new {
       // поправил на 30
       @apply w-full justify-between pl-30;
-      background-image: url("../../img/sort.svg");
+      background-image: url('../../img/sort.svg');
       background-repeat: no-repeat;
       /*поправил на 1.5 рем, чтобы красиво встало*/
-      background-position: 1.5rem 50%;
+      background-position: 3% 50%;
       background-size: 1.5rem 1.5rem;
 
       &.active-js {
@@ -124,30 +164,32 @@ button {
   @apply flex cursor-pointer flex-row items-center justify-center p-10 text-left text-m transition-all duration-500;
 
   span {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-top: 0.2rem solid #000000;
-    border-right: 0.2rem solid #000000;
+    background-image: url('../../img/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem 1.6rem;
+    width: 1rem;
+    height: 1.6rem;
     margin-left: 1rem;
-    transform: rotate(135deg);
   }
 
   &.active-js {
     span {
-      width: 0.8rem;
-      height: 0.8rem;
-      border-top: 0.2rem solid #000000;
-      border-right: 0.2rem solid #000000;
+      background-image: url('../../img/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 1rem 1.6rem;
+      width: 1rem;
+      height: 1.6rem;
       margin-left: 1rem;
-      transform: rotate(-45deg);
+      transform: rotate(180deg);
     }
   }
 }
 
 .more-down-content {
   @apply hidden p-2;
+
   &.new {
-    @apply  absolute bg-white w-full border-2 border-card-stroke z-1000;
+    @apply absolute z-1000 w-full border-2 border-card-stroke bg-white;
   }
 
   &.active-js {
@@ -159,12 +201,12 @@ button {
   @apply flex flex-row items-center justify-center px-40 py-10 text-m;
 
   span {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-top: 0.2rem solid #000000;
-    border-right: 0.2rem solid #000000;
+    background-image: url('../../img/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
     margin-left: 1rem;
-    transform: rotate(-45deg);
   }
 }
 
@@ -172,14 +214,14 @@ button {
   @apply hidden;
 
   &:checked + .sort-label {
-    @apply bg-yellow;
+    @apply border-0 bg-yellow;
 
     .cross {
-      background: url("../../img/close.svg") no-repeat center right;
+      background: url('../../img/close.svg') no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1rem;
-      @apply ml-4 inline-block text-left align-middle    ;
+      @apply ml-4 inline-block text-left align-middle;
     }
 
     .count {
@@ -189,12 +231,12 @@ button {
 }
 
 .sort-label {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
   max-width: 30rem;
   min-width: 5rem;
 
   .count {
-    @apply hidden align-middle    ;
+    @apply hidden align-middle;
   }
 
   &:hover {
@@ -206,10 +248,10 @@ button {
   @apply hidden;
 
   &:checked + .filter-label {
-    @apply bg-yellow;
+    @apply justify-between border-0 bg-yellow;
 
     .cross {
-      background: url("../../img/close.svg") no-repeat center right;
+      background: url('../../img/close.svg') no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1rem;
@@ -217,15 +259,26 @@ button {
     }
 
     .count {
-      @apply ml-4 inline-block  w-auto text-left text-s font-normal;
+      @apply ml-4 inline-block w-auto text-left text-s font-normal;
     }
   }
 }
 
 .filter-label {
-  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-between rounded-3xl border border-card-stroke px-6 text-s font-semibold;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-semibold;
   min-width: 5rem;
   max-width: 15rem;
+
+  &.header {
+    border-color: black;
+    justify-content: center;
+    cursor: auto;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: black;
+    }
+  }
 
   &.age {
     @apply w-55 justify-center;
@@ -241,18 +294,18 @@ button {
 }
 
 .checkbox-container {
-  @apply my-10 flex cursor-pointer items-center text-l text-black;
+  @apply my-10 flex cursor-pointer items-center text-s text-black;
 
-  input[type="radio"] {
+  input[type='radio'] {
     @apply hidden;
   }
 
-  input[type="radio"]:checked + .checkmark {
+  input[type='radio']:checked + .checkmark {
     @apply flex justify-center border-none bg-yellow;
   }
 
-  input[type="radio"]:checked + .checkmark::after {
-    content: "";
+  input[type='radio']:checked + .checkmark::after {
+    content: '';
     display: block;
     width: 0.7rem;
     height: 0.7rem;
@@ -269,7 +322,7 @@ button {
 .toggle-switch {
   @apply relative my-10 inline-block h-16 w-34;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     @apply hidden;
 
     &:checked + .slider {
@@ -283,12 +336,12 @@ button {
   }
 
   .slider {
-    @apply absolute bottom-0 left-0 right-0 top-0 h-25 w-45 cursor-pointer rounded-3xl bg-grey transition-all duration-300;
+    @apply absolute bottom-0 left-0 right-0 top-0 h-26 w-45 cursor-pointer rounded-3xl bg-grey transition-all duration-300;
 
     &:before {
       @apply h-20 w-20;
       position: absolute;
-      content: "";
+      content: '';
       left: 0.3rem;
       bottom: 0.3rem;
       background-color: #fff;
@@ -317,6 +370,7 @@ button {
     }
   }
 }
+
 .breadcrumbs {
   @media (max-width: 801px) {
     @apply hidden;
@@ -324,18 +378,20 @@ button {
 }
 
 .breadcrumbs-small-screen {
-  @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+  @apply flex flex-row flex-nowrap items-center gap-8 text-s text-text;
+
   @media (min-width: 802px) {
     @apply hidden;
   }
+
   @media screen and (max-width: 480px) {
     @apply w-3/4;
   }
 }
 
 .breadcrumbs-small-screen-image {
-  @apply w-20 h-20 block;
-  background: url("../../img/breadcrumb-home.svg") no-repeat center;
+  @apply block h-20 w-20;
+  background: url('../../img/breadcrumb-home.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -344,33 +400,31 @@ button {
 }
 
 .breadcrumbs-arrow {
-  @apply absolute h-12 w-32 hidden;
+  @apply absolute hidden h-12 w-32;
   left: -1.1rem;
-  background: url("../../img/bread-arrow.svg") no-repeat center;
+  background: url('../../img/bread-arrow.svg') no-repeat center;
   background-size: contain;
 }
 
 .breadcrumbs-path-hidden-text {
-  @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
+  @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
   width: 20rem;
   top: 2.9rem;
   left: -1.2rem;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-arrow {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-path-hidden-text {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
   @apply block;
 }
-
 
 .breadcrumbs-icons {
   @apply flex flex-row gap-16;
+
   @media (min-width: 801px) {
     @apply hidden;
   }
@@ -383,54 +437,69 @@ button {
     max-width: calc(80%);
   }
 }
+
 .dropdown {
-  @apply relative inline-block h-44 w-auto max-w-menu border-2 border-black bg-yellow px-4 py-2;
+  @apply relative inline-block h-44 max-w-menu border-2 border-black bg-yellow px-4 py-6;
+  width: 14.4rem;
 
   button {
-    @apply flex flex w-full flex-row items-center justify-between p-1 pb-16 text-l;
+    @apply flex flex w-full flex-row items-center gap-8 p-1 pb-10 text-l;
   }
 
   .icon {
     @apply mb-1 h-24 w-24;
-    background: url("../../img/menu-1.svg") no-repeat center;
+    background: url('../../img/menu-1.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  &:hover .icon {
+    background: url('../../img/menu-2.svg') no-repeat center;
     background-size: contain;
   }
 
   .content {
-    @apply absolute z-1000 hidden w-auto max-w-inner-menu bg-white p-12;
+    @apply absolute left-0 z-1000 hidden w-auto max-w-inner-menu bg-white p-24;
+
+    a:not(:last-child) {
+      @apply mb-20;
+    }
 
     a {
       @apply flex w-full justify-start p-1 text-l;
 
       .menu-icon-book {
-        @apply h-20 w-20;
-        background: url("../../img/book.svg") no-repeat center;
+        @apply mr-16 h-20 w-20;
+        background: url('../../img/book.svg') no-repeat center;
         background-size: contain;
       }
 
       .menu-icon-toys {
-        @apply h-20 w-20;
-        background: url("../../img/toys.svg") no-repeat center;
+        @apply mr-16 h-20 w-20;
+        background: url('../../img/toys.svg') no-repeat center;
         background-size: contain;
       }
     }
   }
 
   .content-open-js {
-    @apply absolute z-50 block w-auto max-w-inner-menu bg-white p-12;
+    @apply absolute left-0 z-50 block w-auto max-w-inner-menu bg-white p-24;
+
+    a:not(:last-child) {
+      @apply mb-20;
+    }
 
     a {
       @apply flex w-full justify-start p-1 text-l;
 
       .menu-icon-book {
-        @apply h-20 w-20;
-        background: url("../../img/book.svg") no-repeat center;
+        @apply mr-16 h-20 w-20;
+        background: url('../../img/book.svg') no-repeat center;
         background-size: contain;
       }
 
       .menu-icon-toys {
-        @apply h-20 w-20;
-        background: url("../../img/toys.svg") no-repeat center;
+        @apply mr-16 h-20 w-20;
+        background: url('../../img/toys.svg') no-repeat center;
         background-size: contain;
       }
     }
@@ -439,15 +508,9 @@ button {
   &:hover .content {
     @apply block;
   }
-
-  &:hover .icon {
-    background: url("../../img/menu-2.svg") no-repeat center;
-    background-size: contain;
-  }
 }
 
 .navigation {
-
   ul {
     @apply m-0 flex list-none p-0;
   }
@@ -456,11 +519,11 @@ button {
     @apply m-4;
 
     p {
-      @apply relative px-2 text-black no-underline cursor-pointer;
+      @apply relative cursor-pointer px-2 text-black no-underline;
 
       &.active-js {
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           bottom: -0.2rem;
@@ -471,7 +534,7 @@ button {
       }
 
       &:hover::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: -0.2rem;
@@ -481,29 +544,36 @@ button {
       }
     }
   }
+
   .navigation-content {
-    @apply bg-white z-9999;
+    @apply z-9999 bg-white;
     position: absolute;
+
     .cross {
-      background: url("../../img/close.svg") no-repeat center right;
+      background: url('../../img/close.svg') no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1rem;
       right: 0;
       position: absolute;
-      @apply ml-4 inline-block text-left align-middle	cursor-pointer;
+      @apply ml-4 inline-block cursor-pointer text-left align-middle;
     }
+
     &.hide {
-      @apply opacity-0 hidden transition-all duration-500 ease-linear	;
+      @apply hidden opacity-0 transition-all duration-500 ease-linear;
     }
+
     &.active-js {
-      @apply opacity-100 block  transition-all duration-500 ease-linear	;
+      @apply block opacity-100 transition-all duration-500 ease-linear;
     }
+
     .content-layer {
       @apply flex;
+
       .picture {
         @apply w-3/12;
       }
+
       .name {
         @apply w-9/12 p-10 text-m;
       }
@@ -515,50 +585,49 @@ button {
   @apply w-3/5;
 
   .collapse-button {
-    @apply flex w-full cursor-pointer flex-row items-center justify-between border-none bg-background p-24 text-left text-l transition-all duration-500 ease-in-out;
+    @apply my-8 flex w-full cursor-pointer flex-row items-center justify-between border-none bg-background p-24 text-left text-l transition-all duration-500 ease-in-out;
 
     span {
-      width: 0.8rem;
-      height: 0.8rem;
-      border-top: 0.2rem solid #000000;
-      border-right: 0.2rem solid #000000;
+      background-image: url('../../img/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 1rem 1.6rem;
+      width: 2rem;
+      height: 1.6rem;
       margin-left: 1rem;
-      transform: rotate(135deg);
-      transition: all 0.5s ease-in-out;
     }
 
     &.active {
       @apply bg-yellow;
 
       span {
-        width: 0.8rem;
-        height: 0.8rem;
-        border-top: 0.2rem solid #000000;
-        border-right: 0.2rem solid #000000;
+        background-image: url('../../img/arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: 1rem 1.6rem;
+        width: 2rem;
+        height: 1.6rem;
         margin-left: 1rem;
-        transform: rotate(-45deg);
-        transition: all 0.5s ease-in-out;
+        transform: rotate(180deg);
       }
     }
   }
 
   .collapse-content {
-    @apply block h-0 overflow-hidden bg-white px-6 py-0 text-l opacity-0 transition-all duration-500 ease-in-out;
+    @apply block h-0 overflow-hidden bg-white px-24 py-0 text-l opacity-0 transition-all duration-500 ease-in-out;
 
     p {
-      @apply m-0 text-l;
+      @apply m-0 text-m;
     }
 
     &.active {
       @apply h-68 py-6 opacity-100 transition-all duration-500 ease-in-out;
 
       span {
-        width: 0.8rem;
-        height: 0.8rem;
-        border-top: 0.2rem solid #000000;
-        border-right: 0.2rem solid #000000;
+        background-image: url('../../img/arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: 1.6rem 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
         margin-left: 1rem;
-        transform: rotate(-45deg);
       }
     }
   }
@@ -711,24 +780,32 @@ button {
 //    // background-image: "img/svg/icon20/black-arrow_down.svg";
 //  }
 //}
-
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row justify-center items-center gap-12 rounded-b-2xl relative bg-black text-white text-2.5xl;
+  @apply fixed flex cursor-pointer flex-row items-center justify-center gap-12 rounded-b-2xl bg-black text-2.5xl text-white;
   width: 17.4rem;
   height: 2.4rem;
-  z-index: 5;
-  top: 30rem;
+  z-index: 1002;
+  top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
+  // добавляем это
+  @media screen and (max-width: 639px) {
+    @apply hidden;
+  }
 }
 
 .custom-box span {
-  @apply w-20 h-14 block;
-  background: url("../../img/envelope-white.svg") no-repeat center;
+  @apply block h-14 w-20;
+  background: url('../../img/envelope-white.svg') no-repeat center;
   background-size: contain;
   transform: rotate(90deg);
   z-index: 4;
+}
+
+.custom-box:hover .custom-box-span {
+  @apply block h-22 w-20;
+  background: url('../../img/envelope-black.png') no-repeat center;
 }
 
 .custom-box a {
@@ -744,11 +821,10 @@ button {
   width: 4rem;
   height: 4rem;
   transform: rotate(90deg);
-  background-image: url("../../img/custom-before.svg");
+  background-image: url('../../img/custom-before.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .custom-after {
@@ -759,11 +835,13 @@ button {
   left: 84.5%;
   width: 4rem;
   height: 4rem;
-  background-image: url("../../img/custom-after.svg");
+  background-image: url('../../img/custom-after.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
-
+.custom-box:hover .custom-after {
+  background-image: url('../../img/custom-after-yellow.svg');
+}
