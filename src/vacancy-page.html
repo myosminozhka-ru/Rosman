@@ -529,7 +529,7 @@
             class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-medicine-58px.svg"
                 />
@@ -547,7 +547,7 @@
             class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-bonuses-58px.svg"
                 />
@@ -565,7 +565,7 @@
             class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-beach-58px.svg"
                 />
@@ -584,7 +584,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-rocket-58px.svg"
                 />
@@ -601,7 +601,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-label-58px.svg"
                 />
@@ -618,7 +618,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-calendar-58px.svg"
                 />
@@ -636,7 +636,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-apple-carrot-58px.svg"
                 />
@@ -653,7 +653,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-arrows-diagonal-58px.svg"
                 />
@@ -670,7 +670,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-feast-58px.svg"
                 />
@@ -687,7 +687,7 @@
             class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
           >
             <div class="flex flex-col gap-8">
-              <div class="w-[5.8rem]">
+              <div class="aspect-square w-[5.8rem]">
                 <img
                   src="../../img/yellow-icons-58px/yellow-three-people-58px.svg"
                 />
@@ -768,19 +768,25 @@
 
               <label
                 for="attach-file"
-                class="flex cursor-pointer flex-row flex-nowrap items-center gap-6"
+                class="flex w-max cursor-pointer flex-row flex-nowrap items-center gap-6"
               >
                 <p class="link-s-bold">или прикрепить файл</p>
-                <div class="block h-20 w-20 bg-center bg-no-repeat">
+                <div class="block h-20 w-20 bg-center bg-no-repeat flex flex-row">
                   <img
                     class="h-full w-full"
                     src="../../img/black-attach-20px.svg"
                     alt=""
                   />
+                  <span class="attachedText whitespace-nowrap text-15.20"></span>
                 </div>
               </label>
             </div>
-            <input id="attach-file" type="file" class="hidden"/>
+            <input
+              onchange="handleFileInputChange(event)"
+              id="attach-file"
+              type="file"
+              class="hidden"
+            />
 
             <div class="js-footer-heading-policy-agreement checkbox_main">
               <input
@@ -842,5 +848,17 @@
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./js/scripts.js"></script>
+<script>
+  function handleFileInputChange(event) {
+    const fileInput = event.target;
+    const fileNamePlaceholder = document.getElementById('attach-file');
+    const attachedText = document.querySelector(".attachedText")
+
+    if (fileInput.files.length > 0) {
+      console.log(fileInput.files[0].name)
+      attachedText.innerHTML = fileInput.files[0].name;
+    }
+  }
+</script>
 </body>
 </html>
