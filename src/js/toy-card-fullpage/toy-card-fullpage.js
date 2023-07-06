@@ -219,7 +219,7 @@ const sliderThumbs = new Swiper(".slider__thumbs .swiper-container-3", {
   // задаем параметры
   direction: "vertical", // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
-  spaceBetween: 6, // расстояние между слайдами
+  spaceBetween: 5, // расстояние между слайдами
   navigation: {
     // задаем кнопки навигации
     nextEl: ".slider__next", // кнопка Next
@@ -236,12 +236,19 @@ const sliderThumbs = new Swiper(".slider__thumbs .swiper-container-3", {
     768: {
       // при 768px и выше
       direction: "vertical", // вертикальная прокрутка
+      spaceBetween: 5.5,
     },
     1300: {
       spaceBetween: 9.5,
     },
+    1200: {
+      spaceBetween: 8.5,
+    },
     1000: {
       spaceBetween: 7.5,
+    },
+    900: {
+      spaceBetween: 6.5,
     },
   },
 });
