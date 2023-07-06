@@ -1,19 +1,18 @@
-<!-- js_traceable_item будет применяться к всей карточке целиком -->
-<!-- а js-hovered только к элементам с изменяющимся фоном с классом js-bg-changeable-->
-
 <div class="cards_wrapper">
   <!-- карточка ИГРУШКИ -->
-  <div class="toy_card item_card">
+  <div class="toy_card item_card" itemscope itemtype="http://schema.org/Product">
     <div class="toy_card_heading">
       <div class="item_card_tags bordered_tags">
         <div class="item_card_tags_main bordered_tags_main">
           <a
+            itemprop="url"
             href="#"
             class="toy_card_tags_first bordered_tags_item body-s-bold"
           >
             Бестселлер
           </a>
           <a
+            itemprop="url"
             href="#"
             class="toy_card_tags_second bordered_tags_item body-s-bold"
           >
@@ -44,11 +43,12 @@
           class="toy_card_img item_card_img"
           src="../../img/cards_toy.svg"
           alt=""
+          itemprop="image"
         />
       </div>
     </div>
-    <div class="toy_card_info item_card_info">
-      <div class="toy_card_name item_card_name">
+    <div class="toy_card_info item_card_info" itemprop="description">
+      <div class="toy_card_name item_card_name" itemprop="name">
         Арена для баттлов Инфинити Надо
       </div>
       <div class="toy_card_more item_card_more">
@@ -61,17 +61,19 @@
   </div>
 
   <!-- карточка КНИГИ -->
-  <div class="book_card js_item_card item_card">
+  <div class="book_card js_item_card item_card" itemscope itemtype="http://schema.org/Book">
     <div class="book_card_heading">
       <div class="item_card_tags bordered_tags">
         <div class="item_card_tags_main bordered_tags_main">
           <a
+            itemprop="url"
             href="#"
             class="book_card_tags_first bordered_tags_item body-s-bold"
           >
             Бестселлер
           </a>
           <a
+            itemprop="url"
             href="#"
             class="book_card_tags_second bordered_tags_item body-s-bold"
           >
@@ -86,14 +88,15 @@
           class="book_card_img item_card_img"
           src="../../img/cards_book.svg"
           alt=""
+          itemprop="image"
         />
       </div>
     </div>
-    <div class="book_card_info item_card_info">
-      <div class="book_card_name item_card_name">
+    <div class="book_card_info item_card_info" itemprop="description">
+      <div class="book_card_name item_card_name" itemprop="name">
         Чародол. Весь цикл в одном томе
       </div>
-      <div class="book_card_author">Щерба Н. В.</div>
+      <div class="book_card_author" itemprop="author">Щерба Н. В.</div>
       <div class="book_card_more item_card_more">
         <button class="book_card_item_link item_card_link overline-button">
           Подробнее

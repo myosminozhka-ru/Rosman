@@ -1,26 +1,39 @@
 <!-- КАРТОЧКА ИНТЕРВЬЮ -->
-<div class="card_interview js_traceable_item">
-  <a href="#" class="card_interview_image item_card_image">
+<div
+  class="card_article js_traceable_item"
+  itemscope
+  itemtype="https://schema.org/Article"
+>
+  <a itemprop="url" href="#" class="card_article_image item_card_image">
     <img
       src="../../img/cards_interview.svg"
       alt=""
-      class="interview_card_img item_card_img"
+      class="article_card_img item_card_img"
+      itemprop="image"
     />
   </a>
-  <div class="card_interview_description js-bg-changeable">
-    <div class="card_interview_tags dotted_tags">
-      <a href="#" class="card_interview_category dotted_tags_category">
-        ИНТЕРВЬЮ
-      </a>
-      <div class="card_interview_separator dotted_tags_separator">•</div>
-      <a href="#" class="card_interview_date dotted_tags_date">30.11.2022</a>
+  <div class="card_article_description js-bg-changeable" itemprop="description">
+    <div class="card_article_tags dotted_tags">
+      <a
+        href="#"
+        class="card_article_category dotted_tags_category"
+        itemprop="url"
+      >ИНТЕРВЬЮ</a
+      >
+      <div class="card_article_separator dotted_tags_separator">•</div>
+      <a
+        href="#"
+        class="card_article_date dotted_tags_date"
+        itemprop="datePublished"
+      >30.11.2022</a
+      >
     </div>
-    <a href="#" class="card_interview_info card_sel_info">
-      <div class="card_interview_name card_sel_name">
+    <a itemprop="url" href="#" class="card_article_info card_sel_info">
+      <div class="card_article_name card_sel_name" itemprop="headline">
         Классический бестселлер обрел новую жизнь в свежем переводе на русский
         язык
       </div>
-      <div class="card_interview_text card_sel_text">
+      <div class="card_article_text card_sel_text" itemprop="articleBody">
         Также как сплочённость команды профессионалов представляет собой
         интересный эксперимент
       </div>
