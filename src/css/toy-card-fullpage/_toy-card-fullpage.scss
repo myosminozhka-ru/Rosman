@@ -1,16 +1,15 @@
 // личные настройки
 #above-block.card-fullpage-modified-above-block {
   @apply p-0;
-
 }
 
 #yellow-background.card-fullpage-modified-yellow-background {
-  @apply h-auto;
+  @apply h-auto pt-[1rem];
 }
 
 .card-fullpage-modified-yellow-background:after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   height: 50%;
   bottom: 0;
@@ -18,20 +17,19 @@
   width: 100%;
 }
 
-
 // остальные стили
 //.card-fullpage{
 //  @apply bg-white;
 //}
 .card-fullpage-main-info {
-  @apply flex flex-row justify-between gap-16 items-start mb-64;
+  @apply mb-64 flex flex-row items-start justify-between gap-16;
   @media screen and (max-width: 900px) {
     @apply flex-col;
   }
 }
 
 .card-fullpage-images {
-  @apply flex flex-row-reverse gap-16 items-center;
+  @apply flex flex-row-reverse items-center gap-16;
   @media screen and (max-width: 500px) {
     @apply hidden;
   }
@@ -45,7 +43,7 @@
 }
 
 .breadcrumbs-small-screen {
-  @apply flex flex-row gap-8 flex-nowrap text-s text-text items-center;
+  @apply flex flex-row flex-nowrap items-center gap-8 text-s text-text;
   @media (min-width: 802px) {
     @apply hidden;
   }
@@ -55,8 +53,9 @@
 }
 
 .breadcrumbs-small-screen-image {
-  @apply w-20 h-20 block;
-  background: url("../../img/card-fullpage/breadcrumb-home.svg") no-repeat center;
+  @apply block h-20 w-20;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
+    center;
   background-size: contain;
 }
 
@@ -65,30 +64,27 @@
 }
 
 .breadcrumbs-arrow {
-  @apply absolute h-12 w-32 hidden;
+  @apply absolute hidden h-12 w-32;
   left: -1.1rem;
-  background: url("../../img/card-fullpage/bread-arrow.svg") no-repeat center;
+  background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
   background-size: contain;
 }
 
 .breadcrumbs-path-hidden-text {
-  @apply absolute hidden bg-white z-10 p-16 flex flex-col gap-8;
+  @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
   width: 20rem;
   top: 2.9rem;
   left: -1.2rem;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-arrow {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
 }
 
-.breadcrumbs-small-screen-dots:hover
-.breadcrumbs-path-hidden-text {
+.breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
   @apply block;
 }
-
 
 .breadcrumbs-icons {
   @apply flex flex-row gap-16;
@@ -115,22 +111,22 @@
 }
 
 .card-fp-desc-top {
-  @apply flex flex-col gap-16 items-start;
+  @apply flex flex-col items-start gap-16;
 }
 
 .card-fp-desc-header {
   @apply text-6xl font-medium;
   @media screen and (max-width: 700px) {
-    @apply text-3xl
+    @apply text-3xl;
   }
 }
 
 .card-fp-desc-vendor-code {
-  @apply text-text font-normal text-15.20;
+  @apply text-15.20 font-normal text-text;
 }
 
 .card-fp-desc-target-aud {
-  @apply px-12 py-4 text-s inline-block font-medium rounded-3xl;
+  @apply inline-block rounded-3xl px-12 py-4 text-s font-medium;
   border: 1px solid black;
 }
 
@@ -143,7 +139,7 @@
 }
 
 .js-mdb-author-button {
-  @apply p-0 justify-start;
+  @apply justify-start p-0;
 }
 
 .card-fp-desc-text-full {
@@ -153,7 +149,7 @@
 }
 
 .card-fp-transparent-text {
-  @apply relative
+  @apply relative;
 }
 
 .card-fp-transparent-text:after {
@@ -162,10 +158,11 @@
   bottom: 0;
   height: 100%;
   width: 100%;
-  content: "";
-  background: linear-gradient(to top,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 100%
+  content: '';
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none; /* so the text is still selectable */
 }
@@ -185,7 +182,6 @@
   @apply text-2.5xl font-medium;
 }
 
-
 .card-fp-desc-buy-buttons {
   @apply flex flex-row gap-16;
   @media screen and (max-width: 500px) {
@@ -202,7 +198,7 @@
   @apply px-24 py-14;
   width: 9.8rem;
   height: 4rem;
-  background: url("../../img/card-fullpage/ozon.svg") no-repeat center;
+  background: url('../../img/card-fullpage/ozon.svg') no-repeat center;
   @media screen and (max-width: 500px) {
     @apply w-1/2;
   }
@@ -211,7 +207,7 @@
 .c-fp-d-b-btn-2 {
   width: 15.5rem;
   height: 4rem;
-  background: url("../../img/card-fullpage/wildberries.svg") no-repeat center;
+  background: url('../../img/card-fullpage/wildberries.svg') no-repeat center;
   @media screen and (max-width: 500px) {
     @apply w-1/2;
   }
@@ -221,7 +217,6 @@
   @apply hidden;
 }
 
-
 .card-fp-desc-buttons {
   @apply flex flex-col items-center gap-24;
   @media screen and (max-width: 800px) {
@@ -230,12 +225,12 @@
 }
 
 .bordered_tags_item-fp {
-  @apply text-15.20 p-4 text-center w-30 h-30;
+  @apply h-30 w-30 p-4 text-center text-15.20;
 }
 
 .item_card-external-link {
-  @apply w-20 h-20 block;
-  background: url("../../img/follow_the_link.svg") no-repeat center;
+  @apply block h-20 w-20;
+  background: url('../../img/follow_the_link.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -248,7 +243,7 @@
 }
 
 .card-fullpage-tags {
-  @apply absolute top-0 left-0 text-s bg-white;
+  @apply absolute left-0 top-0 bg-white text-s;
 }
 
 .bordered_tags_item-hidden {
@@ -258,24 +253,23 @@
 }
 
 .largeImg {
-  @apply w-full h-full object-cover;
+  @apply h-full w-full object-cover;
 }
 
-.thumbs {
-  @apply flex flex-col gap-16;
-}
-
+//.thumbs {
+//  @apply flex flex-col gap-14;
+//}
 
 .js-thumb-chosen {
-  border: 3px solid #4498FC;
+  border: 3px solid #4498fc;
 }
-
 
 .thumbs a:hover {
 }
 
 .thumbs li {
   list-style: none;
+  max-width: 7rem;
 }
 
 .thumbs {
@@ -292,10 +286,9 @@
   max-width: 17rem;
 }
 
-
 // карточки брендов
 .card-fullpage-card-brands {
-  @apply flex flex-row gap-16 flex-nowrap mb-64;
+  @apply mb-64 flex flex-row flex-nowrap gap-16;
   @media screen and (max-width: 900px) {
     @apply flex-col items-center;
   }
@@ -316,23 +309,28 @@
 
 // navigation
 .navigation-flex {
-  @apply flex-wrap flex-nowrap gap-16 items-start;
+  @apply flex-wrap flex-nowrap items-center gap-16;
   @media screen and (max-width: 500px) {
-    @apply justify-between;
+    @apply grid grid-cols-3 justify-between text-s;
   }
 }
 
 .card-fullpage-tab {
-  @apply text-15.20 font-medium py-10 px-16;
+  @apply px-16 py-10 text-15.20 font-medium;
+  @media screen and (max-width: 500px) {
+    @apply px-0 text-s;
+  }
 }
 
 .card-fullpage-tabs {
   @apply mb-32;
+  @media screen and (max-width: 500px) {
+    @apply mb-16;
+  }
 }
 
 // card-fullpage-desc-comp
 .card-item-to-hide {
-
 }
 
 .card-fullpage-desc-image {
@@ -340,11 +338,11 @@
 }
 
 .js-card-fullpage-desc-image img {
-  @apply w-full h-full object-cover;
+  @apply h-full w-full object-cover;
 }
 
 .js-card-fullpage-desc-description {
-  @apply flex flex-col gap-24 mb-64;
+  @apply mb-64 flex flex-col gap-24;
 }
 
 .js-card-fullpage-desc-description.gapped {
@@ -380,7 +378,7 @@
 }
 
 .card-descr-text > ul > li:before {
-  content: "";
+  content: '';
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
@@ -419,7 +417,7 @@
 }
 
 .card-fullpage-desc-block-img img {
-  @apply w-full h-full object-cover;
+  @apply h-full w-full object-cover;
 }
 
 .card-fullpage-desc-block-text {
@@ -430,11 +428,9 @@
 }
 
 .more-card-header {
-
 }
 
 .more-card-text {
-
 }
 
 .card-fullpage-desc-more {
@@ -445,7 +441,7 @@
 }
 
 .card-fullpage-desc-more-card {
-  @apply flex flex-col gap-20 w-1/3;
+  @apply flex w-1/3 flex-col gap-20;
   @media screen and (max-width: 800px) {
     @apply w-auto;
   }
@@ -460,7 +456,7 @@
 }
 
 .card-fullpage-desc-more-card-image img {
-  @apply w-full h-full object-cover;
+  @apply h-full w-full object-cover;
 }
 
 .card-fullpage-desc-more-card-text {
@@ -480,17 +476,21 @@
 
 // photogallery wrapper
 #white-background.card-fullpage-w-bg-modified {
-  height: 51.9rem;
-  width: 100%;
-  padding: 0;
+  height: 64.9rem;
+  padding: 5rem 0 0 0;
   margin-bottom: 6.4rem;
+  &.books-slider {
+    height: 84.9rem;
+  }
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
   height: 51.9rem;
   padding: 0;
   margin: 0;
-  width: 100%;
+  &.books-slider {
+    height: 65.9rem;
+  }
 }
 
 #white-background {
@@ -500,7 +500,7 @@
 }
 
 .swiper-image.swiper-header.sw-head-mod {
-  @apply w-full mx-0;
+  @apply mx-0 w-full;
 }
 
 #above-block.above-block-mod {
@@ -512,13 +512,13 @@
 
 // стили для таба ХАРАКТЕРИСТИКИ
 .card-fp-char-item:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 0.1rem;
   position: absolute;
   bottom: -1.6rem;
   left: 0;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .card-fullpage-characteristics {
@@ -544,10 +544,9 @@
   }
 }
 
-
 // стили для компонента ИНСТРУКЦИИ
 .card-fullpage-instruction {
-  @apply flex flex-row gap-16 p-24  bg-yellow w-1/2;
+  @apply flex w-1/2 flex-row gap-16  bg-yellow p-24;
   @media (min-width: 901px) and (max-width: 1100px) {
     @apply w-3/5;
   }
@@ -555,7 +554,7 @@
     @apply w-3/4;
   }
   @media screen and (max-width: 700px) {
-    @apply flex-col w-full;
+    @apply w-full flex-col;
   }
 }
 
@@ -564,8 +563,8 @@
 }
 
 .card-fullpage-instruction-text-image {
-  @apply w-20 h-20 block;
-  background: url("../../img/download.svg") no-repeat center;
+  @apply block h-20 w-20;
+  background: url('../../img/download.svg') no-repeat center;
   background-size: contain;
   flex-basis: 2rem;
   flex-shrink: 0;
@@ -581,14 +580,13 @@
 }
 
 .card-fullpage-instruction-button {
-  @apply w-full text-15.20 font-medium p-0;
+  @apply w-full p-0 text-15.20 font-medium;
   max-width: 19rem;
   height: 4rem;
   @media screen and (max-width: 700px) {
     max-width: unset;
   }
 }
-
 
 // еще один слайдер
 .card-fullpage-image-slider {
@@ -633,4 +631,107 @@
 
 .card-fullpage-dot.active {
   background-color: rgba(0, 0, 0, 1);
+}
+
+///// my swiper
+
+.slider-2 .swiper-container-3 {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider__col {
+  display: flex;
+  flex-direction: column;
+  max-width: 8.8rem;
+  margin-right: 1.6rem;
+}
+
+.slider__prev,
+.slider__next {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.4rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slider__prev:focus,
+.slider__next:focus {
+  outline: none;
+}
+
+.slider__thumbs {
+  height: 50.4rem;
+}
+
+.slider__thumbs .slider__image:hover {
+  opacity: 1;
+}
+
+.slider__thumbs .swiper-slide-thumb-active .slider__image {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.slider__images {
+  max-width: 50.4rem;
+  max-height: 50.4rem;
+  aspect-ratio: 1/1;
+}
+
+.slider__images .slider__image img {
+  transition: 3s;
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .slider__flex {
+    flex-direction: column-reverse;
+  }
+  .slider__col {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 24px;
+    width: 100%;
+  }
+  .slider__images {
+    width: 100%;
+  }
+  .slider__thumbs {
+    height: 100px;
+    width: calc(100% - 96px);
+    margin: 0 16px;
+  }
+  .slider__prev,
+  .slider__next {
+    height: auto;
+    width: 32px;
+  }
 }

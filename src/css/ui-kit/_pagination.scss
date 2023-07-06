@@ -1,23 +1,27 @@
 .pagination {
 }
+
 .pagination-seen {
 }
+
 .pagination-more-button {
 }
+
 .pagination-nav-page-buttons {
 }
+
 // паддинги не стал задавать, ведь мб контейнер будет ограничивать?
 .rm-pag {
-  @apply flex flex-col items-start gap-16; //  px-24
-  @media screen and (max-width: 500px){
-    @apply px-12
-  }
+  @apply flex flex-col items-start gap-16;
 }
+
 .js-rm-pag-seen {
   @apply text-2.5xl text-text;
 }
+
 .js-rm-pag-more-btn {
   @apply w-full bg-grey py-10 text-15.20 font-medium;
+
   &:hover {
     @apply bg-card-stroke;
   }
@@ -25,20 +29,28 @@
 
 .js-rm-pag-nav-page-btns {
   @apply flex flex-row flex-nowrap gap-14;
+
   @media screen and (max-width: 500px) {
-    @apply gap-0 justify-between w-full;
+    @apply w-full justify-between gap-0;
   }
 }
 
-.nav-btns{
-  @apply flex flex-row flex-nowrap gap-14;
-  @media screen and (max-width: 500px){
+.nav-btns {
+  @apply flex flex-row flex-nowrap items-center gap-14;
+
+  @media screen and (max-width: 500px) {
     @apply gap-8;
   }
 }
 
 .js-rm-pag-nav-page-btn {
   @apply h-40 w-40 border-2 border-b-black bg-white p-0 text-15.20;
+
+  @media screen and (max-width: 500px) {
+    @apply h-30 w-30 border-card-stroke;
+    min-width: 3rem !important;
+  }
+
   &:hover {
     border-color: #fff145;
   }
@@ -50,31 +62,37 @@
 
 .pag-hidden {
   @apply hidden;
+
   @media screen and (max-width: 500px) {
     @apply block;
   }
 }
+
 .js-rm-pag-nav-page-more-bnt {
-  @apply flex flex-row px-0 text-15.20;
+  @apply flex flex-row p-0 text-15.20;
+
   &:hover {
     @apply underline;
   }
 }
-.js-rm-pag-nav-page-more-bnt span {
+
+.arrow-left-black {
   @apply block h-20 w-20;
-  background: url("../../img/go-forth.svg") no-repeat center;
+  background: url('../../img/go-forth.svg') no-repeat center;
   background-size: contain;
 }
 
 // добавил кнопку на всякий случай
-.js-rm-pag-nav-page-back-bnt{
-  @apply flex flex-row px-0 items-center text-15.20 hidden;
+.js-rm-pag-nav-page-back-bnt {
+  @apply flex hidden flex-row items-center px-0 text-15.20;
+
   &:hover {
     @apply underline;
   }
 }
-.js-rm-pag-nav-page-back-bnt span{
+
+.js-rm-pag-nav-page-back-bnt span {
   @apply block h-20 w-20;
-  background: url("../../img/go-back.svg") no-repeat center;
+  background: url('../../img/go-back.svg') no-repeat center;
   background-size: contain;
 }

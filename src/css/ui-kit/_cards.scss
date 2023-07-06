@@ -3,14 +3,16 @@
 }
 
 // общий класс
-.traceable_item {
-}
+.traceable_item {}
 
 // карточка игрушки и книги
-
 // card's top
 .toy_card {
-  @apply flex flex-col justify-start gap-24 bg-white pb-12;
+  @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
+
+  &:hover {
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
 }
 
 .item_card_tags.bordered_tags {
@@ -20,11 +22,23 @@
 }
 
 .bordered_tags_item:hover {
-  @apply bg-yellow;
+  @apply border border-yellow bg-yellow;
 }
 
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
+
+  &:hover {
+    box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
+  }
+}
+
+.book_card:hover .item_card_image {
+  @apply bg-white;
+}
+
+.toy_card:hover .item_card_image {
+  @apply bg-white;
 }
 
 .toy_card_heading {
@@ -41,23 +55,21 @@
 
       span {
         margin: 0.1rem 1rem;
-        color: #FFF145;
+        color: #fff145;
       }
     }
   }
-
 
   @keyframes marquee {
     0% {
       transform: translateX(10%);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
-
 }
-
 
 .bordered_tags {
   @apply flex flex-row flex-nowrap items-center justify-between;
@@ -65,14 +77,23 @@
 
 .bordered_tags_main {
   @apply flex flex-row justify-between gap-8;
+
   @media screen and (max-width: 400px) {
-    @apply gap-6;
+    @apply w-full justify-between gap-6;
   }
 }
 
 .bordered_tags_item {
-  @apply px-12 py-4 body-s-bold;
+  @apply px-12 py-4 body-s-bold bg-white;
   border: 1px solid #000000;
+
+  @media screen and (max-width: 400px) {
+    @apply w-1/2 text-center;
+  }
+
+  @media screen and (max-width: 900px) {
+    @apply px-4;
+  }
 }
 
 .bordered_tags_item:hover {
@@ -80,23 +101,20 @@
 }
 
 .bordered_tags_item-smalled {
-  @apply px-4 py-4 text-11.14 text-center;
+  @apply px-4 py-4 text-center text-11.14;
   width: 7rem;
 }
 
-.toy_card_tags_first {
-}
+.toy_card_tags_first {}
 
-.toy_card_tags_second {
-}
+.toy_card_tags_second {}
 
-.toy_card_tags_age {
-}
+.toy_card_tags_age {}
 
 // соотношение сторон - хз, надо проработать
 .item_card_image {
   @apply relative w-full bg-background;
-  //aspect-ratio: 342 / 296;
+
   &:hover {
     @apply bg-white;
   }
@@ -114,6 +132,7 @@
 
 .item_card_name {
   @apply body-m-bold;
+
   @media screen and (max-width: 400px) {
     @apply text-xl;
   }
@@ -125,6 +144,7 @@
 
 .item_card_link.overline-button {
   @apply p-0;
+
   @media screen and (max-width: 400px) {
     @apply text-xl;
   }
@@ -132,19 +152,19 @@
 
 .item_card_add_to_favourite {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_white.svg") no-repeat center;
+  background: url('../../img/heart_white.svg') no-repeat center;
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url("../../img/heart_black.svg") no-repeat center;
+  background: url('../../img/heart_black.svg') no-repeat center;
 }
 
-.add_to_favourite_img {
-}
+.add_to_favourite_img {}
 
 .book_card_author {
   @apply text-15.20 font-medium text-text;
+
   @media screen and (max-width: 400px) {
     @apply text-11.14;
   }
@@ -152,11 +172,19 @@
 
 // карточка БОЛЬШАЯ ПОДБОРКИ
 .card_selection {
-  @apply flex flex-col gap-24;
+  @apply flex flex-col;
 }
 
 .card_selection_description {
-  @apply flex flex-col gap-16 px-16 pb-16;
+  @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm: pt-16;
+
+  @media screen and (max-width: 639px) {
+    padding-top: 1.6rem;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
 }
 
 .dotted_tags {
@@ -164,20 +192,21 @@
 }
 
 .dotted_tags_category {
-  @apply text-15.20 font-normal text-black;
-  @media screen and (max-width: 400px) {
-    @apply text-xl;
-  }
+  @apply text-xl font-medium text-black;
 }
 
-.dotted_tags_separator {
-}
+.dotted_tags_separator {}
 
 .dotted_tags_date {
   @apply text-xl text-text;
+
   @media screen and (max-width: 400px) {
     @apply text-xl;
   }
+}
+
+.js_traceable_item:hover .dotted_tags_date {
+  @apply text-black;
 }
 
 .card_sel_info {
@@ -186,6 +215,7 @@
 
 .card_selection_name {
   @apply text-3xl font-bold text-black;
+
   @media screen and (max-width: 400px) {
     @apply text-2xl;
   }
@@ -198,7 +228,7 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row gap-16 sm:flex-col;
+  @apply flex flex-row sm: flex-col;
 }
 
 .card_interview_name {
@@ -210,12 +240,16 @@
 }
 
 .card_interview_description {
-  @apply flex flex-col gap-12 py-16 pr-16;
+  @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm: border-x sm: border-b sm: border-t-0;
+
+  &:hover {
+    border-color: transparent;
+  }
 }
 
 // Карточки ВЕРТИКАЛЬНЫЕ НЕБОЛЬШИЕ
 .card_articles {
-  @apply flex flex-col gap-24;
+  @apply flex flex-col;
 }
 
 //.card_articles {
@@ -233,9 +267,12 @@
 //    width: 100%;
 //  }
 //}
-
 .card_articles_description {
-  @apply flex flex-col px-12 pb-12;
+  @apply box-border flex flex-col gap-12 border-x border-b border-card-stroke px-12 pb-12 pt-16;
+
+  &:hover {
+    border-color: transparent;
+  }
 }
 
 .card_articles_name {
@@ -243,7 +280,7 @@
 }
 
 .card_articles_text {
-  @apply text-2.5xl text-black ssm:text-15.20;
+  @apply text-2.5xl text-black ssm: text-15.20;
   font-weight: 400;
 }
 
@@ -252,22 +289,20 @@
 }
 
 .card_articles_text_sfs {
-  @apply text-15.20 font-normal ssm:text-s;
+  @apply text-15.20 font-normal ssm: text-s;
 }
 
 // карточка БРЕНДА
-.card_brands {
-}
+.card_brands {}
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
+  width: 100%;
   border: 1px solid #d9d9d9;
+
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;
   }
-  //@media screen and (max-width: 290px){
-  //  @apply flex-col;
-  //}
 }
 
 .card_brand_content:hover .card_brand_all_items {
@@ -287,14 +322,16 @@
 }
 
 .card_brand_all_items {
-  @apply block rounded-2xl text-xl bg-yellow px-8 py-4 text-center;
+  @apply block rounded-2xl bg-yellow px-8 py-4 text-center text-xl;
+
   @media screen and (max-width: 359px) {
-    @apply text-s
+    @apply text-s;
   }
 }
 
 .card_brand_name {
-  @apply text-2.5xl font-normal text-black text-center;
+  @apply text-center text-2.5xl font-normal text-black;
+
   @media screen and (max-width: 359px) {
     @apply text-xl;
   }
@@ -303,8 +340,8 @@
 .card_brand_image {
   @apply block bg-white;
   max-width: 15rem;
-  //max-height: 9rem;
-  //aspect-ratio: 16/9;
+  max-height: 9rem;
+  aspect-ratio: 15/9;
 }
 
 .card_brand_image img {
@@ -314,7 +351,7 @@
 
 // КАТАЛОГ КНИГ КАРТОЧКА
 .card_book_catalog {
-  @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm:p-16;
+  @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm: p-16;
   border: 1px solid #d9d9d9;
 }
 
@@ -323,23 +360,22 @@
 }
 
 .card_book_image {
-  @apply h-40 w-40 w-56 ssm:h-56;
+  @apply h-40 w-40;
 }
 
-.card_book_img {
-}
+.card_book_img {}
 
 .card_book_title {
-  @apply text-3xl ssm:text-15.20;
+  @apply text-3xl ssm: text-15.20;
 }
 
 .card_book_link {
+  @apply w-max;
 }
 
 // КАРТОЧКА КАРЬЕРА
 .card_career {
   @apply flex flex-col flex-nowrap items-start gap-16 bg-white px-32 pb-60 pt-32;
-  max-width: 60rem;
   border: 1px solid #d9d9d9;
 }
 
@@ -348,19 +384,20 @@
 }
 
 .car_cond_item:hover {
-  @apply bg-yellow cursor-pointer;
+  @apply cursor-pointer bg-yellow;
 }
 
 // 1
 .card_career_heading {
-  @apply flex flex-row flex-wrap items-center  gap-12;
+  @apply flex flex-row flex-wrap items-center gap-12;
+
   @media screen and (max-width: 520px) {
     @apply flex-col-reverse items-start;
   }
 }
 
 .card_career_title {
-  @apply text-4xl ssm:text-2xl;
+  @apply text-4xl font-medium ssm: text-2xl;
 }
 
 .card_career_tags {
@@ -368,7 +405,7 @@
 }
 
 .card_career_tag {
-  @apply rounded-3xl bg-yellow px-12 py-4 ssm:text-s;
+  @apply rounded-3xl bg-yellow px-12 py-4 text-s;
 }
 
 .card_career:hover .card_career_tag {
@@ -378,46 +415,47 @@
 //2
 .card_career_conditions {
   @apply flex flex-row flex-nowrap gap-16;
+
   @media screen and (max-width: 520px) {
     @apply flex-col items-start;
   }
 }
 
-.card_career_cond_item {
-}
+.card_career_cond_item {}
 
 .car_cond_item {
   @apply flex flex-row flex-nowrap items-center gap-8 rounded bg-background px-8 py-4;
 }
 
-.car_cond_location {
-}
+.car_cond_location {}
 
-.car_cond_shift_length {
-}
+.car_cond_shift_length {}
 
-.card_career_cond_item_image {
-}
+.card_career_cond_item_image {}
 
-.card_career_cond_item_img {
-}
+.card_career_cond_item_img {}
 
 .card_career_cond_item_text {
-  @apply text-15.20 font-normal text-black ssm:text-15.20;
+  @apply text-15.20 font-normal text-black ssm: text-15.20;
 }
 
 .card_career_cond_item_text:hover {
-  @apply bg-yellow cursor-pointer;
+  @apply cursor-pointer bg-yellow;
 }
 
 // 3
 .card_career_description {
-  @apply text-2.5xl font-normal text-black ssm:text-15.20;
+  @apply text-2.5xl font-normal text-black ssm: text-15.20;
 }
 
 // 4
 .card_career_more_info {
   @apply flex flex-row flex-nowrap items-center bg-black;
+  padding: 1.3rem 2rem;
+
+  &:hover {
+    background-color: #4d4d4d;
+  }
 }
 
 .card_career_text {
@@ -426,7 +464,7 @@
 
 .card_career_img {
   @apply block h-20 w-20;
-  background: url("../../img/cards_career_arrow.svg") no-repeat center;
+  background: url('../../img/cards_career_arrow.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -435,7 +473,7 @@
   @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
   width: 29.6rem;
   height: 22.2rem;
-  background-image: url("../../img/cards_brand_socials.svg");
+  background-image: url('../../img/cards_brand_socials.svg');
   background-position: center center;
 }
 
@@ -451,6 +489,15 @@
   @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
   top: 6%;
   left: 6%;
+}
+
+.card_brand_links {
+  @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .card_brand_with_socs_item_page {
@@ -496,7 +543,7 @@
 }
 
 .card_photogallery_item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -550,15 +597,14 @@
   transform: translate(-50%, -50%);
 }
 
-.card_video_info {
-}
+.card_video_info {}
 
 .card_video_title {
-  @apply text-2.5xl;
+  @apply text-2.5xl sm: text-15.20;
 }
 
 .card_video_preview::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -583,8 +629,25 @@
   max-width: 100%;
 }
 
+.card_employee_image:hover {
+  box-shadow: -1.505px 0px 0px 0px lightgray;
+}
+
+.card_employee:hover .card_employee_info {
+  @apply border-white;
+  background: var(--gray-scale-white, #fff);
+  box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+
+  @media (max-width: 660px) {
+    border-bottom: 1px solid #e3e3e2;
+    border-left: 1px solid #e3e3e2;
+    border-right: 1px solid #e3e3e2;
+    box-shadow: none;
+  }
+}
+
 .card_employee_info {
-  @apply flex flex-col gap-8 p-20;
+  @apply flex flex-col gap-8 border-x border-b border-card-stroke p-20;
 }
 
 .card_employee_name {
@@ -596,11 +659,11 @@
 }
 
 .card_employee_text {
-  @apply text-2.5xl font-normal font-normal ssm:text-15.20;
+  @apply text-2.5xl font-normal font-normal ssm: text-15.20;
 }
 
 .card_employee_image::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -645,42 +708,40 @@
 }
 
 .emp_soc_fb {
-  background: url("../../img/icon-white-facebook.svg") no-repeat;
-
+  background: url('../../img/icon-white-facebook.svg') no-repeat;
 }
 
 .emp_soc_fb:hover {
-  background-image: url("../../img/icon-black-facebook.svg");
+  background-image: url('../../img/icon-black-facebook.svg');
   background-position: center center;
 }
 
 .emp_soc_twit {
-  background: url("../../img/icon-white-twitter.svg") no-repeat;
+  background: url('../../img/icon-white-twitter.svg') no-repeat;
 }
 
 .emp_soc_twit:hover {
-  background-image: url("../../img/icon-black-twitter.svg");
+  background-image: url('../../img/icon-black-twitter.svg');
   background-position: center center;
 }
 
 .emp_soc_pint {
-  background: url("../../img/icon-white-pint.svg") no-repeat;
+  background: url('../../img/icon-white-pint.svg') no-repeat;
 }
 
 .emp_soc_pint:hover {
-  background-image: url("../../img/icon-black-pinterest.svg");
+  background-image: url('../../img/icon-black-pinterest.svg');
   background-position: center center;
 }
 
 .emp_soc_inst {
-  background: url("../../img/icon-white-inst.svg") no-repeat;
+  background: url('../../img/icon-white-inst.svg') no-repeat;
 }
 
 .emp_soc_inst:hover {
-  background-image: url("../../img/icon-black-instagram.svg");
+  background-image: url('../../img/icon-black-instagram.svg');
   background-position: center center;
 }
-
 
 // карточка НАГРАД
 .card_awards_content {
@@ -700,9 +761,12 @@
   @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
 }
 
+.card_awards:hover .card_awards_year {
+  @apply bg-white;
+}
+
 .card_awards_title {
-  @apply text-3xl font-medium ssm:text-2xl;
-  max-width: 33rem;
+  @apply text-3xl font-medium ssm: text-2xl;
 }
 
 .card_awards_description {
