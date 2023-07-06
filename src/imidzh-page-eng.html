@@ -1,400 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fashion page</title>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-<div class="legal-information-wrapper relative">
-  @@include('components/header/header-eng.html', { }, )
-  <div class="custom-box !z-1 !fixed sm:hidden">
-    <span></span>
-    <div class="custom-before"></div>
-    <a href="mailto:rosman@rosman.ru">Write to us</a>
-    <div class="custom-after"></div>
-  </div>
-  <div class="flex flex-col gap-64 sm:gap-48">
-    <!-- тут будут бренды и публикации -->
-    <div class="grid grid-cols-2 gap-24 p-24 bg-[#FFF145] sm:grid-cols-1 sm:p-12">
-      <div class="w-full relative">
-        <img src="../../img/imidzh-car.jpg" alt="">
-        <div class="absolute top-[2.4rem] left-[2.4rem] flex flex-col gap-20 bs:gap-12">
-          <div class="text-60.104 font-medium bs:text-4xl">Brands</div>
-          <div class="text-15.20 font-medium
-         border border-black py-8 px-12
-          w-max cursor-pointer
-          flex flex-row flex-nowrap
-          gap-2
-          ">
-            More details <span class="arrow-left-black"></span>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="legal-information-wrapper relative">
+      <!--ya-->
+      @@include('components/header/header-eng.html', { }, )
+      <div
+        class="custom-box !z-1 js_contact_us_ru_popup_button !fixed sm:hidden"
+      >
+        <span></span>
+        <div class="custom-before"></div>
+        <div>Write to us</div>
+        <div class="custom-after"></div>
       </div>
-      
-      <div class="w-full relative">
-        <img src="../../img/imidzh-book-2.png" alt="">
-        <div class="absolute top-[2.4rem] left-[2.4rem] flex flex-col gap-20 bs:gap-12">
-          <div class="text-60.104 font-medium bs:text-4xl">Publishing</div>
-          <div class="text-15.20 font-medium
-         border border-black py-8 px-12
-          w-max cursor-pointer
-          flex flex-row flex-nowrap
-          gap-2
-          ">
-            More details <span class="arrow-left-black"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- тут будет слон -->
-    @@include('components/ui-kit/sliders/elephant-history.html', { }, )
-    <!-- тут будут карточки сотрудников и их слайдер -->
-    <div class="flex flex-col gap-32 px-24 ssm:px-12 ssm:pr-0">
-      <div class="text-5xl font-medium md:hidden">Key persons</div>
-      <div class="grid grid-cols-3 gap-x-24 items-center md:hidden">
-        @@include('components/ui-kit/cards/card-employee.html', { }, )
-        @@include('components/ui-kit/cards/card-employee.html', { }, )
-        @@include('components/ui-kit/cards/card-employee.html', { }, )
-      </div>
-      <div class="hidden  md:!block">
-        <div class="swiper-imidzh-page overflow-hidden">
-          <div class="swiper-header !w-full !mb-0 !mt-0 sm:pr-12">
-            <h3 class="head-3 pb-24 ">Key persons</h3>
-            <div class="buttons !gap-24 !w-[5rem] ">
-              <div class="button-prev"></div>
-              <div class="button-next"></div>
-            </div>
-          </div>
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide ssm:!w-[28rem]">
-              <div class="card_employee">
-                <div class="card_employee_image">
-                  <img src="../../img/cards_employee.svg" alt=""/>
-                  <div class="card_employee_socials">
-                    <a href="#" class="card_employee_social_item emp_soc_fb"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_twit"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_pint"></a>
-                    <a href="#" class="card_employee_social_item emp_soc_inst"></a>
-                  </div>
-                </div>
-
-                <div class="card_employee_info">
-                  <div class="card_employee_name">Ivan Ivanov</div>
-                  <div class="card_employee_occupation">Writer</div>
-                  <div class="card_employee_text">
-                    Cartel collusion does not allow a situation in which representatives of modern social reserves only
-                    add.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- тут будут контакты -->
-    <div class="flex flex-col gap-64 sm:flex-col">
-      <div class="text-5xl  font-medium md:hidden px-24 sm:px-12">Contacts</div>
-      <div class="grid grid-cols-4 gap-16 px-24 sm:px-12 sm:grid-cols-1">
-        <div class="flex flex-col gap-24 items-start justify-start">
-          <div class="flex flex-col gap-8">
-            <div class="w-[5.8rem]">
-              <img src="../../img/imidzh-ho.svg">
-            </div>
-            <div class="head-4">Head Office</div>
-          </div>
-          
-          <div class="flex flex-col gap-16">
-            <div>
-              <div class="text-text text-2.5xl">Address</div>
-              <div class="text-15.20 font-medium">127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya, Maryina Grove
-              </div>
-            </div>
-            
-            <div>
-              <div class="text-text text-2.5xl">Telephone</div>
-              <div class="text-15.20 font-medium">+7 495 933-71-30</div>
-            </div>
-            
-            <div>
-              <div class="text-text text-2.5xl">Email address</div>
-              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-24 items-start justify-start">
-          <div class="flex flex-col gap-8">
-            <div class="w-[5.8rem]">
-              <img src="../../img/imidzh-toys.svg">
-            </div>
-            <div class="head-4">Toys</div>
-          </div>
-          
-          <div class="flex flex-col gap-16">
-            <div>
-              <div class="text-text text-2.5xl">Telephone</div>
-              <div class="text-15.20 font-medium">+7 495 933-71-30</div>
-            </div>
-            
-            <div>
-              <div class="text-text text-2.5xl">Email address</div>
-              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-24 items-start justify-start">
-          <div class="flex flex-col gap-8">
-            <div class="w-[5.8rem]">
-              <img src="../../img/imidzh-books.svg">
-            </div>
-            <div class="head-4">Books</div>
-          </div>
-          
-          <div class="flex flex-col gap-16">
-            <div>
-              <div class="text-text text-2.5xl">Telephone</div>
-              <div class="text-15.20 font-medium">
-                +7 495 933-71-30
-              </div>
-            </div>
-            <div>
-              <div class="text-text text-2.5xl">Email address</div>
-              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-24 items-start justify-start">
-          <div class="flex flex-col gap-8">
-            <div class="w-[5.8rem]">
-              <img src="../../img/imidzh-rld.svg">
-            </div>
-            <div class="head-4">Rights and Licenses Department</div>
-          </div>
-          
-          <div class="flex flex-col gap-16">
-            <div>
-              <div class="text-text text-2.5xl">Telephone</div>
-              <div class="text-15.20 font-medium">
-                +7 495 933-71-30
-              </div>
-            </div>
-            
-            <div>
-              <div class="text-text text-2.5xl">Email address</div>
-              <div class="text-15.20 font-medium">rosman@rosman.ru</div>
-            </div>
-          
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- тут будет фидбек -->
-    <div class="relative bg-yellow px-24 py-[10rem] mb-64 bs:py-[15rem] sm:px-12">
-
-      <div class="absolute bg-white
-      overflow-hidden h-46 top-0
-      left-0 right-0 origin-top-right skew-y-[2deg]
-      shadow-lg
-      "></div>
-      
-      <div class="absolute bg-white
-      z-10
-      overflow-hidden h-46 bottom-0
-      left-0 right-0 origin-bottom-left skew-y-2
-      shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]
-      ">
-      </div>
-
-      <div class="relative h-[1rem] rotate-2
-      bottom-[-57rem] left-0 right-0
-      bs:bottom-[-61rem]
-      msm:!bottom-[-62.5rem]
-      ">
-        <div class="z-2 w-[14rem] h-[10rem] block absolute bottom-0 right-[12%]">
-          <img src="../../img/elephant-figure-skating.svg" alt="">
-        </div>
-      </div>
-
-      <!--   контентная часть   -->
-      <div class="relative mx-auto flex flex-col items-center gap-40 max-w-[40rem] sm:items-start">
-        <div class="text-5xl font-medium">Feedback</div>
-        <div class=" flex flex-col gap-24 items-start w-full">
-          <input class="input w-full" placeholder="Name*">
-          <input class="input w-full" placeholder="Surname*">
-          <input class="input w-full" placeholder="Email address*">
-          <input class="input w-full" placeholder="Telephone*">
-          <input class="input w-full" placeholder="Message*">
-          <div class="js-footer-heading-policy-agreement checkbox_main">
-            <input
-              class="js-footer-heading-checkbox checkbox__input_main"
-              type="checkbox"
-              id="footer-heading-checkbox-eng"
-            />
-            <label
-              for="footer-heading-checkbox-eng"
-              class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+      @@include('components/ui-kit/popups/popup-contact-us-ru.html', { }, )
+      <div class="flex flex-col gap-64 sm:gap-48">
+        <!-- тут будут бренды и публикации -->
+        <div
+          class="grid grid-cols-2 gap-24 bg-[#FFF145] p-24 pt-0 ipadmini:grid-cols-1 sm:p-12 sm:pt-0"
+        >
+          <div class="relative w-full">
+            <img src="../../img/imidzh-car.jpg" alt="" />
+            <div
+              class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
             >
-              <span>I agree with the &nbsp</span>
-              <a
-                href="#"
-                class="footer-heading-policy-agreement-link link-m-bold">
-                privacy policy
-              </a>
-            </label>
+              <div class="text-60.104 font-medium bs:text-4xl">Brands</div>
+              <div
+                class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+              >
+                More details <span class="arrow-left-black"></span>
+              </div>
+            </div>
           </div>
-          <button class="button-black w-full font-medium text-15.20">Send</button>
+
+          <div class="relative w-full">
+            <img src="../../img/imidzh-book-2.png" alt="" />
+            <div
+              class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
+            >
+              <div class="text-60.104 font-medium bs:text-4xl">Publishing</div>
+              <div
+                class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+              >
+                More details <span class="arrow-left-black"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- тут будет слон -->
+        @@include('components/ui-kit/sliders/elephant-history.html', { }, )
+        <!-- тут будут карточки сотрудников и их слайдер -->
+        <div class="flex flex-col gap-32 px-24 sm:px-12 ssm:pr-0">
+          <div class="text-5xl font-medium md:hidden">Key persons</div>
+          <div class="grid grid-cols-3 items-center gap-x-24 md:hidden">
+            @@include('components/ui-kit/cards/card-employee.html', { }, )
+            @@include('components/ui-kit/cards/card-employee.html', { }, )
+            @@include('components/ui-kit/cards/card-employee.html', { }, )
+          </div>
+          <div class="hidden md:!block">
+            <div class="swiper-imidzh-page overflow-hidden">
+              <div class="swiper-header !mb-0 !mt-0 !w-full sm:pr-12">
+                <h3 class="head-3 pb-24">Key persons</h3>
+                <div class="buttons !w-[5rem] !gap-24">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="../../img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- тут будут контакты -->
+        <div class="flex flex-col gap-64 sm:flex-col">
+          <div class="px-24 text-5xl font-medium md:hidden sm:px-12">
+            Contacts
+          </div>
+          <div class="grid grid-cols-4 gap-16 px-24 sm:grid-cols-1 sm:px-12">
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="../../img/imidzh-ho.svg" />
+                </div>
+                <div class="head-4">Head Office</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Address</div>
+                  <div class="text-15.20 font-medium">
+                    127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya,
+                    Maryina Grove
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium"
+                    >+7 495 933-71-30</a
+                  >
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="../../img/imidzh-toys.svg" />
+                </div>
+                <div class="head-4">Toys</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium"
+                    >+7 495 933-71-30</a
+                  >
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="../../img/imidzh-books.svg" />
+                </div>
+                <div class="head-4">Books</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium">
+                    +7 495 933-71-30
+                  </a>
+                </div>
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="../../img/imidzh-rld.svg" />
+                </div>
+                <div class="head-4">Rights and Licenses Department</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium">
+                    +7 495 933-71-30
+                  </a>
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <div class="text-15.20 font-medium">rosman@rosman.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- тут будет фидбек -->
+        <div
+          class="relative mb-64 bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
+        >
+          <div
+            class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-white shadow-lg"
+          ></div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 z-10 h-46 origin-bottom-left skew-y-2 overflow-hidden bg-white shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]"
+          ></div>
+
+          <div
+            class="relative bottom-[-62.4rem] left-0 right-0 h-[1rem] rotate-2 bs:bottom-[-66.6rem] msm:!bottom-[-67.7rem]"
+          >
+            <div
+              class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]"
+            >
+              <img src="../../img/elephant-figure-skating.svg" alt="" />
+            </div>
+          </div>
+
+          <!--   контентная часть   -->
+          <div
+            class="relative mx-auto flex max-w-[40rem] flex-col items-center gap-40 sm:items-start"
+          >
+            <div class="text-5xl font-medium">Feedback</div>
+            <div class="flex w-full flex-col items-start gap-24">
+              <input class="input w-full" placeholder="Name*" />
+              <input class="input w-full" placeholder="Surname*" />
+              <input class="input w-full" placeholder="Email address*" />
+              <input class="input w-full" placeholder="Telephone*" />
+              <textarea
+                rows="4"
+                class="input w-full resize-none"
+                placeholder="Message*"
+              ></textarea>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="footer-heading-checkbox-eng"
+                />
+                <label
+                  for="footer-heading-checkbox-eng"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>I agree with the &nbsp</span>
+                  <a
+                    href="#"
+                    class="footer-heading-policy-agreement-link link-m-bold w-max"
+                  >
+                    privacy policy
+                  </a>
+                </label>
+              </div>
+              <button class="button-black w-full text-15.20 font-medium">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
+      @@include('components/ui-kit/footer/footer-eng.html', { }, )
     </div>
-  </div>
-  
-  
-  @@include('components/ui-kit/footer/footer-eng.html', { }, )
 
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="./js/scripts.js"></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

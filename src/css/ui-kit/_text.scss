@@ -102,27 +102,28 @@ p {
 }
 
 .link-m {
-  @apply cursor-pointer text-m font-normal underline;
+  @apply relative -bottom-2px inline  cursor-pointer border-b-2 border-black p-0 text-m font-normal;
+
   &:hover {
-    @apply text-text;
+    @apply border-b-2 border-transparent text-text;
   }
 }
 .link-m-bold {
-  @apply cursor-pointer text-m font-medium underline;
+  @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-m font-medium;
   &:hover {
-    @apply text-text;
+    @apply border-b-2 border-transparent text-text;
   }
 }
 
 .link-s {
-  @apply cursor-pointer text-xl font-normal underline;
+  @apply relative -bottom-2px inline  cursor-pointer border-b-2 border-black p-0 text-xl font-normal;
   &:hover {
-    @apply text-text;
+    @apply border-b-2 border-transparent text-text;
   }
 }
 .link-s-bold {
-  @apply cursor-pointer text-xl font-medium underline;
+  @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-xl font-medium leading-none;
   &:hover {
-    @apply text-text;
+    @apply border-b-2 border-transparent text-text;
   }
 }

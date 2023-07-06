@@ -1,11 +1,12 @@
 .elephant-moves-leg {
   @apply pb-60 pl-40;
 }
+
 .el-body {
   @apply relative inline-block;
   width: 8rem;
   height: 8rem;
-  background: url("../../img/elephant/elephant-big.svg") no-repeat center;
+  background: url('../../img/elephant/elephant-big.svg') no-repeat center;
   background-size: contain;
   @media screen and (max-width: 500px) {
     width: 6rem;
@@ -15,7 +16,7 @@
 
 .el-leg {
   @apply absolute inline-block h-50 w-50;
-  background: url("../../img/elephant/elephant-leg-1.svg") no-repeat center;
+  background: url('../../img/elephant/elephant-leg-1.svg') no-repeat center;
   background-size: contain;
   top: 5.4rem;
   left: -0.5rem;
@@ -45,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   @keyframes elephant-leg {
     0% {
       transform: rotate(0deg);
@@ -68,7 +69,7 @@
   top: 0.2rem;
   left: 1.8rem;
   border-radius: 50%;
-  animation-name: rotating;
+  animation-name: rotating-2;
   animation-duration: 2s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
@@ -84,7 +85,7 @@
   position: absolute;
   right: 3px;
   bottom: 3px;
-  content: "";
+  content: '';
   display: block;
   width: 1.1rem;
   height: 1.1rem;
@@ -96,8 +97,7 @@
   }
 }
 
-
-@keyframes rotating {
+@keyframes rotating-2 {
   0% {
     transform: rotate(30deg) translateY(0);
   }
@@ -108,8 +108,9 @@
     transform: rotate(30deg) translateY(0);
   }
 }
+
 @media screen and (max-width: 500px) {
-  @keyframes rotating {
+  @keyframes rotating-2 {
     0% {
       transform: rotate(50deg) translateY(0);
     }

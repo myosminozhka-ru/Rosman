@@ -3,7 +3,7 @@ const options = require("./config"); //options from config.js
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries")
+  containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -20,34 +20,35 @@ module.exports = {
   darkMode: "class",
   theme: {
     maxWidth: {
-      'menu': '165px',
-      'inner-menu': '216px',
-      "5xl": '115rem',
-      "8.8": "8.8rem"
-    },
-    minWidth: {
-      '4': '4rem',
+      menu: "165px",
+      "inner-menu": "216px",
+      "5xl": "115rem",
+      8.8: "8.8rem",
+      25: "25rem",
     },
     screens: {
-      ssm: {max: "400px"},
-      msm: {max: "500px"},
-      sm: {max: "639px"},
-      ipadmini: {max: "768px"},
-      md: {max: "868px"},
-      bs: {max: "999px"},
-      bsmax: {max: "1099px"},
-      bsmin: {min: "1100px"},
-      shs: {max: "1200"},
-      hs: {max: "1500px"}
+      hs: { max: "1500px" },
+      shs: { max: "1200" },
+      bsmin: { min: "1100px" },
+      bsmax: { max: "1099px" },
+      bs: { max: "999px" },
+      ipadmini: { max: "768px" },
+      md: { max: "768px" },
+      sm: { max: "639px" },
+      surfaceduo: { max: "500px" },
+      msm: { max: "500px" },
+      ssm: { max: "400px" },
+    },
+    minWidth: {
+      4: "4rem",
     },
     fontSize: {
       l: ["1.7rem", "2.4rem"],
       m: ["1.5rem", "2rem"],
       s: ["1.3rem", "1.8rem"],
       xl: ["1.3rem", "1.8rem"],
-      '11.14': ["1.1rem", "1.4rem"],
-      // добавил класс для всплывашки у попапа
-      '12.20.4': ["1.2rem", "2.04rem"],
+      11.14: ["1.1rem", "1.4rem"],
+      "12.20.4": ["1.2rem", "2.04rem"],
       "15.20": ["1.5rem", "2rem"],
       "2xl": ["2.1rem", "2.4rem"],
       "2.5xl": ["1.7rem", "2.4rem"],
@@ -56,10 +57,11 @@ module.exports = {
       "5xl": ["3.4rem", "4rem"],
       "6xl": ["4.3rem", "4.8rem"],
       "7xl": ["5.5rem", "6rem"],
-      "60.104": ["6rem", "104%"],
+      60.104: ["6rem", "104%"],
       "8xl": ["9.6rem", "6rem"],
     },
     colors: {
+      transparent: "transparent",
       "purple-1": "#06083D",
       "purple-2": "#311166",
       "purple-3": "#1F1871",
@@ -78,21 +80,19 @@ module.exports = {
       red: "#FF0053",
       orange: "#FF8500",
       "orange-text": "#F46300",
-
-      // base-transition: 0.2s ease,
     },
     fontFamily: {
-      // sans: ['Graphik', 'sans-serif'],
-      // serif: ['Merriweather', 'serif'],
       "tt-hoves-pro": ["TT Hoves Pro", "sans-serif"],
     },
     extend: {
       backgroundImage: {
-        'prev-arrow': "url('../../img/prev.png')",
-        'next-arrow': "url('../../img/next.png')",
+        "prev-arrow": "url('../../img/prev.png')",
+        "next-arrow": "url('../../img/next.png')",
       },
       spacing: {
+        "2px": "2px",
         1: "0.1rem",
+        2: "0.2rem",
         4: "0.4rem",
         6: "0.6rem",
         8: "0.8rem",
@@ -129,28 +129,45 @@ module.exports = {
         60: "6rem",
         64: "6.4rem",
         68: "6.8rem",
+        88: "8.8rem",
         90: "9rem",
+        94: "9.4rem",
         95: "9.5rem",
         96: "9.6rem",
         99: "9.9rem",
         70: "10rem",
         100: "25.9rem",
+        130: "13rem",
         140: "14rem",
         150: "15rem",
+        170: "30rem",
         180: "39rem",
         190: "45rem",
         200: "50.9rem",
+        202: "52.5rem",
+        220: "22rem",
+        260: "26rem",
       },
-
-
+      lineClamp: {
+        10: "10",
+      },
+      lineHeight: {
+        sup: "4.4rem",
+        "sup-2": "3.4rem",
+      },
+      flexBasis: {
+        "1/10": "10%",
+        "5/10": "50%",
+        "6/10": "60%",
+      },
       borderRadius: {},
       zIndex: {
-        '100': '100',
-        '900': '900',
-        '1000': '1000',
-        '9999': "9999",
+        100: "100",
+        900: "900",
+        1000: "1000",
+        1001: "1001",
+        9999: "9999",
       },
-
     },
   },
   plugins: plugins,
