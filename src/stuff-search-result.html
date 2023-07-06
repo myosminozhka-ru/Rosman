@@ -32,11 +32,25 @@
             <div class="breadcrumbs-small-screen-path">Результаты поиска</div>
           </div>
         </div>
-        <div class="flex flex-row justify-between">
-          <h4 class="head-4">По запросу «дикие скричеры» нашлось 790 результатов</h4>
-          <div class="w-30 h-24 cursor-pointer hidden md:block">
-            <img class="block h-full w-full js_popup_brand_filters_button" src="../../img/filter-brands-mobile.svg"
-                 alt="">
+        <div class="flex flex-row justify-between gap-16 items-center sm:items-start">
+          <div class="text-4xl sm:text-15.20 font-medium msm:max-w-[30rem] ssm:max-w-[28rem]">По запросу «дикие
+            скричеры» нашлось
+            790
+            результатов
+          </div>
+          <div
+            class="relative hidden h-24 w-20 block cursor-pointer md:block"
+          >
+            <img
+              class="js_popup_brand_filters_button block h-full w-full object-cover"
+              src="../../img/wishlist-filter.svg"
+              alt=""
+            />
+            <div
+              class="absolute right-[-19%] top-[-23%] h-14 w-14 font-medium rounded-full bg-yellow text-center"
+            >
+              15
+            </div>
           </div>
         </div>
         <div class="flex justify-start ">
@@ -844,7 +858,7 @@
         </div>
       </div>
       @@include('components/ui-kit/popups/popup-filters-brand-results.html', { }, )
-      <section class="!px-24 !mb-64 pagination rm-pag">
+      <section class="px-24 !mb-64 pagination rm-pag sm:px-12">
         <div class="pagination-seen js-rm-pag-seen">
           Просмотрено авторов: 12 из 456
         </div>
