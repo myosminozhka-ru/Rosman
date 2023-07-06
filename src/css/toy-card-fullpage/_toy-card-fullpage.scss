@@ -5,7 +5,7 @@
 }
 
 #yellow-background.card-fullpage-modified-yellow-background {
-  @apply h-auto;
+  @apply h-auto pt-10;
 }
 
 .card-fullpage-modified-yellow-background:after {
@@ -418,7 +418,8 @@
 }
 
 .card-fullpage-desc-block-img {
-  @apply w-1/2;
+  @apply w-1/2 border;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   aspect-ratio: 4/3;
   @media screen and (max-width: 800px) {
     @apply w-auto;
@@ -445,10 +446,8 @@
 }
 
 .card-fullpage-desc-more {
-  @apply flex flex-row gap-16;
-  @media screen and (max-width: 800px) {
-    @apply flex-col items-center;
-  }
+  @apply flex flex-row gap-16 ipadmini:flex-col ipadmini:items-center;
+
 }
 
 .card-fullpage-desc-more-card {
@@ -487,17 +486,17 @@
 
 // photogallery wrapper
 #white-background.card-fullpage-w-bg-modified {
-  height: 51.9rem;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 6.4rem;
+  @apply h-[62rem] w-full mb-[6.4rem] ipadmini:h-[53rem] ssm:h-[48rem];
+  @media screen and (max-width: 400px) {
+    height: 45rem !important;
+  }
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
-  height: 51.9rem;
-  padding: 0;
-  margin: 0;
-  width: 100%;
+  @apply h-[51.9rem] p-0 m-0 ipadmini:h-[45rem] ssm:h-[40rem];
+  @media screen and (max-width: 400px) {
+    height: 37rem !important;
+  }
 }
 
 #white-background {
@@ -554,7 +553,7 @@
 
 // стили для компонента ИНСТРУКЦИИ
 .card-fullpage-instruction {
-  @apply flex flex-row gap-16 p-24  bg-yellow w-1/2;
+  @apply flex flex-row gap-16 p-24  bg-yellow w-1/2 sm:p-16;
   @media (min-width: 901px) and (max-width: 1100px) {
     @apply w-3/5;
   }

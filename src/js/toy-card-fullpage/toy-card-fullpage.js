@@ -169,11 +169,11 @@ const swiperImage2 = new Swiper(".swiper-image-2", {
   },
   autoHeight: true,
   slidesPerView: 4,
-  spaceBetween: 52,
+  spaceBetween: 16,
   breakpoints: {
     950: {
       slidesPerView: 4,
-      spaceBetween: 52,
+      spaceBetween: 25,
     },
     600: {
       slidesPerView: 3,
@@ -181,6 +181,33 @@ const swiperImage2 = new Swiper(".swiper-image-2", {
     },
     0: {
       slidesPerView: 2,
+      spaceBetween: 16,
+    },
+  },
+});
+
+const swiperImageGallery = new Swiper(".swiper-image-gallery", {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    0: {
+      slidesPerView: 2.3,
       spaceBetween: 16,
     },
   },
@@ -386,3 +413,34 @@ if (prevButtonFragment) {
     }
   };
 }
+
+// код для навешивания синего бордера на элемент
+window.onload = function () {
+  const slideVisibleElements = document.querySelectorAll(
+    ".swiper-slide-visible"
+  );
+
+  slideVisibleElements.forEach(function (slideElement) {
+    const imageElement = slideElement.querySelector(".slider__image");
+    if (imageElement) {
+      slideElement.addEventListener("click", function () {
+        slideVisibleElements.forEach(function (el) {
+          el.querySelector(".slider__image").classList.remove(
+            "js-thumb-chosen"
+          );
+          el.querySelector(".slider__image").classList.remove("p-4");
+        });
+        imageElement.classList.add("js-thumb-chosen");
+        imageElement.classList.add("p-4");
+      });
+    }
+  });
+
+  if (slideVisibleElements.length > 0) {
+    const firstImageElement =
+      slideVisibleElements[0].querySelector(".slider__image");
+    if (firstImageElement) {
+      firstImageElement.classList.add("js-thumb-chosen");
+    }
+  }
+};

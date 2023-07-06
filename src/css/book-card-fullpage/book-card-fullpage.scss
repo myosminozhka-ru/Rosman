@@ -37,12 +37,12 @@
 }
 
 .book-card-fp-author {
-  @apply flex flex-row gap-32 sm:flex-col;
+  @apply flex flex-row gap-32 sm:flex-col sm:gap-16;
 }
 
 .author-avatar {
-  width: 8.8rem;
-  height: 8.8rem;
+  @apply w-[8.8rem] aspect-square rounded-full sm:w-48;
+
 }
 
 .author-avatar img {

@@ -161,7 +161,7 @@
 }
 
 .item_card_more {
-  @apply flex flex-row justify-start gap-18;
+  @apply flex flex-row justify-start gap-18 sm:justify-between;
 }
 
 .item_card_link.overline-button {
