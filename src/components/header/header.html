@@ -1,49 +1,115 @@
 <header id="header" class="bottom header" data-header="toys">
-    <div class="logo "><img src="../../img/logo.png"></div>
-    <div class="mobile-logo "><img src="../../img/mobile-logo.png"></div>
-    <div class="dropdown">
-        <button><div class="icon"></div>Каталог</button>
-        <div class="content">
-            <a href="#"><div class="menu-icon-book"></div>Книги</a>
-            <a href="#"><div class="menu-icon-toys"></div>Игрушки</a>
+  <div class="logo"><img src="../../img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="../../img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content mt-60">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
         </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="search-input hide">
+    <span class="search-icon"></span>
+    <span class="micro-icon"></span>
+    <input type="text" placeholder="Введите поисковый запрос" />
+    <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button" onclick="toggleSearch()"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <nav class="header-nav ">
-        <ul>
-            <li class="company"><a href="#">Бренды</a></li>
-            <li class="news"><a href="#">Новости</a></li>
-            <li class="about"><a href="#">О компании</a></li>
-            <li class="publisher"><a href="#">Издательство</a></li>
-            <li class="books-news"><a href="#">Новости книг</a></li>
-            <li class="NDK"><a href="#">НДК</a></li>
-            <li class="rosmen">
-                <button class="more-down-button out">РОСМЕН<span></span></button> <!--  more-down -->
-                <div class="more-down-content out">
-                    <p>Содержимое 1</p>
-                    <p>Содержимое 1</p>
-                    <p>Содержимое 1</p>
-                </div>
-            </li>
-            <li class="toys"><a href="#">Игрушки</a></li>
-            <li class="career"><a href="#">Карьера</a></li>
-            <li class="contacts"><a href="#">Контакты</a></li>
-            <li class="author"><a href="#">Авторы</a></li>
-            <li class="partners"><a href="#">Партнерам</a></li>
-        </ul>
-    </nav>
-    <div class="search-input hide">
-        <span class="search-icon"></span>
-        <span class="micro-icon"></span>
-        <input type="text"  placeholder="Введите поисковый запрос">
-        <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
     </div>
-    <div class="header-btn ">
-        <span class="search-button" onclick="toggleSearch()"></span>
-        <span class="micro-button"></span>
-        <span class="heart-button"></span>
-        <div class="language">
-            <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
-            <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
-        </div>
-    </div>
+    <span class="heart-button"></span>
+    <span class="search-button" onclick="toggleSearch()"></span>
+  </div>
 </header>
+<div class="toolbar">
+  <a href="#" class="toolbar-button active">
+    <img src="../../img/toolbar-book.png" />Главная</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="../../img/toolbar-home.png" />Игрушки</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="../../img/toolbar-menu.png" />Книги</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="../../img/toolbar-toys.png" />Меню</a
+  >
+</div>
