@@ -11,9 +11,10 @@
 <body>
 <div class="search-result-wrapper">
   @@include('components/header/header-main.html', { }, )
-  <div id="yellow-background">
+  <div id="yellow-background" class="!pt-10">
     <div id="moving-block"></div>
-    <div id="above-block">
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="!pt-0">
       <div class="flex flex-col gap-24 !p-24 !sm:p-12">
         <div class="flex justify-between  items-center">
           <p class="breadcrumbs">
@@ -250,7 +251,7 @@
             </div>
           </div>
         </form>
-        <div class="h-max flex flex-wrap flex-row gap-16 sm:gap-8">
+        <div class="grid grid-cols-3 gap-x-16 gap-y-40 md:grid-cols-2">
           <div class="stuff-search-result-item">
             <div class="toy_card item_card">
               <div class="toy_card_heading">

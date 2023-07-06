@@ -11,7 +11,6 @@
 // card's top
 .toy_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 26.6rem;
 }
 
 .item_card_tags.bordered_tags {
@@ -26,7 +25,6 @@
 
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-  max-width: 26rem;
 }
 
 .toy_card_heading {
@@ -155,7 +153,6 @@
 // карточка БОЛЬШАЯ ПОДБОРКИ
 .card_selection {
   @apply flex flex-col gap-24;
-  max-width: 60.8rem;
 }
 
 .card_selection_description {
@@ -202,7 +199,6 @@
 //
 .card_interview {
   @apply flex flex-row gap-16 sm:flex-col;
-  max-width: 60.8rem;
 }
 
 .card_interview_name {
@@ -220,7 +216,6 @@
 // Карточки ВЕРТИКАЛЬНЫЕ НЕБОЛЬШИЕ
 .card_articles {
   @apply flex flex-col gap-24;
-  max-width: 40rem;
 }
 
 //.card_articles {
@@ -266,7 +261,6 @@
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
-  max-width: 40rem;
   border: 1px solid #d9d9d9;
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;
@@ -321,7 +315,6 @@
 // КАТАЛОГ КНИГ КАРТОЧКА
 .card_book_catalog {
   @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm:p-16;
-  max-width: 60.8rem;
   border: 1px solid #d9d9d9;
 }
 
@@ -448,7 +441,6 @@
 
 .card_brand_with_socs {
   @apply relative;
-  max-width: 29.6rem;
 
   & img {
     @apply p-0;
@@ -500,8 +492,6 @@
 // КАРТОЧКА ФОТОГАЛЕРЕИ
 .card_photogallery_item {
   @apply relative relative cursor-pointer;
-  max-width: 29.6rem;
-  max-height: 29.6rem;
   aspect-ratio: 1/1;
 }
 
@@ -545,7 +535,6 @@
 // КАРТОЧКА ВИДЕО
 .card_video_item {
   @apply flex flex-col gap-16;
-  max-width: 29.6rem;
 }
 
 .card_video_preview {
@@ -587,7 +576,6 @@
 // Карточка сотрудника
 .card_employee {
   @apply relative flex flex-col flex-nowrap;
-  max-width: 39.4rem;
 }
 
 .card_employee_image {
@@ -697,12 +685,9 @@
 // карточка НАГРАД
 .card_awards_content {
   @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
-  max-width: 39rem;
 }
 
 .card_awards_image {
-  max-width: 368px;
-  height: 128px;
   background-size: cover;
   background-position: center;
 }
