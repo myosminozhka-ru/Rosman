@@ -26,11 +26,17 @@ module.exports = {
       "8.8": "8.8rem"
     },
     screens: {
-      sm: {max: "639px"},
-      md: {max: "768px"},
-      ssm: {max: "400px"},
-      bs: {max: "999px"},
-      hs: {max: "1500px"}
+      hs: { max: '1500px' },
+      shs: { max: '1200' },
+      bsmin: { min: '1100px' },
+      bsmax: { max: '1099px' },
+      bs: { max: '999px' },
+      ipadmini: { max: '768px' },
+      md: { max: '768px' },
+      sm: { max: '639px' },
+      surfaceduo: { max: '500px' },
+      msm: { max: '500px' },
+      ssm: { max: '400px' },
     },
     fontSize: {
       l: ["1.7rem", "2.4rem"],
