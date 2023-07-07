@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body class='bg-yellow'>
     @@include('components/header/header-main.html', { }, )
     <div id="yellow-background">
       <div id="moving-block"></div>
@@ -93,7 +93,10 @@
             </label>
           </div>
         </div>
-        <a href="" class="link-m my-24 px-25">Показать все направления</a>
+        <div class='mt-24 mb-40 px-25'>
+          <a href="" class="link-m ">Показать все направления</a>
+        </div>
+
         <div class="mx-auto w-11/12">
           <div
             class="more-down-filters no-padds no-after mb-16 mt-40 hidden w-full border border-card-stroke md:block"
@@ -464,7 +467,7 @@
               </li>
             </ul>
           </div>
-          <section class="pagination rm-pag my-40">
+          <section class="pagination rm-pag mb-64 sm:mb-48">
             <div class="pagination-seen js-rm-pag-seen">
               Просмотрено авторов: 12 из 456
             </div>
@@ -479,20 +482,16 @@
               </button>
               <div class="nav-btns">
                 <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  class="pagination-nav-page-button js-rm-pag-nav-page-btn js-chosen-nav-btn"
                 >
                   1
                 </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-                >
+                <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
                   2
                 </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-                >
+                <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
                   3
                 </button>
 

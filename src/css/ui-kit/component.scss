@@ -648,7 +648,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-60;
+  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-25;
 
   @media screen and (max-width: 768px) {
     @apply pt-10;
@@ -742,7 +742,10 @@ header {
 }
 
 #moving-block {
-  @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+  @apply absolute z-100 mx-auto my-0 h-full overflow-hidden bg-white;
+  width: 102%;
+  right: 0;
+  left: -1%;
 }
 
 #white-mobile-background {

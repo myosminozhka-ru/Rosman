@@ -128,7 +128,7 @@ if (movingBlock) {
     let boxCenterX = boxRect.left + boxRect.width / 2;
     let boxCenterY = boxRect.top + boxRect.height / 10;
     let offsetX = -(mouseX - boxCenterX) * 0.1;
-    let offsetY = -(mouseY - boxCenterY) * 0.1;
+    let offsetY = -(mouseY - boxCenterY) * 0.01;
     movingBlock.style.boxShadow =
       offsetX + 'px ' + offsetY + 'px 10px 5px rgba(0, 0, 0, 0.2)';
   });
