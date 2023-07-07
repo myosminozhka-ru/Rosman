@@ -176,6 +176,21 @@
   }
 }
 
+
+.elephant-central-img-2 {
+  position: absolute;
+  left: 50%;
+  top: 99%;
+  transform: translateX(-50%) scaleX(1) scaleY(-1);
+}
+
+.elephant-secondary-img-2 {
+  position: absolute;
+  left: 50%;
+  top: 99%;
+  transform: translateX(-50%) scaleX(-1) scaleY(-1);
+}
+
 .elephant-planet-cantral-img {
   @apply h-full w-full;
 }
@@ -232,34 +247,46 @@
   animation: toggleVisibility 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility {
-    0% {
-      opacity: 1;
-      visibility: visible;
-    }
-    18.3% {
-      opacity: 1;
-      visibility: visible;
-    }
-    18.31% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    85.33% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    85.44% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+.elephant-planet-left-img-small {
+  animation: toggleVisibility-left-small 18s linear infinite;
 }
+
+@keyframes toggleVisibility-left-small {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  2% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  2.01% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  64% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  64.01% {
+    opacity: 1;
+    visibility: visible;
+  }
+  97.3% {
+    opacity: 1;
+    visibility: visible;
+  }
+  97.31% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
 
 /////////////////// центральный слон
 @keyframes toggleVisibility2 {
@@ -309,58 +336,57 @@
   animation: toggleVisibility2 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility2 {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    18.67% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    18.68% {
-      opacity: 1;
-      visibility: visible;
-    }
-    31% {
-      opacity: 1;
-      visibility: visible;
-    }
-    35% {
-      opacity: 1;
-      visibility: visible;
-    }
-    35.01% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    68.3% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    68.31% {
-      opacity: 1;
-      visibility: visible;
-    }
-    76% {
-      opacity: 1;
-      visibility: visible;
-    }
-    85.2% {
-      opacity: 1;
-      visibility: visible;
-    }
-    85.21% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
+.elephant-planet-central-img-small {
+  animation: toggleVisibility2-small 18s linear infinite;
+}
+
+@keyframes toggleVisibility2-small {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.8% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.81% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.7% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.71% {
+    opacity: 1;
+    visibility: visible;
+  }
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63.63% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63.64% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  97.2% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  97.21% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
+
 
 /// правый слон
 @keyframes toggleVisibility3 {
@@ -368,11 +394,11 @@
     opacity: 0;
     visibility: hidden;
   }
-  14.87% {
+  13.8% {
     opacity: 0;
     visibility: hidden;
   }
-  14.88% {
+  13.81% {
     opacity: 1;
     visibility: visible;
   }
@@ -380,11 +406,11 @@
     opacity: 1;
     visibility: visible;
   }
-  48.2% {
+  47% {
     opacity: 1;
     visibility: visible;
   }
-  48.21% {
+  47.01% {
     opacity: 0;
     visibility: hidden;
   }
@@ -398,31 +424,3 @@
   animation: toggleVisibility3 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility3 {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    35% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    35.01% {
-      opacity: 1;
-      visibility: visible;
-    }
-    68.8% {
-      opacity: 1;
-      visibility: visible;
-    }
-    68.81% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-}
