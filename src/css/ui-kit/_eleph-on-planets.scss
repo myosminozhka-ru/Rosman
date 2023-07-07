@@ -35,7 +35,7 @@
 
 .wrapper-first {
   top: -10rem;
-  left: 2rem;
+  left: 2.3rem;
   flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
     left: 2.8rem;
@@ -49,7 +49,7 @@
 
 .wrapper-second {
   top: -10rem;
-  right: 2rem;
+  right: 2.3rem;
   flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
     right: 2.8rem;
@@ -217,18 +217,22 @@
 
 ///////////// левый слон
 @keyframes toggleVisibility {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  2% {
-    opacity: 1;
-    visibility: visible;
-  }
-  2.01% {
+  1.2% {
     opacity: 0;
     visibility: hidden;
   }
+  //1.21% {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+  //1.8% {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+  //1.81% {
+  //  opacity: 0;
+  //  visibility: hidden;
+  //}
   68.22% {
     opacity: 0;
     visibility: hidden;
@@ -237,15 +241,110 @@
     opacity: 1;
     visibility: visible;
   }
-  100% {
+  99.9% {
     opacity: 1;
     visibility: visible;
+  }
+  99.91% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
 .elephant-planet-left-img {
   animation: toggleVisibility 18s linear infinite;
 }
+
+
+/////////////////// центральный слон
+@keyframes toggleVisibility2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1.01% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.8% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.81% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.9% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.91% {
+    opacity: 1;
+    visibility: visible;
+  }
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+  67.33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  67.34% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.elephant-planet-central-img {
+  animation: toggleVisibility2 18s linear infinite;
+}
+
+
+/// правый слон
+@keyframes toggleVisibility3 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  14.7% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  14.71% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  48.7% {
+    opacity: 1;
+    visibility: visible;
+  }
+  48.71% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.elephant-planet-right-img {
+  animation: toggleVisibility3 18s linear infinite;
+}
+
 
 .elephant-planet-left-img-small {
   animation: toggleVisibility-left-small 18s linear infinite;
@@ -285,55 +384,6 @@
     visibility: hidden;
   }
 
-}
-
-
-/////////////////// центральный слон
-@keyframes toggleVisibility2 {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  0.7% {
-    opacity: 1;
-    visibility: visible;
-  }
-  14% {
-    opacity: 1;
-    visibility: visible;
-  }
-  14.01% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  47.5% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  47.51% {
-    opacity: 1;
-    visibility: visible;
-  }
-  55% {
-    opacity: 1;
-    visibility: visible;
-  }
-  67.33% {
-    opacity: 1;
-    visibility: visible;
-  }
-  67.34% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.elephant-planet-central-img {
-  animation: toggleVisibility2 18s linear infinite;
 }
 
 .elephant-planet-central-img-small {
@@ -385,43 +435,6 @@
     opacity: 1;
     visibility: visible;
   }
-}
-
-
-/// правый слон
-@keyframes toggleVisibility3 {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  13.8% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  13.81% {
-    opacity: 1;
-    visibility: visible;
-  }
-  33% {
-    opacity: 1;
-    visibility: visible;
-  }
-  47% {
-    opacity: 1;
-    visibility: visible;
-  }
-  47.01% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.elephant-planet-right-img {
-  animation: toggleVisibility3 18s linear infinite;
 }
 
 .elephant-planet-right-img-small {
