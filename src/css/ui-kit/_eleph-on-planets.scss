@@ -424,3 +424,37 @@
   animation: toggleVisibility3 18s linear infinite;
 }
 
+.elephant-planet-right-img-small {
+  animation: toggleVisibility3-small 18s linear infinite;
+}
+
+@keyframes toggleVisibility3-small {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  13.8% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  13.81% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  47% {
+    opacity: 1;
+    visibility: visible;
+  }
+  47.01% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
