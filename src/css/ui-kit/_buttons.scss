@@ -792,14 +792,17 @@ button {
   transform: rotate(-90deg);
   transform-origin: left top;
 
-  // добавляем это
   @media screen and (max-width: 639px) {
     @apply hidden;
+  }
+
+  &:hover {
+    @apply bg-yellow text-black;
   }
 }
 
 .custom-box span {
-  @apply block h-14 w-20;
+  @apply block h-20 w-20;
   background: url('../../img/envelope-white.svg') no-repeat center;
   background-size: contain;
   transform: rotate(90deg);
@@ -847,4 +850,8 @@ button {
 
 .custom-box:hover .custom-after {
   background-image: url('../../img/custom-after-yellow.svg');
+}
+
+.custom-box:hover .custom-before {
+  background-image: url('../../img/custom-before-yellow.svg');
 }
