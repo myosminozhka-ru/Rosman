@@ -58,7 +58,8 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
+    center;
   background-size: contain;
 }
 
@@ -131,8 +132,11 @@
 }
 
 .card-fp-desc-target-aud {
-  @apply inline-block rounded-3xl px-12 py-4 text-s font-medium;
+  @apply inline-block cursor-pointer rounded-3xl px-12 py-4 text-s font-medium;
   border: 1px solid black;
+  &:hover {
+    @apply bg-yellow;
+  }
 }
 
 .card-fp-desc-text {
@@ -164,7 +168,11 @@
   height: 100%;
   width: 100%;
   content: '';
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   pointer-events: none;
   /* so the text is still selectable */
 }
@@ -355,7 +363,7 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply flex flex-col gap-24 mb-64 md:gap-48;
+  @apply mb-64 flex flex-col gap-24 md:gap-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
@@ -457,7 +465,7 @@
 }
 
 .card-fullpage-desc-more-card {
-  @apply flex flex-col gap-20 w-1/3 sm:gap-16;
+  @apply flex w-1/3 flex-col gap-20 sm:gap-16;
 
   @media screen and (max-width: 800px) {
     @apply w-auto;
@@ -494,7 +502,7 @@
 
 // photogallery wrapper
 #white-background.card-fullpage-w-bg-modified {
-  @apply h-[62rem] w-full mb-[6.4rem] ipadmini:h-[53rem] ssm:h-[48rem];
+  @apply mb-[6.4rem] h-[62rem] w-full ipadmini:h-[53rem] ssm:h-[48rem];
 
   @media screen and (max-width: 400px) {
     height: 45rem !important;
@@ -502,7 +510,7 @@
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
-  @apply h-[51.9rem] p-0 m-0 ipadmini:h-[45rem] ssm:h-[40rem];
+  @apply m-0 h-[51.9rem] p-0 ipadmini:h-[45rem] ssm:h-[40rem];
 
   @media screen and (max-width: 400px) {
     height: 37rem !important;
@@ -566,7 +574,7 @@
 
 // стили для компонента ИНСТРУКЦИИ
 .card-fullpage-instruction {
-  @apply flex flex-row gap-16 p-24 bg-yellow w-1/2 sm:p-16;
+  @apply flex w-1/2 flex-row gap-16 bg-yellow p-24 sm:p-16;
 
   @media (min-width: 901px) and (max-width: 1100px) {
     @apply w-3/5;
@@ -753,7 +761,7 @@
 
 // пагинация для свипера главных картинок
 .swiper-pagination-2 .swiper-pagination-bullet {
-  @apply w-[0.5rem] h-[0.5rem] border border-black bg-white;
+  @apply h-[0.5rem] w-[0.5rem] border border-black bg-white;
 }
 
 .swiper-pagination-2 .swiper-pagination-bullet-active {

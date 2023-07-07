@@ -215,7 +215,7 @@ button {
 .sort-checkbox {
   @apply hidden;
 
-  &:checked+.sort-label {
+  &:checked + .sort-label {
     @apply border-0 bg-yellow;
 
     .cross {
@@ -249,7 +249,7 @@ button {
 .filter-checkbox {
   @apply hidden;
 
-  &:checked+.filter-label {
+  &:checked + .filter-label {
     @apply justify-between border-0 bg-yellow;
 
     .cross {
@@ -302,11 +302,11 @@ button {
     @apply hidden;
   }
 
-  input[type='radio']:checked+.checkmark {
+  input[type='radio']:checked + .checkmark {
     @apply flex justify-center border-none bg-yellow;
   }
 
-  input[type='radio']:checked+.checkmark::after {
+  input[type='radio']:checked + .checkmark::after {
     content: '';
     display: block;
     width: 0.7rem;
@@ -327,11 +327,11 @@ button {
   input[type='checkbox'] {
     @apply hidden;
 
-    &:checked+.slider {
+    &:checked + .slider {
       @apply bg-yellow;
     }
 
-    &:checked+.slider:before {
+    &:checked + .slider:before {
       transform: translateX(2rem);
       background-color: #000000;
     }
