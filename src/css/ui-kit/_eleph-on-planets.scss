@@ -91,12 +91,20 @@
   @media screen and (max-width: 700px) {
     top: 0.5rem;
     rotate: 160deg;
-    //animation: rotate-secondary-2 6s linear infinite;
+    animation-direction: reverse;
   }
   @media (min-width: 1500px) {
     left: 0.5rem;
   }
 }
+
+.planet-secondary-left-2 {
+  animation: rotate-secondary 6s linear infinite;
+  flex-basis: 40rem;
+  rotate: 300deg;
+  animation-direction: reverse;
+}
+
 
 .planet-secondary-right {
   animation: rotate-secondary 6s linear infinite;
@@ -105,12 +113,19 @@
 
   @media screen and (max-width: 700px) {
     top: -0.5rem;
+    animation-direction: reverse;
     rotate: 160deg;
-    //animation: rotate-secondary-2 6s linear infinite;
   }
   @media (min-width: 1500px) {
     right: 0.5rem;
   }
+}
+
+.planet-secondary-right-2 {
+  animation: rotate-secondary 6s linear infinite;
+  flex-basis: 40rem;
+  rotate: 230deg;
+  animation-direction: reverse;
 }
 
 .elephant-planet-central {
@@ -124,9 +139,18 @@
   @media screen and (max-width: 700px) {
     top: 0;
     right: 0;
+    animation-direction: reverse;
     flex-basis: 33.6rem;
     rotate: 20deg;
   }
+}
+
+.elephant-planet-central-2 {
+  rotate: 100deg;
+  @apply relative flex-grow;
+  flex-basis: 50rem;
+  animation: rotate-central 6s linear infinite;
+  animation-direction: reverse;
 }
 
 .elephant-central-img {
@@ -175,44 +199,6 @@
   }
 }
 
-@keyframes rotate-secondary-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-central-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-// верчение планет на экране до 700рх
-@media screen and (max-width: 700px) {
-  @keyframes rotate-secondary {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotate-central {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-}
 
 ///////////// левый слон
 @keyframes toggleVisibility {
@@ -341,11 +327,11 @@
       opacity: 1;
       visibility: visible;
     }
-    34.79% {
+    35% {
       opacity: 1;
       visibility: visible;
     }
-    34.8% {
+    35.01% {
       opacity: 0;
       visibility: hidden;
     }
@@ -361,11 +347,11 @@
       opacity: 1;
       visibility: visible;
     }
-    84.8% {
+    85.2% {
       opacity: 1;
       visibility: visible;
     }
-    84.81% {
+    85.21% {
       opacity: 0;
       visibility: hidden;
     }
@@ -418,11 +404,11 @@
       opacity: 0;
       visibility: hidden;
     }
-    36% {
+    35% {
       opacity: 0;
       visibility: hidden;
     }
-    36.01% {
+    35.01% {
       opacity: 1;
       visibility: visible;
     }
