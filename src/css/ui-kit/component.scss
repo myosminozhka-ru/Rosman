@@ -280,14 +280,14 @@
 }
 
 header {
-  @apply flex h-60 items-center bg-yellow p-4 px-10;
+  @apply flex items-center bg-yellow px-24 sm:px-12 pt-24;
 
   @media screen and (max-width: 900px) {
     @apply justify-between;
   }
 
   .logo {
-    @apply m-24 basis-1/10;
+    @apply mr-24 aspect-[121/30] h-30;
     @apply block;
 
     @media screen and (max-width: 900px) {
@@ -519,7 +519,7 @@ header {
   }
 
   .more-down-button {
-    @apply mx-6 my-3 text-s uppercase;
+    @apply  text-s uppercase;
 
     span {
       background-image: url('../../img/arrow-down.svg');
@@ -639,8 +639,9 @@ header {
       }
 
       li {
+        @apply flex items-center;
         a {
-          @apply mx-17 my-16 text-s;
+          @apply mx-17 text-s;
         }
       }
     }
@@ -648,7 +649,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-25;
+  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-[3.1rem];
 
   @media screen and (max-width: 768px) {
     @apply pt-10;
@@ -742,10 +743,11 @@ header {
 }
 
 #moving-block {
-  @apply absolute z-100 mx-auto my-0 h-full overflow-hidden bg-white;
-  width: 102%;
-  right: 0;
-  left: -1%;
+  @apply absolute z-100 mx-auto h-screen w-full  bg-white top-[2rem];
+}
+
+#moving-block svg {
+  filter: drop-shadow(0px -2px 5px rgb(41, 41, 41));
 }
 
 #white-mobile-background {
@@ -758,14 +760,26 @@ header {
   position: absolute;
   content: '';
   display: block;
-  height: calc(100% - 145rem);
+  height: 100%;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: white ;
   width: 100%;
 }
 
+#moving-block:before {
+  z-index: 1;
+  position: absolute;
+  content: '';
+  display: block;
+  height: 100%;
+  bottom: -50%;
+  background-color: white;
+  width: 200%;
+  left: -50%
+}
+
 #above-block {
-  @apply relative z-1000 overflow-hidden py-35;
+  @apply relative z-1000 overflow-hidden;
 }
 
 #above-el-block {
