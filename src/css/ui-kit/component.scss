@@ -743,7 +743,7 @@ header {
 }
 
 #moving-block {
-  @apply absolute z-100 mx-auto h-full w-full  bg-white top-[2rem];
+  @apply absolute z-100 mx-auto h-screen w-full  bg-white top-[2rem];
 }
 
 #moving-block svg {

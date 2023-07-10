@@ -48,9 +48,19 @@
           </div>
         </div>
 
-        <img class='desktop-map'  src="https://api.mapbox.com/styles/v1/alexsav/cljwm1k0z022z01pjhl5rffee/static/pin-s+555555(37.6131,55.8087)/37.6115,55.8082,15.26,0/1280x504@2x?access_token=pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3and6cW0xeHhmM21tanN0ZDZtcHh1In0.gEC0_vl_a8zQzX631yzXvg" alt="Map Image">
-        <img class='mobile-map'  src="https://api.mapbox.com/styles/v1/alexsav/cljwm1k0z022z01pjhl5rffee/static/pin-s+555555(37.6131,55.8087)/37.6127,55.8083,15.19,0/360x450?access_token=pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3and6cW0xeHhmM21tanN0ZDZtcHh1In0.gEC0_vl_a8zQzX631yzXvg" alt="Map Image">
-        <div class="my-42 flex flex-row justify-between px-24 md:flex-col">
+        <img
+          class="desktop-map"
+          src="https://api.mapbox.com/styles/v1/alexsav/cljwm1k0z022z01pjhl5rffee/static/pin-s+555555(37.6131,55.8087)/37.6115,55.8082,15.26,0/1280x504@2x?access_token=pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3and6cW0xeHhmM21tanN0ZDZtcHh1In0.gEC0_vl_a8zQzX631yzXvg"
+          alt="Map Image"
+        />
+        <img
+          class="mobile-map"
+          src="https://api.mapbox.com/styles/v1/alexsav/cljwm1k0z022z01pjhl5rffee/static/pin-s+555555(37.6131,55.8087)/37.6127,55.8083,15.19,0/360x450?access_token=pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3and6cW0xeHhmM21tanN0ZDZtcHh1In0.gEC0_vl_a8zQzX631yzXvg"
+          alt="Map Image"
+        />
+        <div
+          class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
+        >
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
             <img src="../../img/toys.svg" class="h-58 w-58" />
 
@@ -95,14 +105,16 @@
           </div>
         </div>
 
-        <div class="flex flex-row justify-between px-24 md:flex-col">
+        <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
           <p class="ml-4 w-1/12 text-l text-text md:w-full">
             Для вопросов и предложений
           </p>
           <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
         </div>
-        @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', {
-        }, )
+        <div class="bg-white">
+          @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html',
+          { }, )
+        </div>
       </div>
     </div>
     <div class="custom-box !fixed">
