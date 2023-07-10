@@ -8,129 +8,25 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
-<div class="search-result-wrapper">
-  @@include('components/header/header-main.html', { }, )
-  @@include('components/ui-kit/popups/popup-contact-us-ru.html', { }, )
-  <div id="yellow-background" class="!pt-10">
-    <div id="moving-block"></div>
-    <div id="white-mobile-background"></div>
-    <div id="above-block" class="!p-0">
-      <div class="flex flex-col gap-24 md:gap-16 p-24 sm:p-12 sm:pb-0">
-        <div class="flex items-center justify-between">
-          <p class="breadcrumbs">
-            <a class="text-s" href="#">Главная </a><span>/</span>
-            <a class="text-s" href="#">Избранное</a>
-          </p>
-          <div class="breadcrumbs-small-screen">
-            <div class="breadcrumbs-small-screen-image"></div>
-            <div class="breadcrumbs-small-screen-dots">/</div>
-            <div class="breadcrumbs-small-screen-path">Избранное</div>
-          </div>
+  <body>
+    <div class="search-result-wrapper">
+      @@include('components/header/header-main.html', { }, )
+      <div id="yellow-background">
+        <div id="moving-block">
+          <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+            <g>
+              <path
+                id="moving-bock-shadow"
+                d="M 0 0 L 100 0 L 100 100 L 0 100"
+                fill="white"
+              ></path>
+            </g>
+          </svg>
         </div>
-
-        <h1 class="head-1">Избранное</h1>
-
-      </div>
-
-      <!--   тут будет контент   -->
-      <div class="mb-40 flex flex-row flex-nowrap gap-16 !p-24 sm:!p-12">
-        <form
-          id="filter-form-1"
-          class="filters-block filter-form-brands-result !w-2/5 md:hidden"
-        >
-          <!--          <p class="mobile-p">Фильтры</p>-->
-          <!--          <span id="close-filter"> </span>-->
-          <div class="more-down">
-            <div class="p-10 pt-0">
-              <h3 class="body-l mb-14 font-semibold">Категории</h3>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="category"/>
-                <span class="checkmark"></span>
-                Игрушки
-              </label>
-              <label class=" checkbox-container gap-8">
-                <input type="radio" name="category"/>
-                <span class="checkmark"></span>
-                Книги
-              </label>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="category"/>
-                <span class="checkmark"></span>
-                Для школы
-              </label>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="category"/>
-                <span class="checkmark"></span>
-                Для творчества
-              </label>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="category"/>
-                <span class="checkmark"></span>
-                Для праздника
-              </label>
-            </div>
-
-            <div class="p-10">
-              <h3 class="body-l mb-14 font-semibold">Наличие товаров</h3>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="exist"/>
-                <span class="checkmark"></span>
-                Неважно
-              </label>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="exist"/>
-                <span class="checkmark"></span>
-                В наличии
-              </label>
-              <label class="checkbox-container gap-8">
-                <input type="radio" name="exist"/>
-                <span class="checkmark"></span>
-                Нет в наличии
-              </label>
-              <button class="button-black my-10 w-full">
-                Применить
-              </button>
-              <input type="reset" class="button-white my-10 w-full"/>
-            </div>
-          </div>
-        </form>
-
-        <div class="flex w-full flex-col gap-64 md:gap-24">
-          <div
-            class="flex flex-row flex-nowrap items-center justify-between gap-16 sm:py-10"
-          >
-            <!--filters-->
-            <div
-              class="more-down-filters no-padds no-after !w-full max-w-[29.6rem] !border-0 !border-b-2 border-card-stroke md:hidden ssm:!w-5/12"
-            >
-              <button class="more-down-button new !bg-none !px-12">
-                Сначала новые<span></span>
-              </button>
-              <!--  more-down -->
-              <div class="more-down-content new !px-12">
-                <label class="checkbox-container  gap-8">
-                  <input type="radio" name="sort-by"/>
-                  <span class="checkmark"></span>
-                  Сначала новые
-                </label>
-                <label class="checkbox-container gap-8">
-                  <input type="radio" name="sort-by"/>
-                  <span class="checkmark"></span>
-                  Сначала старые
-                </label>
-                <label class="checkbox-container gap-8">
-                  <input type="radio" name="sort-by"/>
-                  <span class="checkmark"></span>
-                  А-Я
-                </label>
-                <label class="checkbox-container gap-8">
-                  <input type="radio" name="sort-by"/>
-                  <span class="checkmark"></span>
-                  Я-А
-                </label>
-              </div>
-            </div>
+        <div id="white-mobile-background"></div>
+        <div id="above-block" class="!p-0">
+          <div class="flex flex-col gap-24 !p-24 sm:!p-12">
+            @@include('components/ui-kit/breadcrumbs/index.html', { }, )
 
             <div
               class="ssm: js_popup_wishlist_sort_button flex hidden w-1/4 w-5/12 flex-row flex-nowrap items-center justify-between font-normal md:flex"

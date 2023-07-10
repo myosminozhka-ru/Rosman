@@ -441,15 +441,15 @@ button {
 }
 
 .dropdown {
-  @apply relative inline-block h-44 max-w-menu border-2 border-black bg-yellow px-4 py-6;
-  width: 14.4rem;
+  @apply relative flex items-center  max-w-menu border-2 border-black bg-yellow py-8 px-10;
+  // width: 14.4rem;
 
   button {
-    @apply flex flex w-full flex-row items-center gap-8 p-1 pb-10 text-l;
+    @apply flex w-full flex-row items-center gap-8 text-l p-0;
   }
 
   .icon {
-    @apply mb-1 h-24 w-24;
+    @apply block h-20 min-w-[2rem];
     background: url('../../img/menu-1.svg') no-repeat center;
     background-size: contain;
   }
@@ -460,7 +460,7 @@ button {
   }
 
   .content {
-    @apply absolute left-0 z-1000 hidden w-auto max-w-inner-menu bg-white p-24;
+    @apply absolute left-0 top-[100%] z-1000 hidden w-auto max-w-inner-menu bg-white p-24;
 
     a:not(:last-child) {
       @apply mb-20;
