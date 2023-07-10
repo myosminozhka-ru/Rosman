@@ -280,14 +280,14 @@
 }
 
 header {
-  @apply flex h-60 items-center bg-yellow p-4 px-10;
+  @apply flex items-center bg-yellow px-24 sm:px-12 pt-24;
 
   @media screen and (max-width: 900px) {
     @apply justify-between;
   }
 
   .logo {
-    @apply m-24 basis-1/10;
+    @apply mr-24 aspect-[121/30] h-30;
     @apply block;
 
     @media screen and (max-width: 900px) {
@@ -519,7 +519,7 @@ header {
   }
 
   .more-down-button {
-    @apply mx-6 my-3 text-s uppercase;
+    @apply  text-s uppercase;
 
     span {
       background-image: url('../../img/arrow-down.svg');
@@ -639,8 +639,9 @@ header {
       }
 
       li {
+        @apply flex items-center;
         a {
-          @apply mx-17 my-16 text-s;
+          @apply mx-17 text-s;
         }
       }
     }
@@ -648,7 +649,7 @@ header {
 }
 
 #yellow-background {
-  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-60;
+  @apply relative h-full w-full items-center overflow-hidden bg-yellow pt-[3.1rem];
 
   @media screen and (max-width: 768px) {
     @apply pt-10;
@@ -669,37 +670,17 @@ header {
   }
 
   .image_container_brand {
-    width: 100%;
-    height: 100%;
-    max-width: 8rem;
-    max-height: 8rem;
+    max-width: 8.8rem;
+    max-height: 8.8rem;
+    min-height: 8.8rem;
+    min-width: 8.8rem;
+    border: 0.2rem solid transparent;
+
+    @apply sm:min-h-[7rem] sm:max-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
   }
 
-  .all-brands {
-    background: none;
-    color: #808080;
-    border: #808080 0.2rem solid;
-    border-radius: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-    align-items: center;
-    height: 100%;
-    margin: auto;
-    padding: 1.2rem 0;
-
-    @media screen and (max-width: 900px) {
-      height: 7rem;
-      padding: 0.4rem 0;
-    }
-
-    p {
-      width: 100%;
-      height: 100%;
-      display: block;
-      text-align: center;
-      font-size: 1.5rem;
-      white-space: normal;
-    }
+  .brand_choose_brands::-webkit-scrollbar {
+    display: none;
   }
 
   .brand_choose_brands {
@@ -708,13 +689,9 @@ header {
     flex-direction: row;
     -webkit-flex-direction: row;
     gap: 2rem;
+    overflow-x: auto;
 
     @media screen and (max-width: 900px) {
-      display: flex !important;
-      display: -webkit-flex !important;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      overflow: scroll;
       width: 100%;
       gap: 2rem;
       height: 9rem;
@@ -729,6 +706,21 @@ header {
       }
     }
   }
+
+  .all-brands {
+    border: #808080 0.2rem solid;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: 'TT Hoves Pro';
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    cursor: pointer;
+  }
+
 }
 
 #yellow-background:after {
@@ -742,7 +734,11 @@ header {
 }
 
 #moving-block {
-  @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+  @apply absolute z-100 mx-auto h-screen w-full  bg-white top-[2rem];
+}
+
+#moving-block svg {
+  filter: drop-shadow(0px -2px 5px rgb(41, 41, 41));
 }
 
 #white-mobile-background {
@@ -755,14 +751,26 @@ header {
   position: absolute;
   content: '';
   display: block;
-  height: calc(100% - 145rem);
+  height: 100%;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: white ;
   width: 100%;
 }
 
+#moving-block:before {
+  z-index: 1;
+  position: absolute;
+  content: '';
+  display: block;
+  height: 100%;
+  bottom: -50%;
+  background-color: white;
+  width: 200%;
+  left: -50%
+}
+
 #above-block {
-  @apply relative z-1000 overflow-hidden py-35;
+  @apply relative z-1000 overflow-hidden;
 }
 
 #above-el-block {
@@ -829,20 +837,20 @@ header {
           transform: scale(1.2);
         }
       }
+    }
 
-      .button-prev,
-      .button-next {
-        display: block;
-        background: url('../../img/next.png') no-repeat center;
-        background-size: 2rem 2rem;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+    .button-prev,
+    .button-next {
+      display: block;
+      background: url('../../img/next.png') no-repeat center;
+      background-size: 2rem 2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
 
-        &:hover {
-          transform: scale(1.2);
-        }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }

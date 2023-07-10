@@ -1,26 +1,40 @@
 <!--  карточки СТАТЬИ маленький размер текста  -->
-<div class="card_articles js_traceable_item">
-  <a href="#" class="card_articles_image item_card_image">
+<div
+  class="card_articles js_traceable_item"
+  itemscope
+  itemtype="https://schema.org/Article"
+>
+  <a itemprop="url" href="#" class="card_articles_image item_card_image">
     <img
+      itemprop="image"
       src="./img/cards_article_small_fs.svg"
       alt=""
       class="articles_card_img item_card_img"
     />
   </a>
 
-  <div class="card_articles_description js-bg-changeable">
+  <div
+    itemprop="description"
+    class="card_articles_description js-bg-changeable"
+  >
     <div class="card_articles_tags dotted_tags">
-      <a href="#" class="card_articles_category dotted_tags_category">
+      <a
+        itemprop="url"
+        href="#"
+        class="card_articles_category dotted_tags_category"
+      >
         СТАТЬИ
       </a>
       <div class="card_articles_separator dotted_tags_separator">•</div>
-      <a href="#" class="card_articles_date dotted_tags_date"> 30.11.2022 </a>
+      <a itemprop="url" href="#" class="card_articles_date dotted_tags_date">
+        <span itemprop="datePublished">30.11.2022</span>
+      </a>
     </div>
-    <a href="#" class="card_articles_info card_sel_info">
-      <div class="card_articles_name_sfs card_sel_name">
+    <a href="#" class="card_articles_info card_sel_info" itemprop="url">
+      <div class="card_articles_name_sfs card_sel_name" itemprop="headline">
         Новый закон накладывает вето на полуночный
       </div>
-      <div class="card_articles_text_sfs card_sel_text">
+      <div class="card_articles_text_sfs card_sel_text" itemprop="articleBody">
         Противоположная точка зрения подразумевает, что явные признаки победы
         институционализации лишь добавляют фракционных разногласий и объявлены
         нарушающими общечеловеческие нормы этики и морали.

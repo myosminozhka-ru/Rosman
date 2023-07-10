@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="legal-information-wrapper relative">
+      @@include('components/header/header-main.html')
+      @@include('components/ui-kit/popups/popup-contact-us-ru.html', { }, )
+
+      <div
+        class="grid grid-cols-2 gap-24 bg-[#FFF145] px-24 pb-94 pt-34 ipadmini:grid-cols-1 sm:px-12 sm:pb-48 sm:pt-24"
+      >
+        <div class="relative w-full">
+          <img src="../../img/imidzh-car.jpg" alt="" />
+          <div
+            class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
+          >
+            <div class="text-60.104 font-medium bs:text-4xl">Игрушки</div>
+            <div
+              class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+            >
+              Перейти <span class="arrow-left-black"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative w-full">
+          <img src="../../img/imidzh-book-2.png" alt="" />
+          <div
+            class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
+          >
+            <div class="text-60.104 font-medium bs:text-4xl">Книги</div>
+            <div
+              class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+            >
+              Перейти<span class="arrow-left-black"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('components/ui-kit/footer/footer-ru.html')
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книги</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header id="header3" class="bottom header" data-header="main">
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content mt-60">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="search-input hide">
+    <span class="search-icon"></span>
+    <span class="micro-icon"></span>
+    <input type="text" placeholder="Введите поисковый запрос" />
+    <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button" onclick="toggleSearch()"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+    <span class="heart-button"></span>
+    <span class="search-button" onclick="toggleSearch()"></span>
+  </div>
+</header>
+<div class="toolbar">
+  <a href="#" class="toolbar-button active">
+    <img src="./img/toolbar-book.png" />Главная</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-home.png" />Игрушки</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-menu.png" />Книги</a
+  >
+  <a href="#" class="toolbar-button"
+    ><img src="./img/toolbar-toys.png" />Меню</a
+  >
+</div>
+
+    <div id="yellow-background">
+      <div id="moving-block"></div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div class="flex flex-wrap justify-start px-24">
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">4-6</p>
+          <p class="filter-label header">7-9</p>
+          <p class="filter-label header">10-15</p>
+          <p class="filter-label header">15+</p>
+          <p class="filter-label header">Новинки</p>
+          <p class="filter-label header">Хиты</p>
+          <p class="filter-label header">Случайная карта</p>
+        </div>
+
+        <div class="flex flex-col gap-24 !p-24 sm:!p-12">
+          <div class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16">
+  <p class="breadcrumbs">
+    <a href="#">Главная </a><span>/</span>
+    <a class="active-js" href="#">Игрушки</a>
+  </p>
+
+  <div class="breadcrumbs-small-screen px-24">
+    <div class="breadcrumbs-small-screen-image"></div>
+    <div class="breadcrumbs-small-screen-dots">
+      ...
+      <div class="breadcrumbs-arrow"></div>
+      <div class="breadcrumbs-path-hidden"></div>
+    </div>
+    <div class="breadcrumbs-small-screen-path">Игрушки</div>
+  </div>
+
+  <div class="breadcrumbs-icons">
+    <a href="#" class="item_card-external-link"></a>
+    <button class="item_card_add_to_favourite"></button>
+  </div>
+</div>
+
+        </div>
+        <div class="grid h-202 grid-cols-4 grid-rows-4">
+          <div class="col-span-2 row-span-4">
+            <div class="card_selection js_traceable_item">
+              <a href="#" class="card_selection_image item_card_image h-170">
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                />
+              </a>
+              <div class="card_selection_description js-bg-changeable h-220">
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                  >
+                    ПОДБОРКИ
+                  </a>
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_selection_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a href="#" class="card_selection_info card_sel_info">
+                  <div class="card_selection_name card_sel_name">
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div class="card_selection_text card_sel_text">
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент проверки системы массового
+                    участия. Безусловно, внедрение современных методик требует
+                    определения и уточнения системы массового участия.
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-span-4">
+            <div class="card_articles js_traceable_item h-260 overflow-hidden">
+              <a href="#" class="card_articles_image item_card_image h-130">
+                <img
+                  src="./img/cards_articles.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div class="card_articles_description js-bg-changeable h-130">
+                <div class="card_articles_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_articles_category dotted_tags_category"
+                  >
+                    СТАТЬИ
+                  </a>
+                  <div class="card_articles_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a href="#" class="card_articles_info card_sel_info">
+                  <div class="card_articles_name card_sel_name">
+                    Известный автор выпустил свою самую личную и чувственную
+                    книгу
+                  </div>
+                  <div class="card_articles_text card_sel_text">
+                    В четверг стартует главное книжное событие – ярмарка
+                    NonFiction. С 1 по 5 декабря в Гостином дворе издательства
+                    России представят свои лучшие книги, проведут ряд
+                    мероприятий, и встретятся со своими читателями.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="card_articles js_traceable_item h-260 overflow-hidden">
+              <a href="#" class="card_articles_image item_card_image h-130">
+                <img
+                  src="./img/cards_articles.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div class="card_articles_description js-bg-changeable h-130">
+                <div class="card_articles_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_articles_category dotted_tags_category"
+                  >
+                    СТАТЬИ
+                  </a>
+                  <div class="card_articles_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a href="#" class="card_articles_info card_sel_info">
+                  <div class="card_articles_name card_sel_name">
+                    Известный автор выпустил свою самую личную и чувственную
+                    книгу
+                  </div>
+                  <div class="card_articles_text card_sel_text">
+                    В четверг стартует главное книжное событие – ярмарка
+                    NonFiction. С 1 по 5 декабря в Гостином дворе издательства
+                    России представят свои лучшие книги, проведут ряд
+                    мероприятий, и встретятся со своими читателями.
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-span-4">
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

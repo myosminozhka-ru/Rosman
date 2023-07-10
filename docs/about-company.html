@@ -129,11 +129,21 @@
 
 
     <div id="yellow-background">
-      <div id="moving-block"></div>
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
-        <div class="flex justify-between">
-  <p class="breadcrumbs p-24">
+        <div class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16">
+  <p class="breadcrumbs">
     <a href="#">Главная </a><span>/</span>
     <a class="active-js" href="#">Игрушки</a>
   </p>
@@ -200,7 +210,7 @@
           <h2 class="head-2">Мы работаем для тех, кто изменит мир</h2>
 
           <div
-            class="grid grid-cols-4 divide-x-2 divide-grey bg-background p-32 sm:grid-cols-1 sm:divide-x-0 sm:divide-y-2 sm:p-24 bs:grid-cols-2 bs:gap-y-20 bs:divide-x-0"
+            class="grid grid-cols-4 divide-x-2 divide-grey bg-background p-32 bs:grid-cols-2 bs:gap-y-20 bs:divide-x-0 sm:grid-cols-1 sm:divide-x-0 sm:divide-y-2 sm:p-24"
           >
             <div class="pr-40 sm:pb-16 sm:pr-28">
               <p class="head-1">18%</p>
@@ -209,7 +219,7 @@
               </p>
             </div>
 
-            <div class="px-40 sm:py-16 sm:pl-0 sm:pr-28 bs:pr-0">
+            <div class="px-40 bs:pr-0 sm:py-16 sm:pl-0 sm:pr-28">
               <p class="head-1">топ-5</p>
               <p class="body-m mt-12">
                 рейтинга крупнейших издательств России занимает издательство
@@ -217,7 +227,7 @@
               </p>
             </div>
 
-            <div class="px-40 sm:py-16 sm:pl-0 sm:pr-28 bs:pl-0">
+            <div class="px-40 bs:pl-0 sm:py-16 sm:pl-0 sm:pr-28">
               <p class="head-1">>1500</p>
               <p class="body-m mt-12">
                 наименований книг в активном портфеле и более 10 000 в бек-листе
@@ -1217,10 +1227,9 @@
           <h2 class="head-2 sm:hidden">Ключевые персоны</h2>
 
           <div class="mt-32 grid grid-cols-3 gap-24 sm:hidden">
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1230,19 +1239,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1252,19 +1260,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1274,19 +1281,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1296,19 +1302,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1318,19 +1323,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1340,19 +1344,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1362,9 +1365,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1386,10 +1389,9 @@
 
               <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1399,9 +1401,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1410,10 +1412,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1423,9 +1424,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1434,10 +1435,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1447,9 +1447,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1458,10 +1458,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1471,9 +1470,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1482,10 +1481,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1495,9 +1493,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1506,10 +1504,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1519,9 +1516,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1530,10 +1527,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1543,9 +1539,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1554,10 +1550,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1567,9 +1562,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -1578,10 +1573,9 @@
 
                 </div>
                 <div class="swiper-slide swiper-slide-active">
-                  <!--  Карточка сотрудника  -->
-<div class="card_employee">
+                  <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -1591,9 +1585,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>

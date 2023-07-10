@@ -162,7 +162,7 @@
       <div class="flex flex-col gap-64 sm:gap-48">
         <!-- тут будут бренды и публикации -->
         <div
-          class="grid grid-cols-2 gap-24 bg-[#FFF145] p-24 pt-0 sm:p-12 sm:pt-0 ipadmini:grid-cols-1"
+          class="grid grid-cols-2 gap-24 bg-[#FFF145] p-24 pt-0 ipadmini:grid-cols-1 sm:p-12 sm:pt-0"
         >
           <div class="relative w-full">
             <img src="./img/imidzh-car.jpg" alt="" />
@@ -425,10 +425,9 @@
         <div class="flex flex-col gap-32 px-24 sm:px-12 ssm:pr-0">
           <div class="text-5xl font-medium md:hidden">Key persons</div>
           <div class="grid grid-cols-3 items-center gap-x-24 md:hidden">
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -438,19 +437,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -460,19 +458,18 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
   </div>
 </div>
 
-            <!--  Карточка сотрудника  -->
-<div class="card_employee">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
   <div class="card_employee_image">
-    <img src="./img/cards_employee.svg" alt="" />
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
     <div class="card_employee_socials">
       <a href="#" class="card_employee_social_item emp_soc_fb"></a>
       <a href="#" class="card_employee_social_item emp_soc_twit"></a>
@@ -482,9 +479,9 @@
   </div>
 
   <div class="card_employee_info">
-    <div class="card_employee_name">Иван Иванов</div>
-    <div class="card_employee_occupation">Писатель</div>
-    <div class="card_employee_text">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
       Картельные сговоры не допускают ситуации, при которой представители
       современных социальных резервов лишь добавляют.
     </div>
@@ -748,7 +745,7 @@
         </div>
         <!-- тут будут контакты -->
         <div class="flex flex-col gap-64 sm:flex-col">
-          <div class="px-24 text-5xl font-medium sm:px-12 md:hidden">
+          <div class="px-24 text-5xl font-medium md:hidden sm:px-12">
             Contacts
           </div>
           <div class="grid grid-cols-4 gap-16 px-24 sm:grid-cols-1 sm:px-12">
@@ -864,7 +861,7 @@
 
         <!-- тут будет фидбек -->
         <div
-          class="relative mb-64 bg-yellow px-24 py-[10rem] sm:px-12 bs:py-[15rem]"
+          class="relative mb-64 bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
         >
           <div
             class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-white shadow-lg"
@@ -875,7 +872,7 @@
           ></div>
 
           <div
-            class="relative bottom-[-62.4rem] left-0 right-0 h-[1rem] rotate-2 msm:!bottom-[-67.7rem] bs:bottom-[-66.6rem]"
+            class="relative bottom-[-62.4rem] left-0 right-0 h-[1rem] rotate-2 bs:bottom-[-66.6rem] msm:!bottom-[-67.7rem]"
           >
             <div
               class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]"

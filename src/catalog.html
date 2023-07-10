@@ -14,7 +14,17 @@
     @@include('components/header/header-main.html', { }, )
 
     <div id="yellow-background">
-      <div id="moving-block"></div>
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
         @@include('components/ui-kit/breadcrumbs/index.html', { }, )
@@ -71,9 +81,7 @@
               <div
                 class="image_container_brand js_popup_brand_choose_list_button"
               >
-                <div class="all-brands">
-                  <p>Все бренды</p>
-                </div>
+                <div class="all-brands">Все бренды</div>
               </div>
             </div>
             @@include('components/ui-kit/popups/popup-brand-listing.html', { },
@@ -154,7 +162,7 @@
               </div>
             </div>
             <div
-              class="my-40 grid grid-cols-3 gap-16 sm:grid-cols-1 md:grid-cols-2"
+              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
             >
               <div class="toy_card item_card">
                 <div class="toy_card_heading">
