@@ -670,37 +670,17 @@ header {
   }
 
   .image_container_brand {
-    width: 100%;
-    height: 100%;
-    max-width: 8rem;
-    max-height: 8rem;
+    max-width: 8.8rem;
+    max-height: 8.8rem;
+    min-height: 8.8rem;
+    min-width: 8.8rem;
+    border: 0.2rem solid transparent;
+
+    @apply sm:min-h-[7rem] sm:max-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
   }
 
-  .all-brands {
-    background: none;
-    color: #808080;
-    border: #808080 0.2rem solid;
-    border-radius: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-    align-items: center;
-    height: 100%;
-    margin: auto;
-    padding: 1.2rem 0;
-
-    @media screen and (max-width: 900px) {
-      height: 7rem;
-      padding: 0.4rem 0;
-    }
-
-    p {
-      width: 100%;
-      height: 100%;
-      display: block;
-      text-align: center;
-      font-size: 1.5rem;
-      white-space: normal;
-    }
+  .brand_choose_brands::-webkit-scrollbar {
+    display: none;
   }
 
   .brand_choose_brands {
@@ -709,13 +689,9 @@ header {
     flex-direction: row;
     -webkit-flex-direction: row;
     gap: 2rem;
+    overflow-x: auto;
 
     @media screen and (max-width: 900px) {
-      display: flex !important;
-      display: -webkit-flex !important;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      overflow: scroll;
       width: 100%;
       gap: 2rem;
       height: 9rem;
@@ -730,6 +706,21 @@ header {
       }
     }
   }
+
+  .all-brands {
+    border: #808080 0.2rem solid;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: 'TT Hoves Pro';
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    cursor: pointer;
+  }
+
 }
 
 #yellow-background:after {
