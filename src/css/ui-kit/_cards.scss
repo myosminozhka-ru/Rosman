@@ -7,7 +7,6 @@
 }
 
 // карточка игрушки и книги
-
 // card's top
 .toy_card {
   @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
@@ -85,15 +84,11 @@
   }
 }
 
+// 05.07 - добавил прозрачную границу снизу
 .bordered_tags_item {
   @apply px-12 py-4 body-s-bold bg-white;
   border: 1px solid #000000;
-  @media screen and (max-width: 400px) {
-    @apply w-1/2 text-center;
-  }
-  @media screen and (max-width: 900px) {
-    @apply px-4;
-  }
+  border-bottom: transparent;
 }
 
 .bordered_tags_item:hover {
@@ -181,6 +176,7 @@
 
 .card_selection_description {
   @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm:pt-16;
+
   @media screen and (max-width: 639px) {
     padding-top: 1.6rem;
   }
@@ -504,6 +500,7 @@
 
 .card_brand_links {
   @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+
   img {
     width: 2rem;
     height: 2rem;
@@ -653,7 +650,6 @@
     border-bottom: 1px solid #e3e3e2;
     border-left: 1px solid #e3e3e2;
     border-right: 1px solid #e3e3e2;
-
     box-shadow: none;
   }
 }
