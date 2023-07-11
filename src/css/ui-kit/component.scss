@@ -1564,3 +1564,17 @@ header {
   height: 2rem;
   cursor: pointer;
 }
+.block-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+  .vertical-rl {
+    @apply bg-yellow;
+    writing-mode: vertical-rl;
+  }
+}
+
+
