@@ -357,14 +357,14 @@ button {
   @apply flex flex-row text-grey;
 
   span {
-    @apply mr-8 text-text;
+    @apply mr-8 text-text text-xl;
   }
 
   a {
     @apply mr-8 text-text;
 
     &.active-js {
-      @apply text-black;
+      @apply text-black font-bold;
     }
 
     &:hover {
