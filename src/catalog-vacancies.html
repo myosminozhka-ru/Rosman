@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог вакансий</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div class="search-result-wrapper">
+  @@include('components/header/header-main.html', { }, )
+  <div id="yellow-background">
+    <div id="moving-block">
+      <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+        <g>
+          <path
+            id="moving-bock-shadow"
+            d="M 0 0 L 100 0 L 100 100 L 0 100"
+            fill="white"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="!pt-0">
+      @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+      <div class="flex flex-col gap-24 px-24 md:gap-16 md:p-12">
+        <!--        <div class="flex items-center justify-between">-->
+        <!--          <p class="breadcrumbs">-->
+        <!--            <a class="text-s" href="#">Главная </a><span>/</span>-->
+        <!--            <a class="text-s" href="#">Карьера </a>-->
+        <!--          </p>-->
+        <!--          <div class="breadcrumbs-small-screen">-->
+        <!--            <div class="breadcrumbs-small-screen-image"></div>-->
+        <!--            <div class="breadcrumbs-small-screen-dots">/</div>-->
+        <!--            <div class="breadcrumbs-small-screen-path">Карьера</div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+
+        <h1 class="head-1">Карьера</h1>
+        <div class="flex flex-row justify-between">
+          <div class="flex justify-start">
+            <div class="navigation card-fullpage-filter-links !h-46">
+              <ul class="nav-list">
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !pl-0"
+                >
+                  <p class="other !py-10 text-15.20 font-medium active-js">
+                    Все&nbsp&nbsp
+                    <span class="!text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="news !py-10 text-15.20 font-medium">
+                    Книги&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="state !py-10 text-15.20 font-medium">
+                    Игрушки&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="interview !py-10 text-15.20 font-medium">
+                    Статьи&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Дистрибуция&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Маркетинг&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Диджитал&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Продажи&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Офис&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    IT&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+                <li
+                  class="!m-0 flex flex-row flex-nowrap !items-center gap-4 "
+                >
+                  <p class="collection !py-10 text-15.20 font-medium">
+                    Стажировки&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+                </li>
+              </ul>
+              <div class="navigation-content hide" id="collection">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg"/>
+                  <p class="name">Книжка коллекция</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="interview">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg"/>
+                  <p class="name">Книжка Интервью</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="state">
+                <div class="cross"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg"/>
+                  <p class="name">Книжка Статья</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="news">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg"/>
+                  <p class="name">Книжка Новости</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="other">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg"/>
+                  <p class="name">Книжка Общее</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="search-container !max-w-[26rem] popup_brand_choose_search_line pup_brand_selector"
+          >
+            <img src="../../img/search_item.svg" alt=""/>
+            <input
+              type="text"
+              placeholder="Поиск по брендам"
+              class="input pup_brand_input"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--   тут будет контент   -->
+
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    </div>
+  </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
