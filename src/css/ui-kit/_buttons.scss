@@ -361,10 +361,10 @@ button {
   }
 
   a {
-    @apply mr-8 text-text;
+    @apply mr-8 text-text text-xl;
 
     &.active-js {
-      @apply text-black font-bold;
+      @apply text-black ;
     }
 
     &:hover {
