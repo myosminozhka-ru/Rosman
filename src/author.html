@@ -38,8 +38,8 @@
           <p class="filter-label header">Случайная карта</p>
         </div>
 
-          @@include('components/ui-kit/breadcrumbs/index.html', { }, )
-        <div class="md:flex-col gap-40 flex flex-row px-25 mb-32">
+        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+        <div class="mb-32 flex flex-row gap-40 px-25 md:flex-col">
           <div class="w-2/4 md:w-full">
             <h1 class="head-1 mb-40 md:mb-24">Анастасия Орлова</h1>
             <div class="card-fp-desc-main">
@@ -96,13 +96,15 @@
         </div>
 
         <div
-          class="absolute -left-50 md:left-0 md:h-817 mt-24 h-[51.8rem] w-full skew-y-2 bg-yellow"
+          class="absolute -left-50 mt-24 h-[51.8rem] w-full skew-y-2 bg-yellow md:left-0 md:h-817"
         ></div>
         <div
-          class="md:flex-col md:h-817 relative mx-auto mb-68 mt-120 flex h-[47.8rem] w-4/5 md:w-w-11/12 flex-row md:gap-0 bs:gap-50"
+          class="md:w-w-11/12 relative mx-auto mb-68 mt-120 flex h-[47.8rem] w-4/5 flex-row bs:gap-50 md:h-817 md:flex-col md:gap-0"
         >
-          <div class="h-[38rem] w-2/4 md:w-full flex justify-center ">
-            <div class="book_card js_item_card item_card absolute !bg-yellow mx-auto">
+          <div class="flex h-[38rem] w-2/4 justify-center md:w-full">
+            <div
+              class="book_card js_item_card item_card absolute mx-auto !bg-yellow"
+            >
               <div class="book_card_heading">
                 <div class="item_card_tags bordered_tags">
                   <div class="item_card_tags_main bordered_tags_main">
@@ -124,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class="flex h-[38rem] w-3/4 md:w-full flex-col gap-12 ">
+          <div class="flex h-[38rem] w-3/4 flex-col gap-12 md:w-full">
             <p class="head-1">Это Грузовик, а это Прицеп</p>
             <p class="body-m">
               История для самых маленьких о том, как грузовик и его друг
@@ -194,7 +196,9 @@
           </div>
         </div>
 
-        <div class="flex flex-row gap-30 bg-white px-25 md:flex-col mb-32 md:w-full md:gap-64">
+        <div
+          class="mb-32 flex flex-row gap-30 bg-white px-25 md:w-full md:flex-col md:gap-64"
+        >
           <div class="w-3/5 md:w-full">
             <img
               class="h-20 w-20"
@@ -515,7 +519,9 @@
           </div>
         </div>
 
-        <div class="flex flex-row gap-30 bg-white px-25 md:flex-col mb-32 md:w-full md:gap-64">
+        <div
+          class="mb-32 flex flex-row gap-30 bg-white px-25 md:w-full md:flex-col md:gap-64"
+        >
           <div class="w-3/5 md:w-full">
             <img
               class="h-20 w-20"
@@ -571,12 +577,12 @@
           </div>
         </div>
         <div
-          class="absolute md:h-[67.7rem] mt-24 h-190 w-full skew-y-2 bg-background z-1000"
+          class="absolute z-1000 mt-24 h-190 w-full skew-y-2 bg-background md:h-[67.7rem]"
         ></div>
         <div
-          class="md:flex-col gap-40 relative mx-auto mt-[14rem] flex h-full flex-row px-25 z-1001 mb-[8.2rem]"
+          class="relative z-1001 mx-auto mb-[8.2rem] mt-[14rem] flex h-full flex-row gap-40 px-25 md:flex-col"
         >
-          <div class="w-3/5 md:w-full items-center">
+          <div class="w-3/5 items-center md:w-full">
             <p class="mx-auto py-24 text-4xl md:text-m">
               Книга, вдохновившая создателей авторов знаменитой игры и сериала
               HBO «Одни из нас». Отец и сын идут по обезображенному катастрофой
@@ -586,7 +592,8 @@
           </div>
           <div class="relative w-2/5 md:w-full">
             <div class="relative">
-              <iframe class='w-full'
+              <iframe
+                class="w-full"
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/pMc0B51TYMw"
