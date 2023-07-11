@@ -26,21 +26,10 @@
     <div id="white-mobile-background"></div>
     <div id="above-block" class="!pt-0">
       @@include('components/ui-kit/breadcrumbs/index.html', { }, )
-      <div class="flex flex-col gap-24 px-24 md:gap-16 md:p-12">
-        <!--        <div class="flex items-center justify-between">-->
-        <!--          <p class="breadcrumbs">-->
-        <!--            <a class="text-s" href="#">Главная </a><span>/</span>-->
-        <!--            <a class="text-s" href="#">Карьера </a>-->
-        <!--          </p>-->
-        <!--          <div class="breadcrumbs-small-screen">-->
-        <!--            <div class="breadcrumbs-small-screen-image"></div>-->
-        <!--            <div class="breadcrumbs-small-screen-dots">/</div>-->
-        <!--            <div class="breadcrumbs-small-screen-path">Карьера</div>-->
-        <!--          </div>-->
-        <!--        </div>-->
+      <div class="flex flex-col gap-24 px-24 md:gap-16 md:px-12 mb-64 md:mb-48">
 
         <h1 class="head-1">Карьера</h1>
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between bsmax:flex-col gap-16">
           <div class="flex justify-start">
             <div class="navigation card-fullpage-filter-links !h-46">
               <ul class="nav-list">
@@ -171,7 +160,7 @@
             </div>
           </div>
           <div
-            class="search-container !max-w-[26rem] popup_brand_choose_search_line pup_brand_selector"
+            class="search-container card-fullpage-filter-links !max-w-[26rem] msm:!max-w-[50rem] popup_brand_choose_search_line pup_brand_selector"
           >
             <img src="../../img/search_item.svg" alt=""/>
             <input
@@ -181,10 +170,39 @@
             />
           </div>
         </div>
+        <div class="max-w-[80rem] text-15.20">
+          <p>
+            Велком текст. Общий или выбранного направления. Значимость этих проблем настолько очевидна, что
+            экономическая
+            повестка сегодняшнего дня, в своём классическом представлении, допускает внедрение инновационных методов
+            управления процессами. Равным образом, базовый вектор развития говорит о возможностях первоочередных
+            требований.
+          </p>
+        </div>
       </div>
 
       <!--   тут будет контент   -->
+      <div class="flex flex-col gap-64 sm:gap-48">
+        <!--   список вакансий, грид - 2 колонки     -->
+        <div class="flex flex-col gap-24">
+          <div class="grid grid-cols-2 gap-24 px-24 sm:px-12 md:grid-cols-1">
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+            @@include('components/ui-kit/cards/card-career.html', { }, )
+          </div>
+          <div class="px-24 sm:px-12">
+            <button class="pagination-more-button  js-rm-pag-more-btn">
+              Показать ещё
+            </button>
+          </div>
 
+        </div>
+        <!--    наш офис - фотогалерея по типу    -->
+
+      </div>
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
   </div>
