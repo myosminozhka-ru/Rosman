@@ -137,6 +137,7 @@ module.exports = {
         99: '9.9rem',
         70: '10rem',
         100: '25.9rem',
+        120: '12rem',
         130: '13rem',
         140: '14rem',
         150: '15rem',
@@ -147,6 +148,7 @@ module.exports = {
         202: '52.5rem',
         220: '22rem',
         260: '26rem',
+        817: '81.7rem',
       },
       lineClamp: {
         10: '10',

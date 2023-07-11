@@ -547,7 +547,7 @@ header {
   }
 
   .more-down-content {
-    @apply absolute z-1001 bg-white p-24;
+    @apply absolute z-1001 bg-white p-24 top-[7rem];
 
     .more-down-button {
       @apply m-0 p-0;
@@ -575,7 +575,7 @@ header {
   }
 
   .menu {
-    @apply flex basis-1/10 justify-center border-0 p-0 py-6;
+    @apply flex basis-1/10 justify-center border-0 p-0 ;
 
     .more-down-content {
       a {
@@ -642,6 +642,12 @@ header {
         @apply flex items-center;
         a {
           @apply mx-17 text-s;
+          @media screen and (max-width: 1090px) {
+            @apply mx-6;
+          }
+          @media screen and (max-width: 990px) {
+            @apply mx-2;
+          }
         }
       }
     }
