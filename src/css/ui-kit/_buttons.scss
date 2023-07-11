@@ -790,6 +790,7 @@ button {
   top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
+
   @media screen and (max-width: 639px) {
     @apply hidden;
   }

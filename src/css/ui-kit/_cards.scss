@@ -91,10 +91,36 @@
 .bordered_tags_item {
   @apply body-s-bold bg-white px-12 py-4;
   border: 1px solid #000000;
+
+  @media screen and (max-width: 400px) {
+    @apply w-1/2 text-center;
+  }
+
+  @media screen and (max-width: 900px) {
+    @apply px-4;
+  }
+
   border-bottom: transparent;
 }
 
 .bordered_tags_item:hover {
+  @apply bg-yellow;
+}
+
+.bordered_tags_item-2 {
+  @apply px-12 py-4 body-s-bold;
+  border: 1px solid #000000;
+
+  @media screen and (max-width: 400px) {
+    @apply text-center w-1/2;
+  }
+
+  @media screen and (max-width: 900px) {
+    @apply px-4;
+  }
+}
+
+.bordered_tags_item-2:hover {
   @apply bg-yellow;
 }
 
@@ -140,7 +166,7 @@
 }
 
 .item_card_more {
-  @apply flex flex-row justify-start gap-18;
+  @apply flex flex-row justify-start gap-18 sm:justify-between;
 }
 
 .item_card_link.overline-button {
