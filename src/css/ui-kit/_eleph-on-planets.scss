@@ -35,7 +35,7 @@
 
 .wrapper-first {
   top: -10rem;
-  left: 2rem;
+  left: 2.3rem;
   flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
     left: 2.8rem;
@@ -49,7 +49,7 @@
 
 .wrapper-second {
   top: -10rem;
-  right: 2rem;
+  right: 2.3rem;
   flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
     right: 2.8rem;
@@ -91,12 +91,20 @@
   @media screen and (max-width: 700px) {
     top: 0.5rem;
     rotate: 160deg;
-    //animation: rotate-secondary-2 6s linear infinite;
+    animation-direction: reverse;
   }
   @media (min-width: 1500px) {
     left: 0.5rem;
   }
 }
+
+.planet-secondary-left-2 {
+  animation: rotate-secondary 6s linear infinite;
+  flex-basis: 40rem;
+  rotate: 300deg;
+  animation-direction: reverse;
+}
+
 
 .planet-secondary-right {
   animation: rotate-secondary 6s linear infinite;
@@ -105,12 +113,19 @@
 
   @media screen and (max-width: 700px) {
     top: -0.5rem;
+    animation-direction: reverse;
     rotate: 160deg;
-    //animation: rotate-secondary-2 6s linear infinite;
   }
   @media (min-width: 1500px) {
     right: 0.5rem;
   }
+}
+
+.planet-secondary-right-2 {
+  animation: rotate-secondary 6s linear infinite;
+  flex-basis: 40rem;
+  rotate: 230deg;
+  animation-direction: reverse;
 }
 
 .elephant-planet-central {
@@ -124,9 +139,18 @@
   @media screen and (max-width: 700px) {
     top: 0;
     right: 0;
+    animation-direction: reverse;
     flex-basis: 33.6rem;
     rotate: 20deg;
   }
+}
+
+.elephant-planet-central-2 {
+  rotate: 100deg;
+  @apply relative flex-grow;
+  flex-basis: 50rem;
+  animation: rotate-central 6s linear infinite;
+  animation-direction: reverse;
 }
 
 .elephant-central-img {
@@ -152,6 +176,21 @@
   }
 }
 
+
+.elephant-central-img-2 {
+  position: absolute;
+  left: 50%;
+  top: 99%;
+  transform: translateX(-50%) scaleX(1) scaleY(-1);
+}
+
+.elephant-secondary-img-2 {
+  position: absolute;
+  left: 50%;
+  top: 99%;
+  transform: translateX(-50%) scaleX(-1) scaleY(-1);
+}
+
 .elephant-planet-cantral-img {
   @apply h-full w-full;
 }
@@ -175,59 +214,25 @@
   }
 }
 
-@keyframes rotate-secondary-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-central-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-// верчение планет на экране до 700рх
-@media screen and (max-width: 700px) {
-  @keyframes rotate-secondary {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotate-central {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-}
 
 ///////////// левый слон
 @keyframes toggleVisibility {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  2% {
-    opacity: 1;
-    visibility: visible;
-  }
-  2.01% {
+  1.2% {
     opacity: 0;
     visibility: hidden;
   }
+  //1.21% {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+  //1.8% {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+  //1.81% {
+  //  opacity: 0;
+  //  visibility: hidden;
+  //}
   68.22% {
     opacity: 0;
     visibility: hidden;
@@ -236,9 +241,13 @@
     opacity: 1;
     visibility: visible;
   }
-  100% {
+  99.9% {
     opacity: 1;
     visibility: visible;
+  }
+  99.91% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -246,34 +255,6 @@
   animation: toggleVisibility 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility {
-    0% {
-      opacity: 1;
-      visibility: visible;
-    }
-    18.3% {
-      opacity: 1;
-      visibility: visible;
-    }
-    18.31% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    85.33% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    85.44% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
 
 /////////////////// центральный слон
 @keyframes toggleVisibility2 {
@@ -281,23 +262,27 @@
     opacity: 0;
     visibility: hidden;
   }
-  0.7% {
-    opacity: 1;
-    visibility: visible;
-  }
-  14% {
-    opacity: 1;
-    visibility: visible;
-  }
-  14.01% {
+  1% {
     opacity: 0;
     visibility: hidden;
   }
-  47.5% {
+  1.01% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.8% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.81% {
     opacity: 0;
     visibility: hidden;
   }
-  47.51% {
+  46.9% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.91% {
     opacity: 1;
     visibility: visible;
   }
@@ -323,58 +308,6 @@
   animation: toggleVisibility2 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility2 {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    18.67% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    18.68% {
-      opacity: 1;
-      visibility: visible;
-    }
-    31% {
-      opacity: 1;
-      visibility: visible;
-    }
-    34.79% {
-      opacity: 1;
-      visibility: visible;
-    }
-    34.8% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    68.3% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    68.31% {
-      opacity: 1;
-      visibility: visible;
-    }
-    76% {
-      opacity: 1;
-      visibility: visible;
-    }
-    84.8% {
-      opacity: 1;
-      visibility: visible;
-    }
-    84.81% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-}
 
 /// правый слон
 @keyframes toggleVisibility3 {
@@ -382,11 +315,11 @@
     opacity: 0;
     visibility: hidden;
   }
-  14.87% {
+  14.7% {
     opacity: 0;
     visibility: hidden;
   }
-  14.88% {
+  14.71% {
     opacity: 1;
     visibility: visible;
   }
@@ -394,11 +327,11 @@
     opacity: 1;
     visibility: visible;
   }
-  48.2% {
+  48.7% {
     opacity: 1;
     visibility: visible;
   }
-  48.21% {
+  48.71% {
     opacity: 0;
     visibility: hidden;
   }
@@ -412,31 +345,129 @@
   animation: toggleVisibility3 18s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  @keyframes toggleVisibility3 {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    36% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    36.01% {
-      opacity: 1;
-      visibility: visible;
-    }
-    68.8% {
-      opacity: 1;
-      visibility: visible;
-    }
-    68.81% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
+
+.elephant-planet-left-img-small {
+  animation: toggleVisibility-left-small 18s linear infinite;
+}
+
+@keyframes toggleVisibility-left-small {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  2% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  2.01% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  64% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  64.01% {
+    opacity: 1;
+    visibility: visible;
+  }
+  97.3% {
+    opacity: 1;
+    visibility: visible;
+  }
+  97.31% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
+.elephant-planet-central-img-small {
+  animation: toggleVisibility2-small 18s linear infinite;
+}
+
+@keyframes toggleVisibility2-small {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.8% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13.81% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.7% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  46.71% {
+    opacity: 1;
+    visibility: visible;
+  }
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63.63% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63.64% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  97.2% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  97.21% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.elephant-planet-right-img-small {
+  animation: toggleVisibility3-small 18s linear infinite;
+}
+
+@keyframes toggleVisibility3-small {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  13.8% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  13.81% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  47% {
+    opacity: 1;
+    visibility: visible;
+  }
+  47.01% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
