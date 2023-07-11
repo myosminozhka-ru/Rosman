@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacancy page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="vacancy-page-wrapper flex flex-col gap-64">
+      <div class="flex flex-col">
+        <div class="mb-64 flex flex-col gap-56 sm:mb-0">
+          <div
+            class="relative flex flex-col pb-[9rem] sm:mb-0 sm:gap-16 sm:pb-[30rem]"
+          >
+            <div class="absolute bottom-0 left-0 z-[-1] h-full w-full">
+              <picture class="sm:w-full">
+                <source
+                  media="(max-width: 550px)"
+                  srcset="../../img/vacancy-page/vacancy-mobile-norm.png"
+                />
+                <source
+                  srcset="../../img/vacancy-page/vacancy-desktop-norm.png"
+                />
+                <img
+                  src="../../img/vacancy-page/vacancy-desktop-norm.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <header
+              id="header3"
+              class="bottom header bg-transparent"
+              data-header="main"
+            >
+              <div class="logo"><img src="../../img/logo.svg" /></div>
+              <div class="mobile-logo">
+                <img src="../../img/mobile-logo.svg" />
+              </div>
+              <div class="dropdown !bg-transparent">
+                <button>
+                  <div class="icon"></div>
+                  Каталог
+                </button>
+                <div class="content">
+                  <a href="#">
+                    <div class="menu-icon-book"></div>
+                    Книги</a
+                  >
+                  <a href="#">
+                    <div class="menu-icon-toys"></div>
+                    Игрушки</a
+                  >
+                </div>
+              </div>
+              <div class="menu hide relative" id="mobile-menu">
+                <button class="more-down-button">
+                  <div class="icon"></div>
+                </button>
+                <!--  more-down -->
+                <div class="more-down-content mt-60">
+                  <ul>
+                    <li class="company"><a href="#">Бренды</a></li>
+                    <li class="news"><a href="#">Новости</a></li>
+                    <li class="about"><a href="#">О компании</a></li>
+                    <li class="publisher"><a href="#">Издательство</a></li>
+                    <li class="books-news"><a href="#">Новости книг</a></li>
+                    <li class="rosmen">
+                      <button class="more-down-button">
+                        РОСМЕН<span></span>
+                      </button>
+                      <!--  more-down -->
+                      <div class="more-down-content">
+                        <p><a href="#">О компании</a></p>
+                        <p><a href="#">Карьера в РОСМЭН</a></p>
+                        <p><a href="#">Игрушки</a></p>
+                        <p><a href="#">Видео</a></p>
+                        <p><a href="#">Контакты</a></p>
+                      </div>
+                    </li>
+                    <li class="NDK"><a href="#">НДК</a></li>
+                    <li class="toys"><a href="#">Игрушки</a></li>
+                    <li class="career"><a href="#">Карьера</a></li>
+                    <li class="contacts"><a href="#">Контакты</a></li>
+                    <li class="author"><a href="#">Авторы</a></li>
+                    <li class="partners"><a href="#">Партнерам</a></li>
+                  </ul>
+                </div>
+              </div>
+              <nav class="header-nav">
+                <ul>
+                  <li class="company"><a href="#">Бренды</a></li>
+                  <li class="news"><a href="#">Новости</a></li>
+                  <li class="about"><a href="#">О компании</a></li>
+                  <li class="publisher"><a href="#">Издательство</a></li>
+                  <li class="books-news"><a href="#">Новости книг</a></li>
+                  <li class="NDK"><a href="#">НДК</a></li>
+                  <li class="rosmen">
+                    <button class="more-down-button out">
+                      РОСМЕН<span></span>
+                    </button>
+                    <!--  more-down -->
+                    <div class="more-down-content out">
+                      <p><a href="#">О компании</a></p>
+                      <p><a href="#">Карьера в РОСМЭН</a></p>
+                      <p><a href="#">Игрушки</a></p>
+                      <p><a href="#">Видео</a></p>
+                      <p><a href="#">Контакты</a></p>
+                    </div>
+                  </li>
+                  <li class="toys"><a href="#">Игрушки</a></li>
+                  <li class="career"><a href="#">Карьера</a></li>
+                  <li class="contacts"><a href="#">Контакты</a></li>
+                  <li class="author"><a href="#">Авторы</a></li>
+                  <li class="partners"><a href="#">Партнерам</a></li>
+                </ul>
+              </nav>
+              <div class="search-input hide">
+                <span class="search-icon"></span>
+                <span class="micro-icon"></span>
+                <input type="text" placeholder="Введите поисковый запрос" />
+                <span class="cross-icon" onclick="toggleSearch()"></span>
+              </div>
+              <div class="header-btn dekstop">
+                <span class="search-button" onclick="toggleSearch()"></span>
+                <span class="micro-button"></span>
+                <span class="heart-button"></span>
+                <div class="language">
+                  <span class="rus-lang active-js" onclick="changeLang('rus')"
+                    >RU</span
+                  >/
+                  <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+                </div>
+              </div>
+              <div class="header-btn mobile">
+                <div class="language">
+                  <span class="rus-lang active-js" onclick="changeLang('rus')"
+                    >RU</span
+                  >/
+                  <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+                </div>
+                <span class="heart-button"></span>
+                <span class="search-button" onclick="toggleSearch()"></span>
+              </div>
+            </header>
+            <div class="toolbar">
+              <a href="#" class="toolbar-button active">
+                <img src="../../img/toolbar-book.png" />Главная</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-home.png" />Игрушки</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-menu.png" />Книги</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-toys.png" />Меню</a
+              >
+            </div>
+            <div class="toolbar">
+              <a href="#" class="toolbar-button active">
+                <img src="../../img/toolbar-book.png" />Главная</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-home.png" />Игрушки</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-menu.png" />Книги</a
+              >
+              <a href="#" class="toolbar-button"
+                ><img src="../../img/toolbar-toys.png" />Меню</a
+              >
+            </div>
+
+            @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+            <div class="flex flex-col gap-68 px-24 md:gap-16 sm:px-12">
+              <h1 class="head-1">Бренд-менеджер</h1>
+              <div class="flex flex-col gap-20">
+                <div class="flex flex-col gap-8">
+                  <span class="text-2.5xl text-text">Опыт работы</span>
+                  <h4 class="head-4">От 3 до 6 лет</h4>
+                </div>
+                <div class="flex flex-col gap-8">
+                  <span class="text-2.5xl text-text">График работы</span>
+                  <h4 class="head-4">Полный день</h4>
+                </div>
+                <div class="flex flex-col gap-8">
+                  <span class="text-2.5xl text-text">Занятость</span>
+                  <h4 class="head-4">Полная занятость</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  ОБЯЗАННОСТИ - МАЛЫЙ БЛОК  -->
+          <div class="flex flex-col gap-24 px-24 sm:hidden sm:gap-16 sm:px-12">
+            <h3 class="head-3">Обязанности</h3>
+            <p class="max-w-[65rem] text-2.5xl">
+              Мы ищем опытного бренд менеджера, который будет ответственен за
+              развитие бренда нашей компании. Кандидат должен быть
+              высококвалифицированным профессионалом, имеющим опыт работы в
+              аналогичной должности не менее 3 лет.
+            </p>
+          </div>
+        </div>
+
+        <!--  отдельный блок  -->
+        <div class="flex flex-col gap-64 sm:gap-48">
+          <!--  ВЫ ПОДХОДИТЕ НАМ, ЕСЛИ - БЛОК  -->
+          <div
+            class="flex flex-col gap-48 bg-background px-24 pb-[7.2rem] pt-[7.2rem] sm:gap-32 sm:px-12 sm:pb-32 sm:pt-40"
+          >
+            <h3 class="head-3 sm:text-3xl">Вы точно подходите нам, если</h3>
+            <div
+              class="grid grid-cols-3 gap-x-16 gap-y-24 md:grid-cols-2 msm:grid-cols-1"
+            >
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-blue-2"></span>
+                <span class="text-2.5xl">
+                  Вы активный, драйвовый мендежер, которому одинаково интересно
+                  следить за коммерческим результатом своей работы и генерить
+                  креативные, смелые идеи
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-green"></span>
+                <span class="text-2.5xl">
+                  Вы согласны с утверждением, что маркетинг — это не процесс, а
+                  результат
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-orange"></span>
+                <span class="text-2.5xl">
+                  Вы готовы брать крупные проекты и управлять ими, опираясь не
+                  на должностную инструкцию, а на задачи бизнеса.
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-green"></span>
+                <span class="text-2.5xl">
+                  Вы активный, драйвовый мендежер, которому одинаково интересно
+                  следить за коммерческим результатом своей работы и генерить
+                  креативные, смелые идеи
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-orange"></span>
+                <span class="text-2.5xl">
+                  Вы согласны с утверждением, что маркетинг — это не процесс, а
+                  результат
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-blue-2"></span>
+                <span class="text-2.5xl">
+                  Вы готовы брать крупные проекты и управлять ими, опираясь не
+                  на должностную инструкцию, а на задачи бизнеса.
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-orange"></span>
+                <span class="text-2.5xl">
+                  Вы активный, драйвовый мендежер, которому одинаково интересно
+                  следить за коммерческим результатом своей работы и генерить
+                  креативные, смелые идеи
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-blue-2"></span>
+                <span class="text-2.5xl">
+                  Вы активный, драйвовый мендежер, которому одинаково интересно
+                  следить за коммерческим результатом своей работы и генерить
+                  креативные, смелые идеи
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-green"></span>
+                <span class="text-2.5xl">
+                  Вы согласны с утверждением, что маркетинг — это не процесс, а
+                  результат
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-blue-2"></span>
+                <span class="text-2.5xl">
+                  Вы активный, драйвовый мендежер, которому одинаково интересно
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-green"></span>
+                <span class="text-2.5xl">
+                  Вы согласны с утверждением, что маркетинг — это не процесс, а
+                  результат
+                </span>
+              </div>
+              <div class="flex flex-col gap-16">
+                <span class="block h-8 w-8 rounded-full bg-orange"></span>
+                <span class="text-2.5xl">
+                  Вы готовы брать крупные проекты и управлять ими, опираясь не
+                  на должностную
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- ОБЯЗАННОСТИ - БЛОК -->
+          <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12">
+            <h3 class="head-3">Обязанности</h3>
+            <div class="flex max-w-[81.6rem] flex-col gap-8">
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Определение ЦА брендов, сегментирование рынка</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Исследование динамики развития брендов-конкурентов, мониторинг
+                цен</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Анализ и исследования потребителей, потребительских и
+                продуктовых трендов, поиск инсайтов</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Потребительское позиционирование и ценовая стратегия по
+                брендам</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Разработка и реализация плана развития брендов</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Локализация глобальных маркетинговых планов;</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Определение и анализ всех возможных каналов продвижения;</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Планирование и реализация программ продвижения маркетинг 360˚
+                (ATL, BTL, digital)</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Анализ эффективности рекламных каналов</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Формирование и контроль реализации стратегии дистрибьюции по
+                брендам совместно с отделом продаж</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Формирование плана трейд-маркетинговых мероприятий совместно с
+                отделом трейд-маркетинга</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Подготовка отчётов для производителей и правообладателей</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Проведение презентаций по новым проектом для менеджеров по
+                продажам и клиентов</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Управление планом продаж и маржинальностью брендов (P&L)</span
+              >
+              <span
+                class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                >Категорийный менеджмент: разработка ассортиментной матрицы,
+                запуск новых позиций, ротация ассортимента</span
+              >
+            </div>
+          </div>
+          <!--  ТРЕБОВАНИЯ - БЛОК  -->
+          <div
+            class="relative mb-24 ml-[-2rem] mt-60 max-w-[80%] rotate-[-3deg] bg-yellow py-[8rem] ipadmini:skew-y-[-3deg] sm:max-w-[100rem] sm:rotate-0 sm:!py-48"
+          >
+            <div
+              class="absolute left-[70%] top-[1.2rem] w-max msm:top-[3.1rem]"
+            >
+              <div class="relative left-0 top-[-9rem] rotate-[-2deg]">
+                <div class="elephant-moves-leg-body el-body">
+                  <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                  <div class="elephant-moves-leg-leg el-leg"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex rotate-3 flex-col gap-24 pl-44 pr-24 ipadmini:skew-y-3 sm:rotate-0 sm:gap-16 sm:pl-32 sm:pr-12"
+            >
+              <h3 class="head-3">Требования</h3>
+              <div class="flex max-w-[81.6rem] flex-col gap-8">
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Опыт работы на аналогичной должности от 3-х лет</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Опыт успешного вывода на рынок новых брендов/продуктов</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Умение планировать рекламные кампании в диджитальных каналах
+                  (медийное размещение, Influencer маркетинг)</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Знание основ ТВ-медиапланирования</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Знание основ SEO будет существенным плюсом</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Опыт запуска медийных рекламных кампаний, навык оценки
+                  эффективности используемых инструментов</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Наличие собственной базы подрядчиков и РА</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Опыт локализации маркетинговых планов от поставщиков</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Опыт работы с медийными брендами будет являться существенным
+                  плюсом</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >В обязательном порядке знание английского языка
+                  advanced!</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Навык написания текстов на русском языке</span
+                >
+                <span
+                  class="vacancy-list-item relative ml-20 text-2.5xl sm:text-15.20"
+                  >Категорийный менеджмент, опыт запуска новых продуктов, опыт
+                  общения с производством будет являться существенным
+                  плюсом</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- УСЛОВИЯ - БЛОК -->
+          <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12">
+            <h3 class="head-3">Условия</h3>
+            <div class="flex flex-col gap-8">
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Оформление согласно ТК РФ</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Достойный уровень ЗП, обсуждается с успешными кандидатами</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >График работы 5/2 с 10.00 до 19.00</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Отличная команда профессионалов</span
+              >
+            </div>
+          </div>
+          <!-- КЛЮЧЕВЫЕ НАВЫКИ - БЛОК -->
+          <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12">
+            <h3 class="head-3">Ключевые навыки</h3>
+            <div class="flex flex-col gap-8">
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Маркетинговый анализ</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Бренд-менеджмент</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Запуск новых продуктов</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Планирование рекламных кампаний</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Развитие бренда</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Позиционирование бренда</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Продвижение бренда</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Разработка маркетинговой стратегии</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Деловая коммуникация</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Английский язык</span
+              >
+              <span class="vacancy-list-item relative ml-20 text-15.20"
+                >Английский — C1 — Продвинутый</span
+              >
+            </div>
+          </div>
+          <!-- СОЦИАЛЬНЫЙ ПАКЕТ - БЛОК -->
+          <div class="flex flex-col gap-32 px-24 sm:gap-24 sm:px-12">
+            <div class="flex max-w-[57.5rem] flex-col gap-24 sm:gap-16">
+              <h3 class="head-3">Социальный пакет для сотрудников</h3>
+              <span class="max-w-[51rem] text-2.5xl">
+                Сотрудники могут воспользоваться самыми разными бонусами и
+                льготами — страхование здоровья, корпоративные программы,
+                развитие, питание и другое.
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-4 gap-16 bsmax:grid-cols-3 sm:grid-cols-2 sm:gap-24 msm:grid-cols-1"
+            >
+              <div
+                class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-medicine-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Медицинская страховка</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление медицинской страховки, которая покрывает
+                  стоимость медицинских услуг и лекарственных препаратов для
+                  сотрудников и членов их семей.
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-bonuses-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Бонусы</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление бонусов и премий в зависимости от достижений
+                  сотрудников в работе, например, продажи большего количества
+                  книг и игрушек.
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-beach-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4 hyphens-manual">
+                    Оплачива&shy;емые отпуска
+                  </div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление оплачиваемого отпуска для сотрудников на период
+                  отпуска, а также дополнительных выходных дней в году.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-rocket-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Обучение и развитие</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление сотрудникам скидок на книги и игрушки в
+                  магазине.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-label-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Скидки на товары</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление сотрудникам скидок на книги и игрушки в
+                  магазине.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-calendar-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Гибкий график</div>
+                </div>
+
+                <div class="text-15.20">
+                  возможность работы в гибком графике или частичной занятости
+                  для сотрудников, которым необходимо совмещать работу с учебой
+                  или заботой о семье.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-apple-carrot-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Питание</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление бесплатного питания или возможности
+                  приобретения еды по льготным ценам в магазине.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-arrows-diagonal-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Доп. льготы</div>
+                </div>
+
+                <div class="text-15.20">
+                  предоставление дополнительных льгот, таких как бесплатная
+                  парковка или бесплатный проезд на общественном транспорте.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-feast-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4">Праздничные мероприятия</div>
+                </div>
+
+                <div class="text-15.20">
+                  проведение праздничных мероприятий и вечеринок для
+                  сотрудников, чтобы создать дружескую атмосферу в коллективе.
+                </div>
+              </div>
+              <div
+                class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="aspect-square w-[5.8rem]">
+                    <img
+                      src="../../img/yellow-icons-58px/yellow-three-people-58px.svg"
+                    />
+                  </div>
+                  <div class="head-4 hyphens-manual ssm:hyphens-none">
+                    Социальная ответствен&shy;ность
+                  </div>
+                </div>
+
+                <div class="text-15.20">
+                  участие в благотворительных акциях и проектах, чтобы
+                  сотрудники чувствовали, что они работают в компании, которая
+                  заботится о социальной ответственности и делает свой вклад в
+                  улучшение общества.
+                </div>
+              </div>
+              <button
+                class="pagination-more-button js-mdb-desc-button hidden w-full bg-grey py-10 text-15.20 font-medium font-normal hover:bg-card-stroke msm:block"
+              >
+                Посмотреть все соц. пакеты
+              </button>
+            </div>
+          </div>
+          <!-- БЛОК ОТКЛИКА НА ВАКАНСИЮ -->
+          <div
+            class="relative bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
+          >
+            <div
+              class="absolute bottom-20 right-0 w-full rotate-2 bg-green"
+            ></div>
+            <div
+              class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-white shadow-lg"
+            ></div>
+
+            <div
+              class="absolute bottom-0 left-0 right-0 z-10 h-46 origin-bottom-left skew-y-2 overflow-hidden bg-white shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]"
+            ></div>
+            <!--   контентная часть отклика на вакансию   -->
+            <div
+              class="relative mx-auto flex max-w-[40rem] flex-col items-center gap-40 sm:items-start sm:gap-24"
+            >
+              <div
+                class="w-[50rem] text-center text-5xl font-medium sm:w-full sm:text-start sm:text-3xl"
+              >
+                Откликнуться на вакансию
+              </div>
+              <div class="flex w-full flex-col items-start gap-24">
+                <input
+                  class="js-traceable-item-vacancy vac-1 input w-full"
+                  placeholder="Имя*"
+                />
+                <input
+                  class="js-traceable-item-vacancy vac-2 input w-full"
+                  placeholder="Фамилия*"
+                />
+                <input
+                  class="js-traceable-item-vacancy vac-3 input w-full"
+                  placeholder="Электронная почта*"
+                />
+                <input
+                  class="js-traceable-item-vacancy vac-4 input popup_collaboration_page_three_input w-full"
+                  placeholder="Телефон*"
+                  name="phone"
+                  type="tel"
+                  maxlength="16"
+                  id="phone"
+                />
+                <textarea
+                  rows="4"
+                  class="js-traceable-item-vacancy vac-5 input w-full resize-none"
+                  placeholder="О себе*"
+                ></textarea>
+                <div class="flex w-full flex-col gap-8">
+                  <input
+                    class="js-traceable-item-vacancy vac-6 input w-full"
+                    placeholder="Ссылка на резюме*"
+                  />
+
+                  <label
+                    for="attach-file"
+                    class="flex w-max cursor-pointer flex-row flex-nowrap items-center gap-6"
+                  >
+                    <p class="link-s-bold">или прикрепить файл</p>
+                    <div
+                      class="block flex h-20 w-20 flex-row bg-center bg-no-repeat"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="../../img/black-attach-20px.svg"
+                        alt=""
+                      />
+                      <span
+                        class="attachedText whitespace-nowrap text-15.20"
+                      ></span>
+                    </div>
+                  </label>
+                </div>
+                <input
+                  onchange="handleFileInputChange(event)"
+                  id="attach-file"
+                  type="file"
+                  class="hidden"
+                />
+
+                <div class="js-footer-heading-policy-agreement checkbox_main">
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="footer-heading-checkbox-eng"
+                  />
+                  <label
+                    for="footer-heading-checkbox-eng"
+                    class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                  >
+                    <span>Соглашаюсь с &nbsp</span>
+                    <a
+                      href="#"
+                      class="footer-heading-policy-agreement-link link-m-bold w-max"
+                    >
+                      политикой конфиденциальности
+                    </a>
+                  </label>
+                </div>
+                <button class="button-black w-full text-15.20 font-medium">
+                  Откликнуться
+                </button>
+                <div class="js-remaining-items">
+                  <span class="vac-0 text-xl">Осталось заполнить:</span>
+                  <span class="js-remaining-item vac-1 link-s">«Имя»,</span>
+                  <span class="js-remaining-item vac-2 link-s"
+                    >«Фамилия»,
+                  </span>
+                  <span class="js-remaining-item vac-3 link-s"
+                    >«Эл. почта»,
+                  </span>
+                  <span class="js-remaining-item vac-4 link-s"
+                    >«Телефон»,
+                  </span>
+                  <span class="js-remaining-item vac-5 link-s">«О себе», </span>
+                  <span class="js-remaining-item vac-6 link-s">«Резюме»</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative bottom-[-7.5rem] right-0 w-full rotate-2 bs:bottom-[-12rem] msm:!bottom-[-11.3rem]"
+            >
+              <div
+                class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]"
+              >
+                <img src="../../img/elephant-figure-skating.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('components/ui-kit/footer/footer-eng.html', { }, )
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script>
+      function handleFileInputChange(event) {
+        const fileInput = event.target;
+        const fileNamePlaceholder = document.getElementById('attach-file');
+        const attachedText = document.querySelector('.attachedText');
+
+        if (fileInput.files.length > 0) {
+          console.log(fileInput.files[0].name);
+          attachedText.innerHTML = fileInput.files[0].name;
+        }
+      }
+    </script>
+  </body>
+</html>
