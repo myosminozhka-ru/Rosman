@@ -311,14 +311,17 @@
           </div>
           <div class="px-24 sm:px-12">
             <div class="grid grid-cols-4 gap-16">
-              <div class="col-span-1 col-span-1">
+              <div class="col-span-1 pt-56">
                 <!-- Левый блок -->
                 <div class="flex flex-col gap-16">
                   <h3 class="head-3">Адрес</h3>
-                  <span class="text-15.20 font-medium">127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</span>
+                  <span class="text-15.20 font-medium"
+                  >127521, г. Москва, ул. Шереметьевская, д. 47, м.
+                        Бутырская, Марьина Роща</span
+                  >
                 </div>
               </div>
-              <div class="col-span-3 sm:col-span-3">
+              <div class="col-span-3">
                 <!-- Правый блок -->
                 <iframe
                   class="mobile-map"
@@ -339,16 +342,116 @@
               </div>
             </div>
           </div>
-
         </div>
         <!--    блок КТО МЫ    -->
-        <div>
-          кто мы?
+        <div class="flex flex-row gap-24 pl-24 sm:pl-12 items-center bs:items-start bs:flex-col">
+          <div class="flex max-w-[52.9rem] flex-col gap-32">
+            <div class="flex flex-col gap-24">
+              <h3 class="head-3">Кто мы</h3>
+              <div class="flex flex-col gap-16 text-2.5xl sm:text-15.20">
+                    <span
+                    >«РОСМЭН» - ведущий игрок на рынке детских товаров. Мы
+                      работаем с молодым поколением, которому принадлежит
+                      будущее. Они изменят этот мир.</span
+                    >
+                <span>
+                      Нам доверяют, потому что мы всегда были первооткрывателями
+                      в бизнесе и остаёмся лидерами сегодня. 30 лет мы создаём
+                      захватывающие истории и игровые миры для детей, чтобы
+                      вдохновлять их на новые открытия.
+                    </span>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-24">
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-medal-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      Входим в топ-5 крупнейших издательств России
+                    </span>
+              </div>
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-book-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      Выпустили более 300 миллионов экземпляров книг
+                    </span>
+              </div>
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-crown-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      Лидер среди российских дистрибьюторов игрушек в России
+                    </span>
+              </div>
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-robot-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      Продали более 25 554 819 игрушек
+                    </span>
+              </div>
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-bookshelf-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      2 100 000 экземпляров — издали самый большой тираж в
+                      постсоветском пространстве
+                    </span>
+              </div>
+              <div class="flex flex-col items-start justify-start gap-16">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-graph-58px.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-15.20">
+                      Самая быстрорастущая компания на рынке игрушек
+                    </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full min-w-[50rem] block">
+            <picture class="w-full sm:w-full">
+              <source
+                media="(max-width: 768px)"
+                srcset="../../img/FAQ-elephants-mobile.png"
+              />
+              <source
+                srcset="../../img/FAQ-elephants-desktop.png"
+              />
+              <img
+                src="../../img/FAQ-elephants-desktop.png"
+                alt=""
+              />
+            </picture>
+          </div>
         </div>
 
         <!--    блок СОБЫТИЯ    -->
-        <div class="px-24 sm:px-12 flex flex-col gap-40">
-          <div class="flex flex-col gap-40 md:!gap-24 w-full">
+        <div class="flex flex-col gap-40 px-24 sm:px-12">
+          <div class="flex w-full flex-col gap-40 md:!gap-24">
             <!--     похожие новости     -->
             <div class="text-5xl font-medium md:hidden">События</div>
             <div class="flex flex-row flex-nowrap gap-16 md:hidden">
@@ -363,20 +466,29 @@
                 </a>
                 <div class="card_articles_description js-bg-changeable">
                   <div class="card_articles_tags dotted_tags">
-                    <a href="#" class="card_articles_category dotted_tags_category"
+                    <a
+                      href="#"
+                      class="card_articles_category dotted_tags_category"
                     >Статьи</a
                     >
-                    <div class="card_articles_separator dotted_tags_separator">•</div>
-                    <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                    <div
+                      class="card_articles_separator dotted_tags_separator"
+                    >
+                      •
+                    </div>
+                    <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                    >
                   </div>
                   <a href="#" class="card_articles_info card_sel_info">
                     <div class="card_articles_name_sfs card_sel_name">
                       Новый закон накладывает вето на полуночный
                     </div>
                     <div class="card_articles_text_sfs card_sel_text">
-                      Противоположная точка зрения подразумевает, что явные признаки победы
-                      институционализации лишь добавляют фракционных разногласий и объявлены
-                      нарушающими общечеловеческие нормы этики и морали.
+                      Противоположная точка зрения подразумевает, что явные
+                      признаки победы институционализации лишь добавляют
+                      фракционных разногласий и объявлены нарушающими
+                      общечеловеческие нормы этики и морали.
                     </div>
                   </a>
                 </div>
@@ -392,20 +504,29 @@
                 </a>
                 <div class="card_articles_description js-bg-changeable">
                   <div class="card_articles_tags dotted_tags">
-                    <a href="#" class="card_articles_category dotted_tags_category"
+                    <a
+                      href="#"
+                      class="card_articles_category dotted_tags_category"
                     >Статьи</a
                     >
-                    <div class="card_articles_separator dotted_tags_separator">•</div>
-                    <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                    <div
+                      class="card_articles_separator dotted_tags_separator"
+                    >
+                      •
+                    </div>
+                    <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                    >
                   </div>
                   <a href="#" class="card_articles_info card_sel_info">
                     <div class="card_articles_name_sfs card_sel_name">
                       Новый закон накладывает вето на полуночный
                     </div>
                     <div class="card_articles_text_sfs card_sel_text">
-                      Противоположная точка зрения подразумевает, что явные признаки победы
-                      институционализации лишь добавляют фракционных разногласий и объявлены
-                      нарушающими общечеловеческие нормы этики и морали.
+                      Противоположная точка зрения подразумевает, что явные
+                      признаки победы институционализации лишь добавляют
+                      фракционных разногласий и объявлены нарушающими
+                      общечеловеческие нормы этики и морали.
                     </div>
                   </a>
                 </div>
@@ -421,30 +542,39 @@
                 </a>
                 <div class="card_articles_description js-bg-changeable">
                   <div class="card_articles_tags dotted_tags">
-                    <a href="#" class="card_articles_category dotted_tags_category"
+                    <a
+                      href="#"
+                      class="card_articles_category dotted_tags_category"
                     >Статьи</a
                     >
-                    <div class="card_articles_separator dotted_tags_separator">•</div>
-                    <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                    <div
+                      class="card_articles_separator dotted_tags_separator"
+                    >
+                      •
+                    </div>
+                    <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                    >
                   </div>
                   <a href="#" class="card_articles_info card_sel_info">
                     <div class="card_articles_name_sfs card_sel_name">
                       Новый закон накладывает вето на полуночный
                     </div>
                     <div class="card_articles_text_sfs card_sel_text">
-                      Противоположная точка зрения подразумевает, что явные признаки победы
-                      институционализации лишь добавляют фракционных разногласий и объявлены
-                      нарушающими общечеловеческие нормы этики и морали.
+                      Противоположная точка зрения подразумевает, что явные
+                      признаки победы институционализации лишь добавляют
+                      фракционных разногласий и объявлены нарушающими
+                      общечеловеческие нормы этики и морали.
                     </div>
                   </a>
                 </div>
               </div>
             </div>
             <!--     swiper     -->
-            <div class="hidden  md:!block">
+            <div class="hidden md:!block">
               <div class="swiper-detailed-page">
-                <div class="swiper-header !w-full  sm:!mt-12">
-                  <h3 class="head-3 ">События</h3>
+                <div class="swiper-header !w-full sm:!mt-12">
+                  <h3 class="head-3">События</h3>
                   <div class="buttons !w-[5.2rem] !gap-24">
                     <div class="button-prev"></div>
                     <div class="button-next"></div>
@@ -455,29 +585,49 @@
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -485,29 +635,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -515,29 +685,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -545,29 +735,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -575,29 +785,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -605,29 +835,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -635,29 +885,49 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card_articles js_traceable_item">
-                      <a href="#" class="card_articles_image item_card_image">
+                      <a
+                        href="#"
+                        class="card_articles_image item_card_image"
+                      >
                         <img
                           src="../../img/cards_article_small_fs.svg"
                           alt=""
                           class="articles_card_img item_card_img"
                         />
                       </a>
-                      <div class="card_articles_description js-bg-changeable">
+                      <div
+                        class="card_articles_description js-bg-changeable"
+                      >
                         <div class="card_articles_tags dotted_tags">
-                          <a href="#" class="card_articles_category dotted_tags_category"
+                          <a
+                            href="#"
+                            class="card_articles_category dotted_tags_category"
                           >Статьи</a
                           >
-                          <div class="card_articles_separator dotted_tags_separator">•</div>
-                          <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+                          <div
+                            class="card_articles_separator dotted_tags_separator"
+                          >
+                            •
+                          </div>
+                          <a
+                            href="#"
+                            class="card_articles_date dotted_tags_date"
+                          >30.11.2022</a
+                          >
                         </div>
-                        <a href="#" class="card_articles_info card_sel_info">
+                        <a
+                          href="#"
+                          class="card_articles_info card_sel_info"
+                        >
                           <div class="card_articles_name_sfs card_sel_name">
                             Новый закон накладывает вето на полуночный
                           </div>
                           <div class="card_articles_text_sfs card_sel_text">
-                            Противоположная точка зрения подразумевает, что явные признаки победы
-                            институционализации лишь добавляют фракционных разногласий и объявлены
-                            нарушающими общечеловеческие нормы этики и морали.
+                            Противоположная точка зрения подразумевает, что
+                            явные признаки победы институционализации лишь
+                            добавляют фракционных разногласий и объявлены
+                            нарушающими общечеловеческие нормы этики и
+                            морали.
                           </div>
                         </a>
                       </div>
@@ -671,13 +941,289 @@
         <div>блок с непонятными картинками</div>
 
         <!--    блок с наградами    -->
-        <div class="grid grid-cols-3 sm:grid-cols-1 px-24 sm:px-12 gap-16 ipadmini:grid-cols-1">
+        <div
+          class="grid grid-cols-3 gap-16 px-24 ipadmini:grid-cols-1 sm:grid-cols-1 sm:px-12"
+        >
           @@include('components/ui-kit/cards/card-awards.html', { }, )
           @@include('components/ui-kit/cards/card-awards.html', { }, )
           @@include('components/ui-kit/cards/card-awards.html', { }, )
         </div>
 
         <!--    СОЦИАЛЬНЫЙ ПАКЕТ ДЛЯ СОТРУДНИКОВ    -->
+        <div class="flex flex-col gap-32 px-24 sm:gap-24 sm:px-12">
+          <div class="flex max-w-[57.5rem] flex-col gap-24 sm:gap-16">
+            <h3 class="head-3">Социальный пакет для сотрудников</h3>
+            <span class="max-w-[51rem] text-2.5xl">
+                  Сотрудники могут воспользоваться самыми разными бонусами и
+                  льготами — страхование здоровья, корпоративные программы,
+                  развитие, питание и другое.
+                </span>
+          </div>
+          <div
+            class="grid grid-cols-4 gap-16 bsmax:grid-cols-3 sm:grid-cols-2 sm:gap-24 msm:grid-cols-1"
+          >
+            <div
+              class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-medicine-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Медицинская страховка</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление медицинской страховки, которая покрывает
+                стоимость медицинских услуг и лекарственных препаратов для
+                сотрудников и членов их семей.
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-bonuses-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Бонусы</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление бонусов и премий в зависимости от достижений
+                сотрудников в работе, например, продажи большего количества
+                книг и игрушек.
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-beach-58px.svg"
+                  />
+                </div>
+                <div class="head-4 hyphens-manual">
+                  Оплачива&shy;емые отпуска
+                </div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление оплачиваемого отпуска для сотрудников на
+                период отпуска, а также дополнительных выходных дней в году.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-rocket-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Обучение и развитие</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление сотрудникам скидок на книги и игрушки в
+                магазине.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-label-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Скидки на товары</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление сотрудникам скидок на книги и игрушки в
+                магазине.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-calendar-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Гибкий график</div>
+              </div>
+
+              <div class="text-15.20">
+                возможность работы в гибком графике или частичной занятости
+                для сотрудников, которым необходимо совмещать работу с
+                учебой или заботой о семье.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-apple-carrot-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Питание</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление бесплатного питания или возможности
+                приобретения еды по льготным ценам в магазине.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-arrows-diagonal-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Доп. льготы</div>
+              </div>
+
+              <div class="text-15.20">
+                предоставление дополнительных льгот, таких как бесплатная
+                парковка или бесплатный проезд на общественном транспорте.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-feast-58px.svg"
+                  />
+                </div>
+                <div class="head-4">Праздничные мероприятия</div>
+              </div>
+
+              <div class="text-15.20">
+                проведение праздничных мероприятий и вечеринок для
+                сотрудников, чтобы создать дружескую атмосферу в коллективе.
+              </div>
+            </div>
+            <div
+              class="js-item-to-hide-desc js-vac-item flex flex-col items-start justify-start gap-24 border border-card-stroke p-16"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="aspect-square w-[5.8rem]">
+                  <img
+                    src="../../img/yellow-icons-58px/yellow-three-people-58px.svg"
+                  />
+                </div>
+                <div class="head-4 hyphens-manual ssm:hyphens-none">
+                  Социальная ответствен&shy;ность
+                </div>
+              </div>
+
+              <div class="text-15.20">
+                участие в благотворительных акциях и проектах, чтобы
+                сотрудники чувствовали, что они работают в компании, которая
+                заботится о социальной ответственности и делает свой вклад в
+                улучшение общества.
+              </div>
+            </div>
+            <button
+              class="pagination-more-button js-mdb-desc-button hidden w-full bg-grey py-10 text-15.20 font-medium font-normal hover:bg-card-stroke msm:block"
+            >
+              Посмотреть все соц. пакеты
+            </button>
+          </div>
+        </div>
+
+        <!--    ЧАВО    -->
+        <div class="flex flex-row items-end gap-32 px-24 sm:px-12">
+          <div class="flex flex-col gap-32">
+            <h3 class="head-3">Часто задаваемые вопросы</h3>
+            <div class="collapse-q !w-full">
+              <div class="collapse-button">
+                С какими волчками можно объединить волчок серии Классик?
+                <span></span>
+              </div>
+              <div class="collapse-content">
+                <p>Содержимое 1</p>
+              </div>
+              <div class="collapse-button">
+                Чем отличается Стандарт от остальных серий Инфинити Надо?
+                <span></span>
+              </div>
+              <div class="collapse-content">
+                <p>
+                  Пусковая установка Infinity Nado Стандарт позволяет
+                  запускать блейды в левую и правую стороны!
+                </p>
+              </div>
+              <div class="collapse-button">
+                В какие наборы Инфинити Надо входят мечи? <span></span>
+              </div>
+              <div class="collapse-content">
+                <p>Содержимое 3</p>
+              </div>
+              <div class="collapse-button">
+                С какими волчками можно объединить волчок серии Классик?
+                <span></span>
+              </div>
+              <div class="collapse-content">
+                <p>Содержимое 3</p>
+              </div>
+            </div>
+          </div>
+          <div class="block h-full w-full max-w-[35rem]">
+            <img
+              class="h-full w-full"
+              src="../../img/FAQ-image.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <!--    блок про сотрудничество    -->
+        <div id="white-background" class="card-fullpage-w-bg-modified">
+          <div id="yellow-moving-block" class="card-fullpage-w-bg-modified">
+            <div id="parent">
+              <img
+                id="follower"
+                class="slide-el card-fullpage-slide-el-mod"
+                src="../../img/running-elephant/slide-el.png"
+              />
+            </div>
+          </div>
+          <div
+            id="above-block"
+            class="flex h-[51.9rem] flex-col items-center justify-center"
+          >
+            <div class="flex max-w-[68rem] flex-col items-center gap-40">
+              <div class="flex flex-col items-center gap-8">
+                <h3 class="head-3">Мы будем рады с вами сотрудничать!</h3>
+                <span class="text-center text-15.20"
+                >Rosman - это динамично развивающееся издательство,
+                      специализирующееся на выпуске книг и игрушек для детей и
+                      взрослых. Мы ищем талантливых, амбициозных и творческих
+                      людей, готовых присоединиться к нашей команде и помочь нам
+                      достичь новых высот.</span
+                >
+              </div>
+              <button class="button-black">К поиску вакансий!</button>
+            </div>
+          </div>
+        </div>
       </div>
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
