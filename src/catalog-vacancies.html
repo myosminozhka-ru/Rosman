@@ -330,7 +330,6 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-
                 ></iframe>
                 <iframe
                   class="desktop-map"
@@ -339,14 +338,15 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-
                 ></iframe>
               </div>
             </div>
           </div>
         </div>
         <!--    блок КТО МЫ    -->
-        <div class="flex flex-row gap-24 pl-24 sm:pl-12 items-center bs:items-start bs:flex-col">
+        <div
+          class="flex flex-row items-center gap-24 pl-24 bs:flex-col bs:items-start sm:pl-12"
+        >
           <div class="flex max-w-[52.9rem] flex-col gap-32">
             <div class="flex flex-col gap-24">
               <h3 class="head-3">Кто мы</h3>
@@ -434,19 +434,14 @@
               </div>
             </div>
           </div>
-          <div class="w-full min-w-[50rem] md:min-w-[20rem] block">
+          <div class="block w-full min-w-[50rem] md:min-w-[20rem]">
             <picture class="w-full sm:w-full">
               <source
                 media="(max-width: 768px)"
                 srcset="../../img/FAQ-elephants-mobile.png"
               />
-              <source
-                srcset="../../img/FAQ-elephants-desktop.png"
-              />
-              <img
-                src="../../img/FAQ-elephants-desktop.png"
-                alt=""
-              />
+              <source srcset="../../img/FAQ-elephants-desktop.png"/>
+              <img src="../../img/FAQ-elephants-desktop.png" alt=""/>
             </picture>
           </div>
         </div>
@@ -454,10 +449,9 @@
         <!--    блок СОБЫТИЯ    -->
         <div class="flex flex-col gap-40 px-24 sm:px-12">
           <div class="flex w-full flex-col gap-40 md:!gap-24">
-            <!--     похожие новости     -->
+            <!--      просто карточки, не свипер      -->
             <div class="text-5xl font-medium md:hidden">События</div>
             <div class="flex flex-row flex-nowrap gap-16 md:hidden">
-              <!--  карточки СТАТЬИ маленький размер текста  -->
               <div class="card_articles js_traceable_item">
                 <a href="#" class="card_articles_image item_card_image">
                   <img
@@ -495,7 +489,6 @@
                   </a>
                 </div>
               </div>
-              <!--  карточки СТАТЬИ маленький размер текста  -->
               <div class="card_articles js_traceable_item">
                 <a href="#" class="card_articles_image item_card_image">
                   <img
@@ -533,7 +526,6 @@
                   </a>
                 </div>
               </div>
-              <!--  карточки СТАТЬИ маленький размер текста  -->
               <div class="card_articles js_traceable_item">
                 <a href="#" class="card_articles_image item_card_image">
                   <img
@@ -572,7 +564,7 @@
                 </div>
               </div>
             </div>
-            <!--     swiper     -->
+            <!--     swiper по событиям     -->
             <div class="hidden md:!block">
               <div class="swiper-detailed-page">
                 <div class="swiper-header !w-full sm:!mt-12">
@@ -940,7 +932,112 @@
             </div>
           </div>
         </div>
-        <div>блок с непонятными картинками</div>
+        <div class="grid grid-cols-3 !px-[9rem] gap-x-24 justify-center">
+          <div class="flex flex-col gap-24">
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-square.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-square.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-24">
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-landscape.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-landscape.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-vert.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-24">
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-square.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div
+              class="card_photogallery_item !aspect-auto"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+            >
+              <img src="../../img/catalog-vacancies/image-square.png" alt="" itemprop="image"/>
+              <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+                <img
+                  class="cards_photogallery_eye_img"
+                  src="../../img/cards_photogallery_eye.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!--    блок с наградами    -->
         <div
