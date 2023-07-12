@@ -72,10 +72,7 @@ window.addEventListener('resize', function () {
 });
 
 // код для того, чтобы при тыке на картинку открывалась большая картинка
-// const popup2 = document.getElementById('imagePopup');
-const popupImage = document.getElementById('popupImage');
 const popupTriggers = document.querySelectorAll('.popup-trigger');
-// const galleryItem = document.querySelector('.card_photogallery_item');
 const allImagePopups = document.querySelectorAll('.image-popup');
 
 if (popupTriggers) {
@@ -86,26 +83,24 @@ if (popupTriggers) {
         'src',
         imageUrl
       );
-      // popupImage.setAttribute('src', imageUrl);
       trigger.nextElementSibling.classList.add('js-active-popup');
     });
   });
 }
 
-// if (popup2) {
-//   popup2.addEventListener('click', (event) => {
-//     if (event.target === popup2) {
-//       popup2.classList.remove('js-active-popup');
-//     }
-//   });
-// }
-
 if (allImagePopups) {
   allImagePopups.forEach((imagePopup) => {
-    console.log(imagePopup);
+    const closeButton = imagePopup.querySelector('.close-button');
+
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        imagePopup.classList.remove('js-active-popup');
+      });
+    }
+
     imagePopup.addEventListener('click', (event) => {
       if (event.target === imagePopup) {
-        event.target.classList.remove('js-active-popup');
+        imagePopup.classList.remove('js-active-popup');
       }
     });
   });

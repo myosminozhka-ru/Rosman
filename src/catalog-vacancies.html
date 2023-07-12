@@ -226,88 +226,25 @@
             <div class="swiper-wrapper !items-end">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt=""/>
-                  <a href="#" class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
             </div>
           </div>
@@ -940,8 +877,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -964,8 +904,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -990,8 +933,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -1014,8 +960,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -1025,9 +974,9 @@
                 itemscope
                 itemtype="http://schema.org/ImageObject"
                 data-popup-target="#imagePopup"
-                data-popup-image="../../img/catalog-vacancies/image-vert.png"
+                data-popup-image="../../img/catalog-vacancies/image-vert-huge.png"
               >
-                <img src="../../img/catalog-vacancies/image-vert.png" alt="" itemprop="image"/>
+                <img src="../../img/catalog-vacancies/image-vert-huge.png" alt="" itemprop="image"/>
                 <div class="cards_photogallery_eye_image" itemprop="url">
                   <img
                     class="cards_photogallery_eye_img"
@@ -1038,8 +987,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -1064,8 +1016,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
@@ -1088,8 +1043,11 @@
               </div>
 
               <div class="image-popup" id="imagePopup">
-                <div class="popup-content">
+                <div class="popup-content relative">
                   <img src="" alt="" id="popupImage">
+                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+                  </figure>
                 </div>
               </div>
             </div>
