@@ -679,7 +679,7 @@
 }
 
 .card_employee_text {
-  @apply ssm:text-15.20 text-2.5xl font-normal ;
+  @apply text-2.5xl font-normal ssm:text-15.20;
 }
 
 .card_employee_image::before {
@@ -786,7 +786,7 @@
 }
 
 .card_awards_title {
-  @apply ssm:text-2xl text-3xl font-medium;
+  @apply text-3xl font-medium ssm:text-2xl;
 }
 
 .card_awards_description {
