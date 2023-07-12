@@ -77,16 +77,20 @@ const popupImage = document.getElementById('popupImage');
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const galleryItem = document.querySelector('.card_photogallery_item');
 
-popupTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', () => {
-    const imageUrl = trigger.getAttribute('data-popup-image');
-    popupImage.setAttribute('src', imageUrl);
-    popup2.classList.add('js-active-popup');
+if (popupTriggers) {
+  popupTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const imageUrl = trigger.getAttribute('data-popup-image');
+      popupImage.setAttribute('src', imageUrl);
+      popup2.classList.add('js-active-popup');
+    });
   });
-});
+}
 
-popup2.addEventListener('click', (event) => {
-  if (event.target === popup2) {
-    popup2.classList.remove('js-active-popup');
-  }
-});
+if (popup2) {
+  popup2.addEventListener('click', (event) => {
+    if (event.target === popup2) {
+      popup2.classList.remove('js-active-popup');
+    }
+  });
+}

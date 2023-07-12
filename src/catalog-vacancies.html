@@ -1311,28 +1311,6 @@
           </div>
         </div>
       </div>
-      <div
-        class="card_photogallery_item"
-        itemscope
-        itemtype="http://schema.org/ImageObject"
-      >
-        <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
-        <div class="cards_photogallery_eye_image" itemprop="url">
-          <img
-            class="cards_photogallery_eye_img popup-trigger"
-            src="../../img/cards_photogallery_eye.svg"
-            alt=""
-            data-popup-target="#imagePopup"
-            data-popup-image="../../img/cards_photogallery_item.svg"
-          />
-        </div>
-      </div>
-
-      <div class="image-popup" id="imagePopup">
-        <div class="popup-content">
-          <img src="" alt="" id="popupImage">
-        </div>
-      </div>
 
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
@@ -1353,25 +1331,6 @@
     zoom: 15, // starting zoom
   });
 </script>
-<script>
-  const popup2 = document.getElementById('imagePopup');
-  const popupImage = document.getElementById('popupImage');
-  const popupTriggers = document.querySelectorAll('.popup-trigger');
-  const galleryItem = document.querySelector(".card_photogallery_item")
 
-  popupTriggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const imageUrl = trigger.getAttribute('data-popup-image');
-      popupImage.setAttribute('src', imageUrl);
-      popup2.classList.add('active');
-    });
-  });
-
-  popup2.addEventListener('click', (event) => {
-    if (event.target === popup2) {
-      popup2.classList.remove('active');
-    }
-  });
-</script>
 </body>
 </html>
