@@ -727,10 +727,11 @@ header {
   position: absolute;
   content: '';
   display: block;
-  height: calc(100% - 145rem);
+  top: calc(2rem + (100vw/2));
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
+
 }
 
 #moving-block {
