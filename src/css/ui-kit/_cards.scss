@@ -45,10 +45,7 @@
   .running-stroke {
     width: 100%;
     overflow: hidden;
-    position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     white-space: nowrap;
     background-color: #000000;
 
@@ -86,9 +83,8 @@
   }
 }
 
-// 05.07 - добавил прозрачную границу снизу
 .bordered_tags_item {
-  @apply body-s-bold bg-white px-12 py-4;
+  @apply px-12 py-4 body-s-bold bg-white;
   border: 1px solid #000000;
 
   @media screen and (max-width: 400px) {
