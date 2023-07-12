@@ -182,7 +182,7 @@
 }
 
 .card_selection_description {
-  @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm: pt-16;
+  @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm:pt-16;
 
   @media screen and (max-width: 639px) {
     padding-top: 1.6rem;
@@ -234,7 +234,7 @@
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row sm: flex-col;
+  @apply flex flex-row sm:flex-col;
 }
 
 .card_interview_name {
@@ -246,7 +246,7 @@
 }
 
 .card_interview_description {
-  @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm: border-x sm: border-b sm: border-t-0;
+  @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm:border-x sm:border-b sm:border-t-0;
 
   &:hover {
     border-color: transparent;
@@ -286,7 +286,7 @@
 }
 
 .card_articles_text {
-  @apply text-2.5xl text-black ssm: text-15.20;
+  @apply text-2.5xl text-black ssm:text-15.20;
   font-weight: 400;
 }
 
@@ -295,7 +295,7 @@
 }
 
 .card_articles_text_sfs {
-  @apply text-15.20 font-normal ssm: text-s;
+  @apply text-15.20 font-normal ssm:text-s;
 }
 
 // карточка БРЕНДА
@@ -357,7 +357,7 @@
 
 // КАТАЛОГ КНИГ КАРТОЧКА
 .card_book_catalog {
-  @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm: p-16;
+  @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm:p-16;
   border: 1px solid #d9d9d9;
 }
 
@@ -372,7 +372,7 @@
 .card_book_img {}
 
 .card_book_title {
-  @apply text-3xl ssm: text-15.20;
+  @apply text-3xl ssm:text-15.20;
 }
 
 .card_book_link {
@@ -403,7 +403,7 @@
 }
 
 .card_career_title {
-  @apply text-4xl font-medium ssm: text-2xl;
+  @apply text-4xl font-medium ssm:text-2xl;
 }
 
 .card_career_tags {
@@ -442,7 +442,7 @@
 .card_career_cond_item_img {}
 
 .card_career_cond_item_text {
-  @apply text-15.20 font-normal text-black ssm: text-15.20;
+  @apply text-15.20 font-normal text-black ssm:text-15.20;
 }
 
 .card_career_cond_item_text:hover {
@@ -451,7 +451,7 @@
 
 // 3
 .card_career_description {
-  @apply text-2.5xl font-normal text-black ssm: text-15.20;
+  @apply text-2.5xl font-normal text-black ssm:text-15.20;
 }
 
 // 4
@@ -606,7 +606,7 @@
 .card_video_info {}
 
 .card_video_title {
-  @apply text-2.5xl sm: text-15.20;
+  @apply text-2.5xl sm:text-15.20;
 }
 
 .card_video_preview::before {
@@ -665,7 +665,7 @@
 }
 
 .card_employee_text {
-  @apply text-2.5xl font-normal font-normal ssm: text-15.20;
+  @apply text-2.5xl font-normal font-normal ssm:text-15.20;
 }
 
 .card_employee_image::before {
@@ -772,7 +772,7 @@
 }
 
 .card_awards_title {
-  @apply text-3xl font-medium ssm: text-2xl;
+  @apply text-3xl font-medium ssm:text-2xl;
 }
 
 .card_awards_description {
