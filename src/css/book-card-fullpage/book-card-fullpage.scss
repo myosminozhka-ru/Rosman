@@ -41,7 +41,7 @@
 }
 
 .author-avatar {
-  @apply w-[8.8rem] aspect-square rounded-full sm:w-48;
+  @apply w-[8.8rem] h-[8.8rem] aspect-square rounded-full sm:w-48 sm:h-48;
 }
 
 .author-avatar img {
