@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Контакты</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body class="bg-gray-50">
@@ -46,13 +48,8 @@
         </div>
       </div>
 
-      <iframe class="mobile-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg"
-        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <iframe class="desktop-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg"
-        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="my-42 flex flex-row justify-between px-24 md:flex-col">
+      <div id='map' style='width: 100%; height: 504px;'></div>
+      <div class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col">
         <div class="flex w-1/4 flex-col gap-16 md:w-full">
           <img src="../../img/toys.svg" class="h-58 w-58" />
 
@@ -94,13 +91,15 @@
         </div>
       </div>
 
-      <div class="flex flex-row justify-between px-24 md:flex-col">
+      <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
         <p class="ml-4 w-1/12 text-l text-text md:w-full">
           Для вопросов и предложений
         </p>
         <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
       </div>
-      @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', { }, )
+      <div class="bg-white">
+        @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html', { }, )
+      </div>
     </div>
   </div>
   <div class="custom-box !fixed">
@@ -113,6 +112,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/scripts.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
+      center: [37.608078, 55.8087759], // starting position [lng, lat]
+      zoom: 15, // starting zoom
+    });
+  </script>
 </body>
 
 </html>

@@ -361,10 +361,10 @@ button {
   }
 
   a {
-    @apply mr-8 text-text;
+    @apply mr-8 text-text text-xl;
 
     &.active-js {
-      @apply text-black;
+      @apply text-black ;
     }
 
     &:hover {
@@ -404,7 +404,6 @@ button {
 .breadcrumbs-arrow {
   @apply absolute hidden h-12 w-32;
   left: -1.1rem;
-  background: url('../../img/bread-arrow.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -460,7 +459,7 @@ button {
   }
 
   .content {
-    @apply absolute left-0 top-[100%] z-1000 hidden w-auto max-w-inner-menu bg-white p-24;
+    @apply absolute left-0 top-[100%] z-1001 hidden w-auto max-w-inner-menu bg-white p-24;
 
     a:not(:last-child) {
       @apply mb-20;
