@@ -16,7 +16,8 @@
 }
 
 .popup-content {
-  height: 90%;
+  max-height: 90%;
+  height: auto;
   //@media screen and (max-width: 768px) {
   //  height: auto;
   //  width: 90%;
@@ -24,10 +25,9 @@
 }
 
 .popup-content img {
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
-  @apply px-24 sm:px-12 h-full w-full;
+  height: 90vh;
+  @apply px-24 sm:px-12;
 }
 
 .image-popup.js-active-popup {
