@@ -459,7 +459,7 @@ button {
   }
 
   .content {
-    @apply absolute left-0 top-[100%] z-1000 hidden w-auto max-w-inner-menu bg-white p-24;
+    @apply absolute left-0 top-[100%] z-1001 hidden w-auto max-w-inner-menu bg-white p-24;
 
     a:not(:last-child) {
       @apply mb-20;
