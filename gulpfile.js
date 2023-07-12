@@ -12,22 +12,22 @@
   3. npm run prod //To generate minifed files for live server
 */
 
-const { src, dest, watch, series, parallel } = require("gulp");
-const clean = require("gulp-clean"); //For Cleaning build/dist for fresh export
-const options = require("./config"); //paths and other options from config.js
-const browserSync = require("browser-sync").create();
-const replace = require("gulp-replace");
+const { src, dest, watch, series, parallel } = require('gulp');
+const clean = require('gulp-clean'); //For Cleaning build/dist for fresh export
+const options = require('./config'); //paths and other options from config.js
+const browserSync = require('browser-sync').create();
+const replace = require('gulp-replace');
 
-const sass = require("gulp-sass")(require("sass")); //For Compiling SASS files
-const postcss = require("gulp-postcss"); //For Compiling tailwind utilities with tailwind config
-const concat = require("gulp-concat"); //For Concatinating js,css files
-const uglify = require("gulp-terser"); //To Minify JS files
-const imagemin = require("gulp-imagemin"); //To Optimize Images
-const mozjpeg = require("imagemin-mozjpeg"); // imagemin plugin
-const pngquant = require("imagemin-pngquant"); // imagemin plugin
-const purgecss = require("gulp-purgecss"); // Remove Unused CSS from Styles
-const logSymbols = require("log-symbols"); //For Symbolic Console logs :) :P
-const includePartials = require("gulp-file-include"); //For supporting partials if required
+const sass = require('gulp-sass')(require('sass')); //For Compiling SASS files
+const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
+const concat = require('gulp-concat'); //For Concatinating js,css files
+const uglify = require('gulp-terser'); //To Minify JS files
+const imagemin = require('gulp-imagemin'); //To Optimize Images
+const mozjpeg = require('imagemin-mozjpeg'); // imagemin plugin
+const pngquant = require('imagemin-pngquant'); // imagemin plugin
+const purgecss = require('gulp-purgecss'); // Remove Unused CSS from Styles
+const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P
+const includePartials = require('gulp-file-include'); //For supporting partials if required
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -42,7 +42,7 @@ function livePreview(done) {
 
 // Triggers Browser reload
 function previewReload(done) {
-  console.log("\n\t" + logSymbols.info, "Reloading Browser Preview.\n");
+  console.log('\n\t' + logSymbols.info, 'Reloading Browser Preview.\n');
   browserSync.reload();
   done();
 }
@@ -55,12 +55,12 @@ function devHTML() {
 }
 
 function devStyles() {
-  const tailwindcss = require("tailwindcss");
-  const autoprefixer = require("autoprefixer");
+  const tailwindcss = require('tailwindcss');
+  const autoprefixer = require('autoprefixer');
   return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
-    .pipe(concat({ path: "style.css" }))
+    .pipe(concat({ path: 'style.css' }))
     .pipe(dest(options.paths.dist.css));
 }
 
@@ -70,7 +70,7 @@ function devScripts() {
     `${options.paths.src.js}/**/*.js`,
     `!${options.paths.src.js}/**/external/*`,
   ])
-    .pipe(concat({ path: "scripts.js" }))
+    .pipe(concat({ path: 'scripts.js' }))
     .pipe(dest(options.paths.dist.js));
 }
 
@@ -114,13 +114,13 @@ function watchFiles() {
     `${options.paths.src.thirdParty}/**/*`,
     series(devThirdParty, previewReload)
   );
-  console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
+  console.log('\n\t' + logSymbols.info, 'Watching for Changes..\n');
 }
 
 function devClean() {
   console.log(
-    "\n\t" + logSymbols.info,
-    "Cleaning dist folder for fresh start.\n"
+    '\n\t' + logSymbols.info,
+    'Cleaning dist folder for fresh start.\n'
   );
   return src(options.paths.dist.base, { read: false, allowEmpty: true }).pipe(
     clean()
@@ -137,16 +137,16 @@ function prodHTML() {
 function prodGitHTML() {
   return src(`${options.paths.src.base}/**/*.{html,php}`)
     .pipe(includePartials())
-    .pipe(replace("../../", "./"))
+    .pipe(replace('../../', './'))
     .pipe(dest(options.paths.docs.base));
 }
 
 function prodStyles() {
-  const tailwindcss = require("tailwindcss");
-  const autoprefixer = require("autoprefixer");
-  const cssnano = require("cssnano");
+  const tailwindcss = require('tailwindcss');
+  const autoprefixer = require('autoprefixer');
+  const cssnano = require('cssnano');
   return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(
       postcss([
         tailwindcss(options.config.tailwindjs),
@@ -154,7 +154,7 @@ function prodStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: "style.css" }))
+    .pipe(concat({ path: 'style.css' }))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -170,16 +170,16 @@ function prodStyles() {
         },
       })
     )
-    .pipe(replace("../../", "../"))
+    .pipe(replace('../../', '../'))
     .pipe(dest(options.paths.build.css));
 }
 
 function prodGitStyles() {
-  const tailwindcss = require("tailwindcss");
-  const autoprefixer = require("autoprefixer");
-  const cssnano = require("cssnano");
+  const tailwindcss = require('tailwindcss');
+  const autoprefixer = require('autoprefixer');
+  const cssnano = require('cssnano');
   return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(
       postcss([
         tailwindcss(options.config.tailwindjs),
@@ -187,7 +187,7 @@ function prodGitStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: "style.css" }))
+    .pipe(concat({ path: 'style.css' }))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -203,7 +203,7 @@ function prodGitStyles() {
         },
       })
     )
-    .pipe(replace("../../", "../"))
+    .pipe(replace('../../', '../'))
     .pipe(dest(options.paths.docs.css));
 }
 
@@ -212,19 +212,21 @@ function prodScripts() {
     `${options.paths.src.js}/libs/**/*.js`,
     `${options.paths.src.js}/**/*.js`,
   ])
-    .pipe(concat({ path: "scripts.js" }))
+    .pipe(concat({ path: 'scripts.js' }))
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
 
 function prodGitScripts() {
-  return src([
-    `${options.paths.src.js}/libs/**/*.js`,
-    `${options.paths.src.js}/**/*.js`,
-  ])
-    .pipe(concat({ path: "scripts.js" }))
-    .pipe(uglify())
-    .pipe(dest(options.paths.docs.js));
+  return (
+    src([
+      `${options.paths.src.js}/libs/**/*.js`,
+      `${options.paths.src.js}/**/*.js`,
+    ])
+      // .pipe(concat({ path: 'scripts.js' }))
+      // .pipe(uglify())
+      .pipe(dest(options.paths.docs.js))
+  );
 }
 
 function prodImages() {
@@ -239,7 +241,7 @@ function prodImages() {
     mozjpeg({ quality: jpgQuality }),
   ];
 
-  return src(options.paths.src.img + "/**/*")
+  return src(options.paths.src.img + '/**/*')
     .pipe(imagemin([...plugins]))
     .pipe(dest(options.paths.build.img));
 }
@@ -256,7 +258,7 @@ function prodGitImages() {
     mozjpeg({ quality: jpgQuality }),
   ];
 
-  return src(options.paths.src.img + "/**/*")
+  return src(options.paths.src.img + '/**/*')
     .pipe(imagemin([...plugins]))
     .pipe(dest(options.paths.docs.img));
 }
@@ -287,17 +289,27 @@ function prodGitThirdParty() {
 
 function prodClean() {
   console.log(
-    "\n\t" + logSymbols.info,
-    "Cleaning build folder for fresh start.\n"
+    '\n\t' + logSymbols.info,
+    'Cleaning build folder for fresh start.\n'
   );
   return src(options.paths.build.base, { read: false, allowEmpty: true }).pipe(
     clean()
   );
 }
 
+function prodGitClean() {
+  console.log(
+    '\n\t' + logSymbols.info,
+    'Cleaning build folder for fresh start.\n'
+  );
+  return src(options.paths.docs.base, { read: false, allowEmpty: true }).pipe(
+    clean()
+  );
+}
+
 function buildFinish(done) {
   console.log(
-    "\n\t" + logSymbols.info,
+    '\n\t' + logSymbols.info,
     `Production build is complete. Files are located at ${options.paths.build.base}\n`
   );
   done();
@@ -324,7 +336,7 @@ exports.prod = series(
 );
 
 exports.prodGithub = series(
-  prodClean, // Clean Build Folder
+  prodGitClean, // Clean Build Folder
   parallel(
     prodGitStyles,
     prodGitScripts,
