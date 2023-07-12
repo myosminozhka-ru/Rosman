@@ -24,9 +24,9 @@
   //}
 }
 
-.popup-content img {
+.popup-image-img {
   object-fit: contain;
-  height: 90vh;
+  max-height: 90vh;
   @apply px-24 sm:px-12;
 }
 

@@ -858,60 +858,8 @@
         </div>
         <div class="grid grid-cols-3 px-24 gap-x-24 justify-center">
           <div class="flex flex-col gap-24">
-            <div>
-              <div
-                class="card_photogallery_item popup-trigger"
-                itemscope
-                itemtype="http://schema.org/ImageObject"
-                data-popup-target="#imagePopup"
-                data-popup-image="../../img/cards_photogallery_item.svg"
-              >
-                <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
-                <div class="cards_photogallery_eye_image" itemprop="url">
-                  <img
-                    class="cards_photogallery_eye_img"
-                    src="../../img/cards_photogallery_eye.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="image-popup" id="imagePopup">
-                <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
-                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                class="card_photogallery_item popup-trigger"
-                itemscope
-                itemtype="http://schema.org/ImageObject"
-                data-popup-target="#imagePopup"
-                data-popup-image="../../img/cards_photogallery_item.svg"
-              >
-                <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
-                <div class="cards_photogallery_eye_image" itemprop="url">
-                  <img
-                    class="cards_photogallery_eye_img"
-                    src="../../img/cards_photogallery_eye.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="image-popup" id="imagePopup">
-                <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
-                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
-                  </figure>
-                </div>
-              </div>
-            </div>
+            @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+            @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
           </div>
           <div class="flex flex-col gap-24">
             <div>
@@ -934,8 +882,8 @@
 
               <div class="image-popup" id="imagePopup">
                 <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                  <img src="" alt="" id="popupImage" class="popup-image-img">
+                  <figure class="absolute h-20 w-20 block top-[0.8rem] right-[2.8rem] cursor-pointer close-button">
                     <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
                   </figure>
                 </div>
@@ -961,8 +909,8 @@
 
               <div class="image-popup" id="imagePopup">
                 <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                  <img src="" alt="" id="popupImage" class="popup-image-img">
+                  <figure class="absolute h-20 w-20 block top-[0.8rem] right-[2.8rem] cursor-pointer close-button">
                     <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
                   </figure>
                 </div>
@@ -988,8 +936,8 @@
 
               <div class="image-popup" id="imagePopup">
                 <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
+                  <img src="" alt="" id="popupImage" class="popup-image-img">
+                  <figure class="absolute h-20 w-20 block top-[0.8rem] right-[2.8rem] cursor-pointer close-button">
                     <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
                   </figure>
                 </div>
@@ -997,60 +945,8 @@
             </div>
           </div>
           <div class="flex flex-col gap-24">
-            <div>
-              <div
-                class="card_photogallery_item popup-trigger"
-                itemscope
-                itemtype="http://schema.org/ImageObject"
-                data-popup-target="#imagePopup"
-                data-popup-image="../../img/cards_photogallery_item.svg"
-              >
-                <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
-                <div class="cards_photogallery_eye_image" itemprop="url">
-                  <img
-                    class="cards_photogallery_eye_img"
-                    src="../../img/cards_photogallery_eye.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="image-popup" id="imagePopup">
-                <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
-                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                class="card_photogallery_item popup-trigger"
-                itemscope
-                itemtype="http://schema.org/ImageObject"
-                data-popup-target="#imagePopup"
-                data-popup-image="../../img/cards_photogallery_item.svg"
-              >
-                <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
-                <div class="cards_photogallery_eye_image" itemprop="url">
-                  <img
-                    class="cards_photogallery_eye_img"
-                    src="../../img/cards_photogallery_eye.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="image-popup" id="imagePopup">
-                <div class="popup-content relative">
-                  <img src="" alt="" id="popupImage">
-                  <figure class="absolute top-[0.8rem] right-[0.8rem] cursor-pointer close-button">
-                    <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
-                  </figure>
-                </div>
-              </div>
-            </div>
+            @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+            @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
           </div>
         </div>
 
