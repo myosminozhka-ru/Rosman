@@ -1,616 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Результаты поиска - новости/статьи</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div class="search-result-wrapper">
-      @@include('components/ui-kit/breadcrumbs/index.html', { }, )
-      <div id="yellow-background">
-        <div id="moving-block">
-          <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-            <g>
-              <path
-                id="moving-bock-shadow"
-                d="M 0 0 L 100 0 L 100 100 L 0 100"
-                fill="white"
-              ></path>
-            </g>
-          </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Результаты поиска - новости/статьи</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="search-result-wrapper">
+    @@include('components/header/header-main.html', { }, )
+    <div id="yellow-background" class="!pt-10">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path id="moving-bock-shadow" d="M 0 0 L 100 0 L 100 100 L 0 100" fill="white"></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block" class="!pt-0">
+        <div class="flex flex-col gap-24 p-24 sm:p-12 sm:!pb-24 sm:gap-16">
+          <div class="flex justify-between  items-center">
+            <p class="breadcrumbs">
+              <a class="text-s" href="#">Главная </a><span>/</span>
+              <a class="text-s" href="#">Новости </a><span>/</span>
+              <a class="text-s" href="#">Результаты поиска </a>
+
+            </p>
+            <div class="breadcrumbs-small-screen">
+              <div class="breadcrumbs-small-screen-image"></div>
+              <div class="breadcrumbs-small-screen-dots ">/</div>
+              <div class="breadcrumbs-small-screen-path">Новости</div>
+              <span>/</span>
+              <div class="breadcrumbs-small-screen-path">Результаты поиска</div>
+            </div>
+          </div>
+          <div class="text-4xl">По запросу «дикие скричеры» нашлось 790 результатов</div>
+          <div class="flex justify-start ">
+            <div class="navigation !h-46 card-fullpage-filter-links">
+              <ul class="nav-list ">
+                <li class="flex flex-row !pr-16 !pl-0 flex-nowrap gap-4 !m-0 !items-center">
+                  <p class="other !py-10 text-15.20 font-medium">Бренды&nbsp&nbsp
+                    <span class="!text-15.20">1</span>
+                  </p>
+
+                </li>
+                <li class="flex flex-row !px-16 flex-nowrap gap-4 !m-0 !items-center">
+                  <p class="news  !py-10 text-15.20 font-medium">Товары&nbsp&nbsp
+                    <span class="text-15.20">456</span>
+                  </p>
+                </li>
+                <li class="flex flex-row !px-16  flex-nowrap gap-4 !m-0 !items-center">
+                  <p class="state !py-10 text-15.20 font-medium">Новости&nbsp&nbsp
+                    <span class="text-15.20">243</span>
+                  </p>
+                </li>
+                <li class="flex flex-row !px-16 flex-nowrap gap-4 !m-0 !items-center">
+                  <p class="interview  !py-10 text-15.20 font-medium">Статьи&nbsp&nbsp
+                    <span class="text-15.20">86</span>
+                  </p>
+                </li>
+                <li class="flex flex-row !px-16 flex-nowrap gap-4 !m-0 !items-center">
+                  <p class="collection  !py-10 text-15.20 font-medium">Подборки&nbsp&nbsp
+                    <span class="text-15.20"></span>
+                  </p>
+
+                </li>
+              </ul>
+              <div class="navigation-content hide" id="collection">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg">
+                  <p class="name">Книжка коллекция</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="interview">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg">
+                  <p class="name">Книжка Интервью</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="state">
+                <div class="cross"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg">
+                  <p class="name">Книжка Статья</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="news">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg">
+                  <p class="name">Книжка Новости</p>
+                </div>
+              </div>
+              <div class="navigation-content hide" id="other">
+                <div class="cross" onclick="closeBar()"></div>
+                <div class="content-layer">
+                  <img class="picture" src="../../img/cards_book.svg">
+                  <p class="name">Книжка Общее</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-        <div id="white-mobile-background"></div>
-        <div id="above-block">
-          <div class="mb-40 flex flex-col gap-24 !p-24 sm:mb-16">
-            @@include('components/ui-kit/filters/filter-2.html', { }, )
-
-            <div class="text-4xl">
-              По запросу «дикие скричеры» нашлось 790 результатов
-            </div>
-
-            <div class="flex justify-start">
-              <div class="navigation card-fullpage-filter-links !h-46">
-                <ul class="nav-list">
-                  <li
-                    class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !pl-0 !pr-16"
-                  >
-                    <p class="other !py-10 text-15.20 font-medium">
-                      Бренды&nbsp&nbsp
-                      <span class="!text-15.20">1</span>
-                    </p>
-                  </li>
-                  <li
-                    class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !px-16"
-                  >
-                    <p class="news !py-10 text-15.20 font-medium">
-                      Товары&nbsp&nbsp
-                      <span class="text-15.20">456</span>
-                    </p>
-                  </li>
-                  <li
-                    class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !px-16"
-                  >
-                    <p class="state !py-10 text-15.20 font-medium">
-                      Новости&nbsp&nbsp
-                      <span class="text-15.20">243</span>
-                    </p>
-                  </li>
-                  <li
-                    class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !px-16"
-                  >
-                    <p class="interview !py-10 text-15.20 font-medium">
-                      Статьи&nbsp&nbsp
-                      <span class="text-15.20">86</span>
-                    </p>
-                  </li>
-                  <li
-                    class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !px-16"
-                  >
-                    <p class="collection !py-10 text-15.20 font-medium">
-                      Подборки&nbsp&nbsp
-                      <span class="text-15.20"></span>
-                    </p>
-                  </li>
-                </ul>
-                <div class="navigation-content hide" id="collection">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка коллекция</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="interview">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Интервью</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="state">
-                  <div class="cross"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Статья</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="news">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Новости</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="other">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Общее</p>
-                  </div>
-                </div>
+        <div class="grid grid-cols-3 gap-x-16 gap-y-20 msm:grid-cols-1 md:grid-cols-2 px-24 sm:px-12">
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
               </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
             </div>
           </div>
-          <div class="flex flex-col gap-24 !px-24">
-            <div class="test-items !mb-40 flex flex-row flex-wrap gap-16">
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
               </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
                 </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
                 </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="card_articles test-item js_traceable_item">
-                <a href="#" class="card_articles_image item_card_image">
-                  <img
-                    src="../../img/cards_articles.svg"
-                    alt=""
-                    class="articles_card_img item_card_img"
-                  />
-                </a>
-                <div class="card_articles_description js-bg-changeable">
-                  <div class="card_articles_tags dotted_tags">
-                    <a
-                      href="#"
-                      class="card_articles_category dotted_tags_category"
-                      >Статьи</a
-                    >
-                    <div class="card_articles_separator dotted_tags_separator">
-                      •
-                    </div>
-                    <a href="#" class="card_articles_date dotted_tags_date"
-                      >30.11.2022</a
-                    >
-                  </div>
-                  <a href="#" class="card_articles_info card_sel_info">
-                    <div class="card_articles_name card_sel_name">
-                      Известный автор выпустил свою самую личную и чувственную
-                      книгу
-                    </div>
-                    <div class="card_articles_text card_sel_text">
-                      В четверг стартует главное книжное событие – ярмарка
-                      NonFiction. С 1 по 5 декабря в Гостином дворе издательства
-                      России представят свои лучшие книги, проведут ряд
-                      мероприятий, и встретятся со своими читателями.
-                    </div>
-                  </a>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
-          <section class="pagination rm-pag !mb-64 !px-24">
-            <div class="pagination-seen js-rm-pag-seen">
-              Просмотрено авторов: 12 из 456
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
             </div>
-            <button class="pagination-more-button js-rm-pag-more-btn">
-              Показать ещё
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="card_articles test-item js_traceable_item">
+            <a href="#" class="card_articles_image item_card_image">
+              <img src="../../img/cards_articles.svg" alt="" class="articles_card_img item_card_img" />
+            </a>
+            <div class="card_articles_description js-bg-changeable">
+              <div class="card_articles_tags dotted_tags">
+                <a href="#" class="card_articles_category dotted_tags_category">Статьи</a>
+                <div class="card_articles_separator dotted_tags_separator">•</div>
+                <a href="#" class="card_articles_date dotted_tags_date">30.11.2022</a>
+              </div>
+              <a href="#" class="card_articles_info card_sel_info">
+                <div class="card_articles_name card_sel_name">
+                  Известный автор выпустил свою самую личную и чувственную книгу
+                </div>
+                <div class="card_articles_text card_sel_text">
+                  В четверг стартует главное книжное событие – ярмарка NonFiction. С 1 по 5 декабря в Гостином дворе
+                  издательства России представят свои лучшие книги, проведут ряд мероприятий, и встретятся со своими
+                  читателями.
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <section class="sm:px-12 px-24 mb-48 pagination rm-pag">
+          <div class="pagination-seen js-rm-pag-seen">
+            Просмотрено авторов: 12 из 456
+          </div>
+          <button class="pagination-more-button js-rm-pag-more-btn">
+            Показать ещё
+          </button>
+          <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+            <button class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt">
+              <span></span>Назад
             </button>
-            <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
-              >
-                <span></span>Назад
+            <div class="nav-btns">
+              <button class="pagination-nav-page-button js-chosen-nav-btn js-rm-pag-nav-page-btn">
+                1
               </button>
-              <div class="nav-btns">
-                <button
-                  class="pagination-nav-page-button js-chosen-nav-btn js-rm-pag-nav-page-btn"
-                >
-                  1
-                </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-                >
-                  2
-                </button>
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                2
+              </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-                >
-                  3
-                </button>
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                3
+              </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
-                >
-                  4
-                </button>
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden">
+                4
+              </button>
 
-                <button
-                  class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
-                >
-                  5
-                </button>
-              </div>
-
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt"
-              >
-                Вперёд <span></span>
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden">
+                5
               </button>
             </div>
-          </section>
-          @@include('components/ui-kit/footer/footer-ru.html', { }, )
-        </div>
+
+            <button class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt">
+              Вперёд <span></span>
+            </button>
+          </div>
+        </section>
+        @@include('components/ui-kit/footer/footer-ru.html', { }, )
       </div>
     </div>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>
