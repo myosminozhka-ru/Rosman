@@ -72,25 +72,41 @@ window.addEventListener('resize', function () {
 });
 
 // код для того, чтобы при тыке на картинку открывалась большая картинка
-const popup2 = document.getElementById('imagePopup');
+// const popup2 = document.getElementById('imagePopup');
 const popupImage = document.getElementById('popupImage');
 const popupTriggers = document.querySelectorAll('.popup-trigger');
-const galleryItem = document.querySelector('.card_photogallery_item');
+// const galleryItem = document.querySelector('.card_photogallery_item');
+const allImagePopups = document.querySelectorAll('.image-popup');
 
 if (popupTriggers) {
   popupTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const imageUrl = trigger.getAttribute('data-popup-image');
-      popupImage.setAttribute('src', imageUrl);
-      popup2.classList.add('js-active-popup');
+      trigger.nextElementSibling.firstElementChild.firstElementChild.setAttribute(
+        'src',
+        imageUrl
+      );
+      // popupImage.setAttribute('src', imageUrl);
+      trigger.nextElementSibling.classList.add('js-active-popup');
     });
   });
 }
 
-if (popup2) {
-  popup2.addEventListener('click', (event) => {
-    if (event.target === popup2) {
-      popup2.classList.remove('js-active-popup');
-    }
+// if (popup2) {
+//   popup2.addEventListener('click', (event) => {
+//     if (event.target === popup2) {
+//       popup2.classList.remove('js-active-popup');
+//     }
+//   });
+// }
+
+if (allImagePopups) {
+  allImagePopups.forEach((imagePopup) => {
+    console.log(imagePopup);
+    imagePopup.addEventListener('click', (event) => {
+      if (event.target === imagePopup) {
+        event.target.classList.remove('js-active-popup');
+      }
+    });
   });
 }
