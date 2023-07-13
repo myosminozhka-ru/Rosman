@@ -186,7 +186,22 @@ button {
     }
   }
 }
+.more-down-content::-webkit-scrollbar-track {
+  border-radius: 0.4rem;
+}
 
+.more-down-content::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.more-down-content::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background: #acadad;
+}
+
+.more-down-content:hover::-webkit-scrollbar-thumb {
+  background: #555555;
+}
 .more-down-content {
   @apply hidden p-2;
 
@@ -233,7 +248,7 @@ button {
 }
 
 .sort-label {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
+  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
   max-width: 30rem;
   min-width: 5rem;
 
@@ -250,7 +265,7 @@ button {
   @apply hidden;
 
   &:checked + .filter-label {
-    @apply justify-between border-0 bg-yellow;
+    @apply justify-center border-0 bg-yellow;
 
     .cross {
       background: url('../../img/close.svg') no-repeat center right;
@@ -322,7 +337,7 @@ button {
 }
 
 .toggle-switch {
-  @apply relative my-10 inline-block h-16 w-34;
+  @apply relative my-10 inline-block h-16 w-45;
 
   input[type='checkbox'] {
     @apply hidden;

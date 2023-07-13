@@ -51,7 +51,7 @@
 
   @media screen and (max-width: 900px) {
     display: flex;
-    margin: 1rem auto;
+    margin:  auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -127,6 +127,8 @@
     z-index: 1000;
     left: 0;
     padding: 2rem;
+    height: 95vh;
+    overflow-y: scroll;
   }
 }
 
@@ -674,12 +676,15 @@ header {
       width: 100%;
     }
   }
+  .width-25 {
+    width: 25%;
+
+
+  }
 
   .image_container_brand {
     max-width: 8.8rem;
     max-height: 8.8rem;
-    min-height: 8.8rem;
-    min-width: 8.8rem;
     border: 0.2rem solid transparent;
 
     @apply sm:max-h-[7rem] sm:min-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
@@ -703,12 +708,10 @@ header {
       height: 9rem;
 
       .image_container_brand {
-        min-width: 7rem;
         max-width: 13rem;
         width: 100%;
         height: 100%;
-        min-height: 7rem;
-        max-height: 13rem;
+        max-height: 6rem;
       }
     }
   }
