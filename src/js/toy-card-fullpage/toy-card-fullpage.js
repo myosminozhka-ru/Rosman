@@ -256,6 +256,42 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
 const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // ищем слайдер превью по селектору
   // задаем параметры
+  on: {
+    slideChange: function () {
+      console.log(sliderImages.activeIndex);
+      if (sliderImages.activeIndex > sliderImages.previousIndex) {
+        const currentChosen = document.querySelector('.js-thumb-chosen');
+        const nextElement =
+          currentChosen.parentElement.nextElementSibling.firstElementChild;
+        console.log(nextElement);
+        currentChosen.classList.toggle('js-thumb-chosen');
+        currentChosen.classList.toggle('p-4');
+        nextElement.classList.toggle('js-thumb-chosen');
+        nextElement.classList.toggle('p-4');
+      } else if (sliderImages.activeIndex < sliderImages.previousIndex) {
+        const currentChosen = document.querySelector('.js-thumb-chosen');
+        const prevElement =
+          currentChosen.parentElement.previousElementSibling.firstElementChild;
+        console.log(prevElement);
+        currentChosen.classList.toggle('js-thumb-chosen');
+        currentChosen.classList.toggle('p-4');
+        prevElement.classList.toggle('js-thumb-chosen');
+        prevElement.classList.toggle('p-4');
+      }
+    },
+    slideNext: function () {
+      console.log('Переход на следующий слайд');
+    },
+    slidePrev: function () {
+      console.log('Переход на предыдущий слайд');
+    },
+    transitionStart: function () {
+      console.log('Начало перехода между слайдами');
+    },
+    transitionEnd: function () {
+      console.log('Окончание перехода между слайдами');
+    },
+  },
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
