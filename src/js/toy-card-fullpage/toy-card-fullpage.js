@@ -279,18 +279,6 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
         prevElement.classList.toggle('p-4');
       }
     },
-    slideNext: function () {
-      console.log('Переход на следующий слайд');
-    },
-    slidePrev: function () {
-      console.log('Переход на предыдущий слайд');
-    },
-    transitionStart: function () {
-      console.log('Начало перехода между слайдами');
-    },
-    transitionEnd: function () {
-      console.log('Окончание перехода между слайдами');
-    },
   },
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
