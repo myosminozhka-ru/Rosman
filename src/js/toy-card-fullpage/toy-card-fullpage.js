@@ -422,7 +422,7 @@ if (prevButtonFragment) {
 }
 
 // код для навешивания синего бордера на элемент
-window.onload = function () {
+function chooseSwiperItem() {
   const slideVisibleElements = document.querySelectorAll(
     '.swiper-slide-visible'
   );
@@ -441,19 +441,19 @@ window.onload = function () {
             '.slider__image, .slider__image-book'
           ).classList.remove('p-4');
         });
-        imageElement.classList.add('js-thumb-chosen');
-        imageElement.classList.add('p-4');
+
+        // Toggle classes on clicked element
+        imageElement.classList.toggle('js-thumb-chosen');
+        imageElement.classList.toggle('p-4');
       });
     }
   });
+}
 
-  if (slideVisibleElements.length > 0) {
-    const firstImageElement = slideVisibleElements[0].querySelector(
-      '.slider__image, .slider__image-book'
-    );
-    if (firstImageElement) {
-      firstImageElement.classList.add('js-thumb-chosen');
-      firstImageElement.classList.add('p-4');
-    }
-  }
+window.onload = function () {
+  chooseSwiperItem();
+};
+
+window.onresize = function () {
+  chooseSwiperItem();
 };
