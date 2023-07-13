@@ -9,8 +9,8 @@
   </head>
 
   <body>
+  @@include('components/header/header-main.html', { }, )
     <div class="search-result-wrapper">
-      @@include('components/header/header-main.html', { }, )
       <div id="yellow-background" class="!pt-10">
         <div id="moving-block">
           <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
@@ -821,11 +821,10 @@
               </div>
             </div>
           </div>
-
-          @@include('components/ui-kit/footer/footer-ru.html', { }, )
         </div>
       </div>
     </div>
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
