@@ -12,8 +12,8 @@
 
   <body>
     <header id="header3" class="bottom header" data-header="main">
-  <div class="logo"><img src="../../img/logo.svg" /></div>
-  <div class="mobile-logo"><img src="../../img/mobile-logo.svg" /></div>
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
   <div class="dropdown">
     <button>
       <div class="icon"></div>
@@ -114,22 +114,22 @@
 </header>
 <div class="toolbar">
   <a href="#" class="toolbar-button active">
-    <img src="../../img/toolbar-book.png" />Главная</a
+    <img src="./img/toolbar-book.png" />Главная</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="../../img/toolbar-home.png" />Игрушки</a
+    ><img src="./img/toolbar-home.png" />Игрушки</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="../../img/toolbar-menu.png" />Книги</a
+    ><img src="./img/toolbar-menu.png" />Книги</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="../../img/toolbar-toys.png" />Меню</a
+    ><img src="./img/toolbar-toys.png" />Меню</a
   >
 </div>
 
 
     <div id="yellow-background">
-      <div id="moving-block" class='!w-[110%] !-left-2'>
+      <div id="moving-block" class="!-left-2 !w-[110%]">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
           <g>
             <path
@@ -164,19 +164,31 @@
   </div>
 </div>
 
-        <div class="flex flex-row md:flex-col bg-background px-24 py-16 gap-12">
-          <div class="flex flex-row md:flex-col gap-24 md:gap-4">
-            <img class='w-[14rem] h-[14rem] md:hidden object-contain' src="../../img/brand_image.svg" />
-            <div class='hidden md:flex md:flex-row gap-16'>
-              <img class='w-[5rem] h-[5rem] object-contain' src="../../img/brand_image.svg" />
-              <div class='flex justify-center'> <h3 class='head-2 my-auto'>Инфинити Надо</h3></div>
+        <div class="flex flex-row gap-12 bg-background px-24 py-16 md:flex-col">
+          <div class="flex flex-row gap-24 md:flex-col md:gap-4">
+            <img
+              class="h-[14rem] w-[14rem] object-contain md:hidden"
+              src="./img/brand_image.svg"
+            />
+            <div class="hidden gap-16 md:flex md:flex-row">
+              <img
+                class="h-[5rem] w-[5rem] object-contain"
+                src="./img/brand_image.svg"
+              />
+              <div class="flex justify-center">
+                <h3 class="head-2 my-auto">Инфинити Надо</h3>
+              </div>
             </div>
             <div class="flex flex-col">
-              <h3 class='head-2 md:hidden'>Инфинити Надо</h3>
-              <p class='body-m'>
-                Основу волчков Infinity Nado составляет атакующее металлическое кольцо - именно благодаря металлической основе волчки Infinity Nado такие...
+              <h3 class="head-2 md:hidden">Инфинити Надо</h3>
+              <p class="body-m">
+                Основу волчков Infinity Nado составляет атакующее металлическое
+                кольцо - именно благодаря металлической основе волчки Infinity
+                Nado такие...
               </p>
-              <div class='mt-16'><p class='link-m js_popup_brand_description_button '>Читать</p></div>
+              <div class="mt-16">
+                <p class="link-m js_popup_brand_description_button">Читать</p>
+              </div>
               <div class="js_popup_brand_description_modal modal">
   <div class="popup_brand_description_content">
     <div class="popup_brand_description_heading">
@@ -220,86 +232,100 @@
 
             </div>
           </div>
-          <div class="flex flex-row md:flex-col gap-16 ">
+          <div class="flex flex-row gap-16 md:flex-col">
             <div
-              class="more-down-filters no-padds no-after !w-[19rem]  md:!w-full"
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">
-               Сезоны<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Сезоны<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-1" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-1"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-1"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-2" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-2"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-6" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-6"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-7" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-7"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-8" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-8"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-123" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-123"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Линейка<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Линейка<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-5" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-5"
-                >Мадс Миккельсен<span class="cross"></span
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-4" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-4"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-3" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-3"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Особенности<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Особенности<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-9" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-9"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-9"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-10" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-10"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-11" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-11"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-22 px-25 md:px-0 bg-white mt-16">
+        <div class="mt-16 flex flex-row gap-22 bg-white px-25 md:px-0">
           <div class="main-block filter-2 flex justify-around" id="filter-2">
   <div class="flex w-full flex-row justify-center">
     <form id="filter-form-2" class="filters-block">
@@ -320,16 +346,14 @@
         </div>
         <hr class="my-14 text-grey" />
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto  text-l font-semibold"
-            >Новинка</span
-          >
+          <span class="my-auto mr-12 w-auto text-l font-semibold">Новинка</span>
           <label class="toggle-switch">
             <input type="checkbox" />
             <span class="slider"></span>
           </label>
         </div>
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto  text-l font-semibold"
+          <span class="my-auto mr-12 w-auto text-l font-semibold"
             >Скоро в продаже</span
           >
           <label class="toggle-switch">
@@ -620,7 +644,7 @@
                     </div>
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -661,7 +685,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -702,7 +726,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -744,7 +768,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -785,7 +809,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -826,7 +850,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -867,7 +891,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -908,7 +932,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -949,7 +973,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -990,7 +1014,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -1031,7 +1055,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -1072,7 +1096,7 @@
                   <div class="toy_card_image item_card_image">
                     <img
                       class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      src="./img/cards_toy.svg"
                       alt=""
                     />
                   </div>
@@ -1152,7 +1176,7 @@
               <img
                 id="follower"
                 class="slide-el-2"
-                src="../../img/running-elephant/slide-el-2.png"
+                src="./img/running-elephant/slide-el-2.png"
               />
             </div>
           </div>

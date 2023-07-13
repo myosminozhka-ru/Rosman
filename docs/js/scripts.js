@@ -1,1 +1,1408 @@
-const addToFavBtns=document.getElementsByClassName("item_card_add_to_favourite");for(let e=0;e<addToFavBtns.length;e++)addToFavBtns[e].addEventListener("click",(function(){this.classList.toggle("js_pressed")}));const traceableItems=document.getElementsByClassName("js_traceable_item");for(let e=0;e<traceableItems.length;e++)traceableItems[e].addEventListener("mouseenter",(function(e){var t;this.style.backgroundColor=0===(t=["#FFF145","#FF8500","#35CC66","#4498FC","#FF0053"]).length?"#ffffff":t[Math.floor(Math.random()*t.length)]}));for(let e=0;e<traceableItems.length;e++)traceableItems[e].addEventListener("mouseleave",(function(e){this.classList.contains("bgc-bgc")?this.style.backgroundColor="#F5F5F5":this.style.backgroundColor="white"}));window.addEventListener("resize",(function(){document.querySelectorAll(".js_item_card").forEach((e=>{const t=e.offsetWidth,s=e.querySelectorAll(".bordered_tags_item");s&&s.forEach((e=>{t<=160?e.classList.add("bordered_tags_item-smalled"):e.classList.remove("bordered_tags_item-smalled")}))}))}));const swiperDetailedPage=new Swiper(".swiper-detailed-page",{loop:!0,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:3,spaceBetween:16,breakpoints:{950:{slidesPerView:3,spaceBetween:16},500:{slidesPerView:2,spaceBetween:8},0:{slidesPerView:1.25,spaceBetween:8}}}),swiperDetailedPageVideo=new Swiper(".swiper-detailed-page-video",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:2,spaceBetween:16,breakpoints:{950:{slidesPerView:2},500:{slidesPerView:2},0:{slidesPerView:1.2}}}),swiperImidzhPageEmps=new Swiper(".swiper-imidzh-page",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:2,spaceBetween:16,breakpoints:{950:{slidesPerView:2},500:{slidesPerView:2},0:{slidesPerView:1.25,spaceBetween:24}}}),swiperCatalogProjects=new Swiper(".swiper-catalog-projects",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:2,spaceBetween:16,breakpoints:{950:{slidesPerView:2},550:{slidesPerView:2},0:{slidesPerView:1.2,spaceBetween:16}}});function generateDirectionsURL(e,t){const s=new URLSearchParams("api=1");s.append("origin",e);const n=[];return t.title!==t.address1&&n.push(t.title),n.push(t.address1,t.address2),s.append("destination",n.join(",")),"https://www.google.com/maps/dir/?"+s.toString()}function LocatorPlus(e){const t=this;t.locations=e.locations||[],t.capabilities=e.capabilities||{};const s=document.getElementById("gmp-map"),n=document.getElementById("locations-panel");t.panelListEl=document.getElementById("locations-panel-list");const o=document.getElementById("location-results-section-name"),i=document.getElementById("location-results-list"),a=Handlebars.compile(document.getElementById("locator-result-items-tmpl").innerHTML);t.searchLocation=null,t.searchLocationMarker=null,t.selectedLocationIdx=null,t.userCountry=null,t.map=new google.maps.Map(s,e.mapOptions);const l=function(e,s,o){t.selectedLocationIdx=e;for(let e of i.children)e.classList.remove("selected"),d(e)===t.selectedLocationIdx&&(e.classList.add("selected"),o&&(n.scrollTop=e.offsetTop));s&&null!=e&&t.map.panTo(t.locations[e].coords)},c=t.locations.map((function(e,s){const n=new google.maps.Marker({position:e.coords,map:t.map,title:e.title});return n.addListener("click",(function(){l(s,!1,!0)})),n}));t.updateBounds=function(){const e=new google.maps.LatLngBounds;t.searchLocationMarker&&e.extend(t.searchLocationMarker.getPosition());for(let t=0;t<c.length;t++)e.extend(c[t].getPosition());t.map.fitBounds(e)},t.locations.length&&t.updateBounds();const r=function(e){return t.searchLocation?google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(e.coords),t.searchLocation.location):null},d=function(e){return parseInt(e.getAttribute("data-location-index"))};t.renderResultsList=function(){let e=t.locations.slice();for(let t=0;t<e.length;t++)e[t].index=t;t.searchLocation?(o.textContent="Nearest locations ("+e.length+")",e.sort((function(e,t){return r(e)-r(t)}))):o.textContent=`All locations (${e.length})`;const s={locations:e};i.innerHTML=a(s);for(let e of i.children){const s=d(e);s===t.selectedLocationIdx&&e.classList.add("selected");const n=function(){s!==t.selectedLocationIdx&&l(s,!0,!1)};e.addEventListener("click",n),e.querySelector(".select-location").addEventListener("click",(function(e){n(),e.stopPropagation()}));const o=generateDirectionsURL(null!=t.searchLocation?t.searchLocation.location:"",t.locations[s]);e.querySelector(".directions-button").setAttribute("href",o)}},initializeSearchInput(t),t.renderResultsList()}function initializeSearchInput(e){const t=new Map,s=new google.maps.Geocoder,n=document.getElementById("location-search-input"),o=document.getElementById("location-search-button"),i=function(o){if(!o)return;const i=function(t){n.value=t.formatted_address,function(t,s){if(e.searchLocationMarker&&e.searchLocationMarker.setMap(null),!s)return void(e.searchLocation=null);e.searchLocation={address:t,location:s},e.searchLocationMarker=new google.maps.Marker({position:s,map:e.map,title:"My location",icon:{path:google.maps.SymbolPath.CIRCLE,scale:12,fillColor:"#3367D6",fillOpacity:.5,strokeOpacity:0}});const n=t.split(" ");e.userCountry=n[n.length-1],e.updateBounds(),e.renderResultsList()}(t.formatted_address,t.geometry.location)};if(t.has(o))return void i(t.get(o));const a={address:o,bounds:e.map.getBounds()};s.geocode(a,(function(e,s){if("OK"===s&&e.length>0){const s=e[0];t.set(o,s),i(s)}}))};o.addEventListener("click",(function(){i(n.value.trim())})),n.addEventListener("keypress",(function(e){"Enter"===e.key&&i(n.value)}))}const popup=function(e,t){this.el=e,this.triggerButton=t,this.open=!1,this.closeButton=this.el.querySelector(".ui-popup-close-button"),this.toggleActiveClass=()=>{this.el.classList.toggle("--active")},this.clickOutside=e=>{e.target===this.el&&(this.open=!1,this.toggleActiveClass())},this.triggerButton.addEventListener("click",(()=>{this.open=!0,this.el.classList.add("--active")})),this.closeButton.addEventListener("click",(()=>{this.open=!1,this.el.classList.remove("--active")})),document.addEventListener("click",this.clickOutside),document.addEventListener("keydown",(e=>{"Escape"===e.code&&this.open&&(this.open=!1,this.el.classList.remove("--active"))}))},jsContactUsRuPopupButton=document.querySelector(".js_contact_us_ru_popup_button"),jsPopupContactUsRuModal=document.querySelector(".js_popup_contact_us_ru_modal"),jsContactUsEngPopupButton=document.querySelector(".js_contact_us_eng_popup_button"),jsPopupContactUsEngModal=document.querySelector(".js_popup_contact_us_eng_modal"),jsBlockchainRuPopupButton=document.querySelector(".js_blockchain_ru_popup_button"),jsPopupBlockchainRuModal=document.querySelector(".js_popup_blockchain_ru_modal"),jsBlockchainEngPopupButton=document.querySelector(".js_blockchain_eng_popup_button"),jsPopupBlockchainEngModal=document.querySelector(".js_popup_blockchain_eng_modal"),jsPopupBrandDescriptionButton=document.querySelector(".js_popup_brand_description_button"),jsPopupBrandDescriptionModal=document.querySelector(".js_popup_brand_description_modal"),jsPopupSurveyButton=document.querySelector(".js_popup_survey_button"),jsPopupSurveyModal=document.querySelector(".js_popup_survey_modal"),jsPopupCollaborationButton=document.querySelector(".js_popup_collaboration_button"),jsPopupCollaborationModal=document.querySelector(".js_popup_collaboration_modal"),jsPopupBrandChooseButton=document.querySelector(".js_popup_brand_choose_button"),jsPopupBrandChooseModal=document.querySelector(".js_popup_brand_choose_modal"),jsPopupBrandChooseListButton=document.querySelector(".js_popup_brand_choose_list_button"),jsPopupBrandChooseListModal=document.querySelector(".js_popup_brand_choose_list_modal"),jsPopupAllFiltersButton=document.querySelector(".js_popup_all_filters_button"),jsPopupAllFiltersModal=document.querySelector(".js_popup_all_filters_modal"),jsPopupBrandFiltersButton=document.querySelector(".js_popup_brand_filters_modal"),jsPopupBrandFiltersModal=document.querySelector(".js_popup_brand_filters_button"),jsPopupWishlistFiltersButton=document.querySelector(".js_popup_wishlist_filters_modal"),jsPopupWishlistFiltersModal=document.querySelector(".js_popup_wishlist_filters_button"),jsPopupWishlistSortButton=document.querySelector(".js_popup_wishlist_sort_modal"),jsPopupWishlistSortModal=document.querySelector(".js_popup_wishlist_sort_button"),popups=[[jsPopupContactUsRuModal,jsContactUsRuPopupButton],[jsPopupContactUsEngModal,jsContactUsEngPopupButton],[jsPopupBlockchainRuModal,jsBlockchainRuPopupButton],[jsPopupBlockchainEngModal,jsBlockchainEngPopupButton],[jsPopupBrandDescriptionModal,jsPopupBrandDescriptionButton],[jsPopupSurveyModal,jsPopupSurveyButton],[jsPopupCollaborationModal,jsPopupCollaborationButton],[jsPopupBrandChooseModal,jsPopupBrandChooseButton],[jsPopupBrandChooseListModal,jsPopupBrandChooseListButton],[jsPopupAllFiltersModal,jsPopupAllFiltersButton],[jsPopupBrandFiltersButton,jsPopupBrandFiltersModal],[jsPopupWishlistFiltersButton,jsPopupWishlistFiltersModal],[jsPopupWishlistSortButton,jsPopupWishlistSortModal]];for(let e=0;e<popups.length;e++)popups[e][0]&&popups[e][1]&&new popup(popups[e][0],popups[e][1]);const dropdownTogglers=document.getElementsByClassName("dropdown_checkbox");for(let e=0;e<dropdownTogglers.length;e++)dropdownTogglers[e].addEventListener("click",(function(){const e=this.parentNode.parentNode.nextElementSibling;this.classList.contains("active-js")?this.classList.remove("active-js"):this.classList.add("active-js"),"block"===e.style.display?e.style.display="none":(e.style.display="block",e.classList.add("active-js"))}));let phoneNumber=document.querySelector("#phone");if(phoneNumber){phoneNumber.onclick=function(){phoneNumber.value="+"};var old=0;phoneNumber.onkeydown=function(){var e=phoneNumber.value.length;e<old?old--:(2===e&&(phoneNumber.value=phoneNumber.value+"-"),6===e&&(phoneNumber.value=phoneNumber.value+"-"),10===e&&(phoneNumber.value=phoneNumber.value+"-"),13===e&&(phoneNumber.value=phoneNumber.value+"-"),e>15&&(phoneNumber.value=phoneNumber.value.substring(0,phoneNumber.value.length-1)),old++)}}const brandPopupCheckboxes=document.querySelectorAll(".checkbox_overlay");if(brandPopupCheckboxes)for(let e=0;e<brandPopupCheckboxes.length;e++)brandPopupCheckboxes[e].addEventListener("click",(function(e){const t=this.nextElementSibling;this.checked?t.style.display="block":t.style.display=""}));let largeImg=document.querySelector(".largeImg"),thumbs=document.querySelectorAll(".thumbs img");thumbs.forEach((function(e){e.addEventListener("click",(function(t){const s=document.querySelector(".thumbs .js-thumb-chosen");t.preventDefault(),largeImg.src=e.getAttribute("src"),s&&s.classList.remove("js-thumb-chosen"),e.classList.add("js-thumb-chosen")}))}));let jsMdb=document.querySelector(".js-mdb"),cardTextToHide=document.querySelector(".card-fp-hide"),cartToTrans=document.querySelector(".card-fp-trans");jsMdb&&(jsMdb.onclick=function(e){cardTextToHide&&cardTextToHide.classList.toggle("js-card-fp-hidden-item"),cartToTrans&&cartToTrans.classList.toggle("card-fp-transparent-text")});const navButtons=document.querySelector(".navigation");if(navButtons){const e=document.querySelector(".card-fp-description"),t=document.querySelector(".card-fp-characteristics"),s=document.querySelector(".card-fp-instruction");navButtons.addEventListener("click",(n=>{n.preventDefault();const o=navButtons.querySelector(".active-js"),i=n.target.closest(".card-fullpage-tab");i&&i!==o&&(o&&o.classList.remove("active-js"),i.classList.add("active-js"),e.classList.add("hidden"),t.classList.add("hidden"),s.classList.add("hidden"),i.classList.contains("card-fp-tab-desc")?e.classList.remove("hidden"):i.classList.contains("card-fp-tab-char")?t.classList.remove("hidden"):i.classList.contains("card-fp-tab-instr")&&s.classList.remove("hidden"))}))}let jsMdbDescButton=document.querySelector(".js-mdb-desc-button"),jsDescriptionWrapper=document.querySelector(".js-card-fullpage-desc-description"),jsItemsToHideDesc=document.querySelectorAll(".js-item-to-hide-desc");jsMdbDescButton&&(jsMdbDescButton.onclick=function(e){jsItemsToHideDesc.forEach((e=>{e.classList.toggle("js-card-fp-hidden-item")}));const t=jsMdbDescButton.innerText.includes("Свернуть описание");t?(jsDescriptionWrapper.classList.remove("gapped"),jsMdbDescButton.innerHTML="Развернуть описание<span></span>"):(jsDescriptionWrapper.classList.add("gapped"),jsMdbDescButton.innerHTML="Свернуть описание<span></span>"),t&&jsMdbDescButton.scrollIntoView({behavior:"smooth",block:"end"})});let jsMdbAuthorButton=document.querySelector(".js-mdb-author-button");jsMdbAuthorButton&&(jsMdbAuthorButton.onclick=function(e){jsMdbAuthorButton.previousElementSibling.classList.toggle("hidden");const t=jsMdbAuthorButton.innerText.includes("Свернуть описание");jsMdbAuthorButton.innerHTML=t?"Развернуть описание<span></span>":"Свернуть описание<span></span>"});const imageContainer=document.querySelector(".card-fullpage-image-container"),dots=document.querySelectorAll(".card-fullpage-dot");let currentImageIndex=0;function setActiveImage(e){imageContainer.style.transform=`translateX(-${100*e}%)`,dots.forEach(((t,s)=>{t.classList.toggle("active",s===e)}))}dots.forEach(((e,t)=>{e.addEventListener("click",(()=>{currentImageIndex=t,setActiveImage(currentImageIndex)}))}));const jsBookToggleButton=document.querySelectorAll(".js-book-toggle-button"),jsBookTextContainer=document.querySelectorAll(".card-fp-desc-text-top");if(jsBookToggleButton&&jsBookTextContainer)for(let e=0;e<jsBookTextContainer.length;e++)jsBookToggleButton[e].addEventListener("click",(function(){jsBookTextContainer[e].classList.toggle("line-clamp-none")}));const swiperImage2=new Swiper(".swiper-image-2",{loop:!0,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:4,spaceBetween:16,breakpoints:{950:{slidesPerView:4,spaceBetween:16},600:{slidesPerView:3,spaceBetween:8},0:{slidesPerView:2,spaceBetween:8}}}),sliderThumbs=new Swiper(".slider__thumbs .swiper-container-3",{direction:"vertical",slidesPerView:5,spaceBetween:14,navigation:{nextEl:".slider__next",prevEl:".slider__prev"},freeMode:!0,breakpoints:{0:{direction:"horizontal"},768:{direction:"vertical"}}}),sliderImages=new Swiper(".slider__images .swiper-container-3",{direction:"vertical",slidesPerView:1,spaceBetween:14,mousewheel:!0,navigation:{nextEl:".slider__next",prevEl:".slider__prev"},grabCursor:!0,thumbs:{swiper:sliderThumbs},breakpoints:{0:{direction:"horizontal"},768:{direction:"vertical"}}}),swiperBookFragment=new Swiper(".swiper-book-fragment",{loop:!1,preventInteractionOnTransition:!0,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,allowTouchMove:!1,slidesPerView:1,spaceBetween:16}),sliderMain=document.querySelector(".slider-main"),sliderPages=document.querySelectorAll(".slider-page");if(sliderPages&&sliderMain){sliderPages.forEach((function(e){e.textContent=sliderMain.value}));const e=100/(sliderMain.max-1);window.addEventListener("mousemove",(function(){const t=sliderMain.value;sliderPages.forEach((function(e){e.textContent=t}));const s=((parseInt(sliderMain.value)-1)*e).toFixed(2),n=`linear-gradient(90deg, black ${s}%, #E3E3E2 ${s}%)`;sliderMain.style.background=n})),sliderMain.addEventListener("input",(function(){parseInt(this.value)>swiperBookFragment.slides.length&&(this.value=swiperBookFragment.slides.length);const t=sliderMain.value;sliderPages.forEach((function(e){e.textContent=t}));const s=parseInt(this.value)-1;s<=swiperBookFragment.slides.length&&swiperBookFragment.slideTo(s);const n=(s*e).toFixed(2),o=`linear-gradient(90deg, black ${n}%, #E3E3E2 ${n}%)`;sliderMain.style.background=o}))}const nextButtonFragment=document.querySelector(".bg-next-arrow"),prevButtonFragment=document.querySelector(".bg-prev-arrow");nextButtonFragment&&(nextButtonFragment.onclick=function(){const e=parseInt(sliderMain.value)+1;if(e<=swiperBookFragment.slides.length){sliderMain.value=e;const t=new Event("input");sliderMain.dispatchEvent(t),swiperBookFragment.update()}}),prevButtonFragment&&(prevButtonFragment.onclick=function(){const e=parseInt(sliderMain.value)-1;if(e>=1){sliderMain.value=e;const t=new Event("input");sliderMain.dispatchEvent(t),swiperBookFragment.update()}}),window.addEventListener("DOMContentLoaded",(()=>{const e=10.432;new Swiper(".js-toys-articles",{loop:!1,navigation:{nextEl:".toys-articles-swiper-button-next",prevEl:".toys-articles-swiper-button-prev"},slidesPerView:1.2,autoHeight:!0,spaceBetween:1.6*e,breakpoints:{639:{slidesPerView:2},868:{slidesPerView:3}}}),new Swiper(".js-toys-brands",{loop:!1,navigation:{nextEl:".toys-brands-swiper-button-next",prevEl:".toys-brands-swiper-button-prev"},slidesPerView:1,autoHeight:!0,spaceBetween:1.6*e,breakpoints:{639:{slidesPerView:2},868:{slidesPerView:3},1024:{slidesPerView:4}}}),new Swiper(".js-toys-event-tape",{loop:!1,navigation:{nextEl:".toys-event-tape-swiper-button-next",prevEl:".toys-event-tape-swiper-button-prev"},slidesPerView:2,autoHeight:!0,spaceBetween:1.6*e,breakpoints:{868:{slidesPerView:3},1024:{slidesPerView:4}}}),new Swiper(".js-toys-bestsellers",{loop:!1,navigation:{nextEl:".bestsellers-swiper-button-next",prevEl:".bestsellers-swiper-button-prev"},pagination:{el:".bestsellers-swiper-pagination",type:"fraction",renderFraction:function(e,t){return'<span class="text-slider-fraction body-m '+e+'"></span> \t&nbsp;<span class="text-slider-fraction body-m"> из </span> \t&nbsp;<span class="text-slider-fraction body-m '+t+'"></span>'}},autoHeight:!0,slidesPerView:1,spaceBetween:50.0736,breakpoints:{900:{spaceBetween:25.0368}}}),new Swiper(".js-toys-banner",{loop:!1,navigation:{nextEl:".toys-swiper-button-next",prevEl:".toys-swiper-button-prev"},pagination:{el:".toys-swiper-pagination"},autoHeight:!0,slidesPerView:1,spaceBetween:50.0736,breakpoints:{900:{spaceBetween:25.0368}}});new Swiper(".swiper",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:"auto",spaceBetween:8,breakpoints:{900:{slidesPerView:5,spaceBetween:30}}}),new Swiper(".persons-slider",{navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:1.2,spaceBetween:24}),new Swiper(".swiper-image",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:"auto",spaceBetween:8,breakpoints:{900:{slidesPerView:5,spaceBetween:30}}}),new Swiper(".swiper-text",{loop:!1,navigation:{nextEl:".button-next",prevEl:".button-prev"},autoHeight:!0,slidesPerView:.9,spaceBetween:10,breakpoints:{900:{slidesPerView:1,spaceBetween:60}}}),new Swiper(".swiper-container",{loop:!1,autoplay:{delay:20,disableOnInteraction:!1},speed:6e3,slidesPerView:6}),new Swiper(".swiper-container-reverse",{loop:!1,autoplay:{delay:20,disableOnInteraction:!1,reverseDirection:!0},speed:6e3,slidesPerView:6})}));const inputFields=document.querySelectorAll(".js-traceable-item-vacancy"),remainingItemsContainer=document.querySelector(".js-remaining-items"),remainingItems=document.querySelectorAll(".js-remaining-item");let remainToFill=document.querySelector(".vac-0");function toggleVisibility(){const e=document.querySelectorAll(".js-vac-item"),t=window.innerWidth;e.forEach((e=>{t<=500?e.classList.add("js-card-fp-hidden-item"):e.classList.remove("js-card-fp-hidden-item")}))}function toggleClassOnResize(){const e=document.querySelector(".js-traceable-planet");if(!e)return;let t="z-0";window.addEventListener("resize",(function(){t="z-0"===t?"z-1":"z-0",e.classList.remove("z-0","z-1"),e.classList.add(t)}))}function toggleSearch(){let e=document.getElementById("mobile-menu"),t=document.querySelector(".header-nav"),s=document.querySelector(".search-input");document.querySelector(".search-input input").value="";let n=document.querySelector(".header-btn");t.classList.contains("hide")?(t.classList.remove("hide"),n.classList.remove("hide-mobile"),n.classList.remove("hide-icon")):(t.classList.add("hide"),n.classList.add("hide-mobile"),n.classList.add("hide-icon")),s.classList.contains("hide")?s.classList.remove("hide"):s.classList.add("hide"),e.classList.contains("hide")?e.classList.remove("hide"):e.classList.add("hide")}function changeLang(e){let t=document.querySelectorAll(".eng-lang"),s=document.querySelectorAll(".rus-lang");for(let n=0;n<s.length;n++)"eng"===e?(s[n].classList.remove("active-js"),t[n].classList.add("active-js")):(s[n].classList.add("active-js"),t[n].classList.remove("active-js"))}function closeBar(){for(let e=0;e<p.length;e++)p[e].classList.contains("active-js")&&p[e].classList.remove("active-js");for(let e=0;e<contentNavBar.length;e++)contentNavBar[e].classList.remove("active-js"),contentNavBar[e].classList.add("hide")}function scrollContent(e){let t=document.getElementById("elephant-container");document.getElementById("elephant-slider");"left"===e?t.scrollLeft-=400:"right"===e&&(t.scrollLeft+=400)}inputFields.forEach((e=>{e.addEventListener("input",(function(){const t=e.classList[1],s=document.querySelector(`.js-remaining-item.${t}`);""!==e.value.trim()?s.style.display="none":s.style.display="inline";let n=!0;inputFields.forEach((function(e){""===e.value.trim()&&(n=!1)})),remainingItemsContainer.style.display=n?"none":"block"}))})),window.addEventListener("resize",(function(){toggleVisibility()})),window.addEventListener("load",(function(){toggleVisibility()})),toggleClassOnResize(),window.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementsByClassName("more-down-button");for(let t=0;t<e.length;t++)e[t].addEventListener("click",(function(){const e=this.nextElementSibling;this.classList.contains("active-js")?this.classList.remove("active-js"):this.classList.add("active-js"),e.classList.contains("active-js")?e.classList.remove("active-js"):e.classList.add("active-js")}));const t=document.querySelector(".navigation");t&&t.addEventListener("click",(function(e){const t=document.getElementsByClassName("navigation-content"),s=document.querySelector(".nav-list"),n=document.querySelector("p.active-js"),o=s.getElementsByTagName("p");if(null!=n&&!n.contains(e.target))for(let e=0;e<o.length;e++)o[e].classList.contains("active-js")&&o[e].classList.remove("active-js");for(let s=0;s<t.length;s++)t[s].id===e.target.classList.value?(t[s].classList.add("active-js"),t[s].classList.remove("hide")):(t[s].classList.remove("active-js"),t[s].classList.add("hide"));e.target.classList.add("active-js")})),document.addEventListener("click",(function(t){const s=document.querySelector(".more-down-button.out.active-js"),n=t.target;if(null!=s&&!s.contains(n)&&!n.parentNode.classList.contains("more-down-content"))for(let t=0;t<e.length;t++)e[t].classList.contains("active-js")&&(e[t].nextElementSibling.classList.remove("active-js"),e[t].classList.remove("active-js"))}));const s=document.getElementsByClassName("collapse-button");for(let e=0;e<s.length;e++)s[e].addEventListener("click",(function(){const e=this.nextElementSibling;if(e.classList.contains("active"))e.classList.remove("active");else{const t=document.querySelector(".collapse-content.active");t&&t.classList.remove("active"),e.classList.add("active")}if(this.classList.contains("active"))this.classList.remove("active");else{const e=document.querySelector(".collapse-button.active");e&&e.classList.remove("active"),this.classList.add("active")}}));const n=document.getElementById("moving-block"),o=document.getElementById("moving-bock-shadow");n&&document.addEventListener("mousemove",(function(e){const t=window.innerWidth,s=n.offsetWidth;let i=(e.clientX-s/2)/t*2;n.style.transform=`rotate(${i}deg)`;const a=window.getComputedStyle(document.documentElement).fontSize,l=a.slice(0,a.length-2),c=t/l,r=20,d=10,u=e.clientX/l,p=e.clientY/l;if(p<r+d){const e={x:u/(c/100),y:(p+d)/(r/100)-100},t={left:Math.abs(e.x-100)-100,right:e.x-100,top:Math.abs(e.y-100)},s=e=>e.reduce(((e,t)=>e+t),0)/e.length,n=.8;o.setAttribute("d",`M 0 ${n/100*s([t.left,t.top])} L 100 ${n/100*s([t.right,t.top])} L 100 100 L 0 100`)}}));const i=document.getElementById("yellow-moving-block");i&&document.addEventListener("mousemove",(function(e){const t=window.innerWidth,s=i.offsetWidth;let n=(e.clientX-s/2)/t*6;i.style.transform=`rotate(${n}deg)`}));let a=!1;document.addEventListener("mousemove",(function(e){let t=document.getElementById("parent");if(t){let s=document.getElementById("follower"),n=t.getBoundingClientRect(),o=e.clientX-n.left-s.offsetWidth;o=Math.max(0,Math.min(o,n.width-s.offsetWidth)),a||(a=!0,s.style.transform="translateX("+o+"px)",setTimeout((function(){a=!1}),500))}}));const l=document.getElementsByClassName("elephant-more-down-button"),c=document.getElementsByClassName("elephant-more-up-button");for(let e=0;e<l.length;e++)l[e].addEventListener("click",(function(){const e=this.nextElementSibling;this.classList.contains("active-js")?this.classList.remove("active-js"):this.classList.add("active-js"),e.classList.contains("active-js")?e.classList.remove("active-js"):e.classList.add("active-js")}));document.querySelectorAll(".year-text").forEach((function(e){e.addEventListener("click",(function(){const e=this.getAttribute("data-info"),t=document.getElementById(e);t&&t.classList.toggle("active-js")}))}));const r=document.getElementById("open-filter"),d=document.getElementById("close-filter"),u=document.getElementById("filter"),p=document.getElementById("filter-2");null!==r&&r.addEventListener("click",(function(){null!==u?u.classList.add("open-filter"):null!==p&&p.classList.add("open-filter")})),null!==d&&d.addEventListener("click",(function(){null!==u?u.classList.remove("open-filter"):null!==p&&p.classList.remove("open-filter")}));for(let e=0;e<c.length;e++)c[e].addEventListener("click",(function(){const e=this.previousElementSibling;this.classList.contains("active-js")?this.classList.remove("active-js"):this.classList.add("active-js"),e.classList.contains("active-js")?e.classList.remove("active-js"):e.classList.add("active-js")}))}));const buttonsPag=document.querySelector(".nav-btns"),nextButton=document.querySelector(".js-rm-pag-nav-page-more-bnt"),prevButton=document.querySelector(".js-rm-pag-nav-page-back-bnt");buttonsPag&&buttonsPag.addEventListener("click",(e=>{const t=buttonsPag.querySelector(".js-chosen-nav-btn"),s=e.target.closest(".js-rm-pag-nav-page-btn");if(s&&s!==t)return t&&t.classList.remove("js-chosen-nav-btn"),s.classList.add("js-chosen-nav-btn"),s.innerText})),nextButton&&nextButton.addEventListener("click",(e=>{const t=buttonsPag.querySelector(".js-chosen-nav-btn");t&&t.classList.remove("js-chosen-nav-btn"),t.nextElementSibling&&t.nextElementSibling.classList.add("js-chosen-nav-btn")})),prevButton&&prevButton.addEventListener("click",(e=>{const t=buttonsPag.querySelector(".js-chosen-nav-btn");t&&t.classList.remove("js-chosen-nav-btn"),t.previousElementSibling&&t.previousElementSibling.classList.add("js-chosen-nav-btn")}));
+//libraries like jquery etc
+
+
+// карточкам будет дан специальный класс - js_traceable_item,
+// а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
+// событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
+
+// по поводу изменения картинки при нажатии на сердечко
+// своя функция тут будет
+
+const addToFavBtns = document.getElementsByClassName(
+  'item_card_add_to_favourite'
+);
+for (let i = 0; i < addToFavBtns.length; i++) {
+  addToFavBtns[i].addEventListener('click', function () {
+    const button = this;
+    button.classList.toggle('js_pressed');
+  });
+}
+
+// функция для изменения фона рандомно для блока новостей и наград,
+
+const traceableItems = document.getElementsByClassName('js_traceable_item');
+for (let i = 0; i < traceableItems.length; i++) {
+  traceableItems[i].addEventListener('mouseenter', function (event) {
+    const colors = [
+      // остались цвета, гармонирующие с попапом
+      '#FFF145', // +
+      '#FF8500', // +
+      '#35CC66', // +
+      '#4498FC', // +
+      '#FF0053', // +
+    ];
+
+    function getRandomColor(colorArray) {
+      if (colorArray.length === 0) {
+        return '#ffffff';
+      }
+      const randomIndex = Math.floor(Math.random() * colorArray.length);
+      return colorArray[randomIndex];
+    }
+
+    this.style.backgroundColor = getRandomColor(colors);
+  });
+}
+
+for (let i = 0; i < traceableItems.length; i++) {
+  traceableItems[i].addEventListener('mouseleave', function (event) {
+    if (this.classList.contains('bgc-bgc')) {
+      this.style.backgroundColor = '#F5F5F5';
+    } else {
+      this.style.backgroundColor = 'white';
+    }
+  });
+}
+
+// bordered_tags_item-smalled добавляем к bordered_tags_item,
+// если ширина карточки 160рх,
+
+window.addEventListener('resize', function () {
+  const parentElements = document.querySelectorAll('.js_item_card');
+  parentElements.forEach((parentElement) => {
+    const parentWidth = parentElement.offsetWidth;
+    const borderedItems = parentElement.querySelectorAll('.bordered_tags_item');
+    if (borderedItems) {
+      borderedItems.forEach((item) => {
+        if (parentWidth <= 160) {
+          item.classList.add('bordered_tags_item-smalled');
+        } else {
+          item.classList.remove('bordered_tags_item-smalled');
+        }
+      });
+    }
+  });
+});
+
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
+});
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
+
+const popup = function Popup(el, triggerButton) {
+  this.el = el;
+  this.triggerButton = triggerButton;
+  this.open = false;
+
+  this.closeButton = this.el.querySelector('.ui-popup-close-button');
+
+  this.toggleActiveClass = () => {
+    this.el.classList.toggle('--active');
+  };
+
+  this.clickOutside = (e) => {
+    if (e.target === this.el) {
+      this.open = false;
+      this.toggleActiveClass();
+    }
+  };
+
+  this.triggerButton.addEventListener('click', () => {
+    this.open = true;
+    this.el.classList.add('--active');
+  });
+
+  this.closeButton.addEventListener('click', () => {
+    this.open = false;
+    this.el.classList.remove('--active');
+  });
+  document.addEventListener('click', this.clickOutside);
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape' && this.open) {
+      this.open = false;
+      this.el.classList.remove('--active');
+    }
+  });
+};
+
+const jsContactUsRuPopupButton = document.querySelector(
+  '.js_contact_us_ru_popup_button'
+);
+const jsPopupContactUsRuModal = document.querySelector(
+  '.js_popup_contact_us_ru_modal'
+);
+const jsContactUsEngPopupButton = document.querySelector(
+  '.js_contact_us_eng_popup_button'
+);
+const jsPopupContactUsEngModal = document.querySelector(
+  '.js_popup_contact_us_eng_modal'
+);
+const jsBlockchainRuPopupButton = document.querySelector(
+  '.js_blockchain_ru_popup_button'
+);
+const jsPopupBlockchainRuModal = document.querySelector(
+  '.js_popup_blockchain_ru_modal'
+);
+const jsBlockchainEngPopupButton = document.querySelector(
+  '.js_blockchain_eng_popup_button'
+);
+const jsPopupBlockchainEngModal = document.querySelector(
+  '.js_popup_blockchain_eng_modal'
+);
+const jsPopupBrandDescriptionButton = document.querySelector(
+  '.js_popup_brand_description_button'
+);
+const jsPopupBrandDescriptionModal = document.querySelector(
+  '.js_popup_brand_description_modal'
+);
+const jsPopupSurveyButton = document.querySelector('.js_popup_survey_button');
+const jsPopupSurveyModal = document.querySelector('.js_popup_survey_modal');
+const jsPopupCollaborationButton = document.querySelector(
+  '.js_popup_collaboration_button'
+);
+const jsPopupCollaborationModal = document.querySelector(
+  '.js_popup_collaboration_modal'
+);
+const jsPopupBrandChooseButton = document.querySelector(
+  '.js_popup_brand_choose_button'
+);
+const jsPopupBrandChooseModal = document.querySelector(
+  '.js_popup_brand_choose_modal'
+);
+
+const jsPopupBrandChooseListButton = document.querySelector(
+  '.js_popup_brand_choose_list_button'
+);
+const jsPopupBrandChooseListModal = document.querySelector(
+  '.js_popup_brand_choose_list_modal'
+);
+
+const jsPopupAllFiltersButton = document.querySelector(
+  '.js_popup_all_filters_button'
+);
+const jsPopupAllFiltersModal = document.querySelector(
+  '.js_popup_all_filters_modal'
+);
+
+const jsPopupBrandFiltersButton = document.querySelector(
+  '.js_popup_brand_filters_modal'
+);
+const jsPopupBrandFiltersModal = document.querySelector(
+  '.js_popup_brand_filters_button'
+);
+
+const jsPopupWishlistFiltersButton = document.querySelector(
+  '.js_popup_wishlist_filters_modal'
+);
+const jsPopupWishlistFiltersModal = document.querySelector(
+  '.js_popup_wishlist_filters_button'
+);
+
+const jsPopupWishlistSortButton = document.querySelector(
+  '.js_popup_wishlist_sort_modal'
+);
+const jsPopupWishlistSortModal = document.querySelector(
+  '.js_popup_wishlist_sort_button'
+);
+
+const popups = [
+  [jsPopupContactUsRuModal, jsContactUsRuPopupButton],
+  [jsPopupContactUsEngModal, jsContactUsEngPopupButton],
+  [jsPopupBlockchainRuModal, jsBlockchainRuPopupButton],
+  [jsPopupBlockchainEngModal, jsBlockchainEngPopupButton],
+  [jsPopupBrandDescriptionModal, jsPopupBrandDescriptionButton],
+  [jsPopupSurveyModal, jsPopupSurveyButton],
+  [jsPopupCollaborationModal, jsPopupCollaborationButton],
+  [jsPopupBrandChooseModal, jsPopupBrandChooseButton],
+  [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
+  [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
+  [jsPopupBrandFiltersButton, jsPopupBrandFiltersModal],
+  [jsPopupWishlistFiltersButton, jsPopupWishlistFiltersModal],
+  [jsPopupWishlistSortButton, jsPopupWishlistSortModal],
+];
+
+for (let i = 0; i < popups.length; i++) {
+  if (popups[i][0] && popups[i][1]) {
+    new popup(popups[i][0], popups[i][1]);
+  }
+}
+
+// функция для добавления класса через положение тогглера в true,
+// повесить слушатель событий,
+const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
+
+for (let i = 0; i < dropdownTogglers.length; i++) {
+  dropdownTogglers[i].addEventListener('click', function () {
+    const content = this.parentNode.parentNode.nextElementSibling;
+    if (this.classList.contains('active-js')) {
+      this.classList.remove('active-js');
+    } else {
+      this.classList.add('active-js');
+    }
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+      content.classList.add('active-js');
+    }
+  });
+}
+
+// функция для маски телефона
+let phoneNumber = document.querySelector('#phone');
+
+if (phoneNumber) {
+  phoneNumber.onclick = function () {
+    phoneNumber.value = '+';
+  };
+  var old = 0;
+  phoneNumber.onkeydown = function () {
+    var curLen = phoneNumber.value.length;
+    if (curLen < old) {
+      old--;
+      return;
+    }
+    if (curLen === 2) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 6) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 10) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 13) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen > 15)
+      phoneNumber.value = phoneNumber.value.substring(
+        0,
+        phoneNumber.value.length - 1
+      );
+    old++;
+  };
+}
+
+const brandPopupCheckboxes = document.querySelectorAll('.checkbox_overlay');
+
+if (brandPopupCheckboxes) {
+  for (let i = 0; i < brandPopupCheckboxes.length; i++) {
+    brandPopupCheckboxes[i].addEventListener('click', function (event) {
+      const checkboxPpb = this.nextElementSibling;
+      if (this.checked) {
+        checkboxPpb.style.display = 'block';
+      } else {
+        checkboxPpb.style.display = '';
+      }
+    });
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const rem = (16 / 100) * 65.2;
+
+  new Swiper('.js-toys-articles', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-articles-swiper-button-next',
+      prevEl: '.toys-articles-swiper-button-prev',
+    },
+
+    slidesPerView: 1.2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-brands', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-brands-swiper-button-next',
+      prevEl: '.toys-brands-swiper-button-prev',
+    },
+
+    slidesPerView: 1,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-event-tape', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-event-tape-swiper-button-next',
+      prevEl: '.toys-event-tape-swiper-button-prev',
+    },
+
+    slidesPerView: 2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      // 639: {
+      //   slidesPerView: 3,
+      // },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-bestsellers', {
+    loop: false,
+    navigation: {
+      nextEl: '.bestsellers-swiper-button-next',
+      prevEl: '.bestsellers-swiper-button-prev',
+    },
+    pagination: {
+      el: '.bestsellers-swiper-pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return (
+          '<span class="text-slider-fraction body-m ' +
+          currentClass +
+          '"></span>' +
+          ' ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m"> из </span> ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m ' +
+          totalClass +
+          '"></span>'
+        );
+      },
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-banner', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-swiper-button-next',
+      prevEl: '.toys-swiper-button-prev',
+    },
+    pagination: {
+      el: '.toys-swiper-pagination',
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  const swiper = new Swiper('.swiper', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      // настройки для разных разрешений
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  const personsSLider = new Swiper('.persons-slider', {
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 1.2,
+    spaceBetween: 24,
+    // breakpoints: {
+    //   320: {
+    //     slidesPerView: 2,
+    //   },
+    //   480: {
+    //     slidesPerView: 3,
+    //   },
+    //   640: {
+    //     slidesPerView: 4,
+    //   },
+    // },
+  });
+
+  const swiperImage = new Swiper('.swiper-image', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperText = new Swiper('.swiper-text', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    breakpoints: {
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+    },
+  });
+
+  const runStroke = new Swiper('.swiper-container', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+
+  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+});
+
+let largeImg = document.querySelector('.largeImg');
+let thumbs = document.querySelectorAll('.thumbs img');
+
+thumbs.forEach(function (thumb) {
+  thumb.addEventListener('click', function (event) {
+    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
+    event.preventDefault();
+    largeImg.src = thumb.getAttribute('src');
+    if (currentChosen) {
+      currentChosen.classList.remove('js-thumb-chosen');
+    }
+    thumb.classList.add('js-thumb-chosen');
+  });
+});
+
+// нужна функция, которая будет отслеживать нажатие на js-mdb,
+// после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
+// а у card-fp-trans появляется или удаляется card-fp-transparent-text,
+
+let jsMdb = document.querySelector('.js-mdb');
+let cardTextToHide = document.querySelector('.card-fp-hide');
+let cartToTrans = document.querySelector('.card-fp-trans');
+
+if (jsMdb) {
+  jsMdb.onclick = function (event) {
+    if (cardTextToHide) {
+      cardTextToHide.classList.toggle('js-card-fp-hidden-item');
+    }
+    if (cartToTrans) {
+      cartToTrans.classList.toggle('card-fp-transparent-text');
+    }
+  };
+}
+
+// для таба надо добавлять класс active-js, чтобы он подчеркивался
+const navButtons = document.querySelector('.navigation');
+
+if (navButtons) {
+  const descriptionComponent = document.querySelector('.card-fp-description');
+  const characteristicsComponent = document.querySelector(
+    '.card-fp-characteristics'
+  );
+  const instructionComponent = document.querySelector('.card-fp-instruction');
+
+  navButtons.addEventListener('click', (event) => {
+    event.preventDefault();
+    const currentChosen = navButtons.querySelector('.active-js');
+    const target = event.target.closest('.card-fullpage-tab');
+
+    if (!target || target === currentChosen) return;
+
+    if (currentChosen) {
+      currentChosen.classList.remove('active-js');
+    }
+    target.classList.add('active-js');
+
+    // Скрыть все компоненты
+    descriptionComponent.classList.add('hidden');
+    characteristicsComponent.classList.add('hidden');
+    instructionComponent.classList.add('hidden');
+
+    // Показать выбранный компонент
+    if (target.classList.contains('card-fp-tab-desc')) {
+      descriptionComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-char')) {
+      characteristicsComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-instr')) {
+      instructionComponent.classList.remove('hidden');
+    }
+  });
+}
+
+// для описания будет такая кнопка - js-mdb-desc
+// а для текста описания будет card-fp-desc-hidden-block
+// <div class="card-fullpage-desc-block card-fp-desc-hidden-block"></div>
+let jsMdbDescButton = document.querySelector('.js-mdb-desc-button');
+let jsDescriptionWrapper = document.querySelector(
+  '.js-card-fullpage-desc-description'
+);
+let jsItemsToHideDesc = document.querySelectorAll('.js-item-to-hide-desc');
+
+if (jsMdbDescButton) {
+  jsMdbDescButton.onclick = function (event) {
+    jsItemsToHideDesc.forEach((item) => {
+      item.classList.toggle('js-card-fp-hidden-item');
+    });
+    const isExpanded = jsMdbDescButton.innerText.includes('Свернуть описание');
+
+    if (isExpanded) {
+      jsDescriptionWrapper.classList.remove('gapped');
+      jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
+    } else {
+      jsDescriptionWrapper.classList.add('gapped');
+      jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
+    }
+
+    if (isExpanded) {
+      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+  };
+}
+
+let jsMdbAuthorButton = document.querySelector('.js-mdb-author-button');
+if (jsMdbAuthorButton) {
+  jsMdbAuthorButton.onclick = function (event) {
+    let prevElemSib = jsMdbAuthorButton.previousElementSibling;
+    prevElemSib.classList.toggle('hidden');
+    const isExpanded =
+      jsMdbAuthorButton.innerText.includes('Свернуть описание');
+
+    if (isExpanded) {
+      jsMdbAuthorButton.innerHTML = 'Развернуть описание<span></span>';
+    } else {
+      jsMdbAuthorButton.innerHTML = 'Свернуть описание<span></span>';
+    }
+  };
+}
+
+// убрать текст у видео при полной ширине экрана
+// const videoItems = document.querySelectorAll('.card_video_item');
+//
+// // Перебираем каждый элемент
+// if (videoItems) {
+//   videoItems.forEach((item) => {
+//     if (item.classList.contains('full-width')) {
+//       const titleElement = item.querySelector('.card_video_title');
+//       titleElement.style.display = 'none';
+//     }
+//   });
+// }
+
+// еще один слайдер
+const imageContainer = document.querySelector('.card-fullpage-image-container');
+const dots = document.querySelectorAll('.card-fullpage-dot');
+
+let currentImageIndex = 0;
+
+function setActiveImage(index) {
+  imageContainer.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentImageIndex = index;
+    setActiveImage(currentImageIndex);
+  });
+});
+
+// для описания книги, чтобы там было многоточие
+const jsBookToggleButton = document.querySelectorAll('.js-book-toggle-button');
+const jsBookTextContainer = document.querySelectorAll('.card-fp-desc-text-top');
+if (jsBookToggleButton && jsBookTextContainer) {
+  for (let i = 0; i < jsBookTextContainer.length; i++) {
+    jsBookToggleButton[i].addEventListener('click', function () {
+      jsBookTextContainer[i].classList.toggle('line-clamp-none');
+    });
+  }
+}
+
+// swiper fullpage
+const swiperImage2 = new Swiper('.swiper-image-2', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+  },
+});
+
+// Инициализация превью слайдера
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 5, // показывать по 3 превью
+  spaceBetween: 14, // расстояние между слайдами
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
+  },
+  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+    },
+    768: {
+      // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    },
+  },
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images .swiper-container-3', {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 14, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
+  },
+  grabCursor: true, // менять иконку курсора
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs, // указываем имя превью слайдера
+  },
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+    },
+    768: {
+      // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    },
+  },
+});
+
+// слайдер - смотреть фрагмент книги
+const swiperBookFragment = new Swiper('.swiper-book-fragment', {
+  loop: false,
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  allowTouchMove: false,
+  slidesPerView: 1,
+  spaceBetween: 16,
+});
+
+const sliderMain = document.querySelector('.slider-main');
+const sliderPages = document.querySelectorAll('.slider-page');
+
+if (sliderPages && sliderMain) {
+  sliderPages.forEach(function (sliderPage) {
+    sliderPage.textContent = sliderMain.value;
+  });
+  const max = sliderMain.max;
+  const step = 100 / (max - 1);
+  window.addEventListener('mousemove', function () {
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(sliderMain.value) - 1;
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+
+  sliderMain.addEventListener('input', function () {
+    const currentValue = parseInt(this.value);
+    if (currentValue > swiperBookFragment.slides.length) {
+      this.value = swiperBookFragment.slides.length;
+    }
+    const sliderValue = sliderMain.value;
+    sliderPages.forEach(function (sliderPage) {
+      sliderPage.textContent = sliderValue;
+    });
+
+    const slideNumber = parseInt(this.value) - 1;
+    if (slideNumber <= swiperBookFragment.slides.length) {
+      swiperBookFragment.slideTo(slideNumber);
+    }
+
+    const percentage = (slideNumber * step).toFixed(2);
+    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
+    sliderMain.style.background = color;
+  });
+}
+
+// тут кнопки для переключения слайдов,
+// события перестают генерироваться, если значение инпута больше количества слайдов
+const nextButtonFragment = document.querySelector('.bg-next-arrow');
+const prevButtonFragment = document.querySelector('.bg-prev-arrow');
+if (nextButtonFragment) {
+  nextButtonFragment.onclick = function () {
+    const nextValue = parseInt(sliderMain.value) + 1;
+    if (nextValue <= swiperBookFragment.slides.length) {
+      sliderMain.value = nextValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
+
+if (prevButtonFragment) {
+  prevButtonFragment.onclick = function () {
+    const prevValue = parseInt(sliderMain.value) - 1;
+    if (prevValue >= 1) {
+      sliderMain.value = prevValue;
+      const event = new Event('input');
+      sliderMain.dispatchEvent(event);
+      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
+    }
+  };
+}
+
+// скрипт для слежения за вводом в поля инпутов
+const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
+const remainingItemsContainer = document.querySelector('.js-remaining-items');
+const remainingItems = document.querySelectorAll('.js-remaining-item');
+let remainToFill = document.querySelector('.vac-0');
+
+inputFields.forEach((input) => {
+  input.addEventListener('input', function () {
+    const inputClass = input.classList[1];
+    const correspondingSpan = document.querySelector(
+      `.js-remaining-item.${inputClass}`
+    );
+
+    if (input.value.trim() !== '') {
+      correspondingSpan.style.display = 'none';
+    } else {
+      correspondingSpan.style.display = 'inline';
+    }
+    let allFieldsFilled = true;
+
+    inputFields.forEach(function (field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
+
+    if (allFieldsFilled) {
+      remainingItemsContainer.style.display = 'none';
+    } else {
+      remainingItemsContainer.style.display = 'block';
+    }
+  });
+});
+
+// добавляем класс сокрытия для ширины меньше 600 пикселей
+
+function toggleVisibility() {
+  const blocks = document.querySelectorAll('.js-vac-item');
+  const screenWidth = window.innerWidth;
+
+  blocks.forEach((block) => {
+    if (screenWidth <= 500) {
+      block.classList.add('js-card-fp-hidden-item');
+    } else {
+      block.classList.remove('js-card-fp-hidden-item');
+    }
+  });
+}
+
+window.addEventListener('resize', function handleResize() {
+  toggleVisibility();
+});
+
+window.addEventListener('load', function () {
+  toggleVisibility();
+});
+
+function toggleClassOnResize() {
+  const element = document.querySelector(".js-traceable-planet");
+  if (!element) {
+    return;
+  }
+
+  let currentClass = "z-0";
+
+  function updateClass() {
+    currentClass = currentClass === "z-0" ? "z-1" : "z-0";
+    element.classList.remove("z-0", "z-1");
+    element.classList.add(currentClass);
+  }
+
+  window.addEventListener("resize", updateClass);
+}
+
+toggleClassOnResize();
+
+window.addEventListener('DOMContentLoaded', () => {
+  // дропдаун добавление класса active-js с отслеживанием клика вне блока
+  const moreButtons = document.getElementsByClassName('more-down-button');
+
+  for (let i = 0; i < moreButtons.length; i++) {
+    moreButtons[i].addEventListener('click', function () {
+      const content = this.nextElementSibling;
+      if (this.classList.contains('active-js')) {
+        this.classList.remove('active-js');
+      } else {
+        this.classList.add('active-js');
+      }
+      if (content.classList.contains('active-js')) {
+        content.classList.remove('active-js');
+      } else {
+        // content.style.display = "block";
+        content.classList.add('active-js');
+      }
+    });
+  }
+  const navbar = document.querySelector('.navigation');
+  if (navbar) {
+    navbar.addEventListener('click', function (event) {
+      const contentNavBar =
+        document.getElementsByClassName('navigation-content');
+      const contentNavBarUl = document.querySelector('.nav-list');
+      const activeP = document.querySelector('p.active-js');
+      const p = contentNavBarUl.getElementsByTagName('p');
+      if (activeP != null) {
+        if (!activeP.contains(event.target)) {
+          for (let i = 0; i < p.length; i++) {
+            if (p[i].classList.contains('active-js')) {
+              p[i].classList.remove('active-js');
+            }
+          }
+        }
+      }
+      for (let i = 0; i < contentNavBar.length; i++) {
+        if (contentNavBar[i].id === event.target.classList.value) {
+          contentNavBar[i].classList.add('active-js');
+          contentNavBar[i].classList.remove('hide');
+        } else {
+          contentNavBar[i].classList.remove('active-js');
+          contentNavBar[i].classList.add('hide');
+        }
+      }
+      event.target.classList.add('active-js');
+    });
+  }
+
+  function closeBar() {
+    for (let i = 0; i < p.length; i++) {
+      if (p[i].classList.contains('active-js')) {
+        p[i].classList.remove('active-js');
+      }
+    }
+    for (let i = 0; i < contentNavBar.length; i++) {
+      contentNavBar[i].classList.remove('active-js');
+      contentNavBar[i].classList.add('hide');
+    }
+  }
+
+  document.addEventListener('click', function (event) {
+    const block = document.querySelector('.more-down-button.out.active-js');
+    const targetElement = event.target;
+    if (block != null) {
+      if (
+        !block.contains(targetElement) &&
+        !targetElement.parentNode.classList.contains('more-down-content')
+      ) {
+        for (let i = 0; i < moreButtons.length; i++) {
+          if (moreButtons[i].classList.contains('active-js')) {
+            moreButtons[i].nextElementSibling.classList.remove('active-js');
+            moreButtons[i].classList.remove('active-js');
+          }
+        }
+      }
+    }
+  });
+
+  const buttons = document.getElementsByClassName('collapse-button');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      const content = this.nextElementSibling;
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+      } else {
+        // Закрытие других активных контентов
+        const activeContent = document.querySelector(
+          '.collapse-content.active'
+        );
+
+        if (activeContent) {
+          activeContent.classList.remove('active');
+        }
+        content.classList.add('active');
+      }
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+      } else {
+        const activeBtn = document.querySelector('.collapse-button.active');
+        if (activeBtn) {
+          activeBtn.classList.remove('active');
+        }
+        this.classList.add('active');
+      }
+    });
+  }
+
+  const movingBlock = document.getElementById('moving-block');
+  const movingBlockShadow = document.getElementById('moving-bock-shadow');
+
+  if (movingBlock) {
+    document.addEventListener('mousemove', function (event) {
+      const windowWidth = window.innerWidth;
+      const blockWidth = movingBlock.offsetWidth;
+
+      // Вычисляем позицию блока на основе позиции мыши и ширины окна
+      let blockX = event.clientX - blockWidth / 2;
+
+      // Вычисляем наклон блока в зависимости от позиции мыши
+      let tilt = (blockX / windowWidth) * 2;
+
+      // Применяем наклон к блоку с помощью свойства transform
+      movingBlock.style.transform = `rotate(${tilt}deg)`;
+
+      const computedFontSize = window.getComputedStyle(
+        document.documentElement
+      ).fontSize;
+
+      const computedFontSizeNumber = computedFontSize.slice(
+        0,
+        computedFontSize.length - 2
+      );
+
+      const avaliableCursorArea = {
+        width: windowWidth / computedFontSizeNumber,
+        height: 20,
+        heightCompensator: 10,
+      };
+
+      const cursorPosition = {
+        x: event.clientX / computedFontSizeNumber,
+        y: event.clientY / computedFontSizeNumber,
+      };
+
+      if (
+        cursorPosition.y <
+        avaliableCursorArea.height + avaliableCursorArea.heightCompensator
+      ) {
+        const cursorPositionInTheAreaInPercent = {
+          x: cursorPosition.x / (avaliableCursorArea.width / 100),
+          y:
+            (cursorPosition.y + avaliableCursorArea.heightCompensator) /
+              (avaliableCursorArea.height / 100) -
+            100,
+        };
+
+        const averageCoordinates = {
+          left: Math.abs(cursorPositionInTheAreaInPercent.x - 100) - 100,
+          right: cursorPositionInTheAreaInPercent.x - 100,
+          top: Math.abs(cursorPositionInTheAreaInPercent.y - 100),
+        };
+
+        const getAveragePercentage = (arr) => {
+          return arr.reduce((a, b) => a + b, 0) / arr.length;
+        };
+
+        const shadowFractionToShift = 0.8;
+
+        movingBlockShadow.setAttribute(
+          'd',
+          `M 0 ${
+            (shadowFractionToShift / 100) *
+            getAveragePercentage([
+              averageCoordinates.left,
+              averageCoordinates.top,
+            ])
+          } L 100 ${
+            (shadowFractionToShift / 100) *
+            getAveragePercentage([
+              averageCoordinates.right,
+              averageCoordinates.top,
+            ])
+          } L 100 100 L 0 100`
+        );
+      }
+    });
+  }
+
+  function toggleSearch() {
+    let mobileMenu = document.getElementById('mobile-menu');
+    let headerNav = document.querySelector('.header-nav');
+    let searchInput = document.querySelector('.search-input');
+    let input = document.querySelector('.search-input input');
+    input.value = '';
+    let headerbtn = document.querySelector('.header-btn');
+    if (headerNav.classList.contains('hide')) {
+      headerNav.classList.remove('hide');
+      headerbtn.classList.remove('hide-mobile');
+      headerbtn.classList.remove('hide-icon');
+    } else {
+      headerNav.classList.add('hide');
+      headerbtn.classList.add('hide-mobile');
+      headerbtn.classList.add('hide-icon');
+    }
+    if (searchInput.classList.contains('hide')) {
+      searchInput.classList.remove('hide');
+    } else {
+      searchInput.classList.add('hide');
+    }
+
+    if (mobileMenu.classList.contains('hide')) {
+      mobileMenu.classList.remove('hide');
+    } else {
+      mobileMenu.classList.add('hide');
+    }
+  }
+
+  function changeLang(lang) {
+    let eng = document.querySelectorAll('.eng-lang');
+    let rus = document.querySelectorAll('.rus-lang');
+    for (let i = 0; i < rus.length; i++) {
+      if (lang === 'eng') {
+        rus[i].classList.remove('active-js');
+        eng[i].classList.add('active-js');
+      } else {
+        rus[i].classList.add('active-js');
+        eng[i].classList.remove('active-js');
+      }
+    }
+  }
+
+  const yellowMovingBlock = document.getElementById('yellow-moving-block');
+  if (yellowMovingBlock) {
+    document.addEventListener('mousemove', function (event) {
+      const windowWidth = window.innerWidth;
+      const blockWidth = yellowMovingBlock.offsetWidth;
+
+      // Вычисляем позицию блока на основе позиции мыши и ширины окна
+      let blockX = event.clientX - blockWidth / 2;
+
+      // Вычисляем наклон блока в зависимости от позиции мыши
+      let tilt = (blockX / windowWidth) * 6;
+
+      // Применяем наклон к блоку с помощью свойства transform
+      yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
+    });
+  }
+
+  let isMoving = false;
+
+  document.addEventListener('mousemove', function (event) {
+    let parent = document.getElementById('parent');
+    if (parent) {
+      let follower = document.getElementById('follower');
+      let parentRect = parent.getBoundingClientRect();
+      let x = event.clientX - parentRect.left;
+      let newX = x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
+      newX = Math.max(
+        0,
+        Math.min(newX, parentRect.width - follower.offsetWidth)
+      );
+
+      if (!isMoving) {
+        isMoving = true;
+        follower.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+
+        setTimeout(function () {
+          isMoving = false;
+        }, 500); // Задержка в 200 миллисекунд
+      }
+    }
+  });
+
+  function scrollContent(direction) {
+    let container = document.getElementById('elephant-container');
+    let content = document.getElementById('elephant-slider');
+
+    if (direction === 'left') {
+      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+    } else if (direction === 'right') {
+      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+    }
+  }
+
+  const elephantDownButtons = document.getElementsByClassName(
+    'elephant-more-down-button'
+  );
+  const elephantUpButtons = document.getElementsByClassName(
+    'elephant-more-up-button'
+  );
+
+  for (let i = 0; i < elephantDownButtons.length; i++) {
+    elephantDownButtons[i].addEventListener('click', function () {
+      const content = this.nextElementSibling;
+      if (this.classList.contains('active-js')) {
+        this.classList.remove('active-js');
+      } else {
+        this.classList.add('active-js');
+      }
+      if (content.classList.contains('active-js')) {
+        content.classList.remove('active-js');
+      } else {
+        // content.style.display = "block";
+        content.classList.add('active-js');
+      }
+    });
+  }
+  ////////////////////////////////
+  // второй вариант истории Росмэна со слоном
+
+  const yearTexts = document.querySelectorAll('.year-text');
+  yearTexts.forEach(function (yearText) {
+    yearText.addEventListener('click', function () {
+      const dataInfo = this.getAttribute('data-info');
+      const infoBlock = document.getElementById(dataInfo);
+      if (infoBlock) {
+        infoBlock.classList.toggle('active-js');
+      }
+    });
+  });
+
+  ///////////////////////////
+
+  const filterOpen = document.getElementById('open-filter');
+  const filterClose = document.getElementById('close-filter');
+  const filter = document.getElementById('filter');
+  const filter2 = document.getElementById('filter-2');
+  if (filterOpen !== null) {
+    filterOpen.addEventListener('click', function () {
+      if (filter !== null) {
+        filter.classList.add('open-filter');
+      } else if (filter2 !== null) {
+        filter2.classList.add('open-filter');
+      }
+    });
+  }
+  if (filterClose !== null) {
+    filterClose.addEventListener('click', function () {
+      if (filter !== null) {
+        filter.classList.remove('open-filter');
+      } else if (filter2 !== null) {
+        filter2.classList.remove('open-filter');
+      }
+    });
+  }
+
+  for (let i = 0; i < elephantUpButtons.length; i++) {
+    elephantUpButtons[i].addEventListener('click', function () {
+      const content = this.previousElementSibling;
+      if (this.classList.contains('active-js')) {
+        this.classList.remove('active-js');
+      } else {
+        this.classList.add('active-js');
+      }
+      if (content.classList.contains('active-js')) {
+        content.classList.remove('active-js');
+      } else {
+        // content.style.display = "block";
+        content.classList.add('active-js');
+      }
+    });
+  }
+});
+
+const buttonsPag = document.querySelector('.nav-btns');
+const nextButton = document.querySelector('.js-rm-pag-nav-page-more-bnt');
+const prevButton = document.querySelector('.js-rm-pag-nav-page-back-bnt');
+
+if (buttonsPag) {
+  buttonsPag.addEventListener('click', (event) => {
+    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+    const target = event.target.closest('.js-rm-pag-nav-page-btn');
+
+    if (!target || target === currentChosen) return;
+
+    if (currentChosen) {
+      currentChosen.classList.remove('js-chosen-nav-btn');
+    }
+    target.classList.add('js-chosen-nav-btn');
+    return target.innerText;
+  });
+}
+// добавил для переключения страницы вперёд и назад
+if (nextButton) {
+  nextButton.addEventListener('click', (event) => {
+    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+    if (currentChosen) {
+      currentChosen.classList.remove('js-chosen-nav-btn');
+    }
+    if (currentChosen.nextElementSibling) {
+      currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
+    }
+  });
+}
+
+if (prevButton) {
+  prevButton.addEventListener('click', (event) => {
+    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+    if (currentChosen) {
+      currentChosen.classList.remove('js-chosen-nav-btn');
+    }
+    if (currentChosen.previousElementSibling) {
+      currentChosen.previousElementSibling.classList.add('js-chosen-nav-btn');
+    }
+  });
+}
+
