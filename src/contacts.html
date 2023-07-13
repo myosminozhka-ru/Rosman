@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Контакты</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
   <body class=>
     @@include('components/header/header.html')
@@ -50,7 +53,7 @@
           </div>
         </div>
 
-        <div id='map' style='width: 100%; height: 504px;'></div>
+        <div id="map" style="width: 100%; height: 504px"></div>
         <div
           class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
         >
@@ -124,7 +127,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
       const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL

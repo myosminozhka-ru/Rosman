@@ -1,32 +1,29 @@
 .loader {
-    @apply absolute z-10 inset-0 bg-white opacity-80;
+  @apply absolute inset-0 z-10 bg-white opacity-80;
 
-
-    &-img {
-        @apply absolute w-40 h-40 block top-32 left-[50%] translate-x-0.5;
-        background-image: url('../../img/progress-circle-big.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        animation: rotating 2s linear infinite;
-         
-    }
+  &-img {
+    @apply absolute left-[50%] top-32 block h-40 w-40 translate-x-0.5;
+    background-image: url('../../img/progress-circle-big.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: rotating 2s linear infinite;
+  }
 }
 
-
-@-webkit-keyframes rotating  {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

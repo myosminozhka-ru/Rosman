@@ -376,10 +376,10 @@ button {
   }
 
   a {
-    @apply mr-8 text-text text-xl;
+    @apply mr-8 text-xl text-text;
 
     &.active-js {
-      @apply text-black ;
+      @apply text-black;
     }
 
     &:hover {
@@ -455,11 +455,11 @@ button {
 }
 
 .dropdown {
-  @apply relative flex items-center  max-w-menu border-2 border-black bg-yellow py-8 px-10;
+  @apply relative flex max-w-menu  items-center border-2 border-black bg-yellow px-10 py-8;
   // width: 14.4rem;
 
   button {
-    @apply flex w-full flex-row items-center gap-8 text-l p-0;
+    @apply flex w-full flex-row items-center gap-8 p-0 text-l;
   }
 
   .icon {

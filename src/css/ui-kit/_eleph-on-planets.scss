@@ -105,7 +105,6 @@
   animation-direction: reverse;
 }
 
-
 .planet-secondary-right {
   animation: rotate-secondary 6s linear infinite;
   flex-basis: 40rem;
@@ -176,7 +175,6 @@
   }
 }
 
-
 .elephant-central-img-2 {
   position: absolute;
   left: 50%;
@@ -213,7 +211,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 ///////////// левый слон
 @keyframes toggleVisibility {
@@ -254,7 +251,6 @@
 .elephant-planet-left-img {
   animation: toggleVisibility 18s linear infinite;
 }
-
 
 /////////////////// центральный слон
 @keyframes toggleVisibility2 {
@@ -308,7 +304,6 @@
   animation: toggleVisibility2 18s linear infinite;
 }
 
-
 /// правый слон
 @keyframes toggleVisibility3 {
   0% {
@@ -344,7 +339,6 @@
 .elephant-planet-right-img {
   animation: toggleVisibility3 18s linear infinite;
 }
-
 
 .elephant-planet-left-img-small {
   animation: toggleVisibility-left-small 18s linear infinite;
@@ -383,7 +377,6 @@
     opacity: 0;
     visibility: hidden;
   }
-
 }
 
 .elephant-planet-central-img-small {
