@@ -481,6 +481,18 @@
   margin-bottom: 6.4rem;
   &.books-slider {
     height: 84.9rem;
+    &.elephant {
+      height: 90rem;
+      @media screen and (min-width: 1200px) {
+        height: 80rem;
+      }
+      @media screen and (max-width: 900px) {
+        height: 95rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 80rem;
+      }
+    }
   }
 }
 
@@ -490,6 +502,15 @@
   margin: 0;
   &.books-slider {
     height: 65.9rem;
+    &.elephant {
+      height: 70rem;
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
   }
 }
 
