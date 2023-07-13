@@ -93,7 +93,7 @@ const swiperAllVac = new Swiper('.swiper-image-gallery-allvac', {
       slidesPerView: 3,
     },
     0: {
-      slidesPerView: 1.75,
+      slidesPerView: 'auto',
       spaceBetween: 16,
     },
   },
@@ -118,7 +118,7 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
       slidesPerView: 2,
     },
     0: {
-      slidesPerView: 'auto',
+      slidesPerView: 1.2,
       spaceBetween: 16,
     },
   },
