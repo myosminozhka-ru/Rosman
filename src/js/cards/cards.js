@@ -75,6 +75,16 @@ window.addEventListener('resize', function () {
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const allImagePopups = document.querySelectorAll('.image-popup');
 
+window.addEventListener('click', function (event) {
+  const jsActivePopup = document.querySelector('.js-active-popup');
+  if (jsActivePopup) {
+    document.body.style.overflow = 'hidden';
+    console.log(jsActivePopup);
+  } else if (!jsActivePopup) {
+    document.body.style.overflow = 'visible';
+  }
+});
+
 if (popupTriggers) {
   popupTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
