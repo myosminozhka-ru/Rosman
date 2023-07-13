@@ -3,9 +3,9 @@
   max-width: max-content;
 }
 
-#above-block.card-fullpage-modified-above-block {
-  @apply p-0;
-}
+//#above-block.card-fullpage-modified-above-block {
+//  @apply p-0;
+//}
 
 .card-fp-desc-brand-content-small {
   @apply flex-row-reverse items-center gap-32 bg-background py-18;
@@ -37,12 +37,11 @@
 }
 
 .book-card-fp-author {
-  @apply flex flex-row gap-32 sm:flex-col;
+  @apply flex flex-row gap-32 sm:flex-col sm:gap-16;
 }
 
 .author-avatar {
-  width: 8.8rem;
-  height: 8.8rem;
+  @apply w-[8.8rem] h-[8.8rem] aspect-square rounded-full sm:w-48 sm:h-48;
 }
 
 .author-avatar img {
@@ -80,7 +79,7 @@
 }
 
 .card-fullpage-filter-link {
-  @apply inline-block px-12 py-4;
+  @apply px-12 py-4 inline-block font-medium text-s;
   border-radius: 1.5rem;
   border: 1px solid black;
 

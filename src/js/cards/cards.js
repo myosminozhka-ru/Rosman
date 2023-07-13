@@ -70,3 +70,38 @@ window.addEventListener('resize', function () {
     }
   });
 });
+
+// код для того, чтобы при тыке на картинку открывалась большая картинка
+const popupTriggers = document.querySelectorAll('.popup-trigger');
+const allImagePopups = document.querySelectorAll('.image-popup');
+
+if (popupTriggers) {
+  popupTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const imageUrl = trigger.getAttribute('data-popup-image');
+      trigger.nextElementSibling.firstElementChild.firstElementChild.setAttribute(
+        'src',
+        imageUrl
+      );
+      trigger.nextElementSibling.classList.add('js-active-popup');
+    });
+  });
+}
+
+if (allImagePopups) {
+  allImagePopups.forEach((imagePopup) => {
+    const closeButton = imagePopup.querySelector('.close-button');
+
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        imagePopup.classList.remove('js-active-popup');
+      });
+    }
+
+    imagePopup.addEventListener('click', (event) => {
+      if (event.target === imagePopup) {
+        imagePopup.classList.remove('js-active-popup');
+      }
+    });
+  });
+}

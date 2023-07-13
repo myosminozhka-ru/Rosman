@@ -150,14 +150,12 @@ dots.forEach((dot, index) => {
 });
 
 // для описания книги, чтобы там было многоточие
-const jsBookToggleButton = document.querySelectorAll('.js-book-toggle-button');
-const jsBookTextContainer = document.querySelectorAll('.card-fp-desc-text-top');
+const jsBookToggleButton = document.querySelector('.js-book-toggle-button');
+const jsBookTextContainer = document.querySelector('.card-fp-desc-text-top');
 if (jsBookToggleButton && jsBookTextContainer) {
-  for (let i = 0; i < jsBookTextContainer.length; i++) {
-    jsBookToggleButton[i].addEventListener('click', function () {
-      jsBookTextContainer[i].classList.toggle('line-clamp-none');
-    });
-  }
+  jsBookToggleButton.addEventListener('click', function () {
+    jsBookTextContainer.classList.toggle('line-clamp-none');
+  });
 }
 
 // swiper fullpage
@@ -175,31 +173,59 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
   breakpoints: {
     950: {
       slidesPerView: 4,
-      spaceBetween: 16,
+      spaceBetween: 25,
     },
     600: {
       slidesPerView: 3,
-      spaceBetween: 8,
+      spaceBetween: 16,
     },
     0: {
       slidesPerView: 2,
-      spaceBetween: 8,
+      spaceBetween: 16,
     },
   },
 });
 
-// Инициализация превью слайдера
+const swiperImageGallery = new Swiper('.swiper-image-gallery', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    0: {
+      slidesPerView: 2.3,
+      spaceBetween: 16,
+    },
+  },
+});
+
+// Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
-  spaceBetween: 14, // расстояние между слайдами
+  spaceBetween: 5, // расстояние между слайдами
   navigation: {
     // задаем кнопки навигации
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev', // кнопка Prev
   },
+  clickable: true,
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
   breakpoints: {
     // условия для разных размеров окна браузера
@@ -210,11 +236,87 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
     768: {
       // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
+      spaceBetween: 5.5,
+    },
+    1300: {
+      spaceBetween: 9.5,
+    },
+    1200: {
+      spaceBetween: 8.5,
+    },
+    1000: {
+      spaceBetween: 7.5,
+    },
+    900: {
+      spaceBetween: 6.5,
     },
   },
 });
 // Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container-3', {
+const sliderImages = new Swiper('.slider__images .swiper-container-4', {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  on: {
+    slideChange: function () {
+      console.log(sliderImages.activeIndex);
+      if (sliderImages.activeIndex > sliderImages.previousIndex) {
+        const currentChosen = document.querySelector('.js-thumb-chosen');
+        const nextElement =
+          currentChosen.parentElement.nextElementSibling.firstElementChild;
+        console.log(nextElement);
+        currentChosen.classList.toggle('js-thumb-chosen');
+        currentChosen.classList.toggle('p-4');
+        nextElement.classList.toggle('js-thumb-chosen');
+        nextElement.classList.toggle('p-4');
+      } else if (sliderImages.activeIndex < sliderImages.previousIndex) {
+        const currentChosen = document.querySelector('.js-thumb-chosen');
+        const prevElement =
+          currentChosen.parentElement.previousElementSibling.firstElementChild;
+        console.log(prevElement);
+        currentChosen.classList.toggle('js-thumb-chosen');
+        currentChosen.classList.toggle('p-4');
+        prevElement.classList.toggle('js-thumb-chosen');
+        prevElement.classList.toggle('p-4');
+      }
+    },
+  },
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 14, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
+  },
+  pagination: {
+    //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
+  grabCursor: true, // менять иконку курсора
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs, // указываем имя превью слайдера
+  },
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+      mousewheel: false,
+      pagination: false,
+    },
+    768: {
+      // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+      pagination: false,
+      mousewheel: true,
+    },
+  },
+});
+
+const sliderImagesMob = new Swiper('.swiper-container-5', {
   // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
@@ -226,6 +328,11 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', {
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev', // кнопка Prev
   },
+  pagination: {
+    //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
   grabCursor: true, // менять иконку курсора
   thumbs: {
     // указываем на превью слайдер
@@ -236,10 +343,20 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', {
     0: {
       // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination-2',
+      },
+      slidesPerView: 1,
     },
     768: {
       // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
+      pagination: {
+        el: '.swiper-pagination-2',
+        clickable: true,
+      },
+      mousewheel: true,
     },
   },
 });
@@ -267,7 +384,7 @@ if (sliderPages && sliderMain) {
   });
   const max = sliderMain.max;
   const step = 100 / (max - 1);
-  window.addEventListener('mousemove', function () {
+  window.addEventListener('load', function () {
     const sliderValue = sliderMain.value;
     sliderPages.forEach(function (sliderPage) {
       sliderPage.textContent = sliderValue;
@@ -327,3 +444,79 @@ if (prevButtonFragment) {
     }
   };
 }
+
+// код для навешивания синего бордера на элемент
+function chooseSwiperItem() {
+  const slideVisibleElements = document.querySelectorAll(
+    '.swiper-slide-visible'
+  );
+
+  slideVisibleElements.forEach(function (slideElement) {
+    const imageElement = slideElement.querySelector(
+      '.slider__image, .slider__image-book'
+    );
+    if (imageElement) {
+      slideElement.addEventListener('click', function () {
+        slideVisibleElements.forEach(function (el) {
+          el.querySelector(
+            '.slider__image, .slider__image-book'
+          ).classList.remove('js-thumb-chosen');
+          el.querySelector(
+            '.slider__image, .slider__image-book'
+          ).classList.remove('p-4');
+        });
+
+        // Toggle classes on clicked element
+        imageElement.classList.toggle('js-thumb-chosen');
+        imageElement.classList.toggle('p-4');
+      });
+    }
+  });
+}
+
+// функция для выставления высоты колонки слайдеров
+function updateSliderColHeight() {
+  const sliderImages = document.querySelector('.slider__images');
+  const sliderCol = document.querySelector('.slider__col');
+  if (sliderImages && sliderCol) {
+    const sliderImagesHeight = sliderImages.offsetHeight;
+    sliderCol.style.maxHeight = `${sliderImagesHeight}px`;
+  }
+}
+
+function chooseSliderByButton() {
+  const prevButton = document.querySelector('.slider__prev');
+  const nextButton = document.querySelector('.slider__next');
+
+  prevButton.onclick = function (event) {
+    const currentChosen = document.querySelector('.js-thumb-chosen');
+    const prevElement =
+      currentChosen.parentElement.previousElementSibling.firstElementChild;
+    console.log(prevElement);
+    currentChosen.classList.toggle('js-thumb-chosen');
+    currentChosen.classList.toggle('p-4');
+    prevElement.classList.toggle('js-thumb-chosen');
+    prevElement.classList.toggle('p-4');
+  };
+  nextButton.onclick = function (event) {
+    const currentChosen = document.querySelector('.js-thumb-chosen');
+    const nextElement =
+      currentChosen.parentElement.nextElementSibling.firstElementChild;
+    console.log(nextElement);
+    currentChosen.classList.toggle('js-thumb-chosen');
+    currentChosen.classList.toggle('p-4');
+    nextElement.classList.toggle('js-thumb-chosen');
+    nextElement.classList.toggle('p-4');
+  };
+}
+
+window.onload = function () {
+  updateSliderColHeight();
+  chooseSwiperItem();
+  chooseSliderByButton();
+};
+
+window.onresize = function () {
+  updateSliderColHeight();
+  chooseSwiperItem();
+};
