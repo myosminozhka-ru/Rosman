@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Книги. Карточка товара.</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+@@include('components/header/header-books.html', { }, )
+<div class="card-fullpage">
+  <div
+    id="yellow-background"
+    class="card-fullpage-modified-yellow-background"
+  >
+    <div id="moving-block">
+      <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+        <g>
+          <path
+            id="moving-bock-shadow"
+            d="M 0 0 L 100 0 L 100 100 L 0 100"
+            fill="white"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="card-fullpage-modified-above-block">
+      <!--    тут будет контент по карточке    -->
+
+      <!--   модалка - связаться с нами   -->
+      <div class="js_popup_contact_us_ru_modal modal">
+        <div class="popup_contact_us_content modal-content">
+          <div class="popup_contact_us_header">
+            <div class="popup_contact_us_text">Свяжитесь с нами</div>
+            <span
+              class="js_popup_contact_us_close_button ui-popup-close-button"
+            ></span>
+          </div>
+          <div class="js_contact_us_popup_body">
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Письмо директору</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../..//img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Заявка на партнерство</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Отправить резюме</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Подписаться на рассылку</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">СМИ</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">Блогерам</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Задать вопрос по игрушкам</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-box js_contact_us_ru_popup_button !fixed hidden">
+        <span></span>
+        <div class="custom-before"></div>
+        <div>Написать нам</div>
+        <div class="custom-after"></div>
+      </div>
+      <!--      -->
+
+      <div class="flex flex-col">
+        <div
+          class="card-fullpage-filter-links mb-0 mb-16 mt-24 px-24 sm:mt-16 sm:px-12"
+        >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >0-3</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >4-6</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >7-9</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >10-15</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >15+</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Новинки</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Хиты</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Случайная книга</a
+          >
+        </div>
+
+        <div
+          class="flex items-center justify-between px-24 pb-24 sm:px-12 sm:pb-16"
+        >
+          <p class="breadcrumbs">
+            <a class="text-s" href="#">Главная </a><span>/</span>
+            <a class="text-s" href="#">Книги </a><span>/</span>
+            <a class="text-s !text-black" href="#">Каталог проектов </a>
+          </p>
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">/</div>
+            <div class="breadcrumbs-small-screen-path">Книги</div>
+            <span>/</span>
+            <div class="breadcrumbs-small-screen-path !text-black">
+              Каталог проектов
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-24 sm:px-12 mb-64 sm:mb-48 flex flex-col gap-64 sm:gap-24">
+        <h1 class="head-1">Случайная книга</h1>
+        <div class="grid grid-cols-3 gap-x-16 px-[12rem] bsmax:px-[9rem] bs:px-0">
+          <div class="max-w-[29rem] h-max more-down-filters">
+            <button class="more-down-button new">
+              Выберите жанр<span></span>
+            </button>
+            <!--  more-down -->
+            <div class="more-down-content !p-16">
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="genre-1"
+                />
+                <label
+                  for="genre-1"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>Художественная литература для детей</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="genre-2"
+                />
+                <label
+                  for="genre-2"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>Подготовка к школе и развивающие пособия</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="genre-3"
+                />
+                <label
+                  for="genre-3"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>Детские энциклопедии</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="genre-4"
+                />
+                <label
+                  for="genre-4"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>Раскраски</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[29rem] h-max more-down-filters">
+            <button class="more-down-button new">
+              Выберите возраст<span></span>
+            </button>
+            <!--  more-down -->
+            <div class="more-down-content !p-16">
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="age-1"
+                />
+                <label
+                  for="age-1"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>0+</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="age-2"
+                />
+                <label
+                  for="age-2"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>1+</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="age-3"
+                />
+                <label
+                  for="age-3"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>5+</span>
+                </label>
+              </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="age-4"
+                />
+                <label
+                  for="age-4"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>7+</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="max-w-[29rem] max-h-[4rem] button-black">Подобрать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- тут ниже футер -->
+
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script type="module" src="./js/scripts.js"></script>
+</body>
+</html>
