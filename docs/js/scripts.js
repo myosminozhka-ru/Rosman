@@ -1,6 +1,5 @@
 //libraries like jquery etc
 
-
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -1655,4 +1654,3 @@ if (prevButton) {
     }
   });
 }
-
