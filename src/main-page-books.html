@@ -39,17 +39,24 @@
         </div>
 
         @@include('components/ui-kit/breadcrumbs/index.html', { }, )
-        <div class="grid h-[53.5rem] grid-cols-4 grid-rows-4 px-24 gap-16  md:flex md:flex-col md:h-full">
+        <div
+          class="grid h-[53.5rem] grid-cols-4 grid-rows-4 gap-16 px-24 md:flex md:h-full md:flex-col"
+        >
           <div class="col-span-2 row-span-4">
             <div class="card_selection js_traceable_item">
-              <a href="#" class="card_selection_image item_card_image h-[31.7rem]">
+              <a
+                href="#"
+                class="card_selection_image item_card_image h-[31.7rem]"
+              >
                 <img
                   src="../../img/cards_selection.svg"
                   alt=""
                   class="selection_card_img item_card_img"
                 />
               </a>
-              <div class="card_selection_description js-bg-changeable h-220 md:border-0">
+              <div
+                class="card_selection_description js-bg-changeable h-220 md:border-0"
+              >
                 <div class="card_selection_tags dotted_tags">
                   <a
                     href="#"
@@ -64,7 +71,10 @@
                     >30.11.2022</a
                   >
                 </div>
-                <a href="#" class="card_selection_info card_sel_info overflow-hidden">
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info overflow-hidden"
+                >
                   <div class="card_selection_name card_sel_name">
                     Новая книга Джона Смита стала бестселлером за первую неделю
                     продаж!
@@ -80,7 +90,9 @@
             </div>
           </div>
           <div class="row-span-4">
-            <div class="card_articles js_traceable_item h-260 md:h-[29rem] overflow-hidden">
+            <div
+              class="card_articles js_traceable_item h-260 overflow-hidden md:h-[29rem]"
+            >
               <a href="#" class="card_articles_image item_card_image h-130">
                 <img
                   src="../../img/cards_articles.svg"
@@ -88,7 +100,9 @@
                   class="articles_card_img item_card_img"
                 />
               </a>
-              <div class="card_articles_description js-bg-changeable h-130 md:h-[14rem]">
+              <div
+                class="card_articles_description js-bg-changeable h-130 md:h-[14rem]"
+              >
                 <div class="card_articles_tags dotted_tags">
                   <a
                     href="#"
@@ -103,7 +117,10 @@
                     >30.11.2022</a
                   >
                 </div>
-                <a href="#" class="card_articles_info card_sel_info overflow-hidden">
+                <a
+                  href="#"
+                  class="card_articles_info card_sel_info overflow-hidden"
+                >
                   <div class="card_articles_name card_sel_name">
                     Известный автор выпустил свою самую личную и чувственную
                     книгу
@@ -117,7 +134,9 @@
                 </a>
               </div>
             </div>
-            <div class="card_articles js_traceable_item h-260 md:h-[29rem] overflow-hidden mt-16">
+            <div
+              class="card_articles js_traceable_item mt-16 h-260 overflow-hidden md:h-[29rem]"
+            >
               <a href="#" class="card_articles_image item_card_image h-130">
                 <img
                   src="../../img/cards_articles.svg"
@@ -125,7 +144,9 @@
                   class="articles_card_img item_card_img"
                 />
               </a>
-              <div class="card_articles_description js-bg-changeable h-130 md:h-[14rem] overflow-hidden">
+              <div
+                class="card_articles_description js-bg-changeable h-130 overflow-hidden md:h-[14rem]"
+              >
                 <div class="card_articles_tags dotted_tags">
                   <a
                     href="#"
@@ -140,7 +161,10 @@
                     >30.11.2022</a
                   >
                 </div>
-                <a href="#" class="card_articles_info card_sel_info overflow-hidden">
+                <a
+                  href="#"
+                  class="card_articles_info card_sel_info overflow-hidden"
+                >
                   <div class="card_articles_name card_sel_name">
                     Известный автор выпустил свою самую личную и чувственную
                     книгу
@@ -254,10 +278,17 @@
             </div>
           </div>
         </div>
-        <div class='grid grid-cols-4 py-16 px-24'><div class='col-span-3'>Все статьи</div> <div class='col-span-1'>Все Новости</div></div>
-        <div class="swiper">
-          <div class="swiper-header !w-full">
-            <div class="flex px-24">
+        <div class="grid grid-cols-4 px-24 py-16">
+          <div class="col-span-3 md:hidden">
+            <a href="#" class="link-m"> Все статьи </a>
+          </div>
+          <div class="col-span-1 md:col-span-4">
+            <a href="#" class="link-m"> Все новости </a>
+          </div>
+        </div>
+        <div class="swiper-book  bg-white">
+          <div class="swiper-header mb-40 md:mb-16 px-24 !w-full ">
+            <div class=" flex ">
               <h1 class="head-3">Книги о которых все говорят</h1>
               <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
             </div>
@@ -270,39 +301,54 @@
           <div class="swiper-wrapper mx-24">
             <!-- Slides -->
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
@@ -312,39 +358,54 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
@@ -354,39 +415,54 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
@@ -396,39 +472,54 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
@@ -438,39 +529,54 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
@@ -480,81 +586,54 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
                   <div class="item_card_tags bordered_tags">
                     <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
                       >
                         Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
                       >
                         Новинка
-                      </div>
+                      </a>
                     </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
                   </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
+
+                  <div class="book_card_image item_card_image">
                     <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
+                      class="book_card_img item_card_img"
+                      src="../../img/cards_book.svg"
                       alt=""
+                      itemprop="image"
                     />
                   </div>
                 </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
                   </div>
-                  <div class="toy_card_more item_card_more">
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
                     <button
-                      class="toy_card_item_link item_card_link overline-button"
-                    >
-                      Подробнее
-                    </button>
-                    <button class="item_card_add_to_favourite"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
-                  <div class="item_card_tags bordered_tags">
-                    <div class="item_card_tags_main bordered_tags_main">
-                      <div
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
-                      >
-                        Бестселлер
-                      </div>
-                      <div
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
-                      >
-                        Новинка
-                      </div>
-                    </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
-                  </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                  <div class="toy_card_image item_card_image">
-                    <img
-                      class="toy_card_img item_card_img"
-                      src="../../img/cards_toy.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="toy_card_info item_card_info">
-                  <div class="toy_card_name item_card_name">
-                    Арена для баттлов Инфинити Надо
-                  </div>
-                  <div class="toy_card_more item_card_more">
-                    <button
-                      class="toy_card_item_link item_card_link overline-button"
+                      class="book_card_item_link item_card_link overline-button"
                     >
                       Подробнее
                     </button>
