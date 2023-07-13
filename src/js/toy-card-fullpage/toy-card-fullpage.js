@@ -450,10 +450,49 @@ function chooseSwiperItem() {
   });
 }
 
+// функция для выставления высоты колонки слайдеров
+function updateSliderColHeight() {
+  const sliderImages = document.querySelector('.slider__images');
+  const sliderCol = document.querySelector('.slider__col');
+  if (sliderImages && sliderCol) {
+    const sliderImagesHeight = sliderImages.offsetHeight;
+    sliderCol.style.maxHeight = `${sliderImagesHeight}px`;
+  }
+}
+
+function chooseSliderByButton() {
+  const prevButton = document.querySelector('.slider__prev');
+  const nextButton = document.querySelector('.slider__next');
+
+  prevButton.onclick = function (event) {
+    const currentChosen = document.querySelector('.js-thumb-chosen');
+    const prevElement =
+      currentChosen.parentElement.previousElementSibling.firstElementChild;
+    console.log(prevElement);
+    currentChosen.classList.toggle('js-thumb-chosen');
+    currentChosen.classList.toggle('p-4');
+    prevElement.classList.toggle('js-thumb-chosen');
+    prevElement.classList.toggle('p-4');
+  };
+  nextButton.onclick = function (event) {
+    const currentChosen = document.querySelector('.js-thumb-chosen');
+    const nextElement =
+      currentChosen.parentElement.nextElementSibling.firstElementChild;
+    console.log(nextElement);
+    currentChosen.classList.toggle('js-thumb-chosen');
+    currentChosen.classList.toggle('p-4');
+    nextElement.classList.toggle('js-thumb-chosen');
+    nextElement.classList.toggle('p-4');
+  };
+}
+
 window.onload = function () {
+  updateSliderColHeight();
   chooseSwiperItem();
+  chooseSliderByButton();
 };
 
 window.onresize = function () {
+  updateSliderColHeight();
   chooseSwiperItem();
 };
