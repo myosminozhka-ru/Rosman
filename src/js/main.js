@@ -48,18 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function closeBar() {
-    for (let i = 0; i < p.length; i++) {
-      if (p[i].classList.contains('active-js')) {
-        p[i].classList.remove('active-js');
-      }
-    }
-    for (let i = 0; i < contentNavBar.length; i++) {
-      contentNavBar[i].classList.remove('active-js');
-      contentNavBar[i].classList.add('hide');
-    }
-  }
-
   document.addEventListener('click', function (event) {
     const block = document.querySelector('.more-down-button.out.active-js');
     const targetElement = event.target;
@@ -188,49 +176,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function toggleSearch() {
-    let mobileMenu = document.getElementById('mobile-menu');
-    let headerNav = document.querySelector('.header-nav');
-    let searchInput = document.querySelector('.search-input');
-    let input = document.querySelector('.search-input input');
-    input.value = '';
-    let headerbtn = document.querySelector('.header-btn');
-    if (headerNav.classList.contains('hide')) {
-      headerNav.classList.remove('hide');
-      headerbtn.classList.remove('hide-mobile');
-      headerbtn.classList.remove('hide-icon');
-    } else {
-      headerNav.classList.add('hide');
-      headerbtn.classList.add('hide-mobile');
-      headerbtn.classList.add('hide-icon');
-    }
-    if (searchInput.classList.contains('hide')) {
-      searchInput.classList.remove('hide');
-    } else {
-      searchInput.classList.add('hide');
-    }
-
-    if (mobileMenu.classList.contains('hide')) {
-      mobileMenu.classList.remove('hide');
-    } else {
-      mobileMenu.classList.add('hide');
-    }
-  }
-
-  function changeLang(lang) {
-    let eng = document.querySelectorAll('.eng-lang');
-    let rus = document.querySelectorAll('.rus-lang');
-    for (let i = 0; i < rus.length; i++) {
-      if (lang === 'eng') {
-        rus[i].classList.remove('active-js');
-        eng[i].classList.add('active-js');
-      } else {
-        rus[i].classList.add('active-js');
-        eng[i].classList.remove('active-js');
-      }
-    }
-  }
-
   const yellowMovingBlock = document.getElementById('yellow-moving-block');
   if (yellowMovingBlock) {
     document.addEventListener('mousemove', function (event) {
@@ -272,17 +217,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
-  function scrollContent(direction) {
-    let container = document.getElementById('elephant-container');
-    let content = document.getElementById('elephant-slider');
-
-    if (direction === 'left') {
-      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-    } else if (direction === 'right') {
-      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
-    }
-  }
 
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
@@ -363,3 +297,68 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+function toggleSearch() {
+  let mobileMenu = document.getElementById('mobile-menu');
+  let headerNav = document.querySelector('.header-nav');
+  let searchInput = document.querySelector('.search-input');
+  let input = document.querySelector('.search-input input');
+  input.value = '';
+  let headerbtn = document.querySelector('.header-btn');
+  if (headerNav.classList.contains('hide')) {
+    headerNav.classList.remove('hide');
+    headerbtn.classList.remove('hide-mobile');
+    headerbtn.classList.remove('hide-icon');
+  } else {
+    headerNav.classList.add('hide');
+    headerbtn.classList.add('hide-mobile');
+    headerbtn.classList.add('hide-icon');
+  }
+  if (searchInput.classList.contains('hide')) {
+    searchInput.classList.remove('hide');
+  } else {
+    searchInput.classList.add('hide');
+  }
+
+  if (mobileMenu.classList.contains('hide')) {
+    mobileMenu.classList.remove('hide');
+  } else {
+    mobileMenu.classList.add('hide');
+  }
+}
+
+function changeLang(lang) {
+  let eng = document.querySelectorAll('.eng-lang');
+  let rus = document.querySelectorAll('.rus-lang');
+  for (let i = 0; i < rus.length; i++) {
+    if (lang === 'eng') {
+      rus[i].classList.remove('active-js');
+      eng[i].classList.add('active-js');
+    } else {
+      rus[i].classList.add('active-js');
+      eng[i].classList.remove('active-js');
+    }
+  }
+}
+
+function closeBar() {
+  for (let i = 0; i < p.length; i++) {
+    if (p[i].classList.contains('active-js')) {
+      p[i].classList.remove('active-js');
+    }
+  }
+  for (let i = 0; i < contentNavBar.length; i++) {
+    contentNavBar[i].classList.remove('active-js');
+    contentNavBar[i].classList.add('hide');
+  }
+}
+
+function scrollContent(direction) {
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}

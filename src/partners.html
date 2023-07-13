@@ -2,25 +2,19 @@
 <html lang="en" style="font-size: 62.5%">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <title>Контакты</title>
-
+    <title>Партнерам</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
   </head>
-
-  <body>
+  <body class="bg-gray-50">
     @@include('components/header/header.html')
+
     <div id="yellow-background">
       <div id="moving-block">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
@@ -37,8 +31,11 @@
       <div id="above-block">
         @@include('components/ui-kit/breadcrumbs/index.html', { }, )
 
-        <div class="flex"><h1 class="head-1 mb-64 px-24">Контакты</h1></div>
+        <div class="flex">
+          <h1 class="head-1 mb-64 px-24">Оптовым клиентам</h1>
+        </div>
         <div class="mb-42 flex flex-row justify-between px-24 md:flex-col">
+          <h1 class="head-1 mb-64 px-24">Условия сотрудничества</h1>
           <div class="flex w-1/4 flex-col gap-32 md:w-full">
             <p class="text-l text-text">Адрес</p>
             <p class="text-l">
@@ -58,9 +55,7 @@
             <p class="text-l">+7 495 933-71-30</p>
           </div>
         </div>
-
         <div id="map" style="width: 100%; height: 504px"></div>
-
         <div
           class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
         >
@@ -126,14 +121,11 @@
       <a href="mailto:rosman@rosman.ru">Написать нам</a>
       <div class="custom-after"></div>
     </div>
-
     @@include('components/ui-kit/footer/footer-ru.html', { }, )
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
     <script>

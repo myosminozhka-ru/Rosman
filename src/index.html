@@ -9,14 +9,6 @@
   </head>
 
   <body class="bg-gray-50">
-    @@include('components/header/header.html')
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-
     <div class="flex flex-col">
       <h1 class="head-1">ui kit</h1>
       <a target="_blank" href="/ui-kit.html" class="flex text-2xl text-blue-1"
@@ -30,9 +22,6 @@
       <a target="_blank" href="/author.html" class="flex text-2xl text-blue-1"
         >author<img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
       /></a>
-      <a target="_blank" href="/catalog.html" class="flex text-2xl text-blue-1"
-        >catalog<img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
-      /></a>
       <a href="/contacts.html" class="flex text-2xl text-blue-1"
         >contacts<img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
       /></a>
@@ -42,16 +31,31 @@
           src="./img/check_new.png"
           alt=""
       /></a>
-
       <a href="/catalog-letter.html" class="flex text-2xl text-blue-1"
         >catalog letter
         <img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
       /></a>
-      <a href="/catalog-letter.html" class="flex text-2xl text-blue-1"
-        >main page books</a>
+      <a target="_blank" href="/catalog.html" class="flex text-2xl text-blue-1"
+        >catalog<img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
+      /></a>
+      <a
+        target="_blank"
+        href="/catalog-toy-main.html"
+        class="flex text-2xl text-blue-1"
+        >catalog toys main</a
+      >
+      <a target="_blank" href="/listing.html" class="flex text-2xl text-blue-1"
+        >listing toys main</a
+      >
+      <a
+        target="_blank"
+        href="/catalog-books.html"
+        class="flex text-2xl text-blue-1"
+        >catalog books</a
+      >
 
       <h1 class="head-1">Almaz</h1>
-      <a href="/main-page-books.html" class="flex text-2xl text-blue-1"
+      <a href="/about-company.html" class="flex text-2xl text-blue-1"
         >abount company
         <img class="ml-10 h-20 w-20" src="./img/check_new.png" alt=""
       /></a>
@@ -171,6 +175,5 @@
         wishlist
       </a>
     </div>
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
   </body>
 </html>
