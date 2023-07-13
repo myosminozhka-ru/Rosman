@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Контакты</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-gray-50">
+  <body class=>
     <header id="header" class="bottom header" data-header="toys">
-  <div class="logo"><img src="./img/logo.svg" /></div>
-  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="logo"><img src="../../img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="../../img/mobile-logo.svg" /></div>
   <div class="dropdown">
     <button>
       <div class="icon"></div>
@@ -111,16 +116,16 @@
 </header>
 <div class="toolbar">
   <a href="#" class="toolbar-button active">
-    <img src="./img/toolbar-book.png" />Главная</a
+    <img src="../../img/toolbar-book.png" />Главная</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-home.png" />Игрушки</a
+    ><img src="../../img/toolbar-home.png" />Игрушки</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-menu.png" />Книги</a
+    ><img src="../../img/toolbar-menu.png" />Книги</a
   >
   <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-toys.png" />Меню</a
+    ><img src="../../img/toolbar-toys.png" />Меню</a
   >
 </div>
 
@@ -184,25 +189,12 @@
           </div>
         </div>
 
-        <iframe
-          class="mobile-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.560419125351!2d37.57931107034973!3d55.80481348371988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687424900071!5m2!1sru!2skg"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <iframe
-          class="desktop-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17939.120971798427!2d37.58072364501237!3d55.80382733436549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5360882a9b67f%3A0x7acae1c6226775a5!2z0KjQtdGA0LXQvNC10YLRjNC10LLRgdC60LDRjyDRg9C7LiwgNDcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjc1MjE!5e0!3m2!1sru!2skg!4v1687422538118!5m2!1sru!2skg"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <div class="my-42 flex flex-row justify-between px-24 md:flex-col">
+        <div id="map" style="width: 100%; height: 504px"></div>
+        <div
+          class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
+        >
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/toys.svg" class="h-58 w-58" />
+            <img src="../../img/toys.svg" class="h-58 w-58" />
 
             <p class="text-4xl">Игрушки.СМИ и блогеры</p>
             <p class="text-l text-text">Адрес</p>
@@ -217,7 +209,7 @@
           </div>
 
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/book.svg" class="h-58 w-58" />
+            <img src="../../img/book.svg" class="h-58 w-58" />
             <p class="text-4xl">Книги</p>
             <p class="text-l text-text">Адрес</p>
             <p class="text-l">
@@ -231,7 +223,7 @@
           </div>
 
           <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/document.svg" class="h-58 w-58" />
+            <img src="../../img/document.svg" class="h-58 w-58" />
             <p class="text-4xl">Отдел прав и лицензий</p>
             <p class="text-l text-text">Адрес</p>
             <p class="text-l">
@@ -245,20 +237,21 @@
           </div>
         </div>
 
-        <div class="flex flex-row justify-between px-24 md:flex-col">
+        <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
           <p class="ml-4 w-1/12 text-l text-text md:w-full">
             Для вопросов и предложений
           </p>
           <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
         </div>
-        <div class="container-elephant-on-planets">
+        <div class="bg-white">
+          <div class="container-elephant-on-planets">
   <div class="relative ipadmini:hidden">
     <div class="pl-wrapper relative z-10">
       <div class="wrapper wrapper-first relative">
         <div class="planet planet-secondary-left elephant-planet-left relative">
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
+            src="../../img/elephant-planet/planet-left.svg"
             alt="Planet 1"
           />
         </div>
@@ -275,7 +268,7 @@
         <div class="planet elephant-planet-central">
           <img
             class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
+            src="../../img/elephant-planet/planet-central.svg"
             alt="Planet 1"
           />
         </div>
@@ -293,7 +286,7 @@
         >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
+            src="../../img/elephant-planet/planet-right.svg"
             alt="Planet 2"
           />
         </div>
@@ -301,7 +294,7 @@
           <div class="text-center text-3xl">Для оптовых продаж</div>
           <div class="mx-auto flex items-center">
             <a href="#" class="link-m-bold mx-auto text-center"
-            >Оставить заявку</a
+              >Оставить заявку</a
             >
           </div>
         </div>
@@ -313,11 +306,11 @@
         <div class="planet planet-secondary-left elephant-planet-left relative">
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
+            src="../../img/elephant-planet/planet-left.svg"
             alt="Planet 1"
           />
           <div class="el-img elephant-planet-left-img elephant-secondary-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
       </div>
@@ -326,11 +319,11 @@
         <div class="planet elephant-planet-central">
           <img
             class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
+            src="../../img/elephant-planet/planet-central.svg"
             alt="Planet 1"
           />
           <div class="el-img elephant-planet-central-img elephant-central-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
         <div class="static-text">
@@ -345,12 +338,12 @@
         >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
+            src="../../img/elephant-planet/planet-right.svg"
             alt="Planet 2"
           />
 
           <div class="el-img elephant-planet-right-img elephant-secondary-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
         <div class="static-text">
@@ -363,12 +356,16 @@
   <div class="h-[10rem]"></div>
   <!-- второй блок -->
   <div class="relative hidden ipadmini:block">
-    <div class="flex flex-col items-center justify-center relative z-10">
-      <div class="wrapper wrapper-first !top-[0.5rem] !left-0 aspect-square relative">
-        <div class="planet planet-secondary-left-2 elephant-planet-left relative">
+    <div class="relative z-10 flex flex-col items-center justify-center">
+      <div
+        class="wrapper wrapper-first relative !left-0 !top-[0.5rem] aspect-square"
+      >
+        <div
+          class="planet planet-secondary-left-2 elephant-planet-left relative"
+        >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
+            src="../../img/elephant-planet/planet-left.svg"
             alt="Planet 1"
           />
         </div>
@@ -381,11 +378,13 @@
         </div>
       </div>
 
-      <div class="wrapper wrapper-central !top-0 !left-0 aspect-square relative">
+      <div
+        class="wrapper wrapper-central relative !left-0 !top-0 aspect-square"
+      >
         <div class="planet elephant-planet-central-2">
           <img
             class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
+            src="../../img/elephant-planet/planet-central.svg"
             alt="Planet 1"
           />
         </div>
@@ -397,13 +396,15 @@
         </div>
       </div>
 
-      <div class="wrapper wrapper-second !top-[-0.5rem] !left-0 aspect-square relative">
+      <div
+        class="wrapper wrapper-second relative !left-0 !top-[-0.5rem] aspect-square"
+      >
         <div
           class="planet planet-secondary-right-2 elephant-planet-right relative"
         >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
+            src="../../img/elephant-planet/planet-right.svg"
             alt="Planet 2"
           />
         </div>
@@ -411,36 +412,46 @@
           <div class="text-center text-3xl">Для оптовых продаж</div>
           <div class="mx-auto flex items-center">
             <a href="#" class="link-m-bold mx-auto text-center"
-            >Оставить заявку</a
+              >Оставить заявку</a
             >
           </div>
         </div>
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center absolute top-0 z-0">
-      <div class="wrapper wrapper-first rotate-[90deg] !top-[0.5rem] !left-0 aspect-square relative">
-        <div class="planet planet-secondary-left-2 elephant-planet-left relative">
+    <div class="absolute top-0 z-0 flex flex-col items-center justify-center">
+      <div
+        class="wrapper wrapper-first relative !left-0 !top-[0.5rem] aspect-square rotate-[90deg]"
+      >
+        <div
+          class="planet planet-secondary-left-2 elephant-planet-left relative"
+        >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
+            src="../../img/elephant-planet/planet-left.svg"
             alt="Planet 1"
           />
-          <div class="el-img elephant-planet-left-img-small elephant-secondary-img-2">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+          <div
+            class="el-img elephant-planet-left-img-small elephant-secondary-img-2"
+          >
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
       </div>
 
-      <div class="wrapper wrapper-central rotate-[50deg] !top-0 !left-0 aspect-square relative">
+      <div
+        class="wrapper wrapper-central relative !left-0 !top-0 aspect-square rotate-[50deg]"
+      >
         <div class="planet elephant-planet-central-2">
           <img
             class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
+            src="../../img/elephant-planet/planet-central.svg"
             alt="Planet 1"
           />
-          <div class="el-img elephant-planet-central-img-small elephant-central-img-2">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+          <div
+            class="el-img elephant-planet-central-img-small elephant-central-img-2"
+          >
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
         <div class="static-text">
@@ -449,18 +460,22 @@
         </div>
       </div>
 
-      <div class="wrapper wrapper-second rotate-[-200deg] !top-[-0.5rem] !left-0 aspect-square relative">
+      <div
+        class="wrapper wrapper-second relative !left-0 !top-[-0.5rem] aspect-square rotate-[-200deg]"
+      >
         <div
           class="planet planet-secondary-right-2 elephant-planet-right relative"
         >
           <img
             class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
+            src="../../img/elephant-planet/planet-right.svg"
             alt="Planet 2"
           />
 
-          <div class="el-img elephant-planet-right-img-small elephant-secondary-img-2">
-            <img src="./img/elephant-planet/el-standing.svg" alt=""/>
+          <div
+            class="el-img elephant-planet-right-img-small elephant-secondary-img-2"
+          >
+            <img src="../../img/elephant-planet/el-standing.svg" alt="" />
           </div>
         </div>
         <div class="static-text">
@@ -472,6 +487,7 @@
   </div>
 </div>
 
+        </div>
       </div>
     </div>
     <div class="custom-box !fixed">
@@ -674,5 +690,15 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+      const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
+        center: [37.608078, 55.8087759], // starting position [lng, lat]
+        zoom: 15, // starting zoom
+      });
+    </script>
   </body>
 </html>
