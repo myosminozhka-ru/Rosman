@@ -11,8 +11,8 @@
   <body>
   @@include('components/header/header-main.html', { }, )
     <div class="search-result-wrapper">
-      <div id="yellow-background" class="!pt-10">
-        <div id="moving-block">
+      <div id="yellow-background" >
+        <div id="moving-block" class='!w-[110%] !-left-2'>
           <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
             <g>
               <path
@@ -41,46 +41,11 @@
                     <p class="news !my-10 text-15.20 font-medium">Товары</p>
                   </li>
                 </ul>
-                <div class="navigation-content hide" id="collection">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка коллекция</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="interview">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Интервью</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="state">
-                  <div class="cross"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Статья</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="news">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Новости</p>
-                  </div>
-                </div>
-                <div class="navigation-content hide" id="other">
-                  <div class="cross" onclick="closeBar()"></div>
-                  <div class="content-layer">
-                    <img class="picture" src="../../img/cards_book.svg" />
-                    <p class="name">Книжка Общее</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           <div class='flex flex-row md:flex-col justify-between'>
-           <div class='w-[80%] md:w-full'>
+           <div class='w-[80%] md:w-full bg-white'>
              <div
                class="grid grid-cols-3 gap-x-16 gap-y-20 px-24 md:grid-cols-2 sm:px-12 msm:grid-cols-1 "
              >
@@ -685,7 +650,7 @@
                </button>
              </section>
            </div>
-            <div class='flex flex-col w-[20%] md:w-full md:mb-48 gap-24'>
+            <div class='flex flex-col w-[20%] bg-white md:w-full md:mb-48 gap-24'>
               <div class='flex flex-row gap-21'>
                 <img class='w-[5rem] object-contain h-fit' src="../../img/yellow-icons-58px/yellow-blades-58px.svg">
                 <div class='w-[70%]'>
