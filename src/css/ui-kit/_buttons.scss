@@ -265,7 +265,7 @@ button {
   @apply hidden;
 
   &:checked + .filter-label {
-    @apply justify-between border-0 bg-yellow;
+    @apply justify-center border-0 bg-yellow;
 
     .cross {
       background: url('../../img/close.svg') no-repeat center right;
