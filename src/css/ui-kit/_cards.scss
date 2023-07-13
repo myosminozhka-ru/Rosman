@@ -1,322 +1,294 @@
 // стили для картинки, при тыке на которую открывается большая
 .image-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
 }
 
 .popup-content {
-  max-height: 90%;
-  height: auto;
-  //@media screen and (max-width: 768px) {
-  //  height: auto;
-  //  width: 90%;
-  //}
+    max-height: 90%;
+    height: auto;
+    //@media screen and (max-width: 768px) {
+    //  height: auto;
+    //  width: 90%;
+    //}
 }
 
 .popup-content img {
-  object-fit: contain;
-  height: 90vh;
-  @apply px-24 sm:px-12;
+    object-fit: contain;
+    height: 90vh;
+    @apply px-24 sm: px-12;
 }
 
 .image-popup.js-active-popup {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
-
 .cards_wrapper {
-  @apply flex flex-col items-center gap-56;
+    @apply flex flex-col items-center gap-56;
 }
 
 // общий класс
-.traceable_item {
-}
+.traceable_item {}
 
 // карточка игрушки и книги
 // card's top
 .toy_card {
-  @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
-
-  &:hover {
-    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
-  }
+    @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
+    &:hover {
+        box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+    }
 }
 
 .item_card_tags.bordered_tags {
-  @media screen and (max-width: 400px) {
-    @apply flex-col-reverse items-start;
-  }
+    @media screen and (max-width: 400px) {
+        @apply flex-col-reverse items-start;
+    }
 }
 
 .bordered_tags_item:hover {
-  @apply border border-yellow bg-yellow;
+    @apply border border-yellow bg-yellow;
 }
 
 .book_card {
-  @apply flex flex-col justify-start gap-24 bg-white pb-12;
-
-  &:hover {
-    box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
-  }
+    @apply flex flex-col justify-start gap-24 bg-white pb-12;
+    &:hover {
+        box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
+    }
 }
 
 .book_card:hover .item_card_image {
-  @apply bg-white;
+    @apply bg-white;
 }
 
 .toy_card:hover .item_card_image {
-  @apply bg-white;
+    @apply bg-white;
 }
 
 .toy_card_heading {
-  .running-stroke {
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    white-space: nowrap;
-    background-color: #000000;
-
-    .marquee {
-      white-space: nowrap;
-      animation: marquee 10s linear infinite;
-
-      span {
-        margin: 0.1rem 1rem;
-        color: #fff145;
-      }
+    .running-stroke {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        white-space: nowrap;
+        background-color: #000000;
+        .marquee {
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+            span {
+                margin: 0.1rem 1rem;
+                color: #fff145;
+            }
+        }
     }
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(10%);
+    @keyframes marquee {
+        0% {
+            transform: translateX(10%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
-
-    100% {
-      transform: translateX(-100%);
-    }
-  }
 }
 
 .bordered_tags {
-  @apply flex flex-row flex-nowrap items-center justify-between;
+    @apply flex flex-row flex-nowrap items-center justify-between;
 }
 
 .bordered_tags_main {
-  @apply flex flex-row justify-between gap-8;
-
-  @media screen and (max-width: 400px) {
-    @apply w-full justify-between gap-6;
-  }
+    @apply flex flex-row justify-between gap-8;
+    @media screen and (max-width: 400px) {
+        @apply w-full justify-between gap-6;
+    }
 }
 
 // 05.07 - добавил прозрачную границу снизу
 .bordered_tags_item {
-  @apply body-s-bold bg-white px-12 py-4;
-  border: 1px solid #000000;
-
-  @media screen and (max-width: 400px) {
-    @apply w-1/2 text-center;
-  }
-
-  @media screen and (max-width: 900px) {
-    @apply px-4;
-  }
-
-  border-bottom: transparent;
+    @apply body-s-bold bg-white px-12 py-4;
+    border: 1px solid #000000;
+    @media screen and (max-width: 400px) {
+        @apply w-1/2 text-center;
+    }
+    @media screen and (max-width: 900px) {
+        @apply px-4;
+    }
+    border-bottom: transparent;
 }
 
 .bordered_tags_item:hover {
-  @apply bg-yellow;
+    @apply bg-yellow;
 }
 
 .bordered_tags_item-2 {
-  @apply px-12 py-4 body-s-bold;
-  border: 1px solid #000000;
-
-  @media screen and (max-width: 400px) {
-    @apply text-center w-1/2;
-  }
-
-  @media screen and (max-width: 900px) {
-    @apply px-4;
-  }
+    @apply px-12 py-4 body-s-bold;
+    border: 1px solid #000000;
+    @media screen and (max-width: 400px) {
+        @apply text-center w-1/2;
+    }
+    @media screen and (max-width: 900px) {
+        @apply px-4;
+    }
 }
 
 .bordered_tags_item-2:hover {
-  @apply bg-yellow;
+    @apply bg-yellow;
 }
 
 .bordered_tags_item-smalled {
-  @apply px-4 py-4 text-center text-11.14;
-  width: 7rem;
+    @apply px-4 py-4 text-center text-11.14;
+    width: 7rem;
 }
 
-.toy_card_tags_first {
-}
+.toy_card_tags_first {}
 
-.toy_card_tags_second {
-}
+.toy_card_tags_second {}
 
-.toy_card_tags_age {
-}
+.toy_card_tags_age {}
 
 // соотношение сторон - хз, надо проработать
 .item_card_image {
-  @apply relative w-full bg-background;
-
-  &:hover {
-    @apply bg-white;
-  }
+    @apply relative w-full bg-background;
+    &:hover {
+        @apply bg-white;
+    }
 }
 
 .item_card_img {
-  @apply w-full;
-  object-fit: cover;
+    @apply w-full;
+    object-fit: cover;
 }
 
 // card's bottom
 .item_card_info {
-  @apply flex flex-col gap-8;
+    @apply flex flex-col gap-8;
 }
 
 .item_card_name {
-  @apply body-m-bold;
-
-  @media screen and (max-width: 400px) {
-    @apply text-xl;
-  }
+    @apply body-m-bold;
+    @media screen and (max-width: 400px) {
+        @apply text-xl;
+    }
 }
 
 .item_card_more {
-  @apply flex flex-row justify-start gap-18 sm:justify-between;
+    @apply flex flex-row justify-start gap-18 sm: justify-between;
 }
 
 .item_card_link.overline-button {
-  @apply p-0;
-
-  @media screen and (max-width: 400px) {
-    @apply text-xl;
-  }
+    @apply p-0;
+    @media screen and (max-width: 400px) {
+        @apply text-xl;
+    }
 }
 
 .item_card_add_to_favourite {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url('../../img/heart_white.svg') no-repeat center;
+    @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+    background: url('../../img/heart_white.svg') no-repeat center;
 }
 
 .item_card_add_to_favourite.js_pressed {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
-  background: url('../../img/heart_black.svg') no-repeat center;
+    @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+    background: url('../../img/heart_black.svg') no-repeat center;
 }
 
-.add_to_favourite_img {
-}
+.add_to_favourite_img {}
 
 .book_card_author {
-  @apply text-15.20 font-medium text-text;
-
-  @media screen and (max-width: 400px) {
-    @apply text-11.14;
-  }
+    @apply text-15.20 font-medium text-text;
+    @media screen and (max-width: 400px) {
+        @apply text-11.14;
+    }
 }
 
 // карточка БОЛЬШАЯ ПОДБОРКИ
 .card_selection {
-  @apply flex flex-col;
+    @apply flex flex-col;
 }
 
 .card_selection_description {
-  @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm:pt-16;
-
-  @media screen and (max-width: 639px) {
-    padding-top: 1.6rem;
-  }
-
-  &:hover {
-    border-color: transparent;
-  }
+    @apply box-border flex flex-col gap-16 border-x border-b border-card-stroke p-16 pt-24 sm: pt-16;
+    @media screen and (max-width: 639px) {
+        padding-top: 1.6rem;
+    }
+    &:hover {
+        border-color: transparent;
+    }
 }
 
 .dotted_tags {
-  @apply flex flex-row flex-nowrap items-center gap-8;
+    @apply flex flex-row flex-nowrap items-center gap-8;
 }
 
 .dotted_tags_category {
-  @apply text-xl font-medium text-black;
+    @apply text-xl font-medium text-black;
 }
 
-.dotted_tags_separator {
-}
+.dotted_tags_separator {}
 
 .dotted_tags_date {
-  @apply text-xl text-text;
-
-  @media screen and (max-width: 400px) {
-    @apply text-xl;
-  }
+    @apply text-xl text-text;
+    @media screen and (max-width: 400px) {
+        @apply text-xl;
+    }
 }
 
 .js_traceable_item:hover .dotted_tags_date {
-  @apply text-black;
+    @apply text-black;
 }
 
 .card_sel_info {
-  @apply flex flex-col gap-12;
+    @apply flex flex-col gap-12;
 }
 
 .card_selection_name {
-  @apply text-3xl font-bold text-black;
-
-  @media screen and (max-width: 400px) {
-    @apply text-2xl;
-  }
+    @apply text-3xl font-bold text-black;
+    @media screen and (max-width: 400px) {
+        @apply text-2xl;
+    }
 }
 
 .card_selection_text {
-  @apply text-15.20 font-normal text-black;
+    @apply text-15.20 font-normal text-black;
 }
 
 // карточки ГОРИЗОНТАЛЬНЫЕ УЗКИЕ - ИНТЕРВЬЮ - текст покрупнее
 //
 .card_interview {
-  @apply flex flex-row sm:flex-col;
+    @apply flex flex-row sm: flex-col;
 }
 
 .card_interview_name {
-  @apply text-15.20 font-medium text-black;
+    @apply text-15.20 font-medium text-black;
 }
 
 .card_interview_text {
-  @apply text-15.20 font-normal text-black;
+    @apply text-15.20 font-normal text-black;
 }
 
 .card_interview_description {
-  @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm:border-x sm:border-b sm:border-t-0;
-
-  &:hover {
-    border-color: transparent;
-  }
+    @apply box-border flex flex-col gap-12 border-y border-r border-card-stroke p-16 sm: border-x sm: border-b sm: border-t-0;
+    &:hover {
+        border-color: transparent;
+    }
 }
 
 // Карточки ВЕРТИКАЛЬНЫЕ НЕБОЛЬШИЕ
 .card_articles {
-  @apply flex flex-col;
+    @apply flex flex-col;
 }
 
 //.card_articles {
@@ -335,254 +307,238 @@
 //  }
 //}
 .card_articles_description {
-  @apply box-border flex flex-col gap-12 border-x border-b border-card-stroke px-12 pb-12 pt-16;
-
-  &:hover {
-    border-color: transparent;
-  }
+    @apply box-border flex flex-col gap-12 border-x border-b border-card-stroke px-12 pb-12 pt-16;
+    &:hover {
+        border-color: transparent;
+    }
 }
 
 .card_articles_name {
-  @apply text-2.5xl font-medium;
+    @apply text-2.5xl font-medium;
 }
 
 .card_articles_text {
-  @apply text-2.5xl text-black ssm:text-15.20;
-  font-weight: 400;
+    @apply text-2.5xl text-black ssm: text-15.20;
+    font-weight: 400;
 }
 
 .card_articles_name_sfs {
-  @apply text-15.20 font-medium;
+    @apply text-15.20 font-medium;
 }
 
 .card_articles_text_sfs {
-  @apply text-15.20 font-normal ssm:text-s;
+    @apply text-15.20 font-normal ssm: text-s;
 }
 
 // карточка БРЕНДА
-.card_brands {
-}
+.card_brands {}
 
 .card_brand_content {
-  @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
-  width: 100%;
-  border: 1px solid #d9d9d9;
-
-  @media (min-width: 291px) and (max-width: 400px) {
-    @apply gap-12;
-  }
+    @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    @media (min-width: 291px) and (max-width: 400px) {
+        @apply gap-12;
+    }
 }
 
 .card_brand_content:hover .card_brand_all_items {
-  @apply bg-white;
+    @apply bg-white;
 }
 
 .card_brand_content:hover {
-  @apply bg-yellow;
+    @apply bg-yellow;
 }
 
 .card_brand_content:hover .card_brand_image {
-  @apply bg-yellow;
+    @apply bg-yellow;
 }
 
 .card_brand_info {
-  @apply flex flex-col flex-nowrap items-center justify-center gap-8;
+    @apply flex flex-col flex-nowrap items-center justify-center gap-8;
 }
 
 .card_brand_all_items {
-  @apply block rounded-2xl bg-yellow px-8 py-4 text-center text-xl;
-
-  @media screen and (max-width: 359px) {
-    @apply text-s;
-  }
+    @apply block rounded-2xl bg-yellow px-8 py-4 text-center text-xl;
+    @media screen and (max-width: 359px) {
+        @apply text-s;
+    }
 }
 
 .card_brand_name {
-  @apply text-center text-2.5xl font-normal text-black;
-
-  @media screen and (max-width: 359px) {
-    @apply text-xl;
-  }
+    @apply text-center text-2.5xl font-normal text-black;
+    @media screen and (max-width: 359px) {
+        @apply text-xl;
+    }
 }
 
 .card_brand_image {
-  @apply block bg-white;
-  max-width: 15rem;
-  max-height: 9rem;
-  aspect-ratio: 15/9;
+    @apply block bg-white;
+    max-width: 15rem;
+    max-height: 9rem;
+    aspect-ratio: 15/9;
 }
 
 .card_brand_image img {
-  @apply w-full;
-  object-fit: contain;
+    @apply w-full;
+    object-fit: contain;
 }
 
 // КАТАЛОГ КНИГ КАРТОЧКА
 .card_book_catalog {
-  @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm:p-16;
-  border: 1px solid #d9d9d9;
+    @apply flex w-full grow flex-col flex-nowrap gap-16 pb-60 pl-16 pt-16 ssm: p-16;
+    border: 1px solid #d9d9d9;
 }
 
 .card_book_catalog:hover {
-  @apply bg-background;
+    @apply bg-background;
 }
 
 .card_book_image {
-  @apply h-40 w-40;
+    @apply h-40 w-40;
 }
 
-.card_book_img {
-}
+.card_book_img {}
 
 .card_book_title {
-  @apply text-3xl ssm:text-15.20;
+    @apply text-3xl ssm: text-15.20;
 }
 
 .card_book_link {
-  @apply w-max;
+    @apply w-max;
 }
 
 // КАРТОЧКА КАРЬЕРА
 .card_career {
-  @apply flex flex-col flex-nowrap items-start gap-16 bg-white px-32 pb-60 pt-32;
-  border: 1px solid #d9d9d9;
+    @apply flex flex-col flex-nowrap items-start gap-16 bg-white px-32 pb-60 pt-32;
+    border: 1px solid #d9d9d9;
 }
 
 .card_career:hover {
-  @apply bg-yellow;
+    @apply bg-yellow;
 }
 
 .car_cond_item:hover {
-  @apply cursor-pointer bg-yellow;
+    @apply cursor-pointer bg-yellow;
 }
 
 // 1
 .card_career_heading {
-  @apply flex flex-row flex-wrap items-center gap-12;
-
-  @media screen and (max-width: 520px) {
-    @apply flex-col-reverse items-start;
-  }
+    @apply flex flex-row flex-wrap items-center gap-12;
+    @media screen and (max-width: 520px) {
+        @apply flex-col-reverse items-start;
+    }
 }
 
 .card_career_title {
-  @apply text-4xl font-medium ssm:text-2xl;
+    @apply text-4xl font-medium ssm: text-2xl;
 }
 
 .card_career_tags {
-  @apply flex flex-row gap-12;
+    @apply flex flex-row gap-12;
 }
 
 .card_career_tag {
-  @apply rounded-3xl bg-yellow px-12 py-4 text-s;
+    @apply rounded-3xl bg-yellow px-12 py-4 text-s;
 }
 
 .card_career:hover .card_career_tag {
-  @apply bg-white;
+    @apply bg-white;
 }
 
 //2
 .card_career_conditions {
-  @apply flex flex-row flex-nowrap gap-16;
-
-  @media screen and (max-width: 520px) {
-    @apply flex-col items-start;
-  }
+    @apply flex flex-row flex-nowrap gap-16;
+    @media screen and (max-width: 520px) {
+        @apply flex-col items-start;
+    }
 }
 
-.card_career_cond_item {
-}
+.card_career_cond_item {}
 
 .car_cond_item {
-  @apply flex flex-row flex-nowrap items-center gap-8 rounded bg-background px-8 py-4;
+    @apply flex flex-row flex-nowrap items-center gap-8 rounded bg-background px-8 py-4;
 }
 
-.car_cond_location {
-}
+.car_cond_location {}
 
-.car_cond_shift_length {
-}
+.car_cond_shift_length {}
 
-.card_career_cond_item_image {
-}
+.card_career_cond_item_image {}
 
-.card_career_cond_item_img {
-}
+.card_career_cond_item_img {}
 
 .card_career_cond_item_text {
-  @apply text-15.20 font-normal text-black ssm:text-15.20;
+    @apply text-15.20 font-normal text-black ssm: text-15.20;
 }
 
 .card_career_cond_item_text:hover {
-  @apply cursor-pointer bg-yellow;
+    @apply cursor-pointer bg-yellow;
 }
 
 // 3
 .card_career_description {
-  @apply text-2.5xl font-normal text-black ssm:text-15.20;
+    @apply text-2.5xl font-normal text-black ssm: text-15.20;
 }
 
 // 4
 .card_career_more_info {
-  @apply flex flex-row flex-nowrap items-center bg-black;
-  padding: 1.3rem 2rem;
-
-  &:hover {
-    background-color: #4d4d4d;
-  }
+    @apply flex flex-row flex-nowrap items-center bg-black;
+    padding: 1.3rem 2rem;
+    &:hover {
+        background-color: #4d4d4d;
+    }
 }
 
 .card_career_text {
-  @apply text-15.20 text-white;
+    @apply text-15.20 text-white;
 }
 
 .card_career_img {
-  @apply block h-20 w-20;
-  background: url('../../img/cards_career_arrow.svg') no-repeat center;
-  background-size: contain;
+    @apply block h-20 w-20;
+    background: url('../../img/cards_career_arrow.svg') no-repeat center;
+    background-size: contain;
 }
 
 // КАРТОЧКА БРЕНДА С СОЦСЕТЯМИ
 .card_brand_with_socials {
-  @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
-  width: 29.6rem;
-  height: 22.2rem;
-  background-image: url('../../img/cards_brand_socials.svg');
-  background-position: center center;
+    @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
+    width: 29.6rem;
+    height: 22.2rem;
+    background-image: url('../../img/cards_brand_socials.svg');
+    background-position: center center;
 }
 
 .card_brand_with_socs {
-  @apply relative;
-
-  & img {
-    @apply p-0;
-  }
+    @apply relative;
+    & img {
+        @apply p-0;
+    }
 }
 
 .card_brand_with_socs_links {
-  @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
-  top: 6%;
-  left: 6%;
+    @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
+    top: 6%;
+    left: 6%;
 }
 
 .card_brand_links {
-  @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
-
-  img {
-    width: 2rem;
-    height: 2rem;
-  }
+    @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 .card_brand_with_socs_item_page {
-  @apply absolute hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
-  bottom: 6%;
-  left: 6%;
-  width: 88%;
+    @apply absolute hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
+    bottom: 6%;
+    left: 6%;
+    width: 88%;
 }
 
 .card_brand_with_socs:hover .card_brand_with_socs_item_page {
-  @apply block;
+    @apply block;
 }
 
 //
@@ -595,256 +551,254 @@
 //  object-fit: cover;
 //}
 .card_brand_with_socials_links {
-  @apply flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
+    @apply flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
 }
 
 .card_brand_with_socials_link_image {
-  @apply h-12 w-12;
+    @apply h-12 w-12;
 }
 
 .card_brand_with_socials_item_page {
-  @apply hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
+    @apply hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
 }
 
 .card_brand_with_socials:hover .card_brand_with_socials_item_page {
-  @apply block;
+    @apply block;
 }
 
 // КАРТОЧКА ФОТОГАЛЕРЕИ
 .card_photogallery_item {
-  @apply relative relative cursor-pointer;
-  aspect-ratio: 1/1;
+    @apply relative relative cursor-pointer;
+    aspect-ratio: 1/1;
 }
 
 .card_photogallery_item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card_photogallery_item:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card_photogallery_item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cards_photogallery_eye_image {
-  @apply absolute hidden h-40 w-40;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    @apply absolute hidden h-40 w-40;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cards_photogallery_eye_img {
-  @apply h-40 w-40;
+    @apply h-40 w-40;
 }
 
 .card_photogallery_item:hover .cards_photogallery_eye_image {
-  @apply block;
+    @apply block;
 }
 
 // КАРТОЧКА ВИДЕО
 .card_video_item {
-  @apply flex flex-col gap-16;
+    @apply flex flex-col gap-16;
 }
 
 .card_video_preview {
-  @apply relative cursor-pointer;
-  max-width: 100%;
-  aspect-ratio: 16/9;
+    @apply relative cursor-pointer;
+    max-width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .card_video_play_button {
-  @apply absolute m-0 p-0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    @apply absolute m-0 p-0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.card_video_info {
-}
+.card_video_info {}
 
 .card_video_title {
-  @apply text-2.5xl sm:text-15.20;
+    @apply text-2.5xl sm: text-15.20;
 }
 
 .card_video_preview::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card_video_preview:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 // Карточка сотрудника
 .card_employee {
-  @apply relative flex flex-col flex-nowrap;
+    @apply relative flex flex-col flex-nowrap;
 }
 
 .card_employee_image {
-  @apply relative cursor-pointer;
-  max-width: 100%;
+    @apply relative cursor-pointer;
+    max-width: 100%;
 }
 
 .card_employee_image:hover {
-  box-shadow: -1.505px 0px 0px 0px lightgray;
+    box-shadow: -1.505px 0px 0px 0px lightgray;
 }
 
 .card_employee:hover .card_employee_info {
-  @apply border-white;
-  background: var(--gray-scale-white, #fff);
-  box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
-
-  @media (max-width: 660px) {
-    border-bottom: 1px solid #e3e3e2;
-    border-left: 1px solid #e3e3e2;
-    border-right: 1px solid #e3e3e2;
-    box-shadow: none;
-  }
+    @apply border-white;
+    background: var(--gray-scale-white, #fff);
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+    @media (max-width: 660px) {
+        border-bottom: 1px solid #e3e3e2;
+        border-left: 1px solid #e3e3e2;
+        border-right: 1px solid #e3e3e2;
+        box-shadow: none;
+    }
 }
 
 .card_employee_info {
-  @apply flex flex-col gap-8 border-x border-b border-card-stroke p-20;
+    @apply flex flex-col gap-8 border-x border-b border-card-stroke p-20;
 }
 
 .card_employee_name {
-  @apply text-2xl font-medium;
+    @apply text-2xl font-medium;
 }
 
 .card_employee_occupation {
-  @apply text-15.20 font-normal text-text;
+    @apply text-15.20 font-normal text-text;
 }
 
 .card_employee_text {
-  @apply text-2.5xl font-normal font-normal ssm:text-15.20;
+    @apply text-2.5xl font-normal ssm:text-15.20;
 }
 
 .card_employee_image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card_employee_image:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card_employee_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card_employee_image:hover .card_employee_socials {
-  @apply absolute flex flex-row flex-nowrap items-center justify-center gap-18;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    @apply absolute flex flex-row flex-nowrap items-center justify-center gap-18;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card_employee_socials {
-  @apply absolute flex hidden flex-row flex-nowrap items-center justify-center gap-18;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    @apply absolute flex hidden flex-row flex-nowrap items-center justify-center gap-18;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card_employee_social_item {
-  @apply block h-20 w-20 rounded-full;
-  background-position: center center;
+    @apply block h-20 w-20 rounded-full;
+    background-position: center center;
 }
 
 .card_employee_social_item:hover {
-  @apply bg-yellow p-12;
+    @apply bg-yellow p-12;
 }
 
 .emp_soc_fb {
-  background: url('../../img/icon-white-facebook.svg') no-repeat;
+    background: url('../../img/icon-white-facebook.svg') no-repeat;
 }
 
 .emp_soc_fb:hover {
-  background-image: url('../../img/icon-black-facebook.svg');
-  background-position: center center;
+    background-image: url('../../img/icon-black-facebook.svg');
+    background-position: center center;
 }
 
 .emp_soc_twit {
-  background: url('../../img/icon-white-twitter.svg') no-repeat;
+    background: url('../../img/icon-white-twitter.svg') no-repeat;
 }
 
 .emp_soc_twit:hover {
-  background-image: url('../../img/icon-black-twitter.svg');
-  background-position: center center;
+    background-image: url('../../img/icon-black-twitter.svg');
+    background-position: center center;
 }
 
 .emp_soc_pint {
-  background: url('../../img/icon-white-pint.svg') no-repeat;
+    background: url('../../img/icon-white-pint.svg') no-repeat;
 }
 
 .emp_soc_pint:hover {
-  background-image: url('../../img/icon-black-pinterest.svg');
-  background-position: center center;
+    background-image: url('../../img/icon-black-pinterest.svg');
+    background-position: center center;
 }
 
 .emp_soc_inst {
-  background: url('../../img/icon-white-inst.svg') no-repeat;
+    background: url('../../img/icon-white-inst.svg') no-repeat;
 }
 
 .emp_soc_inst:hover {
-  background-image: url('../../img/icon-black-instagram.svg');
-  background-position: center center;
+    background-image: url('../../img/icon-black-instagram.svg');
+    background-position: center center;
 }
 
 // карточка НАГРАД
 .card_awards_content {
-  @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
+    @apply flex flex-col flex-nowrap gap-16 bg-background p-16;
 }
 
 .card_awards_image {
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .card_awards_info {
-  @apply flex flex-col flex-nowrap items-start gap-8;
+    @apply flex flex-col flex-nowrap items-start gap-8;
 }
 
 .card_awards_year {
-  @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
+    @apply rounded-2xl bg-yellow px-8 py-4 text-s font-medium text-black;
 }
 
 .card_awards:hover .card_awards_year {
-  @apply bg-white;
+    @apply bg-white;
 }
 
 .card_awards_title {
-  @apply text-3xl font-medium ssm:text-2xl;
+    @apply text-3xl font-medium ssm: text-2xl;
 }
 
 .card_awards_description {
-  @apply text-15.20 font-normal;
-  max-width: 33rem;
+    @apply text-15.20 font-normal;
+    max-width: 33rem;
 }

@@ -51,7 +51,7 @@
 
   @media screen and (max-width: 900px) {
     display: flex;
-    margin: 1rem auto;
+    margin:  auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -127,6 +127,8 @@
     z-index: 1000;
     left: 0;
     padding: 2rem;
+    height: 95vh;
+    overflow-y: scroll;
   }
 }
 
@@ -282,7 +284,7 @@
 }
 
 header {
-  @apply flex items-center bg-yellow px-24 sm:px-12 pt-24;
+  @apply flex items-center bg-yellow px-24 pt-24 sm:px-12;
 
   @media screen and (max-width: 900px) {
     @apply justify-between;
@@ -521,7 +523,7 @@ header {
   }
 
   .more-down-button {
-    @apply  text-s uppercase;
+    @apply text-s uppercase;
 
     span {
       background-image: url('../../img/arrow-down.svg');
@@ -549,7 +551,7 @@ header {
   }
 
   .more-down-content {
-    @apply absolute z-1001 bg-white p-24 top-[7rem];
+    @apply absolute top-[7rem] z-1001 bg-white p-24;
 
     .more-down-button {
       @apply m-0 p-0;
@@ -577,7 +579,7 @@ header {
   }
 
   .menu {
-    @apply flex basis-1/10 justify-center border-0 p-0 ;
+    @apply flex basis-1/10 justify-center border-0 p-0;
 
     .more-down-content {
       a {
@@ -676,15 +678,18 @@ header {
       width: 100%;
     }
   }
+  .width-25 {
+    width: 25%;
+
+
+  }
 
   .image_container_brand {
     max-width: 8.8rem;
     max-height: 8.8rem;
-    min-height: 8.8rem;
-    min-width: 8.8rem;
     border: 0.2rem solid transparent;
 
-    @apply sm:min-h-[7rem] sm:max-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
+    @apply sm:max-h-[7rem] sm:min-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
   }
 
   .brand_choose_brands::-webkit-scrollbar {
@@ -705,12 +710,10 @@ header {
       height: 9rem;
 
       .image_container_brand {
-        min-width: 7rem;
         max-width: 13rem;
         width: 100%;
         height: 100%;
-        min-height: 7rem;
-        max-height: 13rem;
+        max-height: 6rem;
       }
     }
   }
@@ -728,22 +731,20 @@ header {
     line-height: 2rem;
     cursor: pointer;
   }
-
 }
 
 #yellow-background:after {
   position: absolute;
   content: '';
   display: block;
-  top: calc(2rem + (100vw/2));
+  top: calc(2rem + (100vw / 2));
   bottom: 0;
   background-color: #ffffff;
   width: 100%;
-
 }
 
 #moving-block {
-  @apply absolute z-100 mx-auto h-screen w-full  bg-white top-[2rem];
+  @apply absolute top-[2rem] z-100 mx-auto h-screen  w-full bg-white;
 }
 
 #moving-block svg {
@@ -762,7 +763,7 @@ header {
   display: block;
   height: 100%;
   bottom: 0;
-  background-color: white ;
+  background-color: white;
   width: 100%;
 }
 
@@ -775,7 +776,7 @@ header {
   bottom: -50%;
   background-color: white;
   width: 200%;
-  left: -50%
+  left: -50%;
 }
 
 #above-block {
@@ -1492,7 +1493,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
+        center;
       background-size: contain;
     }
 
