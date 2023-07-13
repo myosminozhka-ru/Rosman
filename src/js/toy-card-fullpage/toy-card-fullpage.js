@@ -1,15 +1,15 @@
-let largeImg = document.querySelector(".largeImg");
-let thumbs = document.querySelectorAll(".thumbs img");
+let largeImg = document.querySelector('.largeImg');
+let thumbs = document.querySelectorAll('.thumbs img');
 
 thumbs.forEach(function (thumb) {
-  thumb.addEventListener("click", function (event) {
-    const currentChosen = document.querySelector(".thumbs .js-thumb-chosen");
+  thumb.addEventListener('click', function (event) {
+    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
     event.preventDefault();
-    largeImg.src = thumb.getAttribute("src");
+    largeImg.src = thumb.getAttribute('src');
     if (currentChosen) {
-      currentChosen.classList.remove("js-thumb-chosen");
+      currentChosen.classList.remove('js-thumb-chosen');
     }
-    thumb.classList.add("js-thumb-chosen");
+    thumb.classList.add('js-thumb-chosen');
   });
 });
 
@@ -17,55 +17,55 @@ thumbs.forEach(function (thumb) {
 // после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
 // а у card-fp-trans появляется или удаляется card-fp-transparent-text,
 
-let jsMdb = document.querySelector(".js-mdb");
-let cardTextToHide = document.querySelector(".card-fp-hide");
-let cartToTrans = document.querySelector(".card-fp-trans");
+let jsMdb = document.querySelector('.js-mdb');
+let cardTextToHide = document.querySelector('.card-fp-hide');
+let cartToTrans = document.querySelector('.card-fp-trans');
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
     if (cardTextToHide) {
-      cardTextToHide.classList.toggle("js-card-fp-hidden-item");
+      cardTextToHide.classList.toggle('js-card-fp-hidden-item');
     }
     if (cartToTrans) {
-      cartToTrans.classList.toggle("card-fp-transparent-text");
+      cartToTrans.classList.toggle('card-fp-transparent-text');
     }
   };
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
-const navButtons = document.querySelector(".navigation");
+const navButtons = document.querySelector('.navigation');
 
 if (navButtons) {
-  const descriptionComponent = document.querySelector(".card-fp-description");
+  const descriptionComponent = document.querySelector('.card-fp-description');
   const characteristicsComponent = document.querySelector(
-    ".card-fp-characteristics"
+    '.card-fp-characteristics'
   );
-  const instructionComponent = document.querySelector(".card-fp-instruction");
+  const instructionComponent = document.querySelector('.card-fp-instruction');
 
-  navButtons.addEventListener("click", (event) => {
+  navButtons.addEventListener('click', (event) => {
     event.preventDefault();
-    const currentChosen = navButtons.querySelector(".active-js");
-    const target = event.target.closest(".card-fullpage-tab");
+    const currentChosen = navButtons.querySelector('.active-js');
+    const target = event.target.closest('.card-fullpage-tab');
 
     if (!target || target === currentChosen) return;
 
     if (currentChosen) {
-      currentChosen.classList.remove("active-js");
+      currentChosen.classList.remove('active-js');
     }
-    target.classList.add("active-js");
+    target.classList.add('active-js');
 
     // Скрыть все компоненты
-    descriptionComponent.classList.add("hidden");
-    characteristicsComponent.classList.add("hidden");
-    instructionComponent.classList.add("hidden");
+    descriptionComponent.classList.add('hidden');
+    characteristicsComponent.classList.add('hidden');
+    instructionComponent.classList.add('hidden');
 
     // Показать выбранный компонент
-    if (target.classList.contains("card-fp-tab-desc")) {
-      descriptionComponent.classList.remove("hidden");
-    } else if (target.classList.contains("card-fp-tab-char")) {
-      characteristicsComponent.classList.remove("hidden");
-    } else if (target.classList.contains("card-fp-tab-instr")) {
-      instructionComponent.classList.remove("hidden");
+    if (target.classList.contains('card-fp-tab-desc')) {
+      descriptionComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-char')) {
+      characteristicsComponent.classList.remove('hidden');
+    } else if (target.classList.contains('card-fp-tab-instr')) {
+      instructionComponent.classList.remove('hidden');
     }
   });
 }
@@ -73,45 +73,45 @@ if (navButtons) {
 // для описания будет такая кнопка - js-mdb-desc
 // а для текста описания будет card-fp-desc-hidden-block
 // <div class="card-fullpage-desc-block card-fp-desc-hidden-block"></div>
-let jsMdbDescButton = document.querySelector(".js-mdb-desc-button");
+let jsMdbDescButton = document.querySelector('.js-mdb-desc-button');
 let jsDescriptionWrapper = document.querySelector(
-  ".js-card-fullpage-desc-description"
+  '.js-card-fullpage-desc-description'
 );
-let jsItemsToHideDesc = document.querySelectorAll(".js-item-to-hide-desc");
+let jsItemsToHideDesc = document.querySelectorAll('.js-item-to-hide-desc');
 
 if (jsMdbDescButton) {
   jsMdbDescButton.onclick = function (event) {
     jsItemsToHideDesc.forEach((item) => {
-      item.classList.toggle("js-card-fp-hidden-item");
+      item.classList.toggle('js-card-fp-hidden-item');
     });
-    const isExpanded = jsMdbDescButton.innerText.includes("Свернуть описание");
+    const isExpanded = jsMdbDescButton.innerText.includes('Свернуть описание');
 
     if (isExpanded) {
-      jsDescriptionWrapper.classList.remove("gapped");
-      jsMdbDescButton.innerHTML = "Развернуть описание<span></span>";
+      jsDescriptionWrapper.classList.remove('gapped');
+      jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
     } else {
-      jsDescriptionWrapper.classList.add("gapped");
-      jsMdbDescButton.innerHTML = "Свернуть описание<span></span>";
+      jsDescriptionWrapper.classList.add('gapped');
+      jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: "smooth", block: "end" });
+      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   };
 }
 
-let jsMdbAuthorButton = document.querySelector(".js-mdb-author-button");
+let jsMdbAuthorButton = document.querySelector('.js-mdb-author-button');
 if (jsMdbAuthorButton) {
   jsMdbAuthorButton.onclick = function (event) {
     let prevElemSib = jsMdbAuthorButton.previousElementSibling;
-    prevElemSib.classList.toggle("hidden");
+    prevElemSib.classList.toggle('hidden');
     const isExpanded =
-      jsMdbAuthorButton.innerText.includes("Свернуть описание");
+      jsMdbAuthorButton.innerText.includes('Свернуть описание');
 
     if (isExpanded) {
-      jsMdbAuthorButton.innerHTML = "Развернуть описание<span></span>";
+      jsMdbAuthorButton.innerHTML = 'Развернуть описание<span></span>';
     } else {
-      jsMdbAuthorButton.innerHTML = "Свернуть описание<span></span>";
+      jsMdbAuthorButton.innerHTML = 'Свернуть описание<span></span>';
     }
   };
 }
@@ -130,42 +130,42 @@ if (jsMdbAuthorButton) {
 // }
 
 // еще один слайдер
-const imageContainer = document.querySelector(".card-fullpage-image-container");
-const dots = document.querySelectorAll(".card-fullpage-dot");
+const imageContainer = document.querySelector('.card-fullpage-image-container');
+const dots = document.querySelectorAll('.card-fullpage-dot');
 
 let currentImageIndex = 0;
 
 function setActiveImage(index) {
   imageContainer.style.transform = `translateX(-${index * 100}%)`;
   dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
+    dot.classList.toggle('active', i === index);
   });
 }
 
 dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
+  dot.addEventListener('click', () => {
     currentImageIndex = index;
     setActiveImage(currentImageIndex);
   });
 });
 
 // для описания книги, чтобы там было многоточие
-const jsBookToggleButton = document.querySelector(".js-book-toggle-button");
-const jsBookTextContainer = document.querySelector(".card-fp-desc-text-top");
+const jsBookToggleButton = document.querySelector('.js-book-toggle-button');
+const jsBookTextContainer = document.querySelector('.card-fp-desc-text-top');
 if (jsBookToggleButton && jsBookTextContainer) {
-  jsBookToggleButton.addEventListener("click", function () {
-    jsBookTextContainer.classList.toggle("line-clamp-none");
+  jsBookToggleButton.addEventListener('click', function () {
+    jsBookTextContainer.classList.toggle('line-clamp-none');
   });
 }
 
 // swiper fullpage
-const swiperImage2 = new Swiper(".swiper-image-2", {
+const swiperImage2 = new Swiper('.swiper-image-2', {
   // Optional parameters
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   autoHeight: true,
   slidesPerView: 4,
@@ -186,13 +186,13 @@ const swiperImage2 = new Swiper(".swiper-image-2", {
   },
 });
 
-const swiperImageGallery = new Swiper(".swiper-image-gallery", {
+const swiperImageGallery = new Swiper('.swiper-image-gallery', {
   // Optional parameters
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   autoHeight: true,
   slidesPerView: 4,
@@ -214,16 +214,16 @@ const swiperImageGallery = new Swiper(".swiper-image-gallery", {
 });
 
 // Инициализация превью слайдера картинок товара
-const sliderThumbs = new Swiper(".slider__thumbs .swiper-container-3", {
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   // ищем слайдер превью по селектору
   // задаем параметры
-  direction: "vertical", // вертикальная прокрутка
+  direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 5, // расстояние между слайдами
   navigation: {
     // задаем кнопки навигации
-    nextEl: ".slider__next", // кнопка Next
-    prevEl: ".slider__prev", // кнопка Prev
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
   },
   clickable: true,
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
@@ -231,11 +231,11 @@ const sliderThumbs = new Swiper(".slider__thumbs .swiper-container-3", {
     // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
-      direction: "horizontal", // горизонтальная прокрутка
+      direction: 'horizontal', // горизонтальная прокрутка
     },
     768: {
       // при 768px и выше
-      direction: "vertical", // вертикальная прокрутка
+      direction: 'vertical', // вертикальная прокрутка
       spaceBetween: 5.5,
     },
     1300: {
@@ -253,21 +253,21 @@ const sliderThumbs = new Swiper(".slider__thumbs .swiper-container-3", {
   },
 });
 // Инициализация слайдера изображений
-const sliderImages = new Swiper(".slider__images .swiper-container-4", {
+const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // ищем слайдер превью по селектору
   // задаем параметры
-  direction: "vertical", // вертикальная прокрутка
+  direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
   navigation: {
     // задаем кнопки навигации
-    nextEl: ".slider__next", // кнопка Next
-    prevEl: ".slider__prev", // кнопка Prev
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
   },
   pagination: {
     //pagination(dots)
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
   },
   clickable: true,
   grabCursor: true, // менять иконку курсора
@@ -279,34 +279,34 @@ const sliderImages = new Swiper(".slider__images .swiper-container-4", {
     // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
-      direction: "horizontal", // горизонтальная прокрутка
+      direction: 'horizontal', // горизонтальная прокрутка
       mousewheel: false,
       pagination: false,
     },
     768: {
       // при 768px и выше
-      direction: "vertical", // вертикальная прокрутка
+      direction: 'vertical', // вертикальная прокрутка
       pagination: false,
       mousewheel: true,
     },
   },
 });
 
-const sliderImagesMob = new Swiper(".swiper-container-5", {
+const sliderImagesMob = new Swiper('.swiper-container-5', {
   // ищем слайдер превью по селектору
   // задаем параметры
-  direction: "vertical", // вертикальная прокрутка
+  direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
   navigation: {
     // задаем кнопки навигации
-    nextEl: ".slider__next", // кнопка Next
-    prevEl: ".slider__prev", // кнопка Prev
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev', // кнопка Prev
   },
   pagination: {
     //pagination(dots)
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
   },
   clickable: true,
   grabCursor: true, // менять иконку курсора
@@ -318,18 +318,18 @@ const sliderImagesMob = new Swiper(".swiper-container-5", {
     // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
-      direction: "horizontal", // горизонтальная прокрутка
+      direction: 'horizontal', // горизонтальная прокрутка
       mousewheel: false,
       pagination: {
-        el: ".swiper-pagination-2",
+        el: '.swiper-pagination-2',
       },
       slidesPerView: 1,
     },
     768: {
       // при 768px и выше
-      direction: "vertical", // вертикальная прокрутка
+      direction: 'vertical', // вертикальная прокрутка
       pagination: {
-        el: ".swiper-pagination-2",
+        el: '.swiper-pagination-2',
         clickable: true,
       },
       mousewheel: true,
@@ -338,12 +338,12 @@ const sliderImagesMob = new Swiper(".swiper-container-5", {
 });
 
 // слайдер - смотреть фрагмент книги
-const swiperBookFragment = new Swiper(".swiper-book-fragment", {
+const swiperBookFragment = new Swiper('.swiper-book-fragment', {
   loop: false,
   preventInteractionOnTransition: true,
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   autoHeight: true,
   allowTouchMove: false,
@@ -351,8 +351,8 @@ const swiperBookFragment = new Swiper(".swiper-book-fragment", {
   spaceBetween: 16,
 });
 
-const sliderMain = document.querySelector(".slider-main");
-const sliderPages = document.querySelectorAll(".slider-page");
+const sliderMain = document.querySelector('.slider-main');
+const sliderPages = document.querySelectorAll('.slider-page');
 
 if (sliderPages && sliderMain) {
   sliderPages.forEach(function (sliderPage) {
@@ -360,7 +360,7 @@ if (sliderPages && sliderMain) {
   });
   const max = sliderMain.max;
   const step = 100 / (max - 1);
-  window.addEventListener("load", function () {
+  window.addEventListener('load', function () {
     const sliderValue = sliderMain.value;
     sliderPages.forEach(function (sliderPage) {
       sliderPage.textContent = sliderValue;
@@ -372,7 +372,7 @@ if (sliderPages && sliderMain) {
     sliderMain.style.background = color;
   });
 
-  sliderMain.addEventListener("input", function () {
+  sliderMain.addEventListener('input', function () {
     const currentValue = parseInt(this.value);
     if (currentValue > swiperBookFragment.slides.length) {
       this.value = swiperBookFragment.slides.length;
@@ -395,14 +395,14 @@ if (sliderPages && sliderMain) {
 
 // тут кнопки для переключения слайдов,
 // события перестают генерироваться, если значение инпута больше количества слайдов
-const nextButtonFragment = document.querySelector(".bg-next-arrow");
-const prevButtonFragment = document.querySelector(".bg-prev-arrow");
+const nextButtonFragment = document.querySelector('.bg-next-arrow');
+const prevButtonFragment = document.querySelector('.bg-prev-arrow');
 if (nextButtonFragment) {
   nextButtonFragment.onclick = function () {
     const nextValue = parseInt(sliderMain.value) + 1;
     if (nextValue <= swiperBookFragment.slides.length) {
       sliderMain.value = nextValue;
-      const event = new Event("input");
+      const event = new Event('input');
       sliderMain.dispatchEvent(event);
       swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
     }
@@ -414,7 +414,7 @@ if (prevButtonFragment) {
     const prevValue = parseInt(sliderMain.value) - 1;
     if (prevValue >= 1) {
       sliderMain.value = prevValue;
-      const event = new Event("input");
+      const event = new Event('input');
       sliderMain.dispatchEvent(event);
       swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
     }
@@ -424,30 +424,36 @@ if (prevButtonFragment) {
 // код для навешивания синего бордера на элемент
 window.onload = function () {
   const slideVisibleElements = document.querySelectorAll(
-    ".swiper-slide-visible"
+    '.swiper-slide-visible'
   );
 
   slideVisibleElements.forEach(function (slideElement) {
-    const imageElement = slideElement.querySelector(".slider__image");
+    const imageElement = slideElement.querySelector(
+      '.slider__image, .slider__image-book'
+    );
     if (imageElement) {
-      slideElement.addEventListener("click", function () {
+      slideElement.addEventListener('click', function () {
         slideVisibleElements.forEach(function (el) {
-          el.querySelector(".slider__image").classList.remove(
-            "js-thumb-chosen"
-          );
-          el.querySelector(".slider__image").classList.remove("p-4");
+          el.querySelector(
+            '.slider__image, .slider__image-book'
+          ).classList.remove('js-thumb-chosen');
+          el.querySelector(
+            '.slider__image, .slider__image-book'
+          ).classList.remove('p-4');
         });
-        imageElement.classList.add("js-thumb-chosen");
-        imageElement.classList.add("p-4");
+        imageElement.classList.add('js-thumb-chosen');
+        imageElement.classList.add('p-4');
       });
     }
   });
 
   if (slideVisibleElements.length > 0) {
-    const firstImageElement =
-      slideVisibleElements[0].querySelector(".slider__image");
+    const firstImageElement = slideVisibleElements[0].querySelector(
+      '.slider__image, .slider__image-book'
+    );
     if (firstImageElement) {
-      firstImageElement.classList.add("js-thumb-chosen");
+      firstImageElement.classList.add('js-thumb-chosen');
+      firstImageElement.classList.add('p-4');
     }
   }
 };
