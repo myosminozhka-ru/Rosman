@@ -793,6 +793,7 @@ header {
 .swiper,
 .swiper-text,
 .swiper-book,
+.swiper-one-book,
 .swiper-image,
 .swiper-image-2,
 .swiper-book-fragment,
@@ -1088,7 +1089,20 @@ header {
   left: -2rem;
   width: 110%;
 }
-
+#yellow-moving-block2 {
+  @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
+  box-shadow: inset 0px 1px 19px 4px #535353;
+  left: -2rem;
+  width: 110%;
+}
+#parent2 {
+  width: 99%;
+  margin: auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  /* Скрыть содержимое, выходящее за границы блока */
+}
 #parent {
   width: 99%;
   margin: auto;
@@ -1573,4 +1587,26 @@ header {
 }
 .w-29rem {
   width: 29.6rem;
+}
+.block-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+  .vertical-rl {
+    @apply bg-yellow;
+    writing-mode: vertical-rl;
+  }
+  @media screen and (max-width: 900px) {
+    overflow: hidden;
+    width: 225%;
+    position: relative;
+    left: -65%;
+    right: -65%;
+    .book_card_heading {
+      width: 25rem;
+    }
+  }
 }

@@ -482,9 +482,9 @@
   &.books-slider {
     height: 84.9rem;
     &.elephant {
-      height: 90rem;
-      @media screen and (min-width: 1200px) {
-        height: 80rem;
+      height: 80rem;
+      @media screen and (min-width: 2300px) {
+        height: 110rem;
       }
       @media screen and (max-width: 900px) {
         height: 95rem;
@@ -495,7 +495,27 @@
     }
   }
 }
+#yellow-moving-block2.card-fullpage-w-bg-modified {
+  height: 51.9rem;
+  padding: 0;
+  margin: 0;
+  &.books-slider {
+    height: 65.9rem;
+    &.elephant {
+      height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
 
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
+  }
+}
 #yellow-moving-block.card-fullpage-w-bg-modified {
   height: 51.9rem;
   padding: 0;
@@ -504,6 +524,9 @@
     height: 65.9rem;
     &.elephant {
       height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
       @media screen and (max-width: 900px) {
         height: 85rem;
       }

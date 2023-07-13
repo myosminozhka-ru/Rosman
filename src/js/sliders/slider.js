@@ -159,6 +159,32 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  const swiperOneBook = new Swiper('.swiper-one-book', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      // настройки для разных разрешений
+      320: {
+        slidesPerView: 0.9,
+        spaceBetween: 20,
+      },
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+
   const personsSLider = new Swiper('.persons-slider', {
     navigation: {
       nextEl: '.button-next',
