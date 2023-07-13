@@ -1573,3 +1573,10 @@ header {
 .w-29rem {
   width: 29.6rem;
 }
+.marker {
+  background-image: url('../../img/marker.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

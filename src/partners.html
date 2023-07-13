@@ -12,9 +12,8 @@
       rel="stylesheet"
     />
   </head>
+  @@include('components/header/header.html')
   <body class="bg-gray-50">
-    @@include('components/header/header.html')
-
     <div id="yellow-background">
       <div id="moving-block">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
@@ -30,97 +29,125 @@
       <div id="white-mobile-background"></div>
       <div id="above-block">
         @@include('components/ui-kit/breadcrumbs/index.html', { }, )
-
-        <div class="flex">
-          <h1 class="head-1 mb-64 px-24">Оптовым клиентам</h1>
+        <h1 class="head-1 px-24">Оптовым клиентам</h1>
+        <p class="mb-48 mt-24 px-24 text-m">
+          Компания РОСМЭН сотрудничает с юридическими лицами по оптовой продаже
+          книг и игрушек.
+        </p>
+        <h3 class="head-3 px-24">Условия сотрудничества</h3>
+        <div class="mb-48 grid grid-cols-3 gap-24 px-24 pt-24">
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-folder-medal-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Сотрудничество с юридическими лицами по договору поставки
+            </p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-money-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">От 30 000₽. Минимальная сумма заказа</p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-car-van-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Доставка по Москве и Московской области. В пределах МКАД +30 км
+              бесплатно. Самовывоз со склада
+            </p>
+          </div>
         </div>
-        <div class="mb-42 flex flex-row justify-between px-24 md:flex-col">
-          <h1 class="head-1 mb-64 px-24">Условия сотрудничества</h1>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
+        <div
+          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-817"
+        ></div>
+        <div
+          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row gap-99 px-24 py-94 md:h-817"
+        >
+          <div class="flex w-2/4 flex-col gap-16">
+            <h3 class="head-3">Как начать с нами работать?</h3>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                1
+              </div>
+              <p class="flex items-center text-m">Заполнить анкету-заявку</p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                2
+              </div>
+              <p class="flex items-center text-m">Дождаться ответа менеджера</p>
+            </div>
+            <p class="w-3/4 text-m">
+              Менеджер отправит Вам прайс-лист для формирования заказа и список
+              документов, необходимых для заключения договора
             </p>
           </div>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Юридический адрес</p>
-            <p class="text-l">
-              17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
-              помещ. II, 1 этаж
-            </p>
+          <div class="flex w-2/4 flex-col gap-16">
+            <p class="mb-32 text-m">Шаг 1 из 4</p>
+            <div class="flex flex-row gap-16">
+              <img
+                src="../../img/yellow-icons-58px/yellow-money-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Минимальная сумма заказа - 30 000₽
+              </p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <img
+                src="../../img/yellow-icons-58px/yellow-car-van-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Бесплатная доставка по Москве и ближайшему Подмосковью
+              </p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <img
+                src="../../img/yellow-icons-58px/yellow-label-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Индивидуальная система скидок
+              </p>
+            </div>
+            <form class='flex flex-col w-[50rem] gap-16'>
+              <input class="input" type="text" placeholder="Организация" />
+              <input class="input" type="text" placeholder="Страна" />
+              <input class="input" type="text" placeholder="Регион и город" />
+              <button class="button-black my-10 w-full">Следующий шаг</button>
+            </form>
           </div>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
+          <div class='-bottom-10 absolute'>
+            <div class="elephant-moves-leg">
+              <div class="elephant-moves-leg-body el-body">
+                <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                <div class="elephant-moves-leg-leg el-leg"></div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div id="map" style="width: 100%; height: 504px"></div>
-        <div
-          class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
-        >
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="../../img/toys.svg" class="h-58 w-58" />
-
-            <p class="text-4xl">Игрушки.СМИ и блогеры</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
-          </div>
-
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="../../img/book.svg" class="h-58 w-58" />
-            <p class="text-4xl">Книги</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
-          </div>
-
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="../../img/document.svg" class="h-58 w-58" />
-            <p class="text-4xl">Отдел прав и лицензий</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
-          <p class="ml-4 w-1/12 text-l text-text md:w-full">
-            Для вопросов и предложений
-          </p>
-          <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
-        </div>
-        <div class="bg-white">
-          @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html',
-          { }, )
-        </div>
       </div>
     </div>
-    <div class="custom-box !fixed">
-      <span></span>
-      <div class="custom-before"></div>
-      <a href="mailto:rosman@rosman.ru">Написать нам</a>
-      <div class="custom-after"></div>
-    </div>
+
     @@include('components/ui-kit/footer/footer-ru.html', { }, )
     <link
       rel="stylesheet"
@@ -137,6 +164,12 @@
         center: [37.608078, 55.8087759], // starting position [lng, lat]
         zoom: 15, // starting zoom
       });
+      var markerElement = document.createElement('div');
+      markerElement.className = 'marker';
+
+      var marker = new mapboxgl.Marker(markerElement)
+        .setLngLat([37.613078, 55.8087760]) // Замените на координаты маркера
+        .addTo(map);
     </script>
   </body>
 </html>
