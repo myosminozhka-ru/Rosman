@@ -152,15 +152,19 @@
         </div>
       </div>
 
-      <div class="px-24 sm:px-12 mb-64 sm:mb-48 flex flex-col gap-64 sm:gap-24">
+      <div
+        class="mb-64 flex flex-col gap-64 px-24 sm:mb-48 sm:gap-24 sm:px-12"
+      >
         <h1 class="head-1">Случайная книга</h1>
-        <div class="grid grid-cols-3 gap-x-16 px-[12rem] bsmax:px-[9rem] bs:px-0">
-          <div class="max-w-[29rem] h-max more-down-filters">
-            <button class="more-down-button new">
+        <div
+          class="grid grid-cols-3 gap-x-16 px-[12rem] bsmax:px-[9rem] bs:px-0 md:grid-cols-1 md:items-center md:justify-center md:gap-y-16"
+        >
+          <div class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]">
+            <button class="more-down-button new border-b border-[#D9D9D9]">
               Выберите жанр<span></span>
             </button>
             <!--  more-down -->
-            <div class="more-down-content !p-16">
+            <div class="more-down-content border border-t-0 !p-16">
               <div class="js-footer-heading-policy-agreement checkbox_main">
                 <input
                   class="js-footer-heading-checkbox checkbox__input_main"
@@ -213,14 +217,27 @@
                   <span>Раскраски</span>
                 </label>
               </div>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="genre-5"
+                />
+                <label
+                  for="genre-5"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>Раскраски</span>
+                </label>
+              </div>
             </div>
           </div>
-          <div class="max-w-[29rem] h-max more-down-filters">
-            <button class="more-down-button new">
+          <div class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]">
+            <button class="more-down-button new border-b border-[#D9D9D9]">
               Выберите возраст<span></span>
             </button>
             <!--  more-down -->
-            <div class="more-down-content !p-16">
+            <div class="more-down-content border border-t-0 !p-16">
               <div class="js-footer-heading-policy-agreement checkbox_main">
                 <input
                   class="js-footer-heading-checkbox checkbox__input_main"
@@ -275,7 +292,9 @@
               </div>
             </div>
           </div>
-          <button class="max-w-[29rem] max-h-[4rem] button-black">Подобрать</button>
+          <button class="button-black max-h-[4rem] max-w-[29rem] md:max-w-[200rem]">
+            Подобрать
+          </button>
         </div>
       </div>
     </div>
