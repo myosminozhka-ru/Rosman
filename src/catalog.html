@@ -2,801 +2,801 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Каталог</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-@@include('components/header/header-main.html', { }, )
+  <body>
+    @@include('components/header/header-main.html', { }, )
 
-<div id="yellow-background">
-  <div id="moving-block">
-    <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-      <g>
-        <path
-          id="moving-bock-shadow"
-          d="M 0 0 L 100 0 L 100 100 L 0 100"
-          fill="white"
-        ></path>
-      </g>
-    </svg>
-  </div>
-  <div id="white-mobile-background"></div>
-  <div id="above-block">
-    @@include('components/ui-kit/breadcrumbs/index.html', { },)
-    <div class="flex">
-      <h1 class="head-1 mb-64 px-25">Все игрушки</h1>
-      <sup class="text-l text-text">1 222 323</sup>
-    </div>
-    <div class="flex flex-row gap-22 px-25 md:px-0 bg-white">
-      @@include('components/ui-kit/filters/filter-2.html', { }, )
+    <div id="yellow-background">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        @@include('components/ui-kit/breadcrumbs/index.html', { },)
+        <div class="flex">
+          <h1 class="head-1 mb-64 px-25">Все игрушки</h1>
+          <sup class="text-l text-text">1 222 323</sup>
+        </div>
+        <div class="flex flex-row gap-22 bg-white px-25 md:px-0">
+          @@include('components/ui-kit/filters/filter-2.html', { }, )
 
-      <div class="width-75 bg-white">
-        <div class="brand_choose_brands">
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div class="image_container_brand">
-            <a href="#" class="popup_brand_choose_brand_image">
-              <img src="../../img/brand_nado.svg" alt="" />
-            </a>
-          </div>
-          <div
-            class="image_container_brand js_popup_brand_choose_list_button"
-          >
-            <div class="all-brands">Все бренды</div>
-          </div>
-        </div>
-        @@include('components/ui-kit/popups/popup-brand-listing.html', { },
-        )
-        <div class="flex md:mt-40 justify-between">
-          <div
-            class="more-down-filters no-padds no-after mt-16 mb-16 border-b	 border-card-stroke md:mt-0 !w-[29.6rem] md:!w-3/4"
-          >
-            <button class="more-down-button with-padds new">
-              Сначала новые<span></span>
-            </button>
-            <!--  more-down -->
-            <div class="more-down-content new">
-              <label class="checkbox-container">
-                <input type="radio" name="sort-by" />
-                <span class="checkmark"></span>
-                Сначала новые
-              </label>
-              <label class="checkbox-container">
-                <input type="radio" name="sort-by" />
-                <span class="checkmark"></span>
-                Сначала старые
-              </label>
-              <label class="checkbox-container">
-                <input type="radio" name="sort-by" />
-                <span class="checkmark"></span>
-                А-Я
-              </label>
-              <label class="checkbox-container">
-                <input type="radio" name="sort-by" />
-                <span class="checkmark"></span>
-                Я-А
-              </label>
-            </div>
-          </div>
-          <div id="open-filter" class="mobile-filter "></div>
-        </div>
-        <div class="popup_all_filters_filters md:hidden">
-          <div class="popup_all_filters_filter">
-            <input type="checkbox" id="novelty" class="sort-checkbox" />
-            <label class="sort-label" for="novelty"
-            >Для мальчиков<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input
-              type="checkbox"
-              id="interactive_features"
-              class="sort-checkbox"
-            />
-            <label class="sort-label" for="interactive_features"
-            >Новинка<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input
-              type="checkbox"
-              id="sound_effects"
-              class="sort-checkbox"
-            />
-            <label class="sort-label" for="sound_effects"
-            >Игровой набор<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input
-              type="checkbox"
-              id="erase_all_filters"
-              class="sort-checkbox_erase"
-            />
-            <label class="sort-label_erase" for="erase_all_filters"
-            >Сбросить все
-              <span class="cross"></span>
-            </label>
-          </div>
-        </div>
-        <div
-          class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
-        >
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
-                </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
+          <div class="width-75 bg-white">
+            <div class="brand_choose_brands">
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
               </div>
-              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div class="image_container_brand">
+                <a href="#" class="popup_brand_choose_brand_image">
+                  <img src="../../img/brand_nado.svg" alt="" />
+                </a>
+              </div>
+              <div
+                class="image_container_brand js_popup_brand_choose_list_button"
+              >
+                <div class="all-brands">Все бренды</div>
+              </div>
+            </div>
+            @@include('components/ui-kit/popups/popup-brand-listing.html', { },
+            )
+            <div class="flex justify-between md:mt-40">
+              <div
+                class="more-down-filters no-padds no-after mb-16 mt-16 !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-3/4"
+              >
+                <button class="more-down-button with-padds new">
+                  Сначала новые<span></span>
+                </button>
+                <!--  more-down -->
+                <div class="more-down-content new">
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Сначала новые
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Сначала старые
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    А-Я
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Я-А
+                  </label>
+                </div>
+              </div>
+              <div id="open-filter" class="mobile-filter"></div>
+            </div>
+            <div class="popup_all_filters_filters md:hidden">
+              <div class="popup_all_filters_filter">
+                <input type="checkbox" id="novelty" class="sort-checkbox" />
+                <label class="sort-label" for="novelty"
+                  >Для мальчиков<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="interactive_features"
+                  class="sort-checkbox"
+                />
+                <label class="sort-label" for="interactive_features"
+                  >Новинка<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="sound_effects"
+                  class="sort-checkbox"
+                />
+                <label class="sort-label" for="sound_effects"
+                  >Игровой набор<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="erase_all_filters"
+                  class="sort-checkbox_erase"
+                />
+                <label class="sort-label_erase" for="erase_all_filters"
+                  >Сбросить все
+                  <span class="cross"></span>
+                </label>
+              </div>
+            </div>
+            <div
+              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
+            >
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
 
-              <div class="toy_card_image item_card_image">
-                <div class="running-stroke">
-                  <div class="marquee">
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
-                    <span>скидка 15%</span>
+                  <div class="toy_card_image item_card_image">
+                    <div class="running-stroke">
+                      <div class="marquee">
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                      </div>
+                    </div>
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
                   </div>
                 </div>
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
-              </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
-              </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
-              </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
-              </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
-              </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
-              </div>
-              <div class="toy_card_more item_card_more">
-                <button
-                  class="toy_card_item_link item_card_link overline-button"
-                >
-                  Подробнее
-                </button>
-                <button class="item_card_add_to_favourite"></button>
-              </div>
-            </div>
-          </div>
-          <div class="toy_card item_card">
-            <div class="toy_card_heading">
-              <div class="item_card_tags bordered_tags">
-                <div class="item_card_tags_main bordered_tags_main">
-                  <a
-                    href="#"
-                    class="toy_card_tags_first bordered_tags_item body-s-bold"
-                  >
-                    Бестселлер
-                  </a>
-                  <a
-                    href="#"
-                    class="toy_card_tags_second bordered_tags_item body-s-bold"
-                  >
-                    Новинка
-                  </a>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
                 </div>
-                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div class="toy_card_image item_card_image">
-                <img
-                  class="toy_card_img item_card_img"
-                  src="../../img/cards_toy.svg"
-                  alt=""
-                />
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="../../img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="toy_card_info item_card_info">
-              <div class="toy_card_name item_card_name">
-                Арена для баттлов Инфинити Надо
+            <section class="pagination rm-pag">
+              <div class="pagination-seen js-rm-pag-seen">
+                Просмотрено: 12 из 456
               </div>
-              <div class="toy_card_more item_card_more">
+              <button class="pagination-more-button js-rm-pag-more-btn">
+                Показать ещё
+              </button>
+              <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
                 <button
-                  class="toy_card_item_link item_card_link overline-button"
+                  class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
                 >
-                  Подробнее
+                  <span></span>Назад
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="nav-btns">
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    1
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    2
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    3
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                  >
+                    4
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                  >
+                    5
+                  </button>
+                </div>
+
+                <button
+                  class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt"
+                >
+                  Вперёд <span></span>
+                </button>
               </div>
-            </div>
+            </section>
           </div>
         </div>
-        <section class="pagination rm-pag">
-          <div class="pagination-seen js-rm-pag-seen">
-            Просмотрено: 12 из 456
-          </div>
-          <button class="pagination-more-button js-rm-pag-more-btn">
-            Показать ещё
-          </button>
-          <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
-            <button
-              class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
-            >
-              <span></span>Назад
-            </button>
-            <div class="nav-btns">
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-              >
-                1
-              </button>
-
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-              >
-                2
-              </button>
-
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-              >
-                3
-              </button>
-
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
-              >
-                4
-              </button>
-
-              <button
-                class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
-              >
-                5
-              </button>
+        <div id="white-background">
+          <div id="yellow-moving-block">
+            <div id="parent">
+              <img
+                id="follower"
+                class="slide-el-2"
+                src="../../img/running-elephant/slide-el-2.png"
+              />
             </div>
-
-            <button
-              class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt"
-            >
-              Вперёд <span></span>
-            </button>
           </div>
-        </section>
-      </div>
-    </div>
-    <div id="white-background">
-      <div id="yellow-moving-block">
-        <div id="parent">
-          <img
-            id="follower"
-            class="slide-el-2"
-            src="../../img/running-elephant/slide-el-2.png"
-          />
-        </div>
-      </div>
-      <div id="above-el-block">
-        <h1
-          class="head-2 mx-auto mt-40 w-2/4 px-25 text-center md:mt-2 md:w-full"
-        >
-          Подписаться на рассылку
-        </h1>
-        <p class="body-m mx-auto text-center">
-          Как принято считать, непосредственные участники технического
-          прогресса призывают<br />
-          нас к новым свершениям, которые, в свою очередь, должны быть
-          описаны максимально подробно.
-        </p>
-        <div
-          class="mx-auto mt-40 flex w-2/4 justify-center md:mt-2 md:w-full"
-        >
-          <input
-            class="input w-full items-center"
-            type="text"
-            placeholder="Электронная почта"
-          />
-          <button class="button-black">Подписаться</button>
-        </div>
-        <div
-          class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-2/6 justify-center md:mt-2 md:w-full"
-        >
-          <input
-            class="js-footer-heading-checkbox checkbox__input_main"
-            type="checkbox"
-            id="footer-heading-checkbox"
-          />
-          <label
-            for="footer-heading-checkbox"
-            class="footer-heading-policy-agreement-text checkbox__label_main body-m"
-          >
-            <span>Соглашаюсь с &nbsp</span>
-            <a
-              href="#"
-              class="footer-heading-policy-agreement-link link-m-bold"
+          <div id="above-el-block">
+            <h1
+              class="head-2 mx-auto mt-40 w-2/4 px-25 text-center md:mt-2 md:w-full"
             >
-              политикой конфиденциальности</a
+              Подписаться на рассылку
+            </h1>
+            <p class="body-m mx-auto text-center">
+              Как принято считать, непосредственные участники технического
+              прогресса призывают<br />
+              нас к новым свершениям, которые, в свою очередь, должны быть
+              описаны максимально подробно.
+            </p>
+            <div
+              class="mx-auto mt-40 flex w-2/4 justify-center md:mt-2 md:w-full"
             >
-          </label>
+              <input
+                class="input w-full items-center"
+                type="text"
+                placeholder="Электронная почта"
+              />
+              <button class="button-black">Подписаться</button>
+            </div>
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-2/6 justify-center md:mt-2 md:w-full"
+            >
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности</a
+                >
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-@@include('components/ui-kit/footer/footer-ru.html', { }, )
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="./js/scripts.js"></script>
-</body>
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>
