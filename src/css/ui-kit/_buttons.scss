@@ -535,7 +535,7 @@ button {
     @apply m-4;
 
     p {
-      @apply relative cursor-pointer px-2 text-black no-underline;
+      @apply relative cursor-pointer text-black no-underline;
 
       &.active-js {
         &::after {
