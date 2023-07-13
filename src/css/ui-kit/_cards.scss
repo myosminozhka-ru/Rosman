@@ -612,8 +612,8 @@
 
 // КАРТОЧКА ФОТОГАЛЕРЕИ
 .card_photogallery_item {
-  @apply relative relative cursor-pointer;
-  aspect-ratio: 1/1;
+  @apply relative relative cursor-pointer h-full;
+  //aspect-ratio: 1/1;
 }
 
 .card_photogallery_item::before {
