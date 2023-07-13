@@ -14,7 +14,7 @@
     @@include('components/header/header-main.html', { }, )
 
     <div id="yellow-background">
-      <div id="moving-block" class='!w-[110%] !-left-2'>
+      <div id="moving-block" class="!-left-2 !w-[110%]">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
           <g>
             <path
@@ -28,102 +28,129 @@
       <div id="white-mobile-background"></div>
       <div id="above-block">
         @@include('components/ui-kit/breadcrumbs/index.html', { },)
-        <div class="flex flex-row md:flex-col bg-background px-24 py-16 gap-12">
-          <div class="flex flex-row md:flex-col gap-24 md:gap-4">
-            <img class='w-[14rem] h-[14rem] md:hidden object-contain' src="../../img/brand_image.svg" />
-            <div class='hidden md:flex md:flex-row gap-16'>
-              <img class='w-[5rem] h-[5rem] object-contain' src="../../img/brand_image.svg" />
-              <div class='flex justify-center'> <h3 class='head-2 my-auto'>Инфинити Надо</h3></div>
+        <div class="flex flex-row gap-12 bg-background px-24 py-16 md:flex-col">
+          <div class="flex flex-row gap-24 md:flex-col md:gap-4">
+            <img
+              class="h-[14rem] w-[14rem] object-contain md:hidden"
+              src="../../img/brand_image.svg"
+            />
+            <div class="hidden gap-16 md:flex md:flex-row">
+              <img
+                class="h-[5rem] w-[5rem] object-contain"
+                src="../../img/brand_image.svg"
+              />
+              <div class="flex justify-center">
+                <h3 class="head-2 my-auto">Инфинити Надо</h3>
+              </div>
             </div>
             <div class="flex flex-col">
-              <h3 class='head-2 md:hidden'>Инфинити Надо</h3>
-              <p class='body-m'>
-                Основу волчков Infinity Nado составляет атакующее металлическое кольцо - именно благодаря металлической основе волчки Infinity Nado такие...
+              <h3 class="head-2 md:hidden">Инфинити Надо</h3>
+              <p class="body-m">
+                Основу волчков Infinity Nado составляет атакующее металлическое
+                кольцо - именно благодаря металлической основе волчки Infinity
+                Nado такие...
               </p>
-              <div class='mt-16'><p class='link-m js_popup_brand_description_button '>Читать</p></div>
-              @@include('components/ui-kit/popups/popup-brand-description.html', { }, )
+              <div class="mt-16">
+                <p class="link-m js_popup_brand_description_button">Читать</p>
+              </div>
+              @@include('components/ui-kit/popups/popup-brand-description.html',
+              { }, )
             </div>
           </div>
-          <div class="flex flex-row md:flex-col gap-16 ">
+          <div class="flex flex-row gap-16 md:flex-col">
             <div
-              class="more-down-filters no-padds no-after !w-[19rem]  md:!w-full"
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">
-               Сезоны<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Сезоны<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-1" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-1"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-1"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-2" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-2"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-6" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-6"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-7" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-7"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-8" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-8"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-123" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-123"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Линейка<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Линейка<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-5" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-5"
-                >Мадс Миккельсен<span class="cross"></span
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-4" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-4"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-3" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-3"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Особенности<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Особенности<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-9" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-9"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-9"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-10" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-10"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-11" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-11"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-22 px-25 md:px-0 bg-white mt-16">
+        <div class="mt-16 flex flex-row gap-22 bg-white px-25 md:px-0">
           @@include('components/ui-kit/filters/filter-2.html', { }, )
 
           <div class="width-75 bg-white">
