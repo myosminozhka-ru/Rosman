@@ -217,7 +217,46 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
+  if (yellowMovingBlock2) {
+    document.addEventListener('mousemove', function (event) {
+      const windowWidth = window.innerWidth;
+      const blockWidth = yellowMovingBlock2.offsetWidth;
 
+      // Вычисляем позицию блока на основе позиции мыши и ширины окна
+      let blockX = event.clientX - blockWidth / 2;
+
+      // Вычисляем наклон блока в зависимости от позиции мыши
+      let tilt = (blockX / windowWidth) * 6;
+
+      // Применяем наклон к блоку с помощью свойства transform
+      yellowMovingBlock2.style.transform = `rotate(${tilt}deg)`;
+    });
+  }
+
+  let isMoving2 = false;
+  document.addEventListener('mousemove', function (event) {
+    let parent2 = document.getElementById('parent2');
+    if (parent2) {
+      let follower2 = document.getElementById('follower2');
+      let parentRect = parent2.getBoundingClientRect();
+      let x = event.clientX - parentRect.left;
+      let newX = x - follower2.offsetWidth; // Вычисляем новое положение в противоположной стороне
+      newX = Math.max(
+        0,
+        Math.min(newX, parentRect.width - follower2.offsetWidth)
+      );
+
+      if (!isMoving2) {
+        isMoving2 = true;
+        follower2.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+
+        setTimeout(function () {
+          isMoving2 = false;
+        }, 500); // Задержка в 200 миллисекунд
+      }
+    }
+  });
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );
@@ -302,16 +341,25 @@ function toggleSearch() {
   let headerNav = document.querySelector('.header-nav');
   let searchInput = document.querySelector('.search-input');
   let input = document.querySelector('.search-input input');
+  let logo = document.querySelector('.mobile-logo');
   input.value = '';
-  let headerbtn = document.querySelector('.header-btn');
+  let headerbtn = document.querySelectorAll('.header-btn');
   if (headerNav.classList.contains('hide')) {
     headerNav.classList.remove('hide');
-    headerbtn.classList.remove('hide-mobile');
-    headerbtn.classList.remove('hide-icon');
+    logo.classList.remove('hide');
+    for (let i = 0; i < headerbtn.length; i++) {
+      headerbtn[i].classList.remove('hide-mobile');
+      headerbtn[i].classList.remove('hide-icon');
+      headerbtn[i].classList.remove('hide');
+    }
   } else {
     headerNav.classList.add('hide');
-    headerbtn.classList.add('hide-mobile');
-    headerbtn.classList.add('hide-icon');
+    logo.classList.add('hide');
+    for (let i = 0; i < headerbtn.length; i++) {
+      headerbtn[i].classList.add('hide-mobile');
+      headerbtn[i].classList.add('hide-icon');
+      headerbtn[i].classList.add('hide');
+    }
   }
   if (searchInput.classList.contains('hide')) {
     searchInput.classList.remove('hide');
@@ -360,5 +408,78 @@ function scrollContent(direction) {
     container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
   } else if (direction === 'right') {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}
+class Slider {
+  constructor(rangeElement, valueElement, options) {
+    this.rangeElement = rangeElement;
+    this.valueElement = valueElement;
+    this.options = options;
+
+    // Attach a listener to "change" event
+    this.rangeElement.addEventListener('input', this.updateSlider.bind(this));
+  }
+
+  // Initialize the slider
+  init() {
+    this.rangeElement.setAttribute('min', options.min);
+    this.rangeElement.setAttribute('max', options.max);
+    this.rangeElement.value = options.cur;
+
+    this.updateSlider();
+  }
+
+  // Format the money
+  asMoney(value) {
+    return (
+      '$' +
+      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+    );
+  }
+
+  generateBackground(rangeElement) {
+    if (this.rangeElement.value === this.options.min) {
+      return;
+    }
+
+    let percentage =
+      ((this.rangeElement.value - this.options.min) /
+        (this.options.max - this.options.min)) *
+      100;
+    return (
+      'background: linear-gradient(to right, #000000, #000000 ' +
+      percentage +
+      '%, #D9D9D9 ' +
+      percentage +
+      '%, #D9D9D9 100%)'
+    );
+  }
+
+  updateSlider(newValue) {
+    this.valueElement.innerHTML = this.asMoney(this.rangeElement.value);
+    this.rangeElement.style = this.generateBackground(this.rangeElement.value);
+  }
+}
+
+let rangeElement = document.querySelector('.range [type="range"]');
+let valueElement = document.querySelector('.range .range__value span');
+
+let options = {
+  min: 2000,
+  max: 75000,
+  cur: 37500,
+};
+
+if (rangeElement) {
+  let slider = new Slider(rangeElement, valueElement, options);
+
+  slider.init();
+}
+function showBlock(elementId) {
+  var block = document.getElementById(elementId);
+  if (block.classList.contains('show')) {
+    block.classList.remove('show');
+  } else {
+    block.classList.add('show');
   }
 }

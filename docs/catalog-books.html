@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header id="header3" class="bottom header" data-header="main">
+    <header id="header3" class="bottom header h-64" data-header="main">
   <div class="logo"><img src="./img/logo.svg" /></div>
   <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
   <div class="dropdown">
@@ -113,20 +113,130 @@
   </div>
 </header>
 <div class="toolbar">
-  <a href="#" class="toolbar-button active">
-    <img src="./img/toolbar-book.png" />Главная</a
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-home.png" />Игрушки</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
+  ><img src="./img/toolbar-home.png" />Игрушки</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-menu.png" />Книги</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
+  ><img src="./img/toolbar-menu.png" />Книги</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-toys.png" />Меню</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
+  ><img src="./img/toolbar-toys.png" />Меню</div
   >
 </div>
+<div id="block1" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
 
+<div id="block2" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
 
     <div id="yellow-background">
       <div id="moving-block">
@@ -355,7 +465,7 @@
         </div>
         <hr class="my-14 text-grey" />
 
-        <div class="p-10">
+        <div class="py-10">
           <button class="button-black my-10 w-full">Показать ещё</button>
           <input
             type="reset"
@@ -369,9 +479,9 @@
 
 
           <div class="width-75 bg-white">
-            <div class="flex justify-between md:mt-40">
+            <div class="flex justify-between md:mt-40 md:px-24">
               <div
-                class="more-down-filters no-padds no-after w-29rem mb-16 mt-16 border-b border-card-stroke md:mt-0 md:!w-3/4"
+                class="more-down-filters no-padds no-after mb-16 mt-16 w-29rem border-b border-card-stroke md:mt-0 md:!w-3/4"
               >
                 <button class="more-down-button with-padds new">
                   Сначала новые<span></span>
@@ -445,7 +555,7 @@
               </div>
             </div>
             <div
-              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
+              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 md:px-24"
             >
               <div class="toy_card item_card">
                 <div class="toy_card_heading">
@@ -1070,7 +1180,7 @@
         </div>
       </div>
     </div>
-    <div class="footer rosman-footer-ru">
+    <div class="footer rosman-footer-ru bs:mb-[3.5rem]">
   <div class="footer-container">
     <div class="footer-heading">
       <div class="footer-heading-main">

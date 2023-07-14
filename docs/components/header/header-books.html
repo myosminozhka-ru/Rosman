@@ -1,4 +1,4 @@
-<header id="header2" class="bottom header" data-header="books">
+<header id="header2" class="bottom header h-64" data-header="books">
   <div class="logo"><img src="./img/logo.svg" /></div>
   <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
   <div class="dropdown">
@@ -100,16 +100,127 @@
   </div>
 </header>
 <div class="toolbar">
-  <a href="#" class="toolbar-button active">
-    <img src="./img/toolbar-book.png" />Главная</a
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-home.png" />Игрушки</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
+  ><img src="./img/toolbar-home.png" />Игрушки</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-menu.png" />Книги</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
+  ><img src="./img/toolbar-menu.png" />Книги</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-toys.png" />Меню</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
+  ><img src="./img/toolbar-toys.png" />Меню</div
   >
+</div>
+<div id="block1" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
 </div>

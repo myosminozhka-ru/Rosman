@@ -1256,6 +1256,10 @@ img {
   @apply flex flex-row flex-nowrap gap-8;
   overflow-x: scroll;
   white-space: nowrap;
+  &.no_scroll {
+    flex-wrap: wrap!important;
+    overflow-x: auto!important;
+  }
 }
 
 .popup_all_filters_filters::-webkit-scrollbar {

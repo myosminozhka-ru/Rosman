@@ -12,8 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-50">
-    <header id="header" class="bottom header" data-header="toys">
+  <header id="header" class="bottom header h-64" data-header="toys">
   <div class="logo"><img src="./img/logo.svg" /></div>
   <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
   <div class="dropdown">
@@ -37,7 +36,7 @@
       <div class="icon"></div>
     </button>
     <!--  more-down -->
-    <div class="more-down-content mt-60">
+    <div class="more-down-content ">
       <ul>
         <li class="company"><a href="#">Бренды</a></li>
         <li class="news"><a href="#">Новости</a></li>
@@ -115,21 +114,132 @@
   </div>
 </header>
 <div class="toolbar">
-  <a href="#" class="toolbar-button active">
-    <img src="./img/toolbar-book.png" />Главная</a
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-home.png" />Игрушки</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
+    ><img src="./img/toolbar-home.png" />Игрушки</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-menu.png" />Книги</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
+    ><img src="./img/toolbar-menu.png" />Книги</div
   >
-  <a href="#" class="toolbar-button"
-    ><img src="./img/toolbar-toys.png" />Меню</a
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
+    ><img src="./img/toolbar-toys.png" />Меню</div
   >
 </div>
+<div id="block1" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
 
+<div id="block2" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
 
+<div id="block3" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block" >
+  <div class="block-content">
+    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class='head-3 mb-16'>Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+  <body class="bg-gray-50">
     <div id="yellow-background">
       <div id="moving-block">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
@@ -166,339 +276,130 @@
   </div>
 </div>
 
-
-        <div class="flex">
-          <h1 class="head-1 mb-64 px-24">Оптовым клиентам</h1>
-        </div>
-        <div class="mb-42 flex flex-row justify-between px-24 md:flex-col">
-          <h1 class="head-1 mb-64 px-24">Условия сотрудничества</h1>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
+        <h1 class="head-1 px-24">Оптовым клиентам</h1>
+        <p class="mb-48 mt-24 px-24 text-m">
+          Компания РОСМЭН сотрудничает с юридическими лицами по оптовой продаже
+          книг и игрушек.
+        </p>
+        <h3 class="head-3 px-24">Условия сотрудничества</h3>
+        <div class="mb-48 grid grid-cols-3 md:flex md:flex-col gap-24 px-24 pt-24">
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-folder-medal-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Сотрудничество с юридическими лицами по договору поставки
             </p>
           </div>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Юридический адрес</p>
-            <p class="text-l">
-              17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
-              помещ. II, 1 этаж
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-money-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">От 30 000₽. Минимальная сумма заказа</p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-car-van-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Доставка по Москве и Московской области. В пределах МКАД +30 км
+              бесплатно. Самовывоз со склада
             </p>
           </div>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-          </div>
         </div>
-        <div id="map" style="width: 100%; height: 504px"></div>
         <div
-          class="my-42 flex flex-row justify-between bg-white px-24 md:flex-col"
+          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-[86rem]"
+        ></div>
+        <div
+          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row  md:flex-col  gap-99 md:gap-32 px-24 py-94 md:h-[96rem]"
         >
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/toys.svg" class="h-58 w-58" />
-
-            <p class="text-4xl">Игрушки.СМИ и блогеры</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
+          <div class="flex w-2/4 md:w-full flex-col gap-16">
+            <h3 class="head-3">Как начать с нами работать?</h3>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                1
+              </div>
+              <p class="flex items-center text-m">Заполнить анкету-заявку</p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                2
+              </div>
+              <p class="flex items-center text-m">Дождаться ответа менеджера</p>
+            </div>
+            <p class="w-3/4  md:w-full text-m">
+              Менеджер отправит Вам прайс-лист для формирования заказа и список
+              документов, необходимых для заключения договора
             </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
           </div>
-
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/book.svg" class="h-58 w-58" />
-            <p class="text-4xl">Книги</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
+          <div class="flex w-2/4 md:w-full flex-col gap-16">
+            <p class="mb-16 text-m">Шаг 1 из 4</p>
+            <div class="flex flex-row gap-16">
+              <img
+                src="./img/yellow-icons-58px/yellow-money-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Минимальная сумма заказа - 30 000₽
+              </p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <img
+                src="./img/yellow-icons-58px/yellow-car-van-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Бесплатная доставка по Москве и ближайшему Подмосковью
+              </p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <img
+                src="./img/yellow-icons-58px/yellow-label-58px.svg"
+                alt=""
+                class="h-fit w-[3rem] object-contain"
+              />
+              <p class="flex items-center text-m">
+                Индивидуальная система скидок
+              </p>
+            </div>
+            <form class='flex flex-col w-[50rem] md:w-full gap-16'>
+              <input class="input" type="text" placeholder="Организация" />
+              <input class="input" type="text" placeholder="Страна" />
+              <input class="input" type="text" placeholder="Регион и город" />
+              <button class="button-black my-10 w-full">Следующий шаг</button>
+            </form>
           </div>
+          <div class='-bottom-20 absolute'>
+            <div class="elephant-moves-leg">
+              <div class="elephant-moves-leg-body el-body">
+                <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                <div class="elephant-moves-leg-leg el-leg"></div>
+              </div>
+            </div>
 
-          <div class="flex w-1/4 flex-col gap-16 md:w-full">
-            <img src="./img/document.svg" class="h-58 w-58" />
-            <p class="text-4xl">Отдел прав и лицензий</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <p class="text-l">rosman@rosman.ru</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
-          <p class="ml-4 w-1/12 text-l text-text md:w-full">
-            Для вопросов и предложений
-          </p>
-          <p class="text-8xl md:text-5xl">rosman@rosman.ru</p>
-        </div>
-        <div class="bg-white">
-          <div class="container-elephant-on-planets">
-  <div class="relative ipadmini:hidden">
-    <div class="pl-wrapper relative z-10">
-      <div class="wrapper wrapper-first relative">
-        <div class="planet planet-secondary-left elephant-planet-left relative">
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
-            alt="Planet 1"
-          />
-        </div>
-
-        <div class="static-text">
-          <div class="text-center text-3xl">Для авторов</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center"> Перейти</a>
           </div>
         </div>
-      </div>
-
-      <div class="wrapper wrapper-central relative">
-        <div class="planet elephant-planet-central">
-          <img
-            class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
-            alt="Planet 1"
-          />
+        <div class='flex flex-col gap-16 mb-24 px-24 w-1/4 md:w-full'>
+          <h3 class="head-3 ">Адрес Склада</h3>
+          <p class='text-text text-m'>Московская обл., Обухово, территория Атлант-Парк, д.32, стр.1 Склад №33, подъезд</p>
         </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Вакансии</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center">Все вакансии</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper wrapper-second relative">
-        <div
-          class="planet planet-secondary-right elephant-planet-right relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
-            alt="Planet 2"
-          />
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Для оптовых продаж</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center"
-              >Оставить заявку</a
-            >
-          </div>
-        </div>
+        <div id="map" style="width: 100%; height: 504px; margin-bottom: 6.4rem"></div>
       </div>
     </div>
 
-    <div class="pl-wrapper absolute top-0 z-0">
-      <div class="wrapper wrapper-first relative">
-        <div class="planet planet-secondary-left elephant-planet-left relative">
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
-            alt="Planet 1"
-          />
-          <div class="el-img elephant-planet-left-img elephant-secondary-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper wrapper-central relative">
-        <div class="planet elephant-planet-central">
-          <img
-            class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
-            alt="Planet 1"
-          />
-          <div class="el-img elephant-planet-central-img elephant-central-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Вакансии</div>
-          <a href="#" class="link-m-bold text-center">Все вакансии</a>
-        </div>
-      </div>
-
-      <div class="wrapper wrapper-second relative">
-        <div
-          class="planet planet-secondary-right elephant-planet-right relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
-            alt="Planet 2"
-          />
-
-          <div class="el-img elephant-planet-right-img elephant-secondary-img">
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Для оптовых продаж</div>
-          <a href="#" class="link-m-bold text-center">Оставить заявку</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="h-[10rem]"></div>
-  <!-- второй блок -->
-  <div class="relative hidden ipadmini:block">
-    <div class="relative z-10 flex flex-col items-center justify-center">
-      <div
-        class="wrapper wrapper-first relative !left-0 !top-[0.5rem] aspect-square"
-      >
-        <div
-          class="planet planet-secondary-left-2 elephant-planet-left relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
-            alt="Planet 1"
-          />
-        </div>
-
-        <div class="static-text">
-          <div class="text-center text-3xl">Для авторов</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center"> Перейти</a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="wrapper wrapper-central relative !left-0 !top-0 aspect-square"
-      >
-        <div class="planet elephant-planet-central-2">
-          <img
-            class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
-            alt="Planet 1"
-          />
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Вакансии</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center">Все вакансии</a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="wrapper wrapper-second relative !left-0 !top-[-0.5rem] aspect-square"
-      >
-        <div
-          class="planet planet-secondary-right-2 elephant-planet-right relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
-            alt="Planet 2"
-          />
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Для оптовых продаж</div>
-          <div class="mx-auto flex items-center">
-            <a href="#" class="link-m-bold mx-auto text-center"
-              >Оставить заявку</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="absolute top-0 z-0 flex flex-col items-center justify-center">
-      <div
-        class="wrapper wrapper-first relative !left-0 !top-[0.5rem] aspect-square rotate-[90deg]"
-      >
-        <div
-          class="planet planet-secondary-left-2 elephant-planet-left relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-left.svg"
-            alt="Planet 1"
-          />
-          <div
-            class="el-img elephant-planet-left-img-small elephant-secondary-img-2"
-          >
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="wrapper wrapper-central relative !left-0 !top-0 aspect-square rotate-[50deg]"
-      >
-        <div class="planet elephant-planet-central-2">
-          <img
-            class="elephant-planet-cantral-img planet-img-all relative"
-            src="./img/elephant-planet/planet-central.svg"
-            alt="Planet 1"
-          />
-          <div
-            class="el-img elephant-planet-central-img-small elephant-central-img-2"
-          >
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Вакансии</div>
-          <a href="#" class="link-m-bold text-center">Все вакансии</a>
-        </div>
-      </div>
-
-      <div
-        class="wrapper wrapper-second relative !left-0 !top-[-0.5rem] aspect-square rotate-[-200deg]"
-      >
-        <div
-          class="planet planet-secondary-right-2 elephant-planet-right relative"
-        >
-          <img
-            class="planet-img-all"
-            src="./img/elephant-planet/planet-right.svg"
-            alt="Planet 2"
-          />
-
-          <div
-            class="el-img elephant-planet-right-img-small elephant-secondary-img-2"
-          >
-            <img src="./img/elephant-planet/el-standing.svg" alt="" />
-          </div>
-        </div>
-        <div class="static-text">
-          <div class="text-center text-3xl">Для оптовых продаж</div>
-          <a href="#" class="link-m-bold text-center">Оставить заявку</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        </div>
-      </div>
-    </div>
-    <div class="custom-box !fixed">
-      <span></span>
-      <div class="custom-before"></div>
-      <a href="mailto:rosman@rosman.ru">Написать нам</a>
-      <div class="custom-after"></div>
-    </div>
-    <div class="footer rosman-footer-ru">
+    <div class="footer rosman-footer-ru bs:mb-[3.5rem]">
   <div class="footer-container">
     <div class="footer-heading">
       <div class="footer-heading-main">
@@ -698,9 +599,15 @@
       const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
-        center: [37.608078, 55.8087759], // starting position [lng, lat]
+        center: [ 38.25840555122909, 55.825136637567695 ], // starting position [lng, lat]
         zoom: 15, // starting zoom
       });
+      var markerElement = document.createElement('div');
+      markerElement.className = 'marker';
+
+      var marker = new mapboxgl.Marker(markerElement)
+        .setLngLat([ 38.25840555122909, 55.825136637567695 ]) // Замените на координаты маркера
+        .addTo(map);
     </script>
-  </body>
+  </body>,
 </html>

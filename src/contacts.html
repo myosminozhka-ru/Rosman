@@ -145,6 +145,12 @@
         center: [37.608078, 55.8087759], // starting position [lng, lat]
         zoom: 15, // starting zoom
       });
+      var markerElement = document.createElement('div');
+      markerElement.className = 'marker';
+
+      var marker = new mapboxgl.Marker(markerElement)
+        .setLngLat([37.613078, 55.8087760]) // Замените на координаты маркера
+        .addTo(map);
     </script>
   </body>
 </html>
