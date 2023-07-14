@@ -215,8 +215,6 @@ const swiperImageGallery = new Swiper('.swiper-image-gallery', {
 
 // Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
-  // ищем слайдер превью по селектору
-  // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 5, // показывать по 3 превью
   spaceBetween: 5, // расстояние между слайдами
@@ -229,27 +227,27 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
   breakpoints: {
     // условия для разных размеров окна браузера
-    0: {
-      // при 0px и выше
-      direction: 'horizontal', // горизонтальная прокрутка
-    },
-    768: {
-      // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
-      spaceBetween: 5.5,
-    },
-    1300: {
-      spaceBetween: 9.5,
-    },
-    1200: {
-      spaceBetween: 8.5,
-    },
-    1000: {
-      spaceBetween: 7.5,
-    },
-    900: {
-      spaceBetween: 6.5,
-    },
+    // 0: {
+    //   // при 0px и выше
+    //   direction: 'horizontal', // горизонтальная прокрутка
+    // },
+    // 768: {
+    //   // при 768px и выше
+    //   direction: 'vertical', // вертикальная прокрутка
+    //   spaceBetween: 5.5,
+    // },
+    // 1300: {
+    //   spaceBetween: 9.5,
+    // },
+    // 1200: {
+    //   spaceBetween: 8.5,
+    // },
+    // 1000: {
+    //   spaceBetween: 7.5,
+    // },
+    // 900: {
+    //   spaceBetween: 6.5,
+    // },
   },
 });
 // Инициализация слайдера изображений
@@ -484,36 +482,9 @@ function updateSliderColHeight() {
   }
 }
 
-function chooseSliderByButton() {
-  const prevButton = document.querySelector('.slider__prev');
-  const nextButton = document.querySelector('.slider__next');
-
-  prevButton.onclick = function (event) {
-    const currentChosen = document.querySelector('.js-thumb-chosen');
-    const prevElement =
-      currentChosen.parentElement.previousElementSibling.firstElementChild;
-    console.log(prevElement);
-    currentChosen.classList.toggle('js-thumb-chosen');
-    currentChosen.classList.toggle('p-4');
-    prevElement.classList.toggle('js-thumb-chosen');
-    prevElement.classList.toggle('p-4');
-  };
-  nextButton.onclick = function (event) {
-    const currentChosen = document.querySelector('.js-thumb-chosen');
-    const nextElement =
-      currentChosen.parentElement.nextElementSibling.firstElementChild;
-    console.log(nextElement);
-    currentChosen.classList.toggle('js-thumb-chosen');
-    currentChosen.classList.toggle('p-4');
-    nextElement.classList.toggle('js-thumb-chosen');
-    nextElement.classList.toggle('p-4');
-  };
-}
-
 window.onload = function () {
   updateSliderColHeight();
   chooseSwiperItem();
-  chooseSliderByButton();
 };
 
 window.onresize = function () {
