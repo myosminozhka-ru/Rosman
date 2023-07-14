@@ -264,6 +264,20 @@ button {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
   min-width: 5rem;
 
+  &.active-js {
+    @apply border-0 bg-yellow;
+    .cross {
+      background: url('../../img/close.svg') no-repeat center right;
+      background-size: 1rem 1rem;
+      width: 1rem;
+      height: 1rem;
+      @apply ml-4 inline-block text-left align-middle;
+    }
+
+    .count {
+      @apply ml-4 inline inline w-auto text-left text-s font-normal;
+    }
+  }
   .count {
     @apply hidden align-middle;
   }
@@ -323,7 +337,7 @@ button {
 }
 
 .checkbox-container {
-  @apply my-10 flex cursor-pointer items-center text-s text-black;
+  @apply my-12 flex cursor-pointer items-center text-s text-black gap-12;
 
   input[type='radio'] {
     @apply hidden;
