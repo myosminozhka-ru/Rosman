@@ -131,6 +131,7 @@ module.exports = {
         70: '70rem',
         74: '7.4rem',
         68: '6.8rem',
+        80: '8rem',
         88: '8.8rem',
         90: '9rem',
         94: '9.4rem',
