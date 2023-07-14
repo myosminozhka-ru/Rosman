@@ -476,10 +476,17 @@ if (rangeElement) {
   slider.init();
 }
 function showBlock(elementId) {
+  const blocks = document.querySelectorAll('.show');
+
   var block = document.getElementById(elementId);
   if (block.classList.contains('show')) {
     block.classList.remove('show');
   } else {
+    for (let i = 0; i < blocks.length; i++) {
+      if (blocks[i].classList.contains('show')) {
+        blocks[i].classList.remove('show');
+      }
+    }
     block.classList.add('show');
   }
 }
