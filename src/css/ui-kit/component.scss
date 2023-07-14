@@ -793,6 +793,8 @@ header {
 
 .swiper,
 .swiper-text,
+.swiper-book,
+.swiper-one-book,
 .swiper-image,
 .swiper-image-2,
 .swiper-book-fragment,
@@ -1580,4 +1582,26 @@ header {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.block-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+  .vertical-rl {
+    @apply bg-yellow;
+    writing-mode: vertical-rl;
+  }
+  @media screen and (max-width: 900px) {
+    overflow: hidden;
+    width: 225%;
+    position: relative;
+    left: -65%;
+    right: -65%;
+    .book_card_heading {
+      width: 25rem;
+    }
+  }
 }

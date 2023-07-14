@@ -217,7 +217,46 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
+  if (yellowMovingBlock2) {
+    document.addEventListener('mousemove', function (event) {
+      const windowWidth = window.innerWidth;
+      const blockWidth = yellowMovingBlock2.offsetWidth;
 
+      // Вычисляем позицию блока на основе позиции мыши и ширины окна
+      let blockX = event.clientX - blockWidth / 2;
+
+      // Вычисляем наклон блока в зависимости от позиции мыши
+      let tilt = (blockX / windowWidth) * 6;
+
+      // Применяем наклон к блоку с помощью свойства transform
+      yellowMovingBlock2.style.transform = `rotate(${tilt}deg)`;
+    });
+  }
+
+  let isMoving2 = false;
+  document.addEventListener('mousemove', function (event) {
+    let parent2 = document.getElementById('parent2');
+    if (parent2) {
+      let follower2 = document.getElementById('follower2');
+      let parentRect = parent2.getBoundingClientRect();
+      let x = event.clientX - parentRect.left;
+      let newX = x - follower2.offsetWidth; // Вычисляем новое положение в противоположной стороне
+      newX = Math.max(
+        0,
+        Math.min(newX, parentRect.width - follower2.offsetWidth)
+      );
+
+      if (!isMoving2) {
+        isMoving2 = true;
+        follower2.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+
+        setTimeout(function () {
+          isMoving2 = false;
+        }, 500); // Задержка в 200 миллисекунд
+      }
+    }
+  });
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );
