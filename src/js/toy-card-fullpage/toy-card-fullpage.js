@@ -225,30 +225,6 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   },
   clickable: true,
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
-  breakpoints: {
-    // условия для разных размеров окна браузера
-    // 0: {
-    //   // при 0px и выше
-    //   direction: 'horizontal', // горизонтальная прокрутка
-    // },
-    // 768: {
-    //   // при 768px и выше
-    //   direction: 'vertical', // вертикальная прокрутка
-    //   spaceBetween: 5.5,
-    // },
-    // 1300: {
-    //   spaceBetween: 9.5,
-    // },
-    // 1200: {
-    //   spaceBetween: 8.5,
-    // },
-    // 1000: {
-    //   spaceBetween: 7.5,
-    // },
-    // 900: {
-    //   spaceBetween: 6.5,
-    // },
-  },
 });
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-4', {
@@ -321,11 +297,11 @@ const sliderImagesMob = new Swiper('.swiper-container-5', {
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
-  navigation: {
-    // задаем кнопки навигации
-    nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev', // кнопка Prev
-  },
+  // navigation: {
+  //   // задаем кнопки навигации
+  //   nextEl: '.slider__next', // кнопка Next
+  //   prevEl: '.slider__prev', // кнопка Prev
+  // },
   pagination: {
     //pagination(dots)
     el: '.swiper-pagination',
