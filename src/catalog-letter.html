@@ -2,412 +2,412 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог Авторов</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог Авторов</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  <body class="bg-yellow">
-    @@include('components/header/header-main.html', { }, )
-    <div id="yellow-background">
-      <div id="moving-block">
-        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-          <g>
-            <path
-              id="moving-bock-shadow"
-              d="M 0 0 L 100 0 L 100 100 L 0 100"
-              fill="white"
-            ></path>
-          </g>
-        </svg>
+<body class="bg-yellow">
+@@include('components/header/header-main.html', { }, )
+<div id="yellow-background">
+  <div id="moving-block">
+    <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+      <g>
+        <path
+          id="moving-bock-shadow"
+          d="M 0 0 L 100 0 L 100 100 L 0 100"
+          fill="white"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div id="white-mobile-background"></div>
+  <div id="above-block">
+    <div
+      class="flex w-fit flex-nowrap justify-start overflow-auto px-24 md:mt-12 md:px-12"
+    >
+      <p class="filter-label header !ml-0">0-3</p>
+      <p class="filter-label header">0-3</p>
+      <p class="filter-label header">4-6</p>
+      <p class="filter-label header">7-9</p>
+      <p class="filter-label header">10-15</p>
+      <p class="filter-label header">15+</p>
+      <p class="filter-label header">Новинки</p>
+      <p class="filter-label header">Хиты</p>
+      <p class="filter-label header">Случайная карта</p>
+    </div>
+
+    <div
+      class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
+    >
+      <p class="breadcrumbs">
+        <a href="#">Главная </a><span>/</span>
+        <a class="active-js" href="#">Игрушки</a>
+      </p>
+
+      <div class="breadcrumbs-small-screen">
+        <div class="breadcrumbs-small-screen-image"></div>
+        <div class="breadcrumbs-small-screen-dots">
+          ...
+          <div class="breadcrumbs-arrow"></div>
+          <div class="breadcrumbs-path-hidden"></div>
+        </div>
+        <div class="breadcrumbs-small-screen-path">Игрушки</div>
       </div>
-      <div id="white-mobile-background"></div>
-      <div id="above-block">
-        <div
-          class="flex w-fit flex-nowrap justify-start overflow-auto px-24 md:mt-12 md:px-12"
-        >
-          <p class="filter-label header !ml-0">0-3</p>
-          <p class="filter-label header">0-3</p>
-          <p class="filter-label header">4-6</p>
-          <p class="filter-label header">7-9</p>
-          <p class="filter-label header">10-15</p>
-          <p class="filter-label header">15+</p>
-          <p class="filter-label header">Новинки</p>
-          <p class="filter-label header">Хиты</p>
-          <p class="filter-label header">Случайная карта</p>
-        </div>
-
-        <div
-          class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
-        >
-          <p class="breadcrumbs">
-            <a href="#">Главная </a><span>/</span>
-            <a class="active-js" href="#">Игрушки</a>
-          </p>
-
-          <div class="breadcrumbs-small-screen">
-            <div class="breadcrumbs-small-screen-image"></div>
-            <div class="breadcrumbs-small-screen-dots">
-              ...
-              <div class="breadcrumbs-arrow"></div>
-              <div class="breadcrumbs-path-hidden"></div>
-            </div>
-            <div class="breadcrumbs-small-screen-path">Игрушки</div>
-          </div>
-        </div>
-        <div class="mb-32 flex flex-row px-25 md:px-12 md:mb-24 md:flex-col md:px-12">
-          <h1 class="head-1">Авторы РОСМЭН</h1>
-          <h3 class="hidden text-l text-text md:block">12 987</h3>
-          <sup class="text-l text-text md:hidden">12 987</sup>
-        </div>
-        <div class="popup_all_filters_filters px-25 md:px-12">
-          <div class="popup_all_filters_filter">
-            <input type="checkbox" id="novelty" class="sort-checkbox" />
-            <label class="sort-label" for="novelty"
-              >Все авторы<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input
-              type="checkbox"
-              id="interactive_features"
-              class="sort-checkbox"
-            />
-            <label class="sort-label" for="interactive_features"
-              >Детские авторы<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input type="checkbox" id="sound_effects" class="sort-checkbox" />
-            <label class="sort-label" for="sound_effects"
-              >Молодежные авторы<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input type="checkbox" id="new" class="sort-checkbox" />
-            <label class="sort-label" for="new"
-              >Новые авторы<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-          <div class="popup_all_filters_filter">
-            <input type="checkbox" id="popular" class="sort-checkbox" />
-            <label class="sort-label" for="popular"
-              >Популярные авторы<span class="count">12</span>
-              <span class="cross"></span>
-            </label>
-          </div>
-        </div>
-        <div class="mb-40 mt-24 px-25 md:px-12 md:hidden">
-          <a href="" class="link-m">Показать все направления</a>
-        </div>
-        <div class="mx-auto hidden px-25 md:mt-16 md:block md:px-12">
-          <div
-            class="more-down-filters no-padds no-after w-29rem mb-16 border-b border-card-stroke md:mt-0 md:!w-full"
+    </div>
+    <div class="mb-32 flex flex-row px-25 md:px-12 md:mb-24 md:flex-col md:px-12">
+      <h1 class="head-1">Авторы РОСМЭН</h1>
+      <h3 class="hidden text-l text-text md:block">12 987</h3>
+      <sup class="text-l text-text md:hidden">12 987</sup>
+    </div>
+    <div class="popup_all_filters_filters px-25 md:px-12">
+      <div class="popup_all_filters_filter">
+        <input type="checkbox" id="novelty" class="sort-checkbox" />
+        <label class="sort-label" for="novelty"
+        >Все авторы<span class="count">12</span>
+          <span class="cross"></span>
+        </label>
+      </div>
+      <div class="popup_all_filters_filter">
+        <input
+          type="checkbox"
+          id="interactive_features"
+          class="sort-checkbox"
+        />
+        <label class="sort-label" for="interactive_features"
+        >Детские авторы<span class="count">12</span>
+          <span class="cross"></span>
+        </label>
+      </div>
+      <div class="popup_all_filters_filter">
+        <input type="checkbox" id="sound_effects" class="sort-checkbox" />
+        <label class="sort-label" for="sound_effects"
+        >Молодежные авторы<span class="count">12</span>
+          <span class="cross"></span>
+        </label>
+      </div>
+      <div class="popup_all_filters_filter">
+        <input type="checkbox" id="new" class="sort-checkbox" />
+        <label class="sort-label" for="new"
+        >Новые авторы<span class="count">12</span>
+          <span class="cross"></span>
+        </label>
+      </div>
+      <div class="popup_all_filters_filter">
+        <input type="checkbox" id="popular" class="sort-checkbox" />
+        <label class="sort-label" for="popular"
+        >Популярные авторы<span class="count">12</span>
+          <span class="cross"></span>
+        </label>
+      </div>
+    </div>
+    <div class="mb-40 mt-24 px-25 md:px-12 md:hidden">
+      <a href="" class="link-m">Показать все направления</a>
+    </div>
+    <div class="mx-auto hidden px-25 md:mt-16 md:block md:px-12">
+      <div
+        class="more-down-filters no-padds no-after w-29rem mb-16 border-b border-card-stroke md:mt-0 md:!w-full"
+      >
+        <button class="more-down-button new !bg-none !px-16 !pl-16">
+          A<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content new">
+          <ul
+            class="m-0 flex list-none flex-col justify-between whitespace-nowrap p-0 px-25 md:px-12"
           >
-            <button class="more-down-button new !bg-none !px-16 !pl-16">
-              A<span></span>
-            </button>
-            <!--  more-down -->
-            <div class="more-down-content new">
-              <ul
-                class="m-0 flex list-none flex-col justify-between whitespace-nowrap p-0 px-25 md:px-12"
-              >
-                <li
-                  class="mr-4 inline-block rounded-lg bg-yellow px-6 py-4 text-2xl"
-                >
-                  <a href="#">А</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Б</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">В</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Г</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Д</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Е</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ё</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ж</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">З</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">И</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Й</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">К</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Л</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">М</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Н</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">О</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">П</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Р</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">С</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Т</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">У</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ф</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Х</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ц</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ч</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ш</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Щ</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ъ</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ы</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ь</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Э</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Ю</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">Я</a>
-                </li>
-                <li class="mr-4 inline-block px-6 py-4 text-2xl">
-                  <a href="#">A-Z</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <ul
-          class="m-0 flex list-none flex-row justify-between whitespace-nowrap p-0 px-25 md:px-12 md:hidden"
-        >
-          <li class="mr-4 inline-block rounded-lg bg-yellow px-6 py-4 text-2xl">
-            А
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Б
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>В
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Г
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Д
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Е
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ё
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ж
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>З
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>И
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Й
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>К
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Л
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>М
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Н
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>О
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>П
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Р
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>С
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Т
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>У
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ф
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Х
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ц
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ч
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ш
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Щ
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ъ
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ы
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ь
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Э
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Ю
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>Я
-          </li>
-          <li class="mr-4 inline-block px-6 py-4 text-2xl">
-            <a href="#"></a>A-Z
-          </li>
-        </ul>
-        <div class="mt-40 md:mt-32 grid auto-rows-auto gap-17 px-25 md:px-12">
-          <div >
-            <div class="mb-32 text-5xl md:text-2xl">А</div>
-            <ul class="grid list-none grid-cols-3 gap-x-17 gap-y-12  md:grid-cols-none">
-              <li>
-                <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абакумов Олег Александрович (1 книга)</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абалмасова Дарья Александровна (1 книга)</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абакумов Олег Александрович (1 книга)</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абалмасова Дарья Александровна (1 книга)</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абакумов Олег Александрович (1 книга)</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-l text-text"
-                  >Абалмасова Дарья Александровна (1 книга)</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mx-24 my-64 md:my-48 md:mx-12 flex flex-row bg-background md:flex-col">
-          <div class="m-40 md:mx-12 md:my-32">
-            <h3 class="md:text-4xl text-6xl font-medium	py-8">Хотите стать автором РОСМЭН?</h3>
-            <p class="py-8 text-l">
-              В своём стремлении повысить качество жизни, они забывают, что
-              существующая теория требует анализа приоретизации разума над
-              эмоциями.
-            </p>
-            <button class="button-white bottom-0 md:w-full md:mt-24">Стать автором</button>
-          </div>
-          <img class='bottom-0 relative' src="../../img/elephant-on-bricks.png" />
+            <li
+              class="mr-4 inline-block rounded-lg bg-yellow px-6 py-4 text-2xl"
+            >
+              <a href="#">А</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Б</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">В</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Г</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Д</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Е</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ё</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ж</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">З</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">И</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Й</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">К</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Л</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">М</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Н</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">О</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">П</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Р</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">С</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Т</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">У</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ф</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Х</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ц</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ч</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ш</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Щ</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ъ</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ы</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ь</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Э</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Ю</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">Я</a>
+            </li>
+            <li class="mr-4 inline-block px-6 py-4 text-2xl">
+              <a href="#">A-Z</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+    <ul
+      class="m-0 flex list-none flex-row justify-between whitespace-nowrap flex-wrap p-0 px-25 md:px-12 md:hidden"
+    >
+      <li class="mr-4 inline-block rounded-lg bg-yellow px-6 py-4 text-2xl">
+        А
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Б
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>В
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Г
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Д
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Е
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ё
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ж
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>З
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>И
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Й
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>К
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Л
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>М
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Н
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>О
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>П
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Р
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>С
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Т
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>У
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ф
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Х
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ц
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ч
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ш
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Щ
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ъ
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ы
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ь
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Э
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Ю
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>Я
+      </li>
+      <li class="mr-4 inline-block px-6 py-4 text-2xl">
+        <a href="#"></a>A-Z
+      </li>
+    </ul>
+    <div class="mt-40 md:mt-32 grid auto-rows-auto gap-17 px-25 md:px-12">
+      <div >
+        <div class="mb-32 text-5xl md:text-2xl">А</div>
+        <ul class="grid list-none grid-cols-3 gap-x-17 gap-y-12  md:grid-cols-none">
+          <li>
+            <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абакумов Олег Александрович (1 книга)</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абалмасова Дарья Александровна (1 книга)</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абакумов Олег Александрович (1 книга)</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абалмасова Дарья Александровна (1 книга)</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-l text-text">А-Кун Дидье (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text">Ааронович Бен (1 книга)</a>
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абакумов Олег Александрович (1 книга)</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-l text-text"
+            >Абалмасова Дарья Александровна (1 книга)</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mx-24 my-64 md:my-48 md:mx-12 flex flex-row bg-background md:flex-col">
+      <div class="m-40 md:mx-12 md:my-32">
+        <h3 class="md:text-4xl text-6xl font-medium	py-8">Хотите стать автором РОСМЭН?</h3>
+        <p class="py-8 text-l">
+          В своём стремлении повысить качество жизни, они забывают, что
+          существующая теория требует анализа приоретизации разума над
+          эмоциями.
+        </p>
+        <button class="button-white bottom-0 md:w-full md:mt-24">Стать автором</button>
+      </div>
+      <img class='bottom-0 relative' src="../../img/elephant-on-bricks.png" />
+    </div>
+  </div>
+</div>
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
 </html>
