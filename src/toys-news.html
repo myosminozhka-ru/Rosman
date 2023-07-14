@@ -27,7 +27,7 @@
         <div id="above-block">
           @@include('components/ui-kit/breadcrumbs/index.html', { },)
           <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12 sm:!pb-24">
-            <div class="flex flex-row justify-between md:flex-col">
+            <div class="flex flex-row justify-between shs:flex-col">
               <div
                 class="whitespace-nowrap text-7xl md:whitespace-normal md:text-4xl"
               >
@@ -73,16 +73,17 @@
             </div>
           </div>
           <div
-            class="mb-36 mt-64 flex justify-start gap-16 px-25 md:my-4 md:flex-col"
+            class="mb-36 mt-64 flex justify-start gap-16 px-25 md:px-12 md:mt-4 md:mb-16"
           >
             <div
-              class="more-down-filters no-padds no-after !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-full"
+              class="more-down-filters no-padds no-after !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-0 md:absolute"
             >
-              <button class="more-down-button with-padds filters">
+              <button class="more-down-button with-padds filters md:hidden">
                 Фильтры<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new !px-24 !py-20">
+              <div class="more-down-content new !px-25 md:px-12 !py-20 toy-news" id="filter">
+                <span id="close-filter"> </span>
                 <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
@@ -157,7 +158,7 @@
                 <label class="sort-label my-14" for="sort-18"
                   >Джонни Депп<span class="cross"></span
                 ></label>
-                <p class="text-l">Годы</p>
+                <p class="text-l mb-16">Годы</p>
                 <form class="range">
                   <div class="form-group range__slider">
                     <input type="range" step="500" />
@@ -182,7 +183,7 @@
                 Сначала новые<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new !px-24 !py-20">
+              <div class="more-down-content new !px-25 md:px-12 !py-20">
                 <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
@@ -195,8 +196,9 @@
                 </label>
               </div>
             </div>
+            <div id="open-filter" class="mobile-filter"></div>
           </div>
-          <div class="popup_all_filters_filters no_scroll mb-40 px-24">
+          <div class="popup_all_filters_filters no_scroll mb-40 px-25 md:px-12">
             <div class="popup_all_filters_filter md:!w-auto">
               <input type="checkbox" id="novelty" class="sort-checkbox" />
               <label class="sort-label" for="novelty"
@@ -277,7 +279,7 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-3 gap-x-16 gap-y-20 px-24 md:grid-cols-2 sm:px-12 msm:grid-cols-1"
+            class="grid grid-cols-3 gap-x-16 gap-y-20 px-25 md:px-12 md:grid-cols-2 sm:px-12 msm:grid-cols-1"
           >
             <div class="card_articles test-item js_traceable_item">
               <a href="#" class="card_articles_image item_card_image">
@@ -712,7 +714,7 @@
               </div>
             </div>
           </div>
-          <section class="pagination rm-pag mb-48 px-24 sm:px-12">
+          <section class="pagination rm-pag mb-48 px-25 md:px-12 sm:px-12">
             <div class="pagination-seen js-rm-pag-seen">
               Просмотрено авторов: 12 из 456
             </div>

@@ -1622,7 +1622,7 @@ header {
 
 .form-group label {
   text-transform: uppercase;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: #222;
 }
 
@@ -1636,7 +1636,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.range__slider [type="range"] {
+.range__slider [type='range'] {
   width: 100%;
   -webkit-appearance: none;
   height: 0.3rem;
@@ -1648,7 +1648,7 @@ header {
 }
 
 /* custom thumb */
-.range__slider [type="range"]::-webkit-slider-thumb {
+.range__slider [type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 1.8rem;
@@ -1657,30 +1657,32 @@ header {
   background: #ffffff;
   border: #000000 0.2rem solid;
   cursor: pointer;
-  -webkit-transition: background .15s ease-in-out;
-  transition: background .15s ease-in-out;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
-.range__slider [type="range"]::-webkit-slider-thumb:hover {
-  background: #FFF145;
+.range__slider [type='range']::-webkit-slider-thumb:hover {
+  background: #fff145;
 }
 
-.range__slider [type="range"]::-moz-range-thumb {
+.range__slider [type='range']::-moz-range-thumb {
   width: 2rem;
   height: 2rem;
   border: 0;
   border-radius: 50%;
   background: #f0932b;
-  border: #FFF145 0.5rem solid; cursor: pointer;
-  -webkit-transition: background .15s ease-in-out;
-  transition: background .15s ease-in-out;
+  border: #fff145 0.5rem solid;
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
-.range__slider [type="range"]::-moz-range-thumb:hover {
-  background: #FFF145;
+.range__slider [type='range']::-moz-range-thumb:hover {
+  background: #fff145;
 }
 
 /* remove border */
-input::-moz-focus-inner, input::-moz-focus-outer {
+input::-moz-focus-inner,
+input::-moz-focus-outer {
   border: 0;
 }
