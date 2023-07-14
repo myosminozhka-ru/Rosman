@@ -186,6 +186,7 @@ button {
     }
   }
 }
+
 .more-down-content::-webkit-scrollbar-track {
   border-radius: 0.4rem;
 }
@@ -202,6 +203,7 @@ button {
 .more-down-content:hover::-webkit-scrollbar-thumb {
   background: #555555;
 }
+
 .more-down-content {
   @apply hidden p-2;
 

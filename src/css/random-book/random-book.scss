@@ -20,9 +20,12 @@
       background-image: url('../../img/sort.svg');
       background-repeat: no-repeat;
       /*поправил на 1.5 рем, чтобы красиво встало*/
-      background-position: 2% 50%;
+      background-position: 3% 50%;
       background-size: 1.5rem 1.5rem;
       @media (min-width: 600px) and (max-width: 768px) {
+        background-position: 1% 50%;
+      }
+      @media (min-width: 100px) and (max-width: 599px) {
         background-position: 2% 50%;
       }
 
