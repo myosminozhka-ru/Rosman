@@ -11,9 +11,7 @@
 .toy_card {
   @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
 
-  &:hover {
-    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
-  }
+
 }
 
 .item_card_tags.bordered_tags {
@@ -133,6 +131,9 @@
 .item_card_img {
   @apply w-full;
   object-fit: cover;
+  &:hover {
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
 }
 
 // card's bottom

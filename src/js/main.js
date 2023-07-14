@@ -303,8 +303,10 @@ window.addEventListener('DOMContentLoaded', () => {
   if (filterOpen !== null) {
     filterOpen.addEventListener('click', function () {
       if (filter !== null) {
+        document.body.style.overflow = 'hidden';
         filter.classList.add('open-filter');
       } else if (filter2 !== null) {
+        document.body.style.overflow = 'hidden';
         filter2.classList.add('open-filter');
       }
     });
@@ -312,8 +314,10 @@ window.addEventListener('DOMContentLoaded', () => {
   if (filterClose !== null) {
     filterClose.addEventListener('click', function () {
       if (filter !== null) {
+        document.body.style.overflow = 'auto';
         filter.classList.remove('open-filter');
       } else if (filter2 !== null) {
+        document.body.style.overflow = 'auto';
         filter2.classList.remove('open-filter');
       }
     });
@@ -488,5 +492,29 @@ function showBlock(elementId) {
       }
     }
     block.classList.add('show');
+  }
+}
+function closeFilter() {
+  const filterOpen = document.getElementById('open-filter');
+  const filterClose = document.getElementById('close-filter');
+  const filter = document.getElementById('filter');
+  const filter2 = document.getElementById('filter-2');
+  if (filterOpen !== null) {
+    if (filter !== null) {
+      document.body.style.overflow = 'hidden';
+      filter.classList.add('open-filter');
+    } else if (filter2 !== null) {
+      document.body.style.overflow = 'hidden';
+      filter2.classList.add('open-filter');
+    }
+  }
+  if (filterClose !== null) {
+    if (filter !== null) {
+      document.body.style.overflow = 'auto';
+      filter.classList.remove('open-filter');
+    } else if (filter2 !== null) {
+      document.body.style.overflow = 'auto';
+      filter2.classList.remove('open-filter');
+    }
   }
 }
