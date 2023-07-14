@@ -159,11 +159,11 @@
 }
 
 .toolbar {
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 999px) {
     display: none;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 999px) {
     background-color: #ffffff;
     padding: 0;
     display: flex;
@@ -174,6 +174,7 @@
     bottom: 0;
     width: 100%;
     z-index: 100000;
+    padding: 0.8rem 1.2rem;
 
     img {
       width: 2rem;
@@ -302,7 +303,7 @@
 }
 
 header {
-  @apply flex items-center bg-yellow px-24 pt-24 sm:px-12;
+  @apply flex items-center bg-yellow px-24 pt-14 sm:px-12;
 
   @media screen and (max-width: 900px) {
     @apply justify-between;
@@ -319,7 +320,11 @@ header {
 
   .mobile-logo {
     @apply hidden;
-
+    &.hide {
+      @media screen and (max-width: 999px) {
+        @apply hidden;
+      }
+    }
     @media screen and (max-width: 900px) {
       @apply block;
     }
@@ -396,7 +401,8 @@ header {
     padding: 5px;
 
     @media screen and (max-width: 900px) {
-      width: 45%;
+      @apply basis-full	;
+      width: 100%;
     }
 
     input {
@@ -428,7 +434,7 @@ header {
 
       @media screen and (max-width: 900px) {
         padding: 0;
-        width: 70%;
+        width: 85%;
       }
     }
 
@@ -502,7 +508,9 @@ header {
 
   .header-btn {
     @apply mr-10 basis-1/4 items-center justify-end;
-
+    @media screen and (max-width: 900px) {
+      @apply mr-0;
+    }
     &.dekstop {
       @apply inline-flex;
 
@@ -517,6 +525,9 @@ header {
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
+      &.hide {
+        display: none;
+      }
     }
 
     .language {
@@ -527,7 +538,10 @@ header {
       }
 
       span {
-        @apply m-2 ml-2 mr-2 cursor-pointer;
+        @apply mx-4 cursor-pointer;
+        &:last-child {
+          @apply mx-4;
+        }
       }
     }
 
@@ -536,6 +550,9 @@ header {
 
       @media screen and (max-width: 900px) {
         @apply mr-12;
+        &:last-child {
+          @apply m-0;
+        }
       }
     }
   }
@@ -569,7 +586,7 @@ header {
   }
 
   .more-down-content {
-    @apply absolute top-[7rem] z-1001 bg-white p-24;
+    @apply absolute top-[6rem] z-1001 bg-white p-24;
 
     .more-down-button {
       @apply m-0 p-0;
@@ -598,6 +615,9 @@ header {
 
   .menu {
     @apply flex basis-1/10 justify-center border-0 p-0;
+    @media screen and (max-width: 999px) {
+      @apply hidden;
+    }
 
     .more-down-content {
       a {
@@ -1105,6 +1125,13 @@ header {
 }
 
 #yellow-moving-block {
+  @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
+  box-shadow: inset 0px 1px 19px 4px #535353;
+  left: -2rem;
+  width: 110%;
+}
+
+#yellow-moving-block2 {
   @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
   box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
@@ -1711,4 +1738,34 @@ header {
 input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
+}
+.content-block {
+  display: none; /* По умолчанию блок скрыт */
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: rgb(255, 255, 255); /* Прозрачный фон */
+  z-index: 9999; /* Большой z-index, чтобы блок был поверх всего */
+  &.show {
+    display: block;
+  }
+}
+
+/* Стили содержимого блока */
+.block-content {
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #000000;
+  li {
+    @apply text-m py-8;
+  }
+  p {
+    @apply text-m py-8;
+  }
 }

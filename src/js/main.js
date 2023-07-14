@@ -341,16 +341,25 @@ function toggleSearch() {
   let headerNav = document.querySelector('.header-nav');
   let searchInput = document.querySelector('.search-input');
   let input = document.querySelector('.search-input input');
+  let logo = document.querySelector('.mobile-logo');
   input.value = '';
-  let headerbtn = document.querySelector('.header-btn');
+  let headerbtn = document.querySelectorAll('.header-btn');
   if (headerNav.classList.contains('hide')) {
     headerNav.classList.remove('hide');
-    headerbtn.classList.remove('hide-mobile');
-    headerbtn.classList.remove('hide-icon');
+    logo.classList.remove('hide');
+    for (let i = 0; i < headerbtn.length; i++) {
+      headerbtn[i].classList.remove('hide-mobile');
+      headerbtn[i].classList.remove('hide-icon');
+      headerbtn[i].classList.remove('hide');
+    }
   } else {
     headerNav.classList.add('hide');
-    headerbtn.classList.add('hide-mobile');
-    headerbtn.classList.add('hide-icon');
+    logo.classList.add('hide');
+    for (let i = 0; i < headerbtn.length; i++) {
+      headerbtn[i].classList.add('hide-mobile');
+      headerbtn[i].classList.add('hide-icon');
+      headerbtn[i].classList.add('hide');
+    }
   }
   if (searchInput.classList.contains('hide')) {
     searchInput.classList.remove('hide');
@@ -465,4 +474,12 @@ if (rangeElement) {
   let slider = new Slider(rangeElement, valueElement, options);
 
   slider.init();
+}
+function showBlock(elementId) {
+  var block = document.getElementById(elementId);
+  if (block.classList.contains('show')) {
+    block.classList.remove('show');
+  } else {
+    block.classList.add('show');
+  }
 }
