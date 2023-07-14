@@ -25,10 +25,12 @@
         </div>
         <div id="white-mobile-background"></div>
         <div id="above-block">
-            @@include('components/ui-kit/breadcrumbs/index.html', { },)
+          @@include('components/ui-kit/breadcrumbs/index.html', { },)
           <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12 sm:!pb-24">
-            <div class="flex flex-row md:flex-col justify-between">
-              <div class="whitespace-nowrap md:whitespace-normal text-7xl md:text-4xl">
+            <div class="flex flex-row justify-between md:flex-col">
+              <div
+                class="whitespace-nowrap text-7xl md:whitespace-normal md:text-4xl"
+              >
                 Новости, статьи и подборки
               </div>
               <div class="navigation card-fullpage-filter-links">
@@ -70,7 +72,9 @@
               </div>
             </div>
           </div>
-          <div class="mb-36 mt-64 md:my-4 flex md:flex-col justify-start gap-16 px-25">
+          <div
+            class="mb-36 mt-64 flex justify-start gap-16 px-25 md:my-4 md:flex-col"
+          >
             <div
               class="more-down-filters no-padds no-after !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-full"
             >
@@ -78,87 +82,96 @@
                 Фильтры<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new !px-24 !py-20 ">
-                <label class="checkbox-container gap-8 !mb-15">
+              <div class="more-down-content new !px-24 !py-20">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Все
                 </label>
-                <label class="checkbox-container gap-8 !mb-15">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Новости
                 </label>
-                <label class="checkbox-container gap-8 !mb-15">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Статьи
                 </label>
-                <label class="checkbox-container gap-8 !mb-15">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Интервью
                 </label>
-                <label class="checkbox-container gap-8 !mb-15">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Подборки
                 </label>
-                <p class='text-l mb-16'>Бренды</p>
-                <input class="input search w-full" type="text" placeholder="Поиск" />
+                <p class="mb-16 text-l">Бренды</p>
+                <input
+                  class="input search w-full"
+                  type="text"
+                  placeholder="Поиск"
+                />
                 <div class="scroll-block">
                   <input type="checkbox" id="sort-9" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-9"
-                  >Мадс Миккельсен<span class="cross"></span
+                    >Мадс Миккельсен<span class="cross"></span
                   ></label>
                   <input type="checkbox" id="sort-10" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-10"
-                  >Джеймс МакЭвой<span class="cross"></span
+                    >Джеймс МакЭвой<span class="cross"></span
                   ></label>
                   <input type="checkbox" id="sort-11" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-11"
-                  >Джонни Депп<span class="cross"></span
+                    >Джонни Депп<span class="cross"></span
                   ></label>
                   <input type="checkbox" id="sort-12" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-12"
-                  >Джонни Депп<span class="cross"></span
+                    >Джонни Депп<span class="cross"></span
                   ></label>
                   <input type="checkbox" id="sort-13" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-13"
-                  >Джек Николсон<span class="cross"></span
+                    >Джек Николсон<span class="cross"></span
                   ></label>
                   <input type="checkbox" id="sort-14" class="sort-checkbox" />
                   <label class="sort-label my-14" for="sort-14"
-                  >Марк Твен<span class="cross"></span
+                    >Марк Твен<span class="cross"></span
                   ></label>
                 </div>
-                <p class='text-l'>Проекты</p>
+                <p class="text-l">Проекты</p>
                 <input type="checkbox" id="sort-15" class="sort-checkbox" />
                 <label class="sort-label my-14" for="sort-15"
-                >Мадс Миккельсен<span class="cross"></span
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-16" class="sort-checkbox" />
                 <label class="sort-label my-14" for="sort-16"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-17" class="sort-checkbox" />
                 <label class="sort-label my-14" for="sort-17"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-18" class="sort-checkbox" />
                 <label class="sort-label my-14" for="sort-18"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
-                <p class='text-l'>Годы</p>
+                <p class="text-l">Годы</p>
                 <form class="range">
                   <div class="form-group range__slider">
-                    <input type="range" step="500">
-                    <div class='flex flex-row justify-between mb-8'><p class='text-s'>2014</p> <p class='text-s'>2015</p></div>
-                  </div><!--/form-group-->
+                    <input type="range" step="500" />
+                    <div class="mb-8 flex flex-row justify-between">
+                      <p class="text-s">2014</p>
+                      <p class="text-s">2015</p>
+                    </div>
+                  </div>
+                  <!--/form-group-->
                   <div class="form-group range__value !hidden">
                     <label>Loan Amount</label>
                     <span></span>
-                  </div><!--/form-group-->
+                  </div>
+                  <!--/form-group-->
                 </form>
               </div>
             </div>
@@ -169,8 +182,8 @@
                 Сначала новые<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new !px-24 !py-20 ">
-                <label class="checkbox-container gap-8 !mb-15">
+              <div class="more-down-content new !px-24 !py-20">
+                <label class="checkbox-container !mb-15 gap-8">
                   <input type="radio" name="sort-by" />
                   <span class="checkmark"></span>
                   Сначала новые
@@ -183,9 +196,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="popup_all_filters_filters no_scroll mb-40 px-24 "
-          >
+          <div class="popup_all_filters_filters no_scroll mb-40 px-24">
             <div class="popup_all_filters_filter md:!w-auto">
               <input type="checkbox" id="novelty" class="sort-checkbox" />
               <label class="sort-label" for="novelty"
