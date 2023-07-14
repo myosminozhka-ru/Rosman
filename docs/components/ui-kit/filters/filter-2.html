@@ -18,14 +18,16 @@
         </div>
         <hr class="my-14 text-grey" />
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto text-l font-semibold">Новинка</span>
+          <span class="my-auto mr-12 w-auto  text-l font-semibold"
+            >Новинка</span
+          >
           <label class="toggle-switch">
             <input type="checkbox" />
             <span class="slider"></span>
           </label>
         </div>
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto text-l font-semibold"
+          <span class="my-auto w-auto  text-l font-semibold"
             >Скоро в продаже</span
           >
           <label class="toggle-switch">
@@ -185,13 +187,829 @@
         <hr class="my-14 text-grey" />
 
         <div class="py-10">
-          <button class="button-black my-10 w-full">Показать ещё</button>
           <input
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
           />
+          <div class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m">Все фильтры</div>
         </div>
       </div>
     </form>
+  </div>
+</div>
+<div class="js_popup_all_filters_modal modal">
+  <div class="popup_all_filters_content">
+    <div class="popup_all_filters_heading">
+      <div class="popup_all_filters_header">
+        <div class="popup_all_filters_header_text">Все фильтры</div>
+        <div
+          class="js_popup_all_filters_close_button ui-popup-close-button"
+        ></div>
+      </div>
+
+      <div class="popup_all_filters_filters">
+        <div class="popup_all_filters_filter">
+          <input type="checkbox" id="novelty" class="sort-checkbox" />
+          <label class="sort-label" for="novelty"
+          >Новинка<span class="count">12</span> <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+            type="checkbox"
+            id="interactive_features"
+            class="sort-checkbox"
+          />
+          <label class="sort-label" for="interactive_features"
+          >Интерактивные функции<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input type="checkbox" id="sound_effects" class="sort-checkbox" />
+          <label class="sort-label" for="sound_effects"
+          >Звуковые эффекты<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+            type="checkbox"
+            id="erase_all_filters"
+            class="sort-checkbox_erase"
+          />
+          <label class="sort-label_erase" for="erase_all_filters"
+          >Сбросить все
+            <span class="cross"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup_all_filters_block_filter">
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button justify-btwn">Бренды<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_1"
+              />
+              <label
+                for="popup_brands_checkbox_1_1"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_2"
+              />
+              <label
+                for="popup_brands_checkbox_1_2"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Новинка</span>
+
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Скоро в продаже</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+
+          <div class="more-down-button justify-btwn">Для кого<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_3_5"
+              />
+              <label
+                for="popup_brands_checkbox_3_5"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_3_6"
+              />
+              <label
+                for="popup_brands_checkbox_3_6"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Возраст<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_3"
+              />
+              <label
+                for="popup_brands_checkbox_1_3"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_4"
+              />
+              <label
+                for="popup_brands_checkbox_1_4"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Рост<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_5"
+              />
+              <label
+                for="popup_brands_checkbox_1_5"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_6"
+              />
+              <label
+                for="popup_brands_checkbox_1_6"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn null-margin">
+            Интерактивные функции<label class="toggle-switch">
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_7"
+              />
+              <label
+                for="popup_brands_checkbox_1_7"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_8"
+              />
+              <label
+                for="popup_brands_checkbox_1_8"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn null-margin">
+            Звуковые эффекты<label class="toggle-switch">
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_9"
+              />
+              <label
+                for="popup_brands_checkbox_1_9"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_10"
+              />
+              <label
+                for="popup_brands_checkbox_1_10"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex justify-between px-10">
+            <span class="my-auto text-15.20">Подарок мечты</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="more-down-content">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_11"
+              />
+              <label
+                for="popup_brands_checkbox_1_12"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_13"
+              />
+              <label
+                for="popup_brands_checkbox_1_13"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+        </div>
+      </div>
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button justify-btwn">Тип<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_41"
+              />
+              <label
+                for="popup_brands_checkbox_1_41"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_40"
+              />
+              <label
+                for="popup_brands_checkbox_1_40"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Упаковка<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_14"
+              />
+              <label
+                for="popup_brands_checkbox_1_14"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_15"
+              />
+              <label
+                for="popup_brands_checkbox_1_15"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Оcобенности<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_16"
+              />
+              <label
+                for="popup_brands_checkbox_1_16"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_17"
+              />
+              <label
+                for="popup_brands_checkbox_1_17"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Назначение<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_18"
+              />
+              <label
+                for="popup_brands_checkbox_1_18"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_19"
+              />
+              <label
+                for="popup_brands_checkbox_1_19"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Материал<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_20"
+              />
+              <label
+                for="popup_brands_checkbox_1_20"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_21"
+              />
+              <label
+                for="popup_brands_checkbox_1_21"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex h-36 justify-between px-10">
+            <span class="my-auto text-15.20">Электронные функции</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Механизм<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_42"
+              />
+              <label
+                for="popup_brands_checkbox_1_42"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_43"
+              />
+              <label
+                for="popup_brands_checkbox_1_43"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Влагозащита</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Масштаб<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_22"
+              />
+              <label
+                for="popup_brands_checkbox_1_22"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_23"
+              />
+              <label
+                for="popup_brands_checkbox_1_23"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+        </div>
+      </div>
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button justify-btwn">Тематика<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_24"
+              />
+              <label
+                for="popup_brands_checkbox_1_24"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_25"
+              />
+              <label
+                for="popup_brands_checkbox_1_25"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Любимые сюжеты<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_26"
+              />
+              <label
+                for="popup_brands_checkbox_1_26"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_27"
+              />
+              <label
+                for="popup_brands_checkbox_1_27"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Любимые герои<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_28"
+              />
+              <label
+                for="popup_brands_checkbox_1_28"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_29"
+              />
+              <label
+                for="popup_brands_checkbox_1_29"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Навыки и развитие ребенка<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_30"
+              />
+              <label
+                for="popup_brands_checkbox_1_30"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_31"
+              />
+              <label
+                for="popup_brands_checkbox_1_31"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Размер пользовательский<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_32"
+              />
+              <label
+                for="popup_brands_checkbox_1_32"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_33"
+              />
+              <label
+                for="popup_brands_checkbox_1_33"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex flex justify-between px-10">
+            <span class="my-auto text-15.20">Световые эффекты</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">
+            Тип питания<span></span>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_34"
+              />
+              <label
+                for="popup_brands_checkbox_1_34"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_35"
+              />
+              <label
+                for="popup_brands_checkbox_1_35"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn">Цвет<span></span></div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_37"
+              />
+              <label
+                for="popup_brands_checkbox_1_37"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_39"
+              />
+              <label
+                for="popup_brands_checkbox_1_39"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button justify-btwn null-margin">
+            Назначение аксессуара<label class="toggle-switch">
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
+          </div>
+          <div class="more-down-content pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_36"
+              />
+              <label
+                for="popup_brands_checkbox_1_36"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_38"
+              />
+              <label
+                for="popup_brands_checkbox_1_38"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+        </div>
+      </div>
+    </div>
+
+    <div class="popup_all_filters_footer">
+      <div class="popup_all_filters_buttons">
+        <div class="popup_collaboration_page_four_buttons">
+          <button class="button-white collab_btn pup_btn">Назад</button>
+          <button class="button-black collab_btn pup_btn">
+            Отправить заявку
+          </button>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="popup_all_filters_filter_not_found link-m">
+      Не нашли нужный фильтр?
+    </a>
   </div>
 </div>
