@@ -714,7 +714,8 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="card_photogallery_item">
+                <div class="card_photogallery_item popup-trigger"
+                     data-popup-image="../../img/cards_photogallery_item.svg">
                   <img src="../../img/cards_photogallery_item.svg" alt=""/>
                   <a href="#" class="cards_photogallery_eye_image">
                     <img
@@ -739,7 +740,14 @@
           <button class="card_video_play_button circle-button"></button>
         </div>
       </div>
-
+      <div class="image-popup" id="imagePopup">
+        <div class="popup-content relative">
+          <img src="" alt="" id="popupImage" class="popup-image-img">
+          <div class="absolute h-20 w-20 block top-[0.8rem] right-[2.8rem] cursor-pointer close-button">
+            <img class="h-full w-full" src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
+          </div>
+        </div>
+      </div>
       <!-- тут ниже футер -->
       @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
