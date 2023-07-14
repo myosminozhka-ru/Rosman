@@ -30,7 +30,7 @@
 .js-rm-pag-nav-page-btns {
   @apply flex flex-row flex-nowrap gap-14;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 999px) {
     @apply w-full justify-between gap-0;
   }
 }

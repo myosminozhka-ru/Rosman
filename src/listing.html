@@ -9,12 +9,10 @@
     <title>Листинг</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
+  @@include('components/header/header-main.html', { }, )
   <body>
-    @@include('components/header/header-main.html', { }, )
-
     <div id="yellow-background">
-      <div id="moving-block" class='!w-[110%] !-left-2'>
+      <div id="moving-block" class="!-left-2 !w-[110%]">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
           <g>
             <path
@@ -27,111 +25,162 @@
       </div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
-        @@include('components/ui-kit/breadcrumbs/index.html', { },)
-        <div class="flex flex-row md:flex-col bg-background px-24 py-16 gap-12">
-          <div class="flex flex-row md:flex-col gap-24 md:gap-4">
-            <img class='w-[14rem] h-[14rem] md:hidden object-contain' src="../../img/brand_image.svg" />
-            <div class='hidden md:flex md:flex-row gap-16'>
-              <img class='w-[5rem] h-[5rem] object-contain' src="../../img/brand_image.svg" />
-              <div class='flex justify-center'> <h3 class='head-2 my-auto'>Инфинити Надо</h3></div>
+        <div
+          class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
+        >
+          <p class="breadcrumbs">
+            <a href="#">Главная </a><span>/</span>
+            <a class="active-js" href="#">Игрушки</a>
+          </p>
+
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">
+              ...
+              <div class="breadcrumbs-arrow"></div>
+              <div class="breadcrumbs-path-hidden"></div>
+            </div>
+            <div class="breadcrumbs-small-screen-path">Игрушки</div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-row gap-12 bg-background px-24 py-16 shs:flex-col md:gap-8 md:px-12 md:pb-24 md:pt-12"
+        >
+          <div class="flex flex-row gap-24 md:flex-col md:gap-4">
+            <img
+              class="h-[13rem] w-[13rem] object-contain md:hidden"
+              src="../../img/brand_image.svg"
+            />
+            <div class="hidden gap-16 md:flex md:flex-row">
+              <img
+                class="h-[5rem] w-[5rem] object-contain"
+                src="../../img/brand_image.svg"
+              />
+              <div class="flex justify-center">
+                <h3 class="head-2 my-auto">Инфинити Надо</h3>
+              </div>
             </div>
             <div class="flex flex-col">
-              <h3 class='head-2 md:hidden'>Инфинити Надо</h3>
-              <p class='body-m'>
-                Основу волчков Infinity Nado составляет атакующее металлическое кольцо - именно благодаря металлической основе волчки Infinity Nado такие...
+              <h3 class="head-2 text-center md:hidden">Инфинити Надо</h3>
+              <p class="body-m text-center md:text-left">
+                Основу волчков Infinity Nado составляет атакующее металлическое
+                кольцо - именно благодаря металлической основе волчки Infinity
+                Nado такие...
               </p>
-              <div class='mt-16'><p class='link-m js_popup_brand_description_button '>Читать</p></div>
-              @@include('components/ui-kit/popups/popup-brand-description.html', { }, )
+              <div class="mt-16 md:mt-8">
+                <p class="link-m js_popup_brand_description_button">Читать</p>
+              </div>
+              @@include('components/ui-kit/popups/popup-brand-description.html',
+              { }, )
             </div>
           </div>
-          <div class="flex flex-row md:flex-col gap-16 ">
+          <div
+            class="flex flex-row gap-16 shs:justify-between md:flex-col md:gap-0"
+          >
             <div
-              class="more-down-filters no-padds no-after !w-[19rem]  md:!w-full"
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">
-               Сезоны<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Сезоны<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-1" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-1"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-1"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-2" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-2"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-6" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-6"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-7" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-7"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-8" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-8"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-123" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-123"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Линейка<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Линейка<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-5" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-5"
-                >Мадс Миккельсен<span class="cross"></span
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-4" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-4"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-3" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-3"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
             <div
               class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
             >
-              <button class="more-down-button  new !bg-none border-b border-card-stroke text-s !px-16 !py-4">Особенности<span></span>
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Особенности<span></span>
               </button>
               <!--  more-down -->
-              <div class="more-down-content new h-[13rem] overflow-y-scroll overflow-x-hidden !px-8">
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
                 <input type="checkbox" id="sort-9" class="sort-checkbox" />
-                <label class="sort-label my-14 md:mx-auto " for="sort-9"
-                >Мадс Миккельсен<span class="cross"></span
+                <label class="sort-label my-14 md:mx-auto" for="sort-9"
+                  >Мадс Миккельсен<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-10" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-10"
-                >Джеймс МакЭвой<span class="cross"></span
+                  >Джеймс МакЭвой<span class="cross"></span
                 ></label>
                 <input type="checkbox" id="sort-11" class="sort-checkbox" />
                 <label class="sort-label my-14 md:mx-auto" for="sort-11"
-                >Джонни Депп<span class="cross"></span
+                  >Джонни Депп<span class="cross"></span
                 ></label>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-22 px-25 md:px-0 bg-white mt-16">
+        <div class="mt-16 flex flex-row gap-22 bg-white px-25 md:px-0">
           @@include('components/ui-kit/filters/filter-2.html', { }, )
 
           <div class="width-75 bg-white">
-            <div class="flex justify-between md:mt-40">
+            <div class="flex justify-between md:mt-8">
               <div
-                class="more-down-filters no-padds no-after mb-16 !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-3/4"
+                class="more-down-filters no-padds no-after mb-16 !w-[29.6rem] border-b border-card-stroke md:mt-0 md:!w-10/12 md:border-b-0"
               >
-                <button class="more-down-button with-padds new">
+                <button
+                  class="more-down-button with-padds new md:!justify-start"
+                >
                   Сначала новые<span></span>
                 </button>
                 <!--  more-down -->
@@ -160,7 +209,7 @@
               </div>
               <div id="open-filter" class="mobile-filter"></div>
             </div>
-            <div class="popup_all_filters_filters md:hidden">
+            <div class="popup_all_filters_filters">
               <div class="popup_all_filters_filter">
                 <input type="checkbox" id="novelty" class="sort-checkbox" />
                 <label class="sort-label" for="novelty"
@@ -202,9 +251,7 @@
                 </label>
               </div>
             </div>
-            <div
-              class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 sm:grid-cols-1"
-            >
+            <div class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 md:px-12">
               <div class="toy_card item_card">
                 <div class="toy_card_heading">
                   <div class="item_card_tags bordered_tags">
@@ -717,7 +764,7 @@
                 </div>
               </div>
             </div>
-            <section class="pagination rm-pag">
+            <section class="pagination rm-pag px-12">
               <div class="pagination-seen js-rm-pag-seen">
                 Просмотрено: 12 из 456
               </div>
@@ -772,7 +819,7 @@
           </div>
         </div>
         <div id="white-background">
-          <div id="yellow-moving-block">
+          <div id="yellow-moving-block" class="md:!h-[44rem]">
             <div id="parent">
               <img
                 id="follower"
@@ -782,19 +829,19 @@
             </div>
           </div>
           <div id="above-el-block">
-            <h1
-              class="head-2 mx-auto mt-40 w-2/4 px-25 text-center md:mt-2 md:w-full"
+            <h2
+              class="head-2 mx-auto mb-8 mt-40 w-2/4 px-25 text-center md:mt-2 md:w-full md:px-20 md:text-left"
             >
               Подписаться на рассылку
-            </h1>
-            <p class="body-m mx-auto text-center">
+            </h2>
+            <p class="body-m mx-auto text-center md:px-20 md:text-left">
               Как принято считать, непосредственные участники технического
               прогресса призывают<br />
               нас к новым свершениям, которые, в свою очередь, должны быть
               описаны максимально подробно.
             </p>
             <div
-              class="mx-auto mt-40 flex w-2/4 justify-center md:mt-2 md:w-full"
+              class="mx-auto mt-40 flex w-2/4 justify-center md:mt-24 md:w-full md:flex-col md:gap-16 md:px-20"
             >
               <input
                 class="input w-full items-center"
@@ -804,7 +851,7 @@
               <button class="button-black">Подписаться</button>
             </div>
             <div
-              class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-2/6 justify-center md:mt-2 md:w-full"
+              class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-[32rem] justify-center md:mt-16 md:w-[26.5rem] md:px-20"
             >
               <input
                 class="js-footer-heading-checkbox checkbox__input_main"
@@ -828,7 +875,6 @@
         </div>
       </div>
     </div>
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -836,4 +882,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
+  @@include('components/ui-kit/footer/footer-ru.html', { }, )
 </html>
