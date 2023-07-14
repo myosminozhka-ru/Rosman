@@ -16,8 +16,8 @@
 
     &.new {
       // поправил на 30
-      @apply w-full justify-between pl-30;
-      background-image: url('../../img/sort.svg');
+      @apply w-full justify-between pl-20;
+      //background-image: url('../../img/sort.svg');
       background-repeat: no-repeat;
       /*поправил на 1.5 рем, чтобы красиво встало*/
       background-position: 3% 50%;

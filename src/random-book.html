@@ -160,7 +160,7 @@
           class="grid grid-cols-3 gap-x-16 px-[12rem] bsmax:px-[9rem] bs:px-0 md:grid-cols-1 md:items-center md:justify-center md:gap-y-16"
         >
           <div class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]">
-            <button class="more-down-button new border-b border-[#D9D9D9]">
+            <button class="more-down-button new border-b border-[#D9D9D9] md:border-black md:border">
               Выберите жанр<span></span>
             </button>
             <!--  more-down -->
@@ -235,11 +235,11 @@
             </div>
           </div>
           <div class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]">
-            <button class="more-down-button new border-b border-[#D9D9D9]">
+            <button class="more-down-button new border-b border-[#D9D9D9] md:border-black md:border">
               Выберите возраст<span></span>
             </button>
             <!--  more-down -->
-            <div class="more-down-content border md:max-h-[20rem] md:overflow-x-auto border-t-0 !p-16">
+            <div class="more-down-content border md:max-h-[20rem] md:overflow-x-auto border-t-0 !p-16 ">
               <div class="flex flex-col gap-12">
                 <div class="js-footer-heading-policy-agreement checkbox_main">
                   <input
@@ -300,6 +300,9 @@
             Подобрать
           </button>
         </div>
+      </div>
+      <div class="mb-64 max-w-[78rem] mx-auto px-24 sm:px-12">
+        @@include('components/ui-kit/cards/card-book-random.html', { }, )
       </div>
     </div>
   </div>
