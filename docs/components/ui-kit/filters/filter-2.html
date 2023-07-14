@@ -186,17 +186,18 @@
         </div>
         <hr class="my-14 text-grey" />
 
-        <div class="py-10">
+        <div class="py-10 md:h-[30rem]">
           <input
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
           />
-          <div class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m">Все фильтры</div>
+          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Все фильтры</div>
         </div>
       </div>
     </form>
   </div>
 </div>
+
 <div class="js_popup_all_filters_modal modal">
   <div class="popup_all_filters_content">
     <div class="popup_all_filters_heading">
@@ -210,7 +211,7 @@
       <div class="popup_all_filters_filters">
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
-          <label class="sort-label" for="novelty"
+          <label class="sort-label active-js" for="novelty"
           >Новинка<span class="count">12</span> <span class="cross"></span>
           </label>
         </div>
@@ -220,14 +221,14 @@
             id="interactive_features"
             class="sort-checkbox"
           />
-          <label class="sort-label" for="interactive_features"
+          <label class="sort-label active-js" for="interactive_features"
           >Интерактивные функции<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
-          <label class="sort-label" for="sound_effects"
+          <label class="sort-label active-js" for="sound_effects"
           >Звуковые эффекты<span class="count">12</span>
             <span class="cross"></span>
           </label>
@@ -1003,13 +1004,16 @@
         <div class="popup_collaboration_page_four_buttons">
           <button class="button-white collab_btn pup_btn">Назад</button>
           <button class="button-black collab_btn pup_btn">
-            Отправить заявку
+            Применить
           </button>
         </div>
       </div>
     </div>
-    <a href="#" class="popup_all_filters_filter_not_found link-m">
-      Не нашли нужный фильтр?
-    </a>
+    <div class='mx-auto items-center w-1/4'>
+      <a href="#" class="popup_all_filters_filter_not_found link-m">
+        Не нашли нужный фильтр?
+      </a>
+    </div>
+
   </div>
 </div>
