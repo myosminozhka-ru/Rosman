@@ -262,7 +262,6 @@ button {
 
 .sort-label {
   @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
-  max-width: 30rem;
   min-width: 5rem;
 
   .count {
@@ -385,7 +384,7 @@ button {
   @apply flex flex-row text-grey;
 
   span {
-    @apply mr-8 text-text;
+    @apply mr-8 text-text text-xl;
   }
 
   a {
@@ -432,6 +431,7 @@ button {
 .breadcrumbs-arrow {
   @apply absolute hidden h-12 w-32;
   left: -1.1rem;
+  background: url('../../img/bread-arrow.svg') no-repeat center;
   background-size: contain;
 }
 
