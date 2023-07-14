@@ -67,10 +67,10 @@
           </div>
         </div>
         <div
-          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-[86rem]"
+          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-[122rem]"
         ></div>
         <div
-          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row  md:flex-col  gap-99 md:gap-32 px-24 py-94 md:h-[96rem]"
+          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row  md:flex-col  gap-99 md:gap-32 px-24 py-94 md:h-[130rem]"
         >
           <div class="flex w-2/4 md:w-full flex-col gap-16">
             <h3 class="head-3">Как начать с нами работать?</h3>
@@ -90,49 +90,54 @@
               </div>
               <p class="flex items-center text-m">Дождаться ответа менеджера</p>
             </div>
-            <p class="w-3/4  md:w-full text-m">
+            <p class="w-3/4 md:w-full text-m">
               Менеджер отправит Вам прайс-лист для формирования заказа и список
               документов, необходимых для заключения договора
             </p>
           </div>
           <div class="flex w-2/4 md:w-full flex-col gap-16">
-            <p class="mb-16 text-m">Шаг 1 из 4</p>
-            <div class="flex flex-row gap-16">
-              <img
-                src="../../img/yellow-icons-58px/yellow-money-58px.svg"
-                alt=""
-                class="h-fit w-[3rem] object-contain"
-              />
-              <p class="flex items-center text-m">
-                Минимальная сумма заказа - 30 000₽
-              </p>
+            <p class="mb-16 text-m">Шаг 2 из 4</p>
+            <p class='body-m-bold'>Формат торговли<sup>*</sup></p>
+            <div class='grid grid-cols-2 md:grid-cols-1 grid-rows-1 gap-40'>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-1" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-1">Опт<span class="cross"></span></label>
+                <input type="checkbox" id="sort-2" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-2">Розница<span class="cross"></span></label>
+                <input type="checkbox" id="sort-3" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-3">Интернет-магазин<span class="cross"></span></label>
+              </div>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-4" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-4">Совместные закупки<span class="cross"></span></label>
+                <input type="checkbox" id="sort-5" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-5">Бюджетные закупки<span class="cross"></span></label>
+                <input type="checkbox" id="sort-6" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-6">Другое<span class="cross"></span></label>
+                <input class="input w-full " type="text" placeholder="другое" />
+              </div>
             </div>
-            <div class="flex flex-row gap-16">
-              <img
-                src="../../img/yellow-icons-58px/yellow-car-van-58px.svg"
-                alt=""
-                class="h-fit w-[3rem] object-contain"
-              />
-              <p class="flex items-center text-m">
-                Бесплатная доставка по Москве и ближайшему Подмосковью
-              </p>
+            <p class='body-m-bold'>Формат торговли<sup>*</sup></p>
+            <div class='grid grid-cols-2 md:grid-cols-1 grid-rows-1 gap-40'>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-7" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-7">Книги<span class="cross"></span></label>
+                <input type="checkbox" id="sort-8" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-8">Игрушка<span class="cross"></span></label>
+                <input type="checkbox" id="sort-9" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full mb-17" for="sort-9">Канцелярские товары<span class="cross"></span></label>
+                <button class="button-white  w-full md:hidden">Назад</button>
+              </div>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-10" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-10">Детские товары<span class="cross"></span></label>
+                <input type="checkbox" id="sort-11" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-11">Другое<span class="cross"></span></label>
+                <input class="input w-full" type="text" placeholder="другое" />
+                <button class="button-white  w-full !hidden md:!block">Назад</button>
+                <button class="button-black  w-full">Следующий шаг</button>
+              </div>
             </div>
-            <div class="flex flex-row gap-16">
-              <img
-                src="../../img/yellow-icons-58px/yellow-label-58px.svg"
-                alt=""
-                class="h-fit w-[3rem] object-contain"
-              />
-              <p class="flex items-center text-m">
-                Индивидуальная система скидок
-              </p>
-            </div>
-            <form class='flex flex-col w-[50rem] md:w-full gap-16'>
-              <input class="input" type="text" placeholder="Организация" />
-              <input class="input" type="text" placeholder="Страна" />
-              <input class="input" type="text" placeholder="Регион и город" />
-              <button class="button-black my-10 w-full">Следующий шаг</button>
-            </form>
           </div>
           <div class='-bottom-10 absolute'>
             <div class="elephant-moves-leg">
