@@ -106,37 +106,44 @@ window.addEventListener('resize', function () {
 //   });
 // }
 
-document.addEventListener('DOMContentLoaded', function () {
-  'use strict';
-
-  const popupTriggers = document.querySelectorAll('.popup-trigger');
-  const imagePopup = document.querySelector('.image-popup');
-  const popupImage = document.querySelector('#popupImage');
-  const closeButton = document.querySelector('.close-button');
-
-  window.addEventListener('click', function (event) {
-    if (imagePopup.classList.contains('js-active-popup')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
-  });
-
-  popupTriggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
-      const imageUrl = trigger.getAttribute('data-popup-image');
-      popupImage.setAttribute('src', imageUrl);
-      imagePopup.classList.add('js-active-popup');
-    });
-  });
-
-  closeButton.addEventListener('click', function () {
-    imagePopup.classList.remove('js-active-popup');
-  });
-
-  imagePopup.addEventListener('click', function (event) {
-    if (event.target === imagePopup) {
-      imagePopup.classList.remove('js-active-popup');
-    }
-  });
-});
+// вот этот скрипт ещё может пригодиться
+// document.addEventListener('DOMContentLoaded', function () {
+//   'use strict';
+//
+//   const popupTriggers = document.querySelectorAll('.popup-trigger');
+//   const imagePopup = document.querySelector('.image-popup');
+//   const popupImage = document.querySelector('#popupImage');
+//   const closeButton = document.querySelector('.close-button');
+//
+//   window.addEventListener('click', function (event) {
+//     if (imagePopup.classList.contains('js-active-popup')) {
+//       document.body.style.overflow = 'hidden';
+//     } else {
+//       document.body.style.overflow = 'visible';
+//     }
+//   });
+//
+//   if (popupTriggers) {
+//     popupTriggers.forEach(function (trigger) {
+//       trigger.addEventListener('click', function () {
+//         const imageUrl = trigger.getAttribute('data-popup-image');
+//         popupImage.setAttribute('src', imageUrl);
+//         imagePopup.classList.add('js-active-popup');
+//       });
+//     });
+//   }
+//
+//   if (closeButton) {
+//     closeButton.addEventListener('click', function () {
+//       imagePopup.classList.remove('js-active-popup');
+//     });
+//   }
+//
+//   if (imagePopup) {
+//     imagePopup.addEventListener('click', function (event) {
+//       if (event.target === imagePopup) {
+//         imagePopup.classList.remove('js-active-popup');
+//       }
+//     });
+//   }
+// });
