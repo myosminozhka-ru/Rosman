@@ -1,21 +1,21 @@
 // личные настройки
-//#above-block.card-fullpage-modified-above-block {
-//  @apply p-0;
-//}
+#above-block.card-fullpage-modified-above-block {
+  @apply p-0;
+}
 
-//#yellow-background.card-fullpage-modified-yellow-background {
-//  @apply h-auto !pt-10;
-//}
+#yellow-background.card-fullpage-modified-yellow-background {
+  @apply h-auto pt-[1rem];
+}
 
-//.card-fullpage-modified-yellow-background:after {
-//  position: absolute;
-//  content: '';
-//  display: block;
-//  height: 50%;
-//  bottom: 0;
-//  background-color: white;
-//  width: 100%;
-//}
+.card-fullpage-modified-yellow-background:after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 50%;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+}
 
 // остальные стили
 //.card-fullpage{
@@ -281,6 +281,7 @@
 //.thumbs {
 //  @apply flex flex-col gap-14;
 //}
+
 .js-thumb-chosen {
   border: 3px solid #4498fc;
 }
@@ -521,13 +522,63 @@
   @media screen and (max-width: 400px) {
     height: 45rem !important;
   }
+  &.books-slider {
+    height: 84.9rem;
+    &.elephant {
+      height: 80rem;
+      @media screen and (min-width: 2300px) {
+        height: 110rem;
+      }
+      @media screen and (max-width: 900px) {
+        height: 95rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 80rem;
+      }
+    }
+  }
 }
+#yellow-moving-block2.card-fullpage-w-bg-modified {
+  height: 51.9rem;
+  padding: 0;
+  margin: 0;
+  &.books-slider {
+    height: 65.9rem;
+    &.elephant {
+      height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
 
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
+  }
+}
 #yellow-moving-block.card-fullpage-w-bg-modified {
   @apply m-0 h-[51.9rem] p-0 ipadmini:h-[45rem] ssm:h-[40rem];
 
   @media screen and (max-width: 400px) {
     height: 37rem !important;
+  }
+  &.books-slider {
+    height: 65.9rem;
+    &.elephant {
+      height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
   }
 }
 
@@ -682,6 +733,7 @@
 }
 
 ///// my swiper
+
 .slider-2 .swiper-container-3 {
   width: 100%;
   height: 100%;
