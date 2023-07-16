@@ -184,6 +184,7 @@
   }
 }
 
+
 /* Стили кнопок */
 
 .toolbar-button {
@@ -199,6 +200,7 @@
     font-size: 1.1rem;
   }
 }
+
 
 /* Стили активной кнопки */
 
@@ -826,12 +828,14 @@ header {
 .swiper-image-2,
 .swiper-book-fragment,
 .swiper-detailed-page,
+.swiper-imidzh-page,
+.swiper-image-gallery,
 .swiper-catalog-projects,
 .swiper-detailed-page-video {
+
   // width: 100% !important;
   // height: auto !important;
   // padding: 0 3rem !important;
-
   .card_career {
     margin-top: 3rem;
 
