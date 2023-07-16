@@ -414,7 +414,7 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
-class Slider {
+class Number {
   constructor(rangeElement, valueElement, options) {
     this.rangeElement = rangeElement;
     this.valueElement = valueElement;
@@ -475,9 +475,9 @@ let options = {
 };
 
 if (rangeElement) {
-  let slider = new Slider(rangeElement, valueElement, options);
+  let number = new Slider(rangeElement, valueElement, options);
 
-  slider.init();
+  number.init();
 }
 function showBlock(elementId) {
   const blocks = document.querySelectorAll('.show');
