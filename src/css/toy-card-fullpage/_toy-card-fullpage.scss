@@ -1,26 +1,33 @@
 // личные настройки
-#above-block.card-fullpage-modified-above-block {
-  @apply p-0;
-}
+//#above-block.card-fullpage-modified-above-block {
+//  @apply p-0;
+//}
 
-#yellow-background.card-fullpage-modified-yellow-background {
-  @apply h-auto pt-10;
-}
+//#yellow-background.card-fullpage-modified-yellow-background {
+//  @apply h-auto !pt-10;
+//}
 
-.card-fullpage-modified-yellow-background:after {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 50%;
-  bottom: 0;
-  background-color: white;
-  width: 100%;
-}
+//.card-fullpage-modified-yellow-background:after {
+//  position: absolute;
+//  content: '';
+//  display: block;
+//  height: 50%;
+//  bottom: 0;
+//  background-color: white;
+//  width: 100%;
+//}
 
 // остальные стили
 //.card-fullpage{
 //  @apply bg-white;
 //}
+
+// теги на слайдере
+.bordered_tags_item-2 {
+  @apply bg-white px-12 py-4 text-s border font-medium;
+}
+
+
 .card-fullpage-main-info {
   @apply mb-64 flex flex-row items-start justify-between gap-16;
 
@@ -58,8 +65,7 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
-    center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -134,6 +140,7 @@
 .card-fp-desc-target-aud {
   @apply inline-block cursor-pointer rounded-3xl px-12 py-4 text-s font-medium;
   border: 1px solid black;
+
   &:hover {
     @apply bg-yellow;
   }
@@ -169,9 +176,9 @@
   width: 100%;
   content: '';
   background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
+                  to top,
+                  rgba(255, 255, 255, 1) 0%,
+                  rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
   /* so the text is still selectable */
@@ -742,6 +749,30 @@
   overflow: hidden;
 }
 
+.slider__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.slider__image-book {
+  max-width: 8.8rem;
+}
+
+.slider__image-book img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.book-slider-wrapper .swiper-slide {
+  height: max-content !important;
+}
+
 .swiper-slide_big {
   max-width: 50.4rem;
   aspect-ratio: 1/1;
@@ -751,13 +782,20 @@
   }
 }
 
-.slider__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+.swiper-slide_big-book {
+  max-width: 50.4rem;
+  aspect-ratio: 1/1;
+  background-color: #f5f5f5;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 }
+
+.swiper-slide_big-book img {
+  @apply py-24 w-full h-full object-contain;
+}
+
 
 // пагинация для свипера главных картинок
 .swiper-pagination-2 .swiper-pagination-bullet {

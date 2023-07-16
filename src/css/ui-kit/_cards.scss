@@ -1,4 +1,3 @@
-// стили для картинки, при тыке на которую открывается большая
 .image-popup {
   position: fixed;
   top: 0;
@@ -9,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 2000;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s;
@@ -27,6 +26,8 @@
 .popup-image-img {
   object-fit: contain;
   max-height: 90vh;
+  max-width: 90vw;
+  height: 100%;
   @apply px-24 sm:px-12;
 }
 
@@ -34,7 +35,6 @@
   visibility: visible;
   opacity: 1;
 }
-
 
 .cards_wrapper {
   @apply flex flex-col items-center gap-56;
@@ -145,23 +145,6 @@
   @apply bg-yellow;
 }
 
-.bordered_tags_item-2 {
-  @apply px-12 py-4 body-s-bold;
-  border: 1px solid #000000;
-
-  @media screen and (max-width: 400px) {
-    @apply text-center w-1/2;
-  }
-
-  @media screen and (max-width: 900px) {
-    @apply px-4;
-  }
-}
-
-.bordered_tags_item-2:hover {
-  @apply bg-yellow;
-}
-
 .bordered_tags_item-smalled {
   @apply px-4 py-4 text-center text-11.14;
   width: 7rem;
@@ -204,7 +187,7 @@
 }
 
 .item_card_more {
-  @apply flex flex-row justify-start gap-18 sm:justify-between;
+  @apply flex flex-row justify-start gap-18;
 }
 
 .item_card_link.overline-button {
@@ -734,7 +717,7 @@
 }
 
 .card_employee_text {
-  @apply text-2.5xl font-normal font-normal ssm:text-15.20;
+  @apply text-2.5xl font-normal ssm:text-15.20;
 }
 
 .card_employee_image::before {

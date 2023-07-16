@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог</title>
+    <title>Листинг</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -14,7 +14,7 @@
     @@include('components/header/header-main.html', { }, )
 
     <div id="yellow-background">
-      <div id="moving-block">
+      <div id="moving-block" class="!-left-2 !w-[110%]">
         <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
           <g>
             <path
@@ -28,59 +28,132 @@
       <div id="white-mobile-background"></div>
       <div id="above-block">
         @@include('components/ui-kit/breadcrumbs/index.html', { },)
-        <div class="flex">
-          <h1 class="head-1 mb-64 px-25">Все игрушки</h1>
-          <sup class="text-l text-text">1 222 323</sup>
+        <div class="flex flex-row gap-12 bg-background px-24 py-16 md:flex-col">
+          <div class="flex flex-row gap-24 md:flex-col md:gap-4">
+            <img
+              class="h-[14rem] w-[14rem] object-contain md:hidden"
+              src="../../img/brand_image.svg"
+            />
+            <div class="hidden gap-16 md:flex md:flex-row">
+              <img
+                class="h-[5rem] w-[5rem] object-contain"
+                src="../../img/brand_image.svg"
+              />
+              <div class="flex justify-center">
+                <h3 class="head-2 my-auto">Инфинити Надо</h3>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="head-2 md:hidden">Инфинити Надо</h3>
+              <p class="body-m">
+                Основу волчков Infinity Nado составляет атакующее металлическое
+                кольцо - именно благодаря металлической основе волчки Infinity
+                Nado такие...
+              </p>
+              <div class="mt-16">
+                <p class="link-m js_popup_brand_description_button">Читать</p>
+              </div>
+              @@include('components/ui-kit/popups/popup-brand-description.html',
+              { }, )
+            </div>
+          </div>
+          <div class="flex flex-row gap-16 md:flex-col">
+            <div
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Сезоны<span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-1" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-1"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-2" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-2"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-6" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-6"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-7" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-7"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-8" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-8"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-123" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-123"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+            <div
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Линейка<span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-5" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-5"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-4" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-4"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-3" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-3"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+            <div
+              class="more-down-filters no-padds no-after !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s"
+              >
+                Особенности<span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[13rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-9" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-9"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-10" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-10"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-11" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-11"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-row gap-22 bg-white px-25 md:px-0">
+        <div class="mt-16 flex flex-row gap-22 bg-white px-25 md:px-0">
           @@include('components/ui-kit/filters/filter-2.html', { }, )
 
           <div class="width-75 bg-white">
-            <div class="brand_choose_brands">
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-
-              <div class="image_container_brand">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-80 h-80'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div
-                class="image_container_brand js_popup_brand_choose_list_button"
-              >
-                <div class="all-brands">Все бренды</div>
-              </div>
-            </div>
-            @@include('components/ui-kit/popups/popup-brand-listing.html', { },
-            )
             <div class="flex justify-between md:mt-40">
               <div
                 class="more-down-filters no-padds no-after mb-16 mt-16 w-29rem border-b border-card-stroke md:mt-0 md:!w-3/4"

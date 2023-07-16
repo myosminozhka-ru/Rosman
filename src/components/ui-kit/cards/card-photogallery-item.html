@@ -1,28 +1,16 @@
 <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
-<div>
-  <div
-    class="card_photogallery_item popup-trigger !aspect-auto"
-    itemscope
-    itemtype="http://schema.org/ImageObject"
-    data-popup-target="#imagePopup"
-    data-popup-image="../../img/catalog-vacancies/image-square.png"
-  >
-    <img src="../../img/catalog-vacancies/image-square.png" alt="" itemprop="image"/>
-    <div class="cards_photogallery_eye_image" itemprop="url">
-      <img
-        class="cards_photogallery_eye_img"
-        src="../../img/cards_photogallery_eye.svg"
-        alt=""
-      />
-    </div>
+<a data-fancybox="gallery-photogallery"
+   href="../../img/cards_photogallery_item.svg"
+   class="card_photogallery_item"
+   itemscope
+   itemtype="http://schema.org/ImageObject"
+>
+  <img src="../../img/cards_photogallery_item.svg" alt="" itemprop="image"/>
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="../../img/cards_photogallery_eye.svg"
+      alt=""
+    />
   </div>
-
-  <div class="image-popup" id="imagePopup">
-    <div class="popup-content relative">
-      <img src="" alt="" id="popupImage" class="popup-image-img">
-      <figure class="absolute h-20 w-20 block top-[0.8rem] right-[2.8rem] cursor-pointer close-button">
-        <img src="../../img/catalog-vacancies/black-close-20px.svg" alt="">
-      </figure>
-    </div>
-  </div>
-</div>
+</a>
