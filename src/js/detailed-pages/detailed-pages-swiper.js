@@ -76,12 +76,8 @@ const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
 
 const swiperAllVac = new Swiper('.swiper-image-gallery-allvac', {
   // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
+  loop: true,
+
   autoHeight: true,
   slidesPerView: 2,
   spaceBetween: 8,
