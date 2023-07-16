@@ -370,12 +370,19 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply mb-64 flex flex-col gap-24 md:gap-48;
+  @apply mb-64 flex flex-col gap-24 md:gap-48 md:mb-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
   @apply gap-64 md:gap-48;
 }
+
+@media screen and (max-width: 400px) {
+  .js-mdb-desc-button {
+    margin-top: -2.4rem !important;
+  }
+}
+
 
 .more-down-button.js-mdb-desc-button {
   @apply justify-start p-0;
