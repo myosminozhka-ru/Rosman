@@ -95,7 +95,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -231,9 +231,9 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // задаем параметры
   on: {
     slideChange: function () {
-      console.log(sliderThumbs.activeIndex);
+      // console.log(sliderThumbs.activeIndex);
       const activeSlideIndex = sliderImages.activeIndex; // Индекс активного слайда в основном слайдере
-      console.log(activeSlideIndex);
+      // console.log(activeSlideIndex);
       const thumbItems = document.querySelectorAll(
         '.slider__thumbs .swiper-slide'
       ); // Элементы миниатюр
