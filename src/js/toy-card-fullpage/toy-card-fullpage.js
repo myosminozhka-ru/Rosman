@@ -95,7 +95,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
+      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   };
 }

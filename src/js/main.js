@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (navbar) {
     navbar.addEventListener('click', function (event) {
       const contentNavBar =
-          document.getElementsByClassName('navigation-content');
+        document.getElementsByClassName('navigation-content');
       const contentNavBarUl = document.querySelector('.nav-list');
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
@@ -53,8 +53,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const targetElement = event.target;
     if (block != null) {
       if (
-          !block.contains(targetElement) &&
-          !targetElement.parentNode.classList.contains('more-down-content')
+        !block.contains(targetElement) &&
+        !targetElement.parentNode.classList.contains('more-down-content')
       ) {
         for (let i = 0; i < moreButtons.length; i++) {
           if (moreButtons[i].classList.contains('active-js')) {
@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
       } else {
         // Закрытие других активных контентов
         const activeContent = document.querySelector(
-            '.collapse-content.active'
+          '.collapse-content.active'
         );
 
         if (activeContent) {
@@ -113,12 +113,12 @@ window.addEventListener('DOMContentLoaded', () => {
       movingBlock.style.transform = `rotate(${tilt}deg)`;
 
       const computedFontSize = window.getComputedStyle(
-          document.documentElement
+        document.documentElement
       ).fontSize;
 
       const computedFontSizeNumber = computedFontSize.slice(
-          0,
-          computedFontSize.length - 2
+        0,
+        computedFontSize.length - 2
       );
 
       const avaliableCursorArea = {
@@ -133,15 +133,15 @@ window.addEventListener('DOMContentLoaded', () => {
       };
 
       if (
-          cursorPosition.y <
-          avaliableCursorArea.height + avaliableCursorArea.heightCompensator
+        cursorPosition.y <
+        avaliableCursorArea.height + avaliableCursorArea.heightCompensator
       ) {
         const cursorPositionInTheAreaInPercent = {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
-              (cursorPosition.y + avaliableCursorArea.heightCompensator) /
+            (cursorPosition.y + avaliableCursorArea.heightCompensator) /
               (avaliableCursorArea.height / 100) -
-              100,
+            100,
         };
 
         const averageCoordinates = {
@@ -157,20 +157,20 @@ window.addEventListener('DOMContentLoaded', () => {
         const shadowFractionToShift = 0.8;
 
         movingBlockShadow.setAttribute(
-            'd',
-            `M 0 ${
-                (shadowFractionToShift / 100) *
-                getAveragePercentage([
-                  averageCoordinates.left,
-                  averageCoordinates.top,
-                ])
-            } L 100 ${
-                (shadowFractionToShift / 100) *
-                getAveragePercentage([
-                  averageCoordinates.right,
-                  averageCoordinates.top,
-                ])
-            } L 100 100 L 0 100`
+          'd',
+          `M 0 ${
+            (shadowFractionToShift / 100) *
+            getAveragePercentage([
+              averageCoordinates.left,
+              averageCoordinates.top,
+            ])
+          } L 100 ${
+            (shadowFractionToShift / 100) *
+            getAveragePercentage([
+              averageCoordinates.right,
+              averageCoordinates.top,
+            ])
+          } L 100 100 L 0 100`
         );
       }
     });
@@ -203,8 +203,8 @@ window.addEventListener('DOMContentLoaded', () => {
       let x = event.clientX - parentRect.left;
       let newX = x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
       newX = Math.max(
-          0,
-          Math.min(newX, parentRect.width - follower.offsetWidth)
+        0,
+        Math.min(newX, parentRect.width - follower.offsetWidth)
       );
 
       if (!isMoving) {
@@ -243,8 +243,8 @@ window.addEventListener('DOMContentLoaded', () => {
       let x = event.clientX - parentRect.left;
       let newX = x - follower2.offsetWidth; // Вычисляем новое положение в противоположной стороне
       newX = Math.max(
-          0,
-          Math.min(newX, parentRect.width - follower2.offsetWidth)
+        0,
+        Math.min(newX, parentRect.width - follower2.offsetWidth)
       );
 
       if (!isMoving2) {
@@ -258,10 +258,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
   const elephantDownButtons = document.getElementsByClassName(
-      'elephant-more-down-button'
+    'elephant-more-down-button'
   );
   const elephantUpButtons = document.getElementsByClassName(
-      'elephant-more-up-button'
+    'elephant-more-up-button'
   );
 
   for (let i = 0; i < elephantDownButtons.length; i++) {
@@ -436,8 +436,8 @@ class Number {
   // Format the money
   asMoney(value) {
     return (
-        '$' +
-        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+      '$' +
+      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
     );
   }
 
@@ -447,15 +447,15 @@ class Number {
     }
 
     let percentage =
-        ((this.rangeElement.value - this.options.min) /
-            (this.options.max - this.options.min)) *
-        100;
+      ((this.rangeElement.value - this.options.min) /
+        (this.options.max - this.options.min)) *
+      100;
     return (
-        'background: linear-gradient(to right, #000000, #000000 ' +
-        percentage +
-        '%, #D9D9D9 ' +
-        percentage +
-        '%, #D9D9D9 100%)'
+      'background: linear-gradient(to right, #000000, #000000 ' +
+      percentage +
+      '%, #D9D9D9 ' +
+      percentage +
+      '%, #D9D9D9 100%)'
     );
   }
 
@@ -527,8 +527,8 @@ document.addEventListener('click', function (event) {
     console.log(toolbar);
     if (block != null) {
       if (
-          !block.contains(targetElement) &&
-          !targetElement.classList.contains('toolbar-button')
+        !block.contains(targetElement) &&
+        !targetElement.classList.contains('toolbar-button')
       ) {
         for (let i = 0; i < blocks.length; i++) {
           if (blocks[i].classList.contains('show')) {
