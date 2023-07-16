@@ -3235,7 +3235,7 @@
       <img
         itemprop="image"
         class="book_card_img item_card_img"
-        src="./img/brand_nado.svg"
+        src="./img/cards_book.svg"
         alt=""
       />
     </div>
@@ -3252,7 +3252,50 @@
       >
         Подробнее
       </button>
-      <button class="item_card_add_to_favourite"></button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -3450,20 +3493,22 @@
 
       <div class="max-w-[29.6rem]">
         <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
-<div
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
   class="card_photogallery_item"
   itemscope
   itemtype="http://schema.org/ImageObject"
 >
   <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
-  <a href="#" class="cards_photogallery_eye_image" itemprop="url">
+  <div class="cards_photogallery_eye_image">
     <img
       class="cards_photogallery_eye_img"
       src="./img/cards_photogallery_eye.svg"
       alt=""
     />
-  </a>
-</div>
+  </div>
+</a>
 
       </div>
 
@@ -3562,7 +3607,50 @@
       <button class="toy_card_item_link item_card_link overline-button">
         Подробнее
       </button>
-      <button class="item_card_add_to_favourite"></button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -3778,21 +3866,21 @@
 </header>
 <div class="toolbar">
   <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
-    <img src="./img/toolbar-book.png" />Главная</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
-  ><img src="./img/toolbar-home.png" />Игрушки</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
-  ><img src="./img/toolbar-menu.png" />Книги</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
-  ><img src="./img/toolbar-toys.png" />Меню</div
-  >
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
 </div>
-<div id="block1" class="content-block" >
+<div id="block1" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -3805,14 +3893,16 @@
   </div>
 </div>
 
-<div id="block2" class="content-block" >
+<div id="block2" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -3827,15 +3917,17 @@
   </div>
 </div>
 
-<div id="block3" class="content-block" >
+<div id="block3" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -3851,9 +3943,9 @@
   </div>
 </div>
 
-<div id="block4" class="content-block" >
+<div id="block4" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -3863,12 +3955,14 @@
       <li><a>Контакты</a></li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -3880,13 +3974,15 @@
       </li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -3901,6 +3997,7 @@
     </ul>
   </div>
 </div>
+
     </div>
     <h3 class="accordion head-3">Header</h3>
     <div class="panel block p-0">
@@ -3928,7 +4025,7 @@
       <div class="icon"></div>
     </button>
     <!--  more-down -->
-    <div class="more-down-content ">
+    <div class="more-down-content">
       <ul>
         <li class="company"><a href="#">Бренды</a></li>
         <li class="news"><a href="#">Новости</a></li>
@@ -4007,21 +4104,21 @@
 </header>
 <div class="toolbar">
   <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
-    <img src="./img/toolbar-book.png" />Главная</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
-    ><img src="./img/toolbar-home.png" />Игрушки</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
-    ><img src="./img/toolbar-menu.png" />Книги</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
-    ><img src="./img/toolbar-toys.png" />Меню</div
-  >
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
 </div>
-<div id="block1" class="content-block" >
+<div id="block1" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4034,14 +4131,16 @@
   </div>
 </div>
 
-<div id="block2" class="content-block" >
+<div id="block2" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4056,15 +4155,17 @@
   </div>
 </div>
 
-<div id="block3" class="content-block" >
+<div id="block3" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4080,9 +4181,9 @@
   </div>
 </div>
 
-<div id="block4" class="content-block" >
+<div id="block4" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4092,12 +4193,14 @@
       <li><a>Контакты</a></li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4109,13 +4212,15 @@
       </li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4238,21 +4343,21 @@
 </header>
 <div class="toolbar">
   <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
-    <img src="./img/toolbar-book.png" />Главная</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
-  ><img src="./img/toolbar-home.png" />Игрушки</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
-  ><img src="./img/toolbar-menu.png" />Книги</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
-  ><img src="./img/toolbar-toys.png" />Меню</div
-  >
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
 </div>
-<div id="block1" class="content-block" >
+<div id="block1" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4265,14 +4370,16 @@
   </div>
 </div>
 
-<div id="block2" class="content-block" >
+<div id="block2" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4287,15 +4394,17 @@
   </div>
 </div>
 
-<div id="block3" class="content-block" >
+<div id="block3" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4311,9 +4420,9 @@
   </div>
 </div>
 
-<div id="block4" class="content-block" >
+<div id="block4" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4323,12 +4432,14 @@
       <li><a>Контакты</a></li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4340,13 +4451,15 @@
       </li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4361,6 +4474,7 @@
     </ul>
   </div>
 </div>
+
       </div>
     </div>
     <h3 class="accordion head-3">Header-3</h3>
@@ -4389,7 +4503,7 @@
       <div class="icon"></div>
     </button>
     <!--  more-down -->
-    <div class="more-down-content ">
+    <div class="more-down-content mt-60">
       <ul>
         <li class="company"><a href="#">Бренды</a></li>
         <li class="news"><a href="#">Новости</a></li>
@@ -4468,21 +4582,21 @@
 </header>
 <div class="toolbar">
   <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
-    <img src="./img/toolbar-book.png" />Главная</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
-  ><img src="./img/toolbar-home.png" />Игрушки</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
-  ><img src="./img/toolbar-menu.png" />Книги</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
-  ><img src="./img/toolbar-toys.png" />Меню</div
-  >
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
 </div>
-<div id="block1" class="content-block" >
+<div id="block1" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4495,14 +4609,16 @@
   </div>
 </div>
 
-<div id="block2" class="content-block" >
+<div id="block2" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4517,15 +4633,17 @@
   </div>
 </div>
 
-<div id="block3" class="content-block" >
+<div id="block3" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4541,9 +4659,9 @@
   </div>
 </div>
 
-<div id="block4" class="content-block" >
+<div id="block4" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -4553,12 +4671,14 @@
       <li><a>Контакты</a></li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4570,13 +4690,15 @@
       </li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -4591,6 +4713,7 @@
     </ul>
   </div>
 </div>
+
       <div id="yellow-background">
   <div id="moving-block"></div>
   <div id="white-mobile-background"></div>
@@ -4651,15 +4774,15 @@
         <div class="more-down-content">
           <input type="checkbox" id="sort-5" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-5"
-          >Русские народные сказки</label
+            >Русские народные сказки</label
           >
           <input type="checkbox" id="sort-6" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-6"
-          >Художественная литература</label
+            >Художественная литература</label
           >
           <input type="checkbox" id="sort-7" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-7"
-          >Книги для молодёжи</label
+            >Книги для молодёжи</label
           >
           <input type="checkbox" id="sort-8" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-8">Научпоп</label>
@@ -4672,27 +4795,27 @@
           <div class="scroll-block">
             <input type="checkbox" id="sort-9" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-9"
-            >Мадс Миккельсен<span class="cross"></span
+              >Мадс Миккельсен<span class="cross"></span
             ></label>
             <input type="checkbox" id="sort-10" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-10"
-            >Джеймс МакЭвой<span class="cross"></span
+              >Джеймс МакЭвой<span class="cross"></span
             ></label>
             <input type="checkbox" id="sort-11" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-11"
-            >Джонни Депп<span class="cross"></span
+              >Джонни Депп<span class="cross"></span
             ></label>
             <input type="checkbox" id="sort-12" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-12"
-            >Джонни Депп<span class="cross"></span
+              >Джонни Депп<span class="cross"></span
             ></label>
             <input type="checkbox" id="sort-13" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-13"
-            >Джек Николсон<span class="cross"></span
+              >Джек Николсон<span class="cross"></span
             ></label>
             <input type="checkbox" id="sort-14" class="sort-checkbox" />
             <label class="sort-label my-14" for="sort-14"
-            >Марк Твен<span class="cross"></span
+              >Марк Твен<span class="cross"></span
             ></label>
           </div>
         </div>
@@ -4701,37 +4824,37 @@
         <div class="more-down-content">
           <input type="checkbox" id="filter-4" class="filter-checkbox" />
           <label class="filter-label" for="filter-4"
-          >Хиты<span class="count">1</span> <span class="cross"></span>
+            >Хиты<span class="count">1</span> <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-5" class="filter-checkbox" />
           <label class="filter-label" for="filter-5"
-          >Новинки<span class="count">233</span> <span class="cross"></span>
+            >Новинки<span class="count">233</span> <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-6" class="filter-checkbox" />
           <label class="filter-label" for="filter-6"
-          >Поэма<span class="count">156</span> <span class="cross"></span>
+            >Поэма<span class="count">156</span> <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-7" class="filter-checkbox" />
           <label class="filter-label" for="filter-7"
-          >Для Мальчиков<span class="count">86</span>
+            >Для Мальчиков<span class="count">86</span>
             <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-8" class="filter-checkbox" />
           <label class="filter-label" for="filter-8"
-          >Для девочек<span class="count">56</span>
+            >Для девочек<span class="count">56</span>
             <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-9" class="filter-checkbox" />
           <label class="filter-label" for="filter-9"
-          >Комиксы<span class="count">4</span> <span class="cross"></span>
+            >Комиксы<span class="count">4</span> <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-10" class="filter-checkbox" />
           <label class="filter-label" for="filter-10"
-          >Ода<span class="count">22</span> <span class="cross"></span>
+            >Ода<span class="count">22</span> <span class="cross"></span>
           </label>
           <input type="checkbox" id="filter-11" class="filter-checkbox" />
           <label class="filter-label" for="filter-11"
-          >Эллегия<span class="count">88</span> <span class="cross"></span>
+            >Эллегия<span class="count">88</span> <span class="cross"></span>
           </label>
         </div>
         <hr class="my-14 text-grey" />
@@ -4812,8 +4935,6 @@
   </div>
 </div>
 
-
-
     </div>
     <h3 class="accordion head-3">Filter-2</h3>
     <div id="open-filter" class="mobile-filter"></div>
@@ -4838,16 +4959,14 @@
         </div>
         <hr class="my-14 text-grey" />
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto  text-l font-semibold"
-            >Новинка</span
-          >
+          <span class="my-auto mr-12 w-auto text-l font-semibold">Новинка</span>
           <label class="toggle-switch">
             <input type="checkbox" />
             <span class="slider"></span>
           </label>
         </div>
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto w-auto  text-l font-semibold"
+          <span class="my-auto w-auto text-l font-semibold"
             >Скоро в продаже</span
           >
           <label class="toggle-switch">
@@ -5011,7 +5130,12 @@
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
           />
-          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Все фильтры</div>
+          <div
+            class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
+            onclick="closeFilter();"
+          >
+            Все фильтры
+          </div>
         </div>
       </div>
     </form>
@@ -5032,7 +5156,7 @@
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
           <label class="sort-label active-js" for="novelty"
-          >Новинка<span class="count">12</span> <span class="cross"></span>
+            >Новинка<span class="count">12</span> <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
@@ -5042,14 +5166,14 @@
             class="sort-checkbox"
           />
           <label class="sort-label active-js" for="interactive_features"
-          >Интерактивные функции<span class="count">12</span>
+            >Интерактивные функции<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
           <label class="sort-label active-js" for="sound_effects"
-          >Звуковые эффекты<span class="count">12</span>
+            >Звуковые эффекты<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
@@ -5060,7 +5184,7 @@
             class="sort-checkbox_erase"
           />
           <label class="sort-label_erase" for="erase_all_filters"
-          >Сбросить все
+            >Сбросить все
             <span class="cross"></span>
           </label>
         </div>
@@ -5210,9 +5334,9 @@
           <hr class="my-14 text-grey" />
           <div class="more-down-button justify-btwn null-margin">
             Интерактивные функции<label class="toggle-switch">
-            <input type="checkbox" class="dropdown_checkbox" />
-            <p class="slider"></p>
-          </label>
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
           </div>
           <div class="more-down-content pad-left">
             <div class="js_popup_filter_item checkbox_main">
@@ -5245,9 +5369,9 @@
           <hr class="my-14 text-grey" />
           <div class="more-down-button justify-btwn null-margin">
             Звуковые эффекты<label class="toggle-switch">
-            <input type="checkbox" class="dropdown_checkbox" />
-            <p class="slider"></p>
-          </label>
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
           </div>
           <div class="more-down-content pad-left">
             <div class="js_popup_filter_item checkbox_main">
@@ -5782,9 +5906,9 @@
           <hr class="my-14 text-grey" />
           <div class="more-down-button justify-btwn null-margin">
             Назначение аксессуара<label class="toggle-switch">
-            <input type="checkbox" class="dropdown_checkbox" />
-            <p class="slider"></p>
-          </label>
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
           </div>
           <div class="more-down-content pad-left">
             <div class="js_popup_filter_item checkbox_main">
@@ -5823,18 +5947,15 @@
       <div class="popup_all_filters_buttons">
         <div class="popup_collaboration_page_four_buttons">
           <button class="button-white collab_btn pup_btn">Назад</button>
-          <button class="button-black collab_btn pup_btn">
-            Применить
-          </button>
+          <button class="button-black collab_btn pup_btn">Применить</button>
         </div>
       </div>
     </div>
-    <div class='mx-auto items-center w-1/4 md:w-full'>
+    <div class="mx-auto w-1/4 items-center md:w-full">
       <a href="#" class="popup_all_filters_filter_not_found link-m">
         Не нашли нужный фильтр?
       </a>
     </div>
-
   </div>
 </div>
 

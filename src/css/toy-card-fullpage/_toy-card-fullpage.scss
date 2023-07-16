@@ -24,9 +24,8 @@
 
 // теги на слайдере
 .bordered_tags_item-2 {
-  @apply bg-white px-12 py-4 text-s border font-medium;
+  @apply border bg-white px-12 py-4 text-s font-medium;
 }
-
 
 .card-fullpage-main-info {
   @apply mb-64 flex flex-row items-start justify-between gap-16;
@@ -65,7 +64,8 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
+    center;
   background-size: contain;
 }
 
@@ -176,9 +176,9 @@
   width: 100%;
   content: '';
   background: linear-gradient(
-                  to top,
-                  rgba(255, 255, 255, 1) 0%,
-                  rgba(255, 255, 255, 0) 100%
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
   /* so the text is still selectable */
@@ -371,7 +371,7 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply mb-64 flex flex-col gap-24 md:gap-48 md:mb-48;
+  @apply mb-64 flex flex-col gap-24 md:mb-48 md:gap-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
@@ -383,7 +383,6 @@
     margin-top: -2.4rem !important;
   }
 }
-
 
 .more-down-button.js-mdb-desc-button {
   @apply justify-start p-0;
@@ -852,9 +851,8 @@
 }
 
 .swiper-slide_big-book img {
-  @apply py-24 w-full h-full object-contain;
+  @apply h-full w-full object-contain py-24;
 }
-
 
 // пагинация для свипера главных картинок
 .swiper-pagination-2 .swiper-pagination-bullet {

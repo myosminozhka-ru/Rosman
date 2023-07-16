@@ -1256,8 +1256,8 @@ img {
   overflow-x: scroll;
   white-space: nowrap;
   &.no_scroll {
-    flex-wrap: wrap!important;
-    overflow-x: auto!important;
+    flex-wrap: wrap !important;
+    overflow-x: auto !important;
   }
 }
 

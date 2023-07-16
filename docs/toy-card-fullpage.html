@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Игрушки. Карточка товара.</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
   </head>
+
   <body>
-    <div class="card-fullpage">
-      <header id="header" class="bottom header h-64" data-header="toys">
+    <header id="header" class="bottom header h-64" data-header="toys">
   <div class="logo"><img src="./img/logo.svg" /></div>
   <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
   <div class="dropdown">
@@ -33,7 +37,7 @@
       <div class="icon"></div>
     </button>
     <!--  more-down -->
-    <div class="more-down-content ">
+    <div class="more-down-content">
       <ul>
         <li class="company"><a href="#">Бренды</a></li>
         <li class="news"><a href="#">Новости</a></li>
@@ -112,21 +116,21 @@
 </header>
 <div class="toolbar">
   <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
-    <img src="./img/toolbar-book.png" />Главная</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block2');"
-    ><img src="./img/toolbar-home.png" />Игрушки</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block3');"
-    ><img src="./img/toolbar-menu.png" />Книги</div
-  >
-  <div href="#" class="toolbar-button" onclick="showBlock('block4');"
-    ><img src="./img/toolbar-toys.png" />Меню</div
-  >
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
 </div>
-<div id="block1" class="content-block" >
+<div id="block1" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -139,14 +143,16 @@
   </div>
 </div>
 
-<div id="block2" class="content-block" >
+<div id="block2" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -161,15 +167,17 @@
   </div>
 </div>
 
-<div id="block3" class="content-block" >
+<div id="block3" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -185,9 +193,9 @@
   </div>
 </div>
 
-<div id="block4" class="content-block" >
+<div id="block4" class="content-block">
   <div class="block-content">
-    <h3 class='head-3 mb-16'>Росмэн</h3>
+    <h3 class="head-3 mb-16">Росмэн</h3>
     <ul>
       <li><a>О компании</a></li>
       <li><a>Издательство</a></li>
@@ -197,12 +205,14 @@
       <li><a>Контакты</a></li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Игрушки</h3>
+    <h3 class="head-3 mb-16">Игрушки</h3>
     <ul>
       <li><a>Бренды</a></li>
       <li><a>Новости</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -214,13 +224,15 @@
       </li>
       <li><a>Партнерам</a></li>
     </ul>
-    <h3 class='head-3 mb-16'>Книги</h3>
+    <h3 class="head-3 mb-16">Книги</h3>
     <ul>
       <li><a>Издательство</a></li>
       <li><a>Новости книг</a></li>
       <li><a>НДК</a></li>
       <li>
-        <button class="more-down-button out !px-0 !py-8">РОСМЕН<span></span></button>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
         <!--  more-down -->
         <div class="more-down-content out">
           <p><a href="#">О компании</a></p>
@@ -236,7 +248,7 @@
   </div>
 </div>
 
-
+    <div class="card-fullpage">
       <div
         id="yellow-background"
         class="card-fullpage-modified-yellow-background"
@@ -256,10 +268,12 @@
         <div id="above-block" class="card-fullpage-modified-above-block">
           <!--    тут будет контент по карточке    -->
 
-          <div class="custom-box js_contact_us_ru_popup_button !fixed">
-            <span></span>
+          <div
+            class="custom-box js_contact_us_ru_popup_button !fixed md:hidden"
+          >
+            <span class="custom-box-span"></span>
             <div class="custom-before"></div>
-            <a href="mailto:rosman@rosman.ru">Написать нам</a>
+            <div>Написать нам</div>
             <div class="custom-after"></div>
           </div>
 
@@ -328,8 +342,10 @@
             </div>
           </div>
 
-          <div class="my-24 flex items-center justify-between px-24">
-            <p class="breadcrumbs">
+          <div
+            class="my-24 flex items-center justify-between px-24 text-s md:px-12 sm:my-16"
+          >
+            <p class="breadcrumbs bs:hidden">
               <a href="#">Главная </a><span>/</span> <a href="#">Игрушки </a
               ><span>/</span> <a href="#">Все игрушки </a><span>/</span>
               <a href="#">Волчки и блейды </a><span>/</span>
@@ -337,12 +353,12 @@
               <a href="#">Ещё уровень вложенности</a><span>/</span>
               <a href="#">Волчок Эпик Лончер Стандарт Gold Phoenix</a>
             </p>
-            <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen bs:flex">
               <div class="breadcrumbs-small-screen-image"></div>
               <div class="breadcrumbs-small-screen-dots">
                 ...
                 <div class="breadcrumbs-arrow"></div>
-                <div class="breadcrumbs-path-hidden-text">
+                <div class="breadcrumbs-path-hidden-text !z-1000">
                   <a href="#">Игрушки</a>
                   <a href="#">Все игрушки</a>
                   <a href="#">Волчки и блейды</a>
@@ -355,108 +371,314 @@
               </div>
             </div>
             <div class="breadcrumbs-icons">
-              <a href="#" class="item_card-external-link"></a>
+              <div class="item_card-external-link group relative">
+                <div
+                  class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                >
+                  <div
+                    class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem] group-hover:block"
+                  ></div>
+                  <button
+                    class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                  >
+                    <div class="block h-20 w-20">
+                      <img src="./img/copy-link.svg" alt="" />
+                    </div>
+                    <span class="body-s whitespace-nowrap p-0">
+                      Скопировать ссылку
+                    </span>
+                  </button>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="./img/vkcom.svg" alt="" />
+                    </div>
+                    <span class="body-s">ВКонтакте</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="./img/tiktok.svg" alt="" />
+                    </div>
+                    <span class="body-s">TikTok</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="./img/facebook.svg" alt="" />
+                    </div>
+                    <span class="body-s" href="#">Facebook</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="./img/likee.svg" alt="" />
+                    </div>
+                    <span class="body-s">Likee</span>
+                  </a>
+                </div>
+              </div>
               <button class="item_card_add_to_favourite"></button>
             </div>
           </div>
 
-          <div class="card-fullpage-main-info top-info px-24">
-            <div class="card-fullpage-images">
-              <div class="largeImg-wrapper">
-                <img
-                  class="largeImg"
-                  src="./img/card-fullpage/img1.svg"
-                  alt="Large image"
-                />
-                <div class="card-fullpage-tags bordered_tags_main">
-                  <a href="#" class="bordered_tags_item">Хит</a>
-                  <a href="#" class="bordered_tags_item">Новинка</a>
-                  <a
-                    href="#"
-                    class="bordered_tags_item bordered_tags_item-hidden"
-                    >5+</a
-                  >
+          <div
+            class="mb-64 grid grid-cols-2 gap-24 ipadmini:mb-48 ipadmini:grid-cols-1 ipadmini:gap-16"
+          >
+            <div class="pl-24 ipadmini:px-12">
+              <section class="slider-2 overflow-hidden">
+  <div class="container">
+    <div class="slider__flex">
+      <div class="slider__col relative block overflow-hidden ipadmini:hidden">
+        <div
+          class="slider__prev absolute left-[20%] top-[-2%] z-100 cursor-pointer"
+        >
+          <img
+            class="rotate-180 p-4"
+            src="./img/arrow-down-20.svg"
+            alt=""
+          />
+        </div>
+        <!-- Кнопка для переключения на предыдущий слайд -->
+        <div class="slider__thumbs">
+          <div class="swiper-container-3">
+            <!-- Слайдер с превью которые маленькие боковые -->
+            <div class="swiper-wrapper book-slider-wrapper">
+              <div class="swiper-slide aspect-square !h-max cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/book1.svg" alt="" />
                 </div>
               </div>
-              <div class="thumbs grid max-h-[50.4rem] grid-cols-1 gap-16">
-                <div class="w-full max-w-[8rem]">
-                  <a
-                    class="aspect-square max-w-8.8"
-                    href="./img/card-fullpage/img1.svg"
-                    title="Image 2"
-                  >
-                    <img src="./img/card-fullpage/img1.svg" alt="" />
-                  </a>
-                </div>
-                <div class="w-full max-w-[8rem]">
-                  <a
-                    class="aspect-square max-w-8.8"
-                    href="./img/card-fullpage/img2.svg"
-                    title="Image 3"
-                  >
-                    <img src="./img/card-fullpage/img2.svg" alt="" />
-                  </a>
-                </div>
-                <div class="relative w-full max-w-[8rem]">
-                  <a
-                    class="aspect-square max-w-8.8"
-                    href="./img/card-fullpage/img3.svg"
-                    title="Image 4"
-                  >
-                    <img src="./img/card-fullpage/img3.svg" alt="" />
-                  </a>
-                  <button
-                    class="circle-button absolute !inset-0 !m-0 !m-auto !h-40 !w-40 !opacity-50"
-                  ></button>
-                </div>
-                <div class="relative w-full max-w-[8em]">
-                  <a
-                    class="aspect-square max-w-8.8"
-                    href="./img/card-fullpage/img4.svg"
-                    title="Image 5"
-                  >
-                    <img src="./img/card-fullpage/img4.svg" alt="" />
-                  </a>
-                  <button
-                    class="rounded-arrow-button absolute !inset-0 !m-0 !m-auto !h-40 !w-40 !opacity-50"
-                  ></button>
-                </div>
-                <div class="w-full max-w-[8rem]">
-                  <a
-                    class="aspect-square max-w-8.8"
-                    href="./img/card-fullpage/img5.svg"
-                    title="Image 6"
-                  >
-                    <img src="./img/card-fullpage/img5.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="card-fullpage-image-slider">
-              <div class="card-fullpage-image-container">
-                <img src="./img/card-fullpage/img1.svg" alt="Image 1" />
-                <img src="./img/card-fullpage/img2.svg" alt="Image 2" />
-                <img src="./img/card-fullpage/img3.svg" alt="Image 3" />
-                <img src="./img/card-fullpage/img4.svg" alt="Image 3" />
-                <img src="./img/card-fullpage/img5.svg" alt="Image 3" />
-              </div>
-              <div class="card-fullpage-dots-container">
-                <span class="card-fullpage-dot active"></span>
-                <span class="card-fullpage-dot"></span>
-                <span class="card-fullpage-dot"></span>
-                <span class="card-fullpage-dot"></span>
-                <span class="card-fullpage-dot"></span>
-              </div>
-            </div>
 
+              <div class="swiper-slide cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/img2.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide relative cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/img3.svg" alt="" />
+                </div>
+                <a
+                  href="#gallery-3"
+                  class="card_video_play_button circle-button !h-40 !w-40"
+                ></a>
+              </div>
+
+              <div class="swiper-slide relative cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/img4.svg" alt="" />
+                </div>
+                <a
+                  href="#gallery-4"
+                  class="rounded-arrow-button absolute !inset-0 !m-0 !m-auto !h-40 !w-40"
+                ></a>
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <div class="slider__image">
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="slider__next absolute bottom-[-2%] left-[20%] z-10 cursor-pointer"
+        >
+          <img class="p-4" src="./img/arrow-down-20.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="slider__images relative overflow-hidden ipadmini:!hidden">
+        <div
+          class="absolute left-0 top-0 z-10 flex flex-row flex-nowrap gap-8 !bg-transparent bg-white"
+        >
+          <a href="#" class="bordered_tags_item-2 bg-white !px-12">Хит</a>
+          <a href="#" class="bordered_tags_item-2 bg-white !px-12">Новинка</a>
+          <a
+            href="#"
+            class="bordered_tags_item-2 bordered_tags_item-hidden bg-white !px-12"
+            >5+</a
+          >
+        </div>
+        <div class="swiper-container-4">
+          <!-- Слайдер с изображениями с большой картинкой -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="0"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="./img/card-fullpage/book1.svg"
+                >
+                  <img src="./img/card-fullpage/book1.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-zoom-in">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="1"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="./img/card-fullpage/img2.svg"
+                >
+                  <img src="./img/card-fullpage/img2.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-zoom-in">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="2"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="https://www.youtube.com/embed/4z2PyfaoiYk?rel=0&amp;showinfo=0"
+                >
+                  <img src="./img/card-fullpage/img3.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-zoom-in">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="3"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="./img/card-fullpage/img4.svg"
+                >
+                  <img src="./img/card-fullpage/img4.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-zoom-in">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="4"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="./img/card-fullpage/img5.svg"
+                >
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-zoom-in">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery"
+                  data-slide-index="5"
+                  class="h-full w-full cursor-zoom-in object-cover"
+                  href="./img/card-fullpage/img5.svg"
+                >
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative hidden h-full w-full overflow-hidden ipadmini:block">
+        <div
+          class="absolute left-0 top-0 z-100 flex flex-row flex-nowrap gap-8 !bg-transparent bg-white"
+        >
+          <a href="#" class="bordered_tags_item-2 bg-white !px-12">Хит</a>
+          <a href="#" class="bordered_tags_item-2 bg-white !px-12">Новинка</a>
+          <a
+            href="#"
+            class="bordered_tags_item-2 bordered_tags_item-hidden bg-white !px-12"
+            >5+</a
+          >
+        </div>
+
+        <div class="swiper-container-5 image-slider">
+          <!-- Слайдер с изображениями -->
+          <div class="swiper-wrapper image-slider__wrapper mb-16">
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/book1.svg"
+                >
+                  <img src="./img/card-fullpage/book1.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/img2.svg"
+                >
+                  <img src="./img/card-fullpage/img2.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/img3.svg"
+                >
+                  <img src="./img/card-fullpage/img3.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/img4.svg"
+                >
+                  <img src="./img/card-fullpage/img4.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/img5.svg"
+                >
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide image-slider__slide cursor-pointer">
+              <div class="swiper-slide_big">
+                <a
+                  data-fancybox="gallery-small"
+                  href="./img/card-fullpage/img5.svg"
+                >
+                  <img src="./img/card-fullpage/img5.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination-2 text-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+            </div>
             <div class="card-fullpage-description">
-              <div class="card-fp-desc-main">
+              <div class="card-fp-desc-main ipadmini:px-12">
                 <div class="card-fp-desc-top">
                   <div class="card-fp-desc-header">
                     Инфинити Надо. Волчок Эпик Лончер Стандарт Gold Phoenix
                   </div>
                   <div class="card-fp-desc-vendor-code">Артикул: 40599</div>
-                  <div class="card-fp-desc-target-aud">Для мальчиков</div>
+                  <a href="#" class="card-fp-desc-target-aud">Для мальчиков</a>
                   <div class="card_articles_tags dotted_tags">
                     <a
                       href="#"
@@ -502,7 +724,7 @@
                       соперника эпичностью
                     </p>
                   </div>
-                  <button class="more-down-button js-mdb">
+                  <button class="more-down-button js-mdb font-medium">
                     Подробное описание, характеристики<span></span>
                   </button>
                 </div>
@@ -514,15 +736,62 @@
                   </div>
                 </div>
               </div>
-              <div class="card-fp-desc-buttons">
-                <a href="#" class="bordered_tags_item-fp">5+</a>
-                <a href="#" class="item_card-external-link"></a>
+              <div class="card-fp-desc-buttons pr-24">
+                <a
+                  href="#"
+                  class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
+                  >5+</a
+                >
+                <div class="item_card-external-link group relative">
+                  <div
+                    class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                  >
+                    <div
+                      class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem] group-hover:block"
+                    ></div>
+                    <button
+                      class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                    >
+                      <div class="block h-20 w-20">
+                        <img src="./img/copy-link.svg" alt="" />
+                      </div>
+                      <span class="body-s whitespace-nowrap p-0">
+                        Скопировать ссылку
+                      </span>
+                    </button>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/vkcom.svg" alt="" />
+                      </div>
+                      <span class="body-s">ВКонтакте</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/tiktok.svg" alt="" />
+                      </div>
+                      <span class="body-s">TikTok</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/facebook.svg" alt="" />
+                      </div>
+                      <span class="body-s" href="#">Facebook</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/likee.svg" alt="" />
+                      </div>
+                      <span class="body-s">Likee</span>
+                    </a>
+                  </div>
+                </div>
                 <button class="item_card_add_to_favourite"></button>
               </div>
             </div>
           </div>
-
-          <div class="card-fullpage-card-brands small-cards items-center px-24">
+          <div
+            class="card-fullpage-card-brands small-cards items-center px-24 ipadmini:px-12"
+          >
             <div class="card_brand card-fullpage-card-brand">
               <div class="card_brand_content">
                 <div class="card_brand_info">
@@ -561,38 +830,42 @@
             </div>
           </div>
 
-          <div class="card-fullpage-tabs px-24">
+          <div class="card-fullpage-tabs px-24 ipadmini:px-12">
             <div class="navigation">
-              <ul class="navigation-flex">
+              <ul
+                class="navigation-flex nav-list !gap-0 px-24 ipadmini:px-12 sm:justify-between"
+              >
                 <li>
-                  <a
-                    class="card-fullpage-tab card-fp-tab-desc active-js"
-                    href="#"
-                    >Описание</a
+                  <p
+                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
                   >
+                    Описание
+                  </p>
                 </li>
                 <li>
-                  <a class="card-fullpage-tab card-fp-tab-char" href="#"
-                    >Характеристики</a
-                  >
+                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
+                    Характеристики
+                  </p>
                 </li>
                 <li>
-                  <a class="card-fullpage-tab card-fp-tab-instr" href="#"
-                    >Инструкция</a
+                  <p
+                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
                   >
+                    Инструкция
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
 
           <!--компонент из таба ОПИСАНИЕ-->
-          <div class="card-fp-description px-24">
+          <div class="card-fp-description px-24 ipadmini:px-12">
             <!-- контент первого таба ОПИСАНИЕ  -->
 <div class="card-fullpage-desc-image">
   <img src="./img/card-fullpage/fullpage-desc-image.svg" alt="" />
 </div>
 
-<div class="js-card-fullpage-desc-description">
+<div class="js-card-fullpage-desc-description sm:mb-40">
   <div class="card-fullpage-desc-common">
     <div class="card-fullpage-desc-header card-header-text">
       Пусковая установка Эпик Лончер Стандарт
@@ -667,8 +940,8 @@
         <img src="./img/card-fullpage/sword-with-circle-box.svg" alt="" />
       </div>
       <div class="card-fullpage-desc-more-card-text">
-        Забавная новогодняя история о том, что все желания исполняются и чудо
-        непременно получится, если сделать его своими руками!
+        Забавная новогодняя история о том, что все желания исполняются и чудо
+        непременно получится, если сделать его своими руками!
       </div>
     </div>
     <div class="card-fullpage-desc-more-card card-descr-text">
@@ -676,8 +949,8 @@
         <img src="./img/card-fullpage/circle.svg" alt="" />
       </div>
       <div class="card-fullpage-desc-more-card-text">
-        Забавная новогодняя история о том, что все желания исполняются и чудо
-        непременно получится, если сделать его своими руками!
+        Забавная новогодняя история о том, что все желания исполняются и чудо
+        непременно получится, если сделать его своими руками!
       </div>
     </div>
     <div class="card-fullpage-desc-more-card card-descr-text">
@@ -685,13 +958,15 @@
         <img src="./img/card-fullpage/box.svg" alt="" />
       </div>
       <div class="card-fullpage-desc-more-card-text">
-        Забавная новогодняя история о том, что все желания исполняются и чудо
-        непременно получится, если сделать его своими руками!
+        Забавная новогодняя история о том, что все желания исполняются и чудо
+        непременно получится, если сделать его своими руками!
       </div>
     </div>
   </div>
 
-  <button class="more-down-button js-mdb-desc-button">
+  <button
+    class="more-down-button js-mdb-desc-button font-medium sm:!items-center sm:!justify-between"
+  >
     Развернуть описание<span></span>
   </button>
 </div>
@@ -699,46 +974,46 @@
           </div>
 
           <!--    характеристики   -->
-          <div class="card-fp-characteristics hidden px-24">
+          <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
             <div class="card-fullpage-characteristics">
   <div class="card-fp-char-items">
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Тип</div>
       <div class="body-m">Пусковая игрушка</div>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Размер</div>
       <div class="body-m">14*40*7 см</div>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Производитель</div>
-      <a href="#" class="body-m link-m-bold">Alfa Group</a>
+      <a href="#" class="body-m link-m">Alfa Group</a>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Бренд</div>
-      <a href="#" class="body-m link-m-bold">Infinity Nado</a>
+      <a href="#" class="body-m link-m">Infinity Nado</a>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Материал</div>
-      <a href="#" class="body-m link-m-bold">Металл, Пластик</a>
+      <a href="#" class="body-m link-m">Металл, Пластик</a>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Страна-изготовитель</div>
       <div class="body-m">Китай</div>
@@ -748,45 +1023,45 @@
   <!--second page-->
   <div class="card-fp-char-items">
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Артикул</div>
       <div class="body-m">40599</div>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Персонаж</div>
       <div class="body-m">Эпик Лончер</div>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Цвет</div>
-      <a href="#" class="body-m link-m-bold">Оранжевый, красный, голубой</a>
+      <a href="#" class="body-m link-m">Оранжевый, красный, голубой</a>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Минимальный возраст ребенка</div>
       <div class="body-m">От 5 лет</div>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Пол ребенка</div>
-      <a href="#" class="body-m link-m-bold">Мальчик</a>
+      <a href="#" class="body-m link-m">Мальчик</a>
     </div>
 
     <div
-      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between"
+      class="card-fp-char-item relative flex flex-row flex-nowrap justify-between pb-8"
     >
       <div class="body-m text-text">Максимальный возраст ребенка</div>
-      <a href="#" class="body-m link-m-bold">До 12 лет</a>
+      <a href="#" class="body-m link-m">До 12 лет</a>
     </div>
   </div>
 </div>
@@ -794,7 +1069,7 @@
           </div>
 
           <!--   инструкция      -->
-          <div class="card-fp-instruction hidden px-24">
+          <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
             <div class="card-fullpage-instruction">
   <div class="card-fullpage-instruction-text">
     <div class="card-fullpage-instruction-text-image"></div>
@@ -802,16 +1077,26 @@
       Инструкция. Машинка-трансформер Роки Вульф S1 ТМ.pdf
     </div>
   </div>
-  <button class="card-fullpage-instruction-button button-black">Скачать</button>
+  <a class="button-black card-fullpage-instruction-button" href="#" download="">
+    <button class="">Скачать</button>
+  </a>
 </div>
 
           </div>
 
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
-          <div class="swiper-image-2">
-            <div class="swiper-header !w-full">
-              <h3 class="head-3">С этой игрушкой часто покупают</h3>
-              <div class="buttons">
+          <div class="swiper-image-2 mb-12 px-24 ipadmini:px-12 sm:mb-0">
+            <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
+              <h3
+                class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+              >
+                С этой игрушкой часто покупают
+                <div class="link-s-bold inline-block hidden msm:hidden">
+                  Все
+                </div>
+              </h3>
+
+              <div class="buttons !w-[5.2rem] !gap-24">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
               </div>
@@ -820,298 +1105,655 @@
             <div class="swiper-wrapper !items-end">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="swiper-slide">
-                <div class="toy_card item_card">
-                  <div class="toy_card_heading">
-                    <div class="item_card_tags bordered_tags">
-                      <div class="item_card_tags_main bordered_tags_main">
-                        <div
-                          class="toy_card_tags_first bordered_tags_item body-s-bold"
-                        >
-                          Бестселлер
-                        </div>
-                        <div
-                          class="toy_card_tags_second bordered_tags_item body-s-bold"
-                        >
-                          Новинка
-                        </div>
-                      </div>
-                      <div class="toy_card_tags_age body-s-bold">8+</div>
-                    </div>
-                    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
-                    <div class="toy_card_image item_card_image">
-                      <img
-                        class="toy_card_img item_card_img"
-                        src="./img/cards_toy.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="toy_card_info item_card_info">
-                    <div class="toy_card_name item_card_name">
-                      Арена для баттлов Инфинити Надо
-                    </div>
-                    <div class="toy_card_more item_card_more">
-                      <button
-                        class="toy_card_item_link item_card_link overline-button"
-                      >
-                        Подробнее
-                      </button>
-                      <button class="item_card_add_to_favourite"></button>
-                    </div>
-                  </div>
-                </div>
+                <!-- карточка ИГРУШКИ -->
+<!-- карточка ИГРУШКИ -->
+<div
+  class="toy_card js_item_card item_card"
+  itemscope
+  itemtype="http://schema.org/Product"
+>
+  <div class="toy_card_heading">
+    <div class="item_card_tags bordered_tags">
+      <div class="item_card_tags_main bordered_tags_main">
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_first bordered_tags_item"
+          >Бестселлер</a
+        >
+        <a
+          itemprop="url"
+          href="#"
+          class="toy_card_tags_second bordered_tags_item"
+          >Новинка</a
+        >
+      </div>
+      <a href="#" class="toy_card_tags_age body-s-bold">8+</a>
+    </div>
+    <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+    <a itemprop="url" href="#" class="toy_card_image item_card_image">
+      <img
+        class="toy_card_img item_card_img"
+        src="./img/cards_toy.svg"
+        alt=""
+        itemprop="image"
+      />
+    </a>
+  </div>
+  <div class="toy_card_info item_card_info" itemprop="description">
+    <div class="toy_card_name item_card_name" itemprop="name">
+      Арена для баттлов Инфинити Надо
+    </div>
+    <div class="toy_card_more item_card_more">
+      <button class="toy_card_item_link item_card_link overline-button">
+        Подробнее
+      </button>
+      <div class="flex flex-row flex-nowrap gap-8">
+        <button class="item_card_add_to_favourite"></button>
+        <div class="item_card-external-link group relative">
+          <div
+            class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex msm:!left-[-14rem]"
+          >
+            <div
+              class="breadcrumbs-arrow !left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block msm:!left-[13.5rem]"
+            ></div>
+            <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+              <div class="block h-20 w-20">
+                <img src="./img/copy-link.svg" alt="" />
+              </div>
+              <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+            </button>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/vkcom.svg" alt="" />
+              </div>
+              <span class="body-s">ВКонтакте</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/tiktok.svg" alt="" />
+              </div>
+              <span class="body-s">TikTok</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/facebook.svg" alt="" />
+              </div>
+              <span class="body-s" href="#">Facebook</span>
+            </a>
+            <a href="#" class="flex flex-row flex-nowrap gap-8">
+              <div class="block h-20 w-20">
+                <img src="./img/likee.svg" alt="" />
+              </div>
+              <span class="body-s">Likee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
             </div>
           </div>
@@ -1128,10 +1770,10 @@
               </div>
             </div>
             <div id="above-block" class="above-block-mod">
-              <div class="swiper-image-2 my-0 pb-60">
+              <div class="swiper-image-gallery my-0 px-24 pb-60 ipadmini:px-12">
                 <div class="swiper-header sw-head-mod !w-full">
                   <h3 class="head-3">Фотогалерея</h3>
-                  <div class="buttons">
+                  <div class="buttons !w-[5.2rem] !gap-24">
                     <div class="button-prev"></div>
                     <div class="button-next"></div>
                   </div>
@@ -1140,88 +1782,144 @@
                 <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                   <div class="swiper-slide">
-                    <div class="card_photogallery_item">
-                      <img src="./img/cards_photogallery_item.svg" alt="" />
-                      <div class="cards_photogallery_eye_image">
-                        <img
-                          class="cards_photogallery_eye_img"
-                          src="./img/cards_photogallery_eye.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+                    <!-- КАРТОЧКА ФОТОГАЛЕРЕИ -->
+<a
+  data-fancybox="gallery-photogallery"
+  href="./img/cards_photogallery_item.svg"
+  class="card_photogallery_item"
+  itemscope
+  itemtype="http://schema.org/ImageObject"
+>
+  <img src="./img/cards_photogallery_item.svg" alt="" itemprop="image" />
+  <div class="cards_photogallery_eye_image">
+    <img
+      class="cards_photogallery_eye_img"
+      src="./img/cards_photogallery_eye.svg"
+      alt=""
+    />
+  </div>
+</a>
+
                   </div>
                 </div>
               </div>
@@ -1229,126 +1927,28 @@
           </div>
 
           <!-- тут ниже видео блок -->
-          <div class="card_video_item full-width mb-64 px-24">
+          <div
+            class="card_video_item full-width mb-64 px-24 ipadmini:px-12 sm:mb-48"
+          >
             <div class="card_video_preview">
               <img src="./img/cards_video_preview.svg" alt="" />
               <button class="card_video_play_button circle-button"></button>
             </div>
-
-            <div class="card_video_info hidden sm:block">
-              <span class="card_video_title"
-                >Как правильно выбрать книгу: наши советы для любителей
-                книг</span
+          </div>
+          <div class="image-popup" id="imagePopup">
+            <div class="popup-content relative">
+              <img src="" alt="" id="popupImage" class="popup-image-img" />
+              <div
+                class="close-button absolute right-[3rem] top-[0.8rem] block h-20 w-20 cursor-pointer"
               >
-            </div>
-          </div>
-
-          <section class="slider-2 overflow-hidden">
-  <div class="container">
-    <div class="slider__flex">
-      <div class="slider__col relative">
-        <div
-          class="slider__prev absolute left-[20%] top-[-2%] z-100 cursor-pointer"
-        >
-          <img
-            class="rotate-180 p-4"
-            src="./img/arrow-down-20.svg"
-            alt=""
-          />
-        </div>
-        <!-- Кнопка для переключения на предыдущий слайд -->
-
-        <div class="slider__thumbs">
-          <div class="swiper-container-3">
-            <!-- Слайдер с превью -->
-            <div class="swiper-wrapper">
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem] cursor-pointer">
-                <div class="slider__image">
-                  <img src="./img/card-fullpage/img1.svg" alt="" />
-                </div>
-              </div>
-
-              <div class="swiper-slide !h-8.3rem] !w-[8.3rem] cursor-pointer">
-                <div class="slider__image">
-                  <img src="./img/card-fullpage/img2.svg" alt="" />
-                </div>
-              </div>
-
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem] cursor-pointer">
-                <div class="slider__image">
-                  <img src="./img/card-fullpage/img3.svg" alt="" />
-                </div>
-              </div>
-
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem] cursor-pointer">
-                <div class="slider__image">
-                  <img src="./img/card-fullpage/img5.svg" alt="" />
-                </div>
-              </div>
-
-              <div class="swiper-slide !h-[8.3rem] !w-[8.3rem] cursor-pointer">
-                <div class="slider__image">
-                  <img src="./img/card-fullpage/img5.svg" alt="" />
-                </div>
+                <img
+                  class="block h-20 w-20"
+                  src="./img/catalog-vacancies/black-close-20px.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-        </div>
-
-        <div
-          class="slider__next absolute bottom-[4%] left-[20%] z-100 cursor-pointer"
-        >
-          <img class="p-4" src="./img/arrow-down-20.svg" alt="" />
-        </div>
-        <!-- Кнопка для переключения на следующий слайд -->
-      </div>
-
-      <div class="slider__images relative overflow-hidden">
-        <div class="card-fullpage-tags bordered_tags_main z-100">
-          <a href="#" class="bordered_tags_item">Хит</a>
-          <a href="#" class="bordered_tags_item">Новинка</a>
-          <a href="#" class="bordered_tags_item bordered_tags_item-hidden"
-            >5+</a
-          >
-        </div>
-        <div class="swiper-container-3">
-          <!-- Слайдер с изображениями -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide cursor-pointer">
-              <div class="slider__image">
-                <img src="./img/card-fullpage/img1.svg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide cursor-pointer">
-              <div class="slider__image">
-                <img src="./img/card-fullpage/img2.svg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide cursor-pointer">
-              <div class="slider__image">
-                <img src="./img/card-fullpage/img3.svg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide cursor-pointer">
-              <div class="slider__image">
-                <img src="./img/card-fullpage/img4.svg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide cursor-pointer">
-              <div class="slider__image">
-                <img src="./img/card-fullpage/img5.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
-
-
           <!-- тут ниже футер -->
           <div class="footer rosman-footer-ru bs:mb-[3.5rem]">
   <div class="footer-container">
@@ -1548,5 +2148,19 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        hideScrollbar: false,
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-small"]', {
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
+        loop: false,
+      });
+    </script>
+    <script></script>
   </body>
 </html>

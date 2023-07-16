@@ -1,535 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Игрушки. Карточка товара.</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-  />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игрушки. Карточка товара.</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
 
-<body>
-@@include('components/header/header.html', { }, )
-<div class="card-fullpage">
-  <div
-    id="yellow-background"
-    class="card-fullpage-modified-yellow-background"
-  >
-    <div id="moving-block">
-      <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-        <g>
-          <path
-            id="moving-bock-shadow"
-            d="M 0 0 L 100 0 L 100 100 L 0 100"
-            fill="white"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div id="white-mobile-background"></div>
-    <div id="above-block" class="card-fullpage-modified-above-block">
-      <!--    тут будет контент по карточке    -->
-
+  <body>
+    @@include('components/header/header.html', { }, )
+    <div class="card-fullpage">
       <div
-        class="custom-box js_contact_us_ru_popup_button !fixed md:hidden"
+        id="yellow-background"
+        class="card-fullpage-modified-yellow-background"
       >
-        <span class="custom-box-span"></span>
-        <div class="custom-before"></div>
-        <div>Написать нам</div>
-        <div class="custom-after"></div>
-      </div>
+        <div id="moving-block">
+          <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+            <g>
+              <path
+                id="moving-bock-shadow"
+                d="M 0 0 L 100 0 L 100 100 L 0 100"
+                fill="white"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div id="white-mobile-background"></div>
+        <div id="above-block" class="card-fullpage-modified-above-block">
+          <!--    тут будет контент по карточке    -->
 
-      <div class="js_popup_contact_us_ru_modal modal">
-        <div class="popup_contact_us_content modal-content">
-          <div class="popup_contact_us_header">
-            <div class="popup_contact_us_text">Свяжитесь с нами</div>
-            <span
-              class="js_popup_contact_us_close_button ui-popup-close-button"
-            ></span>
+          <div
+            class="custom-box js_contact_us_ru_popup_button !fixed md:hidden"
+          >
+            <span class="custom-box-span"></span>
+            <div class="custom-before"></div>
+            <div>Написать нам</div>
+            <div class="custom-after"></div>
           </div>
-          <div class="js_contact_us_popup_body">
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text"
-              >Письмо директору</a
-              >
-              <div class="contact_us_popup_item_arrow">
-                <img src="../..//img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text"
-              >Заявка на партнерство</a
-              >
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text"
-              >Отправить резюме</a
-              >
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text"
-              >Подписаться на рассылку</a
-              >
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">СМИ</a>
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text">Блогерам</a>
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-            <div class="contact_us_popup_item">
-              <a href="#" class="contact_us_popup_item_text"
-              >Задать вопрос по игрушкам</a
-              >
-              <div class="contact_us_popup_item_arrow">
-                <img src="../../img/popup_arrow.svg" alt=""/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div
-        class="my-24 flex items-center justify-between px-24 text-s md:px-12 sm:my-16"
-      >
-        <p class="breadcrumbs bs:hidden">
-          <a href="#">Главная </a><span>/</span> <a href="#">Игрушки </a
-        ><span>/</span> <a href="#">Все игрушки </a><span>/</span>
-          <a href="#">Волчки и блейды </a><span>/</span>
-          <a href="#">Арена</a><span>/</span>
-          <a href="#">Ещё уровень вложенности</a><span>/</span>
-          <a href="#">Волчок Эпик Лончер Стандарт Gold Phoenix</a>
-        </p>
-        <div class="breadcrumbs-small-screen bs:flex">
-          <div class="breadcrumbs-small-screen-image"></div>
-          <div class="breadcrumbs-small-screen-dots">
-            ...
-            <div class="breadcrumbs-arrow"></div>
-            <div class="breadcrumbs-path-hidden-text !z-1000">
-              <a href="#">Игрушки</a>
-              <a href="#">Все игрушки</a>
-              <a href="#">Волчки и блейды</a>
-              <a href="#">Арена</a>
-              <a href="#">Ещё уровень вложенности</a>
-            </div>
-          </div>
-          <div class="breadcrumbs-small-screen-path">
-            Волчок Эпик Лончер Стандарт Gold Phoenix
-          </div>
-        </div>
-        <div class="breadcrumbs-icons">
-          <div class="item_card-external-link group relative">
-            <div
-              class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 group-hover:flex"
-            >
-              <div
-                class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem] group-hover:block"
-              ></div>
-              <button
-                class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
-              >
-                <div class="block h-20 w-20">
-                  <img src="../../img/copy-link.svg" alt=""/>
-                </div>
-                <span class="body-s whitespace-nowrap p-0">
-                                Скопировать ссылку
-                              </span>
-              </button>
-              <a href="#" class="flex flex-row flex-nowrap gap-8">
-                <div class="block h-20 w-20">
-                  <img src="../../img/vkcom.svg" alt=""/>
-                </div>
-                <span class="body-s">ВКонтакте</span>
-              </a>
-              <a href="#" class="flex flex-row flex-nowrap gap-8">
-                <div class="block h-20 w-20">
-                  <img src="../../img/tiktok.svg" alt=""/>
-                </div>
-                <span class="body-s">TikTok</span>
-              </a>
-              <a href="#" class="flex flex-row flex-nowrap gap-8">
-                <div class="block h-20 w-20">
-                  <img src="../../img/facebook.svg" alt=""/>
-                </div>
-                <span class="body-s" href="#">Facebook</span>
-              </a>
-              <a href="#" class="flex flex-row flex-nowrap gap-8">
-                <div class="block h-20 w-20">
-                  <img src="../../img/likee.svg" alt=""/>
-                </div>
-                <span class="body-s">Likee</span>
-              </a>
-            </div>
-          </div>
-          <button class="item_card_add_to_favourite"></button>
-        </div>
-      </div>
-
-      <div
-        class="mb-64 grid grid-cols-2 gap-24 ipadmini:mb-48 ipadmini:grid-cols-1 ipadmini:gap-16"
-      >
-        <div class="pl-24 ipadmini:px-12">
-          @@include('components/ui-kit/cards/my-swiper.html', { }, )
-        </div>
-        <div class="card-fullpage-description">
-          <div class="card-fp-desc-main ipadmini:px-12">
-            <div class="card-fp-desc-top">
-              <div class="card-fp-desc-header">
-                Инфинити Надо. Волчок Эпик Лончер Стандарт Gold Phoenix
+          <div class="js_popup_contact_us_ru_modal modal">
+            <div class="popup_contact_us_content modal-content">
+              <div class="popup_contact_us_header">
+                <div class="popup_contact_us_text">Свяжитесь с нами</div>
+                <span
+                  class="js_popup_contact_us_close_button ui-popup-close-button"
+                ></span>
               </div>
-              <div class="card-fp-desc-vendor-code">Артикул: 40599</div>
-              <a href="#" class="card-fp-desc-target-aud">Для мальчиков</a>
-              <div class="card_articles_tags dotted_tags">
+              <div class="js_contact_us_popup_body">
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text"
+                    >Письмо директору</a
+                  >
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../..//img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text"
+                    >Заявка на партнерство</a
+                  >
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text"
+                    >Отправить резюме</a
+                  >
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text"
+                    >Подписаться на рассылку</a
+                  >
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text">СМИ</a>
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text">Блогерам</a>
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="contact_us_popup_item">
+                  <a href="#" class="contact_us_popup_item_text"
+                    >Задать вопрос по игрушкам</a
+                  >
+                  <div class="contact_us_popup_item_arrow">
+                    <img src="../../img/popup_arrow.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="my-24 flex items-center justify-between px-24 text-s md:px-12 sm:my-16"
+          >
+            <p class="breadcrumbs bs:hidden">
+              <a href="#">Главная </a><span>/</span> <a href="#">Игрушки </a
+              ><span>/</span> <a href="#">Все игрушки </a><span>/</span>
+              <a href="#">Волчки и блейды </a><span>/</span>
+              <a href="#">Арена</a><span>/</span>
+              <a href="#">Ещё уровень вложенности</a><span>/</span>
+              <a href="#">Волчок Эпик Лончер Стандарт Gold Phoenix</a>
+            </p>
+            <div class="breadcrumbs-small-screen bs:flex">
+              <div class="breadcrumbs-small-screen-image"></div>
+              <div class="breadcrumbs-small-screen-dots">
+                ...
+                <div class="breadcrumbs-arrow"></div>
+                <div class="breadcrumbs-path-hidden-text !z-1000">
+                  <a href="#">Игрушки</a>
+                  <a href="#">Все игрушки</a>
+                  <a href="#">Волчки и блейды</a>
+                  <a href="#">Арена</a>
+                  <a href="#">Ещё уровень вложенности</a>
+                </div>
+              </div>
+              <div class="breadcrumbs-small-screen-path">
+                Волчок Эпик Лончер Стандарт Gold Phoenix
+              </div>
+            </div>
+            <div class="breadcrumbs-icons">
+              <div class="item_card-external-link group relative">
+                <div
+                  class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                >
+                  <div
+                    class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem] group-hover:block"
+                  ></div>
+                  <button
+                    class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                  >
+                    <div class="block h-20 w-20">
+                      <img src="../../img/copy-link.svg" alt="" />
+                    </div>
+                    <span class="body-s whitespace-nowrap p-0">
+                      Скопировать ссылку
+                    </span>
+                  </button>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="../../img/vkcom.svg" alt="" />
+                    </div>
+                    <span class="body-s">ВКонтакте</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="../../img/tiktok.svg" alt="" />
+                    </div>
+                    <span class="body-s">TikTok</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="../../img/facebook.svg" alt="" />
+                    </div>
+                    <span class="body-s" href="#">Facebook</span>
+                  </a>
+                  <a href="#" class="flex flex-row flex-nowrap gap-8">
+                    <div class="block h-20 w-20">
+                      <img src="../../img/likee.svg" alt="" />
+                    </div>
+                    <span class="body-s">Likee</span>
+                  </a>
+                </div>
+              </div>
+              <button class="item_card_add_to_favourite"></button>
+            </div>
+          </div>
+
+          <div
+            class="mb-64 grid grid-cols-2 gap-24 ipadmini:mb-48 ipadmini:grid-cols-1 ipadmini:gap-16"
+          >
+            <div class="pl-24 ipadmini:px-12">
+              @@include('components/ui-kit/cards/my-swiper.html', { }, )
+            </div>
+            <div class="card-fullpage-description">
+              <div class="card-fp-desc-main ipadmini:px-12">
+                <div class="card-fp-desc-top">
+                  <div class="card-fp-desc-header">
+                    Инфинити Надо. Волчок Эпик Лончер Стандарт Gold Phoenix
+                  </div>
+                  <div class="card-fp-desc-vendor-code">Артикул: 40599</div>
+                  <a href="#" class="card-fp-desc-target-aud">Для мальчиков</a>
+                  <div class="card_articles_tags dotted_tags">
+                    <a
+                      href="#"
+                      class="card_articles_category dotted_tags_category"
+                      >Сильви Мишле</a
+                    >
+                    <div class="card_articles_separator dotted_tags_separator">
+                      •
+                    </div>
+                    <a href="#" class="card_articles_date dotted_tags_date"
+                      >Sylvie Michelet</a
+                    >
+                  </div>
+                  <div class="card-fp-desc-text">
+                    <p class="card-fp-desc-text-top">
+                      Инфинити Надо – самый мощный блейд для крутейших баттлов!
+                      Эпик Лончер – новое представление о пусковых установках и
+                      волчках! Готовься к самому эпичному запуску блейдов
+                      Инфинити Надо Мечом Эпик Лончер Стандарт, 39 см! Он
+                      помогает точнее запустить блейд на арену. Меч не только
+                      пусковая установка, но и монтажный инструмент.
+                    </p>
+                    <p
+                      class="card-fp-desc-text-top card-fp-trans card-fp-transparent-text"
+                    >
+                      В комплект входит облегченный волчок для скоростного
+                      запуска. Его можно пересобирать: все элементы
+                      взаимозаменяемы внутри линейки Эпик Лончер. Вставь Надо в
+                      специальное отверстие до щелчка, раскрути волчок с помощью
+                      ножен, нажми кнопку запуска. Блейд Эпик Лончер Стандарт
+                      светится при вращении и нажатии на аватар. Порази
+                      соперника эпичностью
+                    </p>
+                    <p
+                      class="card-fp-desc-text-top card-fp-hide js-card-fp-hidden-item"
+                    >
+                      В комплект входит облегченный волчок для скоростного
+                      запуска. Его можно пересобирать: все элементы
+                      взаимозаменяемы внутри линейки Эпик Лончер. Вставь Надо в
+                      специальное отверстие до щелчка, раскрути волчок с помощью
+                      ножен, нажми кнопку запуска. Блейд Эпик Лончер Стандарт
+                      светится при вращении и нажатии на аватар. Порази
+                      соперника эпичностью
+                    </p>
+                  </div>
+                  <button class="more-down-button js-mdb font-medium">
+                    Подробное описание, характеристики<span></span>
+                  </button>
+                </div>
+                <div class="card-fp-desc-bottom">
+                  <div class="card-fp-desc-buy">Купить игрушку</div>
+                  <div class="card-fp-desc-buy-buttons">
+                    <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-1"></a>
+                    <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-2"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-fp-desc-buttons pr-24">
                 <a
                   href="#"
-                  class="card_articles_category dotted_tags_category"
-                >Сильви Мишле</a
+                  class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
+                  >5+</a
                 >
-                <div class="card_articles_separator dotted_tags_separator">
-                  •
+                <div class="item_card-external-link group relative">
+                  <div
+                    class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                  >
+                    <div
+                      class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem] group-hover:block"
+                    ></div>
+                    <button
+                      class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                    >
+                      <div class="block h-20 w-20">
+                        <img src="../../img/copy-link.svg" alt="" />
+                      </div>
+                      <span class="body-s whitespace-nowrap p-0">
+                        Скопировать ссылку
+                      </span>
+                    </button>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="../../img/vkcom.svg" alt="" />
+                      </div>
+                      <span class="body-s">ВКонтакте</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="../../img/tiktok.svg" alt="" />
+                      </div>
+                      <span class="body-s">TikTok</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="../../img/facebook.svg" alt="" />
+                      </div>
+                      <span class="body-s" href="#">Facebook</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="../../img/likee.svg" alt="" />
+                      </div>
+                      <span class="body-s">Likee</span>
+                    </a>
+                  </div>
                 </div>
-                <a href="#" class="card_articles_date dotted_tags_date"
-                >Sylvie Michelet</a
-                >
-              </div>
-              <div class="card-fp-desc-text">
-                <p class="card-fp-desc-text-top">
-                  Инфинити Надо – самый мощный блейд для крутейших баттлов!
-                  Эпик Лончер – новое представление о пусковых установках и
-                  волчках! Готовься к самому эпичному запуску блейдов
-                  Инфинити Надо Мечом Эпик Лончер Стандарт, 39 см! Он
-                  помогает точнее запустить блейд на арену. Меч не только
-                  пусковая установка, но и монтажный инструмент.
-                </p>
-                <p
-                  class="card-fp-desc-text-top card-fp-trans card-fp-transparent-text"
-                >
-                  В комплект входит облегченный волчок для скоростного
-                  запуска. Его можно пересобирать: все элементы
-                  взаимозаменяемы внутри линейки Эпик Лончер. Вставь Надо в
-                  специальное отверстие до щелчка, раскрути волчок с помощью
-                  ножен, нажми кнопку запуска. Блейд Эпик Лончер Стандарт
-                  светится при вращении и нажатии на аватар. Порази
-                  соперника эпичностью
-                </p>
-                <p
-                  class="card-fp-desc-text-top card-fp-hide js-card-fp-hidden-item"
-                >
-                  В комплект входит облегченный волчок для скоростного
-                  запуска. Его можно пересобирать: все элементы
-                  взаимозаменяемы внутри линейки Эпик Лончер. Вставь Надо в
-                  специальное отверстие до щелчка, раскрути волчок с помощью
-                  ножен, нажми кнопку запуска. Блейд Эпик Лончер Стандарт
-                  светится при вращении и нажатии на аватар. Порази
-                  соперника эпичностью
-                </p>
-              </div>
-              <button class="more-down-button font-medium js-mdb">
-                Подробное описание, характеристики<span></span>
-              </button>
-            </div>
-            <div class="card-fp-desc-bottom">
-              <div class="card-fp-desc-buy">Купить игрушку</div>
-              <div class="card-fp-desc-buy-buttons">
-                <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-1"></a>
-                <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-2"></a>
+                <button class="item_card_add_to_favourite"></button>
               </div>
             </div>
           </div>
-          <div class="card-fp-desc-buttons pr-24">
-            <a
-              href="#"
-              class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
-            >5+</a
-            >
-            <div class="item_card-external-link group relative">
-              <div
-                class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 group-hover:flex"
+          <div
+            class="card-fullpage-card-brands small-cards items-center px-24 ipadmini:px-12"
+          >
+            <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары бренда</div>
+                  <div class="card_brand_name">Инфинити Надо</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                  <img src="../../img/card-fullpage/infinity-nado.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары коллекции</div>
+                  <div class="card_brand_name">Дикие Скричеры</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                  <img
+                    src="../../img/card-fullpage/wild-screeches.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="card_brand card-fullpage-card-brand">
+              <div class="card_brand_content">
+                <div class="card_brand_info">
+                  <div class="card_brand_all_items">Товары серии</div>
+                  <div class="card_brand_name">Трансформеры</div>
+                </div>
+                <a href="#" class="card_brand_image">
+                  <img src="../../img/card-fullpage/infinity-nado.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-fullpage-tabs px-24 ipadmini:px-12">
+            <div class="navigation">
+              <ul
+                class="navigation-flex nav-list !gap-0 px-24 ipadmini:px-12 sm:justify-between"
               >
-                <div
-                  class="breadcrumbs-arrow !left-[12.4rem] top-[-1.2rem]  group-hover:block"
-                ></div>
-                <button
-                  class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
-                >
-                  <div class="block h-20 w-20">
-                    <img src="../../img/copy-link.svg" alt=""/>
-                  </div>
-                  <span class="body-s whitespace-nowrap p-0">
-                                Скопировать ссылку
-                              </span>
-                </button>
-                <a href="#" class="flex flex-row flex-nowrap gap-8">
-                  <div class="block h-20 w-20">
-                    <img src="../../img/vkcom.svg" alt=""/>
-                  </div>
-                  <span class="body-s">ВКонтакте</span>
-                </a>
-                <a href="#" class="flex flex-row flex-nowrap gap-8">
-                  <div class="block h-20 w-20">
-                    <img src="../../img/tiktok.svg" alt=""/>
-                  </div>
-                  <span class="body-s">TikTok</span>
-                </a>
-                <a href="#" class="flex flex-row flex-nowrap gap-8">
-                  <div class="block h-20 w-20">
-                    <img src="../../img/facebook.svg" alt=""/>
-                  </div>
-                  <span class="body-s" href="#">Facebook</span>
-                </a>
-                <a href="#" class="flex flex-row flex-nowrap gap-8">
-                  <div class="block h-20 w-20">
-                    <img src="../../img/likee.svg" alt=""/>
-                  </div>
-                  <span class="body-s">Likee</span>
-                </a>
-              </div>
+                <li>
+                  <p
+                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
+                  >
+                    Описание
+                  </p>
+                </li>
+                <li>
+                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
+                    Характеристики
+                  </p>
+                </li>
+                <li>
+                  <p
+                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
+                  >
+                    Инструкция
+                  </p>
+                </li>
+              </ul>
             </div>
-            <button class="item_card_add_to_favourite"></button>
           </div>
-        </div>
-      </div>
-      <div
-        class="card-fullpage-card-brands small-cards items-center px-24 ipadmini:px-12"
-      >
-        <div class="card_brand card-fullpage-card-brand">
-          <div class="card_brand_content">
-            <div class="card_brand_info">
-              <div class="card_brand_all_items">Товары бренда</div>
-              <div class="card_brand_name">Инфинити Надо</div>
-            </div>
-            <a href="#" class="card_brand_image">
-              <img src="../../img/card-fullpage/infinity-nado.svg" alt=""/>
-            </a>
-          </div>
-        </div>
-        <div class="card_brand card-fullpage-card-brand">
-          <div class="card_brand_content">
-            <div class="card_brand_info">
-              <div class="card_brand_all_items">Товары коллекции</div>
-              <div class="card_brand_name">Дикие Скричеры</div>
-            </div>
-            <a href="#" class="card_brand_image">
-              <img
-                src="../../img/card-fullpage/wild-screeches.svg"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
-        <div class="card_brand card-fullpage-card-brand">
-          <div class="card_brand_content">
-            <div class="card_brand_info">
-              <div class="card_brand_all_items">Товары серии</div>
-              <div class="card_brand_name">Трансформеры</div>
-            </div>
-            <a href="#" class="card_brand_image">
-              <img src="../../img/card-fullpage/infinity-nado.svg" alt=""/>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="card-fullpage-tabs px-24 ipadmini:px-12">
-        <div class="navigation">
-          <ul
-            class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 sm:justify-between"
-          >
-            <li>
-              <p class="card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
-                Описание
-              </p>
-            </li>
-            <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
-                Характеристики
-              </p>
-            </li>
-            <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Инструкция</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+          <!--компонент из таба ОПИСАНИЕ-->
+          <div class="card-fp-description px-24 ipadmini:px-12">
+            @@include('components/fullpage-toy-book-components/toy-card-fullpage-desc-comp.html',
+            { }, )
+          </div>
 
-      <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description px-24 ipadmini:px-12">
-        @@include('components/fullpage-toy-book-components/toy-card-fullpage-desc-comp.html',
-        { }, )
-      </div>
+          <!--    характеристики   -->
+          <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
+            @@include('components/fullpage-toy-book-components/toy-card-fullpage-characteristics-comp.html',
+            { }, )
+          </div>
 
-      <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
-        @@include('components/fullpage-toy-book-components/toy-card-fullpage-characteristics-comp.html',
-        { }, )
-      </div>
+          <!--   инструкция      -->
+          <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
+            @@include('components/fullpage-toy-book-components/toy-card-fullpage-instruction-comp.html',
+            { }, )
+          </div>
 
-      <!--   инструкция      -->
-      <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
-        @@include('components/fullpage-toy-book-components/toy-card-fullpage-instruction-comp.html',
-        { }, )
-      </div>
+          <!--компонент с карточками КНИГ И ИГРУШЕК-->
+          <div class="swiper-image-2 mb-12 px-24 ipadmini:px-12 sm:mb-0">
+            <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
+              <h3
+                class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+              >
+                С этой игрушкой часто покупают
+                <div class="link-s-bold inline-block hidden msm:hidden">
+                  Все
+                </div>
+              </h3>
 
-      <!--компонент с карточками КНИГ И ИГРУШЕК-->
-      <div class="swiper-image-2 mb-12 px-24 ipadmini:px-12 sm:mb-0">
-        <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
-          <h3
-            class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
-          >
-            С этой игрушкой часто покупают
-            <div class="link-s-bold inline-block hidden msm:hidden">
-              Все
-            </div>
-          </h3>
-
-          <div class="buttons !w-[5.2rem] !gap-24">
-            <div class="button-prev"></div>
-            <div class="button-next"></div>
-          </div>
-        </div>
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper !items-end">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-          <div class="swiper-slide">
-            @@include('components/ui-kit/cards/card-toys.html', { }, )
-          </div>
-        </div>
-      </div>
-
-      <!-- тут наклоняющаяся фотогалерея -->
-      <div id="white-background" class="card-fullpage-w-bg-modified">
-        <div id="yellow-moving-block" class="card-fullpage-w-bg-modified">
-          <div id="parent">
-            <img
-              id="follower"
-              class="slide-el card-fullpage-slide-el-mod"
-              src="../../img/running-elephant/slide-el.png"
-            />
-          </div>
-        </div>
-        <div id="above-block" class="above-block-mod">
-          <div class="swiper-image-gallery my-0 px-24 pb-60 ipadmini:px-12">
-            <div class="swiper-header sw-head-mod !w-full">
-              <h3 class="head-3">Фотогалерея</h3>
               <div class="buttons !w-[5.2rem] !gap-24">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
               </div>
             </div>
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper !items-end">
               <!-- Slides -->
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
+                @@include('components/ui-kit/cards/card-toys.html', { }, )
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- тут ниже видео блок -->
-      <div
-        class="card_video_item full-width mb-64 px-24 ipadmini:px-12 sm:mb-48"
-      >
-        <div class="card_video_preview">
-          <img src="../../img/cards_video_preview.svg" alt=""/>
-          <button class="card_video_play_button circle-button"></button>
-        </div>
-      </div>
-      <div class="image-popup" id="imagePopup">
-        <div class="popup-content relative">
-          <img src="" alt="" id="popupImage" class="popup-image-img"/>
-          <div
-            class="close-button absolute right-[3rem] top-[0.8rem] block h-20 w-20 cursor-pointer"
-          >
-            <img
-              class="block h-20 w-20"
-              src="../../img/catalog-vacancies/black-close-20px.svg"
-              alt=""
-            />
+          <!-- тут наклоняющаяся фотогалерея -->
+          <div id="white-background" class="card-fullpage-w-bg-modified">
+            <div id="yellow-moving-block" class="card-fullpage-w-bg-modified">
+              <div id="parent">
+                <img
+                  id="follower"
+                  class="slide-el card-fullpage-slide-el-mod"
+                  src="../../img/running-elephant/slide-el.png"
+                />
+              </div>
+            </div>
+            <div id="above-block" class="above-block-mod">
+              <div class="swiper-image-gallery my-0 px-24 pb-60 ipadmini:px-12">
+                <div class="swiper-header sw-head-mod !w-full">
+                  <h3 class="head-3">Фотогалерея</h3>
+                  <div class="buttons !w-[5.2rem] !gap-24">
+                    <div class="button-prev"></div>
+                    <div class="button-next"></div>
+                  </div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('components/ui-kit/cards/card-photogallery-item.html',
+                    { }, )
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- тут ниже видео блок -->
+          <div
+            class="card_video_item full-width mb-64 px-24 ipadmini:px-12 sm:mb-48"
+          >
+            <div class="card_video_preview">
+              <img src="../../img/cards_video_preview.svg" alt="" />
+              <button class="card_video_play_button circle-button"></button>
+            </div>
+          </div>
+          <div class="image-popup" id="imagePopup">
+            <div class="popup-content relative">
+              <img src="" alt="" id="popupImage" class="popup-image-img" />
+              <div
+                class="close-button absolute right-[3rem] top-[0.8rem] block h-20 w-20 cursor-pointer"
+              >
+                <img
+                  class="block h-20 w-20"
+                  src="../../img/catalog-vacancies/black-close-20px.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <!-- тут ниже футер -->
+          @@include('components/ui-kit/footer/footer-ru.html', { }, )
         </div>
       </div>
-      <!-- тут ниже футер -->
-      @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
-  </div>
-</div>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script type="module" src="./js/scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<script>
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    hideScrollbar: false,
-    loop: false,
-  });
-  Fancybox.bind('[data-fancybox="gallery-small"]', {
-    loop: false,
-  });
-  Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
-    loop: false,
-  });
-</script>
-<script></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        hideScrollbar: false,
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-small"]', {
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
+        loop: false,
+      });
+    </script>
+    <script></script>
+  </body>
 </html>

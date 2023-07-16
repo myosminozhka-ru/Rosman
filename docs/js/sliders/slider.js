@@ -260,3 +260,5 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 6,
   });
 });
+
+// слайдер для страницы с вакансиями,

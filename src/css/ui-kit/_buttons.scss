@@ -158,7 +158,6 @@ button {
       &.active-js {
         @apply bg-yellow;
       }
-
     }
   }
 }
@@ -211,14 +210,13 @@ button {
     &.toy-news {
       &.open-filter {
         @media screen and (max-width: 900px) {
-          display: block!important;
+          display: block !important;
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
         }
       }
-
     }
   }
 
@@ -337,7 +335,7 @@ button {
 }
 
 .checkbox-container {
-  @apply my-12 flex cursor-pointer items-center text-s text-black gap-12;
+  @apply my-12 flex cursor-pointer items-center gap-12 text-s text-black;
 
   input[type='radio'] {
     @apply hidden;
@@ -398,7 +396,7 @@ button {
   @apply flex flex-row text-grey;
 
   span {
-    @apply mr-8 text-text text-xl;
+    @apply mr-8 text-xl text-text;
   }
 
   a {
