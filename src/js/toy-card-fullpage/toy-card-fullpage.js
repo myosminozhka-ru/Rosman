@@ -99,9 +99,13 @@ if (jsMdbDescButton) {
     if (isExpanded) {
       jsDescriptionWrapper.classList.remove('gapped');
       jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
+      jsMdbDescButton.classList.remove('active-js')
     } else {
       jsDescriptionWrapper.classList.add('gapped');
       jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
+      jsMdbDescButton.classList.add('active-js')
+
+
     }
 
     if (isExpanded) {

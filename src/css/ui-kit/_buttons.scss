@@ -202,12 +202,25 @@ button {
 
   &.active-js {
     span {
-      background-image: url('../../img/arrow-down.svg');
-      background-repeat: no-repeat;
-      background-size: 1rem 1.6rem;
-      width: 1rem;
-      height: 1.6rem;
-      margin-left: 1rem;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.more-down-button-desc {
+  @apply flex cursor-pointer flex-row items-center justify-start p-0 text-left text-m transition-all duration-500;
+
+  span {
+    background-image: url('../../img/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem 1.6rem;
+    width: 1rem;
+    height: 1.6rem;
+    margin-left: 1rem;
+  }
+
+  &.active-js {
+    span {
       transform: rotate(180deg);
     }
   }
