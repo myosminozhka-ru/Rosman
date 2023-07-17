@@ -73,13 +73,14 @@
   @apply relative;
 }
 
-.breadcrumbs-arrow {
-  @apply absolute hidden h-12 w-32;
-  left: -1.1rem;
-  background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
-  background-size: contain;
+@layer {
+  .breadcrumbs-arrow {
+    @apply absolute hidden h-12 w-32;
+    left: -1.1rem;
+    background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
+    background-size: contain;
+  }
 }
-
 .breadcrumbs-path-hidden-text {
   @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
@@ -87,6 +88,7 @@
   top: 2.9rem;
   left: -1.2rem;
 }
+
 
 .breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
