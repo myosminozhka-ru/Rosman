@@ -44,7 +44,6 @@ if (prevButton) {
 
 if (moreButton) {
   moreButton.addEventListener('click', (event) => {
-    console.log("pizda")
     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
     if (currentChosen) {
       currentChosen.classList.remove('js-chosen-nav-btn');
