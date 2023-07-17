@@ -1,17 +1,17 @@
-let largeImg = document.querySelector('.largeImg');
-let thumbs = document.querySelectorAll('.thumbs img');
-
-thumbs.forEach(function (thumb) {
-  thumb.addEventListener('click', function (event) {
-    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
-    event.preventDefault();
-    largeImg.src = thumb.getAttribute('src');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-thumb-chosen');
-    }
-    thumb.classList.add('js-thumb-chosen');
-  });
-});
+// let largeImg = document.querySelector('.largeImg');
+// let thumbs = document.querySelectorAll('.thumbs img');
+//
+// thumbs.forEach(function (thumb) {
+//   thumb.addEventListener('click', function (event) {
+//     const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
+//     event.preventDefault();
+//     largeImg.src = thumb.getAttribute('src');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-thumb-chosen');
+//     }
+//     thumb.classList.add('js-thumb-chosen');
+//   });
+// });
 
 // нужна функция, которая будет отслеживать нажатие на js-mdb,
 // после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
@@ -20,6 +20,7 @@ thumbs.forEach(function (thumb) {
 let jsMdb = document.querySelector('.js-mdb');
 let cardTextToHide = document.querySelector('.card-fp-hide');
 let cartToTrans = document.querySelector('.card-fp-trans');
+let isExpandedToys = false;
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
@@ -28,6 +29,15 @@ if (jsMdb) {
     }
     if (cartToTrans) {
       cartToTrans.classList.toggle('card-fp-transparent-text');
+    }
+    isExpandedToys = !isExpandedToys; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedToys) {
+      jsMdb.innerHTML = 'Свернуть описание<span></span>';
+      jsMdb.classList.add("active-js")
+    } else {
+      jsMdb.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsMdb.classList.remove("active-js")
     }
   };
 }
@@ -89,9 +99,13 @@ if (jsMdbDescButton) {
     if (isExpanded) {
       jsDescriptionWrapper.classList.remove('gapped');
       jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
+      jsMdbDescButton.classList.remove('active-js')
     } else {
       jsDescriptionWrapper.classList.add('gapped');
       jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
+      jsMdbDescButton.classList.add('active-js')
+
+
     }
 
     if (isExpanded) {
@@ -152,9 +166,19 @@ dots.forEach((dot, index) => {
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector('.js-book-toggle-button');
 const jsBookTextContainer = document.querySelector('.card-fp-desc-text-top');
+let isExpandedDesc = false;
 if (jsBookToggleButton && jsBookTextContainer) {
   jsBookToggleButton.addEventListener('click', function () {
     jsBookTextContainer.classList.toggle('line-clamp-none');
+    isExpandedDesc = !isExpandedDesc; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedDesc) {
+      jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
+      jsBookToggleButton.classList.add("active-js")
+    } else {
+      jsBookToggleButton.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsBookToggleButton.classList.remove("active-js")
+    }
   });
 }
 
@@ -232,8 +256,12 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   on: {
     slideChange: function () {
       // console.log(sliderThumbs.activeIndex);
+      const firstChosen = document.querySelector(".first-chosen");
+      if (firstChosen.classList.contains('p-4')) {
+        firstChosen.classList.remove("js-thumb-chosen");
+        firstChosen.classList.remove("p-4");
+      }
       const activeSlideIndex = sliderImages.activeIndex; // Индекс активного слайда в основном слайдере
-      // console.log(activeSlideIndex);
       const thumbItems = document.querySelectorAll(
         '.slider__thumbs .swiper-slide'
       ); // Элементы миниатюр
