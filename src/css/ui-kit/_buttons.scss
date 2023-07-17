@@ -187,6 +187,7 @@ button {
     }
   }
 }
+
 .more-down-content::-webkit-scrollbar-track {
   border-radius: 0.4rem;
 }
@@ -203,6 +204,7 @@ button {
 .more-down-content:hover::-webkit-scrollbar-thumb {
   background: #555555;
 }
+
 .more-down-content {
   @apply hidden p-2;
 
@@ -211,7 +213,7 @@ button {
     &.toy-news {
       &.open-filter {
         @media screen and (max-width: 900px) {
-          display: block!important;
+          display: block !important;
           position: fixed;
           top: 0;
           left: 0;
@@ -278,6 +280,7 @@ button {
       @apply ml-4 inline inline w-auto text-left text-s font-normal;
     }
   }
+
   .count {
     @apply hidden align-middle;
   }
@@ -442,44 +445,41 @@ button {
   @apply relative;
 }
 
-.breadcrumbs-arrow {
-  @apply absolute hidden h-12 w-32;
-  left: -1.1rem;
-  background: url('../../img/bread-arrow.svg') no-repeat center;
-  background-size: contain;
-}
-
-.breadcrumbs-path-hidden-text {
-  @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
-  border: 1px solid black;
-  width: 20rem;
-  top: 2.9rem;
-  left: -1.2rem;
-}
-
-.breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
-  @apply block;
-}
-
-.breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
-  @apply block;
-}
-
-.breadcrumbs-icons {
-  @apply flex flex-row gap-16;
-
-  @media (min-width: 801px) {
-    @apply hidden;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .breadcrumbs-small-screen-path {
-    @apply overflow-hidden whitespace-nowrap;
-    text-overflow: ellipsis;
-    max-width: calc(80%);
-  }
-}
+// дублирующийся код
+//.breadcrumbs-arrow {
+//  @apply absolute hidden h-12 w-32;
+//  left: -1.1rem;
+//  background: url('../../img/bread-arrow.svg') no-repeat center;
+//  background-size: contain;
+//}
+//.breadcrumbs-path-hidden-text {
+//  @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
+//  border: 1px solid black;
+//  width: 20rem;
+//  top: 2.9rem;
+//  left: -1.2rem;
+//}
+//.breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
+//  @apply block;
+//}
+//
+//.breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
+//  @apply block;
+//}
+//.breadcrumbs-icons {
+//  @apply flex flex-row gap-16;
+//
+//  @media (min-width: 801px) {
+//    @apply hidden;
+//  }
+//}
+//@media screen and (max-width: 480px) {
+//  .breadcrumbs-small-screen-path {
+//    @apply overflow-hidden whitespace-nowrap;
+//    text-overflow: ellipsis;
+//    max-width: calc(80%);
+//  }
+//}
 
 .dropdown {
   @apply relative flex max-w-menu  items-center border-2 border-black bg-yellow px-10 py-8;
