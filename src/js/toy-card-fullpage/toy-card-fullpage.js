@@ -20,6 +20,7 @@ thumbs.forEach(function (thumb) {
 let jsMdb = document.querySelector('.js-mdb');
 let cardTextToHide = document.querySelector('.card-fp-hide');
 let cartToTrans = document.querySelector('.card-fp-trans');
+let isExpandedToys = false;
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
@@ -28,6 +29,13 @@ if (jsMdb) {
     }
     if (cartToTrans) {
       cartToTrans.classList.toggle('card-fp-transparent-text');
+    }
+    isExpandedToys = !isExpandedToys; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedToys) {
+      jsMdb.innerHTML = 'Свернуть описание<span></span>';
+    } else {
+      jsMdb.innerHTML = 'Подробное описание, характеристика<span></span>';
     }
   };
 }
@@ -152,9 +160,17 @@ dots.forEach((dot, index) => {
 // для описания книги, чтобы там было многоточие
 const jsBookToggleButton = document.querySelector('.js-book-toggle-button');
 const jsBookTextContainer = document.querySelector('.card-fp-desc-text-top');
+let isExpandedDesc = false;
 if (jsBookToggleButton && jsBookTextContainer) {
   jsBookToggleButton.addEventListener('click', function () {
     jsBookTextContainer.classList.toggle('line-clamp-none');
+    isExpandedDesc = !isExpandedDesc; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedDesc) {
+      jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
+    } else {
+      jsBookToggleButton.innerHTML = 'Подробное описание, характеристика<span></span>';
+    }
   });
 }
 
