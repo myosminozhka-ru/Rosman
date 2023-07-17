@@ -1,17 +1,17 @@
-let largeImg = document.querySelector('.largeImg');
-let thumbs = document.querySelectorAll('.thumbs img');
-
-thumbs.forEach(function (thumb) {
-  thumb.addEventListener('click', function (event) {
-    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
-    event.preventDefault();
-    largeImg.src = thumb.getAttribute('src');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-thumb-chosen');
-    }
-    thumb.classList.add('js-thumb-chosen');
-  });
-});
+// let largeImg = document.querySelector('.largeImg');
+// let thumbs = document.querySelectorAll('.thumbs img');
+//
+// thumbs.forEach(function (thumb) {
+//   thumb.addEventListener('click', function (event) {
+//     const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
+//     event.preventDefault();
+//     largeImg.src = thumb.getAttribute('src');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-thumb-chosen');
+//     }
+//     thumb.classList.add('js-thumb-chosen');
+//   });
+// });
 
 // нужна функция, которая будет отслеживать нажатие на js-mdb,
 // после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
@@ -256,8 +256,12 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   on: {
     slideChange: function () {
       // console.log(sliderThumbs.activeIndex);
+      const firstChosen = document.querySelector(".first-chosen");
+      if (firstChosen.classList.contains('p-4')) {
+        firstChosen.classList.remove("js-thumb-chosen");
+        firstChosen.classList.remove("p-4");
+      }
       const activeSlideIndex = sliderImages.activeIndex; // Индекс активного слайда в основном слайдере
-      // console.log(activeSlideIndex);
       const thumbItems = document.querySelectorAll(
         '.slider__thumbs .swiper-slide'
       ); // Элементы миниатюр
