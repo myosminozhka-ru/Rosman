@@ -34,8 +34,10 @@ if (jsMdb) {
 
     if (isExpandedToys) {
       jsMdb.innerHTML = 'Свернуть описание<span></span>';
+      jsMdb.classList.add("active-js")
     } else {
       jsMdb.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsMdb.classList.remove("active-js")
     }
   };
 }
@@ -168,8 +170,10 @@ if (jsBookToggleButton && jsBookTextContainer) {
 
     if (isExpandedDesc) {
       jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
+      jsBookToggleButton.classList.add("active-js")
     } else {
       jsBookToggleButton.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsBookToggleButton.classList.remove("active-js")
     }
   });
 }
