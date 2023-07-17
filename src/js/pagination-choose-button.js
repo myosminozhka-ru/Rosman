@@ -1,7 +1,7 @@
 const buttonsPag = document.querySelector('.nav-btns');
 const nextButton = document.querySelector('.js-rm-pag-nav-page-more-bnt');
 const prevButton = document.querySelector('.js-rm-pag-nav-page-back-bnt');
-const moreButton = document.querySelector('.js-rm-pag-more-btn')
+const moreButton = document.querySelector('.js-rm-pag-more-btn');
 
 if (buttonsPag) {
   buttonsPag.addEventListener('click', (event) => {

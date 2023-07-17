@@ -34,10 +34,10 @@ if (jsMdb) {
 
     if (isExpandedToys) {
       jsMdb.innerHTML = 'Свернуть описание<span></span>';
-      jsMdb.classList.add("active-js")
+      jsMdb.classList.add('active-js');
     } else {
       jsMdb.innerHTML = 'Подробное описание, характеристика<span></span>';
-      jsMdb.classList.remove("active-js")
+      jsMdb.classList.remove('active-js');
     }
   };
 }
@@ -99,13 +99,11 @@ if (jsMdbDescButton) {
     if (isExpanded) {
       jsDescriptionWrapper.classList.remove('gapped');
       jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
-      jsMdbDescButton.classList.remove('active-js')
+      jsMdbDescButton.classList.remove('active-js');
     } else {
       jsDescriptionWrapper.classList.add('gapped');
       jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
-      jsMdbDescButton.classList.add('active-js')
-
-
+      jsMdbDescButton.classList.add('active-js');
     }
 
     if (isExpanded) {
@@ -174,10 +172,11 @@ if (jsBookToggleButton && jsBookTextContainer) {
 
     if (isExpandedDesc) {
       jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
-      jsBookToggleButton.classList.add("active-js")
+      jsBookToggleButton.classList.add('active-js');
     } else {
-      jsBookToggleButton.innerHTML = 'Подробное описание, характеристика<span></span>';
-      jsBookToggleButton.classList.remove("active-js")
+      jsBookToggleButton.innerHTML =
+        'Подробное описание, характеристика<span></span>';
+      jsBookToggleButton.classList.remove('active-js');
     }
   });
 }
@@ -256,10 +255,10 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   on: {
     slideChange: function () {
       // console.log(sliderThumbs.activeIndex);
-      const firstChosen = document.querySelector(".first-chosen");
+      const firstChosen = document.querySelector('.first-chosen');
       if (firstChosen.classList.contains('p-4')) {
-        firstChosen.classList.remove("js-thumb-chosen");
-        firstChosen.classList.remove("p-4");
+        firstChosen.classList.remove('js-thumb-chosen');
+        firstChosen.classList.remove('p-4');
       }
       const activeSlideIndex = sliderImages.activeIndex; // Индекс активного слайда в основном слайдере
       const thumbItems = document.querySelectorAll(
