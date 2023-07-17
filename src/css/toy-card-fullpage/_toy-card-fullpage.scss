@@ -371,7 +371,7 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply mb-64 flex flex-col gap-24 md:gap-48 md:mb-48;
+  @apply pb-64 flex flex-col gap-24 md:gap-48 md:pb-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
@@ -522,8 +522,10 @@
   @media screen and (max-width: 400px) {
     height: 45rem !important;
   }
+
   &.books-slider {
     height: 84.9rem;
+
     &.elephant {
       height: 80rem;
       @media screen and (min-width: 2300px) {
@@ -538,12 +540,15 @@
     }
   }
 }
+
 #yellow-moving-block2.card-fullpage-w-bg-modified {
   height: 51.9rem;
   padding: 0;
   margin: 0;
+
   &.books-slider {
     height: 65.9rem;
+
     &.elephant {
       height: 70rem;
       @media screen and (min-width: 2300px) {
@@ -559,14 +564,17 @@
     }
   }
 }
+
 #yellow-moving-block.card-fullpage-w-bg-modified {
   @apply m-0 h-[51.9rem] p-0 ipadmini:h-[45rem] ssm:h-[40rem];
 
   @media screen and (max-width: 400px) {
     height: 37rem !important;
   }
+
   &.books-slider {
     height: 65.9rem;
+
     &.elephant {
       height: 70rem;
       @media screen and (min-width: 2300px) {
