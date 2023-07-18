@@ -1,10 +1,13 @@
 const randomBookButton = document.querySelector('.js-randomize-book');
 if (randomBookButton) {
   randomBookButton.addEventListener('click', function (event) {
-
     // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(document.querySelectorAll('#genres input:checked')).map(input => input.id);
-    const selectedAges = Array.from(document.querySelectorAll('#ages input:checked')).map(input => input.id);
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
 
     // тут объект на отправку на бэк
     const requestData = {
@@ -20,11 +23,11 @@ if (randomBookButton) {
       },
       body: JSON.stringify(requestData),
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
     // тут отдельно все чекбоксы
@@ -53,8 +56,7 @@ if (randomBookButton) {
     // меняем название кнопки
     randomBookButton.innerText = 'Подобрать ещё раз';
     // пока оставлю так по стилям,
-    const literallyBook = document.querySelector(".random-book-card")
-    literallyBook.classList.remove('hidden')
-
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
   });
 }
