@@ -747,9 +747,8 @@ header {
     -webkit-flex-direction: row;
     gap: 2rem;
     overflow: scroll;
-    width: 80rem;
-    @media screen and (max-width: 1000px) {
     width: 100%;
+    @media screen and (max-width: 1000px) {
       overflow: scroll;
     }
 
