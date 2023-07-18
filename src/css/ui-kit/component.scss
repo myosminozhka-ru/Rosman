@@ -759,18 +759,41 @@ header {
   }
 }
 
+#moving-block {
+  @apply absolute top-[2rem] z-100 mx-auto h-screen  w-full bg-white;
+}
+
+#moving-block:after {
+  position: absolute;
+  content: '';
+  top: 50vh;
+  display: block;
+  height: 300vh;
+  background-color: white;
+  left: -50%;
+  width: 200%;
+}
+
+#moving-block:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  display: block;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
 #yellow-background:after {
   position: absolute;
   content: '';
   display: block;
   top: calc(2rem + (100vw / 2));
   bottom: 0;
+  height: 100%;
   background-color: #ffffff;
   width: 100%;
-}
-
-#moving-block {
-  @apply absolute top-[2rem] z-100 mx-auto h-screen  w-full bg-white;
 }
 
 #moving-block svg {
@@ -783,27 +806,6 @@ header {
   }
 }
 
-#moving-block:after {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 100%;
-  bottom: 0;
-  background-color: white;
-  width: 100%;
-}
-
-#moving-block:before {
-  z-index: 1;
-  position: absolute;
-  content: '';
-  display: block;
-  height: 100%;
-  bottom: -50%;
-  background-color: white;
-  width: 200%;
-  left: -50%;
-}
 
 #above-block {
   @apply relative z-1000 overflow-hidden;
@@ -1138,41 +1140,13 @@ header {
   /* Скрыть содержимое, выходящее за границы блока */
 }
 
-// rjvvtyndslfjslkf
-//.elephant-swiper {
-//  width: 100% !important;
-//  height: auto!important;
-//  padding: 0 3rem!important;
-//  .swiper-header {
-//    @apply flex justify-between my-40 w-5/6;
-//    .buttons {
-//      @apply flex justify-between w-36 gap-8;
-//      .button-prev {
-//        display: block;
-//        background: url("../../img/prev.png") no-repeat center;
-//        background-size: 2rem 2rem;
-//        width: 2rem;
-//        height: 2rem;
-//      }
-//      .button-next {
-//        display: block;
-//        background: url("../../img/next.png") no-repeat center;
-//        background-size: 2rem 2rem;
-//        width: 2rem;
-//        height: 2rem;
-//      }
-//    }
-//  }
-//  .swiper-wrapper {
-//    background:  url("../../img/elephant-slider/big-elephant.png") no-repeat center;
-//  }
-//}
+
 .elephant-history {
   .slider-header {
-    @apply my-40 flex w-5/6 justify-between;
+    @apply px-20 sm:px-12 flex justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-36 justify-between gap-8 items-center;
 
       .button-prev {
         display: block;
@@ -1205,6 +1179,10 @@ header {
   }
 }
 
+#elephant-container::-webkit-scrollbar {
+    display: none;
+}
+
 #elephant-container {
   width: 100%;
   overflow-x: scroll;
@@ -1231,7 +1209,7 @@ header {
   #elephant-slider {
     background-size: auto;
     width: 345rem;
-    height: 95rem;
+    height: 79rem;
     position: relative;
     display: list-item;
 
@@ -1246,7 +1224,8 @@ header {
       z-index: 1001;
 
       &.up {
-        bottom: 64.5rem;
+        bottom: 49.5rem;
+        
 
         &.first {
           left: 36.5rem;
@@ -1288,6 +1267,8 @@ header {
       &.bottom {
         top: 59rem;
 
+    
+
         &.first {
           left: 83rem;
         }
@@ -1319,10 +1300,13 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 63.5rem;
+        
+        bottom: 47.5rem;
 
         &.first {
-          left: 30.5rem;
+          left: 43.5rem;
+       
+          top: 43rem;
         }
 
         &.second {
