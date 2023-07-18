@@ -231,22 +231,27 @@
     </div>
   </div>
 </div>
-<script>
-  function searchBrands() {
-    const searchInput = document.querySelector('.pup_brand_input');
-    const searchValue = searchInput.value.toLowerCase().trim();
 
+<script>
+  const allFiltersPopup = document.querySelector('.pup_brand_input');
+  allFiltersPopup.addEventListener('input', function (event) {
+    let searchValue = allFiltersPopup.value.toLowerCase().trim();
+    searchValue = searchValue.replace(/\W/g, '');
     const imageContainers = document.querySelectorAll('.image_container');
 
-    imageContainers.forEach((container) => {
+    imageContainers.forEach(container => {
       const brandName = container.dataset.brandName.toLowerCase();
       if (brandName.includes(searchValue)) {
-        container.classList.remove('hidden');
+        container.classList.remove('!hidden');
       } else {
-        container.classList.add('hidden');
+        container.classList.add('!hidden');
       }
     });
-  }
 
-  document.querySelector('.pup_brand_input').addEventListener('input', searchBrands);
+    if (searchValue.length < 3) {
+      imageContainers.forEach(container => {
+        container.classList.remove('!hidden');
+      });
+    }
+  });
 </script>
