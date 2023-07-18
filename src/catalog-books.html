@@ -65,22 +65,22 @@
             </button>
             <!--  more-down -->
             <div class="more-down-content !p-10 new">
-              <label class="checkbox-container">
+              <label class="checkbox-container close-button-new">
                 <input type="radio" name="sort-by" />
                 <span class="checkmark"></span>
                 Сначала новые
               </label>
-              <label class="checkbox-container">
+              <label class="checkbox-container close-button-new">
                 <input type="radio" name="sort-by" />
                 <span class="checkmark"></span>
                 Сначала старые
               </label>
-              <label class="checkbox-container">
+              <label class="checkbox-container close-button-new">
                 <input type="radio" name="sort-by" />
                 <span class="checkmark"></span>
                 А-Я
               </label>
-              <label class="checkbox-container">
+              <label class="checkbox-container close-button-new">
                 <input type="radio" name="sort-by" />
                 <span class="checkmark"></span>
                 Я-А
@@ -90,14 +90,14 @@
           <div id="open-filter" class="mobile-filter"></div>
         </div>
         <div class="popup_all_filters_filters  md:px-12">
-          <div class="popup_all_filters_filter">
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
             <input type="checkbox" id="novelty" class="sort-checkbox" />
             <label class="sort-label active-js" for="novelty"
             >Для мальчиков<span class="count">12</span>
               <span class="cross"></span>
             </label>
           </div>
-          <div class="popup_all_filters_filter">
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
             <input
               type="checkbox"
               id="interactive_features"
@@ -108,7 +108,7 @@
               <span class="cross"></span>
             </label>
           </div>
-          <div class="popup_all_filters_filter">
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
             <input
               type="checkbox"
               id="sound_effects"
@@ -119,7 +119,7 @@
               <span class="cross"></span>
             </label>
           </div>
-          <div class="popup_all_filters_filter">
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
             <input
               type="checkbox"
               id="erase_all_filters"
