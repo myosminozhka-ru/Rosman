@@ -751,7 +751,7 @@ header {
     width: 200rem;
     @media screen and (max-width: 1200px) {
       width: 100%;
-
+      gap: 1.2rem;
       overflow: scroll;
     }
   }
