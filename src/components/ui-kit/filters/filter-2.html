@@ -203,13 +203,16 @@
         <hr class="my-14 text-grey" />
 
 
-        <div class="py-10 md:h-[30rem] sticky bottom-0 min-h-[10rem]">
+        <div class="py-10 md:h-[30rem] sticky bottom-0 min-h-[10rem] bg-white">
           <input
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
+            value="Сбросить"
           />
-          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Все фильтры</div>
-          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Применить</div>
+          <button type="button"  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Все фильтры
+          </button>
+          <button   class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Применить
+          </button>
         </div>
       </div>
     </form>
