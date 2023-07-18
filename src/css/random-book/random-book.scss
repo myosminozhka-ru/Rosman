@@ -1,0 +1,37 @@
+.more-down-filters-2 {
+  @apply w-full;
+
+  .more-down-button {
+    &.filters {
+      @apply w-full justify-between pl-30;
+      background-image: url('../../img/filter.svg');
+      background-repeat: no-repeat;
+      background-position: 3% 50%;
+      background-size: 1.5rem 1.5rem;
+
+      &.active-js {
+        @apply bg-yellow;
+      }
+    }
+
+    &.new {
+      // поправил на 30
+      @apply w-full justify-between pl-20;
+      //background-image: url('../../img/sort.svg');
+      background-repeat: no-repeat;
+      /*поправил на 1.5 рем, чтобы красиво встало*/
+      background-position: 3% 50%;
+      background-size: 1.5rem 1.5rem;
+      @media (min-width: 600px) and (max-width: 768px) {
+        background-position: 1% 50%;
+      }
+      @media (min-width: 100px) and (max-width: 599px) {
+        background-position: 2% 50%;
+      }
+
+      &.active-js {
+        @apply bg-yellow;
+      }
+    }
+  }
+}

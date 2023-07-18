@@ -107,6 +107,13 @@
   }
 }
 
+.footer-heading-policy-agreement-text-rand-book {
+  @apply ml-24 flex flex-row flex-nowrap items-end text-s font-medium;
+  @media screen and (max-width: 500px) {
+    @apply flex flex-col items-start;
+  }
+}
+
 .footer-heading-policy-agreement-link {
   @apply text-s font-medium;
 }
