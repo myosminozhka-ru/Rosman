@@ -19,7 +19,10 @@
 }
 
 .filters-block {
-  @apply w-full;
+  @apply w-full ;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 
   .more-down-button {
     @apply w-full justify-between px-0 text-left text-l font-medium;
@@ -740,8 +743,13 @@ header {
     flex-direction: row;
     -webkit-flex-direction: row;
     gap: 2rem;
-    overflow-x: auto;
+    overflow: scroll;
     width: 80rem;
+    @media screen and (max-width: 768px) {
+    width: 100%;
+      overflow: scroll;
+    }
+
   }
 
   .all-brands {
