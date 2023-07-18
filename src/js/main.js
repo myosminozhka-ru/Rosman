@@ -1,13 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
-  var updateWindowSize = (function(){
-    console.log(window.innerHeight)
+  var updateWindowSize = (function () {
+    console.log(window.innerHeight);
     var minAllowedWindowHeight = 700;
     var largerDivHeight = 900;
 
     // actual updateWindowSize function
-    return function(){
+    return function () {
       var winHeight = window.innerHeight;
-      var newHeight = winHeight < minAllowedWindowHeight ? largerDivHeight  : winHeight - '350';
+      var newHeight =
+        winHeight < minAllowedWindowHeight
+          ? largerDivHeight
+          : winHeight - '350';
       document.querySelector('.filters-block').style.height = newHeight + 'px';
     };
   })();
@@ -15,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   updateWindowSize();
   // subscribe the method to future resize events
 
-  addEventListener("resize", (event) => {
+  addEventListener('resize', (event) => {
     updateWindowSize();
   });
 
@@ -47,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.sort-label');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -59,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.filter-label');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -71,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.toy_card');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -112,8 +115,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const targetElement = event.target;
       if (block != null) {
         if (
-            !block.contains(targetElement) &&
-            !targetElement.parentNode.classList.contains('more-down-content')
+          !block.contains(targetElement) &&
+          !targetElement.parentNode.classList.contains('more-down-content')
         ) {
           for (let i = 0; i < moreButtons.length; i++) {
             if (moreButtons[i].classList.contains('active-js')) {
@@ -130,7 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
   activeErase.addEventListener('click', function (event) {
     const filter = document.querySelectorAll('.popup_all_filters_filter');
     for (let i = 0; i < filter.length; i++) {
-      filter[i].remove()
+      filter[i].remove();
     }
   });
   document.addEventListener('click', function (event) {
@@ -604,12 +607,12 @@ function closeFilter() {
   }
 }
 function removeFilter(el) {
-  el.remove()
+  el.remove();
 }
-const inputSearch = document.getElementById("searcAuthor");
+const inputSearch = document.getElementById('searcAuthor');
 if (inputSearch) {
   inputSearch.addEventListener('input', function (event) {
-    const blockSearch = document.getElementById("searchBlock");
+    const blockSearch = document.getElementById('searchBlock');
     let filter = inputSearch.value.toLowerCase();
     const label = blockSearch.querySelectorAll('.sort-label');
     for (let i = 0; i < label.length; i++) {
@@ -622,8 +625,7 @@ if (inputSearch) {
         if (content.includes(filter)) {
           if (label[i].classList.contains('!hidden'))
             label[i].classList.remove('!hidden');
-        }
-        else {
+        } else {
           label[i].classList.add('!hidden');
         }
       }

@@ -1,4 +1,29 @@
 window.addEventListener('DOMContentLoaded', () => {
+  var updateWindowSize = (function () {
+    console.log(window.innerHeight);
+    var minAllowedWindowHeight = 700;
+    var largerDivHeight = 900;
+
+    // actual updateWindowSize function
+    return function () {
+      var winHeight = window.innerHeight;
+      var newHeight =
+        winHeight < minAllowedWindowHeight
+          ? largerDivHeight
+          : winHeight - '350';
+      document.querySelector('.filters-block').style.height = newHeight + 'px';
+    };
+  })();
+  // call the method one time
+  updateWindowSize();
+  // subscribe the method to future resize events
+
+  addEventListener('resize', (event) => {
+    updateWindowSize();
+  });
+
+  // variables
+
   // дропдаун добавление класса active-js с отслеживанием клика вне блока
   const moreButtons = document.getElementsByClassName('more-down-button');
 
@@ -15,6 +40,42 @@ window.addEventListener('DOMContentLoaded', () => {
       } else {
         // content.style.display = "block";
         content.classList.add('active-js');
+      }
+    });
+  }
+  const labelMore = document.getElementsByClassName('show-more-label');
+
+  for (let i = 0; i < labelMore.length; i++) {
+    labelMore[i].addEventListener('click', function () {
+      const content = document.querySelectorAll('.sort-label');
+      for (let j = 0; j < content.length; j++) {
+        if (content[j].classList.contains('!hidden')) {
+          content[j].classList.remove('!hidden');
+        }
+      }
+    });
+  }
+  const filterMore = document.getElementsByClassName('show-more-filter');
+
+  for (let i = 0; i < filterMore.length; i++) {
+    filterMore[i].addEventListener('click', function () {
+      const content = document.querySelectorAll('.filter-label');
+      for (let j = 0; j < content.length; j++) {
+        if (content[j].classList.contains('!hidden')) {
+          content[j].classList.remove('!hidden');
+        }
+      }
+    });
+  }
+  const cardMore = document.getElementsByClassName('js-rm-pag-more-btn');
+
+  for (let i = 0; i < cardMore.length; i++) {
+    cardMore[i].addEventListener('click', function () {
+      const content = document.querySelectorAll('.toy_card');
+      for (let j = 0; j < content.length; j++) {
+        if (content[j].classList.contains('!hidden')) {
+          content[j].classList.remove('!hidden');
+        }
       }
     });
   }
@@ -47,7 +108,34 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.classList.add('active-js');
     });
   }
+  const closeNew = document.querySelector('.close-button-new');
+  if (closeNew) {
+    closeNew.addEventListener('click', function (event) {
+      const block = document.querySelector('.more-down-button.active-js');
+      const targetElement = event.target;
+      if (block != null) {
+        if (
+          !block.contains(targetElement) &&
+          !targetElement.parentNode.classList.contains('more-down-content')
+        ) {
+          for (let i = 0; i < moreButtons.length; i++) {
+            if (moreButtons[i].classList.contains('active-js')) {
+              moreButtons[i].nextElementSibling.classList.remove('active-js');
+              moreButtons[i].classList.remove('active-js');
+            }
+          }
+        }
+      }
+    });
+  }
 
+  const activeErase = document.querySelector('.active-js_erase');
+  activeErase.addEventListener('click', function (event) {
+    const filter = document.querySelectorAll('.popup_all_filters_filter');
+    for (let i = 0; i < filter.length; i++) {
+      filter[i].remove();
+    }
+  });
   document.addEventListener('click', function (event) {
     const block = document.querySelector('.more-down-button.out.active-js');
     const targetElement = event.target;
@@ -414,71 +502,71 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
-// class Number {
-//   constructor(rangeElement, valueElement, options) {
-//     this.rangeElement = rangeElement;
-//     this.valueElement = valueElement;
-//     this.options = options;
-//
-//     // Attach a listener to "change" event
-//     this.rangeElement.addEventListener('input', this.updateSlider.bind(this));
-//   }
-//
-//   // Initialize the slider
-//   init() {
-//     this.rangeElement.setAttribute('min', options.min);
-//     this.rangeElement.setAttribute('max', options.max);
-//     this.rangeElement.value = options.cur;
-//
-//     this.updateSlider();
-//   }
-//
-//   // Format the money
-//   asMoney(value) {
-//     return (
-//       '$' +
-//       parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
-//     );
-//   }
-//
-//   generateBackground(rangeElement) {
-//     if (this.rangeElement.value === this.options.min) {
-//       return;
-//     }
-//
-//     let percentage =
-//       ((this.rangeElement.value - this.options.min) /
-//         (this.options.max - this.options.min)) *
-//       100;
-//     return (
-//       'background: linear-gradient(to right, #000000, #000000 ' +
-//       percentage +
-//       '%, #D9D9D9 ' +
-//       percentage +
-//       '%, #D9D9D9 100%)'
-//     );
-//   }
-//
-//   updateSlider(newValue) {
-//     this.valueElement.innerHTML = this.asMoney(this.rangeElement.value);
-//     this.rangeElement.style = this.generateBackground(this.rangeElement.value);
-//   }
-// }
-//
-// let rangeElement = document.querySelector('.range [type="range"]');
-// let valueElement = document.querySelector('.range .range__value span');
-//
-// let options = {
-//   min: 2000,
-//   max: 75000,
-//   cur: 37500,
-// };
-//
-// if (rangeElement) {
-//   let number = new Slider(rangeElement, valueElement, options);
-//
-//   number.init();
-// }
+class Slider {
+  constructor(rangeElement, valueElement, options) {
+    this.rangeElement = rangeElement;
+    this.valueElement = valueElement;
+    this.options = options;
+
+    // Attach a listener to "change" event
+    this.rangeElement.addEventListener('input', this.updateSlider.bind(this));
+  }
+
+  // Initialize the slider
+  init() {
+    this.rangeElement.setAttribute('min', options.min);
+    this.rangeElement.setAttribute('max', options.max);
+    this.rangeElement.value = options.cur;
+
+    this.updateSlider();
+  }
+
+  // Format the money
+  asMoney(value) {
+    return (
+      '$' +
+      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+    );
+  }
+
+  generateBackground(rangeElement) {
+    if (this.rangeElement.value === this.options.min) {
+      return;
+    }
+
+    let percentage =
+      ((this.rangeElement.value - this.options.min) /
+        (this.options.max - this.options.min)) *
+      100;
+    return (
+      'background: linear-gradient(to right, #000000, #000000 ' +
+      percentage +
+      '%, #D9D9D9 ' +
+      percentage +
+      '%, #D9D9D9 100%)'
+    );
+  }
+
+  updateSlider(newValue) {
+    this.valueElement.innerHTML = this.asMoney(this.rangeElement.value);
+    this.rangeElement.style = this.generateBackground(this.rangeElement.value);
+  }
+}
+
+let rangeElement = document.querySelector('.range [type="range"]');
+let valueElement = document.querySelector('.range .range__value span');
+
+let options = {
+  min: 2000,
+  max: 75000,
+  cur: 37500,
+};
+
+if (rangeElement) {
+  let slider = new Slider(rangeElement, valueElement, options);
+
+  slider.init();
+}
 function showBlock(elementId) {
   const blocks = document.querySelectorAll('.show');
 
@@ -518,24 +606,29 @@ function closeFilter() {
     }
   }
 }
-document.addEventListener('click', function (event) {
-  const block = document.querySelector('.content-block');
-  const blocks = document.querySelectorAll('.show');
-  const targetElement = event.target;
-  for (let i = 0; i < toolbar.length; i++) {
-    console.log(targetElement);
-    console.log(toolbar);
-    if (block != null) {
-      if (
-        !block.contains(targetElement) &&
-        !targetElement.classList.contains('toolbar-button')
-      ) {
-        for (let i = 0; i < blocks.length; i++) {
-          if (blocks[i].classList.contains('show')) {
-            blocks[i].classList.remove('show');
-          }
+function removeFilter(el) {
+  el.remove();
+}
+const inputSearch = document.getElementById('searcAuthor');
+if (inputSearch) {
+  inputSearch.addEventListener('input', function (event) {
+    const blockSearch = document.getElementById('searchBlock');
+    let filter = inputSearch.value.toLowerCase();
+    const label = blockSearch.querySelectorAll('.sort-label');
+    for (let i = 0; i < label.length; i++) {
+      if (!filter) {
+        if (label[i].classList.contains('!hidden')) {
+          label[i].classList.remove('!hidden');
+        }
+      } else {
+        let content = label[i].dataset.name.toLowerCase();
+        if (content.includes(filter)) {
+          if (label[i].classList.contains('!hidden'))
+            label[i].classList.remove('!hidden');
+        } else {
+          label[i].classList.add('!hidden');
         }
       }
     }
-  }
-});
+  });
+}

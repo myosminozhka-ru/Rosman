@@ -203,7 +203,6 @@ if (brandPopupCheckboxes) {
   }
 }
 
-
 // код с фильтрацией и сортировкой
 const allFiltersPopup = document.querySelector('.pup_brand_input');
 if (allFiltersPopup) {
@@ -212,7 +211,7 @@ if (allFiltersPopup) {
     searchValue = searchValue.replace(/\W/g, '');
     const imageContainers = document.querySelectorAll('.image_container');
 
-    imageContainers.forEach(container => {
+    imageContainers.forEach((container) => {
       const brandName = container.dataset.brandName.toLowerCase();
       if (brandName.includes(searchValue)) {
         container.classList.remove('!hidden');
@@ -222,17 +221,16 @@ if (allFiltersPopup) {
     });
 
     if (searchValue.length < 3) {
-      imageContainers.forEach(container => {
+      imageContainers.forEach((container) => {
         container.classList.remove('!hidden');
       });
     }
   });
 }
 
-
 const radioButtons = document.querySelectorAll('[name="sort-by"]');
 if (radioButtons) {
-  radioButtons.forEach(radioButton => {
+  radioButtons.forEach((radioButton) => {
     radioButton.addEventListener('change', function (event) {
       const sortBy = event.target.value;
       const imageContainers = document.querySelectorAll('.image_container');
@@ -246,7 +244,7 @@ if (radioButtons) {
             const dateB = parseDate(b.dataset.brandCreationDate);
             return dateA - dateB;
           });
-          button.innerHTML = 'Сначала новые<span></span>'
+          button.innerHTML = 'Сначала новые<span></span>';
           break;
         case 'date_reverse':
           containerArray.sort((a, b) => {
@@ -254,7 +252,7 @@ if (radioButtons) {
             const dateB = parseDate(b.dataset.brandCreationDate);
             return dateB - dateA;
           });
-          button.innerHTML = 'Сначала старые<span></span>'
+          button.innerHTML = 'Сначала старые<span></span>';
           break;
         case 'name':
           containerArray.sort((a, b) => {
@@ -262,7 +260,7 @@ if (radioButtons) {
             const nameB = b.dataset.brandName.toLowerCase();
             return nameA.localeCompare(nameB);
           });
-          button.innerHTML = 'А-Я<span></span>'
+          button.innerHTML = 'А-Я<span></span>';
           break;
         case 'name_reverse':
           containerArray.sort((a, b) => {
@@ -270,18 +268,19 @@ if (radioButtons) {
             const nameB = b.dataset.brandName.toLowerCase();
             return nameB.localeCompare(nameA);
           });
-          button.innerHTML = 'Я-А<span></span>'
+          button.innerHTML = 'Я-А<span></span>';
           break;
       }
 
-      const containerParent = document.querySelector('.popup_brand_choose_brands');
-      containerArray.forEach(container => {
+      const containerParent = document.querySelector(
+        '.popup_brand_choose_brands'
+      );
+      containerArray.forEach((container) => {
         containerParent.appendChild(container);
       });
     });
   });
 }
-
 
 function parseDate(dateString) {
   const parts = dateString.split('.');
