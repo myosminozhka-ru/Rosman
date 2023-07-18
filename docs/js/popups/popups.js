@@ -202,3 +202,87 @@ if (brandPopupCheckboxes) {
     });
   }
 }
+
+// код с фильтрацией и сортировкой
+const allFiltersPopup = document.querySelector('.pup_brand_input');
+if (allFiltersPopup) {
+  allFiltersPopup.addEventListener('input', function (event) {
+    let searchValue = allFiltersPopup.value.toLowerCase().trim();
+    searchValue = searchValue.replace(/\W/g, '');
+    const imageContainers = document.querySelectorAll('.image_container');
+
+    imageContainers.forEach((container) => {
+      const brandName = container.dataset.brandName.toLowerCase();
+      if (brandName.includes(searchValue)) {
+        container.classList.remove('!hidden');
+      } else {
+        container.classList.add('!hidden');
+      }
+    });
+
+    if (searchValue.length < 3) {
+      imageContainers.forEach((container) => {
+        container.classList.remove('!hidden');
+      });
+    }
+  });
+}
+
+const radioButtons = document.querySelectorAll('[name="sort-by"]');
+if (radioButtons) {
+  radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', function (event) {
+      const sortBy = event.target.value;
+      const imageContainers = document.querySelectorAll('.image_container');
+      const containerArray = Array.from(imageContainers);
+      const button = document.querySelector('.more-down-button.with-padds');
+
+      switch (sortBy) {
+        case 'date':
+          containerArray.sort((a, b) => {
+            const dateA = parseDate(a.dataset.brandCreationDate);
+            const dateB = parseDate(b.dataset.brandCreationDate);
+            return dateA - dateB;
+          });
+          button.innerHTML = 'Сначала новые<span></span>';
+          break;
+        case 'date_reverse':
+          containerArray.sort((a, b) => {
+            const dateA = parseDate(a.dataset.brandCreationDate);
+            const dateB = parseDate(b.dataset.brandCreationDate);
+            return dateB - dateA;
+          });
+          button.innerHTML = 'Сначала старые<span></span>';
+          break;
+        case 'name':
+          containerArray.sort((a, b) => {
+            const nameA = a.dataset.brandName.toLowerCase();
+            const nameB = b.dataset.brandName.toLowerCase();
+            return nameA.localeCompare(nameB);
+          });
+          button.innerHTML = 'А-Я<span></span>';
+          break;
+        case 'name_reverse':
+          containerArray.sort((a, b) => {
+            const nameA = a.dataset.brandName.toLowerCase();
+            const nameB = b.dataset.brandName.toLowerCase();
+            return nameB.localeCompare(nameA);
+          });
+          button.innerHTML = 'Я-А<span></span>';
+          break;
+      }
+
+      const containerParent = document.querySelector(
+        '.popup_brand_choose_brands'
+      );
+      containerArray.forEach((container) => {
+        containerParent.appendChild(container);
+      });
+    });
+  });
+}
+
+function parseDate(dateString) {
+  const parts = dateString.split('.');
+  return new Date(parts[2], parts[1] - 1, parts[0]);
+}
