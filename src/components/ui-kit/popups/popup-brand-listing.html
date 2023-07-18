@@ -24,25 +24,26 @@
         </button>
         <!--  more-down -->
         <div class="more-down-content new">
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" value="date" checked />
+          <label class="checkbox-container pl-4">
+            <input type="radio" name="sort-by" value="date" checked/>
             <span class="checkmark"></span>
             Сначала новые
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" value="date_reverse" />
+          <label class="checkbox-container  pl-4">
+            <input type="radio" name="sort-by" value="date_reverse"/>
             <span class="checkmark"></span>
             Сначала старые
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" value="name" />
+          <label class="checkbox-container  pl-4">
+            <input type="radio" name="sort-by" value="name"/>
             <span class="checkmark"></span>
             А-Я
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" value="name_reverse" />
+          <label class="checkbox-container  pl-4">
+            <input type="radio" name="sort-by" value="name_reverse"/>
             <span class="checkmark"></span>
             Я-А
+          </label>
         </div>
       </div>
     </div>
@@ -260,21 +261,24 @@
       const sortBy = event.target.value;
       const imageContainers = document.querySelectorAll('.image_container');
       const containerArray = Array.from(imageContainers);
+      const button = document.querySelector('.more-down-button.with-padds');
 
       switch (sortBy) {
         case 'date':
           containerArray.sort((a, b) => {
             const dateA = parseDate(a.dataset.brandCreationDate);
             const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateB - dateA;
+            return dateA - dateB;
           });
+          button.innerHTML = 'Сначала новые<span></span>'
           break;
         case 'date_reverse':
           containerArray.sort((a, b) => {
             const dateA = parseDate(a.dataset.brandCreationDate);
             const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateA - dateB;
+            return dateB - dateA;
           });
+          button.innerHTML = 'Сначала старые<span></span>'
           break;
         case 'name':
           containerArray.sort((a, b) => {
@@ -282,6 +286,7 @@
             const nameB = b.dataset.brandName.toLowerCase();
             return nameA.localeCompare(nameB);
           });
+          button.innerHTML = 'А-Я<span></span>'
           break;
         case 'name_reverse':
           containerArray.sort((a, b) => {
@@ -289,6 +294,7 @@
             const nameB = b.dataset.brandName.toLowerCase();
             return nameB.localeCompare(nameA);
           });
+          button.innerHTML = 'Я-А<span></span>'
           break;
       }
 
@@ -298,6 +304,7 @@
       });
     });
   });
+
   function parseDate(dateString) {
     const parts = dateString.split('.');
     return new Date(parts[2], parts[1] - 1, parts[0]);
