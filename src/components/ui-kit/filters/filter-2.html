@@ -1,11 +1,11 @@
 <div class="main-block filter-2 flex justify-around" id="filter-2">
   <div class="flex w-full flex-row justify-center">
-    <form id="filter-form-2" class="filters-block">
+    <form id="filter-form-2" class="filters-block overflow-y-scroll">
       <p class="mobile-p">Фильтры</p>
       <span id="close-filter"> </span>
-      <div class="more-down">
-        <div class="more-down-button">Категории<span></span></div>
-        <div class="more-down-content">
+      <div class="more-down ">
+        <div class="more-down-button active-js">Категории<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-15" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-15">Трансформеры</label>
           <input type="checkbox" id="sort-16" class="sort-checkbox" />
@@ -14,18 +14,32 @@
           <label class="sort-label my-14" for="sort-17"
             >Игровые набор и фигурки</label
           >
-          <button class="button-yellow-full">Показать ещё</button>
+          <input type="checkbox" id="sort-117" class="sort-checkbox" />
+          <label class="sort-label my-14 !hidden" for="sort-117"
+          >Игровые набор и фигурки</label
+          >
+          <input type="checkbox" id="sort-217" class="sort-checkbox" />
+          <label class="sort-label my-14 !hidden" for="sort-217"
+          >Игровые набор и фигурки</label
+          >
+          <input type="checkbox" id="sort-317" class="sort-checkbox" />
+          <label class="sort-label my-14 !hidden" for="sort-317"
+          >Игровые набор и фигурки</label
+          >
+          <div class="button-yellow-full show-more-label text-m cursor-pointer">Показать ещё</div>
         </div>
         <hr class="my-14 text-grey" />
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto mr-12 w-auto text-l font-semibold">Новинка</span>
+          <span class="my-auto mr-12 w-auto  text-l font-semibold"
+            >Новинка</span
+          >
           <label class="toggle-switch">
             <input type="checkbox" />
             <span class="slider"></span>
           </label>
         </div>
         <div class="my-4 flex flex justify-between">
-          <span class="my-auto w-auto text-l font-semibold"
+          <span class="my-auto w-auto  text-l font-semibold"
             >Скоро в продаже</span
           >
           <label class="toggle-switch">
@@ -34,8 +48,8 @@
           </label>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Для кого<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Для кого<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-18" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-18">Для Мальчиков</label>
           <input type="checkbox" id="sort-19" class="sort-checkbox" />
@@ -44,8 +58,8 @@
           <label class="sort-label my-14" for="sort-20">Для всех</label>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Возраст<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Возраст<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="filter-20" class="filter-checkbox" />
           <label class="filter-label age" for="filter-20">0+ </label>
           <input type="checkbox" id="filter-21" class="filter-checkbox" />
@@ -60,13 +74,17 @@
           <label class="filter-label age" for="filter-25">15+ </label>
           <input type="checkbox" id="filter-26" class="filter-checkbox" />
           <label class="filter-label age" for="filter-26">5+</label>
-          <input type="checkbox" id="filter-27" class="filter-checkbox" />
-          <label class="filter-label age" for="filter-27">7+ </label>
-          <button class="button-yellow-full my-14">Показать ещё</button>
+          <input type="checkbox" id="filter-127" class="filter-checkbox" />
+          <label class="filter-label age !hidden" for="filter-127">7+ </label>
+          <input type="checkbox" id="filter-227" class="filter-checkbox" />
+          <label class="filter-label age !hidden" for="filter-227">7+ </label>
+          <input type="checkbox" id="filter-327" class="filter-checkbox" />
+          <label class="filter-label age !hidden" for="filter-327">7+ </label>
+          <div class="button-yellow-full text-m my-14 text-center show-more-filter cursor-pointer">Показать ещё</div>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Тип<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Тип<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-21" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-21"
             >Пластиковый конструктор
@@ -85,8 +103,8 @@
           <button class="button-yellow-full">Посмотреть все</button>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Особенности<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Особенности<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-24" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-24"
             >Три диска
@@ -102,11 +120,11 @@
             >Две трансформации
             <div><span class="count">12</span> <span class="cross"></span></div>
           </label>
-          <button class="button-yellow-full">Посмотреть все</button>
+          <a href="#" class="button-yellow-full">Посмотреть все</a>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Упаковка<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Упаковка<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-27" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-27"
             >Карточная упаковка
@@ -125,8 +143,8 @@
           <button class="button-yellow-full">Посмотреть все</button>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Назначение<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Назначение<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="sort-30" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-30"
             >Развитие моторики
@@ -145,8 +163,8 @@
           <button class="button-yellow-full">Посмотреть все</button>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button">Популярное<span></span></div>
-        <div class="more-down-content">
+        <div class="more-down-button active-js">Популярное<span></span></div>
+        <div class="more-down-content active-js">
           <input type="checkbox" id="filter-28" class="filter-checkbox" />
           <label class="filter-label" for="filter-28"
             >Хиты<span class="count">1</span> <span class="cross"></span>
@@ -184,17 +202,14 @@
         </div>
         <hr class="my-14 text-grey" />
 
-        <div class="py-10 md:h-[30rem]">
+
+        <div class="py-10 md:h-[30rem] sticky bottom-0 min-h-[10rem]">
           <input
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
           />
-          <div
-            class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
-            onclick="closeFilter();"
-          >
-            Все фильтры
-          </div>
+          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Все фильтры</div>
+          <div  class="button-black my-10 w-full js_popup_all_filters_button cursor-pointer text-m" onclick="closeFilter();">Применить</div>
         </div>
       </div>
     </form>
@@ -215,7 +230,7 @@
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
           <label class="sort-label active-js" for="novelty"
-            >Новинка<span class="count">12</span> <span class="cross"></span>
+          >Новинка<span class="count">12</span> <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
@@ -225,14 +240,14 @@
             class="sort-checkbox"
           />
           <label class="sort-label active-js" for="interactive_features"
-            >Интерактивные функции<span class="count">12</span>
+          >Интерактивные функции<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
           <label class="sort-label active-js" for="sound_effects"
-            >Звуковые эффекты<span class="count">12</span>
+          >Звуковые эффекты<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
@@ -243,7 +258,7 @@
             class="sort-checkbox_erase"
           />
           <label class="sort-label_erase" for="erase_all_filters"
-            >Сбросить все
+          >Сбросить все
             <span class="cross"></span>
           </label>
         </div>
@@ -253,8 +268,8 @@
     <div class="popup_all_filters_block_filter">
       <div class="popup_all_filters_block_filter_clmn">
         <div class="more-down">
-          <div class="more-down-button justify-btwn">Бренды<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Бренды<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -301,8 +316,8 @@
           </div>
           <hr class="my-14 text-grey" />
 
-          <div class="more-down-button justify-btwn">Для кого<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Для кого<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -331,8 +346,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Возраст<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Возраст<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -361,8 +376,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Рост<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Рост<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -391,13 +406,13 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn null-margin">
+          <div class="more-down-button active-js justify-btwn null-margin">
             Интерактивные функции<label class="toggle-switch">
-              <input type="checkbox" class="dropdown_checkbox" />
-              <p class="slider"></p>
-            </label>
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -426,13 +441,13 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn null-margin">
+          <div class="more-down-button active-js justify-btwn null-margin">
             Звуковые эффекты<label class="toggle-switch">
-              <input type="checkbox" class="dropdown_checkbox" />
-              <p class="slider"></p>
-            </label>
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -468,7 +483,7 @@
               <span class="slider"></span>
             </label>
           </div>
-          <div class="more-down-content">
+          <div class="more-down-content active-js">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -501,8 +516,8 @@
       </div>
       <div class="popup_all_filters_block_filter_clmn">
         <div class="more-down">
-          <div class="more-down-button justify-btwn">Тип<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Тип<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -531,8 +546,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Упаковка<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Упаковка<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -561,10 +576,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Оcобенности<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -593,10 +608,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Назначение<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -625,8 +640,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Материал<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Материал<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -663,8 +678,8 @@
             </label>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Механизм<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Механизм<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -701,8 +716,8 @@
             </label>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Масштаб<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Масштаб<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -735,8 +750,8 @@
       </div>
       <div class="popup_all_filters_block_filter_clmn">
         <div class="more-down">
-          <div class="more-down-button justify-btwn">Тематика<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Тематика<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -765,10 +780,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Любимые сюжеты<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -797,10 +812,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Любимые герои<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -829,10 +844,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Навыки и развитие ребенка<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -861,10 +876,10 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Размер пользовательский<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -901,10 +916,10 @@
             </label>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">
+          <div class="more-down-button active-js justify-btwn">
             Тип питания<span></span>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -933,8 +948,8 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn">Цвет<span></span></div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-button active-js justify-btwn">Цвет<span></span></div>
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -963,13 +978,13 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="more-down-button justify-btwn null-margin">
+          <div class="more-down-button active-js justify-btwn null-margin">
             Назначение аксессуара<label class="toggle-switch">
-              <input type="checkbox" class="dropdown_checkbox" />
-              <p class="slider"></p>
-            </label>
+            <input type="checkbox" class="dropdown_checkbox" />
+            <p class="slider"></p>
+          </label>
           </div>
-          <div class="more-down-content pad-left">
+          <div class="more-down-content active-js pad-left">
             <div class="js_popup_filter_item checkbox_main">
               <input
                 class="js_popup_all_filters_checkbox checkbox__input_main"
@@ -1006,14 +1021,17 @@
       <div class="popup_all_filters_buttons">
         <div class="popup_collaboration_page_four_buttons">
           <button class="button-white collab_btn pup_btn">Назад</button>
-          <button class="button-black collab_btn pup_btn">Применить</button>
+          <button class="button-black collab_btn pup_btn">
+            Применить
+          </button>
         </div>
       </div>
     </div>
-    <div class="mx-auto w-1/4 items-center md:w-full">
+    <div class='mx-auto items-center w-1/4 mb-24'>
       <a href="#" class="popup_all_filters_filter_not_found link-m">
         Не нашли нужный фильтр?
       </a>
     </div>
+
   </div>
 </div>
