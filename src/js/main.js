@@ -607,25 +607,26 @@ function removeFilter(el) {
   el.remove()
 }
 const inputSearch = document.getElementById("searcAuthor");
-
-inputSearch.addEventListener('input', function (event) {
- const blockSearch = document.getElementById("searchBlock");
- let filter = inputSearch.value.toLowerCase();
- const label = blockSearch.querySelectorAll('.sort-label');
-  for (let i = 0; i < label.length; i++) {
-    if (!filter) {
-      if (label[i].classList.contains('!hidden')) {
-        label[i].classList.remove('!hidden');
-      }
-    } else {
-      let content = label[i].dataset.name.toLowerCase();
-      if (content.includes(filter)) {
-        if (label[i].classList.contains('!hidden'))
+if (inputSearch) {
+  inputSearch.addEventListener('input', function (event) {
+    const blockSearch = document.getElementById("searchBlock");
+    let filter = inputSearch.value.toLowerCase();
+    const label = blockSearch.querySelectorAll('.sort-label');
+    for (let i = 0; i < label.length; i++) {
+      if (!filter) {
+        if (label[i].classList.contains('!hidden')) {
           label[i].classList.remove('!hidden');
-      }
-      else {
-        label[i].classList.add('!hidden');
+        }
+      } else {
+        let content = label[i].dataset.name.toLowerCase();
+        if (content.includes(filter)) {
+          if (label[i].classList.contains('!hidden'))
+            label[i].classList.remove('!hidden');
+        }
+        else {
+          label[i].classList.add('!hidden');
+        }
       }
     }
-  }
-});
+  });
+}
