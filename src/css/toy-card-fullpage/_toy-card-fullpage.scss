@@ -73,13 +73,14 @@
   @apply relative;
 }
 
-.breadcrumbs-arrow {
-  @apply absolute hidden h-12 w-32;
-  left: -1.1rem;
-  background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
-  background-size: contain;
+@layer {
+  .breadcrumbs-arrow {
+    @apply absolute hidden h-12 w-32;
+    left: -1.1rem;
+    background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
+    background-size: contain;
+  }
 }
-
 .breadcrumbs-path-hidden-text {
   @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
@@ -87,6 +88,7 @@
   top: 2.9rem;
   left: -1.2rem;
 }
+
 
 .breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
@@ -371,7 +373,7 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply mb-64 flex flex-col gap-24 md:gap-48 md:mb-48;
+  @apply pb-64 flex flex-col gap-24 md:gap-48 md:pb-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
@@ -522,8 +524,10 @@
   @media screen and (max-width: 400px) {
     height: 45rem !important;
   }
+
   &.books-slider {
     height: 84.9rem;
+
     &.elephant {
       height: 80rem;
       @media screen and (min-width: 2300px) {
@@ -538,12 +542,15 @@
     }
   }
 }
+
 #yellow-moving-block2.card-fullpage-w-bg-modified {
   height: 51.9rem;
   padding: 0;
   margin: 0;
+
   &.books-slider {
     height: 65.9rem;
+
     &.elephant {
       height: 70rem;
       @media screen and (min-width: 2300px) {
@@ -559,14 +566,17 @@
     }
   }
 }
+
 #yellow-moving-block.card-fullpage-w-bg-modified {
   @apply m-0 h-[51.9rem] p-0 ipadmini:h-[45rem] ssm:h-[40rem];
 
   @media screen and (max-width: 400px) {
     height: 37rem !important;
   }
+
   &.books-slider {
     height: 65.9rem;
+
     &.elephant {
       height: 70rem;
       @media screen and (min-width: 2300px) {

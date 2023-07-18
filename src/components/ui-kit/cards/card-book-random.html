@@ -1,10 +1,10 @@
 <div
-  class="book_card js_item_card item_card"
+  class="book_card !pb-0 js_item_card item_card !flex-row !gap-48 md:!gap-16 md:!flex-col"
   itemscope
   itemtype="https://schema.org/Book"
 >
-  <div class="book_card_heading">
-    <div class="item_card_tags bordered_tags">
+  <div class="book_card_heading md:max-w-[36rem] md:mx-auto msm:w-full">
+    <div class="item_card_tags bordered_tags gap-16 msm:gap-2">
       <div class="item_card_tags_main bordered_tags_main">
         <a
           itemprop="url"
@@ -22,20 +22,24 @@
       <a itemprop="url" href="#" class="book_card_tags_age body-s-bold">8+</a>
     </div>
 
-    <div class="book_card_image item_card_image">
+    <div class="book_card_image  item_card_image">
       <img
         itemprop="image"
         class="book_card_img item_card_img"
-        src="../../img/cards_book.svg"
+        src="../../img/book-charodol1.png"
         alt=""
       />
     </div>
   </div>
-  <div class="book_card_info item_card_info" itemprop="description">
-    <div itemprop="name" class="book_card_name item_card_name">
-      Чародол. Весь цикл в одном томе
-    </div>
-    <div itemprop="author" class="book_card_author">Щерба Н. В.</div>
+  <div class="book_card_info item_card_info max-w-[47rem] bs:max-w-[40rem] md:max-w-[200rem]" itemprop="description">
+    <h4 itemprop="name" class="head-4">Дорога</h4>
+    <!--    <div itemprop="author" class="book_card_author">Щерба Н. В.</div>-->
+    <span class="text-15.20 sm:text-s">
+      Книга, вдохновившая создателей авторов знаменитой игры и сериала HBO «Одни
+      из нас».Отец и сын идут по обезображенному катастрофой континенту, пытаясь
+      выжить в новом мире, где каждый сам за себя. За этот роман Кормак Маккарти
+      получил Пулитцеровскую премию.
+    </span>
     <div class="book_card_more item_card_more">
       <button
         class="book_card_item_link item_card_link overline-button"
