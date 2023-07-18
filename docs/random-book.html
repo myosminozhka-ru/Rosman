@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Случайная книга</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header id="header2" class="bottom header h-64" data-header="books">
+  <div class="logo"><img src="./img/logo.svg"/></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg"/></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="search-input hide">
+    <span class="search-icon"></span>
+    <span class="micro-icon"></span>
+    <input type="text" placeholder="Введите поисковый запрос"/>
+    <span class="cross-icon" onclick="toggleSearch()"></span>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button" onclick="toggleSearch()"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+    <span class="heart-button"></span>
+    <span class="search-button" onclick="toggleSearch()"></span>
+  </div>
+</header>
+<div class="toolbar">
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png"/>Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png"/>Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png"/>Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png"/>Меню
+  </div>
+</div>
+<div id="block1" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card-fullpage">
+  <div
+    id="yellow-background"
+    class="card-fullpage-modified-yellow-background"
+  >
+    <div id="moving-block">
+      <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+        <g>
+          <path
+            id="moving-bock-shadow"
+            d="M 0 0 L 100 0 L 100 100 L 0 100"
+            fill="white"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="card-fullpage-modified-above-block">
+      <!--    тут будет контент по карточке    -->
+
+      <!--   модалка - связаться с нами   -->
+      <div class="js_popup_contact_us_ru_modal modal">
+        <div class="popup_contact_us_content modal-content">
+          <div class="popup_contact_us_header">
+            <div class="popup_contact_us_text">Свяжитесь с нами</div>
+            <span
+              class="js_popup_contact_us_close_button ui-popup-close-button"
+            ></span>
+          </div>
+          <div class="js_contact_us_popup_body">
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Письмо директору</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src=".//img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Заявка на партнерство</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Отправить резюме</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Подписаться на рассылку</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">СМИ</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">Блогерам</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Задать вопрос по игрушкам</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="./img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-box js_contact_us_ru_popup_button !fixed">
+        <span class="custom-box-span"></span>
+        <div class="custom-before"></div>
+        <div>Написать нам</div>
+        <div class="custom-after"></div>
+      </div>
+      <!--      -->
+
+      <div class="flex flex-col">
+        <div
+          class="card-fullpage-filter-links mb-0 mb-16 mt-24 px-24 sm:mt-16 sm:px-12"
+        >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >0-3</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >4-6</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >7-9</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >10-15</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >15+</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Новинки</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Хиты</a
+          >
+          <a href="#" class="card-fullpage-filter-link text-s font-medium"
+          >Случайная книга</a
+          >
+        </div>
+
+        <div
+          class="flex items-center justify-between px-24 pb-24 sm:px-12 sm:pb-16"
+        >
+          <p class="breadcrumbs">
+            <a class="text-s" href="#">Главная </a><span>/</span>
+            <a class="text-s" href="#">Книги </a><span>/</span>
+            <a class="text-s !text-black" href="#">Каталог проектов </a>
+          </p>
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">/</div>
+            <div class="breadcrumbs-small-screen-path">Книги</div>
+            <span>/</span>
+            <div class="breadcrumbs-small-screen-path !text-black">
+              Каталог проектов
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mb-64 flex flex-col gap-64 px-24 sm:mb-48 sm:gap-24 sm:px-12"
+      >
+        <h1 class="head-1">Случайная книга</h1>
+        <div
+          class="grid grid-cols-3 gap-x-16 px-[12rem] bsmax:px-[9rem] bs:px-0 md:grid-cols-1 md:items-center md:justify-center md:gap-y-16"
+        >
+          <div
+            id="genres"
+            class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]"
+          >
+            <button
+              class="more-down-button new border-b border-[#D9D9D9] md:border md:border-black"
+            >
+              Выберите жанр<span></span>
+            </button>
+            <!--  more-down -->
+            <div
+              class="more-down-content !gap-16 border border-t-0 !p-16 md:max-h-[20rem] md:overflow-x-auto"
+            >
+              <div class="flex flex-col gap-6">
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="genre-1"
+                  />
+                  <label
+                    for="genre-1"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>Художественная литература для детей</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="genre-2"
+                  />
+                  <label
+                    for="genre-2"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>Подготовка к школе и развивающие пособия</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="genre-3"
+                  />
+                  <label
+                    for="genre-3"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>Детские энциклопедии</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="genre-4"
+                  />
+                  <label
+                    for="genre-4"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>Раскраски</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="genre-5"
+                  />
+                  <label
+                    for="genre-5"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>Раскраски</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="ages"
+            class="more-down-filters-2 h-max max-w-[29rem] md:max-w-[200rem]"
+          >
+            <button
+              class="more-down-button new border-b border-[#D9D9D9] md:border md:border-black"
+            >
+              Выберите возраст<span></span>
+            </button>
+            <!--  more-down -->
+            <div
+              class="more-down-content border border-t-0 !p-16 md:max-h-[20rem] md:overflow-x-auto"
+            >
+              <div class="flex flex-col gap-6">
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="age-1"
+                  />
+                  <label
+                    for="age-1"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>0+</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="age-2"
+                  />
+                  <label
+                    for="age-2"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>1+</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="age-3"
+                  />
+                  <label
+                    for="age-3"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>5+</span>
+                  </label>
+                </div>
+                <div
+                  class="js-footer-heading-policy-agreement cb-f-rb checkbox_main"
+                >
+                  <input
+                    class="js-footer-heading-checkbox checkbox__input_main"
+                    type="checkbox"
+                    id="age-4"
+                  />
+                  <label
+                    for="age-4"
+                    class="footer-heading-policy-agreement-text-rand-book checkbox__label_main body-m"
+                  >
+                    <span>7+</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button-black js-randomize-book h-max max-w-[29rem] md:max-w-[200rem]"
+          >
+            Подобрать
+          </button>
+        </div>
+      </div>
+      <!-- Компонент для книги -->
+      <div
+        class="random-book-card mx-auto mb-64 hidden max-w-[78rem] px-24 sm:px-12"
+      >
+        <div
+          class="book_card js_item_card item_card !flex-row !gap-48 !pb-0 md:!flex-col md:!gap-16"
+          itemscope
+          itemtype="https://schema.org/Book"
+        >
+          <div class="book_card_heading md:mx-auto md:max-w-[36rem] msm:w-full">
+            <div class="item_card_tags bordered_tags gap-16 msm:gap-2">
+              <div class="item_card_tags_main bordered_tags_main">
+                <a
+                  itemprop="url"
+                  href="#"
+                  class="book_card_tags_first bordered_tags_item"
+                >Бестселлер</a
+                >
+                <a
+                  itemprop="url"
+                  href="#"
+                  class="book_card_tags_second bordered_tags_item"
+                >Новинка</a
+                >
+              </div>
+              <a itemprop="url" href="#" class="book_card_tags_age body-s-bold">8+</a>
+            </div>
+
+            <div class="book_card_image item_card_image">
+              <img
+                itemprop="image"
+                class="book_card_img item_card_img"
+                src="./img/book-charodol1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="book_card_info item_card_info max-w-[47rem] bs:max-w-[40rem] md:max-w-[200rem]"
+            itemprop="description"
+          >
+            <h4 itemprop="name" class="head-4">Дорога</h4>
+            <!--    <div itemprop="author" class="book_card_author">Щерба Н. В.</div>-->
+            <span class="text-15.20 sm:text-s">
+      Книга, вдохновившая создателей авторов знаменитой игры и сериала HBO «Одни
+      из нас».Отец и сын идут по обезображенному катастрофой континенту, пытаясь
+      выжить в новом мире, где каждый сам за себя. За этот роман Кормак Маккарти
+      получил Пулитцеровскую премию.
+    </span>
+            <div class="book_card_more item_card_more">
+              <button
+                class="book_card_item_link item_card_link overline-button"
+                itemprop="url"
+              >
+                Подробнее
+              </button>
+              <div class="flex flex-row flex-nowrap gap-8">
+                <button class="item_card_add_to_favourite"></button>
+                <div class="item_card-external-link group relative">
+                  <div
+                    class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                  >
+                    <div
+                      class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                    ></div>
+                    <button class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0">
+                      <div class="block h-20 w-20">
+                        <img src="./img/copy-link.svg" alt=""/>
+                      </div>
+                      <span class="body-s whitespace-nowrap p-0">
+                Скопировать ссылку
+              </span>
+                    </button>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/vkcom.svg" alt=""/>
+                      </div>
+                      <span class="body-s">ВКонтакте</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/tiktok.svg" alt=""/>
+                      </div>
+                      <span class="body-s">TikTok</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/facebook.svg" alt=""/>
+                      </div>
+                      <span class="body-s" href="#">Facebook</span>
+                    </a>
+                    <a href="#" class="flex flex-row flex-nowrap gap-8">
+                      <div class="block h-20 w-20">
+                        <img src="./img/likee.svg" alt=""/>
+                      </div>
+                      <span class="body-s">Likee</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- тут ниже футер -->
+
+<div class="footer rosman-footer-ru bs:mb-[3.5rem]">
+  <div class="footer-container">
+    <div class="footer-heading">
+      <div class="footer-heading-main">
+        <span class="footer-heading-image"></span>
+        <div class="footer-heading-subscription">
+          <div class="drop-down-discover-rosman">
+            <div href="#" class="more-down-button disc-rosman-button">
+              Книги<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-8 text-grey"/>
+            <div href="#" class="more-down-button disc-rosman-button">
+              Игрушки<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="mb-0 mt-8 text-grey"/>
+          </div>
+          <div class="footer-heading-subs-title">
+            Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
+            раз в неделю. Бесплатно, по делу
+          </div>
+          <div class="footer-heading-subs-inputs">
+            <div class="footer-heading-subs-inputs-main">
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="footer-heading-subs-input input"
+              />
+              <button class="footer-heading-subs-button button-yellow">
+                Подписаться
+              </button>
+            </div>
+            <div class="js-footer-heading-policy-agreement checkbox_main">
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-heading-discover-rosman">
+        <div class="footer_heading_about footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Компания</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >О компании</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Партнёрам</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Карьера в РОСМЭН</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Контакты</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_books footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Книги</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >Каталог книг</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+            >Авторы РОСМЭН</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+            >Об издательстве</a
+            >
+            <a href="#" class="footer-section-item common-text body-s">НДК</a>
+            <a href="#" class="footer-section-item common-text body-s"
+            >Писательская школа</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Проект раз</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Проект два</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_toys footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Игрушки</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+            >Каталог игрушек</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Бренды</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+            >Новости игрушек</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="text-black"/>
+    <div class="footer-info">
+      <div class="footer-info-main">
+        <div class="footer-info-rss common-text">
+          <a href="#" class="footer-info-rss-image"></a>RSS рассылка
+        </div>
+        <div class="footer-info-contacts">
+          <div class="footer-info-address ft-inf-item common-text">
+            17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+            помещ. II, 1 этаж
+          </div>
+          <div class="footer-info-directs ft-inf-item">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+            >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
+              rosman@rosman.ru
+            </a>
+          </div>
+          <div class="footer-info-address ft-inf-item common-text">
+            127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
+            Роща
+          </div>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+          >rosman@rosman.ru</a
+          >
+        </div>
+      </div>
+      <hr class="text-black"/>
+      <div class="footer-extras">
+        <div class="footer-extras-creators">
+          <div class="footer-extras-idea common-text">
+            © 1992–2023 ООО РОСМЭН. Все права защищены.
+          </div>
+          <div class="footer-extras-maker common-text">
+            Разработка сайта: Осьминожка
+          </div>
+        </div>
+        <div class="footer-extras-links">
+          <div class="footer-extras-link common-text link-m-bold">
+            Политика конфиденциальности
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">
+            Пользовательское соглашение
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/wishlist.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/pagination-choose-button.js"></script>
+<script src="./js/library.js"></script>
+<script src="./js/eleph-on-planets.js"></script>
+<script src="./js/animation/animation_paper.js"></script>
+<script src="./js/cards/cards.js"></script>
+<script src="./js/detailed-pages/detailed-pages-swiper.js"></script>
+<script src="./js/external/external.js"></script>
+<script src="./js/google-map/map.js"></script>
+<script src="./js/popups/popups.js"></script>
+<script src="./js/sliders/slider.js"></script>
+<script src="./js/toy-card-fullpage/toy-card-fullpage.js"></script>
+<script src="./js/vacancy-page/vacancy-page.js"></script>
+<script src="./js/random-book/random-book.js"></script>
+</body>
+</html>
