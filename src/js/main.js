@@ -108,25 +108,30 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.classList.add('active-js');
     });
   }
-  const closeNew = document.querySelector('.close-button-new');
+  const closeNew = document.querySelectorAll('.close-button-new');
   if (closeNew) {
-    closeNew.addEventListener('click', function (event) {
-      const block = document.querySelector('.more-down-button.active-js');
-      const targetElement = event.target;
-      if (block != null) {
-        if (
-          !block.contains(targetElement) &&
-          !targetElement.parentNode.classList.contains('more-down-content')
-        ) {
-          for (let i = 0; i < moreButtons.length; i++) {
-            if (moreButtons[i].classList.contains('active-js')) {
-              moreButtons[i].nextElementSibling.classList.remove('active-js');
-              moreButtons[i].classList.remove('active-js');
+    for (let y = 0; y < closeNew.length; y++) {
+      closeNew[y].addEventListener('click', function (event) {
+        const block = document.querySelector('.more-down-button.active-js');
+        const text = document.querySelector('.sort-text');
+        console.log();
+        text.innerHTML = closeNew[y].querySelector('p').innerText;
+        const targetElement = event.target;
+        if (block != null) {
+          if (
+            !block.contains(targetElement) &&
+            !targetElement.parentNode.classList.contains('more-down-content')
+          ) {
+            for (let i = 0; i < moreButtons.length; i++) {
+              if (moreButtons[i].classList.contains('active-js')) {
+                moreButtons[i].nextElementSibling.classList.remove('active-js');
+                moreButtons[i].classList.remove('active-js');
+              }
             }
           }
         }
-      }
-    });
+      });
+    }
   }
 
   const activeErase = document.querySelector('.active-js_erase');
