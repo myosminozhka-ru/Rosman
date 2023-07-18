@@ -1,17 +1,17 @@
-let largeImg = document.querySelector('.largeImg');
-let thumbs = document.querySelectorAll('.thumbs img');
-
-thumbs.forEach(function (thumb) {
-  thumb.addEventListener('click', function (event) {
-    const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
-    event.preventDefault();
-    largeImg.src = thumb.getAttribute('src');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-thumb-chosen');
-    }
-    thumb.classList.add('js-thumb-chosen');
-  });
-});
+// let largeImg = document.querySelector('.largeImg');
+// let thumbs = document.querySelectorAll('.thumbs img');
+//
+// thumbs.forEach(function (thumb) {
+//   thumb.addEventListener('click', function (event) {
+//     const currentChosen = document.querySelector('.thumbs .js-thumb-chosen');
+//     event.preventDefault();
+//     largeImg.src = thumb.getAttribute('src');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-thumb-chosen');
+//     }
+//     thumb.classList.add('js-thumb-chosen');
+//   });
+// });
 
 // нужна функция, которая будет отслеживать нажатие на js-mdb,
 // после этого card-fp-hide либо добавляется, либо убирается класс card-fp-hidden-item,
@@ -20,6 +20,7 @@ thumbs.forEach(function (thumb) {
 let jsMdb = document.querySelector('.js-mdb');
 let cardTextToHide = document.querySelector('.card-fp-hide');
 let cartToTrans = document.querySelector('.card-fp-trans');
+let isExpandedToys = false;
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
@@ -28,6 +29,15 @@ if (jsMdb) {
     }
     if (cartToTrans) {
       cartToTrans.classList.toggle('card-fp-transparent-text');
+    }
+    isExpandedToys = !isExpandedToys; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedToys) {
+      jsMdb.innerHTML = 'Свернуть описание<span></span>';
+      jsMdb.classList.add("active-js")
+    } else {
+      jsMdb.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsMdb.classList.remove("active-js")
     }
   };
 }
@@ -89,13 +99,17 @@ if (jsMdbDescButton) {
     if (isExpanded) {
       jsDescriptionWrapper.classList.remove('gapped');
       jsMdbDescButton.innerHTML = 'Развернуть описание<span></span>';
+      jsMdbDescButton.classList.remove('active-js')
     } else {
       jsDescriptionWrapper.classList.add('gapped');
       jsMdbDescButton.innerHTML = 'Свернуть описание<span></span>';
+      jsMdbDescButton.classList.add('active-js')
+
+
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -150,14 +164,22 @@ dots.forEach((dot, index) => {
 });
 
 // для описания книги, чтобы там было многоточие
-const jsBookToggleButton = document.querySelectorAll('.js-book-toggle-button');
-const jsBookTextContainer = document.querySelectorAll('.card-fp-desc-text-top');
+const jsBookToggleButton = document.querySelector('.js-book-toggle-button');
+const jsBookTextContainer = document.querySelector('.card-fp-desc-text-top');
+let isExpandedDesc = false;
 if (jsBookToggleButton && jsBookTextContainer) {
-  for (let i = 0; i < jsBookTextContainer.length; i++) {
-    jsBookToggleButton[i].addEventListener('click', function () {
-      jsBookTextContainer[i].classList.toggle('line-clamp-none');
-    });
-  }
+  jsBookToggleButton.addEventListener('click', function () {
+    jsBookTextContainer.classList.toggle('line-clamp-none');
+    isExpandedDesc = !isExpandedDesc; // Изменяем состояние isExpanded при каждом клике
+
+    if (isExpandedDesc) {
+      jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
+      jsBookToggleButton.classList.add("active-js")
+    } else {
+      jsBookToggleButton.innerHTML = 'Подробное описание, характеристика<span></span>';
+      jsBookToggleButton.classList.remove("active-js")
+    }
+  });
 }
 
 // swiper fullpage
@@ -175,48 +197,85 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
   breakpoints: {
     950: {
       slidesPerView: 4,
-      spaceBetween: 16,
+      spaceBetween: 25,
     },
     600: {
       slidesPerView: 3,
-      spaceBetween: 8,
+      spaceBetween: 16,
     },
     0: {
       slidesPerView: 2,
-      spaceBetween: 8,
+      spaceBetween: 16,
     },
   },
 });
 
-// Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
-  // ищем слайдер превью по селектору
-  // задаем параметры
-  direction: 'vertical', // вертикальная прокрутка
-  slidesPerView: 5, // показывать по 3 превью
-  spaceBetween: 14, // расстояние между слайдами
+const swiperImageGallery = new Swiper('.swiper-image-gallery', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
   navigation: {
-    // задаем кнопки навигации
-    nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev', // кнопка Prev
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
-  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 16,
   breakpoints: {
-    // условия для разных размеров окна браузера
-    0: {
-      // при 0px и выше
-      direction: 'horizontal', // горизонтальная прокрутка
+    950: {
+      slidesPerView: 4,
+      spaceBetween: 16,
     },
-    768: {
-      // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    0: {
+      slidesPerView: 2.3,
+      spaceBetween: 16,
     },
   },
 });
+
+// Инициализация превью слайдера картинок товара
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
+  direction: 'vertical',
+  slidesPerView: 5,
+  spaceBetween: 5,
+  navigation: {
+    nextEl: '.slider__next',
+    prevEl: '.slider__prev',
+  },
+  clickable: true,
+  freeMode: true,
+});
 // Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container-3', {
+const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // ищем слайдер превью по селектору
   // задаем параметры
+  on: {
+    slideChange: function () {
+      // console.log(sliderThumbs.activeIndex);
+      const firstChosen = document.querySelector(".first-chosen");
+      if (firstChosen.classList.contains('p-4')) {
+        firstChosen.classList.remove("js-thumb-chosen");
+        firstChosen.classList.remove("p-4");
+      }
+      const activeSlideIndex = sliderImages.activeIndex; // Индекс активного слайда в основном слайдере
+      const thumbItems = document.querySelectorAll(
+        '.slider__thumbs .swiper-slide'
+      ); // Элементы миниатюр
+      thumbItems.forEach((item, index) => {
+        if (index === activeSlideIndex) {
+          item.classList.add('js-thumb-chosen');
+          item.classList.add('p-4');
+        } else {
+          item.classList.remove('js-thumb-chosen');
+          item.classList.remove('p-4');
+        }
+      });
+    },
+  },
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
@@ -226,6 +285,11 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', {
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev', // кнопка Prev
   },
+  pagination: {
+    //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
   grabCursor: true, // менять иконку курсора
   thumbs: {
     // указываем на превью слайдер
@@ -236,10 +300,59 @@ const sliderImages = new Swiper('.slider__images .swiper-container-3', {
     0: {
       // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
+      mousewheel: false,
+      pagination: false,
     },
     768: {
       // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
+      pagination: false,
+      mousewheel: true,
+    },
+  },
+});
+
+const sliderImagesMob = new Swiper('.swiper-container-5', {
+  // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 14, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  // navigation: {
+  //   // задаем кнопки навигации
+  //   nextEl: '.slider__next', // кнопка Next
+  //   prevEl: '.slider__prev', // кнопка Prev
+  // },
+  pagination: {
+    //pagination(dots)
+    el: '.swiper-pagination',
+  },
+  clickable: true,
+  grabCursor: true, // менять иконку курсора
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs, // указываем имя превью слайдера
+  },
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+      mousewheel: false,
+      pagination: {
+        el: '.swiper-pagination-2',
+      },
+      slidesPerView: 1,
+    },
+    768: {
+      // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+      pagination: {
+        el: '.swiper-pagination-2',
+        clickable: true,
+      },
+      mousewheel: true,
     },
   },
 });
@@ -267,7 +380,7 @@ if (sliderPages && sliderMain) {
   });
   const max = sliderMain.max;
   const step = 100 / (max - 1);
-  window.addEventListener('mousemove', function () {
+  window.addEventListener('load', function () {
     const sliderValue = sliderMain.value;
     sliderPages.forEach(function (sliderPage) {
       sliderPage.textContent = sliderValue;
@@ -327,3 +440,52 @@ if (prevButtonFragment) {
     }
   };
 }
+
+// код для навешивания синего бордера на элемент
+// function chooseSwiperItem() {
+//   const slideVisibleElements = document.querySelectorAll(
+//     '.swiper-slide-visible'
+//   );
+//
+//   slideVisibleElements.forEach(function (slideElement) {
+//     const imageElement = slideElement.querySelector(
+//       '.slider__image, .slider__image-book'
+//     );
+//     if (imageElement) {
+//       slideElement.addEventListener('click', function () {
+//         slideVisibleElements.forEach(function (el) {
+//           el.querySelector(
+//             '.slider__image, .slider__image-book'
+//           ).classList.remove('js-thumb-chosen');
+//           el.querySelector(
+//             '.slider__image, .slider__image-book'
+//           ).classList.remove('p-4');
+//         });
+//
+//         // Toggle classes on clicked element
+//         imageElement.classList.toggle('js-thumb-chosen');
+//         imageElement.classList.toggle('p-4');
+//       });
+//     }
+//   });
+// }
+
+// функция для выставления высоты колонки слайдеров
+function updateSliderColHeight() {
+  const sliderImages = document.querySelector('.slider__images');
+  const sliderCol = document.querySelector('.slider__col');
+  if (sliderImages && sliderCol) {
+    const sliderImagesHeight = sliderImages.offsetHeight;
+    sliderCol.style.maxHeight = `${sliderImagesHeight}px`;
+  }
+}
+
+window.onload = function () {
+  updateSliderColHeight();
+  // chooseSwiperItem();
+};
+
+window.onresize = function () {
+  updateSliderColHeight();
+  // chooseSwiperItem();
+};

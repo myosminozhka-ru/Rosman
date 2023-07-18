@@ -10,7 +10,6 @@
   display: none;
   position: fixed;
   z-index: 1001;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1228,7 +1227,7 @@ img {
 // тут будут стили для радиобаттонового попапа
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
-  @apply relative m-20 flex flex-col gap-24 bg-white p-40;
+  @apply relative m-20 flex flex-col gap-4 bg-white p-40;
   margin: auto;
 
   @media screen and (max-width: 500px) {
@@ -1256,6 +1255,10 @@ img {
   @apply flex flex-row flex-nowrap gap-8;
   overflow-x: scroll;
   white-space: nowrap;
+  &.no_scroll {
+    flex-wrap: wrap!important;
+    overflow-x: auto!important;
+  }
 }
 
 .popup_all_filters_filters::-webkit-scrollbar {

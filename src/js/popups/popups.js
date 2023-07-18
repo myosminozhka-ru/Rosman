@@ -113,6 +113,9 @@ const jsPopupWishlistSortButton = document.querySelector(
 const jsPopupWishlistSortModal = document.querySelector(
   '.js_popup_wishlist_sort_button'
 );
+const jsPopupReadSoderzh = document.querySelector(
+  '.js_popup_all_filters_button-2'
+);
 
 const popups = [
   [jsPopupContactUsRuModal, jsContactUsRuPopupButton],
@@ -125,6 +128,7 @@ const popups = [
   [jsPopupBrandChooseModal, jsPopupBrandChooseButton],
   [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
   [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
+  [jsPopupAllFiltersModal, jsPopupReadSoderzh],
   [jsPopupBrandFiltersButton, jsPopupBrandFiltersModal],
   [jsPopupWishlistFiltersButton, jsPopupWishlistFiltersModal],
   [jsPopupWishlistSortButton, jsPopupWishlistSortModal],
