@@ -52,151 +52,151 @@
     <div class="flex flex-row gap-22 bg-white px-25 md:px-0">
       @@include('components/ui-kit/filters/filter-2.html', { }, )
 
-          <div class="width-75 bg-white">
-            <div class="brand_choose_brands md:px-12">
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
+      <div class="width-75 bg-white">
+        <div class="brand_choose_brands md:px-12">
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
 
-              <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
-                <a href="#" class="popup_brand_choose_brand_image">
-                  <img class='w-88 h-88 md:h-71 md:w-71'  src="../../img/brand_nado.svg" alt="" />
-                </a>
-              </div>
-              <div
-                class="image_container_brand hover:shadow-2xl shadow-black shadow-black			 js_popup_brand_choose_list_button"
-              >
-                <div class="all-brands px-6">Все бренды</div>
-              </div>
+          <div class="image_container_brand hover:shadow-2xl shadow-black shadow-black			">
+            <a href="#" class="popup_brand_choose_brand_image">
+              <img class='w-88 h-88 md:h-71 md:w-71' src="../../img/brand_nado.svg" alt=""/>
+            </a>
+          </div>
+          <div
+            class="image_container_brand hover:shadow-2xl shadow-black shadow-black			 js_popup_brand_choose_list_button"
+          >
+            <div class="all-brands px-6">Все бренды</div>
+          </div>
+        </div>
+        @@include('components/ui-kit/popups/popup-brand-listing.html', { },
+        )
+        <div class="flex justify-between mt-40 md:mt-8 md:px-12">
+          <div
+            class="more-down-filters no-padds no-after mb-16 w-29rem border-b border-card-stroke md:mt-0 md:!w-10/12 md:border-b-0"
+          >
+            <button
+              class="more-down-button  new !bg-none !px-16 !pl-16 md:!justify-start sort-text"
+            >
+              Сначала новые<span></span>
+            </button>
+            <!--  more-down -->
+            <div class="more-down-content !p-10 new">
+              <label class="checkbox-container close-button-new">
+                <input type="radio" name="sort-by"/>
+                <span class="checkmark "></span>
+                <p>Сначала новые</p>
+              </label>
+              <label class="checkbox-container close-button-new">
+                <input type="radio" name="sort-by"/>
+                <span class="checkmark"></span>
+                <p>Сначала старые</p>
+              </label>
+              <label class="checkbox-container close-button-new">
+                <input type="radio" name="sort-by"/>
+                <span class="checkmark"></span>
+                <p>А-Я</p>
+              </label>
+              <label class="checkbox-container close-button-new">
+                <input type="radio" name="sort-by"/>
+                <span class="checkmark"></span>
+                <p>Я-А
+                </p>
+              </label>
             </div>
-            @@include('components/ui-kit/popups/popup-brand-listing.html', { },
-            )
-            <div class="flex justify-between mt-40 md:mt-8 md:px-12">
-              <div
-                class="more-down-filters no-padds no-after mb-16 w-29rem border-b border-card-stroke md:mt-0 md:!w-10/12 md:border-b-0"
-              >
-                <button
-                  class="more-down-button  new !bg-none !px-16 !pl-16 md:!justify-start sort-text"
-                >
-                  Сначала новые<span></span>
-                </button>
-                <!--  more-down -->
-                <div class="more-down-content !p-10 new">
-                  <label class="checkbox-container close-button-new">
-                    <input type="radio" name="sort-by" />
-                    <span class="checkmark "></span>
-                   <p>Сначала новые</p>
-                  </label>
-                  <label class="checkbox-container close-button-new">
-                    <input type="radio" name="sort-by" />
-                    <span class="checkmark"></span>
-                    <p>Сначала старые</p>
-                  </label>
-                  <label class="checkbox-container close-button-new">
-                    <input type="radio" name="sort-by" />
-                    <span class="checkmark"></span>
-                    <p>А-Я</p>
-                  </label>
-                  <label class="checkbox-container close-button-new">
-                    <input type="radio" name="sort-by" />
-                    <span class="checkmark"></span>
-                   <p>Я-А
-                   </p>
-                  </label>
+          </div>
+          <div id="open-filter" class="mobile-filter"></div>
+        </div>
+        <div class="popup_all_filters_filters  md:px-12">
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+            <input type="checkbox" id="novelty" class="sort-checkbox"/>
+            <label class="sort-label active-js" for="novelty"
+            >Для мальчиков<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+            <input
+              type="checkbox"
+              id="interactive_features"
+              class="sort-checkbox"
+            />
+            <label class="sort-label active-js" for="interactive_features"
+            >Новинка<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+            <input
+              type="checkbox"
+              id="sound_effects"
+              class="sort-checkbox"
+            />
+            <label class="sort-label active-js" for="sound_effects"
+            >Игровой набор<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+            <input
+              type="checkbox"
+              id="erase_all_filters"
+              class="sort-checkbox_erase"
+            />
+            <label class="sort-label active-js_erase" for="erase_all_filters"
+            >Сбросить все
+              <span class="cross"></span>
+            </label>
+          </div>
+        </div>
+        <div class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 md:px-12">
+          <div class="toy_card item_card">
+            <div class="toy_card_heading">
+              <div class="item_card_tags bordered_tags">
+                <div class="item_card_tags_main bordered_tags_main">
+                  <a
+                    href="#"
+                    class="toy_card_tags_first bordered_tags_item body-s-bold"
+                  >
+                    Бестселлер
+                  </a>
+                  <a
+                    href="#"
+                    class="toy_card_tags_second bordered_tags_item body-s-bold"
+                  >
+                    Новинка
+                  </a>
                 </div>
+                <div class="toy_card_tags_age body-s-bold">8+</div>
               </div>
-              <div id="open-filter" class="mobile-filter"></div>
-            </div>
-            <div class="popup_all_filters_filters  md:px-12">
-              <div class="popup_all_filters_filter" onclick="removeFilter(this)">
-                <input type="checkbox" id="novelty" class="sort-checkbox" />
-                <label class="sort-label active-js" for="novelty"
-                >Для мальчиков<span class="count">12</span>
-                  <span class="cross"></span>
-                </label>
-              </div>
-              <div class="popup_all_filters_filter" onclick="removeFilter(this)" >
-                <input
-                  type="checkbox"
-                  id="interactive_features"
-                  class="sort-checkbox"
-                />
-                <label class="sort-label active-js" for="interactive_features"
-                >Новинка<span class="count">12</span>
-                  <span class="cross"></span>
-                </label>
-              </div>
-              <div class="popup_all_filters_filter" onclick="removeFilter(this)">
-                <input
-                  type="checkbox"
-                  id="sound_effects"
-                  class="sort-checkbox"
-                />
-                <label class="sort-label active-js" for="sound_effects"
-                >Игровой набор<span class="count">12</span>
-                  <span class="cross"></span>
-                </label>
-              </div>
-              <div class="popup_all_filters_filter" onclick="removeFilter(this)">
-                <input
-                  type="checkbox"
-                  id="erase_all_filters"
-                  class="sort-checkbox_erase"
-                />
-                <label class="sort-label active-js_erase" for="erase_all_filters"
-                >Сбросить все
-                  <span class="cross"></span>
-                </label>
-              </div>
-            </div>
-            <div class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 md:px-12">
-              <div class="toy_card item_card">
-                <div class="toy_card_heading">
-                  <div class="item_card_tags bordered_tags">
-                    <div class="item_card_tags_main bordered_tags_main">
-                      <a
-                        href="#"
-                        class="toy_card_tags_first bordered_tags_item body-s-bold"
-                      >
-                        Бестселлер
-                      </a>
-                      <a
-                        href="#"
-                        class="toy_card_tags_second bordered_tags_item body-s-bold"
-                      >
-                        Новинка
-                      </a>
-                    </div>
-                    <div class="toy_card_tags_age body-s-bold">8+</div>
-                  </div>
-                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+              <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
 
               <div class="toy_card_image item_card_image">
                 <div class="running-stroke">
@@ -232,7 +232,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -273,7 +318,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -314,7 +404,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -356,7 +491,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -397,7 +577,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -438,7 +663,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -479,7 +749,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -520,7 +835,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -561,7 +921,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -602,7 +1007,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -643,7 +1093,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -684,7 +1179,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="toy_card_info item_card_info !hidden">
@@ -738,7 +1278,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -780,7 +1365,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -822,7 +1452,52 @@
                 >
                   Подробнее
                 </button>
-                <button class="item_card_add_to_favourite"></button>
+                <div class="flex flex-row flex-nowrap gap-8">
+                  <button class="item_card_add_to_favourite"></button>
+                  <div class="item_card-external-link group relative">
+                    <div
+                      class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 group-hover:flex"
+                    >
+                      <div
+                        class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                      ></div>
+                      <button
+                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                      >
+                        <div class="block h-20 w-20">
+                          <img src="../../img/copy-link.svg" alt=""/>
+                        </div>
+                        <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+                      </button>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/vkcom.svg" alt=""/>
+                        </div>
+                        <span class="body-s">ВКонтакте</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/tiktok.svg" alt=""/>
+                        </div>
+                        <span class="body-s">TikTok</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/facebook.svg" alt=""/>
+                        </div>
+                        <span class="body-s" href="#">Facebook</span>
+                      </a>
+                      <a href="#" class="flex flex-row flex-nowrap gap-8">
+                        <div class="block h-20 w-20">
+                          <img src="../../img/likee.svg" alt=""/>
+                        </div>
+                        <span class="body-s">Likee</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
