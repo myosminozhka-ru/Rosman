@@ -1,6 +1,7 @@
 .scroll-block {
   @apply h-140 overflow-y-auto;
 }
+
 .scroll-block::-webkit-scrollbar-track {
   border-radius: 0.4rem;
 }
@@ -20,6 +21,9 @@
 
 .filters-block {
   @apply w-full;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .more-down-button {
     @apply w-full justify-between px-0 text-left text-l font-medium;
@@ -65,13 +69,27 @@
 }
 
 .mobile-filter {
+  position: relative;
+
+  .counter {
+    position: absolute;
+    right: -0.5rem;
+    top: 0.5rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 50rem;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
   @media screen and (max-width: 900px) {
     display: flex;
-    margin: 0 auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -325,6 +343,7 @@ header {
         @apply hidden;
       }
     }
+
     @media screen and (max-width: 900px) {
       @apply block;
     }
@@ -511,6 +530,7 @@ header {
     @media screen and (max-width: 900px) {
       @apply mr-0;
     }
+
     &.dekstop {
       @apply inline-flex;
 
@@ -525,6 +545,7 @@ header {
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
+
       &.hide {
         display: none;
       }
@@ -716,6 +737,7 @@ header {
       width: 100%;
     }
   }
+
   .width-25 {
     width: 25%;
   }
@@ -723,9 +745,14 @@ header {
   .image_container_brand {
     max-width: 8.8rem;
     max-height: 8.8rem;
+    min-width: 8.8rem;
+    min-height: 8.8rem;
     border-radius: 0.2rem;
+    @media screen and (max-width: 768px) {
+      max-width: 7rem;
+    }
 
-    @apply sm:max-h-[7rem] sm:min-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
+    @apply md:max-h-[7rem] md:min-h-[7rem] md:min-w-[7rem] md:max-w-[7rem];
   }
 
   .brand_choose_brands::-webkit-scrollbar {
@@ -739,7 +766,12 @@ header {
     -webkit-flex-direction: row;
     gap: 2rem;
     overflow-x: auto;
-    width: 80rem;
+    width: 200rem;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      gap: 1.2rem;
+      overflow: scroll;
+    }
   }
 
   .all-brands {
@@ -1608,9 +1640,11 @@ header {
   height: 2rem;
   cursor: pointer;
 }
+
 .w-29rem {
   width: 29.6rem;
 }
+
 .marker {
   background-image: url('../../img/marker.png');
   background-size: cover;
@@ -1618,6 +1652,7 @@ header {
   height: 50px;
   border-radius: 50%;
 }
+
 .block-horizontal {
   display: flex;
   justify-content: center;
@@ -1629,6 +1664,7 @@ header {
     @apply bg-yellow;
     writing-mode: vertical-rl;
   }
+
   @media screen and (max-width: 900px) {
     overflow: hidden;
     width: 225%;
@@ -1727,6 +1763,7 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
 }
+
 .content-block {
   display: none; /* По умолчанию блок скрыт */
   position: fixed;
@@ -1750,9 +1787,11 @@ input::-moz-focus-outer {
   flex-direction: column;
   height: 100%;
   color: #000000;
+
   li {
     @apply py-8 text-m;
   }
+
   p {
     @apply py-8 text-m;
   }

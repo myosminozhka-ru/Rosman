@@ -267,7 +267,7 @@
     <a class="active-js" href="#">Игрушки</a>
   </p>
 
-  <div class="breadcrumbs-small-screen px-24">
+  <div class="breadcrumbs-small-screen">
     <div class="breadcrumbs-small-screen-image"></div>
     <div class="breadcrumbs-small-screen-dots">
       ...
@@ -277,10 +277,10 @@
     <div class="breadcrumbs-small-screen-path">Игрушки</div>
   </div>
 
-  <div class="breadcrumbs-icons">
+  <!-- <div class="breadcrumbs-icons">
     <a href="#" class="item_card-external-link"></a>
     <button class="item_card_add_to_favourite"></button>
-  </div>
+  </div> -->
 </div>
 
 
@@ -497,23 +497,25 @@
         </div>
         <hr class="my-14 text-grey" />
 
-        <div class="sticky bottom-0 min-h-[10rem] py-10 md:h-[30rem]">
+        <div class="sticky bottom-0 min-h-[10rem] bg-white py-10 md:h-[30rem]">
           <input
             type="reset"
             class="button-white my-10 w-full cursor-pointer"
+            value="Сбросить"
           />
-          <div
+          <button
+            type="button"
             class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
             onclick="closeFilter();"
           >
             Все фильтры
-          </div>
-          <div
+          </button>
+          <button
             class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
             onclick="closeFilter();"
           >
             Применить
-          </div>
+          </button>
         </div>
       </div>
     </form>
@@ -530,8 +532,8 @@
         ></div>
       </div>
 
-      <div class="popup_all_filters_filters">
-        <div class="popup_all_filters_filter">
+      <div class="popup_all_filters_filters md:px-12">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
           <label class="sort-label active-js" for="novelty"
             >Новинка<span class="count">12</span> <span class="cross"></span>
@@ -548,7 +550,7 @@
             <span class="cross"></span>
           </label>
         </div>
-        <div class="popup_all_filters_filter">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
           <label class="sort-label active-js" for="sound_effects"
             >Звуковые эффекты<span class="count">12</span>
@@ -1358,6 +1360,19 @@
     </div>
   </div>
 </div>
+<script>
+  const modal = document.querySelector('.js_popup_all_filters_modal.to-hide');
+  const collabButtons = document.querySelectorAll('.collab_btn');
+
+  if (collabButtons) {
+    console.log(modal);
+    collabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('--active');
+      });
+    });
+  }
+</script>
 
 
           <div class="width-75">

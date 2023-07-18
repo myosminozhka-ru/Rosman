@@ -108,25 +108,30 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.classList.add('active-js');
     });
   }
-  const closeNew = document.querySelector('.close-button-new');
+  const closeNew = document.querySelectorAll('.close-button-new');
   if (closeNew) {
-    closeNew.addEventListener('click', function (event) {
-      const block = document.querySelector('.more-down-button.active-js');
-      const targetElement = event.target;
-      if (block != null) {
-        if (
-          !block.contains(targetElement) &&
-          !targetElement.parentNode.classList.contains('more-down-content')
-        ) {
-          for (let i = 0; i < moreButtons.length; i++) {
-            if (moreButtons[i].classList.contains('active-js')) {
-              moreButtons[i].nextElementSibling.classList.remove('active-js');
-              moreButtons[i].classList.remove('active-js');
+    for (let y = 0; y < closeNew.length; y++) {
+      closeNew[y].addEventListener('click', function (event) {
+        const block = document.querySelector('.more-down-button.active-js');
+        const text = document.querySelector('.sort-text');
+        console.log();
+        text.innerHTML = closeNew[y].querySelector('p').innerText;
+        const targetElement = event.target;
+        if (block != null) {
+          if (
+            !block.contains(targetElement) &&
+            !targetElement.parentNode.classList.contains('more-down-content')
+          ) {
+            for (let i = 0; i < moreButtons.length; i++) {
+              if (moreButtons[i].classList.contains('active-js')) {
+                moreButtons[i].nextElementSibling.classList.remove('active-js');
+                moreButtons[i].classList.remove('active-js');
+              }
             }
           }
         }
-      }
-    });
+      });
+    }
   }
 
   const activeErase = document.querySelector('.active-js_erase');
@@ -388,6 +393,71 @@ window.addEventListener('DOMContentLoaded', () => {
   const filterClose = document.getElementById('close-filter');
   const filter = document.getElementById('filter');
   const filter2 = document.getElementById('filter-2');
+  const allFilters = document.querySelector('.js_popup_all_filters_modal');
+
+  const filterCheckedInputsCounter = function () {
+    const counter = 0;
+  };
+
+  let smallFilterCounter = 0;
+  let extendedFilterCounter = 0;
+
+  const setFiltersCheckedCounts = function (filterEl, filterSize) {
+    let checkedInputsCount = 0;
+    const allInputs = filterEl.getElementsByTagName('input');
+
+    for (let i = 0; i < allInputs.length; i++) {
+      if (allInputs[i].checked) {
+        checkedInputsCount++;
+      }
+    }
+
+    if (filterSize === 'small') {
+      smallFilterCounter = checkedInputsCount;
+    } else {
+      extendedFilterCounter = checkedInputsCount;
+    }
+
+    let moreCheckedInputsNumber =
+      smallFilterCounter > extendedFilterCounter
+        ? smallFilterCounter
+        : extendedFilterCounter;
+
+    const filterChild = filterOpen.querySelector('.counter');
+    if (!moreCheckedInputsNumber) {
+      if (filterChild) {
+        filterOpen.removeChild(filterChild);
+      }
+    } else {
+      if (filterChild) {
+        filterChild.textContent = moreCheckedInputsNumber;
+      } else {
+        const counter = document.createElement('div');
+        counter.textContent = moreCheckedInputsNumber;
+        counter.classList.add('counter');
+        filterOpen.appendChild(counter);
+      }
+    }
+  };
+
+  if (filterOpen) {
+    if (filter) {
+      filter.addEventListener('click', function () {
+        setFiltersCheckedCounts(filter, 'small');
+      });
+    }
+
+    if (filter2) {
+      filter2.addEventListener('click', function () {
+        setFiltersCheckedCounts(filter2, 'small');
+      });
+    }
+
+    allFilters.addEventListener('click', function () {
+      setFiltersCheckedCounts(allFilters);
+    });
+  }
+
   if (filterOpen !== null) {
     filterOpen.addEventListener('click', function () {
       if (filter !== null) {
@@ -428,6 +498,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 function toggleSearch() {
   let mobileMenu = document.getElementById('mobile-menu');
   let headerNav = document.querySelector('.header-nav');

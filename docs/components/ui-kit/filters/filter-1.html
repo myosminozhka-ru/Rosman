@@ -174,15 +174,20 @@
           </label>
         </div>
       </div>
-      <div class="sticky bottom-0 min-h-[10rem] py-10 md:h-[30rem]">
+      <div class="sticky bottom-0 min-h-[10rem] bg-white py-10 md:h-[30rem]">
+        <input
+          type="reset"
+          class="button-white my-10 w-full cursor-pointer"
+          value="Сбросить"
+        />
         <button class="button-black my-10 w-full">Применить</button>
-        <div
+        <button
+          type="button"
           class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
           onclick="closeFilter();"
         >
           Все фильтры
-        </div>
-        <input type="reset" class="button-white my-10 w-full cursor-pointer" />
+        </button>
       </div>
     </form>
   </div>
@@ -198,38 +203,39 @@
         ></div>
       </div>
 
-      <div class="popup_all_filters_filters">
-        <div class="popup_all_filters_filter">
+      <div class="popup_all_filters_filters md:px-12">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
           <label class="sort-label active-js" for="novelty"
-            >Новинка<span class="count">12</span> <span class="cross"></span>
+            >Для мальчиков<span class="count">12</span>
+            <span class="cross"></span>
           </label>
         </div>
-        <div class="popup_all_filters_filter">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input
             type="checkbox"
             id="interactive_features"
             class="sort-checkbox"
           />
           <label class="sort-label active-js" for="interactive_features"
-            >Интерактивные функции<span class="count">12</span>
+            >Новинка<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
-        <div class="popup_all_filters_filter">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
           <label class="sort-label active-js" for="sound_effects"
-            >Звуковые эффекты<span class="count">12</span>
+            >Игровой набор<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
-        <div class="popup_all_filters_filter">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input
             type="checkbox"
             id="erase_all_filters"
             class="sort-checkbox_erase"
           />
-          <label class="sort-label_erase" for="erase_all_filters"
+          <label class="sort-label active-js_erase" for="erase_all_filters"
             >Сбросить все
             <span class="cross"></span>
           </label>
