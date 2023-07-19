@@ -235,7 +235,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-            (avaliableCursorArea.height / 100) -
+              (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -395,7 +395,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const filterClose = document.getElementById('close-filter');
   const filter = document.getElementById('filter');
   const filter2 = document.getElementById('filter-2');
-  const allFilters = document.querySelector('.js_popup_all_filters_modal');
+  const allFilters = document.querySelector('#js_popup_all_filters_modal');
 
   const filterCheckedInputsCounter = function () {
     const counter = 0;
@@ -599,7 +599,7 @@ class Slider {
   asMoney(value) {
     return (
       '$' +
-      parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
+      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
     );
   }
 
@@ -714,17 +714,20 @@ if (inputSearch) {
 const allButtons = document.querySelectorAll('.js-cl-btn');
 
 if (allButtons) {
-  allButtons.forEach(button => {
+  allButtons.forEach((button) => {
     button.addEventListener('click', function () {
       const siblingElement = button.previousElementSibling;
-      siblingElement.classList.toggle("max-h-[13rem]");
+      siblingElement.classList.toggle('max-h-[13rem]');
 
       if (button.innerText === 'Свернуть') {
-        if (button.classList.contains("js-cl-pok") && button.classList.contains("js-cl-pos")) {
+        if (
+          button.classList.contains('js-cl-pok') &&
+          button.classList.contains('js-cl-pos')
+        ) {
           button.innerText = 'Показать ещё';
-        } else if (button.classList.contains("js-cl-pok")) {
+        } else if (button.classList.contains('js-cl-pok')) {
           button.innerText = 'Показать ещё';
-        } else if (button.classList.contains("js-cl-pos")) {
+        } else if (button.classList.contains('js-cl-pos')) {
           button.innerText = 'Посмотреть все';
         }
       } else {
@@ -733,7 +736,6 @@ if (allButtons) {
     });
   });
 }
-
 
 // js-cl-pok Показать ещё
 // js-cl-pos Посмотреть все
