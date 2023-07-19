@@ -672,7 +672,7 @@
 <!-- попап для опросов -->
 <button class="js_popup_survey_button popup-btn">Попап для опросов</button>
 
-      <div class="js_popup_all_filters_modal modal">
+      <div id="js_popup_all_filters_modal" class="modal">
   <div class="popup_all_filters_content">
     <div class="popup_all_filters_heading">
       <div class="popup_all_filters_header">
@@ -1491,7 +1491,7 @@
   </div>
 </div>
 
-      <div class="popup-blockchain js_popup_blockchain_eng_modal modal">
+      <div id="js_popup_blockchain_eng_modal" class="popup-blockchain modal">
   <div class="popup_blockchain_content">
     <span class="js_popup_blockchain_close_button ui-popup-close-button"></span>
     <div class="popup_blockchain_body">
@@ -1545,7 +1545,7 @@
   </div>
 </div>
 
-      <div class="js_popup_blockchain_ru_modal modal">
+      <div id="js_popup_blockchain_ru_modal" class="modal">
   <div class="popup_blockchain_content">
     <span class="js_popup_blockchain_close_button ui-popup-close-button"></span>
     <div class="popup_blockchain_body">
@@ -1600,7 +1600,7 @@
   </div>
 </div>
 
-      <div class="js_popup_brand_description_modal modal">
+      <div id="js_popup_brand_description_modal" class="modal">
   <div class="popup_brand_description_content">
     <div class="popup_brand_description_heading">
       <div class="heading_main">
@@ -1641,7 +1641,7 @@
   </div>
 </div>
 
-      <div class="js_popup_brand_choose_list_modal modal">
+      <div id="js_popup_brand_choose_list_modal" class="modal">
   <div class="popup_brand_choose_content">
     <div class="popup_brand_choose_header">
       <span
@@ -2027,7 +2027,7 @@
   });
 </script>
 
-      <div class="js_popup_brand_choose_list_modal modal">
+      <div id="js_popup_brand_choose_list_modal" class="modal">
   <div class="popup_brand_choose_content">
     <div class="popup_brand_choose_header">
       <span
@@ -2396,6 +2396,8 @@
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="./img/brand_nado.svg" alt="" />
         </a>
+        <input type="checkbox" class="checkbox_overlay" id="check-ppba35" />
+        <label for="check-ppba35" class="check-ppb-label"></label>
       </div>
     </div>
   </div>
@@ -2413,7 +2415,7 @@
   });
 </script>
 
-      <div class="js_popup_collaboration_modal modal">
+      <div id="js_popup_collaboration_modal" class="modal">
   <div class="popup_collaboration_content">
     <div class="popup_collaboration_heading">
       <div class="popup_collaboration_header">
@@ -2763,7 +2765,7 @@
   </div>
 </div>
 
-      <div class="js_popup_contact_us_eng_modal modal">
+      <div id="js_popup_contact_us_eng_modal" class="modal">
   <div class="popup_contact_us_content">
     <div class="popup_contact_us_header">
       <div class="popup_contact_us_text">Contact us</div>
@@ -2826,7 +2828,7 @@
   </div>
 </div>
 
-      <div class="js_popup_contact_us_ru_modal modal">
+      <div id="js_popup_contact_us_ru_modal" class="modal">
   <div class="popup_contact_us_content modal-content">
     <div class="popup_contact_us_header">
       <div class="popup_contact_us_text">Свяжитесь с нами</div>
@@ -2885,7 +2887,7 @@
   </div>
 </div>
 
-      <div class="js_popup_survey_modal modal">
+      <div id="js_popup_survey_modal" class="modal">
   <div class="popup_survey_content">
     <div class="popup_survey_heading">
       <div class="popup_survey_header">Тут будет опрос для наших партнёров</div>
