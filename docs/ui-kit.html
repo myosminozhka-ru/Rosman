@@ -6040,7 +6040,9 @@
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Возраст<span></span></div>
         <div>
-          <div class="more-down-content active-js max-h-[8rem] overflow-hidden">
+          <div
+            class="more-down-content active-js max-h-[8rem] overflow-hidden pb-12"
+          >
             <input type="checkbox" id="filter-20" class="filter-checkbox" />
             <label class="filter-label age" for="filter-20">0+ </label>
             <input type="checkbox" id="filter-21" class="filter-checkbox" />
@@ -6063,12 +6065,57 @@
             <label class="filter-label age" for="filter-327">7+ </label>
           </div>
           <div
-            class="button-yellow-full show-more-filter js-cl-btn js-cl-pok cursor-pointer text-center text-m"
+            class="button-yellow-full show-more-label js-cl-btn js-cl-pok cursor-pointer text-m"
           >
             Показать ещё
           </div>
         </div>
         <div></div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Авторы<span></span></div>
+        <div class="more-down-content active-js">
+          <input
+            class="input search w-full"
+            type="text"
+            id="searcAuthor"
+            placeholder="Поиск"
+          />
+          <div class="scroll-block" id="searchBlock">
+            <input type="checkbox" id="sort-9" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-9"
+              data-name="мадсмиккельсен"
+              >Мадс Миккельсен<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-10" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-10"
+              data-name="джеймсмакэвой"
+              >Джеймс МакЭвой<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-11" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-11" data-name="джоннидэпп"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-12" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-12" data-name="джоннидэпп"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-13" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-13"
+              data-name="джекниколсон"
+              >Джек Николсон<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-14" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-14" data-name="марктвен"
+              >Марк Твен<span class="cross"></span
+            ></label>
+          </div>
+        </div>
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Тип<span></span></div>
         <div>
@@ -6111,9 +6158,9 @@
               </div>
             </label>
           </div>
-          <button class="button-yellow-full js-cl-btn js-cl-pos">
+          <div class="button-yellow-full js-cl-btn js-cl-pos">
             Посмотреть все
-          </button>
+          </div>
         </div>
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Особенности<span></span></div>
@@ -6164,9 +6211,9 @@
               </div>
             </label>
           </div>
-          <button href="#" class="button-yellow-full js-cl-btn js-cl-pos">
+          <div class="button-yellow-full js-cl-btn js-cl-pos">
             Посмотреть все
-          </button>
+          </div>
         </div>
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Упаковка<span></span></div>
@@ -6217,9 +6264,9 @@
               </div>
             </label>
           </div>
-          <button class="button-yellow-full js-cl-btn js-cl-pos">
+          <div class="button-yellow-full js-cl-btn js-cl-pos">
             Посмотреть все
-          </button>
+          </div>
         </div>
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Назначение<span></span></div>
@@ -6270,10 +6317,41 @@
               </div>
             </label>
           </div>
-          <button class="button-yellow-full js-cl-btn js-cl-pos">
+          <div class="button-yellow-full js-cl-btn js-cl-pos">
             Посмотреть все
-          </button>
+          </div>
         </div>
+        <hr class="my-14 text-grey" />
+        <!--        <div class="more-down-button active-js">Авторы<span></span></div>-->
+        <!--        <div class="more-down-content active-js">-->
+        <!--          <input class="input search w-full" type="text" id="searcAuthor" placeholder="Поиск"/>-->
+        <!--          <div class="scroll-block" id="searchBlock">-->
+        <!--            <input type="checkbox" id="sort-9" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-9" data-name="мадсмиккельсен"-->
+        <!--            >Мадс Миккельсен<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--            <input type="checkbox" id="sort-10" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-10" data-name="джеймсмакэвой"-->
+        <!--            >Джеймс МакЭвой<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--            <input type="checkbox" id="sort-11" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-11" data-name="джоннидэпп"-->
+        <!--            >Джонни Депп<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--            <input type="checkbox" id="sort-12" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-12" data-name="джоннидэпп"-->
+        <!--            >Джонни Депп<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--            <input type="checkbox" id="sort-13" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-13" data-name="джекниколсон"-->
+        <!--            >Джек Николсон<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--            <input type="checkbox" id="sort-14" class="sort-checkbox"/>-->
+        <!--            <label class="sort-label my-14" for="sort-14" data-name="марктвен"-->
+        <!--            >Марк Твен<span class="cross"></span-->
+        <!--            ></label>-->
+        <!--          </div>-->
+        <!--        </div>-->
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Популярное<span></span></div>
         <div class="more-down-content active-js">
