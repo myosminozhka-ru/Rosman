@@ -33,6 +33,18 @@ document.addEventListener('click', function (e) {
   }
 });
 
+document
+  .getElementById('js-all-brand')
+  ?.addEventListener('click', function (e) {
+    window.popup('js_popup_brand_choose_list_modal', 'open');
+  });
+
+document
+  .querySelector('.js_popup_all_filters_button')
+  ?.addEventListener('click', function () {
+    window.popup('js_popup_all_filters_modal', 'open');
+  });
+
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
 const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
