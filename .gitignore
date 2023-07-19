@@ -28,3 +28,11 @@ package-lock.json
 
 dist/
 build/
+config.js
+gulpfile.js
+LICENSE
+package.json
+postcss.config.js
+README.md
+taiwind.config.js
+yarn.lock

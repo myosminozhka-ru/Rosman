@@ -18,6 +18,7 @@
     "gulp-imagemin": "7.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^4.1.3",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "imagemin-pngquant": "^9.0.2",
@@ -33,6 +34,7 @@
     "dev": "gulp",
     "build": "gulp prod",
     "prod": "gulp prod",
+    "build-git": "gulp prodGithub",
     "pretty": "prettier --write \"src/**/*.{js,css,scss,html,json}\""
   },
   "repository": {

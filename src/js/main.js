@@ -209,7 +209,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-            (avaliableCursorArea.height / 100) -
+              (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -573,7 +573,7 @@ class Slider {
   asMoney(value) {
     return (
       '$' +
-      parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
+      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
     );
   }
 

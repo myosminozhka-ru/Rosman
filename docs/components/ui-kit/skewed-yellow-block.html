@@ -1,0 +1,114 @@
+<!-- тут будет фидбек -->
+<div class="relative bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12">
+  <div class="absolute bottom-20 right-0 w-full rotate-2 bg-green"></div>
+  <div
+    class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-white shadow-lg"
+  ></div>
+
+  <div
+    class="absolute bottom-0 left-0 right-0 z-10 h-46 origin-bottom-left skew-y-2 overflow-hidden bg-white shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]"
+  ></div>
+  <!--   контентная часть отклика на вакансию   -->
+  <div
+    class="relative mx-auto flex max-w-[40rem] flex-col items-center gap-40 sm:items-start sm:gap-24"
+  >
+    <div
+      class="w-[50rem] text-center text-5xl font-medium sm:w-full sm:text-start sm:text-3xl"
+    >
+      Откликнуться на вакансию
+    </div>
+    <div class="flex w-full flex-col items-start gap-24">
+      <input
+        class="js-traceable-item-vacancy vac-1 input w-full"
+        placeholder="Имя*"
+      />
+      <input
+        class="js-traceable-item-vacancy vac-2 input w-full"
+        placeholder="Фамилия*"
+      />
+      <input
+        class="js-traceable-item-vacancy vac-3 input w-full"
+        placeholder="Электронная почта*"
+      />
+      <input
+        class="js-traceable-item-vacancy vac-4 input popup_collaboration_page_three_input w-full"
+        placeholder="Телефон*"
+        name="phone"
+        type="tel"
+        maxlength="16"
+        id="phone"
+      />
+      <textarea
+        rows="4"
+        class="js-traceable-item-vacancy vac-5 input w-full resize-none"
+        placeholder="О себе*"
+      ></textarea>
+      <div class="flex w-full flex-col gap-8">
+        <input
+          class="js-traceable-item-vacancy vac-6 input w-full"
+          placeholder="Ссылка на резюме*"
+        />
+
+        <label
+          for="attach-file"
+          class="flex w-max cursor-pointer flex-row flex-nowrap items-center gap-6"
+        >
+          <p class="link-s-bold">или прикрепить файл</p>
+          <div class="block flex h-20 w-20 flex-row bg-center bg-no-repeat">
+            <img
+              class="h-full w-full"
+              src="./img/black-attach-20px.svg"
+              alt=""
+            />
+            <span class="attachedText whitespace-nowrap text-15.20"></span>
+          </div>
+        </label>
+      </div>
+      <input
+        onchange="handleFileInputChange(event)"
+        id="attach-file"
+        type="file"
+        class="hidden"
+      />
+
+      <div class="js-footer-heading-policy-agreement checkbox_main">
+        <input
+          class="js-footer-heading-checkbox checkbox__input_main"
+          type="checkbox"
+          id="footer-heading-checkbox-eng"
+        />
+        <label
+          for="footer-heading-checkbox-eng"
+          class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+        >
+          <span>Соглашаюсь с &nbsp</span>
+          <a
+            href="#"
+            class="footer-heading-policy-agreement-link link-m-bold w-max"
+          >
+            политикой конфиденциальности
+          </a>
+        </label>
+      </div>
+      <button class="button-black w-full text-15.20 font-medium">
+        Откликнуться
+      </button>
+      <div class="js-remaining-items">
+        <span class="vac-0 text-xl">Осталось заполнить:</span>
+        <span class="js-remaining-item vac-1 link-s">«Имя»,</span>
+        <span class="js-remaining-item vac-2 link-s">«Фамилия», </span>
+        <span class="js-remaining-item vac-3 link-s">«Эл. почта», </span>
+        <span class="js-remaining-item vac-4 link-s">«Телефон», </span>
+        <span class="js-remaining-item vac-5 link-s">«О себе», </span>
+        <span class="js-remaining-item vac-6 link-s">«Резюме»</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="relative bottom-[-7.5rem] right-0 w-full rotate-2 bs:bottom-[-12rem] msm:!bottom-[-11.3rem]"
+  >
+    <div class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]">
+      <img src="./img/elephant-figure-skating.svg" alt="" />
+    </div>
+  </div>
+</div>

@@ -41,7 +41,7 @@
 }
 
 .author-avatar {
-  @apply w-[8.8rem] h-[8.8rem] aspect-square rounded-full sm:w-48 sm:h-48;
+  @apply aspect-square h-[8.8rem] w-[8.8rem] rounded-full sm:h-48 sm:w-48;
 }
 
 .author-avatar img {
@@ -79,7 +79,7 @@
 }
 
 .card-fullpage-filter-link {
-  @apply px-12 py-4 inline-block font-medium text-s;
+  @apply inline-block px-12 py-4 text-s font-medium;
   border-radius: 1.5rem;
   border: 1px solid black;
 
