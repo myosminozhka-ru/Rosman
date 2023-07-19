@@ -135,14 +135,12 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   const activeErase = document.querySelector('.active-js_erase');
-  if (activeErase) {
-    activeErase.addEventListener('click', function (event) {
-      const filter = document.querySelectorAll('.popup_all_filters_filter');
-      for (let i = 0; i < filter.length; i++) {
-        filter[i].remove();
-      }
-    });
-  }
+  activeErase.addEventListener('click', function (event) {
+    const filter = document.querySelectorAll('.popup_all_filters_filter');
+    for (let i = 0; i < filter.length; i++) {
+      filter[i].remove();
+    }
+  });
   document.addEventListener('click', function (event) {
     const block = document.querySelector('.more-down-button.out.active-js');
     const targetElement = event.target;
@@ -575,7 +573,6 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
-
 class Slider {
   constructor(rangeElement, valueElement, options) {
     this.rangeElement = rangeElement;
@@ -641,7 +638,6 @@ if (rangeElement) {
 
   slider.init();
 }
-
 function showBlock(elementId) {
   const blocks = document.querySelectorAll('.show');
 
@@ -657,7 +653,6 @@ function showBlock(elementId) {
     block.classList.add('show');
   }
 }
-
 function closeFilter() {
   const filterOpen = document.getElementById('open-filter');
   const filterClose = document.getElementById('close-filter');
@@ -682,11 +677,9 @@ function closeFilter() {
     }
   }
 }
-
 function removeFilter(el) {
   el.remove();
 }
-
 const inputSearch = document.getElementById('searcAuthor');
 if (inputSearch) {
   inputSearch.addEventListener('input', function (event) {
