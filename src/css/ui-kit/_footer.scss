@@ -97,11 +97,11 @@
 }
 
 .js-footer-heading-policy-agreement {
-  @apply flex flex-row flex-nowrap;
+  @apply flex flex-row flex-nowrap w-min;
 }
 
 .footer-heading-policy-agreement-text {
-  @apply ml-16 flex flex-row flex-nowrap items-end text-s font-medium;
+  @apply flex flex-row flex-nowrap items-end text-s font-medium;
   @media screen and (max-width: 500px) {
     @apply flex flex-col items-start;
   }

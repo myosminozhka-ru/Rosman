@@ -1,23 +1,26 @@
 window.addEventListener('DOMContentLoaded', () => {
-  var updateWindowSize = (function(){
-    console.log(window.innerHeight)
-    var minAllowedWindowHeight = 700;
-    var largerDivHeight = 900;
-
-    // actual updateWindowSize function
-    return function(){
-      var winHeight = window.innerHeight;
-      var newHeight = winHeight < minAllowedWindowHeight ? largerDivHeight  : winHeight - '350';
-      document.querySelector('.filters-block').style.height = newHeight + 'px';
-    };
-  })();
-  // call the method one time
-  updateWindowSize();
-  // subscribe the method to future resize events
-
-  addEventListener("resize", (event) => {
-    updateWindowSize();
-  });
+  // var updateWindowSize = (function () {
+  //   console.log(window.innerHeight);
+  //   var minAllowedWindowHeight = 700;
+  //   var largerDivHeight = 900;
+  //
+  //   // actual updateWindowSize function
+  //   return function () {
+  //     var winHeight = window.innerHeight;
+  //     var newHeight =
+  //       winHeight < minAllowedWindowHeight
+  //         ? largerDivHeight
+  //         : winHeight - '350';
+  //     document.querySelector('.filters-block').style.height = newHeight + 'px';
+  //   };
+  // })();
+  // // call the method one time
+  // updateWindowSize();
+  // // subscribe the method to future resize events
+  //
+  // addEventListener('resize', (event) => {
+  //   updateWindowSize();
+  // });
 
   // variables
 
@@ -47,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.sort-label');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -59,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.filter-label');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -71,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const content = document.querySelectorAll('.toy_card');
       for (let j = 0; j < content.length; j++) {
         if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden')
+          content[j].classList.remove('!hidden');
         }
       }
     });
@@ -105,34 +108,41 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.classList.add('active-js');
     });
   }
-  const closeNew = document.querySelector('.close-button-new');
+  const closeNew = document.querySelectorAll('.close-button-new');
   if (closeNew) {
-    closeNew.addEventListener('click', function (event) {
-      const block = document.querySelector('.more-down-button.active-js');
-      const targetElement = event.target;
-      if (block != null) {
-        if (
+    for (let y = 0; y < closeNew.length; y++) {
+      closeNew[y].addEventListener('click', function (event) {
+        const block = document.querySelector('.more-down-button.active-js');
+        const text = document.querySelector('.sort-text');
+        console.log();
+        text.innerHTML = closeNew[y].querySelector('p').innerText;
+        const targetElement = event.target;
+        if (block != null) {
+          if (
             !block.contains(targetElement) &&
             !targetElement.parentNode.classList.contains('more-down-content')
-        ) {
-          for (let i = 0; i < moreButtons.length; i++) {
-            if (moreButtons[i].classList.contains('active-js')) {
-              moreButtons[i].nextElementSibling.classList.remove('active-js');
-              moreButtons[i].classList.remove('active-js');
+          ) {
+            for (let i = 0; i < moreButtons.length; i++) {
+              if (moreButtons[i].classList.contains('active-js')) {
+                moreButtons[i].nextElementSibling.classList.remove('active-js');
+                moreButtons[i].classList.remove('active-js');
+              }
             }
           }
         }
-      }
-    });
+      });
+    }
   }
 
   const activeErase = document.querySelector('.active-js_erase');
-  activeErase.addEventListener('click', function (event) {
-    const filter = document.querySelectorAll('.popup_all_filters_filter');
-    for (let i = 0; i < filter.length; i++) {
-      filter[i].remove()
-    }
-  });
+  if (activeErase) {
+    activeErase.addEventListener('click', function (event) {
+      const filter = document.querySelectorAll('.popup_all_filters_filter');
+      for (let i = 0; i < filter.length; i++) {
+        filter[i].remove();
+      }
+    });
+  }
   document.addEventListener('click', function (event) {
     const block = document.querySelector('.more-down-button.out.active-js');
     const targetElement = event.target;
@@ -225,7 +235,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-              (avaliableCursorArea.height / 100) -
+            (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -385,6 +395,71 @@ window.addEventListener('DOMContentLoaded', () => {
   const filterClose = document.getElementById('close-filter');
   const filter = document.getElementById('filter');
   const filter2 = document.getElementById('filter-2');
+  const allFilters = document.querySelector('.js_popup_all_filters_modal');
+
+  const filterCheckedInputsCounter = function () {
+    const counter = 0;
+  };
+
+  let smallFilterCounter = 0;
+  let extendedFilterCounter = 0;
+
+  const setFiltersCheckedCounts = function (filterEl, filterSize) {
+    let checkedInputsCount = 0;
+    const allInputs = filterEl.getElementsByTagName('input');
+
+    for (let i = 0; i < allInputs.length; i++) {
+      if (allInputs[i].checked) {
+        checkedInputsCount++;
+      }
+    }
+
+    if (filterSize === 'small') {
+      smallFilterCounter = checkedInputsCount;
+    } else {
+      extendedFilterCounter = checkedInputsCount;
+    }
+
+    let moreCheckedInputsNumber =
+      smallFilterCounter > extendedFilterCounter
+        ? smallFilterCounter
+        : extendedFilterCounter;
+
+    const filterChild = filterOpen.querySelector('.counter');
+    if (!moreCheckedInputsNumber) {
+      if (filterChild) {
+        filterOpen.removeChild(filterChild);
+      }
+    } else {
+      if (filterChild) {
+        filterChild.textContent = moreCheckedInputsNumber;
+      } else {
+        const counter = document.createElement('div');
+        counter.textContent = moreCheckedInputsNumber;
+        counter.classList.add('counter');
+        filterOpen.appendChild(counter);
+      }
+    }
+  };
+
+  if (filterOpen) {
+    if (filter) {
+      filter.addEventListener('click', function () {
+        setFiltersCheckedCounts(filter, 'small');
+      });
+    }
+
+    if (filter2) {
+      filter2.addEventListener('click', function () {
+        setFiltersCheckedCounts(filter2, 'small');
+      });
+    }
+
+    allFilters.addEventListener('click', function () {
+      setFiltersCheckedCounts(allFilters);
+    });
+  }
+
   if (filterOpen !== null) {
     filterOpen.addEventListener('click', function () {
       if (filter !== null) {
@@ -425,6 +500,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 function toggleSearch() {
   let mobileMenu = document.getElementById('mobile-menu');
   let headerNav = document.querySelector('.header-nav');
@@ -499,6 +575,7 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
+
 class Slider {
   constructor(rangeElement, valueElement, options) {
     this.rangeElement = rangeElement;
@@ -522,7 +599,7 @@ class Slider {
   asMoney(value) {
     return (
       '$' +
-      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+      parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
     );
   }
 
@@ -564,6 +641,7 @@ if (rangeElement) {
 
   slider.init();
 }
+
 function showBlock(elementId) {
   const blocks = document.querySelectorAll('.show');
 
@@ -579,6 +657,7 @@ function showBlock(elementId) {
     block.classList.add('show');
   }
 }
+
 function closeFilter() {
   const filterOpen = document.getElementById('open-filter');
   const filterClose = document.getElementById('close-filter');
@@ -603,13 +682,15 @@ function closeFilter() {
     }
   }
 }
+
 function removeFilter(el) {
-  el.remove()
+  el.remove();
 }
-const inputSearch = document.getElementById("searcAuthor");
+
+const inputSearch = document.getElementById('searcAuthor');
 if (inputSearch) {
   inputSearch.addEventListener('input', function (event) {
-    const blockSearch = document.getElementById("searchBlock");
+    const blockSearch = document.getElementById('searchBlock');
     let filter = inputSearch.value.toLowerCase();
     const label = blockSearch.querySelectorAll('.sort-label');
     for (let i = 0; i < label.length; i++) {
@@ -622,8 +703,7 @@ if (inputSearch) {
         if (content.includes(filter)) {
           if (label[i].classList.contains('!hidden'))
             label[i].classList.remove('!hidden');
-        }
-        else {
+        } else {
           label[i].classList.add('!hidden');
         }
       }
