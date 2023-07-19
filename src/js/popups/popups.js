@@ -1,144 +1,33 @@
-const popup = function Popup(el, triggerButton) {
-  this.el = el;
-  this.triggerButton = triggerButton;
-  this.open = false;
+const popupMethods = ['close', 'open'];
 
-  this.closeButton = this.el.querySelector('.ui-popup-close-button');
+window.popup = function (popupName, method) {
+  if (!popupMethods.includes(method)) {
+    console.error('не корректный метод попапа' + ' - ' + `${method}`);
+    return;
+  }
 
-  this.toggleActiveClass = () => {
-    this.el.classList.toggle('--active');
-  };
+  const popup = document.getElementById(popupName);
+  if (!popup) {
+    console.error('не корректное имя попапа' + ' - ' + `${popupName}`);
+    return;
+  }
 
-  this.clickOutside = (e) => {
-    if (e.target === this.el) {
-      this.open = false;
-      this.toggleActiveClass();
-    }
-  };
-
-  this.triggerButton.addEventListener('click', () => {
-    this.open = true;
-    this.el.classList.add('--active');
-  });
-
-  this.closeButton.addEventListener('click', () => {
-    this.open = false;
-    this.el.classList.remove('--active');
-  });
-  document.addEventListener('click', this.clickOutside);
-  document.addEventListener('keydown', (event) => {
-    if (event.code === 'Escape' && this.open) {
-      this.open = false;
-      this.el.classList.remove('--active');
-    }
-  });
+  if (method === popupMethods[0]) {
+    popup.classList.remove('--active');
+  } else {
+    popup.classList.add('--active');
+  }
 };
 
-const jsContactUsRuPopupButton = document.querySelector(
-  '.js_contact_us_ru_popup_button'
-);
-const jsPopupContactUsRuModal = document.querySelector(
-  '.js_popup_contact_us_ru_modal'
-);
-const jsContactUsEngPopupButton = document.querySelector(
-  '.js_contact_us_eng_popup_button'
-);
-const jsPopupContactUsEngModal = document.querySelector(
-  '.js_popup_contact_us_eng_modal'
-);
-const jsBlockchainRuPopupButton = document.querySelector(
-  '.js_blockchain_ru_popup_button'
-);
-const jsPopupBlockchainRuModal = document.querySelector(
-  '.js_popup_blockchain_ru_modal'
-);
-const jsBlockchainEngPopupButton = document.querySelector(
-  '.js_blockchain_eng_popup_button'
-);
-const jsPopupBlockchainEngModal = document.querySelector(
-  '.js_popup_blockchain_eng_modal'
-);
-const jsPopupBrandDescriptionButton = document.querySelector(
-  '.js_popup_brand_description_button'
-);
-const jsPopupBrandDescriptionModal = document.querySelector(
-  '.js_popup_brand_description_modal'
-);
-const jsPopupSurveyButton = document.querySelector('.js_popup_survey_button');
-const jsPopupSurveyModal = document.querySelector('.js_popup_survey_modal');
-const jsPopupCollaborationButton = document.querySelector(
-  '.js_popup_collaboration_button'
-);
-const jsPopupCollaborationModal = document.querySelector(
-  '.js_popup_collaboration_modal'
-);
-const jsPopupBrandChooseButton = document.querySelector(
-  '.js_popup_brand_choose_button'
-);
-const jsPopupBrandChooseModal = document.querySelector(
-  '.js_popup_brand_choose_modal'
-);
-
-const jsPopupBrandChooseListButton = document.querySelector(
-  '.js_popup_brand_choose_list_button'
-);
-const jsPopupBrandChooseListModal = document.querySelector(
-  '.js_popup_brand_choose_list_modal'
-);
-
-const jsPopupAllFiltersButton = document.querySelector(
-  '.js_popup_all_filters_button'
-);
-const jsPopupAllFiltersModal = document.querySelector(
-  '.js_popup_all_filters_modal'
-);
-
-const jsPopupBrandFiltersButton = document.querySelector(
-  '.js_popup_brand_filters_modal'
-);
-const jsPopupBrandFiltersModal = document.querySelector(
-  '.js_popup_brand_filters_button'
-);
-
-const jsPopupWishlistFiltersButton = document.querySelector(
-  '.js_popup_wishlist_filters_modal'
-);
-const jsPopupWishlistFiltersModal = document.querySelector(
-  '.js_popup_wishlist_filters_button'
-);
-
-const jsPopupWishlistSortButton = document.querySelector(
-  '.js_popup_wishlist_sort_modal'
-);
-const jsPopupWishlistSortModal = document.querySelector(
-  '.js_popup_wishlist_sort_button'
-);
-const jsPopupReadSoderzh = document.querySelector(
-  '.js_popup_all_filters_button-2'
-);
-
-const popups = [
-  [jsPopupContactUsRuModal, jsContactUsRuPopupButton],
-  [jsPopupContactUsEngModal, jsContactUsEngPopupButton],
-  [jsPopupBlockchainRuModal, jsBlockchainRuPopupButton],
-  [jsPopupBlockchainEngModal, jsBlockchainEngPopupButton],
-  [jsPopupBrandDescriptionModal, jsPopupBrandDescriptionButton],
-  [jsPopupSurveyModal, jsPopupSurveyButton],
-  [jsPopupCollaborationModal, jsPopupCollaborationButton],
-  [jsPopupBrandChooseModal, jsPopupBrandChooseButton],
-  [jsPopupBrandChooseListModal, jsPopupBrandChooseListButton],
-  [jsPopupAllFiltersModal, jsPopupAllFiltersButton],
-  [jsPopupAllFiltersModal, jsPopupReadSoderzh],
-  [jsPopupBrandFiltersButton, jsPopupBrandFiltersModal],
-  [jsPopupWishlistFiltersButton, jsPopupWishlistFiltersModal],
-  [jsPopupWishlistSortButton, jsPopupWishlistSortModal],
-];
-
-for (let i = 0; i < popups.length; i++) {
-  if (popups[i][0] && popups[i][1]) {
-    new popup(popups[i][0], popups[i][1]);
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal')) {
+    e.target.classList.remove('--active');
   }
-}
+
+  if (e.target.classList.contains('ui-popup-close-button')) {
+    e.target.closest('.modal').classList.remove('--active');
+  }
+});
 
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
@@ -203,7 +92,6 @@ if (brandPopupCheckboxes) {
   }
 }
 
-
 // код с фильтрацией и сортировкой
 const allFiltersPopup = document.querySelector('.pup_brand_input');
 if (allFiltersPopup) {
@@ -212,7 +100,7 @@ if (allFiltersPopup) {
     searchValue = searchValue.replace(/\W/g, '');
     const imageContainers = document.querySelectorAll('.image_container');
 
-    imageContainers.forEach(container => {
+    imageContainers.forEach((container) => {
       const brandName = container.dataset.brandName.toLowerCase();
       if (brandName.includes(searchValue)) {
         container.classList.remove('!hidden');
@@ -222,17 +110,16 @@ if (allFiltersPopup) {
     });
 
     if (searchValue.length < 3) {
-      imageContainers.forEach(container => {
+      imageContainers.forEach((container) => {
         container.classList.remove('!hidden');
       });
     }
   });
 }
 
-
 const radioButtons = document.querySelectorAll('[name="sort-by"]');
 if (radioButtons) {
-  radioButtons.forEach(radioButton => {
+  radioButtons.forEach((radioButton) => {
     radioButton.addEventListener('change', function (event) {
       const sortBy = event.target.value;
       const imageContainers = document.querySelectorAll('.image_container');
@@ -246,7 +133,7 @@ if (radioButtons) {
             const dateB = parseDate(b.dataset.brandCreationDate);
             return dateA - dateB;
           });
-          button.innerHTML = 'Сначала новые<span></span>'
+          button.innerHTML = 'Сначала новые<span></span>';
           break;
         case 'date_reverse':
           containerArray.sort((a, b) => {
@@ -254,7 +141,7 @@ if (radioButtons) {
             const dateB = parseDate(b.dataset.brandCreationDate);
             return dateB - dateA;
           });
-          button.innerHTML = 'Сначала старые<span></span>'
+          button.innerHTML = 'Сначала старые<span></span>';
           break;
         case 'name':
           containerArray.sort((a, b) => {
@@ -262,7 +149,7 @@ if (radioButtons) {
             const nameB = b.dataset.brandName.toLowerCase();
             return nameA.localeCompare(nameB);
           });
-          button.innerHTML = 'А-Я<span></span>'
+          button.innerHTML = 'А-Я<span></span>';
           break;
         case 'name_reverse':
           containerArray.sort((a, b) => {
@@ -270,18 +157,19 @@ if (radioButtons) {
             const nameB = b.dataset.brandName.toLowerCase();
             return nameB.localeCompare(nameA);
           });
-          button.innerHTML = 'Я-А<span></span>'
+          button.innerHTML = 'Я-А<span></span>';
           break;
       }
 
-      const containerParent = document.querySelector('.popup_brand_choose_brands');
-      containerArray.forEach(container => {
+      const containerParent = document.querySelector(
+        '.popup_brand_choose_brands'
+      );
+      containerArray.forEach((container) => {
         containerParent.appendChild(container);
       });
     });
   });
 }
-
 
 function parseDate(dateString) {
   const parts = dateString.split('.');

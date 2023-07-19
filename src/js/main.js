@@ -191,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const movingBlock = document.getElementById('moving-block');
   const movingBlockShadow = document.getElementById('moving-bock-shadow');
 
-  if (movingBlock) {
+  if (movingBlock && movingBlockShadow) {
     document.addEventListener('mousemove', function (event) {
       const windowWidth = window.innerWidth;
       const blockWidth = movingBlock.offsetWidth;
