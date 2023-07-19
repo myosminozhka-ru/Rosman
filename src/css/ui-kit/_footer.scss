@@ -1,4 +1,7 @@
 .footer {
+  @media screen and (max-width: 999px) {
+    @apply !pb-24;
+  }
 }
 
 .rosman-footer-ru {
