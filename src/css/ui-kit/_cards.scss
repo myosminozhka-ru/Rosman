@@ -1,41 +1,3 @@
-.image-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s;
-}
-
-.popup-content {
-  max-height: 90%;
-  height: auto;
-  //@media screen and (max-width: 768px) {
-  //  height: auto;
-  //  width: 90%;
-  //}
-}
-
-.popup-image-img {
-  object-fit: contain;
-  max-height: 90vh;
-  max-width: 90vw;
-  height: 100%;
-  @apply px-24 sm:px-12;
-}
-
-.image-popup.js-active-popup {
-  visibility: visible;
-  opacity: 1;
-}
-
 .cards_wrapper {
   @apply flex flex-col items-center gap-56;
 }
@@ -148,14 +110,11 @@
   width: 7rem;
 }
 
-.toy_card_tags_first {
-}
+.toy_card_tags_first {}
 
-.toy_card_tags_second {
-}
+.toy_card_tags_second {}
 
-.toy_card_tags_age {
-}
+.toy_card_tags_age {}
 
 // соотношение сторон - хз, надо проработать
 .item_card_image {
@@ -487,8 +446,7 @@
 .car_cond_location {
 }
 
-.car_cond_shift_length {
-}
+.car_cond_shift_length {}
 
 .card_career_cond_item_image {
 }
