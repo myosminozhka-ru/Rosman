@@ -86,18 +86,18 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  const cardMore = document.getElementsByClassName('js-rm-pag-more-btn');
+  // const cardMore = document.getElementsByClassName('js-rm-pag-more-btn');
 
-  for (let i = 0; i < cardMore.length; i++) {
-    cardMore[i].addEventListener('click', function () {
-      const content = document.querySelectorAll('.toy_card');
-      for (let j = 0; j < content.length; j++) {
-        if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden');
-        }
-      }
-    });
-  }
+  // for (let i = 0; i < cardMore.length; i++) {
+  //   cardMore[i].addEventListener('click', function () {
+  //     const content = document.querySelectorAll('.toy_card');
+  //     for (let j = 0; j < content.length; j++) {
+  //       if (content[j].classList.contains('!hidden')) {
+  //         content[j].classList.remove('!hidden');
+  //       }
+  //     }
+  //   });
+  // }
   const navbar = document.querySelector('.navigation');
   if (navbar) {
     navbar.addEventListener('click', function (event) {
@@ -153,15 +153,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const activeErase = document.querySelector('.active-js_erase');
-  if (activeErase) {
-    activeErase.addEventListener('click', function (event) {
-      const filter = document.querySelectorAll('.popup_all_filters_filter');
-      for (let i = 0; i < filter.length; i++) {
-        filter[i].remove();
-      }
-    });
-  }
+  // const activeErase = document.querySelector('.active-js_erase');
+  // if (activeErase) {
+  //   activeErase.addEventListener('click', function (event) {
+  //     const filter = document.querySelectorAll('.popup_all_filters_filter');
+  //     for (let i = 0; i < filter.length; i++) {
+  //       filter[i].remove();
+  //     }
+  //   });
+  // }
   document.addEventListener('click', function (event) {
     const block = document.querySelector('.more-down-button.out.active-js');
     const targetElement = event.target;
@@ -414,7 +414,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const filterClose = document.getElementById('close-filter');
   const filter = document.getElementById('filter');
   const filter2 = document.getElementById('filter-2');
-  const allFilters = document.querySelector('.js_popup_all_filters_modal');
+  const allFilters = document.querySelector('#js_popup_all_filters_modal');
 
   const filterCheckedInputsCounter = function () {
     const counter = 0;
@@ -702,32 +702,32 @@ function closeFilter() {
   }
 }
 
-function removeFilter(el) {
-  el.remove();
-}
+const inputSearch = document.querySelectorAll('.searchInput');
+const blockSearch = document.querySelectorAll('.searchBlock');
 
-const inputSearch = document.getElementById('searcAuthor');
-if (inputSearch) {
-  inputSearch.addEventListener('input', function (event) {
-    const blockSearch = document.getElementById('searchBlock');
-    let filter = inputSearch.value.toLowerCase();
-    const label = blockSearch.querySelectorAll('.sort-label');
-    for (let i = 0; i < label.length; i++) {
-      if (!filter) {
-        if (label[i].classList.contains('!hidden')) {
-          label[i].classList.remove('!hidden');
-        }
-      } else {
-        let content = label[i].dataset.name.toLowerCase();
-        if (content.includes(filter)) {
-          if (label[i].classList.contains('!hidden'))
-            label[i].classList.remove('!hidden');
+if (inputSearch.length && blockSearch.length) {
+  for (let i = 0; i < inputSearch.length; i++) {
+    inputSearch[i].addEventListener('input', function (event) {
+      let filter = inputSearch[i].value.toLowerCase();
+      const label = blockSearch[i].querySelectorAll('.sort-label');
+
+      for (let j = 0; j < label.length; j++) {
+        if (!filter) {
+          if (label[j].classList.contains('!hidden')) {
+            label[j].classList.remove('!hidden');
+          }
         } else {
-          label[i].classList.add('!hidden');
+          let content = label[j].dataset.name.toLowerCase();
+          if (content.includes(filter)) {
+            if (label[j].classList.contains('!hidden'))
+              label[j].classList.remove('!hidden');
+          } else {
+            label[j].classList.add('!hidden');
+          }
         }
       }
-    }
-  });
+    });
+  }
 }
 
 const allButtons = document.querySelectorAll('.js-cl-btn');
@@ -779,17 +779,17 @@ if (buttonsPag) {
   });
 }
 // добавил для переключения страницы вперёд и назад
-if (nextButton) {
-  nextButton.addEventListener('click', (event) => {
-    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-chosen-nav-btn');
-    }
-    if (currentChosen.nextElementSibling) {
-      currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
-    }
-  });
-}
+// if (nextButton) {
+//   nextButton.addEventListener('click', (event) => {
+//     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-chosen-nav-btn');
+//     }
+//     if (currentChosen.nextElementSibling) {
+//       currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
+//     }
+//   });
+// }
 
 if (prevButton) {
   prevButton.addEventListener('click', (event) => {
@@ -803,17 +803,17 @@ if (prevButton) {
   });
 }
 
-if (moreButton) {
-  moreButton.addEventListener('click', (event) => {
-    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-chosen-nav-btn');
-    }
-    if (currentChosen.nextElementSibling) {
-      currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
-    }
-  });
-}
+// if (moreButton) {
+//   moreButton.addEventListener('click', (event) => {
+//     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-chosen-nav-btn');
+//     }
+//     if (currentChosen.nextElementSibling) {
+//       currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
+//     }
+//   });
+// }
 // if (nextButton) {
 //   nextButton.addEventListener('click', (event) => {
 //     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
@@ -936,8 +936,6 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
   },
 });
 
-// External JS file like jquery etc which you do not wish to inlcuded in minification
-
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -945,15 +943,15 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
 // по поводу изменения картинки при нажатии на сердечко
 // своя функция тут будет
 
-const addToFavBtns = document.getElementsByClassName(
-  'item_card_add_to_favourite'
-);
-for (let i = 0; i < addToFavBtns.length; i++) {
-  addToFavBtns[i].addEventListener('click', function () {
-    const button = this;
-    button.classList.toggle('js_pressed');
-  });
-}
+// const addToFavBtns = document.getElementsByClassName(
+//   'item_card_add_to_favourite'
+// );
+// for (let i = 0; i < addToFavBtns.length; i++) {
+//   addToFavBtns[i].addEventListener('click', function () {
+//     const button = this;
+//     button.classList.toggle('js_pressed');
+//   });
+// }
 
 // функция для изменения фона рандомно для блока новостей и наград,
 
@@ -1087,6 +1085,8 @@ window.addEventListener('resize', function () {
 //     });
 //   }
 // });
+
+// External JS file like jquery etc which you do not wish to inlcuded in minification
 
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
@@ -1374,6 +1374,18 @@ document.addEventListener('click', function (e) {
   }
 });
 
+document
+  .getElementById('js-all-brand')
+  ?.addEventListener('click', function (e) {
+    window.popup('js_popup_brand_choose_list_modal', 'open');
+  });
+
+document
+  .querySelector('.js_popup_all_filters_button')
+  ?.addEventListener('click', function () {
+    window.popup('js_popup_all_filters_modal', 'open');
+  });
+
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
 const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
@@ -1474,17 +1486,13 @@ if (radioButtons) {
       switch (sortBy) {
         case 'date':
           containerArray.sort((a, b) => {
-            const dateA = parseDate(a.dataset.brandCreationDate);
-            const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateA - dateB;
+            return a.dataset.brandCreationDate - b.dataset.brandCreationDate;
           });
           button.innerHTML = 'Сначала новые<span></span>';
           break;
         case 'date_reverse':
           containerArray.sort((a, b) => {
-            const dateA = parseDate(a.dataset.brandCreationDate);
-            const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateB - dateA;
+            return b.dataset.brandCreationDate - a.dataset.brandCreationDate;
           });
           button.innerHTML = 'Сначала старые<span></span>';
           break;
@@ -1848,6 +1856,63 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // слайдер для страницы с вакансиями,
+
+// скрипт для слежения за вводом в поля инпутов
+const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
+const remainingItemsContainer = document.querySelector('.js-remaining-items');
+const remainingItems = document.querySelectorAll('.js-remaining-item');
+let remainToFill = document.querySelector('.vac-0');
+
+inputFields.forEach((input) => {
+  input.addEventListener('input', function () {
+    const inputClass = input.classList[1];
+    const correspondingSpan = document.querySelector(
+      `.js-remaining-item.${inputClass}`
+    );
+
+    if (input.value.trim() !== '') {
+      correspondingSpan.style.display = 'none';
+    } else {
+      correspondingSpan.style.display = 'inline';
+    }
+    let allFieldsFilled = true;
+
+    inputFields.forEach(function (field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
+
+    if (allFieldsFilled) {
+      remainingItemsContainer.style.display = 'none';
+    } else {
+      remainingItemsContainer.style.display = 'block';
+    }
+  });
+});
+
+// добавляем класс сокрытия для ширины меньше 600 пикселей
+
+function toggleVisibility() {
+  const blocks = document.querySelectorAll('.js-vac-item');
+  const screenWidth = window.innerWidth;
+
+  blocks.forEach((block) => {
+    if (screenWidth <= 500) {
+      block.classList.add('js-card-fp-hidden-item');
+    } else {
+      block.classList.remove('js-card-fp-hidden-item');
+    }
+  });
+}
+
+window.addEventListener('resize', function handleResize() {
+  toggleVisibility();
+});
+
+window.addEventListener('load', function () {
+  toggleVisibility();
+});
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2339,60 +2404,3 @@ window.onresize = function () {
   updateSliderColHeight();
   // chooseSwiperItem();
 };
-
-// скрипт для слежения за вводом в поля инпутов
-const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
-const remainingItemsContainer = document.querySelector('.js-remaining-items');
-const remainingItems = document.querySelectorAll('.js-remaining-item');
-let remainToFill = document.querySelector('.vac-0');
-
-inputFields.forEach((input) => {
-  input.addEventListener('input', function () {
-    const inputClass = input.classList[1];
-    const correspondingSpan = document.querySelector(
-      `.js-remaining-item.${inputClass}`
-    );
-
-    if (input.value.trim() !== '') {
-      correspondingSpan.style.display = 'none';
-    } else {
-      correspondingSpan.style.display = 'inline';
-    }
-    let allFieldsFilled = true;
-
-    inputFields.forEach(function (field) {
-      if (field.value.trim() === '') {
-        allFieldsFilled = false;
-      }
-    });
-
-    if (allFieldsFilled) {
-      remainingItemsContainer.style.display = 'none';
-    } else {
-      remainingItemsContainer.style.display = 'block';
-    }
-  });
-});
-
-// добавляем класс сокрытия для ширины меньше 600 пикселей
-
-function toggleVisibility() {
-  const blocks = document.querySelectorAll('.js-vac-item');
-  const screenWidth = window.innerWidth;
-
-  blocks.forEach((block) => {
-    if (screenWidth <= 500) {
-      block.classList.add('js-card-fp-hidden-item');
-    } else {
-      block.classList.remove('js-card-fp-hidden-item');
-    }
-  });
-}
-
-window.addEventListener('resize', function handleResize() {
-  toggleVisibility();
-});
-
-window.addEventListener('load', function () {
-  toggleVisibility();
-});

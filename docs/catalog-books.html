@@ -307,7 +307,7 @@
           >
           <input type="checkbox" id="sort-8" class="sort-checkbox" />
           <label class="sort-label my-14" for="sort-8">Научпоп</label>
-          <button class="button-yellow-full">Показать ещё</button>
+          <button type="button" class="button-yellow-full">Показать ещё</button>
         </div>
         <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Авторы<span></span></div>
@@ -411,7 +411,9 @@
           <label class="filter-label age" for="filter-18">5+</label>
           <input type="checkbox" id="filter-19" class="filter-checkbox" />
           <label class="filter-label age" for="filter-19">7+ </label>
-          <button class="button-yellow-full my-14">Показать ещё</button>
+          <button type="button" class="button-yellow-full my-14">
+            Показать ещё
+          </button>
         </div>
         <div class="py-10">
           <h3 class="body-l my-14 font-semibold">Категории</h3>
@@ -462,12 +464,12 @@
         </div>
       </div>
       <div class="sticky bottom-0 min-h-[10rem] bg-white py-10 md:h-[30rem]">
-        <input
-          type="reset"
-          class="button-white my-10 w-full cursor-pointer"
-          value="Сбросить"
-        />
-        <button class="button-black my-10 w-full">Применить</button>
+        <button type="button" class="button-white my-10 w-full cursor-pointer">
+          Сбросить
+        </button>
+        <button type="button" class="button-black my-10 w-full">
+          Применить
+        </button>
         <button
           type="button"
           class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
@@ -480,7 +482,7 @@
   </div>
 </div>
 
-<div class="js_popup_all_filters_modal modal">
+<div id="js_popup_all_filters_modal" class="modal">
   <div class="popup_all_filters_content">
     <div class="popup_all_filters_heading">
       <div class="popup_all_filters_header">
@@ -574,7 +576,7 @@
             </label>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="my-4 flex flex h-40 justify-between px-10">
+          <div class="my-4 flex h-40 justify-between px-10">
             <span class="my-auto text-15.20">Скоро в продаже</span>
             <label class="toggle-switch">
               <input type="checkbox" />
@@ -749,7 +751,7 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="my-4 flex flex justify-between px-10">
+          <div class="my-4 flex justify-between px-10">
             <span class="my-auto text-15.20">Подарок мечты</span>
             <label class="toggle-switch">
               <input type="checkbox" />
@@ -949,7 +951,7 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="my-4 flex flex h-36 justify-between px-10">
+          <div class="my-4 flex h-36 justify-between px-10">
             <span class="my-auto text-15.20">Электронные функции</span>
             <label class="toggle-switch">
               <input type="checkbox" />
@@ -989,7 +991,7 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="my-4 flex flex h-40 justify-between px-10">
+          <div class="my-4 flex h-40 justify-between px-10">
             <span class="my-auto text-15.20">Влагозащита</span>
             <label class="toggle-switch">
               <input type="checkbox" />
@@ -1193,7 +1195,7 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
-          <div class="my-4 flex flex justify-between px-10">
+          <div class="my-4 flex justify-between px-10">
             <span class="my-auto text-15.20">Световые эффекты</span>
             <label class="toggle-switch">
               <input type="checkbox" />
@@ -1307,8 +1309,18 @@
     <div class="popup_all_filters_footer">
       <div class="popup_all_filters_buttons">
         <div class="popup_collaboration_page_four_buttons">
-          <button class="button-white collab_btn pup_btn">Назад</button>
-          <button class="button-black collab_btn pup_btn">Применить</button>
+          <button
+            type="button"
+            class="button-white collab_btn pup_btn ui-popup-close"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            class="button-black collab_btn pup_btn ui-popup-close"
+          >
+            Применить
+          </button>
         </div>
       </div>
     </div>
