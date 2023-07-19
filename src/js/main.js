@@ -711,9 +711,12 @@ if (inputSearch) {
 
 const allButtons = document.querySelectorAll('.js-cl-btn');
 
-allButtons.forEach(button => {
-  button.addEventListener('click', function () {
-    const siblingElement = button.previousElementSibling;
-    siblingElement.classList.toggle("max-h-[13rem]")
+if (allButtons) {
+  allButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const siblingElement = button.previousElementSibling;
+      siblingElement.classList.toggle("max-h-[13rem]")
+    });
   });
-});
+
+}
