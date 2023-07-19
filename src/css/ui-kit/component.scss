@@ -1,8 +1,32 @@
+.scroll-block {
+  @apply h-140 overflow-y-auto;
+}
+
+.scroll-block::-webkit-scrollbar-track {
+  border-radius: 0.4rem;
+}
+
+.scroll-block::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scroll-block::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background: #acadad;
+}
+
+.scroll-block:hover::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+
 .filters-block {
-  @apply w-full;
+  @apply w-full ;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .more-down-button {
-    @apply w-full justify-between px-0 text-left text-l font-semibold;
+    @apply w-full justify-between px-0 text-left text-l font-medium;
   }
 
   .more-down-content {
@@ -45,13 +69,27 @@
 }
 
 .mobile-filter {
+  position: relative;
+
+  .counter {
+    position: absolute;
+    right: -0.5rem;
+    top: 0.5rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 50rem;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media screen and (min-width: 900px) {
     @apply hidden;
   }
 
   @media screen and (max-width: 900px) {
     display: flex;
-    margin: auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -62,12 +100,12 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.2rem;
+    height: 4.1rem;
     background-image: url(../../img/filter.svg);
     background-repeat: no-repeat;
-    background-position: 0.5rem 50%;
-    background-size: 2.5rem 2.5rem;
+    background-position: center;
+    background-size: 2rem 2rem;
   }
 }
 
@@ -108,11 +146,11 @@
 }
 
 .filter-2 {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     @apply flex;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
@@ -124,7 +162,7 @@
     top: 0;
     background: white;
     width: 100% !important;
-    z-index: 1000;
+    z-index: 100002;
     left: 0;
     padding: 2rem;
     height: 95vh;
@@ -139,11 +177,11 @@
 }
 
 .toolbar {
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 999px) {
     display: none;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 999px) {
     background-color: #ffffff;
     padding: 0;
     display: flex;
@@ -154,6 +192,7 @@
     bottom: 0;
     width: 100%;
     z-index: 100000;
+    padding: 0.8rem 1.2rem;
 
     img {
       width: 2rem;
@@ -284,7 +323,7 @@
 }
 
 header {
-  @apply flex items-center bg-yellow px-24 pt-24 sm:px-12;
+  @apply flex items-center bg-yellow px-24 pt-14 sm:px-12;
 
   @media screen and (max-width: 900px) {
     @apply justify-between;
@@ -301,6 +340,11 @@ header {
 
   .mobile-logo {
     @apply hidden;
+    &.hide {
+      @media screen and (max-width: 999px) {
+        @apply hidden;
+      }
+    }
 
     @media screen and (max-width: 900px) {
       @apply block;
@@ -378,7 +422,8 @@ header {
     padding: 5px;
 
     @media screen and (max-width: 900px) {
-      width: 45%;
+      @apply basis-full;
+      width: 100%;
     }
 
     input {
@@ -410,7 +455,7 @@ header {
 
       @media screen and (max-width: 900px) {
         padding: 0;
-        width: 70%;
+        width: 85%;
       }
     }
 
@@ -484,6 +529,9 @@ header {
 
   .header-btn {
     @apply mr-10 basis-1/4 items-center justify-end;
+    @media screen and (max-width: 900px) {
+      @apply mr-0;
+    }
 
     &.dekstop {
       @apply inline-flex;
@@ -499,6 +547,10 @@ header {
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
+
+      &.hide {
+        display: none;
+      }
     }
 
     .language {
@@ -509,7 +561,10 @@ header {
       }
 
       span {
-        @apply m-2 ml-2 mr-2 cursor-pointer;
+        @apply mx-4 cursor-pointer;
+        &:last-child {
+          @apply mx-4;
+        }
       }
     }
 
@@ -518,6 +573,9 @@ header {
 
       @media screen and (max-width: 900px) {
         @apply mr-12;
+        &:last-child {
+          @apply m-0;
+        }
       }
     }
   }
@@ -551,7 +609,7 @@ header {
   }
 
   .more-down-content {
-    @apply absolute top-[7rem] z-1001 bg-white p-24;
+    @apply absolute top-[6rem] z-1001 bg-white p-24;
 
     .more-down-button {
       @apply m-0 p-0;
@@ -580,6 +638,9 @@ header {
 
   .menu {
     @apply flex basis-1/10 justify-center border-0 p-0;
+    @media screen and (max-width: 999px) {
+      @apply hidden;
+    }
 
     .more-down-content {
       a {
@@ -678,6 +739,7 @@ header {
       width: 100%;
     }
   }
+
   .width-25 {
     width: 25%;
   }
@@ -685,9 +747,14 @@ header {
   .image_container_brand {
     max-width: 8.8rem;
     max-height: 8.8rem;
-    border: 0.2rem solid transparent;
+    min-width: 8.8rem;
+    min-height: 8.8rem;
+    border-radius: 0.2rem;
+    @media screen and (max-width: 768px) {
+      max-width: 7rem;
+    }
 
-    @apply sm:max-h-[7rem] sm:min-h-[7rem] sm:min-w-[7rem] sm:max-w-[7rem];
+    @apply md:max-h-[7rem] md:min-h-[7rem] md:min-w-[7rem] md:max-w-[7rem];
   }
 
   .brand_choose_brands::-webkit-scrollbar {
@@ -699,20 +766,13 @@ header {
     display: -webkit-flex !important;
     flex-direction: row;
     -webkit-flex-direction: row;
-    gap: 2rem;
+    gap: 1.2rem;
     overflow-x: auto;
-
-    @media screen and (max-width: 900px) {
+    width: 200rem;
+    @media screen and (max-width: 1200px) {
       width: 100%;
-      gap: 2rem;
-      height: 9rem;
-
-      .image_container_brand {
-        max-width: 13rem;
-        width: 100%;
-        height: 100%;
-        max-height: 6rem;
-      }
+      gap: 1.2rem;
+      overflow: scroll;
     }
   }
 
@@ -794,6 +854,8 @@ header {
 
 .swiper,
 .swiper-text,
+.swiper-book,
+.swiper-one-book,
 .swiper-image,
 .swiper-image-2,
 .swiper-book-fragment,
@@ -1086,6 +1148,13 @@ header {
 }
 
 #yellow-moving-block {
+  @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
+  box-shadow: inset 0px 1px 19px 4px #535353;
+  left: -2rem;
+  width: 110%;
+}
+
+#yellow-moving-block2 {
   @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
   box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
@@ -1491,8 +1560,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 
@@ -1574,6 +1642,159 @@ header {
   height: 2rem;
   cursor: pointer;
 }
+
 .w-29rem {
   width: 29.6rem;
+}
+
+.marker {
+  background-image: url('../../img/marker.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.block-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+  .vertical-rl {
+    @apply bg-yellow;
+    writing-mode: vertical-rl;
+  }
+
+  @media screen and (max-width: 900px) {
+    overflow: hidden;
+    width: 225%;
+    position: relative;
+    left: -65%;
+    right: -65%;
+    .book_card_heading {
+      width: 25rem;
+    }
+  }
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+}
+
+.range__slider {
+  width: 100%;
+}
+
+.range__value {
+  width: 100%;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #222;
+}
+
+.form-group span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3c3b3b;
+}
+
+.range__slider label {
+  margin-bottom: 1rem;
+}
+
+.range__slider [type='range'] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 0.3rem;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* custom thumb */
+.range__slider [type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: #000000 0.2rem solid;
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+
+.range__slider [type='range']::-webkit-slider-thumb:hover {
+  background: #fff145;
+}
+
+.range__slider [type='range']::-moz-range-thumb {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: #f0932b;
+  border: #fff145 0.5rem solid;
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+
+.range__slider [type='range']::-moz-range-thumb:hover {
+  background: #fff145;
+}
+
+/* remove border */
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+.content-block {
+  display: none; /* По умолчанию блок скрыт */
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: rgb(255, 255, 255); /* Прозрачный фон */
+  z-index: 9999; /* Большой z-index, чтобы блок был поверх всего */
+  &.show {
+    display: block;
+  }
+}
+
+/* Стили содержимого блока */
+.block-content {
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #000000;
+
+  li {
+    @apply text-m py-8;
+  }
+
+  p {
+    @apply text-m py-8;
+  }
 }

@@ -1,4 +1,4 @@
-<div class="js_popup_all_filters_modal modal">
+<div id="js_popup_all_filters_modal" class="modal">
   <div class="popup_all_filters_content">
     <div class="popup_all_filters_heading">
       <div class="popup_all_filters_header">
@@ -8,11 +8,12 @@
         ></div>
       </div>
 
-      <div class="popup_all_filters_filters">
-        <div class="popup_all_filters_filter">
+      <div class="popup_all_filters_filters md:px-12">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="novelty" class="sort-checkbox" />
-          <label class="sort-label" for="novelty"
-            >Новинка<span class="count">12</span> <span class="cross"></span>
+          <label class="sort-label active-js" for="novelty"
+            >Для мальчиков<span class="count">12</span>
+            <span class="cross"></span>
           </label>
         </div>
         <div class="popup_all_filters_filter">
@@ -21,15 +22,15 @@
             id="interactive_features"
             class="sort-checkbox"
           />
-          <label class="sort-label" for="interactive_features"
-            >Интерактивные функции<span class="count">12</span>
+          <label class="sort-label active-js" for="interactive_features"
+            >Новинка<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
-        <div class="popup_all_filters_filter">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
           <input type="checkbox" id="sound_effects" class="sort-checkbox" />
-          <label class="sort-label" for="sound_effects"
-            >Звуковые эффекты<span class="count">12</span>
+          <label class="sort-label active-js" for="sound_effects"
+            >Игровой набор<span class="count">12</span>
             <span class="cross"></span>
           </label>
         </div>
@@ -39,7 +40,7 @@
             id="erase_all_filters"
             class="sort-checkbox_erase"
           />
-          <label class="sort-label_erase" for="erase_all_filters"
+          <label class="sort-label active-js_erase" for="erase_all_filters"
             >Сбросить все
             <span class="cross"></span>
           </label>
@@ -809,6 +810,7 @@
         </div>
       </div>
     </div>
+
     <a href="#" class="popup_all_filters_filter_not_found link-m">
       Не нашли нужный фильтр?
     </a>

@@ -10,7 +10,6 @@
   display: none;
   position: fixed;
   z-index: 1001;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -860,9 +859,10 @@
   max-width: 84.6rem;
   position: relative;
   margin: auto;
+  top: 20%;
 
   @media screen and (max-width: 500px) {
-    @apply gap-16 px-12 pb-48 pt-24;
+    @apply gap-16 px-12 pb-48 pt-24 top-0;
   }
 
   @media (min-width: 501px) and (max-width: 800px) {
@@ -962,7 +962,9 @@
 //  @apply pl-12;
 //}
 .popup_brand_choose_brands {
-  @apply flex flex-row flex-wrap justify-between gap-20;
+  @apply flex flex-row flex-wrap  mx-auto;
+  width: 72.4rem;
+  gap: 2rem;
   @media screen and (max-width: 600px) {
     @apply gap-8;
   }
@@ -1228,7 +1230,7 @@ img {
 // тут будут стили для радиобаттонового попапа
 // стили для попапа ВСЕ ФИЛЬТРЫ
 .popup_all_filters_content {
-  @apply relative m-20 flex flex-col gap-24 bg-white p-40;
+  @apply relative m-20 flex flex-col gap-4 bg-white p-40;
   margin: auto;
 
   @media screen and (max-width: 500px) {
@@ -1256,6 +1258,10 @@ img {
   @apply flex flex-row flex-nowrap gap-8;
   overflow-x: scroll;
   white-space: nowrap;
+  &.no_scroll {
+    flex-wrap: wrap!important;
+    overflow-x: auto!important;
+  }
 }
 
 .popup_all_filters_filters::-webkit-scrollbar {

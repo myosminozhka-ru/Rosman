@@ -1,21 +1,21 @@
 // личные настройки
-//#above-block.card-fullpage-modified-above-block {
-//  @apply p-0;
-//}
+#above-block.card-fullpage-modified-above-block {
+  @apply p-0;
+}
 
-//#yellow-background.card-fullpage-modified-yellow-background {
-//  @apply h-auto !pt-10;
-//}
+#yellow-background.card-fullpage-modified-yellow-background {
+  @apply h-auto pt-[1rem];
+}
 
-//.card-fullpage-modified-yellow-background:after {
-//  position: absolute;
-//  content: '';
-//  display: block;
-//  height: 50%;
-//  bottom: 0;
-//  background-color: white;
-//  width: 100%;
-//}
+.card-fullpage-modified-yellow-background:after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 50%;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+}
 
 // остальные стили
 //.card-fullpage{
@@ -73,13 +73,14 @@
   @apply relative;
 }
 
-.breadcrumbs-arrow {
-  @apply absolute hidden h-12 w-32;
-  left: -1.1rem;
-  background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
-  background-size: contain;
+@layer {
+  .breadcrumbs-arrow {
+    @apply absolute hidden h-12 w-32;
+    left: -1.1rem;
+    background: url('../../img/card-fullpage/bread-arrow.svg') no-repeat center;
+    background-size: contain;
+  }
 }
-
 .breadcrumbs-path-hidden-text {
   @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
@@ -88,12 +89,13 @@
   left: -1.2rem;
 }
 
+
 .breadcrumbs-small-screen-dots:hover .breadcrumbs-arrow {
   @apply block;
 }
 
 .breadcrumbs-small-screen-dots:hover .breadcrumbs-path-hidden-text {
-  @apply block;
+  @apply flex;
 }
 
 .breadcrumbs-icons {
@@ -281,6 +283,7 @@
 //.thumbs {
 //  @apply flex flex-col gap-14;
 //}
+
 .js-thumb-chosen {
   border: 3px solid #4498fc;
 }
@@ -370,12 +373,19 @@
 }
 
 .js-card-fullpage-desc-description {
-  @apply mb-64 flex flex-col gap-24 md:gap-48;
+  @apply pb-64 flex flex-col gap-24 md:gap-48 md:pb-48;
 }
 
 .js-card-fullpage-desc-description.gapped {
   @apply gap-64 md:gap-48;
 }
+
+@media screen and (max-width: 400px) {
+  .js-mdb-desc-button {
+    margin-top: -2.4rem !important;
+  }
+}
+
 
 .more-down-button.js-mdb-desc-button {
   @apply justify-start p-0;
@@ -514,6 +524,47 @@
   @media screen and (max-width: 400px) {
     height: 45rem !important;
   }
+
+  &.books-slider {
+    height: 84.9rem;
+
+    &.elephant {
+      height: 80rem;
+      @media screen and (min-width: 2300px) {
+        height: 110rem;
+      }
+      @media screen and (max-width: 900px) {
+        height: 95rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 80rem;
+      }
+    }
+  }
+}
+
+#yellow-moving-block2.card-fullpage-w-bg-modified {
+  height: 51.9rem;
+  padding: 0;
+  margin: 0;
+
+  &.books-slider {
+    height: 65.9rem;
+
+    &.elephant {
+      height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
+
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
+  }
 }
 
 #yellow-moving-block.card-fullpage-w-bg-modified {
@@ -521,6 +572,23 @@
 
   @media screen and (max-width: 400px) {
     height: 37rem !important;
+  }
+
+  &.books-slider {
+    height: 65.9rem;
+
+    &.elephant {
+      height: 70rem;
+      @media screen and (min-width: 2300px) {
+        height: 100rem;
+      }
+      @media screen and (max-width: 900px) {
+        height: 85rem;
+      }
+      @media screen and (max-width: 600px) {
+        height: 70rem;
+      }
+    }
   }
 }
 
@@ -675,6 +743,7 @@
 }
 
 ///// my swiper
+
 .slider-2 .swiper-container-3 {
   width: 100%;
   height: 100%;

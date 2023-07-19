@@ -49,9 +49,7 @@
 .toy_card {
   @apply flex w-full flex-col justify-start gap-24 bg-white pb-12;
 
-  &:hover {
-    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
-  }
+
 }
 
 .item_card_tags.bordered_tags {
@@ -171,6 +169,10 @@
 .item_card_img {
   @apply w-full;
   object-fit: cover;
+
+  &:hover {
+    box-shadow: 0px 20px 48px 0px rgba(0, 38, 3, 0.08);
+  }
 }
 
 // card's bottom
@@ -201,11 +203,13 @@
 .item_card_add_to_favourite {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url('../../img/heart_white.svg') no-repeat center;
+  background-size: contain;
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url('../../img/heart_black.svg') no-repeat center;
+  background-size: contain;
 }
 
 .add_to_favourite_img {
