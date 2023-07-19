@@ -134,32 +134,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const activeErase = document.querySelector('.active-js_erase');
-  if (activeErase) {
-    activeErase.addEventListener('click', function (event) {
-      const filter = document.querySelectorAll('.popup_all_filters_filter');
-      for (let i = 0; i < filter.length; i++) {
-        filter[i].remove();
-      }
-    });
-  }
-  document.addEventListener('click', function (event) {
-    const block = document.querySelector('.more-down-button.out.active-js');
-    const targetElement = event.target;
-    if (block != null) {
-      if (
-        !block.contains(targetElement) &&
-        !targetElement.parentNode.classList.contains('more-down-content')
-      ) {
-        for (let i = 0; i < moreButtons.length; i++) {
-          if (moreButtons[i].classList.contains('active-js')) {
-            moreButtons[i].nextElementSibling.classList.remove('active-js');
-            moreButtons[i].classList.remove('active-js');
-          }
-        }
-      }
-    }
-  });
 
   const buttons = document.getElementsByClassName('collapse-button');
   for (let i = 0; i < buttons.length; i++) {
@@ -683,9 +657,6 @@ function closeFilter() {
   }
 }
 
-function removeFilter(el) {
-  el.remove();
-}
 
 const inputSearch = document.getElementById('searcAuthor');
 if (inputSearch) {

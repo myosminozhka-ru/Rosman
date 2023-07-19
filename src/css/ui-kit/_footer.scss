@@ -97,8 +97,16 @@
 }
 
 .js-footer-heading-policy-agreement {
-  @apply flex flex-row flex-nowrap w-min;
+  @apply flex flex-row flex-nowrap w-[23%];
+  @media screen and (max-width: 1100px) {
+    @apply w-[30%];
+  }
+  @media screen and (max-width: 900px) {
+    @apply w-2/6;
+  }
+
 }
+
 
 .footer-heading-policy-agreement-text {
   @apply flex flex-row flex-nowrap items-end text-s font-medium;

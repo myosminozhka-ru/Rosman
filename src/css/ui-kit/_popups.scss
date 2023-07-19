@@ -774,9 +774,18 @@
   background-color: #fff;
   position: absolute;
   top: 0.2rem;
-  left: -0.2rem;
+  left: -3.2rem;
   z-index: 1;
   /*transition: background 0.1s linear, border 0.1s linear;*/
+  @media screen and (max-width: 775px) {
+    left: -4.2rem;
+  }
+  @media screen and (max-width: 740px) {
+    left: -7.2rem;
+  }
+  @media screen and (max-width: 500px) {
+    left: -5.2rem;
+  }
 }
 
 .checkbox__label_main:after {
@@ -789,10 +798,20 @@
   opacity: 0;
   position: absolute;
   top: 0.4rem;
-  left: 0;
+  left: -3rem;
   z-index: 2;
   transition: opacity 0.1s linear;
+  @media screen and (max-width: 775px) {
+    left: -4rem;
+  }
+  @media screen and (max-width: 740px) {
+    left: -7rem;
+  }
+  @media screen and (max-width: 500px) {
+    left: -5rem;
+  }
 }
+
 
 .checkbox__input_main:checked + .checkbox__label_main:before {
   border: 1px solid black;
