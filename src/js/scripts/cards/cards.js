@@ -5,15 +5,15 @@
 // по поводу изменения картинки при нажатии на сердечко
 // своя функция тут будет
 
-const addToFavBtns = document.getElementsByClassName(
-  'item_card_add_to_favourite'
-);
-for (let i = 0; i < addToFavBtns.length; i++) {
-  addToFavBtns[i].addEventListener('click', function () {
-    const button = this;
-    button.classList.toggle('js_pressed');
-  });
-}
+// const addToFavBtns = document.getElementsByClassName(
+//   'item_card_add_to_favourite'
+// );
+// for (let i = 0; i < addToFavBtns.length; i++) {
+//   addToFavBtns[i].addEventListener('click', function () {
+//     const button = this;
+//     button.classList.toggle('js_pressed');
+//   });
+// }
 
 // функция для изменения фона рандомно для блока новостей и наград,
 

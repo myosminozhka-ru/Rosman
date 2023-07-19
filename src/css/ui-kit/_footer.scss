@@ -101,10 +101,19 @@
 }
 
 .footer-heading-policy-agreement-text {
-  @apply flex flex-row flex-nowrap items-end text-s font-medium;
+  @apply flex flex-row flex-nowrap items-end text-s font-medium ml-20;
   @media screen and (max-width: 500px) {
     @apply flex flex-col items-start;
   }
+
+  a,
+  span {
+    white-space: nowrap;
+  }
+
+
+
+
 }
 
 .footer-heading-policy-agreement-text-rand-book {

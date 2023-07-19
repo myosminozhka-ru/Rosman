@@ -58,9 +58,9 @@
   }
 }
 
-.bordered_tags_item:hover {
-  @apply border border-yellow bg-yellow;
-}
+// .bordered_tags_item:hover {
+//   @apply border border-yellow bg-yellow;
+// }
 
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
@@ -139,9 +139,9 @@
   border-bottom: transparent;
 }
 
-.bordered_tags_item:hover {
-  @apply bg-yellow;
-}
+// .bordered_tags_item:hover {
+//   @apply bg-yellow;
+// }
 
 .bordered_tags_item-smalled {
   @apply px-4 py-4 text-center text-11.14;

@@ -145,17 +145,13 @@ if (radioButtons) {
       switch (sortBy) {
         case 'date':
           containerArray.sort((a, b) => {
-            const dateA = parseDate(a.dataset.brandCreationDate);
-            const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateA - dateB;
+            return a.dataset.brandCreationDate - b.dataset.brandCreationDate;
           });
           button.innerHTML = 'Сначала новые<span></span>';
           break;
         case 'date_reverse':
           containerArray.sort((a, b) => {
-            const dateA = parseDate(a.dataset.brandCreationDate);
-            const dateB = parseDate(b.dataset.brandCreationDate);
-            return dateB - dateA;
+            return b.dataset.brandCreationDate - a.dataset.brandCreationDate;
           });
           button.innerHTML = 'Сначала старые<span></span>';
           break;

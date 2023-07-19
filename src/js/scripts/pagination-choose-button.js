@@ -1,7 +1,7 @@
 const buttonsPag = document.querySelector('.nav-btns');
 const nextButton = document.querySelector('.js-rm-pag-nav-page-more-bnt');
 const prevButton = document.querySelector('.js-rm-pag-nav-page-back-bnt');
-const moreButton = document.querySelector('.js-rm-pag-more-btn')
+const moreButton = document.querySelector('.js-rm-pag-more-btn');
 
 if (buttonsPag) {
   buttonsPag.addEventListener('click', (event) => {
@@ -18,17 +18,17 @@ if (buttonsPag) {
   });
 }
 // добавил для переключения страницы вперёд и назад
-if (nextButton) {
-  nextButton.addEventListener('click', (event) => {
-    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-chosen-nav-btn');
-    }
-    if (currentChosen.nextElementSibling) {
-      currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
-    }
-  });
-}
+// if (nextButton) {
+//   nextButton.addEventListener('click', (event) => {
+//     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-chosen-nav-btn');
+//     }
+//     if (currentChosen.nextElementSibling) {
+//       currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
+//     }
+//   });
+// }
 
 if (prevButton) {
   prevButton.addEventListener('click', (event) => {
@@ -42,17 +42,17 @@ if (prevButton) {
   });
 }
 
-if (moreButton) {
-  moreButton.addEventListener('click', (event) => {
-    const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
-    if (currentChosen) {
-      currentChosen.classList.remove('js-chosen-nav-btn');
-    }
-    if (currentChosen.nextElementSibling) {
-      currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
-    }
-  });
-}
+// if (moreButton) {
+//   moreButton.addEventListener('click', (event) => {
+//     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
+//     if (currentChosen) {
+//       currentChosen.classList.remove('js-chosen-nav-btn');
+//     }
+//     if (currentChosen.nextElementSibling) {
+//       currentChosen.nextElementSibling.classList.add('js-chosen-nav-btn');
+//     }
+//   });
+// }
 // if (nextButton) {
 //   nextButton.addEventListener('click', (event) => {
 //     const currentChosen = buttonsPag.querySelector('.js-chosen-nav-btn');
