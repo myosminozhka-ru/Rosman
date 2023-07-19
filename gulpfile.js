@@ -138,12 +138,6 @@ function prodGitHTML() {
   return src(`${options.paths.src.base}/**/*.{html,php}`)
     .pipe(includePartials())
     .pipe(replace('../../', './'))
-    .pipe(
-      replace(
-        '<script src="./js/scripts.js"></script>',
-        '<script src="./js/wishlist.js"></script><script src="./js/main.js"></script><script src="./js/pagination-choose-button.js"></script><script src="./js/library.js"></script><script src="./js/eleph-on-planets.js"></script><script src="./js/animation/animation_paper.js"></script><script src="./js/cards/cards.js"></script><script src="./js/detailed-pages/detailed-pages-swiper.js"></script><script src="./js/external/external.js"></script><script src="./js/google-map/map.js"></script><script src="./js/popups/popups.js"></script><script src="./js/sliders/slider.js"></script><script src="./js/toy-card-fullpage/toy-card-fullpage.js"></script><script src="./js/vacancy-page/vacancy-page.js"></script>'
-      )
-    )
     .pipe(dest(options.paths.docs.base));
 }
 
@@ -223,13 +217,19 @@ function prodScripts() {
     .pipe(dest(options.paths.build.js));
 }
 
-function prodGitScripts() {
+function prodGitLibsScripts() {
   return (
-    src([
-      `${options.paths.src.js}/libs/**/*.js`,
-      `${options.paths.src.js}/**/*.js`,
-    ])
-      // .pipe(concat({ path: 'scripts.js' }))
+    src([`${options.paths.src.js}/libs/**/*.js`])
+      .pipe(concat({ path: 'libs.js' }))
+      // .pipe(uglify())
+      .pipe(dest(options.paths.docs.js))
+  );
+}
+
+function prodGitDevScripts() {
+  return (
+    src([`${options.paths.src.js}/scripts/**/*.js`])
+      .pipe(concat({ path: 'scripts.js' }))
       // .pipe(uglify())
       .pipe(dest(options.paths.docs.js))
   );
@@ -345,7 +345,8 @@ exports.prodGithub = series(
   prodGitClean, // Clean Build Folder
   parallel(
     prodGitStyles,
-    prodGitScripts,
+    prodGitLibsScripts,
+    prodGitDevScripts,
     prodGitImages,
     prodGitHTML,
     prodGitFonts,
