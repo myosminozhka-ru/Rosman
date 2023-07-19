@@ -233,7 +233,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-              (avaliableCursorArea.height / 100) -
+            (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -573,6 +573,7 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
+
 class Slider {
   constructor(rangeElement, valueElement, options) {
     this.rangeElement = rangeElement;
@@ -596,7 +597,7 @@ class Slider {
   asMoney(value) {
     return (
       '$' +
-      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+      parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
     );
   }
 
@@ -638,6 +639,7 @@ if (rangeElement) {
 
   slider.init();
 }
+
 function showBlock(elementId) {
   const blocks = document.querySelectorAll('.show');
 
@@ -653,6 +655,7 @@ function showBlock(elementId) {
     block.classList.add('show');
   }
 }
+
 function closeFilter() {
   const filterOpen = document.getElementById('open-filter');
   const filterClose = document.getElementById('close-filter');
@@ -677,9 +680,11 @@ function closeFilter() {
     }
   }
 }
+
 function removeFilter(el) {
   el.remove();
 }
+
 const inputSearch = document.getElementById('searcAuthor');
 if (inputSearch) {
   inputSearch.addEventListener('input', function (event) {
@@ -703,3 +708,12 @@ if (inputSearch) {
     }
   });
 }
+
+const allButtons = document.querySelectorAll('.js-cl-btn');
+
+allButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    const siblingElement = button.previousElementSibling;
+    siblingElement.classList.toggle("max-h-[13rem]")
+  });
+});
