@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Партнерам</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  @@include('components/header/header.html')
+  <body class="bg-gray-50">
+    <div id="yellow-background">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+        <h1 class="head-1 px-24">Оптовым клиентам</h1>
+        <p class="mb-48 mt-24 px-24 text-m">
+          Компания РОСМЭН сотрудничает с юридическими лицами по оптовой продаже
+          книг и игрушек.
+        </p>
+        <h3 class="head-3 px-24">Условия сотрудничества</h3>
+        <div class="mb-48 grid grid-cols-3 md:flex md:flex-col gap-24 px-24 pt-24">
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-folder-medal-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Сотрудничество с юридическими лицами по договору поставки
+            </p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-money-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">От 30 000₽. Минимальная сумма заказа</p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="../../img/yellow-icons-58px/yellow-car-van-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Доставка по Москве и Московской области. В пределах МКАД +30 км
+              бесплатно. Самовывоз со склада
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-[122rem]"
+        ></div>
+        <div
+          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row  md:flex-col  gap-99 md:gap-32 px-24 py-94 md:h-[130rem]"
+        >
+          <div class="flex w-2/4 md:w-full flex-col gap-16">
+            <h3 class="head-3">Как начать с нами работать?</h3>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                1
+              </div>
+              <p class="flex items-center text-m">Заполнить анкету-заявку</p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                2
+              </div>
+              <p class="flex items-center text-m">Дождаться ответа менеджера</p>
+            </div>
+            <p class="w-3/4 md:w-full text-m">
+              Менеджер отправит Вам прайс-лист для формирования заказа и список
+              документов, необходимых для заключения договора
+            </p>
+          </div>
+          <div class="flex w-2/4 md:w-full flex-col gap-16">
+            <p class="mb-16 text-m">Шаг 2 из 4</p>
+            <p class='body-m-bold'>Формат торговли<sup>*</sup></p>
+            <div class='grid grid-cols-2 md:grid-cols-1 grid-rows-1 gap-40'>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-1" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-1">Опт<span class="cross"></span></label>
+                <input type="checkbox" id="sort-2" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-2">Розница<span class="cross"></span></label>
+                <input type="checkbox" id="sort-3" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-3">Интернет-магазин<span class="cross"></span></label>
+              </div>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-4" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-4">Совместные закупки<span class="cross"></span></label>
+                <input type="checkbox" id="sort-5" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-5">Бюджетные закупки<span class="cross"></span></label>
+                <input type="checkbox" id="sort-6" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-6">Другое<span class="cross"></span></label>
+                <input class="input w-full " type="text" placeholder="другое" />
+              </div>
+            </div>
+            <p class='body-m-bold'>Формат торговли<sup>*</sup></p>
+            <div class='grid grid-cols-2 md:grid-cols-1 grid-rows-1 gap-40'>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-7" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-7">Книги<span class="cross"></span></label>
+                <input type="checkbox" id="sort-8" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-8">Игрушка<span class="cross"></span></label>
+                <input type="checkbox" id="sort-9" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full mb-17" for="sort-9">Канцелярские товары<span class="cross"></span></label>
+                <button class="button-white  w-full md:hidden">Назад</button>
+              </div>
+              <div class='flex flex-col gap-12 w-[21rem]  md:w-full'>
+                <input type="checkbox" id="sort-10" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-10">Детские товары<span class="cross"></span></label>
+                <input type="checkbox" id="sort-11" class="sort-checkbox" />
+                <label class="sort-label  !border-black  w-full" for="sort-11">Другое<span class="cross"></span></label>
+                <input class="input w-full" type="text" placeholder="другое" />
+                <button class="button-white  w-full !hidden md:!block">Назад</button>
+                <button class="button-black  w-full">Следующий шаг</button>
+              </div>
+            </div>
+          </div>
+          <div class='-bottom-10 absolute'>
+            <div class="elephant-moves-leg">
+              <div class="elephant-moves-leg-body el-body">
+                <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                <div class="elephant-moves-leg-leg el-leg"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class='flex flex-col gap-16 mb-24 px-24 w-1/4 md:w-full'>
+          <h3 class="head-3 ">Адрес Склада</h3>
+          <p class='text-text text-m'>Московская обл., Обухово, территория Атлант-Парк, д.32, стр.1 Склад №33, подъезд</p>
+        </div>
+        <div id="map" style="width: 100%; height: 504px; margin-bottom: 6.4rem"></div>
+      </div>
+    </div>
+
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+      const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
+        center: [ 38.25840555122909, 55.825136637567695 ], // starting position [lng, lat]
+        zoom: 15, // starting zoom
+      });
+      var markerElement = document.createElement('div');
+      markerElement.className = 'marker';
+
+      var marker = new mapboxgl.Marker(markerElement)
+        .setLngLat([ 38.25840555122909, 55.825136637567695 ]) // Замените на координаты маркера
+        .addTo(map);
+    </script>
+  </body>,
+</html>

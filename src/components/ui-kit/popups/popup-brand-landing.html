@@ -1,4 +1,4 @@
-<div class="js_popup_brand_choose_modal modal">
+<div id="js_popup_brand_choose_list_modal" class="modal">
   <div class="popup_brand_choose_content">
     <div class="popup_brand_choose_header">
       <span
@@ -20,27 +20,27 @@
         class="more-down-filters no-padds no-after max-w-[20rem] border border-black surfaceduo:max-w-[100rem]"
       >
         <button class="more-down-button with-padds new">
-          Сортировать по<span></span>
+          Сначала новые<span></span>
         </button>
         <!--  more-down -->
-        <div class="more-down-content new">
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" />
+        <div class="more-down-content new merged-class-name">
+          <label class="checkbox-container pl-4">
+            <input type="radio" name="sort-by" value="date" checked />
             <span class="checkmark"></span>
             Сначала новые
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" />
+          <label class="checkbox-container pl-4">
+            <input type="radio" name="sort-by" value="date_reverse" />
             <span class="checkmark"></span>
             Сначала старые
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" />
+          <label class="checkbox-container pl-4">
+            <input type="radio" name="sort-by" value="name" />
             <span class="checkmark"></span>
             А-Я
           </label>
-          <label class="checkbox-container">
-            <input type="radio" name="sort-by" />
+          <label class="checkbox-container pl-4">
+            <input type="radio" name="sort-by" value="name_reverse" />
             <span class="checkmark"></span>
             Я-А
           </label>
@@ -49,255 +49,337 @@
     </div>
 
     <div class="popup_brand_choose_brands">
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="29.10.2022"
+        data-brand-name="nado"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb1" />
-        <label for="check-ppb1" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.05.2023"
+        data-brand-name="skre"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test_2.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb2" />
-        <label for="check-ppb2" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="26.11.2022"
+        data-brand-name="nando"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb3" />
-        <label for="check-ppb3" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2023"
+        data-brand-name="nanado"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test_2.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb4" />
-        <label for="check-ppb4" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="26.02.2022"
+        data-brand-name="skree"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb5" />
-        <label for="check-ppb5" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="17.10.2022"
+        data-brand-name="skro"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb6" />
-        <label for="check-ppb6" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2022"
+        data-brand-name="alal"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb7" />
-        <label for="check-ppb7" class="check-ppb-label"> </label>
-      </div>
-
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb8" />
-        <label for="check-ppb8" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb9" />
-        <label for="check-ppb9" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb10" />
-        <label for="check-ppb10" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb11" />
-        <label for="check-ppb11" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb12" />
-        <label for="check-ppb12" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb13" />
-        <label for="check-ppb13" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb14" />
-        <label for="check-ppb14" class="check-ppb-label"> </label>
       </div>
 
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="15.10.2023"
+        data-brand-name="allo"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb15" />
-        <label for="check-ppb15" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="12.07.2022"
+        data-brand-name="allod"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb16" />
-        <label for="check-ppb16" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2023"
+        data-brand-name="skor"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb17" />
-        <label for="check-ppb17" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="02.04.2022"
+        data-brand-name="skort"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb18" />
-        <label for="check-ppb18" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.11.2022"
+        data-brand-name="nandoo"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb19" />
-        <label for="check-ppb19" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="06.02.2023"
+        data-brand-name="nanedo"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb20" />
-        <label for="check-ppb20" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.07.2022"
+        data-brand-name="allm"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test_2.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb21" />
-        <label for="check-ppb21" class="check-ppb-label"> </label>
-      </div>
-
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb22" />
-        <label for="check-ppb22" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb23" />
-        <label for="check-ppb23" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb24" />
-        <label for="check-ppb24" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb25" />
-        <label for="check-ppb25" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb26" />
-        <label for="check-ppb26" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb27" />
-        <label for="check-ppb27" class="check-ppb-label"> </label>
-      </div>
-      <div class="image_container">
-        <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
-        </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb28" />
-        <label for="check-ppb28" class="check-ppb-label"> </label>
       </div>
 
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2022"
+        data-brand-name="skreee"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb29" />
-        <label for="check-ppb29" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.09.2023"
+        data-brand-name="srmdo"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb30" />
-        <label for="check-ppb30" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="05.11.2022"
+        data-brand-name="srmda"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test_2.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb31" />
-        <label for="check-ppb31" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="25.12.2022"
+        data-brand-name="nado-1"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test_2.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb32" />
-        <label for="check-ppb32" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="14.02.2023"
+        data-brand-name="nado-2"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb33" />
-        <label for="check-ppb33" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="13.10.2022"
+        data-brand-name=""
+      >
         <a href="#" class="popup_brand_choose_brand_image">
-          <img src="../../img/brand_nado.svg" alt="" />
+          <img src="../../img/brand_test.png" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb34" />
-        <label for="check-ppb34" class="check-ppb-label"> </label>
       </div>
-      <div class="image_container">
+      <div
+        class="image_container"
+        data-brand-creation-date="21.05.2022"
+        data-brand-name="alol-1"
+      >
         <a href="#" class="popup_brand_choose_brand_image">
           <img src="../../img/brand_nado.svg" alt="" />
         </a>
-        <input type="checkbox" class="checkbox_overlay" id="check-ppb35" />
-        <label for="check-ppb35" class="check-ppb-label"> </label>
+      </div>
+
+      <div
+        class="image_container"
+        data-brand-creation-date="05.08.2023"
+        data-brand-name="skrbe"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2022"
+        data-brand-name="alloe"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="17.08.2022"
+        data-brand-name="aaaa"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test_2.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2023"
+        data-brand-name="aaaaaa"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="16.09.2022"
+        data-brand-name="aaal"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="12.10.2022"
+        data-brand-name="nadododo"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test_2.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.04.2023"
+        data-brand-name="nadoorr"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
+      </div>
+
+      <div
+        class="image_container"
+        data-brand-creation-date="25.10.2022"
+        data-brand-name="aaabgb"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.04.2023"
+        data-brand-name="aaavvfv"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="15.10.2022"
+        data-brand-name="skreeeeeee"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2023"
+        data-brand-name="alllp"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="15.03.2022"
+        data-brand-name="skreewerew"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="05.10.2023"
+        data-brand-name="alloallo"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_test_2.png" alt="" />
+        </a>
+      </div>
+      <div
+        class="image_container"
+        data-brand-creation-date="25.10.2022"
+        data-brand-name="aaaaanbnbnbn"
+      >
+        <a href="#" class="popup_brand_choose_brand_image">
+          <img src="../../img/brand_nado.svg" alt="" />
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  const closeButton = document.querySelector(
+    '.js_popup_brand_choose_close_button'
+  );
+  closeButton.addEventListener('click', function () {
+    const dropdown = document.querySelector('.more-down-button.with-padds');
+    dropdown.classList.remove('active-js');
+    const contentFilters = document.querySelector('.more-down-content.new');
+    contentFilters.classList.remove('active-js');
+  });
+</script>

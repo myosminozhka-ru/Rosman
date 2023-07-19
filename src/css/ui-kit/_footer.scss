@@ -6,7 +6,7 @@
 
 .footer-container {
   @apply flex flex-col gap-28 bg-background px-24 py-32;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply gap-12 px-12 py-24;
   }
 }
@@ -35,14 +35,14 @@
 
 .drop-down-discover-rosman {
   @apply hidden;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply mt-40 block;
   }
 }
 
 .disc-rosman-item {
   @apply px-0 py-8 text-xl;
-  @media (min-width: 501px) and (max-width: 800px) {
+  @media (min-width: 501px) and (max-width: 900px) {
     @apply p-8 text-xl;
   }
   @media screen and (max-width: 500px) {
@@ -97,11 +97,18 @@
 }
 
 .js-footer-heading-policy-agreement {
-  @apply flex flex-row flex-nowrap;
+  @apply flex flex-row flex-nowrap w-min;
 }
 
 .footer-heading-policy-agreement-text {
-  @apply ml-16 flex flex-row flex-nowrap items-end text-s font-medium;
+  @apply flex flex-row flex-nowrap items-end text-s font-medium;
+  @media screen and (max-width: 500px) {
+    @apply flex flex-col items-start;
+  }
+}
+
+.footer-heading-policy-agreement-text-rand-book {
+  @apply ml-24 flex flex-row flex-nowrap items-end text-s font-medium;
   @media screen and (max-width: 500px) {
     @apply flex flex-col items-start;
   }
@@ -114,7 +121,7 @@
 // footer middle
 .footer-heading-discover-rosman {
   @apply flex w-1/2 flex-row justify-between gap-32;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
@@ -156,7 +163,7 @@
 
 .footer-info-main {
   @apply flex flex-row flex-wrap justify-between gap-16;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex-col;
   }
 }
@@ -177,14 +184,14 @@
 
 .footer-info-contacts {
   @apply flex w-1/2 flex-row justify-between gap-32;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col gap-16;
   }
 }
 
 .ft-inf-item {
   @apply w-1/3;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full;
   }
 }
@@ -200,14 +207,14 @@
 }
 
 .footer-info-email-one {
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
 
 .footer-info-email-two {
   @apply hidden;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply block;
   }
 }
@@ -217,14 +224,14 @@
 
 .footer-extras {
   @apply flex flex-row justify-between;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col gap-8;
   }
 }
 
 .footer-extras-creators {
   @apply flex flex-row flex-nowrap gap-12;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col gap-8;
   }
 }
@@ -234,7 +241,7 @@
 
 .footer-extras-links {
   @apply flex w-1/2 flex-row items-start gap-16;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col gap-8;
   }
 }
@@ -253,7 +260,7 @@
 
 .rosman-footer-eng {
   @apply flex flex-col px-24 py-48;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply px-12 py-24;
   }
 }
@@ -264,7 +271,7 @@
 
 .footer-eng-main {
   @apply flex flex-row justify-between gap-70;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex-col gap-24;
   }
 }
@@ -274,14 +281,14 @@
   @media (min-width: 801px) and (max-width: 1000px) {
     @apply flex-col items-end;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }
 
 .footer-eng-more-links-screen {
   @apply hidden;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex flex-row items-start gap-24;
   }
 }
@@ -299,7 +306,7 @@
 
 .footer-eng-info {
   @apply flex flex-row items-center justify-between;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col items-start gap-12;
   }
 }
@@ -316,28 +323,28 @@
 
 .footer-eng-info-directs {
   @apply flex w-2/3 flex-row gap-16;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full flex-col;
   }
 }
 
 .footer-eng-info-item {
   @apply w-1/4 text-s;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply w-full;
   }
 }
 
 .footer-eng-extras {
   @apply flex flex-row justify-between;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex-col items-start gap-16;
   }
 }
 
 .footer-eng-extras-creators {
   @apply flex flex-row items-start gap-24;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex-col items-start gap-8;
   }
 }
@@ -350,7 +357,7 @@
 
 .footer-eng-extras-links {
   @apply flex flex-row items-end gap-24;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @apply flex-col items-start gap-8;
   }
 }

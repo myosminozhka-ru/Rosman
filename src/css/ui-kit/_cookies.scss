@@ -1,5 +1,5 @@
 .cookies {
-    @apply p-24 bg-background flex items-center relative md:flex-col gap-16 md:p-16;
+  @apply relative flex items-center gap-16 bg-background p-24 md:flex-col md:p-16;
 
-    z-index: 100001;
+  z-index: 100001;
 }
