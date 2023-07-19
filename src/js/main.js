@@ -715,8 +715,23 @@ if (allButtons) {
   allButtons.forEach(button => {
     button.addEventListener('click', function () {
       const siblingElement = button.previousElementSibling;
-      siblingElement.classList.toggle("max-h-[13rem]")
+      siblingElement.classList.toggle("max-h-[13rem]");
+
+      if (button.innerText === 'Свернуть') {
+        if (button.classList.contains("js-cl-pok") && button.classList.contains("js-cl-pos")) {
+          button.innerText = 'Показать ещё';
+        } else if (button.classList.contains("js-cl-pok")) {
+          button.innerText = 'Показать ещё';
+        } else if (button.classList.contains("js-cl-pos")) {
+          button.innerText = 'Посмотреть все';
+        }
+      } else {
+        button.innerText = 'Свернуть';
+      }
     });
   });
-
 }
+
+
+// js-cl-pok Показать ещё
+// js-cl-pos Посмотреть все
