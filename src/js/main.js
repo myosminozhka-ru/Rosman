@@ -1,26 +1,26 @@
 window.addEventListener('DOMContentLoaded', () => {
-  var updateWindowSize = (function () {
-    console.log(window.innerHeight);
-    var minAllowedWindowHeight = 700;
-    var largerDivHeight = 900;
-
-    // actual updateWindowSize function
-    return function () {
-      var winHeight = window.innerHeight;
-      var newHeight =
-        winHeight < minAllowedWindowHeight
-          ? largerDivHeight
-          : winHeight - '350';
-      document.querySelector('.filters-block').style.height = newHeight + 'px';
-    };
-  })();
-  // call the method one time
-  updateWindowSize();
-  // subscribe the method to future resize events
-
-  addEventListener('resize', (event) => {
-    updateWindowSize();
-  });
+  // var updateWindowSize = (function () {
+  //   console.log(window.innerHeight);
+  //   var minAllowedWindowHeight = 700;
+  //   var largerDivHeight = 900;
+  //
+  //   // actual updateWindowSize function
+  //   return function () {
+  //     var winHeight = window.innerHeight;
+  //     var newHeight =
+  //       winHeight < minAllowedWindowHeight
+  //         ? largerDivHeight
+  //         : winHeight - '350';
+  //     document.querySelector('.filters-block').style.height = newHeight + 'px';
+  //   };
+  // })();
+  // // call the method one time
+  // updateWindowSize();
+  // // subscribe the method to future resize events
+  //
+  // addEventListener('resize', (event) => {
+  //   updateWindowSize();
+  // });
 
   // variables
 

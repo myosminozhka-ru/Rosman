@@ -20,7 +20,7 @@
 }
 
 .filters-block {
-  @apply w-full;
+  @apply w-full ;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -202,6 +202,7 @@
   }
 }
 
+
 /* Стили кнопок */
 
 .toolbar-button {
@@ -217,6 +218,7 @@
     font-size: 1.1rem;
   }
 }
+
 
 /* Стили активной кнопки */
 
@@ -764,7 +766,7 @@ header {
     display: -webkit-flex !important;
     flex-direction: row;
     -webkit-flex-direction: row;
-    gap: 2rem;
+    gap: 1.2rem;
     overflow-x: auto;
     width: 200rem;
     @media screen and (max-width: 1200px) {
@@ -862,6 +864,7 @@ header {
 .swiper-image-gallery,
 .swiper-catalog-projects,
 .swiper-detailed-page-video {
+
   // width: 100% !important;
   // height: auto !important;
   // padding: 0 3rem !important;
@@ -1557,8 +1560,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 
@@ -1789,10 +1791,10 @@ input::-moz-focus-outer {
   color: #000000;
 
   li {
-    @apply py-8 text-m;
+    @apply text-m py-8;
   }
 
   p {
-    @apply py-8 text-m;
+    @apply text-m py-8;
   }
 }
