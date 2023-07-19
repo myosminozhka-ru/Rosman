@@ -27,6 +27,10 @@ document.addEventListener('click', function (e) {
   if (e.target.classList.contains('ui-popup-close-button')) {
     e.target.closest('.modal').classList.remove('--active');
   }
+
+  if (e.target.classList.contains('ui-popup-close')) {
+    e.target.closest('.modal').classList.remove('--active');
+  }
 });
 
 // функция для добавления класса через положение тогглера в true,
