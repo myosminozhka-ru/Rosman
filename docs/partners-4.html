@@ -89,11 +89,78 @@
       <li class="partners"><a href="#">Партнерам</a></li>
     </ul>
   </nav>
-  <div class="search-input hide">
-    <span class="search-icon"></span>
-    <span class="micro-icon"></span>
-    <input type="text" placeholder="Введите поисковый запрос" />
-    <span class="cross-icon" onclick="toggleSearch()"></span>
+  <div class="flex flex-col w-full">
+    <div class="search-input hide">
+      <span class="search-icon"></span>
+      <span class="micro-icon"></span>
+      <input type="text" placeholder="Введите поисковый запрос" id="search-header"/>
+      <span class="cross-icon" onclick="toggleSearch()"></span>
+    </div>
+    <div id="search-result-header" class="navigation absolute hidden bg-white p-24 z-9999 top-[8%] w-[51%] md:w-full md:left-0">
+      <ul class="nav-list justify-between">
+        <li class="nav-li">
+          <p class="other active-js">Общее</p>
+        </li>
+        <li class="nav-li">
+          <p class="news-nav">Новости</p>
+        </li>
+        <li class="nav-li">
+          <p class="state">Статьи</p>
+        </li>
+        <li class="nav-li">
+          <p class="interview">Интервью</p>
+        </li>
+        <li class="nav-li">
+          <p class="collection">Подборки</p>
+        </li>
+      </ul>
+      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="collection">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка коллекция</a>
+        </div>
+      </div>
+      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="interview">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Интервью</a>
+        </div>
+      </div>
+      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="state">
+
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Статья</a>
+        </div>
+      </div>
+      <div class="navigation-content hide max-h-[43rem] overflow-hidden"  id="news-nav">
+
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Новости</a>
+        </div>
+      </div>
+      <div class="navigation-content active-js max-h-[43rem] overflow-hidden" id="other">
+
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+      </div>
+      <button class="button-black w-full js-cl-btn-2 js-cl-pok">Показать все результаты 748</button>
+    </div>
   </div>
   <div class="header-btn dekstop">
     <span class="search-button" onclick="toggleSearch()"></span>
@@ -469,16 +536,17 @@
                 Подписаться
               </button>
             </div>
-            <div class="js-footer-heading-policy-agreement checkbox_main">
+            <div class="js-footer-heading-policy-agreement checkbox_main ml-[15rem]">
               <input
-                class="js-footer-heading-checkbox checkbox__input_main"
-                type="checkbox"
-                id="footer-heading-checkbox"
+                      class="js-footer-heading-checkbox checkbox__input_main"
+                      type="checkbox"
+                      id="footer-heading-checkbox"
               />
               <label
                 for="footer-heading-checkbox"
                 class="footer-heading-policy-agreement-text checkbox__label_main body-m"
               >
+
                 <span>Соглашаюсь с &nbsp</span>
                 <a
                   href="#"
