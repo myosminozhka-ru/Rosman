@@ -43,7 +43,7 @@ if (jsMdb) {
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
-const navButtons = document.querySelector('.navigation');
+const navButtons = document.querySelector('.card-fullpage-navigation');
 
 if (navButtons) {
   const descriptionComponent = document.querySelector('.card-fp-description');
@@ -53,7 +53,7 @@ if (navButtons) {
   const instructionComponent = document.querySelector('.card-fp-instruction');
 
   navButtons.addEventListener('click', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const currentChosen = navButtons.querySelector('.active-js');
     const target = event.target.closest('.card-fullpage-tab');
 
@@ -254,7 +254,6 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // задаем параметры
   on: {
     slideChange: function () {
-      // console.log(sliderThumbs.activeIndex);
       const firstChosen = document.querySelector('.first-chosen');
       if (firstChosen.classList.contains('p-4')) {
         firstChosen.classList.remove('js-thumb-chosen');

@@ -597,6 +597,9 @@
 
   .slide-el.card-fullpage-slide-el-mod-2 {
     bottom: -2.5rem;
+    @media screen and (max-width: 500px) {
+      bottom: -4.5rem;
+    }
   }
 }
 

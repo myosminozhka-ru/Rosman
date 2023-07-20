@@ -62,18 +62,16 @@
 
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
-
-  &:hover {
-    box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
-  }
 }
 
 .book_card:hover .item_card_image {
   @apply bg-white;
+  box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
 }
 
 .toy_card:hover .item_card_image {
   @apply bg-white;
+  box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
 }
 
 .toy_card_heading {

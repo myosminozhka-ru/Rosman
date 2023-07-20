@@ -231,6 +231,19 @@
   }
 }
 
+#search-result-header {
+  top: 100%;
+  width: 100%;
+  @media (max-width: 639px) {
+    width: 100vw;
+    top: 6rem;
+  }
+}
+
+.header .flex.w-full.flex-col {
+  position: relative;
+}
+
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -545,7 +558,7 @@ header {
       @apply hidden;
 
       @media screen and (max-width: 900px) {
-        @apply inline-flex;
+        @apply inline-flex gap-16;
       }
 
       &.hide {
@@ -893,7 +906,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
@@ -1202,7 +1215,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
