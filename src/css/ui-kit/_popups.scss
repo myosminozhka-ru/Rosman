@@ -195,7 +195,7 @@
 }
 
 .popup_blockchain_transaction_info_question_img:hover
-.popup_blockchain_transaction_hash {
+  .popup_blockchain_transaction_hash {
   display: block;
 }
 
@@ -962,7 +962,7 @@
 //  @apply pl-12;
 //}
 .popup_brand_choose_brands {
-  @apply grid grid-cols-7 md:grid-cols-5 msm:grid-cols-3 gap-20 md:gap-16 msm:gap-0;
+  @apply grid grid-cols-7 gap-20 md:grid-cols-5 md:gap-16 msm:grid-cols-3 msm:gap-0;
   gap: 2rem;
 }
 

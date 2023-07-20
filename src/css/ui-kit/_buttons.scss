@@ -598,7 +598,7 @@ button {
     @apply m-4;
 
     p {
-      @apply relative cursor-pointer text-black no-underline mx-8 text-m;
+      @apply relative mx-8 cursor-pointer text-m text-black no-underline;
 
       &.active-js {
         &::after {
@@ -625,7 +625,7 @@ button {
   }
 
   .navigation-content {
-    @apply z-9999 bg-white mt-8 left-0 w-full;
+    @apply left-0 z-9999 mt-8 w-full bg-white;
 
     .cross {
       background: url('../../img/close.svg') no-repeat center right;
@@ -646,7 +646,7 @@ button {
     }
 
     .content-layer {
-      @apply flex py-16 gap-16 border-b border-background h-[14rem];
+      @apply flex h-[14rem] gap-16 border-b border-background py-16;
 
       .picture {
         @apply w-3/12;

@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //     }
   //   });
   // }
-   const navbar = document.querySelector('.navigation');
+  const navbar = document.querySelector('.navigation');
   const contentNavBarUl = document.querySelector('.nav-list');
   if (navbar) {
     contentNavBarUl.addEventListener('click', function (event) {
@@ -89,12 +89,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
       if (activeP != null) {
-
-          for (let i = 0; i < p.length; i++) {
-            if (p[i].classList.contains('active-js')) {
-              p[i].classList.remove('active-js');
-            }
+        for (let i = 0; i < p.length; i++) {
+          if (p[i].classList.contains('active-js')) {
+            p[i].classList.remove('active-js');
           }
+        }
       }
       for (let i = 0; i < contentNavBar.length; i++) {
         if (contentNavBar[i].id === event.target.classList.value) {
@@ -538,11 +537,11 @@ function toggleSearch() {
   }
 
   const headerSearch = document.getElementById('search-header');
-    const searchResult = document.getElementById('search-result-header');
+  const searchResult = document.getElementById('search-result-header');
   if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
+    searchResult.classList.remove('hidden');
   } else {
-    searchResult.classList.add('hidden')
+    searchResult.classList.add('hidden');
   }
 }
 
@@ -561,8 +560,7 @@ function changeLang(lang) {
 }
 
 function closeBar() {
-  const contentNavBar =
-      document.getElementsByClassName('navigation-content');
+  const contentNavBar = document.getElementsByClassName('navigation-content');
   const contentNavBarUl = document.querySelector('.nav-list');
   const activeP = document.querySelector('p.active-js');
   const p = contentNavBarUl.getElementsByTagName('p');
@@ -761,8 +759,8 @@ if (allButtonsTwo) {
 
       if (button.innerText === 'Свернуть') {
         if (
-            button.classList.contains('js-cl-pok') &&
-            button.classList.contains('js-cl-pos')
+          button.classList.contains('js-cl-pok') &&
+          button.classList.contains('js-cl-pos')
         ) {
           button.innerText = 'Показать все результаты';
         } else if (button.classList.contains('js-cl-pok')) {
@@ -781,9 +779,8 @@ const headerSearch = document.getElementById('search-header');
 headerSearch.addEventListener('input', function () {
   const searchResult = document.getElementById('search-result-header');
   if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
+    searchResult.classList.remove('hidden');
   } else {
-    searchResult.classList.add('hidden')
+    searchResult.classList.add('hidden');
   }
-
 });

@@ -89,14 +89,21 @@
     </ul>
   </nav>
 
-  <div class="flex flex-col w-full">
+  <div class="flex w-full flex-col">
     <div class="search-input hide">
       <span class="search-icon"></span>
       <span class="micro-icon"></span>
-      <input type="text" placeholder="Введите поисковый запрос" id="search-header"/>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
       <span class="cross-icon" onclick="toggleSearch()"></span>
     </div>
-    <div id="search-result-header" class="navigation absolute hidden bg-white p-24 z-9999 top-[8%] w-[51%] md:w-full md:left-0">
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] bg-white p-24 md:left-0 md:w-full"
+    >
       <ul class="nav-list justify-between">
         <li class="nav-li">
           <p class="other active-js">Общее</p>
@@ -114,34 +121,46 @@
           <p class="collection">Подборки</p>
         </li>
       </ul>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="collection">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="collection"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка коллекция</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="interview">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="interview"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Интервью</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="state">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="state"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Статья</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden"  id="news-nav">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="news-nav"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Новости</a>
         </div>
       </div>
-      <div class="navigation-content active-js max-h-[43rem] overflow-hidden" id="other">
-
+      <div
+        class="navigation-content active-js max-h-[43rem] overflow-hidden"
+        id="other"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Общее</a>
@@ -159,7 +178,9 @@
           <a class="name">Книжка Общее</a>
         </div>
       </div>
-      <button class="button-black w-full js-cl-btn-2 js-cl-pok">Показать все результаты 748</button>
+      <button class="button-black js-cl-btn-2 js-cl-pok w-full">
+        Показать все результаты 748
+      </button>
     </div>
   </div>
   <div class="header-btn dekstop">
@@ -497,50 +518,6 @@
           </div>
         </div>
         <hr class="my-14 text-grey" />
-        <div class="more-down-button active-js">Авторы<span></span></div>
-        <div class="more-down-content active-js">
-          <input
-            class="input search searchInput w-full"
-            type="text"
-            placeholder="Поиск"
-          />
-          <div class="scroll-block searchBlock">
-            <input type="checkbox" id="sort-9" class="sort-checkbox" />
-            <label
-              class="sort-label my-14"
-              for="sort-9"
-              data-name="мадсмиккельсен"
-              >Мадс Миккельсен<span class="cross"></span
-            ></label>
-            <input type="checkbox" id="sort-10" class="sort-checkbox" />
-            <label
-              class="sort-label my-14"
-              for="sort-10"
-              data-name="джеймсмакэвой"
-              >Джеймс МакЭвой<span class="cross"></span
-            ></label>
-            <input type="checkbox" id="sort-11" class="sort-checkbox" />
-            <label class="sort-label my-14" for="sort-11" data-name="джоннидэпп"
-              >Джонни Депп<span class="cross"></span
-            ></label>
-            <input type="checkbox" id="sort-12" class="sort-checkbox" />
-            <label class="sort-label my-14" for="sort-12" data-name="джоннидэпп"
-              >Джонни Депп<span class="cross"></span
-            ></label>
-            <input type="checkbox" id="sort-13" class="sort-checkbox" />
-            <label
-              class="sort-label my-14"
-              for="sort-13"
-              data-name="джекниколсон"
-              >Джек Николсон<span class="cross"></span
-            ></label>
-            <input type="checkbox" id="sort-14" class="sort-checkbox" />
-            <label class="sort-label my-14" for="sort-14" data-name="марктвен"
-              >Марк Твен<span class="cross"></span
-            ></label>
-          </div>
-        </div>
-        <hr class="my-14 text-grey" />
         <div class="more-down-button active-js">Тип<span></span></div>
         <div class="more-down-content active-js">
           <div class="max-h-[13rem] overflow-hidden">
@@ -782,7 +759,7 @@
         </div>
         <hr class="my-14 text-grey" />
 
-        <div class="sticky bottom-0 min-h-[10rem] bg-white py-10 md:h-[30rem]">
+        <div class="sticky bottom-0 min-h-[10rem] bg-white py-10">
           <button
             type="button"
             class="button-white my-10 w-full cursor-pointer"
@@ -1350,6 +1327,56 @@
             </div>
           </div>
           <hr class="my-14 text-grey" />
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js">Авторы<span></span></div>
+          <div class="more-down-content active-js">
+            <input
+              class="input search searchInput w-full"
+              type="text"
+              placeholder="Поиск"
+            />
+            <div class="scroll-block searchBlock">
+              <input type="checkbox" id="sort-9" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-9"
+                data-name="мадсмиккельсен"
+                >Мадс Миккельсен<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-10" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-10"
+                data-name="джеймсмакэвой"
+                >Джеймс МакЭвой<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-11" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-11"
+                data-name="джоннидэпп"
+                >Джонни Депп<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-12" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-12"
+                data-name="джоннидэпп"
+                >Джонни Депп<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-13" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-13"
+                data-name="джекниколсон"
+                >Джек Николсон<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-14" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-14" data-name="марктвен"
+                >Марк Твен<span class="cross"></span
+              ></label>
+            </div>
+          </div>
         </div>
       </div>
       <div class="popup_all_filters_block_filter_clmn">
@@ -2141,17 +2168,18 @@
                 Подписаться
               </button>
             </div>
-            <div class="js-footer-heading-policy-agreement checkbox_main ml-[15rem]">
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main ml-[15rem]"
+            >
               <input
-                      class="js-footer-heading-checkbox checkbox__input_main"
-                      type="checkbox"
-                      id="footer-heading-checkbox"
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
               />
               <label
                 for="footer-heading-checkbox"
                 class="footer-heading-policy-agreement-text checkbox__label_main body-m"
               >
-
                 <span>Соглашаюсь с &nbsp</span>
                 <a
                   href="#"
