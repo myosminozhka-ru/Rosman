@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //     }
   //   });
   // }
-   const navbar = document.querySelector('.navigation');
+  const navbar = document.querySelector('.navigation');
   const contentNavBarUl = document.querySelector('.nav-list');
   if (navbar) {
     contentNavBarUl.addEventListener('click', function (event) {
@@ -108,12 +108,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
       if (activeP != null) {
-
-          for (let i = 0; i < p.length; i++) {
-            if (p[i].classList.contains('active-js')) {
-              p[i].classList.remove('active-js');
-            }
+        for (let i = 0; i < p.length; i++) {
+          if (p[i].classList.contains('active-js')) {
+            p[i].classList.remove('active-js');
           }
+        }
       }
       for (let i = 0; i < contentNavBar.length; i++) {
         if (contentNavBar[i].id === event.target.classList.value) {
@@ -557,11 +556,11 @@ function toggleSearch() {
   }
 
   const headerSearch = document.getElementById('search-header');
-    const searchResult = document.getElementById('search-result-header');
+  const searchResult = document.getElementById('search-result-header');
   if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
+    searchResult.classList.remove('hidden');
   } else {
-    searchResult.classList.add('hidden')
+    searchResult.classList.add('hidden');
   }
 }
 
@@ -580,8 +579,7 @@ function changeLang(lang) {
 }
 
 function closeBar() {
-  const contentNavBar =
-      document.getElementsByClassName('navigation-content');
+  const contentNavBar = document.getElementsByClassName('navigation-content');
   const contentNavBarUl = document.querySelector('.nav-list');
   const activeP = document.querySelector('p.active-js');
   const p = contentNavBarUl.getElementsByTagName('p');
@@ -780,8 +778,8 @@ if (allButtonsTwo) {
 
       if (button.innerText === 'Свернуть') {
         if (
-            button.classList.contains('js-cl-pok') &&
-            button.classList.contains('js-cl-pos')
+          button.classList.contains('js-cl-pok') &&
+          button.classList.contains('js-cl-pos')
         ) {
           button.innerText = 'Показать все результаты';
         } else if (button.classList.contains('js-cl-pok')) {
@@ -800,12 +798,12 @@ const headerSearch = document.getElementById('search-header');
 headerSearch.addEventListener('input', function () {
   const searchResult = document.getElementById('search-result-header');
   if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
+    searchResult.classList.remove('hidden');
   } else {
-    searchResult.classList.add('hidden')
+    searchResult.classList.add('hidden');
   }
-
 });
+
 const buttonsPag = document.querySelector('.nav-btns');
 const nextButton = document.querySelector('.js-rm-pag-nav-page-more-bnt');
 const prevButton = document.querySelector('.js-rm-pag-nav-page-back-bnt');
@@ -882,106 +880,6 @@ if (prevButton) {
 // }
 
 
-
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
-});
-
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
-
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
 
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
@@ -1132,6 +1030,106 @@ window.addEventListener('resize', function () {
 //     });
 //   }
 // });
+
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
+});
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
 
 // External JS file like jquery etc which you do not wish to inlcuded in minification
 

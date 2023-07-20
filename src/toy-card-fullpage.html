@@ -406,9 +406,9 @@
                 class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
               >
                 С этой игрушкой часто покупают
-                <div class="link-s-bold inline-block hidden msm:hidden">
+                <a href="#" class="link-s-bold inline-block hidden msm:hidden">
                   Все
-                </div>
+                </a>
               </h3>
 
               <div class="buttons">
@@ -453,6 +453,11 @@
               class="card-fullpage-w-bg-modified msm:!h-[36rem]"
             >
               <div id="parent">
+                <!--            <div-->
+                <!--              id="follower"-->
+                <!--              class="slide-el card-fullpage-slide-el-mod-2">-->
+                <!--              @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )-->
+                <!--            </div>-->
                 <img
                   id="follower"
                   class="slide-el card-fullpage-slide-el-mod"
@@ -507,11 +512,21 @@
 
           <!-- тут ниже видео блок -->
           <div
-            class="card_video_item full-width bg-white px-24 py-64 ipadmini:px-12 sm:pb-48 sm:pt-[2rem]"
+            class="card_video_item w-full bg-white px-24 sm:px-12"
+            itemscope
+            itemtype="http://schema.org/VideoObject"
           >
-            <div class="card_video_preview">
-              <img src="../../img/cards_video_preview.svg" alt="" />
-              <button class="card_video_play_button circle-button"></button>
+            <!-- card_video_preview - класс оболочки айфрейма -->
+            <div class="aspect-video w-full">
+              <iframe
+                id="rick"
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <!--    <button class="card_video_play_button circle-button"></button>-->
             </div>
           </div>
           <div class="image-popup" id="imagePopup">

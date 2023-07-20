@@ -90,14 +90,21 @@
       <li class="partners"><a href="#">Партнерам</a></li>
     </ul>
   </nav>
-  <div class="flex flex-col w-full">
+  <div class="flex w-full flex-col">
     <div class="search-input hide">
       <span class="search-icon"></span>
       <span class="micro-icon"></span>
-      <input type="text" placeholder="Введите поисковый запрос" id="search-header"/>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
       <span class="cross-icon" onclick="toggleSearch()"></span>
     </div>
-    <div id="search-result-header" class="navigation absolute hidden bg-white p-24 z-9999 top-[8%] w-[51%] md:w-full md:left-0">
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] bg-white p-24 md:left-0 md:w-full"
+    >
       <ul class="nav-list justify-between">
         <li class="nav-li">
           <p class="other active-js">Общее</p>
@@ -115,34 +122,46 @@
           <p class="collection">Подборки</p>
         </li>
       </ul>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="collection">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="collection"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка коллекция</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="interview">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="interview"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Интервью</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="state">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="state"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Статья</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden"  id="news-nav">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="news-nav"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Новости</a>
         </div>
       </div>
-      <div class="navigation-content active-js max-h-[43rem] overflow-hidden" id="other">
-
+      <div
+        class="navigation-content active-js max-h-[43rem] overflow-hidden"
+        id="other"
+      >
         <div class="content-layer">
           <img class="picture" src="./img/cards_book.svg" />
           <a class="name">Книжка Общее</a>
@@ -160,7 +179,9 @@
           <a class="name">Книжка Общее</a>
         </div>
       </div>
-      <button class="button-black w-full js-cl-btn-2 js-cl-pok">Показать все результаты 748</button>
+      <button class="button-black js-cl-btn-2 js-cl-pok w-full">
+        Показать все результаты 748
+      </button>
     </div>
   </div>
   <div class="header-btn dekstop">
@@ -1924,10 +1945,13 @@
               <h3
                 class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
               >
-                С этой игрушкой часто покупают
-                <div class="link-s-bold inline-block hidden sm:inline-block">
+                С этой книгой часто покупают
+                <a
+                  href="#"
+                  class="link-s-bold inline-block hidden sm:inline-block"
+                >
                   Все
-                </div>
+                </a>
               </h3>
 
               <div class="buttons">
@@ -2615,7 +2639,12 @@
               id="yellow-moving-block"
               class="card-fullpage-w-bg-modified msm:!h-[36rem]"
             >
-              <div id="parent">
+              <div id="parent" class="relative">
+                <!--            <div-->
+                <!--              id="follower"-->
+                <!--              class="slide-el card-fullpage-slide-el-mod-2">-->
+                
+                <!--            </div>-->
                 <img
                   id="follower"
                   class="slide-el card-fullpage-slide-el-mod"
@@ -2784,11 +2813,21 @@
 
           <!-- тут ниже видео блок -->
           <div
-            class="card_video_item full-width bg-white px-24 py-64 ipadmini:px-12 sm:pb-48 sm:pt-[2rem]"
+            class="card_video_item w-full bg-white px-24 sm:px-12"
+            itemscope
+            itemtype="http://schema.org/VideoObject"
           >
-            <div class="card_video_preview">
-              <img src="./img/cards_video_preview.svg" alt="" />
-              <button class="card_video_play_button circle-button"></button>
+            <!-- card_video_preview - класс оболочки айфрейма -->
+            <div class="aspect-video w-full">
+              <iframe
+                id="rick"
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <!--    <button class="card_video_play_button circle-button"></button>-->
             </div>
           </div>
 
@@ -2842,17 +2881,18 @@
                 Подписаться
               </button>
             </div>
-            <div class="js-footer-heading-policy-agreement checkbox_main ml-[15rem]">
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main ml-[15rem]"
+            >
               <input
-                      class="js-footer-heading-checkbox checkbox__input_main"
-                      type="checkbox"
-                      id="footer-heading-checkbox"
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
               />
               <label
                 for="footer-heading-checkbox"
                 class="footer-heading-policy-agreement-text checkbox__label_main body-m"
               >
-
                 <span>Соглашаюсь с &nbsp</span>
                 <a
                   href="#"
