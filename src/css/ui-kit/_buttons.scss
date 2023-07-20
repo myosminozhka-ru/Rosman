@@ -591,14 +591,26 @@ button {
 
 .navigation {
   ul {
-    @apply m-0 flex list-none p-0;
+    @apply m-0 flex list-none p-0 overflow-scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   li {
     @apply m-4;
 
+    @media (max-width: 600px) {
+      @apply mx-16;
+      &:first-child {
+       @apply  ml-0;
+      }
+    }
+
     p {
-      @apply relative cursor-pointer text-black no-underline mx-8 text-m;
+      @apply relative cursor-pointer text-black no-underline mx-8 text-m w-fit text-center;
+
+
 
       &.active-js {
         &::after {

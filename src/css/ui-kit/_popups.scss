@@ -195,7 +195,7 @@
 }
 
 .popup_blockchain_transaction_info_question_img:hover
-  .popup_blockchain_transaction_hash {
+.popup_blockchain_transaction_hash {
   display: block;
 }
 
@@ -862,7 +862,7 @@
   top: 20%;
 
   @media screen and (max-width: 500px) {
-    @apply top-0 gap-16 px-12 pb-48 pt-24;
+    @apply gap-16 px-12 pb-48 pt-24 top-0;
   }
 
   @media (min-width: 501px) and (max-width: 800px) {
@@ -962,23 +962,14 @@
 //  @apply pl-12;
 //}
 .popup_brand_choose_brands {
-  @apply mx-auto flex flex-row  flex-wrap;
-  width: 72.4rem;
+  @apply grid grid-cols-7 md:grid-cols-5 msm:grid-cols-3 gap-20 md:gap-16 msm:gap-0;
   gap: 2rem;
-  @media screen and (max-width: 600px) {
-    @apply gap-8;
-  }
 }
 
 .image_container {
-  max-width: 9rem;
   aspect-ratio: 1/1;
   position: relative;
   display: inline-block;
-
-  @media screen and (max-width: 600px) {
-    max-width: 7rem;
-  }
 }
 
 .image_container {
@@ -1258,6 +1249,7 @@ img {
   @apply flex flex-row flex-nowrap gap-8;
   overflow-x: scroll;
   white-space: nowrap;
+
   &.no_scroll {
     flex-wrap: wrap !important;
     overflow-x: auto !important;
