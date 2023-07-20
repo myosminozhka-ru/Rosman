@@ -596,9 +596,16 @@ button {
 
   li {
     @apply m-4;
+    @media (max-width: 600px) {
+      @apply m-0;
+    }
 
     p {
-      @apply relative cursor-pointer text-black no-underline mx-8 text-m;
+      @apply relative cursor-pointer text-black no-underline mx-8 text-m w-fit text-center;
+
+      @media (max-width: 600px) {
+        @apply mx-auto;
+      }
 
       &.active-js {
         &::after {
