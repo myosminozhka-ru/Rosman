@@ -67,18 +67,18 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  const cardMore = document.getElementsByClassName('js-rm-pag-more-btn');
+  // const cardMore = document.getElementsByClassName('js-rm-pag-more-btn');
 
-  for (let i = 0; i < cardMore.length; i++) {
-    cardMore[i].addEventListener('click', function () {
-      const content = document.querySelectorAll('.toy_card');
-      for (let j = 0; j < content.length; j++) {
-        if (content[j].classList.contains('!hidden')) {
-          content[j].classList.remove('!hidden');
-        }
-      }
-    });
-  }
+  // for (let i = 0; i < cardMore.length; i++) {
+  //   cardMore[i].addEventListener('click', function () {
+  //     const content = document.querySelectorAll('.toy_card');
+  //     for (let j = 0; j < content.length; j++) {
+  //       if (content[j].classList.contains('!hidden')) {
+  //         content[j].classList.remove('!hidden');
+  //       }
+  //     }
+  //   });
+  // }
   const navbar = document.querySelector('.navigation');
   if (navbar) {
     navbar.addEventListener('click', function (event) {
@@ -134,6 +134,32 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // const activeErase = document.querySelector('.active-js_erase');
+  // if (activeErase) {
+  //   activeErase.addEventListener('click', function (event) {
+  //     const filter = document.querySelectorAll('.popup_all_filters_filter');
+  //     for (let i = 0; i < filter.length; i++) {
+  //       filter[i].remove();
+  //     }
+  //   });
+  // }
+  document.addEventListener('click', function (event) {
+    const block = document.querySelector('.more-down-button.out.active-js');
+    const targetElement = event.target;
+    if (block != null) {
+      if (
+        !block.contains(targetElement) &&
+        !targetElement.parentNode.classList.contains('more-down-content')
+      ) {
+        for (let i = 0; i < moreButtons.length; i++) {
+          if (moreButtons[i].classList.contains('active-js')) {
+            moreButtons[i].nextElementSibling.classList.remove('active-js');
+            moreButtons[i].classList.remove('active-js');
+          }
+        }
+      }
+    }
+  });
 
   const buttons = document.getElementsByClassName('collapse-button');
   for (let i = 0; i < buttons.length; i++) {
@@ -167,7 +193,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const movingBlock = document.getElementById('moving-block');
   const movingBlockShadow = document.getElementById('moving-bock-shadow');
 
-  if (movingBlock) {
+  if (movingBlock && movingBlockShadow) {
     document.addEventListener('mousemove', function (event) {
       const windowWidth = window.innerWidth;
       const blockWidth = movingBlock.offsetWidth;
@@ -369,7 +395,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const filterClose = document.getElementById('close-filter');
   const filter = document.getElementById('filter');
   const filter2 = document.getElementById('filter-2');
-  const allFilters = document.querySelector('.js_popup_all_filters_modal');
+  const allFilters = document.querySelector('#js_popup_all_filters_modal');
 
   const filterCheckedInputsCounter = function () {
     const counter = 0;
@@ -657,27 +683,59 @@ function closeFilter() {
   }
 }
 
+const inputSearch = document.querySelectorAll('.searchInput');
+const blockSearch = document.querySelectorAll('.searchBlock');
 
-const inputSearch = document.getElementById('searcAuthor');
-if (inputSearch) {
-  inputSearch.addEventListener('input', function (event) {
-    const blockSearch = document.getElementById('searchBlock');
-    let filter = inputSearch.value.toLowerCase();
-    const label = blockSearch.querySelectorAll('.sort-label');
-    for (let i = 0; i < label.length; i++) {
-      if (!filter) {
-        if (label[i].classList.contains('!hidden')) {
-          label[i].classList.remove('!hidden');
-        }
-      } else {
-        let content = label[i].dataset.name.toLowerCase();
-        if (content.includes(filter)) {
-          if (label[i].classList.contains('!hidden'))
-            label[i].classList.remove('!hidden');
+if (inputSearch.length && blockSearch.length) {
+  for (let i = 0; i < inputSearch.length; i++) {
+    inputSearch[i].addEventListener('input', function (event) {
+      let filter = inputSearch[i].value.toLowerCase();
+      const label = blockSearch[i].querySelectorAll('.sort-label');
+
+      for (let j = 0; j < label.length; j++) {
+        if (!filter) {
+          if (label[j].classList.contains('!hidden')) {
+            label[j].classList.remove('!hidden');
+          }
         } else {
-          label[i].classList.add('!hidden');
+          let content = label[j].dataset.name.toLowerCase();
+          if (content.includes(filter)) {
+            if (label[j].classList.contains('!hidden'))
+              label[j].classList.remove('!hidden');
+          } else {
+            label[j].classList.add('!hidden');
+          }
         }
       }
-    }
+    });
+  }
+}
+
+const allButtons = document.querySelectorAll('.js-cl-btn');
+
+if (allButtons) {
+  allButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      const siblingElement = button.previousElementSibling;
+      siblingElement.classList.toggle('max-h-[13rem]');
+
+      if (button.innerText === 'Свернуть') {
+        if (
+          button.classList.contains('js-cl-pok') &&
+          button.classList.contains('js-cl-pos')
+        ) {
+          button.innerText = 'Показать ещё';
+        } else if (button.classList.contains('js-cl-pok')) {
+          button.innerText = 'Показать ещё';
+        } else if (button.classList.contains('js-cl-pos')) {
+          button.innerText = 'Посмотреть все';
+        }
+      } else {
+        button.innerText = 'Свернуть';
+      }
+    });
   });
 }
+
+// js-cl-pok Показать ещё
+// js-cl-pos Посмотреть все
