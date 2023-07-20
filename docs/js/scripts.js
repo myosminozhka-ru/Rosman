@@ -1178,8 +1178,6 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
   },
 });
 
-// External JS file like jquery etc which you do not wish to inlcuded in minification
-
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
   const googleMapsUrlBase = 'https://www.google.com/maps/dir/?';
@@ -1430,6 +1428,8 @@ function initializeSearchInput(locator) {
     }
   });
 }
+
+// External JS file like jquery etc which you do not wish to inlcuded in minification
 
 const popupMethods = ['close', 'open'];
 
