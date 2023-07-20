@@ -591,7 +591,7 @@ button {
 
 .navigation {
   ul {
-    @apply m-0 flex list-none p-0 overflow-scroll;
+    @apply m-0 flex list-none overflow-scroll p-0;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -603,14 +603,12 @@ button {
     @media (max-width: 600px) {
       @apply mx-16;
       &:first-child {
-       @apply  ml-0;
+        @apply ml-0;
       }
     }
 
     p {
-      @apply relative cursor-pointer text-black no-underline mx-8 text-m w-fit text-center;
-
-
+      @apply relative mx-8 w-fit cursor-pointer text-center text-m text-black no-underline;
 
       &.active-js {
         &::after {
@@ -637,7 +635,7 @@ button {
   }
 
   .navigation-content {
-    @apply z-9999 bg-white mt-8 left-0 w-full;
+    @apply left-0 z-9999 mt-8 w-full bg-white;
 
     .cross {
       background: url('../../img/close.svg') no-repeat center right;
@@ -658,7 +656,7 @@ button {
     }
 
     .content-layer {
-      @apply flex py-16 gap-16 border-b border-background h-[14rem];
+      @apply flex h-[14rem] gap-16 border-b border-background py-16;
 
       .picture {
         @apply w-3/12;

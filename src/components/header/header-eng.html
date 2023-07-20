@@ -44,59 +44,78 @@
       <li class="partners"><a href="#">Партнерам</a></li>
     </ul>
   </nav>
-  <div class="flex flex-col w-full">
+  <div class="flex w-full flex-col">
     <div class="search-input hide">
       <span class="search-icon"></span>
       <span class="micro-icon"></span>
-      <input type="text" placeholder="Введите поисковый запрос" id="search-header"/>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
       <span class="cross-icon" onclick="toggleSearch()"></span>
     </div>
-    <div id="search-result-header" class="navigation absolute hidden bg-white p-24 md:p-12 z-9999 top-[8%] w-[51%] bs:w-full bs:left-0 overflow-hidden">
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] overflow-hidden bg-white p-24 bs:left-0 bs:w-full md:p-12"
+    >
       <ul class="nav-list justify-between sm:w-full">
-        <li class="nav-li text-center w-1/5 ">
+        <li class="nav-li w-1/5 text-center">
           <p class="other active-js">Общее</p>
         </li>
-        <li class="nav-li text-center w-1/5 ">
+        <li class="nav-li w-1/5 text-center">
           <p class="news-nav">Новости</p>
         </li>
-        <li class="nav-li text-center w-1/5 ">
+        <li class="nav-li w-1/5 text-center">
           <p class="state">Статьи</p>
         </li>
-        <li class="nav-li text-center w-1/5 ">
+        <li class="nav-li w-1/5 text-center">
           <p class="interview">Интервью</p>
         </li>
-        <li class="nav-li text-center w-1/5 ">
+        <li class="nav-li w-1/5 text-center">
           <p class="collection">Подборки</p>
         </li>
       </ul>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="collection">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="collection"
+      >
         <div class="content-layer">
           <img class="picture" src="../../img/cards_book.svg" />
           <a class="name">Книжка коллекция</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="interview">
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="interview"
+      >
         <div class="content-layer">
           <img class="picture" src="../../img/cards_book.svg" />
           <a class="name">Книжка Интервью</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden" id="state">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="state"
+      >
         <div class="content-layer">
           <img class="picture" src="../../img/cards_book.svg" />
           <a class="name">Книжка Статья</a>
         </div>
       </div>
-      <div class="navigation-content hide max-h-[43rem] overflow-hidden"  id="news-nav">
-
+      <div
+        class="navigation-content hide max-h-[43rem] overflow-hidden"
+        id="news-nav"
+      >
         <div class="content-layer">
           <img class="picture" src="../../img/cards_book.svg" />
           <a class="name">Книжка Новости</a>
         </div>
       </div>
-      <div class="navigation-content active-js max-h-[43rem] overflow-hidden" id="other">
-
+      <div
+        class="navigation-content active-js max-h-[43rem] overflow-hidden"
+        id="other"
+      >
         <div class="content-layer">
           <img class="picture" src="../../img/cards_book.svg" />
           <a class="name">Книжка Общее</a>
@@ -114,7 +133,9 @@
           <a class="name">Книжка Общее</a>
         </div>
       </div>
-      <button class="button-black w-full js-cl-btn-2 js-cl-pok">Показать все результаты 748</button>
+      <button class="button-black js-cl-btn-2 js-cl-pok w-full">
+        Показать все результаты 748
+      </button>
     </div>
   </div>
   <div class="header-btn">
