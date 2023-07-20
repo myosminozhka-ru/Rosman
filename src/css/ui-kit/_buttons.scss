@@ -598,7 +598,7 @@ button {
     @apply m-4;
 
     p {
-      @apply relative cursor-pointer text-black no-underline;
+      @apply relative cursor-pointer text-black no-underline mx-8 text-m;
 
       &.active-js {
         &::after {
@@ -625,15 +625,14 @@ button {
   }
 
   .navigation-content {
-    @apply z-9999 bg-white;
-    position: absolute;
+    @apply z-9999 bg-white mt-8 left-0 w-full;
 
     .cross {
       background: url('../../img/close.svg') no-repeat center right;
       background-size: 1rem 1rem;
       width: 1rem;
       height: 1rem;
-      right: 0;
+      right: 1.5rem;
       position: absolute;
       @apply ml-4 inline-block cursor-pointer text-left align-middle;
     }
@@ -647,14 +646,14 @@ button {
     }
 
     .content-layer {
-      @apply flex;
+      @apply flex py-16 gap-16 border-b border-background h-[14rem];
 
       .picture {
         @apply w-3/12;
       }
 
       .name {
-        @apply w-9/12 p-10 text-m;
+        @apply w-9/12 text-m;
       }
     }
   }
