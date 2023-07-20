@@ -126,7 +126,7 @@
 // footer middle
 .footer-heading-discover-rosman {
   @apply flex w-1/2 flex-row justify-between gap-32;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 900px) {
     @apply hidden;
   }
 }

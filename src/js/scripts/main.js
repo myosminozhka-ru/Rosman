@@ -79,32 +79,25 @@ window.addEventListener('DOMContentLoaded', () => {
   //     }
   //   });
   // }
-   const navbar = document.querySelector('.navigation');
-  const contentNavBarUl = document.querySelector('.nav-list');
+  const navbar = document.querySelector('.navigation');
   if (navbar) {
-    contentNavBarUl.addEventListener('click', function (event) {
+    navbar.addEventListener('click', function (event) {
       const contentNavBar =
         document.getElementsByClassName('navigation-content');
-
+      const contentNavBarUl = document.querySelector('.nav-list');
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
-      let clicked
-      if(event.target.classList.contains('nav-li')) {
-         return;
-      } if (event.target.classList.contains('nav-list')) {
-        return;
-      } else {
-         clicked = event.target;
-      }
       if (activeP != null) {
+        if (!activeP.contains(event.target)) {
           for (let i = 0; i < p.length; i++) {
             if (p[i].classList.contains('active-js')) {
               p[i].classList.remove('active-js');
             }
           }
+        }
       }
       for (let i = 0; i < contentNavBar.length; i++) {
-        if (contentNavBar[i].id === clicked.classList.value) {
+        if (contentNavBar[i].id === event.target.classList.value) {
           contentNavBar[i].classList.add('active-js');
           contentNavBar[i].classList.remove('hide');
         } else {
@@ -112,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
           contentNavBar[i].classList.add('hide');
         }
       }
-      clicked.classList.add('active-js');
+      event.target.classList.add('active-js');
     });
   }
   const closeNew = document.querySelectorAll('.close-button-new');
@@ -121,6 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
       closeNew[y].addEventListener('click', function (event) {
         const block = document.querySelector('.more-down-button.active-js');
         const text = document.querySelector('.sort-text');
+        console.log();
         text.innerHTML = closeNew[y].querySelector('p').innerText;
         const targetElement = event.target;
         if (block != null) {
@@ -543,14 +537,6 @@ function toggleSearch() {
   } else {
     mobileMenu.classList.add('hide');
   }
-
-  const headerSearch = document.getElementById('search-header');
-    const searchResult = document.getElementById('search-result-header');
-  if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
-  } else {
-    searchResult.classList.add('hidden')
-  }
 }
 
 function changeLang(lang) {
@@ -568,11 +554,6 @@ function changeLang(lang) {
 }
 
 function closeBar() {
-  const contentNavBar =
-      document.getElementsByClassName('navigation-content');
-  const contentNavBarUl = document.querySelector('.nav-list');
-  const activeP = document.querySelector('p.active-js');
-  const p = contentNavBarUl.getElementsByTagName('p');
   for (let i = 0; i < p.length; i++) {
     if (p[i].classList.contains('active-js')) {
       p[i].classList.remove('active-js');
@@ -758,39 +739,3 @@ if (allButtons) {
 
 // js-cl-pok Показать ещё
 // js-cl-pos Посмотреть все
-const allButtonsTwo = document.querySelectorAll('.js-cl-btn-2');
-
-if (allButtonsTwo) {
-  allButtonsTwo.forEach((button) => {
-    button.addEventListener('click', function () {
-      const siblingElement = button.previousElementSibling;
-      siblingElement.classList.toggle('max-h-[43rem]');
-
-      if (button.innerText === 'Свернуть') {
-        if (
-            button.classList.contains('js-cl-pok') &&
-            button.classList.contains('js-cl-pos')
-        ) {
-          button.innerText = 'Показать все результаты';
-        } else if (button.classList.contains('js-cl-pok')) {
-          button.innerText = 'Показать все результаты';
-        } else if (button.classList.contains('js-cl-pos')) {
-          button.innerText = 'Посмотреть все';
-        }
-      } else {
-        button.innerText = 'Свернуть';
-      }
-    });
-  });
-}
-
-const headerSearch = document.getElementById('search-header');
-headerSearch.addEventListener('input', function () {
-  const searchResult = document.getElementById('search-result-header');
-  if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
-  } else {
-    searchResult.classList.add('hidden')
-  }
-
-});

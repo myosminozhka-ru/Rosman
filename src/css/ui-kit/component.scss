@@ -543,7 +543,7 @@ header {
       @apply hidden;
 
       @media screen and (max-width: 900px) {
-        @apply inline-flex gap-16;
+        @apply inline-flex;
       }
 
       &.hide {
