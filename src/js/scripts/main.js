@@ -515,6 +515,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let logo = document.querySelector('.mobile-logo');
     input.value = '';
     let headerbtn = document.querySelectorAll('.header-btn');
+
     if (headerNav.classList.contains('hide')) {
       headerNav.classList.remove('hide');
       logo.classList.remove('hide');
@@ -766,31 +767,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // js-cl-pok Показать ещё
   // js-cl-pos Посмотреть все
-  const allButtonsTwo = document.querySelectorAll('.js-cl-btn-2');
+  // const allButtonsTwo = document.querySelectorAll('.js-cl-btn-2');
 
-  if (allButtonsTwo) {
-    allButtonsTwo.forEach((button) => {
-      button.addEventListener('click', function () {
-        const siblingElement = button.previousElementSibling;
-        siblingElement.classList.toggle('max-h-[43rem]');
+  // if (allButtonsTwo) {
+  //   allButtonsTwo.forEach((button) => {
+  //     button.addEventListener('click', function () {
+  //       const siblingElement = button.previousElementSibling;
+  //       siblingElement.classList.toggle('max-h-[43rem]');
 
-        if (button.innerText === 'Свернуть') {
-          if (
-            button.classList.contains('js-cl-pok') &&
-            button.classList.contains('js-cl-pos')
-          ) {
-            button.innerText = 'Показать все результаты';
-          } else if (button.classList.contains('js-cl-pok')) {
-            button.innerText = 'Показать все результаты';
-          } else if (button.classList.contains('js-cl-pos')) {
-            button.innerText = 'Посмотреть все';
-          }
-        } else {
-          button.innerText = 'Свернуть';
-        }
-      });
-    });
-  }
+  //       if (button.innerText === 'Свернуть') {
+  //         if (
+  //           button.classList.contains('js-cl-pok') &&
+  //           button.classList.contains('js-cl-pos')
+  //         ) {
+  //           button.innerText = 'Показать все результаты';
+  //         } else if (button.classList.contains('js-cl-pok')) {
+  //           button.innerText = 'Показать все результаты';
+  //         } else if (button.classList.contains('js-cl-pos')) {
+  //           button.innerText = 'Посмотреть все';
+  //         }
+  //       } else {
+  //         button.innerText = 'Свернуть';
+  //       }
+  //     });
+  //   });
+  // }
 
   const headerSearch = document.getElementById('search-header');
   headerSearch.addEventListener('input', function () {
