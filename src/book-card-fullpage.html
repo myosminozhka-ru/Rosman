@@ -437,7 +437,7 @@
             class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
           >
             С этой книгой часто покупают
-            <a href="#" class="link-s-bold inline-block hidden sm:inline-block">
+            <a href="#" class="link-s-bold !hidden md:!inline-block">
               Все
             </a>
           </h3>
@@ -531,7 +531,7 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item pt-40 w-full bg-white px-24 sm:px-12" itemscope
+      <div class="card_video_item pt-40 w-full bg-white px-24 sm:px-12 pb-64 sm:pb-48" itemscope
            itemtype="http://schema.org/VideoObject">
         <!-- card_video_preview - класс оболочки айфрейма -->
         <div class="w-full aspect-video">
@@ -543,9 +543,9 @@
       </div>
 
       <!-- тут ниже футер -->
-      @@include('components/ui-kit/footer/footer-ru.html', { }, )
       @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
       { }, )
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
   </div>
 </div>
