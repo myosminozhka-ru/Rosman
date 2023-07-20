@@ -114,7 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
       closeNew[y].addEventListener('click', function (event) {
         const block = document.querySelector('.more-down-button.active-js');
         const text = document.querySelector('.sort-text');
-        console.log();
         text.innerHTML = closeNew[y].querySelector('p').innerText;
         const targetElement = event.target;
         if (block != null) {
