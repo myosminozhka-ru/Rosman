@@ -45,6 +45,12 @@ document
     window.popup('js_popup_all_filters_modal', 'open');
   });
 
+document
+  .getElementById('js_popup_brand_description_button')
+  ?.addEventListener('click', function () {
+    window.popup('js_popup_brand_description_modal', 'open');
+  });
+
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
 const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
