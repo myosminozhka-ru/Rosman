@@ -88,8 +88,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
+      let clicked
+      if(event.target.classList.contains('nav-li')) {
+         return;
+      } if (event.target.classList.contains('nav-list')) {
+        return;
+      } else {
+         clicked = event.target;
+      }
       if (activeP != null) {
-
           for (let i = 0; i < p.length; i++) {
             if (p[i].classList.contains('active-js')) {
               p[i].classList.remove('active-js');
@@ -97,7 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }
       }
       for (let i = 0; i < contentNavBar.length; i++) {
-        if (contentNavBar[i].id === event.target.classList.value) {
+        if (contentNavBar[i].id === clicked.classList.value) {
           contentNavBar[i].classList.add('active-js');
           contentNavBar[i].classList.remove('hide');
         } else {
@@ -105,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
           contentNavBar[i].classList.add('hide');
         }
       }
-      event.target.classList.add('active-js');
+      clicked.classList.add('active-js');
     });
   }
   const closeNew = document.querySelectorAll('.close-button-new');
