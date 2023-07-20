@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="legal-information-wrapper relative">
+      <!--ya-->
+      <header id="header3" class="bottom header h-64" data-header="eng">
+  <div class="logo"><img src="./img/logos/main-logo-big.svg" /></div>
+  <div class="mobile-logo">
+    <img src="./img/logos/main-logo-mobile.svg" />
+  </div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги</a
+      >
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки</a
+      >
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about font-medium"><a href="#">About</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p>Содержимое 1</p>
+          <p>Содержимое 1</p>
+          <p>Содержимое 1</p>
+        </div>
+      </li>
+      <li class="toys font-medium"><a href="#">Toys</a></li>
+      <li class="books font-medium"><a href="#">Books</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="flex w-full flex-col">
+    <div class="search-input hide">
+      <span class="search-icon"></span>
+      <span class="micro-icon"></span>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
+      <span class="cross-icon js-toggle-search"></span>
+    </div>
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] overflow-hidden bg-white p-24 bs:left-0 bs:w-full md:p-12"
+    >
+      <ul class="nav-list justify-between sm:w-full">
+        <li class="nav-li w-1/5 text-center">
+          <p class="other active-js">Общее</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="news-nav">Новости</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="state">Статьи</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="interview">Интервью</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="collection">Подборки</p>
+        </li>
+      </ul>
+      <div class="navigation-content hide overflow-hidden" id="collection">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка коллекция</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="interview">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Интервью</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="state">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Статья</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="news-nav">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Новости</a>
+        </div>
+      </div>
+      <div class="navigation-content active-js overflow-hidden" id="other">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+      </div>
+      <button class="button-black w-full">Показать все результаты 748</button>
+    </div>
+  </div>
+  <div class="header-btn">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+
+    <span class="micro-button !hidden"></span>
+    <span class="envelope-button sm:!hidden"></span>
+    <span class="heart-button"></span>
+    <span class="search-button js-toggle-search !hidden sm:!block"></span>
+  </div>
+</header>
+<div class="toolbar">
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
+</div>
+<div id="block1" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+      <div
+        class="custom-box !z-1 js_contact_us_ru_popup_button !fixed sm:hidden"
+      >
+        <span></span>
+        <div class="custom-before"></div>
+        <div>Write to us</div>
+        <div class="custom-after"></div>
+      </div>
+      <div id="js_popup_contact_us_ru_modal" class="modal">
+  <div class="popup_contact_us_content modal-content">
+    <div class="popup_contact_us_header">
+      <div class="popup_contact_us_text">Свяжитесь с нами</div>
+      <span
+        class="js_popup_contact_us_close_button ui-popup-close-button"
+      ></span>
+    </div>
+    <div class="js_contact_us_popup_body">
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text">Письмо директору</a>
+        <div class="contact_us_popup_item_arrow">
+          <img src=".//img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text">Заявка на партнерство</a>
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text">Отправить резюме</a>
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text"
+          >Подписаться на рассылку</a
+        >
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text">СМИ</a>
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text">Блогерам</a>
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="contact_us_popup_item">
+        <a href="#" class="contact_us_popup_item_text"
+          >Задать вопрос по игрушкам</a
+        >
+        <div class="contact_us_popup_item_arrow">
+          <img src="./img/popup_arrow.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="flex flex-col gap-64 sm:gap-48">
+        <!-- тут будут бренды и публикации -->
+        <div
+          class="grid grid-cols-2 gap-24 bg-[#FFF145] p-24 pt-0 ipadmini:grid-cols-1 sm:p-12 sm:pt-0"
+        >
+          <div class="relative w-full">
+            <img src="./img/imidzh-car.jpg" alt="" />
+            <div
+              class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
+            >
+              <div class="text-60.104 font-medium bs:text-4xl">Brands</div>
+              <div
+                class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+              >
+                More details <span class="arrow-left-black"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative w-full">
+            <img src="./img/imidzh-book-2.png" alt="" />
+            <div
+              class="absolute left-[2.4rem] top-[2.4rem] flex flex-col gap-20 bs:gap-12"
+            >
+              <div class="text-60.104 font-medium bs:text-4xl">Publishing</div>
+              <div
+                class="flex w-max cursor-pointer flex-row flex-nowrap gap-2 border border-black px-12 py-8 text-15.20 font-medium"
+              >
+                More details <span class="arrow-left-black"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- тут будет слон -->
+        <!-- Slider main container -->
+
+<div class="elephant-history">
+  <div class="slider-header">
+    <h3 class="head-3">История</h3>
+    <div class="buttons">
+      <div class="button-prev" onclick="scrollContent('left')"></div>
+      <div class="button-next" onclick="scrollContent('right')"></div>
+    </div>
+  </div>
+  <div id="elephant-container">
+    <div id="elephant-slider">
+      <div class="elephant-slider-body body"></div>
+      <div class="elephant-dropdown upper first">
+        <div class="color-block upper first">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="year-text up first">1992</p>
+      <p class="year-text up second">2008</p>
+      <p class="year-text up third">2010</p>
+      <p class="year-text up fourth">2012</p>
+      <p class="year-text up fifth">2015</p>
+      <p class="year-text up sixth">2019</p>
+      <p class="year-text up seventh">2020</p>
+      <p class="year-text up nine">2020</p>
+      <p class="year-text up ten">2022</p>
+      <p class="year-text bottom first">2009</p>
+      <p class="year-text bottom second">2014</p>
+      <p class="year-text bottom third">2019</p>
+      <p class="year-text bottom fourth">2020</p>
+      <p class="year-text bottom fifth">2021</p>
+      <div class="elephant-dropdown upper second">
+        <div class="color-block upper second">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                Издательство становится профильным детским издательством
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper third">
+        <div class="color-block upper third">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                РОСМЭН крупнейшее профильное детское издательство России
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper fourth">
+        <div class="color-block upper fourth">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                Открытие направления Игрушки
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper fifth">
+        <div class="color-block upper fifth">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                «Свинка Пеппа» – игрушечный бренд №1 в России по обороту*
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper sixth">
+        <div class="color-block upper sixth">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                2019 год – РОСМЭН – самая быстрорастущая компания на рынке
+                игрушек
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper seventh">
+        <div class="color-block upper seventh">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                2019 год – РОСМЭН – самая быстрорастущая компания на рынке
+                игрушек
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper nine">
+        <div class="color-block upper nine">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                2019 год – РОСМЭН – самая быстрорастущая компания на рынке
+                игрушек
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown upper ten">
+        <div class="color-block upper ten">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content">
+              <p class="whitespace-normal p-16 text-m">
+                2019 год – РОСМЭН – самая быстрорастущая компания на рынке
+                игрушек
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom first">
+        <div class="color-block bottom first">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom second">
+        <div class="color-block bottom second">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom third">
+        <div class="color-block bottom third">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom fourth">
+        <div class="color-block bottom fourth">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom fifth">
+        <div class="color-block bottom fifth">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal p-16 text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-slider-body trunk-one"></div>
+    </div>
+  </div>
+</div>
+<!--<div class="elephant-dropdown">-->
+<!--    <div class="color-block">-->
+<!--        <div class="more-down">-->
+<!--            <button class="more-down-button"><span></span></button> &lt;!&ndash;  more-down &ndash;&gt;-->
+<!--            <div class="more-down-content">-->
+<!--                <p>Содержимое 1</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+        <!-- тут будут карточки сотрудников и их слайдер -->
+        <div class="flex flex-col gap-32 px-24 sm:px-12 ssm:pr-0">
+          <div class="text-5xl font-medium md:hidden">Key persons</div>
+          <div class="grid grid-cols-3 items-center gap-x-24 md:hidden">
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
+  <div class="card_employee_image">
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
+    <div class="card_employee_socials">
+      <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+      <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+      <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+      <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+    </div>
+  </div>
+
+  <div class="card_employee_info">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
+      Картельные сговоры не допускают ситуации, при которой представители
+      современных социальных резервов лишь добавляют.
+    </div>
+  </div>
+</div>
+
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
+  <div class="card_employee_image">
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
+    <div class="card_employee_socials">
+      <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+      <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+      <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+      <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+    </div>
+  </div>
+
+  <div class="card_employee_info">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
+      Картельные сговоры не допускают ситуации, при которой представители
+      современных социальных резервов лишь добавляют.
+    </div>
+  </div>
+</div>
+
+            <div class="card_employee" itemscope itemtype="https://schema.org/Person">
+  <div class="card_employee_image">
+    <img src="./img/cards_employee.svg" alt="" itemprop="image" />
+    <div class="card_employee_socials">
+      <a href="#" class="card_employee_social_item emp_soc_fb"></a>
+      <a href="#" class="card_employee_social_item emp_soc_twit"></a>
+      <a href="#" class="card_employee_social_item emp_soc_pint"></a>
+      <a href="#" class="card_employee_social_item emp_soc_inst"></a>
+    </div>
+  </div>
+
+  <div class="card_employee_info">
+    <div class="card_employee_name" itemprop="name">Иван Иванов</div>
+    <div class="card_employee_occupation" itemprop="jobTitle">Писатель</div>
+    <div class="card_employee_text" itemprop="description">
+      Картельные сговоры не допускают ситуации, при которой представители
+      современных социальных резервов лишь добавляют.
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="hidden md:!block">
+            <div class="swiper-imidzh-page overflow-hidden">
+              <div class="swiper-header !mb-0 !mt-0 !w-full sm:pr-12">
+                <h3 class="head-3 pb-24">Key persons</h3>
+                <div class="buttons !w-[5rem] !gap-24">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card_employee">
+                    <div class="card_employee_image">
+                      <img src="./img/cards_employee.svg" alt="" />
+                      <div class="card_employee_socials">
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_fb"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_twit"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_pint"
+                        ></a>
+                        <a
+                          href="#"
+                          class="card_employee_social_item emp_soc_inst"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="card_employee_info">
+                      <div class="card_employee_name">Ivan Ivanov</div>
+                      <div class="card_employee_occupation">Writer</div>
+                      <div class="card_employee_text">
+                        Cartel collusion does not allow a situation in which
+                        representatives of modern social reserves only add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- тут будут контакты -->
+        <div class="flex flex-col gap-64 sm:flex-col">
+          <div class="px-24 text-5xl font-medium md:hidden sm:px-12">
+            Contacts
+          </div>
+          <div class="grid grid-cols-4 gap-16 px-24 sm:grid-cols-1 sm:px-12">
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="./img/imidzh-ho.svg" />
+                </div>
+                <div class="head-4">Head Office</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Address</div>
+                  <div class="text-15.20 font-medium">
+                    127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya,
+                    Maryina Grove
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium"
+                    >+7 495 933-71-30</a
+                  >
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="./img/imidzh-toys.svg" />
+                </div>
+                <div class="head-4">Toys</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium"
+                    >+7 495 933-71-30</a
+                  >
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="./img/imidzh-books.svg" />
+                </div>
+                <div class="head-4">Books</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium">
+                    +7 495 933-71-30
+                  </a>
+                </div>
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <a
+                    href="mailto:rosman@rosman.ru"
+                    class="text-15.20 font-medium"
+                    >rosman@rosman.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start gap-24">
+              <div class="flex flex-col gap-8">
+                <div class="w-[5.8rem]">
+                  <img src="./img/imidzh-rld.svg" />
+                </div>
+                <div class="head-4">Rights and Licenses Department</div>
+              </div>
+
+              <div class="flex flex-col gap-16">
+                <div>
+                  <div class="text-2.5xl text-text">Telephone</div>
+                  <a href="tel:+74959337130" class="text-15.20 font-medium">
+                    +7 495 933-71-30
+                  </a>
+                </div>
+
+                <div>
+                  <div class="text-2.5xl text-text">Email address</div>
+                  <div class="text-15.20 font-medium">rosman@rosman.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- тут будет фидбек -->
+        <div
+          class="relative mb-64 bg-yellow px-24 py-[10rem] bs:py-[15rem] sm:px-12"
+        >
+          <div
+            class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-white shadow-lg"
+          ></div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 z-10 h-46 origin-bottom-left skew-y-2 overflow-hidden bg-white shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]"
+          ></div>
+
+          <div
+            class="relative bottom-[-62.4rem] left-0 right-0 h-[1rem] rotate-2 bs:bottom-[-66.6rem] msm:!bottom-[-67.7rem]"
+          >
+            <div
+              class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]"
+            >
+              <img src="./img/elephant-figure-skating.svg" alt="" />
+            </div>
+          </div>
+
+          <!--   контентная часть   -->
+          <div
+            class="relative mx-auto flex max-w-[40rem] flex-col items-center gap-40 sm:items-start"
+          >
+            <div class="text-5xl font-medium">Feedback</div>
+            <div class="flex w-full flex-col items-start gap-24">
+              <input class="input w-full" placeholder="Name*" />
+              <input class="input w-full" placeholder="Surname*" />
+              <input class="input w-full" placeholder="Email address*" />
+              <input class="input w-full" placeholder="Telephone*" />
+              <textarea
+                rows="4"
+                class="input w-full resize-none"
+                placeholder="Message*"
+              ></textarea>
+              <div class="js-footer-heading-policy-agreement checkbox_main">
+                <input
+                  class="js-footer-heading-checkbox checkbox__input_main"
+                  type="checkbox"
+                  id="footer-heading-checkbox-eng"
+                />
+                <label
+                  for="footer-heading-checkbox-eng"
+                  class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+                >
+                  <span>I agree with the &nbsp</span>
+                  <a
+                    href="#"
+                    class="footer-heading-policy-agreement-link link-m-bold w-max"
+                  >
+                    privacy policy
+                  </a>
+                </label>
+              </div>
+              <button class="button-black w-full text-15.20 font-medium">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer eng -->
+<div class="footer footer-eng rosman-footer-eng bs:mb-60">
+  <div class="footer-eng-heading">
+    <div class="footer-eng-main">
+      <span class="footer-heading-image"></span>
+      <div class="footer-eng-more-links-screen">
+        <a href="#" class="footer-eng-more-link-screen">About</a>
+        <a href="#" class="footer-eng-more-link-screen">Brands</a>
+        <a href="#" class="footer-eng-more-link-screen">Books</a>
+      </div>
+      <div class="footer-eng-subscr">
+        <div class="footer-heading-subs-title-screen">
+          Subscribe to the ROSMAN newsletter and receive our best materials 1
+          time a week. Free of charge, on business
+        </div>
+        <div class="footer-heading-subs-inputs">
+          <div class="footer-heading-subs-inputs-main">
+            <input
+              type="email"
+              placeholder="Email"
+              class="footer-heading-subs-input input"
+            />
+            <button class="footer-heading-subs-button button-yellow">
+              Subscribe
+            </button>
+          </div>
+          <div class="js-footer-heading-policy-agreement checkbox_main">
+            <input
+              class="js-footer-heading-checkbox checkbox__input_main"
+              type="checkbox"
+              id="footer-heading-checkbox-eng"
+            />
+            <label
+              for="footer-heading-checkbox-eng"
+              class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+            >
+              <span>I agree with the &nbsp</span>
+              <a
+                href="#"
+                class="footer-heading-policy-agreement-link link-m-bold"
+              >
+                privacy policy
+              </a>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-eng-more-links">
+      <a href="#" class="footer-eng-more-link">About</a>
+      <a href="#" class="footer-eng-more-link">Brands</a>
+      <a href="#" class="footer-eng-more-link">Books</a>
+    </div>
+  </div>
+  <hr class="my-32 text-black" />
+  <div class="footer-eng-info">
+    <div class="footer-eng-info-rss common-text">
+      <a href="#" class="footer-eng-info-rss-image"></a>RSS
+    </div>
+    <!--    занимает 2/3, а каждый элемент - 1/4     -->
+    <div class="footer-eng-info-directs">
+      <div class="footer-eng-info-item">
+        17465, 29 Generala Tyuleneva str., building 1, rooms 3,2,1, room. II,
+        1st floor
+      </div>
+      <a href="tel:+74959337130" class="footer-eng-info-item"
+        >+7 495-933-71-30</a
+      >
+      <div class="footer-eng-info-item">
+        127521, Moscow, Sheremetyevo str., 47, m. Butyrskaya, Maryina Grove
+      </div>
+      <a href="mailto:rosman@rosman.ru" class="footer-eng-info-item"
+        >rosman@rosman.ru</a
+      >
+    </div>
+  </div>
+  <hr class="my-32 text-black" />
+  <div class="footer-eng-extras">
+    <div class="footer-eng-extras-creators">
+      <div class="footer-eng-extras-idea common-text">
+        © 1992-2023 ROSMAN LLC. All rights reserved.
+      </div>
+      <div class="footer-eng-extras-maker common-text">
+        Website development: Осьминожка
+      </div>
+    </div>
+    <div class="footer-eng-extras-links">
+      <div class="footer-eng-extras-link common-text link-m-bold">
+        Privacy policy
+      </div>
+      <div class="footer-eng-extras-link common-text link-m-bold">
+        User agreement
+      </div>
+      <div class="footer-eng-extras-link common-text link-m-bold">Cookies</div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

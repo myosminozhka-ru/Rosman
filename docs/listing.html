@@ -1,0 +1,3360 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Листинг</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <header id="header3" class="bottom header h-64" data-header="main">
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex w-full flex-col">
+    <div class="search-input hide">
+      <span class="search-icon"></span>
+      <span class="micro-icon"></span>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
+      <span class="cross-icon js-toggle-search"></span>
+    </div>
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] overflow-hidden bg-white p-24 bs:left-0 bs:w-full md:p-12"
+    >
+      <ul class="nav-list justify-between sm:w-full">
+        <li class="nav-li w-1/5 text-center">
+          <p class="other active-js">Общее</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="news-nav">Новости</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="state">Статьи</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="interview">Интервью</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="collection">Подборки</p>
+        </li>
+      </ul>
+      <div class="navigation-content hide overflow-hidden" id="collection">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка коллекция</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="interview">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Интервью</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="state">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Статья</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="news-nav">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Новости</a>
+        </div>
+      </div>
+      <div class="navigation-content active-js overflow-hidden" id="other">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+      </div>
+      <button class="button-black w-full">Показать все результаты 748</button>
+    </div>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button js-toggle-search"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+    <span class="heart-button"></span>
+    <span class="search-button js-toggle-search"></span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
+</div>
+<div id="block1" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+  <body>
+    <div id="yellow-background">
+      <div id="moving-block" class="!-left-2 !w-[110%]">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div
+          class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
+        >
+          <p class="breadcrumbs">
+            <a href="#">Главная </a><span>/</span>
+            <a class="active-js" href="#">Игрушки</a>
+          </p>
+
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">
+              ...
+              <div class="breadcrumbs-arrow"></div>
+              <div class="breadcrumbs-path-hidden"></div>
+            </div>
+            <div class="breadcrumbs-small-screen-path">Игрушки</div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-row gap-12 bg-background px-24 py-16 shs:flex-col md:gap-8 md:px-12 md:pb-24 md:pt-12"
+        >
+          <div class="flex flex-row gap-24 md:flex-col md:gap-4">
+            <img
+              class="h-[13rem] w-[13rem] object-contain md:hidden"
+              src="./img/brand_image.svg"
+            />
+            <div class="hidden gap-16 md:flex md:flex-row">
+              <img
+                class="h-[5rem] w-[5rem] object-contain"
+                src="./img/brand_image.svg"
+              />
+              <div class="flex justify-center">
+                <h3 class="head-2 my-auto">Инфинити Надо</h3>
+              </div>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <h3 class="head-2 text-center md:hidden">Инфинити Надо</h3>
+              <p class="body-m text-start md:text-left">
+                Основу волчков Infinity Nado составляет атакующее металлическое
+                кольцо - именно благодаря металлической основе волчки Infinity
+                Nado такие...
+              </p>
+              <div class="mb-12 mt-8">
+                <p class="link-m-bold" id="js_popup_brand_description_button">
+                  Читать
+                </p>
+              </div>
+              <div id="js_popup_brand_description_modal" class="modal">
+  <div class="popup_brand_description_content">
+    <div class="popup_brand_description_heading">
+      <div class="heading_main">
+        <div class="aspect-square max-h-[14rem] bg-background">
+          <img
+            class="block h-full w-full object-contain"
+            src="./img/brand_name.svg"
+            alt=""
+          />
+        </div>
+        <div class="popup_brand_description_header">Инфинити Надо</div>
+      </div>
+      <div
+        class="js_popup_brand_description_close_button ui-popup-close-button"
+      ></div>
+    </div>
+
+    <div class="popup_brand_description_info">
+      <div class="popup_brand_description_info_one description_info_text">
+        СУПЕРМОЩНОЕ ПОКОЛЕНИЕ ВОЛЧКОВ INFINITY NADO ВЫВОДИТ БЛЕЙД-БАТТЛ НА НОВЫЙ
+        УРОВЕНЬ!
+      </div>
+      <div class="popup_brand_description_info_two description_info_text">
+        Основу волчков Infinity Nado составляет атакующее металлическое кольцо -
+        именно благодаря металлической основе волчки Infinity Nado такие мощные
+        и практически непобедимые!
+      </div>
+      <div class="popup_brand_description_info_three description_info_text">
+        Каждый волчок из линеек Infinity Nado обладает своей уникальной
+        суперсилой: Атака, Выносливость, Баланс, Защита.Infinity Nado - твой
+        блейд для побед!
+      </div>
+    </div>
+
+    <div class="popup_brand_description_socials">
+      <a href="#" class="popup_brand_description_vk pup-br-no-pad"></a>
+      <a href="#" class="popup_brand_description_tiktok pup-br-no-pad"></a>
+      <a href="#" class="popup_brand_description_youtube pup-br-no-pad"></a>
+    </div>
+
+    <div class="popup_brand_description_site">
+      <a href="#" class="link-m-bold">Перейти на страницу бренда</a>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+          <div
+            class="flex flex-row gap-16 shs:justify-between md:flex-col md:gap-0"
+          >
+            <div
+              class="more-down-filters no-padds no-after js-brand-description-dropdown !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Сезоны
+                <p class="js-brand-dropdown-counter ml-4 mr-auto"></p>
+                <span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-1" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-1"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-2" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-2"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-6" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-6"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-7" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-7"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-8" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-8"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-123" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-123"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+            <div
+              class="more-down-filters no-padds no-after js-brand-description-dropdown !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Линейка
+                <p class="js-brand-dropdown-counter ml-4 mr-auto"></p>
+                <span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-5" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-5"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-4" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-4"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-3" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-3"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+            <div
+              class="more-down-filters no-padds no-after js-brand-description-dropdown !w-[19rem] md:!w-full"
+            >
+              <button
+                class="more-down-button new border-b border-card-stroke !bg-none !px-16 !py-4 text-s md:!px-15 md:!py-10"
+              >
+                Особенности
+                <p class="js-brand-dropdown-counter ml-4 mr-auto"></p>
+                <span></span>
+              </button>
+              <!--  more-down -->
+              <div
+                class="more-down-content new h-[12rem] overflow-x-hidden overflow-y-scroll !px-8"
+              >
+                <input type="checkbox" id="sort-9" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-9"
+                  >Мадс Миккельсен<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-10" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-10"
+                  >Джеймс МакЭвой<span class="cross"></span
+                ></label>
+                <input type="checkbox" id="sort-11" class="sort-checkbox" />
+                <label class="sort-label my-14 md:mx-auto" for="sort-11"
+                  >Джонни Депп<span class="cross"></span
+                ></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 flex flex-row gap-22 bg-white px-25 md:px-0">
+          <div class="main-block filter-2 flex justify-around" id="filter-2">
+  <div class="flex w-full flex-row justify-center">
+    <form id="filter-form-2" class="filters-block overflow-y-scroll">
+      <p class="mobile-p">Фильтры</p>
+      <span id="close-filter"> </span>
+      <div class="more-down">
+        <div class="more-down-button active-js">Категории<span></span></div>
+        <div class="more-down-content active-js">
+          <div class="max-h-[13rem] overflow-hidden pb-12">
+            <input type="checkbox" id="sort-15" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-15">Трансформеры</label>
+            <input type="checkbox" id="sort-16" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-16"
+              >Волчки и наборы</label
+            >
+            <input type="checkbox" id="sort-17" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-17"
+              >Игровые набор и фигурки</label
+            >
+            <input type="checkbox" id="sort-117" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-117"
+              >Игровые набор и фигурки</label
+            >
+            <input type="checkbox" id="sort-217" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-217"
+              >Игровые набор и фигурки</label
+            >
+            <input type="checkbox" id="sort-317" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-317"
+              >Игровые набор и фигурки</label
+            >
+          </div>
+          <div
+            class="button-yellow-full show-more-label js-cl-btn js-cl-pok cursor-pointer text-m"
+          >
+            Показать ещё
+          </div>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="my-4 flex justify-between">
+          <span class="my-auto mr-12 w-auto text-l font-semibold">Новинка</span>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="my-4 flex justify-between">
+          <span class="my-auto w-auto text-l font-semibold"
+            >Скоро в продаже</span
+          >
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Для кого<span></span></div>
+        <div class="more-down-content active-js">
+          <input type="checkbox" id="sort-18" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-18">Для Мальчиков</label>
+          <input type="checkbox" id="sort-19" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-19">Для девочек</label>
+          <input type="checkbox" id="sort-20" class="sort-checkbox" />
+          <label class="sort-label my-14" for="sort-20">Для всех</label>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Возраст<span></span></div>
+        <div class="more-down-content active-js">
+          <div
+            class="flex max-h-[8rem] flex-wrap justify-between overflow-hidden"
+          >
+            <input type="checkbox" id="filter-20" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-20">0+ </label>
+            <input type="checkbox" id="filter-21" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-21">3+ </label>
+            <input type="checkbox" id="filter-22" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-22">5+ </label>
+            <input type="checkbox" id="filter-23" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-23">7+ </label>
+            <input type="checkbox" id="filter-24" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-24">10+ </label>
+            <input type="checkbox" id="filter-25" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-25">15+ </label>
+            <input type="checkbox" id="filter-26" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-26">5+</label>
+            <input type="checkbox" id="filter-127" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-127">7+ </label>
+            <input type="checkbox" id="filter-227" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-227">7+ </label>
+            <input type="checkbox" id="filter-327" class="filter-checkbox" />
+            <label class="filter-label age" for="filter-327">7+ </label>
+          </div>
+        </div>
+        <div></div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Авторы<span></span></div>
+        <div class="more-down-content active-js">
+          <input
+            class="input search searchInput w-full"
+            type="text"
+            placeholder="Поиск"
+          />
+          <div class="scroll-block searchBlock">
+            <input type="checkbox" id="sort-9" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-9"
+              data-name="мадсмиккельсен"
+              >Мадс Миккельсен<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-10" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-10"
+              data-name="джеймсмакэвой"
+              >Джеймс МакЭвой<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-11" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-11" data-name="джоннидэпп"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-12" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-12" data-name="джоннидэпп"
+              >Джонни Депп<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-13" class="sort-checkbox" />
+            <label
+              class="sort-label my-14"
+              for="sort-13"
+              data-name="джекниколсон"
+              >Джек Николсон<span class="cross"></span
+            ></label>
+            <input type="checkbox" id="sort-14" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-14" data-name="марктвен"
+              >Марк Твен<span class="cross"></span
+            ></label>
+          </div>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Тип<span></span></div>
+        <div class="more-down-content active-js">
+          <div class="max-h-[13rem] overflow-hidden">
+            <input type="checkbox" id="sort-21" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-21"
+              >Пластиковый конструктор
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-22" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-22"
+              >Мягкая игрушка
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-23" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-23"
+              >Машинка
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-24" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-24"
+              >Машинка
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-25" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-25"
+              >Машинка
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+          </div>
+          <button type="button" class="button-yellow-full js-cl-btn js-cl-pos">
+            Посмотреть все
+          </button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Особенности<span></span></div>
+        <div class="more-down-content active-js">
+          <div class="max-h-[13rem] overflow-hidden">
+            <input type="checkbox" id="sort-24" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-24"
+              >Три диска
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-25" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-25"
+              >Из мультфильма
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-26" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-26"
+              >Две трансформации
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-267" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-267"
+              >Две трансформации
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-268" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-268"
+              >Две трансформации
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-269" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-269"
+              >Две трансформации
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+          </div>
+          <button
+            type="button"
+            href="#"
+            class="button-yellow-full js-cl-btn js-cl-pos"
+          >
+            Посмотреть все
+          </button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Упаковка<span></span></div>
+        <div class="more-down-content active-js">
+          <div class="max-h-[13rem] overflow-hidden">
+            <input type="checkbox" id="sort-27" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-27"
+              >Карточная упаковка
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-28" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-28"
+              >Пластиковый контейнер
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-29" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-29"
+              >Фольгированные пакеты
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-291" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-291"
+              >Фольгированные пакеты
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-292" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-292"
+              >Фольгированные пакеты
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-293" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-293"
+              >Фольгированные пакеты
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+          </div>
+          <button type="button" class="button-yellow-full js-cl-btn js-cl-pos">
+            Посмотреть все
+          </button>
+        </div>
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Назначение<span></span></div>
+        <div class="more-down-content active-js">
+          <div class="max-h-[13rem] overflow-hidden">
+            <input type="checkbox" id="sort-30" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-30"
+              >Развитие моторики
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-31" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-31"
+              >Развитие интеллекта
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-32" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-32"
+              >Развитеи социальных навыков
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-323" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-33"
+              >Развитеи социальных навыков
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-322" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-322"
+              >Развитеи социальных навыков
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+            <input type="checkbox" id="sort-321" class="sort-checkbox" />
+            <label class="sort-label my-14" for="sort-321"
+              >Развитеи социальных навыков
+              <div>
+                <span class="count">12</span> <span class="cross"></span>
+              </div>
+            </label>
+          </div>
+          <button type="button" class="button-yellow-full js-cl-btn js-cl-pos">
+            Посмотреть все
+          </button>
+        </div>
+
+        <hr class="my-14 text-grey" />
+        <div class="more-down-button active-js">Популярное<span></span></div>
+        <div class="more-down-content active-js">
+          <input type="checkbox" id="filter-28" class="filter-checkbox" />
+          <label class="filter-label" for="filter-28"
+            >Хиты<span class="count">1</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-29" class="filter-checkbox" />
+          <label class="filter-label" for="filter-29"
+            >Новинки<span class="count">233</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-30" class="filter-checkbox" />
+          <label class="filter-label" for="filter-30"
+            >Поэма<span class="count">156</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-31" class="filter-checkbox" />
+          <label class="filter-label" for="filter-31"
+            >Для Мальчиков<span class="count">86</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-32" class="filter-checkbox" />
+          <label class="filter-label" for="filter-32"
+            >Для девочек<span class="count">56</span>
+            <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-33" class="filter-checkbox" />
+          <label class="filter-label" for="filter-33"
+            >Комиксы<span class="count">4</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-34" class="filter-checkbox" />
+          <label class="filter-label" for="filter-34"
+            >Ода<span class="count">22</span> <span class="cross"></span>
+          </label>
+          <input type="checkbox" id="filter-35" class="filter-checkbox" />
+          <label class="filter-label" for="filter-35"
+            >Эллегия<span class="count">88</span> <span class="cross"></span>
+          </label>
+        </div>
+        <hr class="my-14 text-grey" />
+
+        <div class="sticky bottom-0 min-h-[10rem] bg-white py-10">
+          <button
+            type="button"
+            class="button-white my-10 w-full cursor-pointer"
+          >
+            Сбросить
+          </button>
+          <button
+            type="button"
+            class="button-black js_popup_all_filters_button my-10 w-full cursor-pointer text-m"
+            onclick="closeFilter();"
+          >
+            Все фильтры
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="js_popup_all_filters_modal" class="to-hide modal">
+  <div class="popup_all_filters_content">
+    <div class="popup_all_filters_heading">
+      <div class="popup_all_filters_header">
+        <div class="popup_all_filters_header_text">Все фильтры</div>
+        <div
+          class="js_popup_all_filters_close_button ui-popup-close-button"
+        ></div>
+      </div>
+
+      <div class="popup_all_filters_filters md:px-12">
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+          <input type="checkbox" id="novelty" class="sort-checkbox" />
+          <label class="sort-label active-js" for="novelty"
+            >Новинка<span class="count">12</span> <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+            type="checkbox"
+            id="interactive_features"
+            class="sort-checkbox"
+          />
+          <label class="sort-label active-js" for="interactive_features"
+            >Интерактивные функции<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter" onclick="removeFilter(this)">
+          <input type="checkbox" id="sound_effects" class="sort-checkbox" />
+          <label class="sort-label active-js" for="sound_effects"
+            >Звуковые эффекты<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+            type="checkbox"
+            id="erase_all_filters"
+            class="sort-checkbox_erase"
+          />
+          <label class="sort-label_erase" for="erase_all_filters"
+            >Сбросить все
+            <span class="cross"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup_all_filters_block_filter">
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button active-js justify-btwn">
+            Бренды<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_1"
+              />
+              <label
+                for="popup_brands_checkbox_1_1"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_2"
+              />
+              <label
+                for="popup_brands_checkbox_1_2"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Новинка</span>
+
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Скоро в продаже</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+
+          <div class="more-down-button active-js justify-btwn">
+            Для кого<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_3_5"
+              />
+              <label
+                for="popup_brands_checkbox_3_5"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_3_6"
+              />
+              <label
+                for="popup_brands_checkbox_3_6"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Возраст<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_3"
+              />
+              <label
+                for="popup_brands_checkbox_1_3"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_4"
+              />
+              <label
+                for="popup_brands_checkbox_1_4"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Рост<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_5"
+              />
+              <label
+                for="popup_brands_checkbox_1_5"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_6"
+              />
+              <label
+                for="popup_brands_checkbox_1_6"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn null-margin">
+            Интерактивные функции<label class="toggle-switch">
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_7"
+              />
+              <label
+                for="popup_brands_checkbox_1_7"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_8"
+              />
+              <label
+                for="popup_brands_checkbox_1_8"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn null-margin">
+            Звуковые эффекты<label class="toggle-switch">
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_9"
+              />
+              <label
+                for="popup_brands_checkbox_1_9"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_10"
+              />
+              <label
+                for="popup_brands_checkbox_1_10"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex justify-between px-10">
+            <span class="my-auto text-15.20">Подарок мечты</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="more-down-content active-js">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_11"
+              />
+              <label
+                for="popup_brands_checkbox_1_12"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_13"
+              />
+              <label
+                for="popup_brands_checkbox_1_13"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+        </div>
+      </div>
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button active-js justify-btwn">
+            Тип<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_41"
+              />
+              <label
+                for="popup_brands_checkbox_1_41"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_40"
+              />
+              <label
+                for="popup_brands_checkbox_1_40"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Упаковка<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_14"
+              />
+              <label
+                for="popup_brands_checkbox_1_14"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_15"
+              />
+              <label
+                for="popup_brands_checkbox_1_15"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Оcобенности<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_16"
+              />
+              <label
+                for="popup_brands_checkbox_1_16"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_17"
+              />
+              <label
+                for="popup_brands_checkbox_1_17"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Назначение<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_18"
+              />
+              <label
+                for="popup_brands_checkbox_1_18"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_19"
+              />
+              <label
+                for="popup_brands_checkbox_1_19"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Материал<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_20"
+              />
+              <label
+                for="popup_brands_checkbox_1_20"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_21"
+              />
+              <label
+                for="popup_brands_checkbox_1_21"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex h-36 justify-between px-10">
+            <span class="my-auto text-15.20">Электронные функции</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Механизм<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_42"
+              />
+              <label
+                for="popup_brands_checkbox_1_42"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_43"
+              />
+              <label
+                for="popup_brands_checkbox_1_43"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex h-40 justify-between px-10">
+            <span class="my-auto text-15.20">Влагозащита</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Масштаб<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_22"
+              />
+              <label
+                for="popup_brands_checkbox_1_22"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_23"
+              />
+              <label
+                for="popup_brands_checkbox_1_23"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js">Авторы<span></span></div>
+          <div class="more-down-content active-js">
+            <input
+              class="input search searchInput w-full"
+              type="text"
+              placeholder="Поиск"
+            />
+            <div class="scroll-block searchBlock">
+              <input type="checkbox" id="sort-9" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-9"
+                data-name="мадсмиккельсен"
+                >Мадс Миккельсен<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-10" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-10"
+                data-name="джеймсмакэвой"
+                >Джеймс МакЭвой<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-11" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-11"
+                data-name="джоннидэпп"
+                >Джонни Депп<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-12" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-12"
+                data-name="джоннидэпп"
+                >Джонни Депп<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-13" class="sort-checkbox" />
+              <label
+                class="sort-label my-14"
+                for="sort-13"
+                data-name="джекниколсон"
+                >Джек Николсон<span class="cross"></span
+              ></label>
+              <input type="checkbox" id="sort-14" class="sort-checkbox" />
+              <label class="sort-label my-14" for="sort-14" data-name="марктвен"
+                >Марк Твен<span class="cross"></span
+              ></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup_all_filters_block_filter_clmn">
+        <div class="more-down">
+          <div class="more-down-button active-js justify-btwn">
+            Тематика<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_24"
+              />
+              <label
+                for="popup_brands_checkbox_1_24"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_25"
+              />
+              <label
+                for="popup_brands_checkbox_1_25"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Любимые сюжеты<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_26"
+              />
+              <label
+                for="popup_brands_checkbox_1_26"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_27"
+              />
+              <label
+                for="popup_brands_checkbox_1_27"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Любимые герои<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_28"
+              />
+              <label
+                for="popup_brands_checkbox_1_28"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_29"
+              />
+              <label
+                for="popup_brands_checkbox_1_29"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Навыки и развитие ребенка<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_30"
+              />
+              <label
+                for="popup_brands_checkbox_1_30"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_31"
+              />
+              <label
+                for="popup_brands_checkbox_1_31"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Размер пользовательский<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_32"
+              />
+              <label
+                for="popup_brands_checkbox_1_32"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_33"
+              />
+              <label
+                for="popup_brands_checkbox_1_33"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="my-4 flex justify-between px-10">
+            <span class="my-auto text-15.20">Световые эффекты</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Тип питания<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_34"
+              />
+              <label
+                for="popup_brands_checkbox_1_34"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_35"
+              />
+              <label
+                for="popup_brands_checkbox_1_35"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn">
+            Цвет<span></span>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_37"
+              />
+              <label
+                for="popup_brands_checkbox_1_37"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_39"
+              />
+              <label
+                for="popup_brands_checkbox_1_39"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+          <div class="more-down-button active-js justify-btwn null-margin">
+            Назначение аксессуара<label class="toggle-switch">
+              <input type="checkbox" class="dropdown_checkbox" />
+              <p class="slider"></p>
+            </label>
+          </div>
+          <div class="more-down-content active-js pad-left">
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_36"
+              />
+              <label
+                for="popup_brands_checkbox_1_36"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 1
+              </label>
+            </div>
+            <div class="js_popup_filter_item checkbox_main">
+              <input
+                class="js_popup_all_filters_checkbox checkbox__input_main"
+                type="checkbox"
+                id="popup_brands_checkbox_1_38"
+              />
+              <label
+                for="popup_brands_checkbox_1_38"
+                class="popup_brands_checkbox_text checkbox__label_main body-m"
+              >
+                Brand 2
+              </label>
+            </div>
+          </div>
+          <hr class="my-14 text-grey" />
+        </div>
+      </div>
+    </div>
+
+    <div class="popup_all_filters_footer">
+      <div class="popup_all_filters_buttons">
+        <div class="popup_collaboration_page_four_buttons">
+          <button
+            type="button"
+            class="button-white collab_btn pup_btn ui-popup-close"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            class="button-black collab_btn pup_btn ui-popup-close"
+          >
+            Применить
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mb-24 w-1/4 items-center">
+      <a href="#" class="popup_all_filters_filter_not_found link-m">
+        Не нашли нужный фильтр?
+      </a>
+    </div>
+  </div>
+</div>
+<!-- <script>
+  const modal = document.querySelector('.js_popup_all_filters_modal.to-hide');
+  const collabButtons = document.querySelectorAll('.collab_btn.pup_btn');
+
+  if (collabButtons) {
+    console.log(modal);
+    collabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('--active');
+      });
+    });
+  }
+</script> -->
+
+
+          <div class="width-75 bg-white">
+            <div class="flex justify-between md:mb-16 md:mt-8">
+              <div
+                class="more-down-filters no-padds no-after w-29rem mb-16 border-b border-card-stroke md:mt-0 md:!w-10/12 md:border-b-0"
+              >
+                <button
+                  class="more-down-button new !bg-none !px-16 !pl-16 md:!justify-start"
+                >
+                  Сначала новые<span></span>
+                </button>
+                <!--  more-down -->
+                <div class="more-down-content new !p-10">
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Сначала новые
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Сначала старые
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    А-Я
+                  </label>
+                  <label class="checkbox-container">
+                    <input type="radio" name="sort-by" />
+                    <span class="checkmark"></span>
+                    Я-А
+                  </label>
+                </div>
+              </div>
+              <div id="open-filter" class="mobile-filter"></div>
+            </div>
+            <div class="popup_all_filters_filters md:px-12">
+              <div class="popup_all_filters_filter">
+                <input type="checkbox" id="novelty" class="sort-checkbox" />
+                <label class="sort-label active-js" for="novelty"
+                  >Для мальчиков<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="interactive_features"
+                  class="sort-checkbox"
+                />
+                <label class="sort-label active-js" for="interactive_features"
+                  >Новинка<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="sound_effects"
+                  class="sort-checkbox"
+                />
+                <label class="sort-label active-js" for="sound_effects"
+                  >Игровой набор<span class="count">12</span>
+                  <span class="cross"></span>
+                </label>
+              </div>
+              <div class="popup_all_filters_filter">
+                <input
+                  type="checkbox"
+                  id="erase_all_filters"
+                  class="sort-checkbox_erase"
+                />
+                <label
+                  class="sort-label active-js_erase"
+                  for="erase_all_filters"
+                  >Сбросить все
+                  <span class="cross"></span>
+                </label>
+              </div>
+            </div>
+            <div class="my-40 grid grid-cols-3 gap-16 md:grid-cols-2 md:px-12">
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+
+                  <div class="toy_card_image item_card_image">
+                    <div class="running-stroke">
+                      <div class="marquee">
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                        <span>скидка 15%</span>
+                      </div>
+                    </div>
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <!--   у блока с картинкой position: relative, т.к. на top: 0 будет бешущая строка   -->
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="toy_card item_card">
+                <div class="toy_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        href="#"
+                        class="toy_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        href="#"
+                        class="toy_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="toy_card_tags_age body-s-bold">8+</div>
+                  </div>
+                  <div class="toy_card_image item_card_image">
+                    <img
+                      class="toy_card_img item_card_img"
+                      src="./img/cards_toy.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="toy_card_info item_card_info">
+                  <div class="toy_card_name item_card_name">
+                    Арена для баттлов Инфинити Надо
+                  </div>
+                  <div class="toy_card_more item_card_more">
+                    <button
+                      class="toy_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <div class="flex flex-row flex-nowrap gap-8">
+                      <button class="item_card_add_to_favourite"></button>
+                      <div class="item_card-external-link group relative">
+                        <div
+                          class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[-19rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                        >
+                          <div
+                            class="breadcrumbs-arrow left-[12.4rem] top-[18rem] rotate-[180deg] group-hover:block"
+                          ></div>
+                          <button
+                            class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+                          >
+                            <div class="block h-20 w-20">
+                              <img src="./img/copy-link.svg" alt="" />
+                            </div>
+                            <span
+                              class="body-s whitespace-nowrap p-0 hover:text-text"
+                            >
+                              Скопировать ссылку
+                            </span>
+                          </button>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/vkcom.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text"
+                              >ВКонтакте</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/tiktok.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">TikTok</span>
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/facebook.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text" href="#"
+                              >Facebook</span
+                            >
+                          </a>
+                          <a href="#" class="flex flex-row flex-nowrap gap-8">
+                            <div class="block h-20 w-20">
+                              <img src="./img/likee.svg" alt="" />
+                            </div>
+                            <span class="body-s hover:text-text">Likee</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="pagination rm-pag md:px-12">
+              <div class="pagination-seen js-rm-pag-seen">
+                Просмотрено: 12 из 456
+              </div>
+              <button class="pagination-more-button js-rm-pag-more-btn">
+                Показать ещё
+              </button>
+              <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+                <button
+                  class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
+                >
+                  <span></span>Назад
+                </button>
+                <div class="nav-btns">
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    1
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    2
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+                  >
+                    3
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                  >
+                    4
+                  </button>
+
+                  <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+                  >
+                    5
+                  </button>
+                </div>
+
+                <button
+                  class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt"
+                >
+                  Вперёд <span></span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="white-background">
+          <div id="yellow-moving-block" class="md:!h-[44rem]">
+            <div id="parent">
+              <img
+                id="follower"
+                class="slide-el-2"
+                src="./img/running-elephant/slide-el-2.png"
+              />
+            </div>
+          </div>
+          <div id="above-el-block">
+            <h2
+              class="head-2 mx-auto mb-8 mt-40 w-2/4 px-25 text-center md:mt-2 md:w-full md:px-20 md:text-left"
+            >
+              Подписаться на рассылку
+            </h2>
+            <p class="body-m mx-auto text-center md:px-20 md:text-left">
+              Как принято считать, непосредственные участники технического
+              прогресса призывают<br />
+              нас к новым свершениям, которые, в свою очередь, должны быть
+              описаны максимально подробно.
+            </p>
+            <div
+              class="mx-auto mt-40 flex w-2/4 justify-center md:mt-24 md:w-full md:flex-col md:gap-16 md:px-20"
+            >
+              <input
+                class="input w-full items-center"
+                type="text"
+                placeholder="Электронная почта"
+              />
+              <button class="button-black">Подписаться</button>
+            </div>
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main mx-auto mt-20 w-[32rem] justify-center md:mt-16 md:w-[26.5rem] md:px-20"
+            >
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности</a
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+  <div class="footer rosman-footer-ru bs:mb-60">
+  <div class="footer-container">
+    <div class="footer-heading">
+      <div class="footer-heading-main">
+        <span class="footer-heading-image"></span>
+        <div class="footer-heading-subscription">
+          <div class="drop-down-discover-rosman">
+            <div href="#" class="more-down-button disc-rosman-button">
+              Книги<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-8 text-grey" />
+            <div href="#" class="more-down-button disc-rosman-button">
+              Игрушки<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="mb-0 mt-8 text-grey" />
+          </div>
+          <div class="footer-heading-subs-title">
+            Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
+            раз в неделю. Бесплатно, по делу
+          </div>
+          <div class="footer-heading-subs-inputs">
+            <div class="footer-heading-subs-inputs-main">
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="footer-heading-subs-input input"
+              />
+              <button class="footer-heading-subs-button button-yellow">
+                Подписаться
+              </button>
+            </div>
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main ml-[15rem] ssm:ml-0"
+            >
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-heading-discover-rosman">
+        <div class="footer_heading_about footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Компания</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >О компании</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Партнёрам</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Карьера в РОСМЭН</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Контакты</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_books footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Книги</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог книг</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Авторы РОСМЭН</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Об издательстве</a
+            >
+            <a href="#" class="footer-section-item common-text body-s">НДК</a>
+            <a href="#" class="footer-section-item common-text body-s"
+              >Писательская школа</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект раз</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект два</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_toys footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Игрушки</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог игрушек</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Бренды</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Новости игрушек</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="text-black" />
+    <div class="footer-info">
+      <div class="footer-info-main">
+        <div class="footer-info-rss common-text">
+          <a href="#" class="footer-info-rss-image"></a>RSS рассылка
+        </div>
+        <div class="footer-info-contacts">
+          <div class="footer-info-address ft-inf-item common-text">
+            17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+            помещ. II, 1 этаж
+          </div>
+          <div class="footer-info-directs ft-inf-item">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+              >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
+              rosman@rosman.ru
+            </a>
+          </div>
+          <div class="footer-info-address ft-inf-item common-text">
+            127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
+            Роща
+          </div>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+            >rosman@rosman.ru</a
+          >
+        </div>
+      </div>
+      <hr class="text-black" />
+      <div class="footer-extras">
+        <div class="footer-extras-creators">
+          <div class="footer-extras-idea common-text">
+            © 1992–2023 ООО РОСМЭН. Все права защищены.
+          </div>
+          <div class="footer-extras-maker common-text">
+            Разработка сайта: Осьминожка
+          </div>
+        </div>
+        <div class="footer-extras-links">
+          <div class="footer-extras-link common-text link-m-bold">
+            Политика конфиденциальности
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">
+            Пользовательское соглашение
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

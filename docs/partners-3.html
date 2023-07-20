@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Партнерам</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <header id="header" class="bottom header h-64" data-header="toys">
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+  <div class="flex w-full flex-col">
+    <div class="search-input hide">
+      <span class="search-icon"></span>
+      <span class="micro-icon"></span>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
+      <span class="cross-icon js-toggle-search"></span>
+    </div>
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] overflow-hidden bg-white p-24 bs:left-0 bs:w-full md:p-12"
+    >
+      <ul class="nav-list justify-between sm:w-full">
+        <li class="nav-li w-1/5 text-center">
+          <p class="other active-js">Общее</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="news-nav">Новости</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="state">Статьи</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="interview">Интервью</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="collection">Подборки</p>
+        </li>
+      </ul>
+      <div class="navigation-content hide overflow-hidden" id="collection">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка коллекция</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="interview">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Интервью</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="state">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Статья</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="news-nav">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Новости</a>
+        </div>
+      </div>
+      <div class="navigation-content active-js overflow-hidden" id="other">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+      </div>
+      <button class="button-black js-cl-pok w-full">
+        Показать все результаты 748
+      </button>
+    </div>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button js-toggle-search"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+    <span class="heart-button"></span>
+    <span class="search-button js-toggle-search"></span>
+  </div>
+</header>
+<div class="toolbar">
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
+</div>
+<div id="block1" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+  <body class="bg-gray-50">
+    <div id="yellow-background">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16">
+  <p class="breadcrumbs">
+    <a href="#">Главная </a><span>/</span>
+    <a class="active-js" href="#">Игрушки</a>
+  </p>
+
+  <div class="breadcrumbs-small-screen">
+    <div class="breadcrumbs-small-screen-image"></div>
+    <div class="breadcrumbs-small-screen-dots">
+      ...
+      <div class="breadcrumbs-arrow"></div>
+      <div class="breadcrumbs-path-hidden"></div>
+    </div>
+    <div class="breadcrumbs-small-screen-path">Игрушки</div>
+  </div>
+
+  <!-- <div class="breadcrumbs-icons">
+    <a href="#" class="item_card-external-link"></a>
+    <button class="item_card_add_to_favourite"></button>
+  </div> -->
+</div>
+
+        <h1 class="head-1 px-24">Оптовым клиентам</h1>
+        <p class="mb-48 mt-24 px-24 text-m">
+          Компания РОСМЭН сотрудничает с юридическими лицами по оптовой продаже
+          книг и игрушек.
+        </p>
+        <h3 class="head-3 px-24">Условия сотрудничества</h3>
+        <div
+          class="mb-48 grid grid-cols-3 gap-24 px-24 pt-24 md:flex md:flex-col"
+        >
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-folder-medal-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Сотрудничество с юридическими лицами по договору поставки
+            </p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-money-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">От 30 000₽. Минимальная сумма заказа</p>
+          </div>
+          <div class="col-span-1 flex flex-col gap-24 bg-background p-24">
+            <img
+              src="./img/yellow-icons-58px/yellow-car-van-58px.svg"
+              alt=""
+              class="h-fit w-[5.8rem] object-contain"
+            />
+            <p class="h-auto text-l">
+              Доставка по Москве и Московской области. В пределах МКАД +30 км
+              бесплатно. Самовывоз со склада
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute z-100 mt-24 h-[58rem] w-full -skew-y-2 bg-background md:left-0 md:h-[77rem]"
+        ></div>
+        <div
+          class="relative z-1000 my-24 flex h-[68rem] w-full flex-row gap-99 px-24 py-94 md:h-[86rem] md:flex-col md:gap-32"
+        >
+          <div class="flex w-2/4 flex-col gap-16 md:w-full">
+            <h3 class="head-3">Как начать с нами работать?</h3>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                1
+              </div>
+              <p class="flex items-center text-m">Заполнить анкету-заявку</p>
+            </div>
+            <div class="flex flex-row gap-16">
+              <div
+                class="flex h-42 w-42 items-center justify-center rounded-full border border-black text-l"
+              >
+                2
+              </div>
+              <p class="flex items-center text-m">Дождаться ответа менеджера</p>
+            </div>
+            <p class="w-3/4 text-m md:w-full">
+              Менеджер отправит Вам прайс-лист для формирования заказа и список
+              документов, необходимых для заключения договора
+            </p>
+          </div>
+          <div class="flex w-2/4 flex-col gap-16 md:w-full">
+            <p class="mb-16 text-m">Шаг 3 из 4</p>
+            <form class="flex w-[50rem] flex-col gap-16 md:w-full">
+              <input
+                class="input"
+                type="text"
+                placeholder="Название магазина"
+              />
+              <input
+                class="input"
+                type="text"
+                placeholder="Количество магазинов"
+              />
+              <input class="input" type="text" placeholder="Адрес сайта" />
+              <div class="flex flex-row gap-10 md:flex-col">
+                <button class="button-white w-2/4 md:w-full">Назад</button>
+                <button class="button-black w-2/4 md:w-full">
+                  Следующий шаг
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="absolute -bottom-10">
+            <div class="elephant-moves-leg">
+              <div class="elephant-moves-leg-body el-body">
+                <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                <div class="elephant-moves-leg-leg el-leg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-24 flex w-1/4 flex-col gap-16 px-24 md:w-full">
+          <h3 class="head-3">Адрес Склада</h3>
+          <p class="text-m text-text">
+            Московская обл., Обухово, территория Атлант-Парк, д.32, стр.1 Склад
+            №33, подъезд
+          </p>
+        </div>
+        <div
+          id="map"
+          style="width: 100%; height: 504px; margin-bottom: 6.4rem"
+        ></div>
+      </div>
+    </div>
+
+    <div class="footer rosman-footer-ru bs:mb-60">
+  <div class="footer-container">
+    <div class="footer-heading">
+      <div class="footer-heading-main">
+        <span class="footer-heading-image"></span>
+        <div class="footer-heading-subscription">
+          <div class="drop-down-discover-rosman">
+            <div href="#" class="more-down-button disc-rosman-button">
+              Книги<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-8 text-grey" />
+            <div href="#" class="more-down-button disc-rosman-button">
+              Игрушки<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="mb-0 mt-8 text-grey" />
+          </div>
+          <div class="footer-heading-subs-title">
+            Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
+            раз в неделю. Бесплатно, по делу
+          </div>
+          <div class="footer-heading-subs-inputs">
+            <div class="footer-heading-subs-inputs-main">
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="footer-heading-subs-input input"
+              />
+              <button class="footer-heading-subs-button button-yellow">
+                Подписаться
+              </button>
+            </div>
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main ml-[15rem] ssm:ml-0"
+            >
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-heading-discover-rosman">
+        <div class="footer_heading_about footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Компания</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >О компании</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Партнёрам</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Карьера в РОСМЭН</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Контакты</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_books footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Книги</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог книг</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Авторы РОСМЭН</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Об издательстве</a
+            >
+            <a href="#" class="footer-section-item common-text body-s">НДК</a>
+            <a href="#" class="footer-section-item common-text body-s"
+              >Писательская школа</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект раз</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект два</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_toys footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Игрушки</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог игрушек</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Бренды</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Новости игрушек</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="text-black" />
+    <div class="footer-info">
+      <div class="footer-info-main">
+        <div class="footer-info-rss common-text">
+          <a href="#" class="footer-info-rss-image"></a>RSS рассылка
+        </div>
+        <div class="footer-info-contacts">
+          <div class="footer-info-address ft-inf-item common-text">
+            17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+            помещ. II, 1 этаж
+          </div>
+          <div class="footer-info-directs ft-inf-item">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+              >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
+              rosman@rosman.ru
+            </a>
+          </div>
+          <div class="footer-info-address ft-inf-item common-text">
+            127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
+            Роща
+          </div>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+            >rosman@rosman.ru</a
+          >
+        </div>
+      </div>
+      <hr class="text-black" />
+      <div class="footer-extras">
+        <div class="footer-extras-creators">
+          <div class="footer-extras-idea common-text">
+            © 1992–2023 ООО РОСМЭН. Все права защищены.
+          </div>
+          <div class="footer-extras-maker common-text">
+            Разработка сайта: Осьминожка
+          </div>
+        </div>
+        <div class="footer-extras-links">
+          <div class="footer-extras-link common-text link-m-bold">
+            Политика конфиденциальности
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">
+            Пользовательское соглашение
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+      const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
+        center: [38.25840555122909, 55.825136637567695], // starting position [lng, lat]
+        zoom: 15, // starting zoom
+      });
+      var markerElement = document.createElement('div');
+      markerElement.className = 'marker';
+
+      var marker = new mapboxgl.Marker(markerElement)
+        .setLngLat([38.25840555122909, 55.825136637567695]) // Замените на координаты маркера
+        .addTo(map);
+    </script>
+  </body>
+  ,
+</html>

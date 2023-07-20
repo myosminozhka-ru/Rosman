@@ -1,0 +1,4811 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="font-size: 62.5%"> -->
+<!-- 107.9 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книги</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header id="header3" class="bottom header h-64" data-header="main">
+  <div class="logo"><img src="./img/logo.svg" /></div>
+  <div class="mobile-logo"><img src="./img/mobile-logo.svg" /></div>
+  <div class="dropdown">
+    <button>
+      <div class="icon"></div>
+      Каталог
+    </button>
+    <div class="content">
+      <a href="#">
+        <div class="menu-icon-book"></div>
+        Книги
+      </a>
+      <a href="#">
+        <div class="menu-icon-toys"></div>
+        Игрушки
+      </a>
+    </div>
+  </div>
+  <div class="menu hide relative" id="mobile-menu">
+    <button class="more-down-button">
+      <div class="icon"></div>
+    </button>
+    <!--  more-down -->
+    <div class="more-down-content">
+      <ul>
+        <li class="company"><a href="#">Бренды</a></li>
+        <li class="news"><a href="#">Новости</a></li>
+        <li class="about"><a href="#">О компании</a></li>
+        <li class="publisher"><a href="#">Издательство</a></li>
+        <li class="books-news"><a href="#">Новости книг</a></li>
+        <li class="rosmen">
+          <button class="more-down-button">РОСМЕН<span></span></button>
+          <!--  more-down -->
+          <div class="more-down-content">
+            <p><a href="#">О компании</a></p>
+            <p><a href="#">Карьера в РОСМЭН</a></p>
+            <p><a href="#">Игрушки</a></p>
+            <p><a href="#">Видео</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </li>
+        <li class="NDK"><a href="#">НДК</a></li>
+        <li class="toys"><a href="#">Игрушки</a></li>
+        <li class="career"><a href="#">Карьера</a></li>
+        <li class="contacts"><a href="#">Контакты</a></li>
+        <li class="author"><a href="#">Авторы</a></li>
+        <li class="partners"><a href="#">Партнерам</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li class="company"><a href="#">Бренды</a></li>
+      <li class="news"><a href="#">Новости</a></li>
+      <li class="about"><a href="#">О компании</a></li>
+      <li class="publisher"><a href="#">Издательство</a></li>
+      <li class="books-news"><a href="#">Новости книг</a></li>
+      <li class="NDK"><a href="#">НДК</a></li>
+      <li class="rosmen">
+        <button class="more-down-button out">РОСМЕН<span></span></button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li class="toys"><a href="#">Игрушки</a></li>
+      <li class="career"><a href="#">Карьера</a></li>
+      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="author"><a href="#">Авторы</a></li>
+      <li class="partners"><a href="#">Партнерам</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex w-full flex-col">
+    <div class="search-input hide">
+      <span class="search-icon"></span>
+      <span class="micro-icon"></span>
+      <input
+        type="text"
+        placeholder="Введите поисковый запрос"
+        id="search-header"
+      />
+      <span class="cross-icon js-toggle-search"></span>
+    </div>
+    <div
+      id="search-result-header"
+      class="navigation absolute top-[8%] z-9999 hidden w-[51%] overflow-hidden bg-white p-24 bs:left-0 bs:w-full md:p-12"
+    >
+      <ul class="nav-list justify-between sm:w-full">
+        <li class="nav-li w-1/5 text-center">
+          <p class="other active-js">Общее</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="news-nav">Новости</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="state">Статьи</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="interview">Интервью</p>
+        </li>
+        <li class="nav-li w-1/5 text-center">
+          <p class="collection">Подборки</p>
+        </li>
+      </ul>
+      <div class="navigation-content hide overflow-hidden" id="collection">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка коллекция</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="interview">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Интервью</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="state">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Статья</a>
+        </div>
+      </div>
+      <div class="navigation-content hide overflow-hidden" id="news-nav">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Новости</a>
+        </div>
+      </div>
+      <div class="navigation-content active-js overflow-hidden" id="other">
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+        <div class="content-layer">
+          <img class="picture" src="./img/cards_book.svg" />
+          <a class="name">Книжка Общее</a>
+        </div>
+      </div>
+      <button class="button-black w-full">Показать все результаты 748</button>
+    </div>
+  </div>
+  <div class="header-btn dekstop">
+    <span class="search-button js-toggle-search"></span>
+    <span class="micro-button"></span>
+    <span class="heart-button"></span>
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+  </div>
+  <div class="header-btn mobile">
+    <div class="language">
+      <span class="rus-lang active-js" onclick="changeLang('rus')">RU</span>/
+      <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
+    </div>
+    <span class="heart-button"></span>
+    <span class="search-button js-toggle-search"></span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div href="#" class="toolbar-button active" onclick="showBlock('block1');">
+    <img src="./img/toolbar-book.png" />Главная
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block2');">
+    <img src="./img/toolbar-home.png" />Игрушки
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block3');">
+    <img src="./img/toolbar-menu.png" />Книги
+  </div>
+  <div href="#" class="toolbar-button" onclick="showBlock('block4');">
+    <img src="./img/toolbar-toys.png" />Меню
+  </div>
+</div>
+<div id="block1" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block2" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block3" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="block4" class="content-block">
+  <div class="block-content">
+    <h3 class="head-3 mb-16">Росмэн</h3>
+    <ul>
+      <li><a>О компании</a></li>
+      <li><a>Издательство</a></li>
+      <li><a>Игрушки</a></li>
+      <li><a>Карьера в РОСМЭН</a></li>
+      <li><a>Видео</a></li>
+      <li><a>Контакты</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Игрушки</h3>
+    <ul>
+      <li><a>Бренды</a></li>
+      <li><a>Новости</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Партнерам</a></li>
+    </ul>
+    <h3 class="head-3 mb-16">Книги</h3>
+    <ul>
+      <li><a>Издательство</a></li>
+      <li><a>Новости книг</a></li>
+      <li><a>НДК</a></li>
+      <li>
+        <button class="more-down-button out !px-0 !py-8">
+          РОСМЕН<span></span>
+        </button>
+        <!--  more-down -->
+        <div class="more-down-content out">
+          <p><a href="#">О компании</a></p>
+          <p><a href="#">Карьера в РОСМЭН</a></p>
+          <p><a href="#">Игрушки</a></p>
+          <p><a href="#">Видео</a></p>
+          <p><a href="#">Контакты</a></p>
+        </div>
+      </li>
+      <li><a>Авторы</a></li>
+      <li><a>Партнерам</a></li>
+    </ul>
+  </div>
+</div>
+
+    <div id="yellow-background">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div class="flex flex-wrap justify-start px-24">
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">0-3</p>
+          <p class="filter-label header">4-6</p>
+          <p class="filter-label header">7-9</p>
+          <p class="filter-label header">10-15</p>
+          <p class="filter-label header">15+</p>
+          <p class="filter-label header">Новинки</p>
+          <p class="filter-label header">Хиты</p>
+          <p class="filter-label header">Случайная карта</p>
+        </div>
+
+        <div class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16">
+  <p class="breadcrumbs">
+    <a href="#">Главная </a><span>/</span>
+    <a class="active-js" href="#">Игрушки</a>
+  </p>
+
+  <div class="breadcrumbs-small-screen">
+    <div class="breadcrumbs-small-screen-image"></div>
+    <div class="breadcrumbs-small-screen-dots">
+      ...
+      <div class="breadcrumbs-arrow"></div>
+      <div class="breadcrumbs-path-hidden"></div>
+    </div>
+    <div class="breadcrumbs-small-screen-path">Игрушки</div>
+  </div>
+
+  <!-- <div class="breadcrumbs-icons">
+    <a href="#" class="item_card-external-link"></a>
+    <button class="item_card_add_to_favourite"></button>
+  </div> -->
+</div>
+
+        <div
+          class="grid h-[53.5rem] grid-cols-4 grid-rows-4 gap-16 px-24 md:flex md:h-full md:flex-col"
+        >
+          <div class="col-span-2 row-span-4">
+            <div class="card_selection js_traceable_item">
+              <a
+                href="#"
+                class="card_selection_image item_card_image h-[31.7rem]"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable h-220 md:border-0"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                  >
+                    ПОДБОРКИ
+                  </a>
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_selection_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info overflow-hidden"
+                >
+                  <div class="card_selection_name card_sel_name">
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div class="card_selection_text card_sel_text">
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент проверки системы массового
+                    участия. Безусловно, внедрение современных методик требует
+                    определения и уточнения системы массового участия.
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-span-4">
+            <div
+              class="card_articles js_traceable_item h-260 overflow-hidden md:h-[29rem]"
+            >
+              <a href="#" class="card_articles_image item_card_image h-130">
+                <img
+                  src="./img/cards_articles.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div
+                class="card_articles_description js-bg-changeable h-130 md:h-[14rem]"
+              >
+                <div class="card_articles_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_articles_category dotted_tags_category"
+                  >
+                    СТАТЬИ
+                  </a>
+                  <div class="card_articles_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_articles_info card_sel_info overflow-hidden"
+                >
+                  <div class="card_articles_name card_sel_name">
+                    Известный автор выпустил свою самую личную и чувственную
+                    книгу
+                  </div>
+                  <div class="card_articles_text card_sel_text">
+                    В четверг стартует главное книжное событие – ярмарка
+                    NonFiction. С 1 по 5 декабря в Гостином дворе издательства
+                    России представят свои лучшие книги, проведут ряд
+                    мероприятий, и встретятся со своими читателями.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card_articles js_traceable_item mt-16 h-260 overflow-hidden md:h-[29rem]"
+            >
+              <a href="#" class="card_articles_image item_card_image h-130">
+                <img
+                  src="./img/cards_articles.svg"
+                  alt=""
+                  class="articles_card_img item_card_img"
+                />
+              </a>
+              <div
+                class="card_articles_description js-bg-changeable h-130 overflow-hidden md:h-[14rem]"
+              >
+                <div class="card_articles_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_articles_category dotted_tags_category"
+                  >
+                    СТАТЬИ
+                  </a>
+                  <div class="card_articles_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_articles_date dotted_tags_date"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_articles_info card_sel_info overflow-hidden"
+                >
+                  <div class="card_articles_name card_sel_name">
+                    Известный автор выпустил свою самую личную и чувственную
+                    книгу
+                  </div>
+                  <div class="card_articles_text card_sel_text">
+                    В четверг стартует главное книжное событие – ярмарка
+                    NonFiction. С 1 по 5 декабря в Гостином дворе издательства
+                    России представят свои лучшие книги, проведут ряд
+                    мероприятий, и встретятся со своими читателями.
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-span-4">
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden !border-0 !border-b border-card-stroke"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden !border-0 !border-b border-card-stroke"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-130 overflow-hidden !border-0 !border-b border-card-stroke"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+            <div
+              class="card_interview_description js-bg-changeable h-[14.5rem] overflow-hidden !border-0 !border-b border-card-stroke"
+            >
+              <div class="card_interview_tags dotted_tags">
+                <a
+                  href="#"
+                  class="card_interview_category dotted_tags_category"
+                >
+                  ИНТЕРВЬЮ
+                </a>
+                <div class="card_interview_separator dotted_tags_separator">
+                  •
+                </div>
+                <a href="#" class="card_interview_date dotted_tags_date"
+                  >30.11.2022</a
+                >
+              </div>
+              <a href="#" class="card_interview_info card_sel_info">
+                <div class="card_interview_name card_sel_name">
+                  Классический бестселлер обрел новую жизнь в свежем переводе на
+                  русский язык
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 px-24 py-16">
+          <div class="col-span-3 md:hidden">
+            <a href="#" class="link-m"> Все статьи </a>
+          </div>
+          <div class="col-span-1 md:col-span-4">
+            <a href="#" class="link-m"> Все новости </a>
+          </div>
+        </div>
+        <div class="swiper-book bg-white">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Книги о которых все говорят</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="white-background"
+          class="card-fullpage-w-bg-modified books-slider elephant"
+        >
+          <div
+            id="yellow-moving-block"
+            class="card-fullpage-w-bg-modified books-slider elephant"
+          >
+            <div id="parent">
+              <img
+                id="follower"
+                class="slide-el card-fullpage-slide-el-mod"
+                src="./img/running-elephant/slide-el.png"
+              />
+            </div>
+          </div>
+          <div id="above-block" class="above-block-mod">
+            <div class="swiper-book">
+              <div class="swiper-header !mb-40 !w-full px-25 md:mb-16">
+                <div class="flex">
+                  <h1 class="head-3">Книги о которых все говорят</h1>
+                  <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+                </div>
+                <div class="buttons">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper mx-24">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-[6.4rem] flex w-full flex-col gap-16 px-24">
+          <div class="mb-40 flex">
+            <h1 class="head-3">Статьи</h1>
+            <sup class="pl-8 text-l leading-sup-2 underline">Все Статьи</sup>
+          </div>
+          <div class="flex flex-row flex-nowrap gap-16 bs:flex-col">
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-nowrap gap-16 bs:flex-col">
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-24 md:hidden">
+          <img
+            src="./img/main-page-book/book-image.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <div class="hidden w-full px-24 md:block">
+          <img
+            src="./img/main-page-book/book-image-mobile.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <h3 class="head-3 mb-40 mt-64 px-25">Топ книг месяца</h3>
+        <div class="block-horizontal gap-1 px-56">
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div class="mx-16 flex h-[45.6rem] justify-between">
+            <div
+              class="book_card js_item_card item_card"
+              itemscope
+              itemtype="http://schema.org/Book"
+            >
+              <div class="book_card_heading">
+                <div class="book_card_image item_card_image">
+                  <img
+                    class="book_card_img item_card_img"
+                    src="./img/cards_book.svg"
+                    alt=""
+                    itemprop="image"
+                  />
+                </div>
+              </div>
+              <div class="book_card_info item_card_info" itemprop="description">
+                <div class="book_card_name item_card_name" itemprop="name">
+                  Чародол. Весь цикл в одном томе
+                </div>
+                <div class="book_card_author" itemprop="author">
+                  Щерба Н. В.
+                </div>
+                <div class="book_card_more item_card_more">
+                  <button
+                    class="book_card_item_link item_card_link overline-button"
+                  >
+                    Подробнее
+                  </button>
+                  <button class="item_card_add_to_favourite"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-24 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+          <div
+            class="vertical-rl flex h-[45.6rem] justify-between px-8 py-16 text-s"
+          >
+            <a class="font-bold">Образец текста</a
+            ><a class="text-text">второй образец</a>
+          </div>
+        </div>
+        <div class="swiper-book">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Бестселлеры и издательства</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Видео</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">Все видео</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card_video_item">
+                <div class="card_video_preview">
+                  <img src="./img/cards_video_preview.svg" alt="" />
+                  <button
+                    class="card_video_play_button circle-button-small !h-40 !w-40"
+                  ></button>
+                </div>
+
+                <div class="card_video_info">
+                  <span class="card_video_title"
+                    >Как правильно выбрать книгу: наши советы для любителей
+                    книг</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute z-100 mt-64 h-[75rem] w-full skew-y-2 bg-yellow md:h-[60rem]"
+        ></div>
+        <div class="relative mt-64 h-[85rem] md:h-[64rem]">
+          <div class="swiper-one-book absolute z-1000 w-full">
+            <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+              <div class="flex">
+                <h1 class="head-3">Детские книги</h1>
+              </div>
+              <div class="buttons">
+                <div class="button-prev"></div>
+                <div class="button-next"></div>
+              </div>
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper mx-24">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="flex flex-row justify-between gap-24 bs:w-[90]">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      class="object-contain object-left md:object-cover"
+                      src="./img/main-page-book/page-book.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-row justify-between gap-24 bs:w-[90]">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      class="object-contain"
+                      src="./img/main-page-book/page-book.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex flex-row justify-between gap-24 bs:w-[90]">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      class="object-contain"
+                      src="./img/main-page-book/page-book.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-50 z-1000 ipadmini:-bottom-40 ipadmini:right-20"
+          >
+            <div class="elephant-moves-leg">
+              <div class="elephant-moves-leg-body el-body">
+                <div class="elephant-moves-leg-eye el-eye rotating"></div>
+                <div class="elephant-moves-leg-leg el-leg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-[6.4rem] flex w-full flex-col gap-16 px-24">
+          <div class="mb-40 flex">
+            <h1 class="head-3">Статьи</h1>
+            <sup class="pl-8 text-l leading-sup-2 underline">Все Статьи</sup>
+          </div>
+          <div class="flex flex-row flex-nowrap gap-16 bs:flex-col">
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-nowrap gap-16 bs:flex-col">
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- карточка ПОДБОРКИ -->
+            <div
+              class="card_selection js_traceable_item h-[20rem] !flex-row"
+              itemscope
+              itemtype="http://schema.org/Article"
+            >
+              <a
+                itemprop="url"
+                href="#"
+                class="card_selection_image item_card_image !w-1/2"
+              >
+                <img
+                  src="./img/cards_selection.svg"
+                  alt=""
+                  class="selection_card_img item_card_img"
+                  itemprop="image"
+                />
+              </a>
+              <div
+                class="card_selection_description js-bg-changeable !w-1/2 !overflow-hidden !border !pt-16"
+                itemprop="description"
+              >
+                <div class="card_selection_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_selection_category dotted_tags_category"
+                    itemprop="url"
+                    >ПОДБОРКИ</a
+                  >
+                  <div class="card_selection_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a
+                    href="#"
+                    class="card_selection_date dotted_tags_date"
+                    itemprop="datePublished"
+                    >30.11.2022</a
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="card_selection_info card_sel_info"
+                  itemprop="url"
+                >
+                  <div
+                    class="card_selection_name card_sel_name !text-m"
+                    itemprop="headline"
+                  >
+                    Новая книга Джона Смита стала бестселлером за первую неделю
+                    продаж!
+                  </div>
+                  <div
+                    class="card_selection_text card_sel_text"
+                    itemprop="articleBody"
+                  >
+                    Также как сплочённость команды профессионалов представляет
+                    собой интересный эксперимент
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-book">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Книги для самых маленьких</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="white-background"
+          class="card-fullpage-w-bg-modified books-slider elephant"
+        >
+          <div
+            id="yellow-moving-block2"
+            class="card-fullpage-w-bg-modified books-slider elephant"
+          >
+            <div id="parent2">
+              <img
+                id="follower2"
+                class="slide-el card-fullpage-slide-el-mod"
+                src="./img/running-elephant/slide-el.png"
+              />
+            </div>
+          </div>
+          <div id="above-block" class="above-block-mod">
+            <div class="swiper-book">
+              <div class="swiper-header !mb-40 !w-full px-25 md:mb-16">
+                <div class="flex">
+                  <h1 class="head-3">Книги для школьников</h1>
+                  <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+                </div>
+                <div class="buttons">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper mx-24">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="book_card js_item_card item_card !bg-transparent"
+                    itemscope
+                    itemtype="http://schema.org/Book"
+                  >
+                    <div class="book_card_heading">
+                      <div class="item_card_tags bordered_tags">
+                        <div class="item_card_tags_main bordered_tags_main">
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_first bordered_tags_item body-s-bold"
+                          >
+                            Бестселлер
+                          </a>
+                          <a
+                            itemprop="url"
+                            href="#"
+                            class="book_card_tags_second bordered_tags_item body-s-bold"
+                          >
+                            Новинка
+                          </a>
+                        </div>
+                        <div class="book_card_tags_age body-s-bold">8+</div>
+                      </div>
+
+                      <div class="book_card_image item_card_image">
+                        <img
+                          class="book_card_img item_card_img"
+                          src="./img/cards_book.svg"
+                          alt=""
+                          itemprop="image"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="book_card_info item_card_info"
+                      itemprop="description"
+                    >
+                      <div
+                        class="book_card_name item_card_name"
+                        itemprop="name"
+                      >
+                        Чародол. Весь цикл в одном томе
+                      </div>
+                      <div class="book_card_author" itemprop="author">
+                        Щерба Н. В.
+                      </div>
+                      <div class="book_card_more item_card_more">
+                        <button
+                          class="book_card_item_link item_card_link overline-button"
+                        >
+                          Подробнее
+                        </button>
+                        <button class="item_card_add_to_favourite"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-book">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Книги дя дошкольников</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-64 w-full px-24 md:hidden">
+          <img
+            src="./img/main-page-book/harry-potter.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <div class="my-48 hidden w-full px-24 md:block">
+          <img
+            src="./img/main-page-book/harry-potter-mobile.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <div class="swiper-book">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Событийная лента книг</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-book !mb-64">
+          <div class="swiper-header !mb-40 !mt-64 !w-full px-25 md:mb-16">
+            <div class="flex">
+              <h1 class="head-3">Событийная лента книг 2</h1>
+              <sup class="pl-8 text-l leading-sup-2 underline">все</sup>
+            </div>
+            <div class="buttons">
+              <div class="button-prev"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper mx-24">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="http://schema.org/Book"
+              >
+                <div class="book_card_heading">
+                  <div class="item_card_tags bordered_tags">
+                    <div class="item_card_tags_main bordered_tags_main">
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item body-s-bold"
+                      >
+                        Бестселлер
+                      </a>
+                      <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item body-s-bold"
+                      >
+                        Новинка
+                      </a>
+                    </div>
+                    <div class="book_card_tags_age body-s-bold">8+</div>
+                  </div>
+
+                  <div class="book_card_image item_card_image">
+                    <img
+                      class="book_card_img item_card_img"
+                      src="./img/cards_book.svg"
+                      alt=""
+                      itemprop="image"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+                >
+                  <div class="book_card_name item_card_name" itemprop="name">
+                    Чародол. Весь цикл в одном томе
+                  </div>
+                  <div class="book_card_author" itemprop="author">
+                    Щерба Н. В.
+                  </div>
+                  <div class="book_card_more item_card_more">
+                    <button
+                      class="book_card_item_link item_card_link overline-button"
+                    >
+                      Подробнее
+                    </button>
+                    <button class="item_card_add_to_favourite"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+  <div class="footer rosman-footer-ru bs:mb-60">
+  <div class="footer-container">
+    <div class="footer-heading">
+      <div class="footer-heading-main">
+        <span class="footer-heading-image"></span>
+        <div class="footer-heading-subscription">
+          <div class="drop-down-discover-rosman">
+            <div href="#" class="more-down-button disc-rosman-button">
+              Книги<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="my-8 text-grey" />
+            <div href="#" class="more-down-button disc-rosman-button">
+              Игрушки<span></span>
+            </div>
+            <div class="more-down-content disc-rosman-content">
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+              <a href="#" class="disc-rosman-item">Каталог книг</a>
+            </div>
+            <hr class="mb-0 mt-8 text-grey" />
+          </div>
+          <div class="footer-heading-subs-title">
+            Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы 1
+            раз в неделю. Бесплатно, по делу
+          </div>
+          <div class="footer-heading-subs-inputs">
+            <div class="footer-heading-subs-inputs-main">
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="footer-heading-subs-input input"
+              />
+              <button class="footer-heading-subs-button button-yellow">
+                Подписаться
+              </button>
+            </div>
+            <div
+              class="js-footer-heading-policy-agreement checkbox_main ml-[15rem] ssm:ml-0"
+            >
+              <input
+                class="js-footer-heading-checkbox checkbox__input_main"
+                type="checkbox"
+                id="footer-heading-checkbox"
+              />
+              <label
+                for="footer-heading-checkbox"
+                class="footer-heading-policy-agreement-text checkbox__label_main body-m"
+              >
+                <span>Соглашаюсь с &nbsp</span>
+                <a
+                  href="#"
+                  class="footer-heading-policy-agreement-link link-m-bold"
+                >
+                  политикой конфиденциальности
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-heading-discover-rosman">
+        <div class="footer_heading_about footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Компания</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >О компании</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Партнёрам</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Карьера в РОСМЭН</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Контакты</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_books footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Книги</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог книг</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Авторы РОСМЭН</a
+            >
+
+            <a href="#" class="footer-section-item common-text body-s"
+              >Об издательстве</a
+            >
+            <a href="#" class="footer-section-item common-text body-s">НДК</a>
+            <a href="#" class="footer-section-item common-text body-s"
+              >Писательская школа</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект раз</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Проект два</a
+            >
+          </div>
+        </div>
+        <div class="footer_heading_toys footer-heading-disc-block">
+          <a href="#" class="footer-section-header head-6">Игрушки</a>
+          <div class="footer-section-items">
+            <a href="#" class="footer-section-item common-text body-s"
+              >Каталог игрушек</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Бренды</a
+            >
+            <a href="#" class="footer-section-item common-text body-s"
+              >Новости игрушек</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="text-black" />
+    <div class="footer-info">
+      <div class="footer-info-main">
+        <div class="footer-info-rss common-text">
+          <a href="#" class="footer-info-rss-image"></a>RSS рассылка
+        </div>
+        <div class="footer-info-contacts">
+          <div class="footer-info-address ft-inf-item common-text">
+            17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+            помещ. II, 1 этаж
+          </div>
+          <div class="footer-info-directs ft-inf-item">
+            <a href="tel:+74959337130" class="footer-info-tel common-text"
+              >+7 495 933-71-30</a
+            >
+            <a
+              href="mailto:rosman@rosman.ru"
+              class="footer-info-email-one common-text"
+            >
+              rosman@rosman.ru
+            </a>
+          </div>
+          <div class="footer-info-address ft-inf-item common-text">
+            127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская, Марьина
+            Роща
+          </div>
+          <a
+            href="mailto:rosman@rosman.ru"
+            class="footer-info-email-two common-text"
+            >rosman@rosman.ru</a
+          >
+        </div>
+      </div>
+      <hr class="text-black" />
+      <div class="footer-extras">
+        <div class="footer-extras-creators">
+          <div class="footer-extras-idea common-text">
+            © 1992–2023 ООО РОСМЭН. Все права защищены.
+          </div>
+          <div class="footer-extras-maker common-text">
+            Разработка сайта: Осьминожка
+          </div>
+        </div>
+        <div class="footer-extras-links">
+          <div class="footer-extras-link common-text link-m-bold">
+            Политика конфиденциальности
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">
+            Пользовательское соглашение
+          </div>
+          <div class="footer-extras-link common-text link-m-bold">Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
