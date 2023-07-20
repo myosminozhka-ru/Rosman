@@ -1,6 +1,7 @@
 .scroll-block {
   @apply h-140 overflow-y-auto;
 }
+
 .scroll-block::-webkit-scrollbar-track {
   border-radius: 0.4rem;
 }
@@ -71,7 +72,7 @@
 
   @media screen and (max-width: 900px) {
     display: flex;
-    margin:  0 auto;
+    margin: 0 auto;
     cursor: pointer;
     flex-direction: row;
     align-items: center;
@@ -327,6 +328,7 @@ header {
         @apply hidden;
       }
     }
+
     @media screen and (max-width: 900px) {
       @apply block;
     }
@@ -403,7 +405,7 @@ header {
     padding: 5px;
 
     @media screen and (max-width: 900px) {
-      @apply basis-full	;
+      @apply basis-full    ;
       width: 100%;
     }
 
@@ -513,6 +515,7 @@ header {
     @media screen and (max-width: 900px) {
       @apply mr-0;
     }
+
     &.dekstop {
       @apply inline-flex;
 
@@ -527,6 +530,7 @@ header {
       @media screen and (max-width: 900px) {
         @apply inline-flex;
       }
+
       &.hide {
         display: none;
       }
@@ -718,6 +722,7 @@ header {
       width: 100%;
     }
   }
+
   .width-25 {
     width: 25%;
   }
@@ -862,7 +867,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
@@ -1172,7 +1177,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
@@ -1528,8 +1533,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 
@@ -1611,9 +1615,11 @@ header {
   height: 2rem;
   cursor: pointer;
 }
+
 .w-29rem {
   width: 29.6rem;
 }
+
 .marker {
   background-image: url('../../img/marker.png');
   background-size: cover;
@@ -1621,6 +1627,7 @@ header {
   height: 50px;
   border-radius: 50%;
 }
+
 .block-horizontal {
   display: flex;
   justify-content: center;
@@ -1632,6 +1639,7 @@ header {
     @apply bg-yellow;
     writing-mode: vertical-rl;
   }
+
   @media screen and (max-width: 900px) {
     overflow: hidden;
     width: 225%;
@@ -1730,6 +1738,7 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
 }
+
 .content-block {
   display: none; /* По умолчанию блок скрыт */
   position: fixed;
@@ -1753,9 +1762,11 @@ input::-moz-focus-outer {
   flex-direction: column;
   height: 100%;
   color: #000000;
+
   li {
     @apply text-m py-8;
   }
+
   p {
     @apply text-m py-8;
   }

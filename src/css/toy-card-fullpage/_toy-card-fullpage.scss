@@ -598,6 +598,13 @@
   }
 }
 
+#white-background {
+  .slide-el.card-fullpage-slide-el-mod-2 {
+    bottom: -2.7rem;
+    rotate: -2deg;
+  }
+}
+
 .swiper-image.swiper-header.sw-head-mod {
   @apply mx-0 w-full;
 }
