@@ -231,6 +231,20 @@
   }
 }
 
+#search-result-header {
+  top: 100%;
+  width: 100%;
+  @media (max-width: 639px) {
+    width: 100vw; 
+    top: 6rem; 
+  }
+}
+
+.header .flex.w-full.flex-col  {
+  position: relative;
+
+}
+
 .header[data-header='main'] {
   .rosmen {
     display: none;

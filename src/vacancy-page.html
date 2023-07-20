@@ -60,7 +60,7 @@
                   <div class="icon"></div>
                 </button>
                 <!--  more-down -->
-                <div class="more-down-content mt-60">
+                <div class="more-down-content">
                   <ul>
                     <li class="company"><a href="#">Бренды</a></li>
                     <li class="news"><a href="#">Новости</a></li>
@@ -121,10 +121,10 @@
                 <span class="search-icon"></span>
                 <span class="micro-icon"></span>
                 <input type="text" placeholder="Введите поисковый запрос" />
-                <span class="cross-icon" onclick="toggleSearch()"></span>
+                <span class="cross-icon js-toggle-search"></span>
               </div>
               <div class="header-btn dekstop">
-                <span class="search-button" onclick="toggleSearch()"></span>
+                <span class="search-button js-toggle-search"></span>
                 <span class="micro-button"></span>
                 <span class="heart-button"></span>
                 <div class="language">
@@ -142,7 +142,7 @@
                   <span class="eng-lang" onclick="changeLang('eng')">ENG</span>
                 </div>
                 <span class="heart-button"></span>
-                <span class="search-button" onclick="toggleSearch()"></span>
+                <span class="search-button js-toggle-search"></span>
               </div>
             </header>
             <div class="toolbar">
@@ -873,7 +873,6 @@
         const attachedText = document.querySelector('.attachedText');
 
         if (fileInput.files.length > 0) {
-          console.log(fileInput.files[0].name);
           attachedText.innerHTML = fileInput.files[0].name;
         }
       }
