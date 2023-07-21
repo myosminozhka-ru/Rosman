@@ -201,12 +201,22 @@
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url('../../img/heart_white.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/heart-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .item_card_add_to_favourite.js_pressed {
   @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
   background: url('../../img/heart_black.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/heart-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .add_to_favourite_img {
