@@ -354,13 +354,15 @@
 }
 
 // карточка БРЕНДА
-.card_brands {
+.card_brand {
+  @apply flex flex-col items-center justify-center;
+  border: 1px solid #d9d9d9;
 }
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
   width: 100%;
-  border: 1px solid #d9d9d9;
+  align-items: center;
 
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;
