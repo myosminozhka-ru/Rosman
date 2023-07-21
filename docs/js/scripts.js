@@ -1181,6 +1181,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// External JS file like jquery etc which you do not wish to inlcuded in minification
+
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
   const googleMapsUrlBase = 'https://www.google.com/maps/dir/?';
@@ -1432,8 +1434,6 @@ function initializeSearchInput(locator) {
   });
 }
 
-// External JS file like jquery etc which you do not wish to inlcuded in minification
-
 const popupMethods = ['close', 'open'];
 
 window.popup = function (popupName, method) {
@@ -1638,6 +1638,67 @@ if (radioButtons) {
 function parseDate(dateString) {
   const parts = dateString.split('.');
   return new Date(parts[2], parts[1] - 1, parts[0]);
+}
+
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
+
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
+
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
+
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
+    });
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -1904,67 +1965,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // слайдер для страницы с вакансиями,
-
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
-}
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2280,29 +2280,20 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
 });
 
 const sliderImagesMob = new Swiper('.swiper-container-5', {
-  // ищем слайдер превью по селектору
-  // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 14, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
-  // navigation: {
-  //   // задаем кнопки навигации
-  //   nextEl: '.slider__next', // кнопка Next
-  //   prevEl: '.slider__prev', // кнопка Prev
-  // },
+
   pagination: {
-    //pagination(dots)
     el: '.swiper-pagination',
   },
   clickable: true,
   grabCursor: true, // менять иконку курсора
   thumbs: {
-    // указываем на превью слайдер
     swiper: sliderThumbs, // указываем имя превью слайдера
   },
   breakpoints: {
-    // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
