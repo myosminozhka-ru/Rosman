@@ -216,7 +216,8 @@
                   <div class="w-20 h-20 block ">
                     <img class="w-full h-full" src="../../img/card-fullpage/black-book-20px.svg" alt=""/>
                   </div>
-                  <span class="text-11.14 max-w-[7rem] text-center">Смотреть содержание </span>
+                  <span
+                    class="js_popup_all_filters_button text-11.14 max-w-[7rem] text-center">Смотреть содержание </span>
                 </div>
                 <div class="card_articles_tags dotted_tags">
                   <a
@@ -392,39 +393,39 @@
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
 
       <div class="card-fullpage-tabs px-24 sm:px-12">
-        <div class="navigation">
-          <ul class="navigation-flex !gap-0 nav-list">
+        <div class="navigation card-fullpage-navigation">
+          <ul class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 ipadmini:justify-between">
             <li>
-              <p class="card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+              <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
                 Описание
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
                 Характеристики
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Об авторах</p>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Об авторах</p>
             </li>
           </ul>
         </div>
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description bg-white px-24 sm:px-12">
+      <div class="card-fp-description bg-white card-fp-tab bg-white px-24 sm:px-12">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-desc-comp.html',
         { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden px-24 sm:px-12 mb-[8rem] md:mb-[6rem]">
+      <div class="card-fp-characteristics card-fp-tab hidden px-24 sm:px-12 mb-[8rem] md:mb-[6rem]">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-characteristics-comp.html',
         { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden px-24 sm:px-12">
+      <div class="card-fp-instruction card-fp-tab hidden px-24 sm:px-12">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-about.html',
         { }, )
       </div>
@@ -432,15 +433,21 @@
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
       <div class="swiper-image-2 bg-white pb-12 px-24 ipadmini:px-12">
         <div class="swiper-header !mt-0 !w-full sm:!mb-16 sm:!justify-between">
-          <h3
-            class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
-          >
-            С этой книгой часто покупают
-            <a href="#" class="link-s-bold inline-block hidden sm:inline-block">
+
+
+          <div class="flex flex-row flex-nowrap gap-8 items-start">
+
+            <h3
+              class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+            >
+              С этой книгой часто покупают
+            </h3>
+
+            <a href="#" class="link-s-bold !hidden md:!inline-block">
               Все
             </a>
-          </h3>
 
+          </div>
           <div class="buttons">
             <div class="button-prev"></div>
             <div class="button-next"></div>
@@ -474,19 +481,20 @@
       </div>
 
       <!-- тут наклоняющаяся фотогалерея -->
-      <div id="white-background" class="msm:!h-[43rem] msm:!pt-[5rem] !mb-0 card-fullpage-w-bg-modified">
+      <div id="white-background"
+           class="msm:!h-[44rem] !h-[63rem] mb-40 msm:!pt-[5rem] !mb-0 card-fullpage-w-bg-modified">
         <div id="yellow-moving-block" class="msm:!h-[36rem] card-fullpage-w-bg-modified">
           <div id="parent" class="relative">
-            <!--            <div-->
-            <!--              id="follower"-->
-            <!--              class="slide-el card-fullpage-slide-el-mod-2">-->
-            <!--              @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )-->
-            <!--            </div>-->
-            <img
+            <div
               id="follower"
-              class="slide-el card-fullpage-slide-el-mod"
-              src="../../img/running-elephant/slide-el.png"
-            />
+              class="slide-el card-fullpage-slide-el-mod-2">
+              @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
+            </div>
+            <!--            <img-->
+            <!--              id="follower"-->
+            <!--              class="slide-el card-fullpage-slide-el-mod"-->
+            <!--              src="../../img/running-elephant/slide-el.png"-->
+            <!--            />-->
           </div>
         </div>
         <div id="above-block" class="above-block-mod">
@@ -530,7 +538,8 @@
       </div>
 
       <!-- тут ниже видео блок -->
-      <div class="card_video_item w-full bg-white px-24 sm:px-12" itemscope itemtype="http://schema.org/VideoObject">
+      <div class="card_video_item pt-40 w-full bg-white px-24 sm:px-12 pb-64 sm:pb-48" itemscope
+           itemtype="http://schema.org/VideoObject">
         <!-- card_video_preview - класс оболочки айфрейма -->
         <div class="w-full aspect-video">
           <iframe id="rick" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -541,9 +550,9 @@
       </div>
 
       <!-- тут ниже футер -->
-      @@include('components/ui-kit/footer/footer-ru.html', { }, )
       @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
       { }, )
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
   </div>
 </div>

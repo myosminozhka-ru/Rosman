@@ -51,6 +51,14 @@ document
     window.popup('js_popup_brand_description_modal', 'open');
   });
 
+const openBookDescription = document.querySelectorAll(".js_popup_all_filters_button")
+if (openBookDescription.length) {
+  for (let i = 0; i < openBookDescription.length; i++) {
+    openBookDescription[i].addEventListener('click', function () {
+      window.popup('js_popup_all_filters_modal', 'open')
+    })
+  }
+}
 // функция для добавления класса через положение тогглера в true,
 // повесить слушатель событий,
 const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');

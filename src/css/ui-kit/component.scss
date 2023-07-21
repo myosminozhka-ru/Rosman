@@ -231,6 +231,20 @@
   }
 }
 
+#search-result-header {
+  top: 100%;
+  width: 100%;
+  @media (max-width: 639px) {
+    width: 100vw;
+    top: 6rem;
+  }
+}
+
+.header .flex.w-full.flex-col {
+  position: relative;
+
+}
+
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -426,7 +440,7 @@ header {
 
     input {
       @apply w-full border-0 bg-yellow;
-       font-size: 1.7rem;
+      font-size: 1.7rem;
 
       &:focus {
         border-style: none;
@@ -806,7 +820,7 @@ header {
 }
 
 #moving-block svg {
-  filter: drop-shadow(0px -2px 5px rgb(41, 41, 41));
+  filter: drop-shadow(0px -2px 5px #535353);
 }
 
 #white-mobile-background {
@@ -893,7 +907,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
@@ -906,6 +920,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
     }
@@ -922,6 +937,7 @@ header {
 
       &:hover {
         transform: scale(1.2);
+        background: url('../../img/next-grey.svg') no-repeat center;
       }
     }
   }
@@ -1147,14 +1163,14 @@ header {
 }
 
 #yellow-moving-block {
-  @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
+  @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
   box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
   width: 110%;
 }
 
 #yellow-moving-block2 {
-  @apply absolute z-100 mx-auto my-0 h-180 overflow-hidden bg-white bg-yellow;
+  @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
   box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
   width: 110%;
@@ -1165,7 +1181,6 @@ header {
   margin: auto;
   position: relative;
   height: 100%;
-  overflow: hidden;
   /* Скрыть содержимое, выходящее за границы блока */
 }
 
@@ -1203,7 +1218,7 @@ header {
     @apply my-40 flex w-5/6 justify-between;
 
     .buttons {
-      @apply flex w-36 justify-between gap-8;
+      @apply flex w-64 justify-between gap-24;
 
       .button-prev {
         display: block;
@@ -1216,6 +1231,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
 
@@ -1230,6 +1246,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/next-grey.svg') no-repeat center;
         }
       }
     }
@@ -1559,8 +1576,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 

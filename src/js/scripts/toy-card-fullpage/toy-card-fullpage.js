@@ -43,7 +43,7 @@ if (jsMdb) {
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
-const navButtons = document.querySelector('.navigation');
+const navButtons = document.querySelector('.card-fullpage-navigation');
 
 if (navButtons) {
   const descriptionComponent = document.querySelector('.card-fp-description');
@@ -53,7 +53,7 @@ if (navButtons) {
   const instructionComponent = document.querySelector('.card-fp-instruction');
 
   navButtons.addEventListener('click', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const currentChosen = navButtons.querySelector('.active-js');
     const target = event.target.closest('.card-fullpage-tab');
 
@@ -107,7 +107,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -239,6 +239,7 @@ const swiperImageGallery = new Swiper('.swiper-image-gallery', {
 // Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   direction: 'vertical',
+  mousewheel: true,
   slidesPerView: 5,
   spaceBetween: 5,
   navigation: {
@@ -254,7 +255,6 @@ const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // задаем параметры
   on: {
     slideChange: function () {
-      // console.log(sliderThumbs.activeIndex);
       const firstChosen = document.querySelector('.first-chosen');
       if (firstChosen.classList.contains('p-4')) {
         firstChosen.classList.remove('js-thumb-chosen');
@@ -343,15 +343,6 @@ const sliderImagesMob = new Swiper('.swiper-container-5', {
         el: '.swiper-pagination-2',
       },
       slidesPerView: 1,
-    },
-    768: {
-      // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
-      pagination: {
-        el: '.swiper-pagination-2',
-        clickable: true,
-      },
-      mousewheel: true,
     },
   },
 });

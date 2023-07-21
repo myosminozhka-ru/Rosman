@@ -63,17 +63,16 @@
 .book_card {
   @apply flex flex-col justify-start gap-24 bg-white pb-12;
 
-  &:hover {
-    box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
-  }
 }
 
 .book_card:hover .item_card_image {
   @apply bg-white;
+  box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
 }
 
 .toy_card:hover .item_card_image {
   @apply bg-white;
+  box-shadow: 0 20px 48px 0 rgba(0, 38, 3, 0.08);
 }
 
 .toy_card_heading {
@@ -199,15 +198,25 @@
 }
 
 .item_card_add_to_favourite {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-center p-10;
   background: url('../../img/heart_white.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/heart-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .item_card_add_to_favourite.js_pressed {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-cover bg-center p-10;
+  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-center p-10;
   background: url('../../img/heart_black.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/heart-pressed-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .add_to_favourite_img {
@@ -345,13 +354,15 @@
 }
 
 // карточка БРЕНДА
-.card_brands {
+.card_brand {
+  @apply flex flex-col items-center justify-center;
+  border: 1px solid #d9d9d9;
 }
 
 .card_brand_content {
   @apply flex flex-row flex-nowrap justify-between gap-24 bg-white p-24;
   width: 100%;
-  border: 1px solid #d9d9d9;
+  align-items: center;
 
   @media (min-width: 291px) and (max-width: 400px) {
     @apply gap-12;

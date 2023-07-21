@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //     }
   //   });
   // }
-   const navbar = document.querySelector('.navigation');
+  const navbar = document.querySelector('.navigation');
   const contentNavBarUl = document.querySelector('.nav-list');
   if (navbar) {
     contentNavBarUl.addEventListener('click', function (event) {
@@ -88,20 +88,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const activeP = document.querySelector('p.active-js');
       const p = contentNavBarUl.getElementsByTagName('p');
-      let clicked
-      if(event.target.classList.contains('nav-li')) {
-         return;
-      } if (event.target.classList.contains('nav-list')) {
+      let clicked;
+      if (event.target.classList.contains('nav-li')) {
+        return;
+      }
+      if (event.target.classList.contains('nav-list')) {
         return;
       } else {
-         clicked = event.target;
+        clicked = event.target;
       }
       if (activeP != null) {
-          for (let i = 0; i < p.length; i++) {
-            if (p[i].classList.contains('active-js')) {
-              p[i].classList.remove('active-js');
-            }
+        for (let i = 0; i < p.length; i++) {
+          if (p[i].classList.contains('active-js')) {
+            p[i].classList.remove('active-js');
           }
+        }
       }
       for (let i = 0; i < contentNavBar.length; i++) {
         if (contentNavBar[i].id === clicked.classList.value) {
@@ -505,292 +506,300 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
 
-function toggleSearch() {
-  let mobileMenu = document.getElementById('mobile-menu');
-  let headerNav = document.querySelector('.header-nav');
-  let searchInput = document.querySelector('.search-input');
-  let input = document.querySelector('.search-input input');
-  let logo = document.querySelector('.mobile-logo');
-  input.value = '';
-  let headerbtn = document.querySelectorAll('.header-btn');
-  if (headerNav.classList.contains('hide')) {
-    headerNav.classList.remove('hide');
-    logo.classList.remove('hide');
-    for (let i = 0; i < headerbtn.length; i++) {
-      headerbtn[i].classList.remove('hide-mobile');
-      headerbtn[i].classList.remove('hide-icon');
-      headerbtn[i].classList.remove('hide');
-    }
-  } else {
-    headerNav.classList.add('hide');
-    logo.classList.add('hide');
-    for (let i = 0; i < headerbtn.length; i++) {
-      headerbtn[i].classList.add('hide-mobile');
-      headerbtn[i].classList.add('hide-icon');
-      headerbtn[i].classList.add('hide');
-    }
-  }
-  if (searchInput.classList.contains('hide')) {
-    searchInput.classList.remove('hide');
-  } else {
-    searchInput.classList.add('hide');
-  }
+  function toggleSearch() {
+    let mobileMenu = document.getElementById('mobile-menu');
+    let headerNav = document.querySelector('.header-nav');
+    let searchInput = document.querySelector('.search-input');
+    let input = document.querySelector('.search-input input');
+    let logo = document.querySelector('.mobile-logo');
+    input.value = '';
+    let headerbtn = document.querySelectorAll('.header-btn');
 
-  if (mobileMenu.classList.contains('hide')) {
-    mobileMenu.classList.remove('hide');
-  } else {
-    mobileMenu.classList.add('hide');
-  }
-
-  const headerSearch = document.getElementById('search-header');
-    const searchResult = document.getElementById('search-result-header');
-  if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
-  } else {
-    searchResult.classList.add('hidden')
-  }
-}
-
-function changeLang(lang) {
-  let eng = document.querySelectorAll('.eng-lang');
-  let rus = document.querySelectorAll('.rus-lang');
-  for (let i = 0; i < rus.length; i++) {
-    if (lang === 'eng') {
-      rus[i].classList.remove('active-js');
-      eng[i].classList.add('active-js');
+    if (headerNav.classList.contains('hide')) {
+      headerNav.classList.remove('hide');
+      logo.classList.remove('hide');
+      for (let i = 0; i < headerbtn.length; i++) {
+        headerbtn[i].classList.remove('hide-mobile');
+        headerbtn[i].classList.remove('hide-icon');
+        headerbtn[i].classList.remove('hide');
+      }
     } else {
-      rus[i].classList.add('active-js');
-      eng[i].classList.remove('active-js');
-    }
-  }
-}
-
-function closeBar() {
-  const contentNavBar =
-      document.getElementsByClassName('navigation-content');
-  const contentNavBarUl = document.querySelector('.nav-list');
-  const activeP = document.querySelector('p.active-js');
-  const p = contentNavBarUl.getElementsByTagName('p');
-  for (let i = 0; i < p.length; i++) {
-    if (p[i].classList.contains('active-js')) {
-      p[i].classList.remove('active-js');
-    }
-  }
-  for (let i = 0; i < contentNavBar.length; i++) {
-    contentNavBar[i].classList.remove('active-js');
-    contentNavBar[i].classList.add('hide');
-  }
-}
-
-function scrollContent(direction) {
-  let container = document.getElementById('elephant-container');
-  let content = document.getElementById('elephant-slider');
-
-  if (direction === 'left') {
-    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-  } else if (direction === 'right') {
-    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
-  }
-}
-
-class Slider {
-  constructor(rangeElement, valueElement, options) {
-    this.rangeElement = rangeElement;
-    this.valueElement = valueElement;
-    this.options = options;
-
-    // Attach a listener to "change" event
-    this.rangeElement.addEventListener('input', this.updateSlider.bind(this));
-  }
-
-  // Initialize the slider
-  init() {
-    this.rangeElement.setAttribute('min', options.min);
-    this.rangeElement.setAttribute('max', options.max);
-    this.rangeElement.value = options.cur;
-
-    this.updateSlider();
-  }
-
-  // Format the money
-  asMoney(value) {
-    return (
-      '$' +
-      parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
-    );
-  }
-
-  generateBackground(rangeElement) {
-    if (this.rangeElement.value === this.options.min) {
-      return;
-    }
-
-    let percentage =
-      ((this.rangeElement.value - this.options.min) /
-        (this.options.max - this.options.min)) *
-      100;
-    return (
-      'background: linear-gradient(to right, #000000, #000000 ' +
-      percentage +
-      '%, #D9D9D9 ' +
-      percentage +
-      '%, #D9D9D9 100%)'
-    );
-  }
-
-  updateSlider(newValue) {
-    this.valueElement.innerHTML = this.asMoney(this.rangeElement.value);
-    this.rangeElement.style = this.generateBackground(this.rangeElement.value);
-  }
-}
-
-let rangeElement = document.querySelector('.range [type="range"]');
-let valueElement = document.querySelector('.range .range__value span');
-
-let options = {
-  min: 2000,
-  max: 75000,
-  cur: 37500,
-};
-
-if (rangeElement) {
-  let slider = new Slider(rangeElement, valueElement, options);
-
-  slider.init();
-}
-
-function showBlock(elementId) {
-  const blocks = document.querySelectorAll('.show');
-
-  var block = document.getElementById(elementId);
-  if (block.classList.contains('show')) {
-    block.classList.remove('show');
-  } else {
-    for (let i = 0; i < blocks.length; i++) {
-      if (blocks[i].classList.contains('show')) {
-        blocks[i].classList.remove('show');
+      headerNav.classList.add('hide');
+      logo.classList.add('hide');
+      for (let i = 0; i < headerbtn.length; i++) {
+        headerbtn[i].classList.add('hide-mobile');
+        headerbtn[i].classList.add('hide-icon');
+        headerbtn[i].classList.add('hide');
       }
     }
-    block.classList.add('show');
-  }
-}
+    if (searchInput.classList.contains('hide')) {
+      searchInput.classList.remove('hide');
+    } else {
+      searchInput.classList.add('hide');
+    }
 
-function closeFilter() {
-  const filterOpen = document.getElementById('open-filter');
-  const filterClose = document.getElementById('close-filter');
-  const filter = document.getElementById('filter');
-  const filter2 = document.getElementById('filter-2');
-  if (filterOpen !== null) {
-    if (filter !== null) {
-      document.body.style.overflow = 'hidden';
-      filter.classList.add('open-filter');
-    } else if (filter2 !== null) {
-      document.body.style.overflow = 'hidden';
-      filter2.classList.add('open-filter');
+    if (mobileMenu.classList.contains('hide')) {
+      mobileMenu.classList.remove('hide');
+    } else {
+      mobileMenu.classList.add('hide');
+    }
+
+    const headerSearch = document.getElementById('search-header');
+    const searchResult = document.getElementById('search-result-header');
+    if (headerSearch && headerSearch.value) {
+      searchResult.classList.remove('hidden');
+    } else {
+      searchResult.classList.add('hidden');
     }
   }
-  if (filterClose !== null) {
-    if (filter !== null) {
-      document.body.style.overflow = 'auto';
-      filter.classList.remove('open-filter');
-    } else if (filter2 !== null) {
-      document.body.style.overflow = 'auto';
-      filter2.classList.remove('open-filter');
-    }
-  }
-}
 
-const inputSearch = document.querySelectorAll('.searchInput');
-const blockSearch = document.querySelectorAll('.searchBlock');
-
-if (inputSearch.length && blockSearch.length) {
-  for (let i = 0; i < inputSearch.length; i++) {
-    inputSearch[i].addEventListener('input', function (event) {
-      let filter = inputSearch[i].value.toLowerCase();
-      const label = blockSearch[i].querySelectorAll('.sort-label');
-
-      for (let j = 0; j < label.length; j++) {
-        if (!filter) {
-          if (label[j].classList.contains('!hidden')) {
-            label[j].classList.remove('!hidden');
-          }
-        } else {
-          let content = label[j].dataset.name.toLowerCase();
-          if (content.includes(filter)) {
-            if (label[j].classList.contains('!hidden'))
-              label[j].classList.remove('!hidden');
-          } else {
-            label[j].classList.add('!hidden');
-          }
-        }
-      }
+  const searchToggleButtons = document.querySelectorAll('.js-toggle-search');
+  for (let i = 0; i < searchToggleButtons.length; i++) {
+    searchToggleButtons[i].addEventListener('click', function () {
+      toggleSearch();
     });
   }
-}
 
-const allButtons = document.querySelectorAll('.js-cl-btn');
-
-if (allButtons) {
-  allButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      const siblingElement = button.previousElementSibling;
-      siblingElement.classList.toggle('max-h-[13rem]');
-
-      if (button.innerText === 'Свернуть') {
-        if (
-          button.classList.contains('js-cl-pok') &&
-          button.classList.contains('js-cl-pos')
-        ) {
-          button.innerText = 'Показать ещё';
-        } else if (button.classList.contains('js-cl-pok')) {
-          button.innerText = 'Показать ещё';
-        } else if (button.classList.contains('js-cl-pos')) {
-          button.innerText = 'Посмотреть все';
-        }
+  function changeLang(lang) {
+    let eng = document.querySelectorAll('.eng-lang');
+    let rus = document.querySelectorAll('.rus-lang');
+    for (let i = 0; i < rus.length; i++) {
+      if (lang === 'eng') {
+        rus[i].classList.remove('active-js');
+        eng[i].classList.add('active-js');
       } else {
-        button.innerText = 'Свернуть';
+        rus[i].classList.add('active-js');
+        eng[i].classList.remove('active-js');
       }
-    });
-  });
-}
+    }
+  }
 
-// js-cl-pok Показать ещё
-// js-cl-pos Посмотреть все
-const allButtonsTwo = document.querySelectorAll('.js-cl-btn-2');
+  function closeBar() {
+    const contentNavBar = document.getElementsByClassName('navigation-content');
+    const contentNavBarUl = document.querySelector('.nav-list');
+    const activeP = document.querySelector('p.active-js');
+    const p = contentNavBarUl.getElementsByTagName('p');
+    for (let i = 0; i < p.length; i++) {
+      if (p[i].classList.contains('active-js')) {
+        p[i].classList.remove('active-js');
+      }
+    }
+    for (let i = 0; i < contentNavBar.length; i++) {
+      contentNavBar[i].classList.remove('active-js');
+      contentNavBar[i].classList.add('hide');
+    }
+  }
 
-if (allButtonsTwo) {
-  allButtonsTwo.forEach((button) => {
-    button.addEventListener('click', function () {
-      const siblingElement = button.previousElementSibling;
-      siblingElement.classList.toggle('max-h-[43rem]');
+  function scrollContent(direction) {
+    let container = document.getElementById('elephant-container');
+    let content = document.getElementById('elephant-slider');
 
-      if (button.innerText === 'Свернуть') {
-        if (
+    if (direction === 'left') {
+      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+    } else if (direction === 'right') {
+      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+    }
+  }
+
+  class Slider {
+    constructor(rangeElement, valueElement, options) {
+      this.rangeElement = rangeElement;
+      this.valueElement = valueElement;
+      this.options = options;
+
+      // Attach a listener to "change" event
+      this.rangeElement.addEventListener('input', this.updateSlider.bind(this));
+    }
+
+    // Initialize the slider
+    init() {
+      this.rangeElement.setAttribute('min', options.min);
+      this.rangeElement.setAttribute('max', options.max);
+      this.rangeElement.value = options.cur;
+
+      this.updateSlider();
+    }
+
+    // Format the money
+    asMoney(value) {
+      return (
+        '$' +
+        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+      );
+    }
+
+    generateBackground(rangeElement) {
+      if (this.rangeElement.value === this.options.min) {
+        return;
+      }
+
+      let percentage =
+        ((this.rangeElement.value - this.options.min) /
+          (this.options.max - this.options.min)) *
+        100;
+      return (
+        'background: linear-gradient(to right, #000000, #000000 ' +
+        percentage +
+        '%, #D9D9D9 ' +
+        percentage +
+        '%, #D9D9D9 100%)'
+      );
+    }
+
+    updateSlider(newValue) {
+      this.valueElement.innerHTML = this.asMoney(this.rangeElement.value);
+      this.rangeElement.style = this.generateBackground(
+        this.rangeElement.value
+      );
+    }
+  }
+
+  let rangeElement = document.querySelector('.range [type="range"]');
+  let valueElement = document.querySelector('.range .range__value span');
+
+  let options = {
+    min: 2000,
+    max: 75000,
+    cur: 37500,
+  };
+
+  if (rangeElement) {
+    let slider = new Slider(rangeElement, valueElement, options);
+
+    slider.init();
+  }
+
+  function showBlock(elementId) {
+    const blocks = document.querySelectorAll('.show');
+
+    var block = document.getElementById(elementId);
+    if (block.classList.contains('show')) {
+      block.classList.remove('show');
+    } else {
+      for (let i = 0; i < blocks.length; i++) {
+        if (blocks[i].classList.contains('show')) {
+          blocks[i].classList.remove('show');
+        }
+      }
+      block.classList.add('show');
+    }
+  }
+
+  function closeFilter() {
+    const filterOpen = document.getElementById('open-filter');
+    const filterClose = document.getElementById('close-filter');
+    const filter = document.getElementById('filter');
+    const filter2 = document.getElementById('filter-2');
+    if (filterOpen !== null) {
+      if (filter !== null) {
+        document.body.style.overflow = 'hidden';
+        filter.classList.add('open-filter');
+      } else if (filter2 !== null) {
+        document.body.style.overflow = 'hidden';
+        filter2.classList.add('open-filter');
+      }
+    }
+    if (filterClose !== null) {
+      if (filter !== null) {
+        document.body.style.overflow = 'auto';
+        filter.classList.remove('open-filter');
+      } else if (filter2 !== null) {
+        document.body.style.overflow = 'auto';
+        filter2.classList.remove('open-filter');
+      }
+    }
+  }
+
+  const inputSearch = document.querySelectorAll('.searchInput');
+  const blockSearch = document.querySelectorAll('.searchBlock');
+
+  if (inputSearch.length && blockSearch.length) {
+    for (let i = 0; i < inputSearch.length; i++) {
+      inputSearch[i].addEventListener('input', function (event) {
+        let filter = inputSearch[i].value.toLowerCase();
+        const label = blockSearch[i].querySelectorAll('.sort-label');
+
+        for (let j = 0; j < label.length; j++) {
+          if (!filter) {
+            if (label[j].classList.contains('!hidden')) {
+              label[j].classList.remove('!hidden');
+            }
+          } else {
+            let content = label[j].dataset.name.toLowerCase();
+            if (content.includes(filter)) {
+              if (label[j].classList.contains('!hidden'))
+                label[j].classList.remove('!hidden');
+            } else {
+              label[j].classList.add('!hidden');
+            }
+          }
+        }
+      });
+    }
+  }
+
+  const allButtons = document.querySelectorAll('.js-cl-btn');
+
+  if (allButtons) {
+    allButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        const siblingElement = button.previousElementSibling;
+        siblingElement.classList.toggle('max-h-[13rem]');
+
+        if (button.innerText === 'Свернуть') {
+          if (
             button.classList.contains('js-cl-pok') &&
             button.classList.contains('js-cl-pos')
-        ) {
-          button.innerText = 'Показать все результаты';
-        } else if (button.classList.contains('js-cl-pok')) {
-          button.innerText = 'Показать все результаты';
-        } else if (button.classList.contains('js-cl-pos')) {
-          button.innerText = 'Посмотреть все';
+          ) {
+            button.innerText = 'Показать ещё';
+          } else if (button.classList.contains('js-cl-pok')) {
+            button.innerText = 'Показать ещё';
+          } else if (button.classList.contains('js-cl-pos')) {
+            button.innerText = 'Посмотреть все';
+          }
+        } else {
+          button.innerText = 'Свернуть';
         }
-      } else {
-        button.innerText = 'Свернуть';
-      }
+      });
     });
-  });
-}
-
-const headerSearch = document.getElementById('search-header');
-headerSearch.addEventListener('input', function () {
-  const searchResult = document.getElementById('search-result-header');
-  if (headerSearch && headerSearch.value) {
-    searchResult.classList.remove('hidden')
-  } else {
-    searchResult.classList.add('hidden')
   }
 
+  // js-cl-pok Показать ещё
+  // js-cl-pos Посмотреть все
+  // const allButtonsTwo = document.querySelectorAll('.js-cl-btn-2');
+
+  // if (allButtonsTwo) {
+  //   allButtonsTwo.forEach((button) => {
+  //     button.addEventListener('click', function () {
+  //       const siblingElement = button.previousElementSibling;
+  //       siblingElement.classList.toggle('max-h-[43rem]');
+
+  //       if (button.innerText === 'Свернуть') {
+  //         if (
+  //           button.classList.contains('js-cl-pok') &&
+  //           button.classList.contains('js-cl-pos')
+  //         ) {
+  //           button.innerText = 'Показать все результаты';
+  //         } else if (button.classList.contains('js-cl-pok')) {
+  //           button.innerText = 'Показать все результаты';
+  //         } else if (button.classList.contains('js-cl-pos')) {
+  //           button.innerText = 'Посмотреть все';
+  //         }
+  //       } else {
+  //         button.innerText = 'Свернуть';
+  //       }
+  //     });
+  //   });
+  // }
+
+  const headerSearch = document.getElementById('search-header');
+  headerSearch.addEventListener('input', function () {
+    const searchResult = document.getElementById('search-result-header');
+    if (headerSearch && headerSearch.value) {
+      searchResult.classList.remove('hidden');
+    } else {
+      searchResult.classList.add('hidden');
+    }
+  });
 });
