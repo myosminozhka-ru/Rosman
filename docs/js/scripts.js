@@ -1640,6 +1640,271 @@ function parseDate(dateString) {
   return new Date(parts[2], parts[1] - 1, parts[0]);
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const rem = (16 / 100) * 65.2;
+
+  new Swiper('.js-toys-articles', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-articles-swiper-button-next',
+      prevEl: '.toys-articles-swiper-button-prev',
+    },
+
+    slidesPerView: 1.2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-brands', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-brands-swiper-button-next',
+      prevEl: '.toys-brands-swiper-button-prev',
+    },
+
+    slidesPerView: 1,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-event-tape', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-event-tape-swiper-button-next',
+      prevEl: '.toys-event-tape-swiper-button-prev',
+    },
+
+    slidesPerView: 2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      // 639: {
+      //   slidesPerView: 3,
+      // },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-bestsellers', {
+    loop: false,
+    navigation: {
+      nextEl: '.bestsellers-swiper-button-next',
+      prevEl: '.bestsellers-swiper-button-prev',
+    },
+    pagination: {
+      el: '.bestsellers-swiper-pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return (
+          '<span class="text-slider-fraction body-m ' +
+          currentClass +
+          '"></span>' +
+          ' ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m"> из </span> ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m ' +
+          totalClass +
+          '"></span>'
+        );
+      },
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-banner', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-swiper-button-next',
+      prevEl: '.toys-swiper-button-prev',
+    },
+    pagination: {
+      el: '.toys-swiper-pagination',
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  const swiper = new Swiper('.swiper', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      // настройки для разных разрешений
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperBook = new Swiper('.swiper-book', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      // настройки для разных разрешений
+      320: {
+        slidesPerView: 2.1,
+        spaceBetween: 30,
+      },
+      900: {
+        slidesPerView: 4.2,
+        spaceBetween: 60,
+      },
+    },
+  });
+
+  const swiperOneBook = new Swiper('.swiper-one-book', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      // настройки для разных разрешений
+      320: {
+        slidesPerView: 0.9,
+        spaceBetween: 20,
+      },
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  const personsSLider = new Swiper('.persons-slider', {
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 1.2,
+    spaceBetween: 24,
+    // breakpoints: {
+    //   320: {
+    //     slidesPerView: 2,
+    //   },
+    //   480: {
+    //     slidesPerView: 3,
+    //   },
+    //   640: {
+    //     slidesPerView: 4,
+    //   },
+    // },
+  });
+
+  const swiperImage = new Swiper('.swiper-image', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperText = new Swiper('.swiper-text', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    breakpoints: {
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+    },
+  });
+
+  const runStroke = new Swiper('.swiper-container', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+
+  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+});
+
+// слайдер для страницы с вакансиями,
+
 const randomBookButton = document.querySelector('.js-randomize-book');
 if (randomBookButton) {
   randomBookButton.addEventListener('click', function (event) {
@@ -1700,63 +1965,6 @@ if (randomBookButton) {
     literallyBook.classList.remove('hidden');
   });
 }
-
-// скрипт для слежения за вводом в поля инпутов
-const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
-const remainingItemsContainer = document.querySelector('.js-remaining-items');
-const remainingItems = document.querySelectorAll('.js-remaining-item');
-let remainToFill = document.querySelector('.vac-0');
-
-inputFields.forEach((input) => {
-  input.addEventListener('input', function () {
-    const inputClass = input.classList[1];
-    const correspondingSpan = document.querySelector(
-      `.js-remaining-item.${inputClass}`
-    );
-
-    if (input.value.trim() !== '') {
-      correspondingSpan.style.display = 'none';
-    } else {
-      correspondingSpan.style.display = 'inline';
-    }
-    let allFieldsFilled = true;
-
-    inputFields.forEach(function (field) {
-      if (field.value.trim() === '') {
-        allFieldsFilled = false;
-      }
-    });
-
-    if (allFieldsFilled) {
-      remainingItemsContainer.style.display = 'none';
-    } else {
-      remainingItemsContainer.style.display = 'block';
-    }
-  });
-});
-
-// добавляем класс сокрытия для ширины меньше 600 пикселей
-
-function toggleVisibility() {
-  const blocks = document.querySelectorAll('.js-vac-item');
-  const screenWidth = window.innerWidth;
-
-  blocks.forEach((block) => {
-    if (screenWidth <= 500) {
-      block.classList.add('js-card-fp-hidden-item');
-    } else {
-      block.classList.remove('js-card-fp-hidden-item');
-    }
-  });
-}
-
-window.addEventListener('resize', function handleResize() {
-  toggleVisibility();
-});
-
-window.addEventListener('load', function () {
-  toggleVisibility();
-});
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2240,267 +2448,59 @@ window.onresize = function () {
   // chooseSwiperItem();
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  const rem = (16 / 100) * 65.2;
+// скрипт для слежения за вводом в поля инпутов
+const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
+const remainingItemsContainer = document.querySelector('.js-remaining-items');
+const remainingItems = document.querySelectorAll('.js-remaining-item');
+let remainToFill = document.querySelector('.vac-0');
 
-  new Swiper('.js-toys-articles', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-articles-swiper-button-next',
-      prevEl: '.toys-articles-swiper-button-prev',
-    },
+inputFields.forEach((input) => {
+  input.addEventListener('input', function () {
+    const inputClass = input.classList[1];
+    const correspondingSpan = document.querySelector(
+      `.js-remaining-item.${inputClass}`
+    );
 
-    slidesPerView: 1.2,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      639: {
-        slidesPerView: 2,
-      },
-      868: {
-        slidesPerView: 3,
-      },
-    },
-  });
+    if (input.value.trim() !== '') {
+      correspondingSpan.style.display = 'none';
+    } else {
+      correspondingSpan.style.display = 'inline';
+    }
+    let allFieldsFilled = true;
 
-  new Swiper('.js-toys-brands', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-brands-swiper-button-next',
-      prevEl: '.toys-brands-swiper-button-prev',
-    },
+    inputFields.forEach(function (field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
 
-    slidesPerView: 1,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      639: {
-        slidesPerView: 2,
-      },
-      868: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-event-tape', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-event-tape-swiper-button-next',
-      prevEl: '.toys-event-tape-swiper-button-prev',
-    },
-
-    slidesPerView: 2,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      // 639: {
-      //   slidesPerView: 3,
-      // },
-      868: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-bestsellers', {
-    loop: false,
-    navigation: {
-      nextEl: '.bestsellers-swiper-button-next',
-      prevEl: '.bestsellers-swiper-button-prev',
-    },
-    pagination: {
-      el: '.bestsellers-swiper-pagination',
-      type: 'fraction',
-      renderFraction: function (currentClass, totalClass) {
-        return (
-          '<span class="text-slider-fraction body-m ' +
-          currentClass +
-          '"></span>' +
-          ' ' +
-          '	&nbsp;' +
-          '<span class="text-slider-fraction body-m"> из </span> ' +
-          '	&nbsp;' +
-          '<span class="text-slider-fraction body-m ' +
-          totalClass +
-          '"></span>'
-        );
-      },
-    },
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: rem * 2.4 * 2,
-    breakpoints: {
-      900: {
-        spaceBetween: rem * 1.2 * 2,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-banner', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-swiper-button-next',
-      prevEl: '.toys-swiper-button-prev',
-    },
-    pagination: {
-      el: '.toys-swiper-pagination',
-    },
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: rem * 2.4 * 2,
-    breakpoints: {
-      900: {
-        spaceBetween: rem * 1.2 * 2,
-      },
-    },
-  });
-
-  const swiper = new Swiper('.swiper', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      // настройки для разных разрешений
-      900: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-      },
-    },
-  });
-  const swiperBook = new Swiper('.swiper-book', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      // настройки для разных разрешений
-      320: {
-        slidesPerView: 2.1,
-        spaceBetween: 30,
-      },
-      900: {
-        slidesPerView: 4.2,
-        spaceBetween: 60,
-      },
-    },
-  });
-
-  const swiperOneBook = new Swiper('.swiper-one-book', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      // настройки для разных разрешений
-      320: {
-        slidesPerView: 0.9,
-        spaceBetween: 20,
-      },
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  const personsSLider = new Swiper('.persons-slider', {
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 1.2,
-    spaceBetween: 24,
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 2,
-    //   },
-    //   480: {
-    //     slidesPerView: 3,
-    //   },
-    //   640: {
-    //     slidesPerView: 4,
-    //   },
-    // },
-  });
-
-  const swiperImage = new Swiper('.swiper-image', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      900: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-      },
-    },
-  });
-  const swiperText = new Swiper('.swiper-text', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 0.9,
-    spaceBetween: 10,
-    breakpoints: {
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 60,
-      },
-    },
-  });
-
-  const runStroke = new Swiper('.swiper-container', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-    },
-    speed: 6000,
-    slidesPerView: 6,
-  });
-
-  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
-    speed: 6000,
-    slidesPerView: 6,
+    if (allFieldsFilled) {
+      remainingItemsContainer.style.display = 'none';
+    } else {
+      remainingItemsContainer.style.display = 'block';
+    }
   });
 });
 
-// слайдер для страницы с вакансиями,
+// добавляем класс сокрытия для ширины меньше 600 пикселей
+
+function toggleVisibility() {
+  const blocks = document.querySelectorAll('.js-vac-item');
+  const screenWidth = window.innerWidth;
+
+  blocks.forEach((block) => {
+    if (screenWidth <= 500) {
+      block.classList.add('js-card-fp-hidden-item');
+    } else {
+      block.classList.remove('js-card-fp-hidden-item');
+    }
+  });
+}
+
+window.addEventListener('resize', function handleResize() {
+  toggleVisibility();
+});
+
+window.addEventListener('load', function () {
+  toggleVisibility();
+});
