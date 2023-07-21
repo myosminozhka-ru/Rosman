@@ -1,17 +1,18 @@
 .container-elephant-on-planets {
   @apply flex flex-col items-center px-40;
-  margin-bottom: 2.4rem;
-  margin-top: 11.8rem;
-  @media (max-width: 900px) {
+  margin-bottom: 6.4rem;
+  margin-top: 10.4rem;
+  @media (min-width: 700px) and (max-width: 900px) {
     @apply px-20;
     margin-bottom: 4.8rem;
-    margin-top: 4.8rem;
+    //margin-top: 15.4rem;
   }
   @media screen and (max-width: 500px) {
     @apply px-12;
   }
   @media screen and (max-width: 699px) {
     margin-bottom: 4.8rem;
+    margin-top: 12rem;
   }
 }
 

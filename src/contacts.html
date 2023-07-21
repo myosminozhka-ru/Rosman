@@ -1,173 +1,225 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 62.5%">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-    <title>Контакты</title>
+  <title>Контакты</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-  </head>
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+</head>
 
-  <body>
-    @@include('components/header/header.html')
-    <div id="yellow-background">
-      <div id="moving-block">
-        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-          <g>
-            <path
-              id="moving-bock-shadow"
-              d="M 0 0 L 100 0 L 100 100 L 0 100"
-              fill="white"
-            ></path>
-          </g>
-        </svg>
-      </div>
-      <div id="white-mobile-background"></div>
-      <div id="above-block">
-        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+<body>
+@@include('components/header/header.html')
+<div id="yellow-background">
+  <div id="moving-block">
+    <svg class="-z-1" viewBox="0 0 100 50" class="sc-jDwBTQ fmXCLV">
+      <g>
+        <path
+          id="moving-bock-shadow"
+          d="M 0 0 L 100 0 L 100 100 L 0 100"
+          fill="white"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div id="white-mobile-background"></div>
+  <div id="above-block">
+    @@include('components/ui-kit/breadcrumbs/bread-no-dots.html', { }, )
 
-        <div class="flex">
-          <h1 class="head-1 mb-64 px-24 md:mb-32">Контакты</h1>
-        </div>
-        <div
-          class="mb-42 flex flex-row justify-between px-24 md:mb-32 md:flex-col"
-        >
-          <div class="flex w-1/4 flex-col gap-32 md:mb-24 md:w-full md:gap-8">
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-          </div>
-          <div class="flex w-1/4 flex-col gap-32 md:mb-24 md:w-full md:gap-8">
-            <p class="text-l text-text">Юридический адрес</p>
-            <p class="text-l">
-              17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
-              помещ. II, 1 этаж
-            </p>
-          </div>
-          <div class="flex w-1/4 flex-col gap-32 md:w-full">
-            <p class="text-l text-text">Телефон</p>
-            <a href="callto:+7 495 933-71-30" class="text-l"
-              >+7 495 933-71-30</a
-            >
+    <div class="flex flex-col gap-64 ipadmini:gap-32">
+      <!--   блок с заголовком+адреса И картой   -->
+      <div class="flex flex-col gap-48 sm:gap-32">
+        <div class="flex flex-col px-24 sm:px-12 gap-32">
+          <div class="flex"><h1 class="head-1">Контакты</h1></div>
+          <div class="flex flex-row justify-between md:gap-24 md:flex-col">
+            <div class="flex w-1/4 flex-col gap-32 md:gap-8 md:w-full">
+              <span class="text-l text-text">Адрес</span>
+              <span class="text-l font-medium">
+                127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
+                Марьина Роща
+              </span>
+            </div>
+            <div class="flex w-1/4 flex-col gap-32 md:gap-8 md:w-full">
+              <span class="text-l text-text">Юридический адрес</span>
+              <span class="text-l font-medium">
+                17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
+                помещ. II, 1 этаж
+              </span>
+            </div>
+            <div class="flex w-1/4 flex-col gap-32 md:gap-8 md:w-full">
+              <span class="text-l text-text">Телефон</span>
+              <span class="text-l font-medium">+7 495 933-71-30</span>
+            </div>
           </div>
         </div>
 
         <div id="map" style="width: 100%; height: 504px"></div>
+      </div>
 
+
+      <!--   блок с тремя столбиками   -->
+      <div class="grid grid-cols-3 gap-40 px-24 sm:grid-cols-1 sm:px-12">
+        <div class="flex flex-col items-start justify-between gap-24">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-toys.svg"/>
+            </div>
+            <div class="flex flex-col">
+              <span class="head-4">Игрушки.</span>
+              <span class="head-4">Сми и блогеры</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-16 sm:gap-24">
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Адрес</span>
+              <span class="text-15.20 font-medium">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</span>
+            </div>
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Телефон</span>
+              <a href="tel:+74959337130" class="text-15.20 font-medium"
+              >+7 495 933-71-30</a
+              >
+            </div>
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Электронный адрес</span>
+              <a
+                href="mailto:rosman@rosman.ru"
+                class="text-15.20 font-medium"
+              >rosman@rosman.ru</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-between gap-24">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-books.svg"/>
+            </div>
+            <span class="head-4">Книги</span>
+          </div>
+
+          <div class="flex flex-col gap-16 sm:gap-24">
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Адрес</span>
+              <span class="text-15.20 font-medium">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</span>
+            </div>
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Телефон</span>
+              <a href="tel:+74959337130" class="text-15.20 font-medium">
+                +7 495 933-71-30
+              </a>
+            </div>
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Электронный адрес</span>
+              <a
+                href="mailto:rosman@rosman.ru"
+                class="text-15.20 font-medium"
+              >rosman@rosman.ru</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-between gap-24">
+          <div class="flex flex-col gap-8">
+            <div class="w-[5.8rem]">
+              <img src="../../img/imidzh-rld.svg"/>
+            </div>
+            <span class="head-4">Отдел прав и лицензий</span>
+          </div>
+
+          <div class="flex flex-col gap-16 sm:gap-24">
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Адрес</span>
+              <span class="text-15.20 font-medium">
+              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская, Марьина Роща</span>
+            </div>
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Телефон</span>
+              <a href="tel:+74959337130" class="text-15.20 font-medium">
+                +7 495 933-71-30
+              </a>
+            </div>
+
+            <div class="flex flex-col gap-8">
+              <span class="text-2.5xl text-text">Электронный адрес</span>
+              <a
+                href="mailto:rosman@rosman.ru"
+                class="text-15.20 font-medium"
+              >rosman@rosman.ru</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--   почта   -->
+      <div class="flex flex-col gap-64 ipadmini:gap-0">
         <div
-          class="my-42 mb-96 flex flex-row justify-between bg-white px-24 md:flex-col"
-        >
-          <div class="flex w-1/4 flex-col gap-8 md:mb-40 md:w-full md:gap-24">
-            <img src="../../img/toys.svg" class="h-58 w-58 md:mb-16" />
-
-            <p class="text-4xl md:mb-16">Игрушки.СМИ и блогеры</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <a href="mailto:rosman@rosman.ru" class="text-l"
-              >rosman@rosman.ru</a
-            >
-          </div>
-
-          <div class="flex w-1/4 flex-col gap-8 md:w-full">
-            <img src="../../img/book.svg" class="h-58 w-58" />
-            <p class="text-4xl">Книги</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <a href="mailto:rosman@rosman.ru" class="text-l"
-              >rosman@rosman.ru</a
-            >
-          </div>
-
-          <div class="flex w-1/4 flex-col gap-8 md:w-full">
-            <img src="../../img/document.svg" class="h-58 w-58 md:mb-16" />
-            <p class="text-4xl md:mb-16">Отдел прав и лицензий</p>
-            <p class="text-l text-text">Адрес</p>
-            <p class="text-l">
-              127521, г. Москва, ул. Шереметьевская, д. 47, м. Бутырская,
-              Марьина Роща
-            </p>
-            <p class="text-l text-text">Телефон</p>
-            <p class="text-l">+7 495 933-71-30</p>
-            <p class="text-l text-text">Электронный адрес</p>
-            <a href="mailto:rosman@rosman.ru" class="text-l"
-              >rosman@rosman.ru</a
-            >
-          </div>
-        </div>
-
-        <div class="flex flex-row justify-between bg-white px-24 md:flex-col">
-          <p class="ml-4 w-1/12 text-l text-text md:w-full">
-            <span class="whitespace-nowrap text-l text-text"
-              >Для вопросов и</span
-            >
-            предложений
+          class="flex flex-row justify-between mt-40 ipadmini:mt-16 items-center md:items-start gap-16 md:gap-4 bg-white px-24 sm:px-12 md:flex-col">
+          <p class=" text-l max-w-[12rem] text-text md:max-w-[200rem]">
+            Для вопросов и предложений
           </p>
-          <a href="mailto:rosman@rosman.ru" class="text-8xl md:text-5xl"
-            >rosman@rosman.ru</a
-          >
+          <p class="text-8xl bsmax:text-80.100 bs:text-60.104 md:text-5xl sm:text-38.40">rosman@rosman.ru</p>
         </div>
-        <div class="bg-white">
+
+        <!--   слоник   -->
+        <div class="bg-white !max-h-max !mb-24 ipadmini:!mb-12">
           @@include('components/ui-kit/eleph-on-planets/eleph-on-planets.html',
           { }, )
         </div>
       </div>
     </div>
-    <div class="custom-box !fixed">
-      <span></span>
-      <div class="custom-before"></div>
-      <a href="mailto:rosman@rosman.ru">Написать нам</a>
-      <div class="custom-after"></div>
-    </div>
 
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+  </div>
+</div>
+<div
+  class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden"
+>
+  <span class="custom-box-span"></span>
+  <div class="custom-before"></div>
+  <div>Написать нам</div>
+  <div class="custom-after"></div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-    <script>
-      mapboxgl.accessToken =
-        'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
-      const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
-        center: [37.608078, 55.8087759], // starting position [lng, lat]
-        zoom: 15, // starting zoom
-      });
-      var markerElement = document.createElement('div');
-      markerElement.className = 'marker';
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
 
-      var marker = new mapboxgl.Marker(markerElement)
-        .setLngLat([37.613078, 55.808776]) // Замените на координаты маркера
-        .addTo(map);
-    </script>
-  </body>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+<script>
+  mapboxgl.accessToken =
+    'pk.eyJ1IjoiYWxleHNhdiIsImEiOiJjbGp3azIzaXkxOGlyM2VudjRpbnl3cmFjIn0.uiVmV14QWqeCWq51gfIJMQ';
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/alexsav/cljzdmutk006u01qyg2di82bw', // style URL
+    center: [37.608078, 55.8087759], // starting position [lng, lat]
+    zoom: 15, // starting zoom
+  });
+  var markerElement = document.createElement('div');
+  markerElement.className = 'marker';
+
+  var marker = new mapboxgl.Marker(markerElement)
+    .setLngLat([37.613078, 55.808776]) // Замените на координаты маркера
+    .addTo(map);
+</script>
+</body>
 </html>
