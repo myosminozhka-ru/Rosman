@@ -344,15 +344,6 @@ const sliderImagesMob = new Swiper('.swiper-container-5', {
       },
       slidesPerView: 1,
     },
-    768: {
-      // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
-      pagination: {
-        el: '.swiper-pagination-2',
-        clickable: true,
-      },
-      mousewheel: true,
-    },
   },
 });
 
