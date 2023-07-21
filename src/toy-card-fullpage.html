@@ -309,7 +309,7 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-3 md:grid-cols-1 gap-16 items-stretch px-24 ipadmini:px-12"
+        class="grid grid-cols-3 mb-64 md:mb-48 md:grid-cols-1 gap-16 items-stretch px-24 ipadmini:px-12"
       >
         <div class="card_brand card-fullpage-card-brand">
           <div class="card_brand_content">
@@ -350,41 +350,41 @@
       </div>
 
       <div class="card-fullpage-tabs px-24 ipadmini:px-12">
-        <div class="navigation">
+        <div class="navigation card-fullpage-navigation">
           <ul
-            class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 sm:justify-between"
+            class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 ipadmini:justify-between"
           >
             <li>
-              <p class="card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+              <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
                 Описание
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
                 Характеристики
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Инструкция</p>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Инструкция</p>
             </li>
           </ul>
         </div>
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description px-24 ipadmini:px-12">
+      <div class="card-fp-description card-fp-tab px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-desc-comp.html',
         { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
+      <div class="card-fp-characteristics card-fp-tab hidden px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-characteristics-comp.html',
         { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
+      <div class="card-fp-instruction card-fp-tab hidden px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-instruction-comp.html',
         { }, )
       </div>

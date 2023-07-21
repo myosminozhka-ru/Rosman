@@ -393,39 +393,39 @@
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
 
       <div class="card-fullpage-tabs px-24 sm:px-12">
-        <div class="navigation">
-          <ul class="navigation-flex !gap-0 nav-list">
+        <div class="navigation card-fullpage-navigation">
+          <ul class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 ipadmini:justify-between">
             <li>
-              <p class="card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+              <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
                 Описание
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
                 Характеристики
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Об авторах</p>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Об авторах</p>
             </li>
           </ul>
         </div>
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description bg-white px-24 sm:px-12">
+      <div class="card-fp-description card-fp-tab bg-white px-24 sm:px-12">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-desc-comp.html',
         { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden px-24 sm:px-12 mb-[8rem] md:mb-[6rem]">
+      <div class="card-fp-characteristics card-fp-tab hidden px-24 sm:px-12 mb-[8rem] md:mb-[6rem]">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-characteristics-comp.html',
         { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden px-24 sm:px-12">
+      <div class="card-fp-instruction card-fp-tab hidden px-24 sm:px-12">
         @@include('components/fullpage-toy-book-components/book-card-fullpage-about.html',
         { }, )
       </div>
