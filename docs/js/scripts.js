@@ -1053,6 +1053,36 @@ window.addEventListener('resize', function () {
 //   }
 // });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const brandDropdowns = document.querySelectorAll(
+    '.js-brand-description-dropdown'
+  );
+
+  if (brandDropdowns.length) {
+    for (let i = 0; i < brandDropdowns.length; i++) {
+      brandDropdowns[i].addEventListener('click', function (e) {
+        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
+        let checkedRows = 0;
+        const dropdownCounter = brandDropdowns[i].querySelector(
+          '.js-brand-dropdown-counter'
+        );
+
+        for (let j = 0; j < checkboxes.length; j++) {
+          if (checkboxes[j].checked) {
+            checkedRows++;
+          }
+        }
+
+        if (checkedRows) {
+          dropdownCounter.textContent = `(${checkedRows})`;
+        }
+      });
+    }
+  }
+});
+
+// External JS file like jquery etc which you do not wish to inlcuded in minification
+
 const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
   // Optional parameters
   loop: true,
@@ -1152,36 +1182,6 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
     },
   },
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const brandDropdowns = document.querySelectorAll(
-    '.js-brand-description-dropdown'
-  );
-
-  if (brandDropdowns.length) {
-    for (let i = 0; i < brandDropdowns.length; i++) {
-      brandDropdowns[i].addEventListener('click', function (e) {
-        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
-        let checkedRows = 0;
-        const dropdownCounter = brandDropdowns[i].querySelector(
-          '.js-brand-dropdown-counter'
-        );
-
-        for (let j = 0; j < checkboxes.length; j++) {
-          if (checkboxes[j].checked) {
-            checkedRows++;
-          }
-        }
-
-        if (checkedRows) {
-          dropdownCounter.textContent = `(${checkedRows})`;
-        }
-      });
-    }
-  }
-});
-
-// External JS file like jquery etc which you do not wish to inlcuded in minification
 
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
@@ -1640,67 +1640,6 @@ function parseDate(dateString) {
   return new Date(parts[2], parts[1] - 1, parts[0]);
 }
 
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
-}
-
 window.addEventListener('DOMContentLoaded', () => {
   const rem = (16 / 100) * 65.2;
 
@@ -1965,6 +1904,124 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // слайдер для страницы с вакансиями,
+
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
+
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
+
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
+
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
+    });
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
+}
+
+// скрипт для слежения за вводом в поля инпутов
+const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
+const remainingItemsContainer = document.querySelector('.js-remaining-items');
+const remainingItems = document.querySelectorAll('.js-remaining-item');
+let remainToFill = document.querySelector('.vac-0');
+
+inputFields.forEach((input) => {
+  input.addEventListener('input', function () {
+    const inputClass = input.classList[1];
+    const correspondingSpan = document.querySelector(
+      `.js-remaining-item.${inputClass}`
+    );
+
+    if (input.value.trim() !== '') {
+      correspondingSpan.style.display = 'none';
+    } else {
+      correspondingSpan.style.display = 'inline';
+    }
+    let allFieldsFilled = true;
+
+    inputFields.forEach(function (field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
+
+    if (allFieldsFilled) {
+      remainingItemsContainer.style.display = 'none';
+    } else {
+      remainingItemsContainer.style.display = 'block';
+    }
+  });
+});
+
+// добавляем класс сокрытия для ширины меньше 600 пикселей
+
+function toggleVisibility() {
+  const blocks = document.querySelectorAll('.js-vac-item');
+  const screenWidth = window.innerWidth;
+
+  blocks.forEach((block) => {
+    if (screenWidth <= 500) {
+      block.classList.add('js-card-fp-hidden-item');
+    } else {
+      block.classList.remove('js-card-fp-hidden-item');
+    }
+  });
+}
+
+window.addEventListener('resize', function handleResize() {
+  toggleVisibility();
+});
+
+window.addEventListener('load', function () {
+  toggleVisibility();
+});
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2438,60 +2495,3 @@ window.onresize = function () {
   updateSliderColHeight();
   // chooseSwiperItem();
 };
-
-// скрипт для слежения за вводом в поля инпутов
-const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
-const remainingItemsContainer = document.querySelector('.js-remaining-items');
-const remainingItems = document.querySelectorAll('.js-remaining-item');
-let remainToFill = document.querySelector('.vac-0');
-
-inputFields.forEach((input) => {
-  input.addEventListener('input', function () {
-    const inputClass = input.classList[1];
-    const correspondingSpan = document.querySelector(
-      `.js-remaining-item.${inputClass}`
-    );
-
-    if (input.value.trim() !== '') {
-      correspondingSpan.style.display = 'none';
-    } else {
-      correspondingSpan.style.display = 'inline';
-    }
-    let allFieldsFilled = true;
-
-    inputFields.forEach(function (field) {
-      if (field.value.trim() === '') {
-        allFieldsFilled = false;
-      }
-    });
-
-    if (allFieldsFilled) {
-      remainingItemsContainer.style.display = 'none';
-    } else {
-      remainingItemsContainer.style.display = 'block';
-    }
-  });
-});
-
-// добавляем класс сокрытия для ширины меньше 600 пикселей
-
-function toggleVisibility() {
-  const blocks = document.querySelectorAll('.js-vac-item');
-  const screenWidth = window.innerWidth;
-
-  blocks.forEach((block) => {
-    if (screenWidth <= 500) {
-      block.classList.add('js-card-fp-hidden-item');
-    } else {
-      block.classList.remove('js-card-fp-hidden-item');
-    }
-  });
-}
-
-window.addEventListener('resize', function handleResize() {
-  toggleVisibility();
-});
-
-window.addEventListener('load', function () {
-  toggleVisibility();
-});
