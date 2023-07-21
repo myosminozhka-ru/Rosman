@@ -242,6 +242,7 @@
 
 .header .flex.w-full.flex-col {
   position: relative;
+
 }
 
 .header[data-header='main'] {
@@ -919,6 +920,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
     }
@@ -935,6 +937,7 @@ header {
 
       &:hover {
         transform: scale(1.2);
+        background: url('../../img/next-grey.svg') no-repeat center;
       }
     }
   }
@@ -1228,6 +1231,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
 
@@ -1242,6 +1246,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/next-grey.svg') no-repeat center;
         }
       }
     }
@@ -1571,8 +1576,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 

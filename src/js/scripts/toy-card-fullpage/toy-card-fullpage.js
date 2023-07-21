@@ -107,7 +107,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -239,6 +239,7 @@ const swiperImageGallery = new Swiper('.swiper-image-gallery', {
 // Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   direction: 'vertical',
+  mousewheel: true,
   slidesPerView: 5,
   spaceBetween: 5,
   navigation: {
@@ -342,15 +343,6 @@ const sliderImagesMob = new Swiper('.swiper-container-5', {
         el: '.swiper-pagination-2',
       },
       slidesPerView: 1,
-    },
-    768: {
-      // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
-      pagination: {
-        el: '.swiper-pagination-2',
-        clickable: true,
-      },
-      mousewheel: true,
     },
   },
 });

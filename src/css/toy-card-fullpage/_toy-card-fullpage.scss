@@ -64,8 +64,7 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
-    center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -82,7 +81,7 @@
   }
 }
 .breadcrumbs-path-hidden-text {
-  @apply absolute z-10 flex hidden flex-col gap-8 bg-white p-16;
+  @apply absolute z-[100000] flex hidden flex-col gap-8 bg-white p-16;
   border: 1px solid black;
   width: max-content;
   top: 2.9rem;
@@ -177,9 +176,9 @@
   width: 100%;
   content: '';
   background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
+                  to top,
+                  rgba(255, 255, 255, 1) 0%,
+                  rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
   /* so the text is still selectable */
@@ -255,6 +254,11 @@
   @apply block h-20 w-20;
   background: url('../../img/follow_the_link.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/follow_the_link-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .largeImg-wrapper {
@@ -310,29 +314,29 @@
 }
 
 // карточки брендов
-.card-fullpage-card-brands {
-  @apply mb-64 flex flex-row flex-nowrap gap-16;
+//.card-fullpage-card-brands {
+//  @apply mb-64 flex flex-row flex-nowrap gap-16;
+//
+//  @media screen and (max-width: 900px) {
+//    @apply flex-col items-center;
+//  }
+//}
 
-  @media screen and (max-width: 900px) {
-    @apply flex-col items-center;
-  }
-}
-
-.card-fullpage-card-brand {
-  @apply w-1/3;
-
-  @media (min-width: 801px) and (max-width: 1000px) {
-    @apply w-1/2;
-  }
-
-  @media (min-width: 601px) and (max-width: 800px) {
-    @apply w-2/3;
-  }
-
-  @media screen and (max-width: 600px) {
-    @apply w-full;
-  }
-}
+//.card-fullpage-card-brand {
+//  @apply w-1/3;
+//
+//  @media (min-width: 801px) and (max-width: 1000px) {
+//    @apply w-1/2;
+//  }
+//
+//  @media (min-width: 601px) and (max-width: 800px) {
+//    @apply w-2/3;
+//  }
+//
+//  @media screen and (max-width: 600px) {
+//    @apply w-full;
+//  }
+//}
 
 // navigation
 .navigation-flex {
@@ -378,6 +382,11 @@
 .js-card-fullpage-desc-description.gapped {
   @apply gap-64 md:gap-48;
 }
+
+.js-card-fullpage-desc-description.gapped .more-down-button-desc {
+  @apply mt-[-2rem];
+}
+
 
 @media screen and (max-width: 400px) {
   .js-mdb-desc-button {

@@ -1,156 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Книги. Карточка товара.</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Книги. Карточка товара.</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+</head>
 
-  <body>
-    @@include('components/header/header-books.html', { }, )
-    <div class="card-fullpage">
+<body>
+@@include('components/header/header-books.html', { }, )
+<div class="card-fullpage">
+  <div
+    id="yellow-background"
+    class="card-fullpage-modified-yellow-background"
+  >
+    <div id="moving-block">
+      <svg class="-z-1" viewBox="0 0 100 50" class="sc-jDwBTQ fmXCLV">
+        <g>
+          <path
+            id="moving-bock-shadow"
+            d="M 0 0 L 100 0 L 100 100 L 0 100"
+            fill="white"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block" class="card-fullpage-modified-above-block">
+      <!--    тут будет контент по карточке    -->
+
       <div
-        id="yellow-background"
-        class="card-fullpage-modified-yellow-background"
+        class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden"
       >
-        <div id="moving-block">
-          <svg class="-z-1" viewBox="0 0 100 50" class="sc-jDwBTQ fmXCLV">
-            <g>
-              <path
-                id="moving-bock-shadow"
-                d="M 0 0 L 100 0 L 100 100 L 0 100"
-                fill="white"
-              ></path>
-            </g>
-          </svg>
+        <span class="custom-box-span"></span>
+        <div class="custom-before"></div>
+        <div>Написать нам</div>
+        <div class="custom-after"></div>
+      </div>
+
+      <div class="js_popup_contact_us_ru_modal modal">
+        <div class="popup_contact_us_content modal-content">
+          <div class="popup_contact_us_header">
+            <div class="popup_contact_us_text">Свяжитесь с нами</div>
+            <span
+              class="js_popup_contact_us_close_button ui-popup-close-button"
+            ></span>
+          </div>
+          <div class="js_contact_us_popup_body">
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Письмо директору</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../..//img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Заявка на партнерство</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Отправить резюме</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Подписаться на рассылку</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">СМИ</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text">Блогерам</a>
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+            <div class="contact_us_popup_item">
+              <a href="#" class="contact_us_popup_item_text"
+              >Задать вопрос по игрушкам</a
+              >
+              <div class="contact_us_popup_item_arrow">
+                <img src="../../img/popup_arrow.svg" alt=""/>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="white-mobile-background"></div>
-        <div id="above-block" class="card-fullpage-modified-above-block">
-          <!--    тут будет контент по карточке    -->
-
-          <div
-            class="custom-box js_contact_us_ru_popup_button fixed flex ipadmini:hidden"
-          >
-            <span class="custom-box-span"></span>
-            <div class="custom-before"></div>
-            <div>Написать нам</div>
-            <div class="custom-after"></div>
-          </div>
-
-          <div class="js_popup_contact_us_ru_modal modal">
-            <div class="popup_contact_us_content modal-content">
-              <div class="popup_contact_us_header">
-                <div class="popup_contact_us_text">Свяжитесь с нами</div>
-                <span
-                  class="js_popup_contact_us_close_button ui-popup-close-button"
-                ></span>
-              </div>
-              <div class="js_contact_us_popup_body">
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text"
-                    >Письмо директору</a
-                  >
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../..//img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text"
-                    >Заявка на партнерство</a
-                  >
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text"
-                    >Отправить резюме</a
-                  >
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text"
-                    >Подписаться на рассылку</a
-                  >
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text">СМИ</a>
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text">Блогерам</a>
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
-                <div class="contact_us_popup_item">
-                  <a href="#" class="contact_us_popup_item_text"
-                    >Задать вопрос по игрушкам</a
-                  >
-                  <div class="contact_us_popup_item_arrow">
-                    <img src="../../img/popup_arrow.svg" alt="" />
-                  </div>
-                </div>
+      </div>
+      <div
+        class="card-fullpage-filter-links mb-0 mt-12 px-24 pt-16 ipadmini:px-12"
+      >
+        <a href="#" class="card-fullpage-filter-link">0-3</a>
+        <a href="#" class="card-fullpage-filter-link">4-6</a>
+        <a href="#" class="card-fullpage-filter-link">7-9</a>
+        <a href="#" class="card-fullpage-filter-link">10-15</a>
+        <a href="#" class="card-fullpage-filter-link">15+</a>
+        <a href="#" class="card-fullpage-filter-link">Новинки</a>
+        <a href="#" class="card-fullpage-filter-link">Хиты</a>
+        <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
+      </div>
+      <div class="flex items-center justify-between text-s">
+        <p class="breadcrumbs p-24 bs:hidden">
+          <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
+        ><span>/</span> <a href="#">Все книги </a><span>/</span>
+          <a href="#">Художественная литература </a><span>/</span>
+          <a href="#">Русские народные сказки</a><span>/</span>
+          <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
+        </p>
+        <div
+          class="breadcrumbs-small-screen my-24 pl-24 bs:flex ipadmini:pl-12"
+        >
+          <div class="breadcrumbs-small-screen-image"></div>
+          <div class="breadcrumbs-small-screen-dots">
+            ...
+            <div class="breadcrumbs-arrow"></div>
+            <div class="breadcrumbs-path-hidden-text !z-1000">
+              <div class="flex flex-col gap-8">
+                <a class="text-s" href="#">Книги</a>
+                <a class="text-s" href="#">Все книги</a>
+                <a class="text-s" href="#">Художественная литература</a>
+                <a class="text-s" href="#">Русские народные сказки</a>
               </div>
             </div>
           </div>
-          <div
-            class="card-fullpage-filter-links mb-0 mt-12 px-24 pt-16 ipadmini:px-12"
-          >
-            <a href="#" class="card-fullpage-filter-link">0-3</a>
-            <a href="#" class="card-fullpage-filter-link">4-6</a>
-            <a href="#" class="card-fullpage-filter-link">7-9</a>
-            <a href="#" class="card-fullpage-filter-link">10-15</a>
-            <a href="#" class="card-fullpage-filter-link">15+</a>
-            <a href="#" class="card-fullpage-filter-link">Новинки</a>
-            <a href="#" class="card-fullpage-filter-link">Хиты</a>
-            <a href="#" class="card-fullpage-filter-link">Случайная книга</a>
+          <div class="breadcrumbs-small-screen-path">
+            Безработный Дед Мороз. Волшебный круговорот
           </div>
-          <div class="flex items-center justify-between text-s">
-            <p class="breadcrumbs p-24 bs:hidden">
-              <a href="#">Главная </a><span>/</span> <a href="#">Книги </a
-              ><span>/</span> <a href="#">Все книги </a><span>/</span>
-              <a href="#">Художественная литература </a><span>/</span>
-              <a href="#">Русские народные сказки</a><span>/</span>
-              <a href="#">Безработный Дед Мороз. Волшебный круговорот</a>
-            </p>
+        </div>
+        <div class="breadcrumbs-icons sm:gap-0">
+          <div class="item_card-external-link group relative">
             <div
-              class="breadcrumbs-small-screen my-24 pl-24 bs:flex ipadmini:pl-12"
+              class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 group-hover:flex"
             >
-              <div class="breadcrumbs-small-screen-image"></div>
-              <div class="breadcrumbs-small-screen-dots">
-                ...
-                <div class="breadcrumbs-arrow"></div>
-                <div class="breadcrumbs-path-hidden-text !z-1000">
-                  <div class="flex flex-col gap-8">
-                    <a class="text-s" href="#">Книги</a>
-                    <a class="text-s" href="#">Все книги</a>
-                    <a class="text-s" href="#">Художественная литература</a>
-                    <a class="text-s" href="#">Русские народные сказки</a>
+              <div
+                class="breadcrumbs-arrow left-[12.4rem] top-[-1.2rem] group-hover:block"
+              ></div>
+              <button
+                class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
+              >
+                <div class="block h-20 w-20">
+                  <img src="../../img/copy-link.svg" alt=""/>
+                </div>
+                <span class="body-s whitespace-nowrap p-0">
+                                Скопировать ссылку
+                              </span>
+              </button>
+              <a href="#" class="flex flex-row flex-nowrap gap-8">
+                <div class="block h-20 w-20">
+                  <img src="../../img/vkcom.svg" alt=""/>
+                </div>
+                <span class="body-s">ВКонтакте</span>
+              </a>
+              <a href="#" class="flex flex-row flex-nowrap gap-8">
+                <div class="block h-20 w-20">
+                  <img src="../../img/tiktok.svg" alt=""/>
+                </div>
+                <span class="body-s">TikTok</span>
+              </a>
+              <a href="#" class="flex flex-row flex-nowrap gap-8">
+                <div class="block h-20 w-20">
+                  <img src="../../img/facebook.svg" alt=""/>
+                </div>
+                <span class="body-s" href="#">Facebook</span>
+              </a>
+              <a href="#" class="flex flex-row flex-nowrap gap-8">
+                <div class="block h-20 w-20">
+                  <img src="../../img/likee.svg" alt=""/>
+                </div>
+                <span class="body-s">Likee</span>
+              </a>
+            </div>
+          </div>
+          <button class="item_card_add_to_favourite"></button>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-16"
+        >
+          <div class="pl-24 ipadmini:px-12">
+            @@include('components/ui-kit/cards/my-swiper-books.html', { }, )
+          </div>
+
+          <div class="card-fullpage-description ipadmini:px-12 sm:!px-0">
+            <div class="card-fp-desc-main">
+              <div class="card-fp-desc-top">
+                <div class="card-fp-desc-header">
+                  Часодеи. Часовой ключ. Книга 2
+                </div>
+                <div class="card-fp-desc-vendor-code">Артикул: 649576977</div>
+                <div
+                  class="hidden md:flex gap-4 bg-background items-center p-16 flex-row flex-nowrap !w-max !h-max js_popup_all_filters_button-2 cursor-pointer "
+                >
+                  <div class="w-20 h-20 block ">
+                    <img class="w-full h-full" src="../../img/card-fullpage/black-book-20px.svg" alt=""/>
                   </div>
+                  <span
+                    class="js_popup_all_filters_button text-11.14 max-w-[7rem] text-center">Смотреть содержание </span>
+                </div>
+                <div class="card_articles_tags dotted_tags">
+                  <a
+                    href="#"
+                    class="card_articles_category dotted_tags_category"
+                  >Наталья Щерба</a
+                  >
+                  <div class="card_articles_separator dotted_tags_separator">
+                    •
+                  </div>
+                  <a href="#" class="card_articles_date dotted_tags_date"
+                  >Nataliya Sherba</a
+                  >
+                </div>
+                <div
+                  class="js-book-text-container overflow-hidden text-ellipsis"
+                >
+                    <span
+                      class="card-fp-desc-text-top line-clamp-2 text-ellipsis"
+                    >
+                      Первая книга фэнтези-бестселлера для подростков с
+                      уникальным сказочным миром, по популярности
+                      приближающегося к «Гарри Поттеру» и Lorem ipsum dolor sit
+                      amet, consectetur adipisicing elit. Dicta distinctio
+                      ducimus esse explicabo, labore officiis perferendis quam
+                      quas quos unde? Beatae consequatur distinctio ipsa laborum
+                      maxime nisi possimus quibusdam, unde?
+                    </span>
+                </div>
+                <button class="more-down-button-card font-medium js-book-toggle-button !p-0">
+                  Подробное описание, характеристики<span></span>
+                </button>
+              </div>
+              <div class="card-fp-desc-bottom">
+                <div class="card-fp-desc-buy">Купить книгу</div>
+                <div class="card-fp-desc-buy-buttons">
+                  <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-1"></a>
+                  <a href="#" class="card-fp-desc-buy-btn c-fp-d-b-btn-2"></a>
                 </div>
               </div>
-              <div class="breadcrumbs-small-screen-path">
-                Безработный Дед Мороз. Волшебный круговорот
+
+              <!--  карточки БРЕНДЫ  -->
+              <div
+                class="card_brand card-fp-desc-brand-small msm:!max-w-[100rem]"
+              >
+                <div
+                  class="card_brand_content card-fp-desc-brand-content-small !px-32 msm:!justify-end msm:!px-16 msm:!py-16 ssm:!items-start"
+                >
+                  <div class="card_brand_info card-fp-desc-brand-info-small">
+                    <a
+                      href="#"
+                      class="card_brand_all_items card-fp-desc-brand-items-small"
+                    >Книги серии</a
+                    >
+                    <div
+                      class="card_brand_name card-fp-desc-brand-name-small !font-medium"
+                    >
+                      Часодеи
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="card_brand_image m-w-[3rem] card-fp-desc-brand-image-small aspect-square"
+                  >
+                    <img src="../../img/elephant-card.svg" alt=""/>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="breadcrumbs-icons sm:gap-0">
-              <div class="item_card-external-link group relative">
+            <div class="card-fp-desc-buttons pr-24">
+              <a
+                href="#"
+                class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
+              >5+</a
+              >
+              <div class="item_card-external-link cursor-pointer group relative">
                 <div
-                  class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3.5rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
+                  class="breadcrumbs-path-hidden-text !p-8 !left-[-13rem] !top-[3rem] flex w-max flex-col !gap-16 group-hover:flex"
                 >
                   <div
                     class="breadcrumbs-arrow left-[12.4rem] top-[-1.2rem] group-hover:block"
@@ -159,33 +304,33 @@
                     class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
                   >
                     <div class="block h-20 w-20">
-                      <img src="../../img/copy-link.svg" alt="" />
+                      <img src="../../img/copy-link.svg" alt=""/>
                     </div>
                     <span class="body-s whitespace-nowrap p-0">
-                      Скопировать ссылку
-                    </span>
+                                Скопировать_ссылку
+                              </span>
                   </button>
                   <a href="#" class="flex flex-row flex-nowrap gap-8">
                     <div class="block h-20 w-20">
-                      <img src="../../img/vkcom.svg" alt="" />
+                      <img src="../../img/vkcom.svg" alt=""/>
                     </div>
                     <span class="body-s">ВКонтакте</span>
                   </a>
                   <a href="#" class="flex flex-row flex-nowrap gap-8">
                     <div class="block h-20 w-20">
-                      <img src="../../img/tiktok.svg" alt="" />
+                      <img src="../../img/tiktok.svg" alt=""/>
                     </div>
                     <span class="body-s">TikTok</span>
                   </a>
                   <a href="#" class="flex flex-row flex-nowrap gap-8">
                     <div class="block h-20 w-20">
-                      <img src="../../img/facebook.svg" alt="" />
+                      <img src="../../img/facebook.svg" alt=""/>
                     </div>
                     <span class="body-s" href="#">Facebook</span>
                   </a>
                   <a href="#" class="flex flex-row flex-nowrap gap-8">
                     <div class="block h-20 w-20">
-                      <img src="../../img/likee.svg" alt="" />
+                      <img src="../../img/likee.svg" alt=""/>
                     </div>
                     <span class="body-s">Likee</span>
                   </a>
@@ -194,290 +339,170 @@
               <button class="item_card_add_to_favourite"></button>
             </div>
           </div>
+        </div>
 
-          <div>
-            <div
-              class="grid grid-cols-2 gap-24 ipadmini:grid-cols-1 ipadmini:gap-16"
-            >
-              <div class="pl-24 ipadmini:px-12">
-                @@include('components/ui-kit/cards/my-swiper-books.html', { }, )
-              </div>
-
-              <div class="card-fullpage-description ipadmini:px-12 sm:!px-0">
-                <div class="card-fp-desc-main">
-                  <div class="card-fp-desc-top">
-                    <div class="card-fp-desc-header">
-                      Часодеи. Часовой ключ. Книга 2
-                    </div>
-                    <div class="card-fp-desc-vendor-code">
-                      Артикул: 649576977
-                    </div>
-                    <div
-                      class="js_popup_all_filters_button-2 hidden !h-max !w-max cursor-pointer flex-row flex-nowrap items-center gap-4 bg-background p-16 md:flex"
-                    >
-                      <div class="block h-20 w-20">
-                        <img
-                          class="h-full w-full"
-                          src="../../img/card-fullpage/black-book-20px.svg"
-                          alt=""
-                        />
-                      </div>
-                      <span
-                        class="js_popup_all_filters_button max-w-[7rem] text-center text-11.14"
-                        >Смотреть содержание
-                      </span>
-                    </div>
-                    <div class="card_articles_tags dotted_tags">
-                      <a
-                        href="#"
-                        class="card_articles_category dotted_tags_category"
-                        >Наталья Щерба</a
-                      >
-                      <div
-                        class="card_articles_separator dotted_tags_separator"
-                      >
-                        •
-                      </div>
-                      <a href="#" class="card_articles_date dotted_tags_date"
-                        >Nataliya Sherba</a
-                      >
-                    </div>
-                    <div
-                      class="js-book-text-container overflow-hidden text-ellipsis"
-                    >
-                      <span
-                        class="card-fp-desc-text-top line-clamp-2 text-ellipsis"
-                      >
-                        Первая книга фэнтези-бестселлера для подростков с
-                        уникальным сказочным миром, по популярности
-                        приближающегося к «Гарри Поттеру» и Lorem ipsum dolor
-                        sit amet, consectetur adipisicing elit. Dicta distinctio
-                        ducimus esse explicabo, labore officiis perferendis quam
-                        quas quos unde? Beatae consequatur distinctio ipsa
-                        laborum maxime nisi possimus quibusdam, unde?
-                      </span>
-                    </div>
-                    <button
-                      class="more-down-button-card js-book-toggle-button !p-0 font-medium"
-                    >
-                      Подробное описание, характеристики<span></span>
-                    </button>
-                  </div>
-                  <div class="card-fp-desc-bottom">
-                    <div class="card-fp-desc-buy">Купить книгу</div>
-                    <div class="card-fp-desc-buy-buttons">
-                      <a
-                        href="#"
-                        class="card-fp-desc-buy-btn c-fp-d-b-btn-1"
-                      ></a>
-                      <a
-                        href="#"
-                        class="card-fp-desc-buy-btn c-fp-d-b-btn-2"
-                      ></a>
-                    </div>
-                  </div>
-
-                  <!--  карточки БРЕНДЫ  -->
-                  <div
-                    class="card_brand card-fp-desc-brand-small msm:!max-w-[100rem]"
-                  >
-                    <div
-                      class="card_brand_content card-fp-desc-brand-content-small !px-32 msm:!justify-end msm:!px-16 msm:!py-16 ssm:!items-start"
-                    >
-                      <div
-                        class="card_brand_info card-fp-desc-brand-info-small"
-                      >
-                        <a
-                          href="#"
-                          class="card_brand_all_items card-fp-desc-brand-items-small"
-                          >Книги серии</a
-                        >
-                        <div
-                          class="card_brand_name card-fp-desc-brand-name-small !font-medium"
-                        >
-                          Часодеи
-                        </div>
-                      </div>
-                      <a
-                        href="#"
-                        class="card_brand_image m-w-[3rem] card-fp-desc-brand-image-small aspect-square"
-                      >
-                        <img src="../../img/elephant-card.svg" alt="" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-fp-desc-buttons pr-24">
-                  <a
-                    href="#"
-                    class="bordered_tags_item-fp body-s-bold border border-black px-12 py-4"
-                    >5+</a
-                  >
-                  <div
-                    class="item_card-external-link group relative cursor-pointer"
-                  >
-                    <div
-                      class="breadcrumbs-path-hidden-text !left-[-13rem] !top-[3rem] flex w-max flex-col !gap-16 !p-8 group-hover:flex"
-                    >
-                      <div
-                        class="breadcrumbs-arrow left-[12.4rem] top-[-1.2rem] group-hover:block"
-                      ></div>
-                      <button
-                        class="flex cursor-pointer flex-row flex-nowrap gap-8 p-0"
-                      >
-                        <div class="block h-20 w-20">
-                          <img src="../../img/copy-link.svg" alt="" />
-                        </div>
-                        <span class="body-s whitespace-nowrap p-0">
-                          Скопировать_ссылку
-                        </span>
-                      </button>
-                      <a href="#" class="flex flex-row flex-nowrap gap-8">
-                        <div class="block h-20 w-20">
-                          <img src="../../img/vkcom.svg" alt="" />
-                        </div>
-                        <span class="body-s">ВКонтакте</span>
-                      </a>
-                      <a href="#" class="flex flex-row flex-nowrap gap-8">
-                        <div class="block h-20 w-20">
-                          <img src="../../img/tiktok.svg" alt="" />
-                        </div>
-                        <span class="body-s">TikTok</span>
-                      </a>
-                      <a href="#" class="flex flex-row flex-nowrap gap-8">
-                        <div class="block h-20 w-20">
-                          <img src="../../img/facebook.svg" alt="" />
-                        </div>
-                        <span class="body-s" href="#">Facebook</span>
-                      </a>
-                      <a href="#" class="flex flex-row flex-nowrap gap-8">
-                        <div class="block h-20 w-20">
-                          <img src="../../img/likee.svg" alt="" />
-                        </div>
-                        <span class="body-s">Likee</span>
-                      </a>
-                    </div>
-                  </div>
-                  <button class="item_card_add_to_favourite"></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-image-2 mb-48 px-24 ipadmini:px-12">
-              <div
-                class="swiper-header !w-full msm:!mb-16 msm:!mt-48 msm:!items-start"
+        <div class="swiper-image-2 mb-48 px-24 ipadmini:px-12">
+          <div class="swiper-header !w-full msm:!items-start msm:!mb-16 msm:!mt-48">
+            <div class="flex flex-row msm:flex-col">
+              <h3 class="head-3">Все книги серии&nbsp</h3>
+              <a href="#" class="head-3 underline">Часодеи</a>
+              <a
+                class="link-m-bold !hidden w-max text-15.20 font-medium msm:!block msm:font-normal"
+              >Смотреть все</a
               >
-                <div class="flex flex-row msm:flex-col">
-                  <h3 class="head-3">Все книги серии&nbsp</h3>
-                  <a href="#" class="head-3 underline">Часодеи</a>
-                  <a
-                    class="link-m-bold !hidden w-max text-15.20 font-medium msm:!block msm:font-normal"
-                    >Смотреть все</a
-                  >
-                </div>
-                <div class="flex flex-row items-center gap-20">
-                  <a class="link-m-bold text-15.20 font-medium msm:hidden"
-                    >Смотреть все</a
-                  >
-                  <div class="buttons">
-                    <div class="button-prev"></div>
-                    <div class="button-next"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
-                <div class="swiper-slide">
-                  @@include('components/ui-kit/cards/card-books.html', { }, )
-                </div>
+            </div>
+            <div class="flex flex-row items-center gap-20">
+              <a class="link-m-bold text-15.20 font-medium msm:hidden"
+              >Смотреть все</a
+              >
+              <div class="buttons">
+                <div class="button-prev"></div>
+                <div class="button-next"></div>
               </div>
             </div>
           </div>
-
-          <!--компонент с карточками КНИГ И ИГРУШЕК-->
-
-          <div class="card-fullpage-tabs px-24 sm:px-12">
-            <div class="navigation">
-              <ul class="navigation-flex nav-list !gap-0">
-                <li>
-                  <p
-                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
-                  >
-                    Описание
-                  </p>
-                </li>
-                <li>
-                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
-                    Характеристики
-                  </p>
-                </li>
-                <li>
-                  <p
-                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
-                  >
-                    Об авторах
-                  </p>
-                </li>
-              </ul>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
+            </div>
+            <div class="swiper-slide">
+              @@include('components/ui-kit/cards/card-books.html', { }, )
             </div>
           </div>
+        </div>
 
-          <!--компонент из таба ОПИСАНИЕ-->
-          <div class="card-fp-description bg-white px-24 sm:px-12">
-            @@include('components/fullpage-toy-book-components/book-card-fullpage-desc-comp.html',
-            { }, )
+      </div>
+
+      <!--компонент с карточками КНИГ И ИГРУШЕК-->
+
+      <div class="card-fullpage-tabs px-24 sm:px-12">
+        <div class="navigation card-fullpage-navigation">
+          <ul class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 ipadmini:justify-between">
+            <li>
+              <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+                Описание
+              </p>
+            </li>
+            <li>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+                Характеристики
+              </p>
+            </li>
+            <li>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Об авторах</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--компонент из таба ОПИСАНИЕ-->
+      <div class="card-fp-description bg-white card-fp-tab bg-white px-24 sm:px-12">
+        @@include('components/fullpage-toy-book-components/book-card-fullpage-desc-comp.html',
+        { }, )
+      </div>
+
+      <!--    характеристики   -->
+      <div class="card-fp-characteristics card-fp-tab hidden px-24 sm:px-12 mb-[8rem] md:mb-[6rem]">
+        @@include('components/fullpage-toy-book-components/book-card-fullpage-characteristics-comp.html',
+        { }, )
+      </div>
+
+      <!--   инструкция      -->
+      <div class="card-fp-instruction card-fp-tab hidden px-24 sm:px-12">
+        @@include('components/fullpage-toy-book-components/book-card-fullpage-about.html',
+        { }, )
+      </div>
+
+      <!--компонент с карточками КНИГ И ИГРУШЕК-->
+      <div class="swiper-image-2 bg-white pb-12 px-24 ipadmini:px-12">
+        <div class="swiper-header !mt-0 !w-full sm:!mb-16 sm:!justify-between">
+
+
+          <div class="flex flex-row flex-nowrap gap-8 items-start">
+
+            <h3
+              class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+            >
+              С этой книгой часто покупают
+            </h3>
+
+            <a href="#" class="link-s-bold !hidden md:!inline-block">
+              Все
+            </a>
+
           </div>
+          <div class="buttons">
+            <div class="button-prev"></div>
+            <div class="button-next"></div>
+          </div>
+        </div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper !items-end">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+          <div class="swiper-slide">
+            @@include('components/ui-kit/cards/card-books.html', { }, )
+          </div>
+        </div>
+      </div>
 
-          <!--    характеристики   -->
+      <!-- тут наклоняющаяся фотогалерея -->
+      <div id="white-background"
+           class="msm:!h-[44rem] !h-[63rem] mb-40 msm:!pt-[5rem] !mb-0 card-fullpage-w-bg-modified">
+        <div id="yellow-moving-block" class="msm:!h-[36rem] card-fullpage-w-bg-modified">
+          <div id="parent" class="relative">
+            <div
+              id="follower"
+              class="slide-el card-fullpage-slide-el-mod-2">
+              @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html', { }, )
+            </div>
+            <!--            <img-->
+            <!--              id="follower"-->
+            <!--              class="slide-el card-fullpage-slide-el-mod"-->
+            <!--              src="../../img/running-elephant/slide-el.png"-->
+            <!--            />-->
+          </div>
+        </div>
+        <div id="above-block" class="above-block-mod">
           <div
-            class="card-fp-characteristics mb-[8rem] hidden px-24 md:mb-[6rem] sm:px-12"
+            class="swiper-image-gallery my-0 mb-24 px-24 pb-60 ipadmini:px-12"
           >
-            @@include('components/fullpage-toy-book-components/book-card-fullpage-characteristics-comp.html',
-            { }, )
-          </div>
-
-          <!--   инструкция      -->
-          <div class="card-fp-instruction hidden px-24 sm:px-12">
-            @@include('components/fullpage-toy-book-components/book-card-fullpage-about.html',
-            { }, )
-          </div>
-
-          <!--компонент с карточками КНИГ И ИГРУШЕК-->
-          <div class="swiper-image-2 bg-white px-24 pb-12 ipadmini:px-12">
-            <div
-              class="swiper-header !mt-0 !w-full sm:!mb-16 sm:!justify-between"
-            >
-              <h3
-                class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
-              >
-                С этой книгой часто покупают
-                <a
-                  href="#"
-                  class="link-s-bold inline-block hidden sm:inline-block"
-                >
-                  Все
-                </a>
-              </h3>
-
+            <div class="swiper-header sw-head-mod !w-full">
+              <h3 class="head-3">Фотогалерея</h3>
               <div class="buttons">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
@@ -487,144 +512,68 @@
             <div class="swiper-wrapper !items-end">
               <!-- Slides -->
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
               <div class="swiper-slide">
-                @@include('components/ui-kit/cards/card-books.html', { }, )
+                @@include('components/ui-kit/cards/card-photogallery-item.html', { }, )
               </div>
             </div>
           </div>
-
-          <!-- тут наклоняющаяся фотогалерея -->
-          <div
-            id="white-background"
-            class="card-fullpage-w-bg-modified !mb-0 mb-40 msm:!h-[43rem] msm:!pt-[5rem]"
-          >
-            <div
-              id="yellow-moving-block"
-              class="card-fullpage-w-bg-modified msm:!h-[36rem]"
-            >
-              <div id="parent" class="relative">
-                <div
-                  id="follower"
-                  class="slide-el card-fullpage-slide-el-mod-2"
-                >
-                  @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html',
-                  { }, )
-                </div>
-                <!--            <img-->
-                <!--              id="follower"-->
-                <!--              class="slide-el card-fullpage-slide-el-mod"-->
-                <!--              src="../../img/running-elephant/slide-el.png"-->
-                <!--            />-->
-              </div>
-            </div>
-            <div id="above-block" class="above-block-mod">
-              <div
-                class="swiper-image-gallery my-0 mb-24 px-24 pb-60 ipadmini:px-12"
-              >
-                <div class="swiper-header sw-head-mod !w-full">
-                  <h3 class="head-3">Фотогалерея</h3>
-                  <div class="buttons">
-                    <div class="button-prev"></div>
-                    <div class="button-next"></div>
-                  </div>
-                </div>
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper !items-end">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('components/ui-kit/cards/card-photogallery-item.html',
-                    { }, )
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- тут ниже видео блок -->
-          <div
-            class="card_video_item w-full bg-white px-24 pt-40 sm:px-12"
-            itemscope
-            itemtype="http://schema.org/VideoObject"
-          >
-            <!-- card_video_preview - класс оболочки айфрейма -->
-            <div class="aspect-video w-full">
-              <iframe
-                id="rick"
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-              <!--    <button class="card_video_play_button circle-button"></button>-->
-            </div>
-          </div>
-
-          <!-- тут ниже футер -->
-          @@include('components/ui-kit/footer/footer-ru.html', { }, )
-          @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
-          { }, )
         </div>
       </div>
+
+      <!-- тут ниже видео блок -->
+      <div class="card_video_item pt-40 w-full bg-white px-24 sm:px-12 pb-64 sm:pb-48" itemscope
+           itemtype="http://schema.org/VideoObject">
+        <!-- card_video_preview - класс оболочки айфрейма -->
+        <div class="w-full aspect-video">
+          <iframe id="rick" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  frameborder="0"
+                  allowfullscreen></iframe>
+          <!--    <button class="card_video_play_button circle-button"></button>-->
+        </div>
+      </div>
+
+      <!-- тут ниже футер -->
+      @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
+      { }, )
+      @@include('components/ui-kit/footer/footer-ru.html', { }, )
     </div>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script type="module" src="./js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind('[data-fancybox="gallery-big"]', {
-        loop: false,
-      });
-      Fancybox.bind('[data-fancybox="gallery-small"]', {
-        loop: false,
-      });
-      Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
-        loop: false,
-      });
-    </script>
-  </body>
+  </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script type="module" src="./js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+  Fancybox.bind('[data-fancybox="gallery-big"]', {
+    loop: false,
+
+  });
+  Fancybox.bind('[data-fancybox="gallery-small"]', {
+    loop: false,
+  });
+  Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
+    loop: false,
+  });
+</script>
+</body>
 </html>
