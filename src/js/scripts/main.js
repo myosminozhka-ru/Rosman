@@ -295,6 +295,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // boxshadow
+  // box-shadow: inset 0px 1px 19px 4px #535353;
+
   let isMoving = false;
 
   document.addEventListener('mousemove', function (event) {
@@ -359,6 +362,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );

@@ -1162,14 +1162,13 @@ header {
 
 #yellow-moving-block {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
-  box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
   width: 110%;
 }
 
 #yellow-moving-block2 {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
-  box-shadow: inset 0px 1px 19px 4px #535353;
+  // box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
   width: 110%;
 }
