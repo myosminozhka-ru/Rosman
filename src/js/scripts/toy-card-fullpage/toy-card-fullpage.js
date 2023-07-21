@@ -107,7 +107,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -239,6 +239,7 @@ const swiperImageGallery = new Swiper('.swiper-image-gallery', {
 // Инициализация превью слайдера картинок товара
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   direction: 'vertical',
+  mousewheel: true,
   slidesPerView: 5,
   spaceBetween: 5,
   navigation: {
