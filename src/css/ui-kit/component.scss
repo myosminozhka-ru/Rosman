@@ -235,12 +235,12 @@
   top: 100%;
   width: 100%;
   @media (max-width: 639px) {
-    width: 100vw; 
-    top: 6rem; 
+    width: 100vw;
+    top: 6rem;
   }
 }
 
-.header .flex.w-full.flex-col  {
+.header .flex.w-full.flex-col {
   position: relative;
 
 }
@@ -920,6 +920,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
     }
@@ -936,6 +937,7 @@ header {
 
       &:hover {
         transform: scale(1.2);
+        background: url('../../img/next-grey.svg') no-repeat center;
       }
     }
   }
@@ -1229,6 +1231,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/prev-grey.svg') no-repeat center;
         }
       }
 
@@ -1243,6 +1246,7 @@ header {
 
         &:hover {
           transform: scale(1.2);
+          background: url('../../img/next-grey.svg') no-repeat center;
         }
       }
     }

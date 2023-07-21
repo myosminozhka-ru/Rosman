@@ -254,6 +254,11 @@
   @apply block h-20 w-20;
   background: url('../../img/follow_the_link.svg') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url('../../img/follow_the_link-grey.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .largeImg-wrapper {
