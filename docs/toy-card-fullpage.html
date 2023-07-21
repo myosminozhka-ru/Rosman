@@ -863,7 +863,7 @@
             </div>
           </div>
           <div
-            class="card-fullpage-card-brands small-cards items-center px-24 ipadmini:px-12"
+            class="mb-64 grid grid-cols-3 items-stretch gap-16 px-24 ipadmini:px-12 md:mb-48 md:grid-cols-1"
           >
             <div class="card_brand card-fullpage-card-brand">
               <div class="card_brand_content">
@@ -904,25 +904,27 @@
           </div>
 
           <div class="card-fullpage-tabs px-24 ipadmini:px-12">
-            <div class="navigation">
+            <div class="navigation card-fullpage-navigation">
               <ul
-                class="navigation-flex nav-list !gap-0 px-24 ipadmini:px-12 sm:justify-between"
+                class="navigation-flex nav-list !gap-0 px-24 ipadmini:justify-between ipadmini:px-12"
               >
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-desc active-js !mx-0 !px-16 msm:!px-0"
                   >
                     Описание
                   </p>
                 </li>
                 <li>
-                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
+                  <p
+                    class="card-fullpage-tab card-fp-tab-char !mx-0 !px-16 sm:!px-0"
+                  >
                     Характеристики
                   </p>
                 </li>
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-instr !mx-0 !px-16 sm:!px-0"
                   >
                     Инструкция
                   </p>
@@ -932,13 +934,15 @@
           </div>
 
           <!--компонент из таба ОПИСАНИЕ-->
-          <div class="card-fp-description px-24 ipadmini:px-12">
+          <div
+            class="card-fp-description card-fp-tab bg-white px-24 ipadmini:px-12"
+          >
             <!-- контент первого таба ОПИСАНИЕ  -->
 <div class="card-fullpage-desc-image">
   <img src="./img/card-fullpage/fullpage-desc-image.svg" alt="" />
 </div>
 
-<div class="js-card-fullpage-desc-description sm:mb-40">
+<div class="js-card-fullpage-desc-description !pb-0 sm:mb-40">
   <div class="card-fullpage-desc-common">
     <div class="card-fullpage-desc-header card-header-text">
       Пусковая установка Эпик Лончер Стандарт
@@ -1047,7 +1051,9 @@
           </div>
 
           <!--    характеристики   -->
-          <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
+          <div
+            class="card-fp-characteristics card-fp-tab hidden px-24 ipadmini:px-12"
+          >
             <div class="card-fullpage-characteristics">
   <div class="card-fp-char-items">
     <div
@@ -1142,7 +1148,9 @@
           </div>
 
           <!--   инструкция      -->
-          <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
+          <div
+            class="card-fp-instruction card-fp-tab hidden px-24 ipadmini:px-12"
+          >
             <div class="card-fullpage-instruction">
   <div class="card-fullpage-instruction-text">
     <div class="card-fullpage-instruction-text-image"></div>
@@ -1159,7 +1167,7 @@
 
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
           <div
-            class="swiper-image-2 bg-white px-24 pb-12 ipadmini:px-12 sm:mb-0"
+            class="swiper-image-2 bg-white px-24 pb-12 pt-12 ipadmini:px-12 sm:mb-0"
           >
             <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
               <h3
@@ -1833,7 +1841,7 @@
           <!-- тут наклоняющаяся фотогалерея -->
           <div
             id="white-background"
-            class="card-fullpage-w-bg-modified !mb-0 msm:!h-[44rem] msm:!pt-[5rem]"
+            class="card-fullpage-w-bg-modified !mb-0 !h-[63rem] msm:!h-[44rem] msm:!pt-[5rem]"
           >
             <div
               id="yellow-moving-block"
@@ -1861,7 +1869,7 @@
             </div>
             <div id="above-block" class="above-block-mod">
               <div class="swiper-image-gallery my-0 px-24 pb-60 ipadmini:px-12">
-                <div class="swiper-header sw-head-mod !w-full">
+                <div class="swiper-header sw-head-mod !mt-28 !w-full">
                   <h3 class="head-3">Фотогалерея</h3>
                   <div class="buttons">
                     <div class="button-prev"></div>
