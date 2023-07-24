@@ -108,10 +108,18 @@ p {
     @apply border-b-2 border-transparent text-text;
   }
 }
+
 .link-m-bold {
   @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-m font-medium;
   &:hover {
     @apply border-b-2 border-transparent text-text;
+  }
+}
+
+.link-m-bold-thin-border {
+  @apply relative -bottom-2px inline cursor-pointer border-b border-black p-0 text-m font-medium;
+  &:hover {
+    @apply border-transparent text-text;
   }
 }
 
@@ -121,6 +129,7 @@ p {
     @apply border-b-2 border-transparent text-text;
   }
 }
+
 .link-s-bold {
   @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-xl font-medium leading-none;
   &:hover {

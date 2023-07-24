@@ -71,10 +71,13 @@
 
 .js-rm-pag-nav-page-more-bnt {
   @apply flex flex-row p-0 text-15.20;
+}
 
-  &:hover {
-    @apply underline;
-  }
+.js-rm-pag-nav-page-more-bnt span {
+  @apply block h-20 w-20;
+  rotate: 180deg;
+  background: url('../../img/go-back.svg') no-repeat center;
+  background-size: contain;
 }
 
 .arrow-left-black {
@@ -85,11 +88,7 @@
 
 // добавил кнопку на всякий случай
 .js-rm-pag-nav-page-back-bnt {
-  @apply flex hidden flex-row items-center px-0 text-15.20;
-
-  &:hover {
-    @apply underline;
-  }
+  @apply flex flex-row items-center px-0 text-15.20;
 }
 
 .js-rm-pag-nav-page-back-bnt span {
