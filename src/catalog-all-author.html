@@ -2,685 +2,893 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Каталог Авторов</title>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог Авторов</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="bg-yellow">
-@@include('components/header/header-main.html', { }, )
-<div id="yellow-background">
-  <div id="moving-block">
-    <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-      <g>
-        <path
-          id="moving-bock-shadow"
-          d="M 0 0 L 100 0 L 100 100 L 0 100"
-          fill="white"
-        ></path>
-      </g>
-    </svg>
-  </div>
-  <div id="white-mobile-background"></div>
-  <div id="above-block">
-    <div>
-      <div
-        class="popup_all_filters_filters gap-8 px-24 md:mt-12 md:px-12"
-      >
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">0-3</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">4-6</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">7-9</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">10-15</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">15+</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">Новинки</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">Хиты</a>
-        <a href="#"
-           class="!cursor-pointer hover:bg-yellow active:bg-yellow !max-w-[60rem] filter-label hover:!border-transparent !m-0 header">Случайная
-          карта</a>
+  <body class="bg-yellow">
+    @@include('components/header/header-main.html', { }, )
+    <div id="yellow-background">
+      <div id="moving-block">
+        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+          <g>
+            <path
+              id="moving-bock-shadow"
+              d="M 0 0 L 100 0 L 100 100 L 0 100"
+              fill="white"
+            ></path>
+          </g>
+        </svg>
       </div>
-    </div>
-
-    <div
-      class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
-    >
-      <p class="breadcrumbs">
-        <a href="#">Главная </a><span>/</span>
-        <a class="active-js" href="#">Игрушки</a>
-      </p>
-
-      <div class="breadcrumbs-small-screen">
-        <div class="breadcrumbs-small-screen-image"></div>
-        <div class="breadcrumbs-small-screen-dots">
-          ...
-          <div class="breadcrumbs-arrow"></div>
-          <div class="breadcrumbs-path-hidden"></div>
-        </div>
-        <div class="breadcrumbs-small-screen-path">Игрушки</div>
-      </div>
-    </div>
-    <div
-      class="mb-32 flex gap-x-8 flex-row px-25 md:mb-24 md:flex-col md:px-12 md:px-12"
-    >
-      <h1 class="head-1">Авторы РОСМЭН</h1>
-      <h3 class="hidden text-l text-text md:block">12 987</h3>
-      <p class="text-l text-text md:hidden"> 12 987</p>
-    </div>
-    <div class="popup_all_filters_filters px-24 md:px-12">
-      <div class="popup_all_filters_filter">
-        <input type="checkbox" id="novelty" class="sort-checkbox"/>
-        <label class="sort-label" for="novelty"
-        >Все авторы<span class="count">12</span>
-          <span class="cross"></span>
-        </label>
-      </div>
-      <div class="popup_all_filters_filter">
-        <input
-          type="checkbox"
-          id="interactive_features"
-          class="sort-checkbox"
-        />
-        <label class="sort-label" for="interactive_features"
-        >Детские авторы<span class="count">12</span>
-          <span class="cross"></span>
-        </label>
-      </div>
-      <div class="popup_all_filters_filter">
-        <input type="checkbox" id="sound_effects" class="sort-checkbox"/>
-        <label class="sort-label" for="sound_effects"
-        >Молодежные авторы<span class="count">12</span>
-          <span class="cross"></span>
-        </label>
-      </div>
-      <div class="popup_all_filters_filter">
-        <input type="checkbox" id="new" class="sort-checkbox"/>
-        <label class="sort-label" for="new"
-        >Новые авторы<span class="count">12</span>
-          <span class="cross"></span>
-        </label>
-      </div>
-      <div class="popup_all_filters_filter">
-        <input type="checkbox" id="popular" class="sort-checkbox"/>
-        <label class="sort-label" for="popular"
-        >Популярные авторы<span class="count">12</span>
-          <span class="cross"></span>
-        </label>
-      </div>
-    </div>
-    <div class="mb-40 mt-24 px-25 md:hidden md:px-12">
-      <a href="#" class="link-m-bold-thin-border">Показать все направления</a>
-    </div>
-
-    <div>
-      <div class="mx-auto hidden px-25 md:mt-16 md:block md:px-12">
-        <div
-          class="more-down-filters no-padds no-after w-29rem mb-16 border-b border-card-stroke md:mt-0 md:!w-full"
-        >
-          <button class="more-down-button new !bg-none !px-16 !pl-16">
-            A<span></span>
-          </button>
-          <!--  more-down -->
-          <div class="more-down-content new">
-            <ul
-              class="dd-author-list m-0 flex list-none flex-col justify-between whitespace-nowrap p-0 px-24 md:px-12"
+      <div id="white-mobile-background"></div>
+      <div id="above-block">
+        <div>
+          <div class="popup_all_filters_filters gap-8 px-24 md:mt-12 md:px-12">
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >0-3</a
             >
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">А</a>
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >4-6</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >7-9</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >10-15</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >15+</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >Новинки</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >Хиты</a
+            >
+            <a
+              href="#"
+              class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+              >Случайная карта</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between px-24 pb-24 pt-21 sm:px-12 sm:pb-16 sm:pt-16"
+        >
+          <p class="breadcrumbs">
+            <a href="#">Главная </a><span>/</span>
+            <a class="active-js" href="#">Игрушки</a>
+          </p>
+
+          <div class="breadcrumbs-small-screen">
+            <div class="breadcrumbs-small-screen-image"></div>
+            <div class="breadcrumbs-small-screen-dots">
+              ...
+              <div class="breadcrumbs-arrow"></div>
+              <div class="breadcrumbs-path-hidden"></div>
+            </div>
+            <div class="breadcrumbs-small-screen-path">Игрушки</div>
+          </div>
+        </div>
+        <div
+          class="mb-32 flex flex-row gap-x-8 px-25 md:mb-24 md:flex-col md:px-12 md:px-12"
+        >
+          <h1 class="head-1">Авторы РОСМЭН</h1>
+          <h3 class="hidden text-l text-text md:block">12 987</h3>
+          <p class="text-l text-text md:hidden">12 987</p>
+        </div>
+        <div class="popup_all_filters_filters px-24 md:px-12">
+          <div class="popup_all_filters_filter">
+            <input type="checkbox" id="novelty" class="sort-checkbox" />
+            <label class="sort-label" for="novelty"
+              >Все авторы<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter">
+            <input
+              type="checkbox"
+              id="interactive_features"
+              class="sort-checkbox"
+            />
+            <label class="sort-label" for="interactive_features"
+              >Детские авторы<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter">
+            <input type="checkbox" id="sound_effects" class="sort-checkbox" />
+            <label class="sort-label" for="sound_effects"
+              >Молодежные авторы<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter">
+            <input type="checkbox" id="new" class="sort-checkbox" />
+            <label class="sort-label" for="new"
+              >Новые авторы<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+          <div class="popup_all_filters_filter">
+            <input type="checkbox" id="popular" class="sort-checkbox" />
+            <label class="sort-label" for="popular"
+              >Популярные авторы<span class="count">12</span>
+              <span class="cross"></span>
+            </label>
+          </div>
+        </div>
+        <div class="mb-40 mt-24 px-25 md:hidden md:px-12">
+          <a href="#" class="link-m-bold-thin-border"
+            >Показать все направления</a
+          >
+        </div>
+
+        <div>
+          <div class="mx-auto hidden px-25 md:mt-16 md:block md:px-12">
+            <div
+              class="more-down-filters no-padds no-after w-29rem mb-16 border-b border-card-stroke md:mt-0 md:!w-full"
+            >
+              <button class="more-down-button new !bg-none !px-16 !pl-16">
+                A<span></span>
+              </button>
+              <!--  more-down -->
+              <div class="more-down-content new">
+                <ul
+                  class="dd-author-list m-0 flex list-none flex-col justify-between whitespace-nowrap p-0 px-24 md:px-12"
+                >
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">А</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Б</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">В</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Г</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Д</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Е</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ё</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ж</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">З</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">И</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Й</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">К</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Л</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">М</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Н</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">О</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">П</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Р</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">С</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Т</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">У</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ф</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Х</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ц</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ч</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ш</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Щ</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ъ</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ы</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ь</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Э</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Ю</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Я</a>
+                  </li>
+                </ul>
+                <ul
+                  class="dd-author-list m-0 flex hidden list-none flex-col justify-between whitespace-nowrap p-0 px-24 md:px-12"
+                >
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">A</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">B</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">C</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">D</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">E</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">F</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">G</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">H</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">I</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">J</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">K</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">L</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">M</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">N</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">O</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">P</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Q</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">R</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">S</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">T</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">U</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">V</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">W</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">X</a>
+                  </li>
+                  <li class="mr-6 inline-block p-4 text-2xl">
+                    <a href="#">Y</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row justify-between px-24 ipadmini:px-12">
+            <div
+              class="js-alphabet flex list-none flex-row flex-wrap justify-between gap-12 whitespace-nowrap md:hidden"
+            >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">А</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Б</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">В</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Г</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Д</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Е</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ё</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ж</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">З</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">И</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Й</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">К</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Л</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">М</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Н</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">О</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">П</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Р</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">С</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Т</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">У</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ф</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Х</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ц</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ч</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ш</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Щ</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ы</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Э</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Ю</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Я</a></span
+              >
+            </div>
+            <div
+              class="js-alphabet flex hidden list-none flex-row flex-wrap justify-between gap-12 whitespace-nowrap md:hidden"
+            >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">A</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">B</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">C</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">D</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">E</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">F</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">G</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">H</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">I</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">J</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">K</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">L</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">M</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">P</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Q</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">R</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">S</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">T</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">U</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">V</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">W</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">X</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Y</a></span
+              >
+              <span class="inline-block p-4 text-2xl font-medium"
+                ><a class="hover:!text-text" href="#">Z</a></span
+              >
+            </div>
+            <button
+              class="js-alphabet-toggle-btn inline-block p-4 text-2xl font-medium hover:text-text"
+            >
+              A-Z
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="authorsContainer"
+          class="my-40 grid auto-rows-auto gap-40 px-25 md:mt-32 md:px-12"
+        >
+          <div>
+            <div class="mb-32 text-5xl md:text-2xl">А</div>
+            <ul
+              class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
+            >
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Б</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">В</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Г</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Д</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Е</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ё</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ж</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">З</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">И</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Й</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">К</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Л</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">М</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Н</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">О</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">П</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Р</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">С</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Т</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">У</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ф</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Х</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ц</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ч</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ш</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Щ</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ъ</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ы</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ь</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Э</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Ю</a>
-              </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Я</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
             </ul>
+          </div>
+          <div>
+            <div class="mb-32 text-5xl md:text-2xl">Б</div>
             <ul
-              class="dd-author-list hidden m-0 flex list-none flex-col justify-between whitespace-nowrap p-0 px-24 md:px-12"
+              class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
             >
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">A</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">B</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">C</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">D</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">E</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">F</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">G</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">H</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">I</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">J</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">K</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">L</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">M</a>
+            </ul>
+          </div>
+          <div>
+            <div class="mb-32 text-5xl md:text-2xl">В</div>
+            <ul
+              class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
+            >
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">N</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">O</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">P</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Q</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">R</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">S</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">T</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">U</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">V</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">W</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">X</a>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
-              <li class="mr-6 inline-block p-4 text-2xl">
-                <a href="#">Y</a>
+            </ul>
+          </div>
+          <div>
+            <div class="mb-32 text-5xl md:text-2xl">Г</div>
+            <ul
+              class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
+            >
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абакумов Олег Александрович
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-l text-text"
+                  >Абалмасова Дарья Александровна
+                  &nbsp(<span>1</span>&nbspкнига)</a
+                >
               </li>
             </ul>
           </div>
         </div>
-      </div>
+        <section class="pagination rm-pag mb-40 px-24 ipadmini:px-12 sm:mb-48">
+          <div class="pagination-seen js-rm-pag-seen">
+            Просмотрено авторов: 12 из 456
+          </div>
+          <button
+            id="loadNextBtn"
+            class="pagination-more-button loadNextBtn js-rm-pag-more-btn"
+          >
+            Показать ещё
+          </button>
+          <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+            <button
+              id="loadPrevBtn"
+              class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt !hidden"
+            >
+              <span></span>Назад
+            </button>
+            <div class="nav-btns">
+              <button
+                class="pagination-nav-page-button js-rm-pag-nav-page-btn js-chosen-nav-btn"
+              >
+                1
+              </button>
 
-      <div class="flex flex-row justify-between px-24 ipadmini:px-12">
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                2
+              </button>
+
+              <button class="pagination-nav-page-button js-rm-pag-nav-page-btn">
+                3
+              </button>
+            </div>
+
+            <button
+              id="loadNextBtn"
+              class="pagination-nav-page-button loadNextBtn js-rm-pag-nav-page-more-bnt"
+            >
+              Вперёд <span></span>
+            </button>
+          </div>
+        </section>
         <div
-          class="js-alphabet flex gap-12 list-none flex-row flex-wrap justify-between whitespace-nowrap md:hidden">
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">А</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Б</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">В</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Г</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Д</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Е</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ё</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ж</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">З</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">И</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Й</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">К</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Л</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">М</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Н</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">О</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">П</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Р</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">С</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Т</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">У</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ф</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Х</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ц</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ч</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ш</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Щ</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ы</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Э</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Ю</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Я</a></span>
+          class="mx-24 mb-40 flex flex-row bg-background md:mx-12 md:flex-col"
+        >
+          <div class="m-40 md:mx-12 md:my-32">
+            <h3 class="py-8 text-6xl font-medium md:text-4xl">
+              Хотите стать автором РОСМЭН?
+            </h3>
+            <p class="py-8 text-l">
+              В своём стремлении повысить качество жизни, они забывают, что
+              существующая теория требует анализа приоретизации разума над
+              эмоциями.
+            </p>
+            <button class="button-white bottom-0 md:mt-24 md:w-full">
+              Стать автором
+            </button>
+          </div>
+          <img
+            class="relative bottom-0"
+            src="../../img/elephant-on-bricks.png"
+          />
         </div>
-        <div
-          class="js-alphabet hidden flex gap-12 list-none flex-row flex-wrap justify-between whitespace-nowrap md:hidden">
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">A</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">B</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">C</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">D</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">E</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">F</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">G</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">H</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">I</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">J</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">K</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">L</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">M</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">P</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Q</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">R</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">S</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">T</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">U</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">V</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">W</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">X</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Y</a></span>
-          <span class=" inline-block p-4 font-medium text-2xl"><a class="hover:!text-text" href="#">Z</a></span>
-        </div>
-        <button class="js-alphabet-toggle-btn hover:text-text inline-block  p-4 font-medium text-2xl">A-Z</button>
       </div>
     </div>
-
-    <div id="authorsContainer" class="my-40 grid auto-rows-auto gap-40 px-25 md:mt-32 md:px-12">
-      <div>
-        <div class="mb-32 text-5xl md:text-2xl">А</div>
-        <ul
-          class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
-        >
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="mb-32 text-5xl md:text-2xl">Б</div>
-        <ul
-          class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
-        >
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="mb-32 text-5xl md:text-2xl">В</div>
-        <ul
-          class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
-        >
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="mb-32 text-5xl md:text-2xl">Г</div>
-        <ul
-          class="grid list-none grid-cols-3 gap-x-17 gap-y-12 md:grid-cols-none"
-        >
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">А-Кун Дидье &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text">Ааронович Бен &nbsp(<span>1</span>&nbspкнига)</a>
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абакумов Олег Александрович &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-          <li>
-            <a href="#" class="text-l text-text"
-            >Абалмасова Дарья Александровна &nbsp(<span>1</span>&nbspкнига)</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <section class="pagination rm-pag px-24 ipadmini:px-12 mb-40 sm:mb-48">
-      <div class="pagination-seen js-rm-pag-seen">
-        Просмотрено авторов: 12 из 456
-      </div>
-      <button
-        id="loadNextBtn"
-        class="pagination-more-button loadNextBtn js-rm-pag-more-btn">
-        Показать ещё
-      </button>
-      <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
-        <button
-          id="loadPrevBtn"
-          class="!hidden pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
-        >
-          <span></span>Назад
-        </button>
-        <div class="nav-btns">
-          <button
-            class="pagination-nav-page-button js-rm-pag-nav-page-btn js-chosen-nav-btn"
-          >
-            1
-          </button>
-
-          <button
-            class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-          >
-            2
-          </button>
-
-          <button
-            class="pagination-nav-page-button js-rm-pag-nav-page-btn"
-          >
-            3
-          </button>
-        </div>
-
-        <button
-          id="loadNextBtn"
-          class="pagination-nav-page-button loadNextBtn js-rm-pag-nav-page-more-bnt"
-        >
-          Вперёд <span></span>
-        </button>
-      </div>
-    </section>
-    <div
-      class="mx-24 mb-40 flex flex-row bg-background md:mx-12 md:flex-col"
-    >
-      <div class="m-40 md:mx-12 md:my-32">
-        <h3 class="py-8 text-6xl font-medium md:text-4xl">
-          Хотите стать автором РОСМЭН?
-        </h3>
-        <p class="py-8 text-l">
-          В своём стремлении повысить качество жизни, они забывают, что
-          существующая теория требует анализа приоретизации разума над
-          эмоциями.
-        </p>
-        <button class="button-white bottom-0 md:mt-24 md:w-full">
-          Стать автором
-        </button>
-      </div>
-      <img
-        class="relative bottom-0"
-        src="../../img/elephant-on-bricks.png"
-      />
-    </div>
-  </div>
-</div>
-@@include('components/ui-kit/footer/footer-ru.html', { }, )
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="./js/scripts.js"></script>
-<script>
-
-</script>
-
-</body>
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script></script>
+  </body>
 </html>
