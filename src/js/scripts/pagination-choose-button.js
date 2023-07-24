@@ -3,21 +3,23 @@ const alphabetBlocks = document.querySelectorAll('.js-alphabet');
 const dropdownAuthorList = document.querySelectorAll('.dd-author-list')
 
 
-toggleBtn.addEventListener('click', () => {
-  if (alphabetBlocks) {
-    alphabetBlocks.forEach((block) => {
-      block.classList.toggle('hidden');
-    });
-    toggleBtn.innerHTML = toggleBtn.innerHTML === 'А-Я' ? 'A-Z' : 'А-Я'
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    if (alphabetBlocks) {
+      alphabetBlocks.forEach((block) => {
+        block.classList.toggle('hidden');
+      });
+      toggleBtn.innerHTML = toggleBtn.innerHTML === 'А-Я' ? 'A-Z' : 'А-Я'
 
-    if (dropdownAuthorList) {
-      dropdownAuthorList.forEach(list => {
-        list.classList.toggle("hidden")
-      })
+      if (dropdownAuthorList) {
+        dropdownAuthorList.forEach(list => {
+          list.classList.toggle("hidden")
+        })
+      }
     }
-  }
 
-});
+  });
+}
 
 
 const authorsData = {
@@ -162,7 +164,9 @@ function generateAuthorElement(author) {
 
 function showAuthorsByPage(page) {
   const container = document.getElementById('authorsContainer');
-  container.innerHTML = '';
+  if (container) {
+    container.innerHTML = '';
+  }
 
   const letters = Object.keys(authorsData).slice((page - 1) * itemsPerPage, page * itemsPerPage);
   letters.forEach((letter) => {
@@ -181,7 +185,9 @@ function showAuthorsByPage(page) {
       });
 
       letterBlock.appendChild(authorsListElem);
-      container.appendChild(letterBlock);
+      if (container) {
+        container.appendChild(letterBlock);
+      }
     }
   });
 }
@@ -207,24 +213,26 @@ function handleNextButtonClick() {
   }
 }
 
-loadNextBtns.forEach((loadNextBtn) => {
-  loadNextBtn.addEventListener('click', () => {
-    if (currentPage < Math.ceil(Object.keys(authorsData).length / 6)) {
-      currentPage++;
-      showAuthorsByPage(currentPage);
-    }
+if (loadNextBtns) {
+  loadNextBtns.forEach((loadNextBtn) => {
+    loadNextBtn.addEventListener('click', () => {
+      if (currentPage < Math.ceil(Object.keys(authorsData).length / 6)) {
+        currentPage++;
+        showAuthorsByPage(currentPage);
+      }
 
-    if (currentPage > 1) {
-      prevButtonPag.classList.remove('!hidden');
-    }
-    if (currentPage === maxPages) {
-      loadNextBtns.forEach(btn => {
-        btn.classList.add("!hidden")
-      })
-    }
-    handleNextButtonClick();
+      if (currentPage > 1) {
+        prevButtonPag.classList.remove('!hidden');
+      }
+      if (currentPage === maxPages) {
+        loadNextBtns.forEach(btn => {
+          btn.classList.add("!hidden")
+        })
+      }
+      handleNextButtonClick();
+    });
   });
-});
+}
 
 
 function handlePrevButtonClick() {
@@ -238,20 +246,22 @@ function handlePrevButtonClick() {
 }
 
 const loadPrevBtn = document.getElementById('loadPrevBtn');
-loadPrevBtn.addEventListener('click', () => {
-  currentPage--;
-  showAuthorsByPage(currentPage);
+if (loadPrevBtn) {
+  loadPrevBtn.addEventListener('click', () => {
+    currentPage--;
+    showAuthorsByPage(currentPage);
 
-  if (currentPage === 1) {
-    prevButtonPag.classList.add('!hidden');
-  }
-  if (currentPage < maxPages) {
-    loadNextBtns.forEach(btn => {
-      btn.classList.remove("!hidden")
-    })
-  }
-  handlePrevButtonClick();
-});
+    if (currentPage === 1) {
+      prevButtonPag.classList.add('!hidden');
+    }
+    if (currentPage < maxPages) {
+      loadNextBtns.forEach(btn => {
+        btn.classList.remove("!hidden")
+      })
+    }
+    handlePrevButtonClick();
+  });
+}
 
 const buttonsPag = document.querySelector('.nav-btns');
 
