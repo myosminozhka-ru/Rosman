@@ -347,9 +347,9 @@ button {
 }
 
 .filter-label {
-  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-semibold;
-  min-width: 5rem;
-  max-width: 15rem;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-medium;
+  //min-width: 5rem;
+  //max-width: 15rem;
 
   &.header {
     border-color: black;
@@ -591,7 +591,7 @@ button {
 
 .navigation {
   ul {
-    @apply m-0 flex list-none overflow-scroll p-0;
+    @apply m-0 flex list-none p-0 overflow-scroll;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -608,7 +608,8 @@ button {
     }
 
     p {
-      @apply relative mx-8 w-fit cursor-pointer text-center text-m text-black no-underline;
+      @apply relative cursor-pointer text-black no-underline mx-8 text-m w-fit text-center;
+
 
       &.active-js {
         &::after {
