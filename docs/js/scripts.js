@@ -1049,6 +1049,7 @@ if (buttonsPag) {
 }
 
 
+
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -1202,7 +1203,6 @@ window.addEventListener('resize', function () {
 //   }
 // });
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const brandDropdowns = document.querySelectorAll(
     '.js-brand-description-dropdown'
@@ -1231,105 +1231,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
-});
-
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
-
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
+// External JS file like jquery etc which you do not wish to inlcuded in minification
 
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
@@ -1582,7 +1484,105 @@ function initializeSearchInput(locator) {
   });
 }
 
-// External JS file like jquery etc which you do not wish to inlcuded in minification
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
+});
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
 
 const popupMethods = ['close', 'open'];
 
