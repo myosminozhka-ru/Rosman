@@ -1,466 +1,136 @@
-.container-elephant-on-planets {
-  @apply flex flex-col items-center px-40;
-  margin-bottom: 2.4rem;
-  margin-top: 11.8rem;
-  @media (max-width: 900px) {
-    @apply px-20;
-    margin-bottom: 4.8rem;
-    margin-top: 4.8rem;
-  }
+.elephant-moves-leg {
+  @apply pb-60 pl-40;
+}
+
+.el-body {
+  @apply relative inline-block;
+  width: 8rem;
+  height: 8rem;
+  background: url('../../img/elephant/elephant-big.svg') no-repeat center;
+  background-size: contain;
+
   @media screen and (max-width: 500px) {
-    @apply px-12;
-  }
-  @media screen and (max-width: 699px) {
-    margin-bottom: 4.8rem;
+    width: 6rem;
+    height: 6rem;
   }
 }
 
-.z-1 {
-  z-index: 1;
-}
+.el-leg {
+  @apply absolute inline-block h-50 w-50;
+  background: url('../../img/elephant/elephant-leg-1.svg') no-repeat center;
+  background-size: contain;
+  top: 5.4rem;
+  left: -0.5rem;
+  animation-name: elephant-leg;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  transform-origin: top top;
 
-.elephant-planet-central-img {
-  max-width: 13.4rem;
-  @media (min-width: 701px) and (max-width: 900px) {
-    max-width: 10rem;
+  @media screen and (max-width: 500px) {
+    width: 4rem;
+    height: 4rem;
+    top: 4rem;
   }
 }
 
-.pl-wrapper {
-  @apply flex flex-row items-center justify-center;
-  @media screen and (max-width: 700px) {
-    @apply flex-col;
-  }
-}
-
-.wrapper-first {
-  top: -10rem;
-  left: 2.3rem;
-  flex-basis: 40rem;
-  @media (min-width: 701px) and (max-width: 900px) {
-    left: 2.8rem;
-  }
-  @media screen and (max-width: 700px) {
-    top: 0;
-    left: 0;
-    flex-basis: 33.6rem;
-  }
-}
-
-.wrapper-second {
-  top: -10rem;
-  right: 2.3rem;
-  flex-basis: 40rem;
-  @media (min-width: 701px) and (max-width: 900px) {
-    right: 2.8rem;
-  }
-  @media screen and (max-width: 700px) {
-    top: 0;
-    right: 0;
-    flex-basis: 33.6rem;
-  }
-}
-
-.wrapper-central {
-  flex-basis: 50rem;
-  @media screen and (max-width: 700px) {
-    max-height: 33.6rem;
-  }
-}
-
-.static-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.planet {
-  @apply relative;
-  @media screen and (max-width: 700px) {
-    height: 33.6rem;
-    width: 33.6rem;
-  }
-}
-
-.planet-secondary-left {
-  animation: rotate-secondary 6s linear infinite;
-  flex-basis: 40rem;
-  rotate: 300deg;
-
-  @media screen and (max-width: 700px) {
-    top: 0.5rem;
-    rotate: 160deg;
-    animation-direction: reverse;
-  }
-  @media (min-width: 1500px) {
-    left: 0.5rem;
-  }
-}
-
-.planet-secondary-left-2 {
-  animation: rotate-secondary 6s linear infinite;
-  flex-basis: 40rem;
-  rotate: 300deg;
-  animation-direction: reverse;
-}
-
-.planet-secondary-right {
-  animation: rotate-secondary 6s linear infinite;
-  flex-basis: 40rem;
-  rotate: 230deg;
-
-  @media screen and (max-width: 700px) {
-    top: -0.5rem;
-    animation-direction: reverse;
-    rotate: 160deg;
-  }
-  @media (min-width: 1500px) {
-    right: 0.5rem;
-  }
-}
-
-.planet-secondary-right-2 {
-  animation: rotate-secondary 6s linear infinite;
-  flex-basis: 40rem;
-  rotate: 230deg;
-  animation-direction: reverse;
-}
-
-.elephant-planet-central {
-  rotate: 100deg;
-  @apply relative flex-grow;
-  flex-basis: 50rem;
-  animation: rotate-central 6s linear infinite;
-  @media screen and (max-width: 700px) {
-    flex-basis: 33.6rem;
-  }
-  @media screen and (max-width: 700px) {
-    top: 0;
-    right: 0;
-    animation-direction: reverse;
-    flex-basis: 33.6rem;
-    rotate: 20deg;
-  }
-}
-
-.elephant-planet-central-2 {
-  rotate: 100deg;
-  @apply relative flex-grow;
-  flex-basis: 50rem;
-  animation: rotate-central 6s linear infinite;
-  animation-direction: reverse;
-}
-
-.elephant-central-img {
-  position: absolute;
-  left: 50%;
-  top: 99%;
-  transform: translateX(-50%) scaleX(-1) scaleY(-1);
-}
-
-.elephant-secondary-img {
-  position: absolute;
-  left: 50%;
-  top: 99%;
-  transform: translateX(-50%) scaleX(1) scaleY(-1);
-}
-
-@media screen and (max-width: 700px) {
-  .elephant-central-img {
-    transform: translateX(-50%) scaleX(1) scaleY(-1);
-  }
-  .elephant-secondary-img {
-    transform: translateX(-50%) scaleX(-1) scaleY(-1);
-  }
-}
-
-.elephant-central-img-2 {
-  position: absolute;
-  left: 50%;
-  top: 99%;
-  transform: translateX(-50%) scaleX(1) scaleY(-1);
-}
-
-.elephant-secondary-img-2 {
-  position: absolute;
-  left: 50%;
-  top: 99%;
-  transform: translateX(-50%) scaleX(-1) scaleY(-1);
-}
-
-.elephant-planet-cantral-img {
-  @apply h-full w-full;
-}
-
-// верчение планет на большом и среднем экране
-@keyframes rotate-secondary {
+@keyframes elephant-leg {
   0% {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 
-@keyframes rotate-central {
-  0% {
+  50% {
+    transform: rotate(-80deg);
+    top: 5.4rem;
+    left: 1rem;
+  }
+
+  100% {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 500px) {
+  @keyframes elephant-leg {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(-80deg);
+      top: 4rem;
+      left: 0.5rem;
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
 
-///////////// левый слон
-@keyframes toggleVisibility {
-  1.2% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  //1.21% {
-  //  opacity: 1;
-  //  visibility: visible;
-  //}
-  //1.8% {
-  //  opacity: 1;
-  //  visibility: visible;
-  //}
-  //1.81% {
-  //  opacity: 0;
-  //  visibility: hidden;
-  //}
-  68.22% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  68.23% {
-    opacity: 1;
-    visibility: visible;
-  }
-  99.9% {
-    opacity: 1;
-    visibility: visible;
-  }
-  99.91% {
-    opacity: 0;
-    visibility: hidden;
+.el-eye {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 0.2rem;
+  left: 1.8rem;
+  border-radius: 50%;
+  animation-name: rotating-2;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+
+  @media screen and (max-width: 500px) {
+    width: 2rem;
+    height: 2rem;
+    top: 0.3rem;
+    left: 1.6rem;
   }
 }
 
-.elephant-planet-left-img {
-  animation: toggleVisibility 18s linear infinite;
+.el-eye::after {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  content: '';
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: black;
+  border-radius: 50%;
+
+  @media screen and (max-width: 500px) {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }
 
-/////////////////// центральный слон
-@keyframes toggleVisibility2 {
+@keyframes rotating-2 {
   0% {
-    opacity: 0;
-    visibility: hidden;
+    transform: rotate(30deg) translateY(0);
   }
-  1% {
-    opacity: 0;
-    visibility: hidden;
+
+  50% {
+    transform: rotate(-50deg) translateY(0);
   }
-  1.01% {
-    opacity: 1;
-    visibility: visible;
-  }
-  13.8% {
-    opacity: 1;
-    visibility: visible;
-  }
-  13.81% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  46.9% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  46.91% {
-    opacity: 1;
-    visibility: visible;
-  }
-  55% {
-    opacity: 1;
-    visibility: visible;
-  }
-  67.33% {
-    opacity: 1;
-    visibility: visible;
-  }
-  67.34% {
-    opacity: 0;
-    visibility: hidden;
-  }
+
   100% {
-    opacity: 0;
-    visibility: hidden;
+    transform: rotate(30deg) translateY(0);
   }
 }
 
-.elephant-planet-central-img {
-  animation: toggleVisibility2 18s linear infinite;
-}
+@media screen and (max-width: 500px) {
+  @keyframes rotating-2 {
+    0% {
+      transform: rotate(50deg) translateY(0);
+    }
 
-/// правый слон
-@keyframes toggleVisibility3 {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  14.7% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  14.71% {
-    opacity: 1;
-    visibility: visible;
-  }
-  33% {
-    opacity: 1;
-    visibility: visible;
-  }
-  48.7% {
-    opacity: 1;
-    visibility: visible;
-  }
-  48.71% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
+    50% {
+      transform: rotate(-50deg) translateY(0);
+    }
 
-.elephant-planet-right-img {
-  animation: toggleVisibility3 18s linear infinite;
-}
-
-.elephant-planet-left-img-small {
-  animation: toggleVisibility-left-small 18s linear infinite;
-}
-
-@keyframes toggleVisibility-left-small {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  2% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  2.01% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  64% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  64.01% {
-    opacity: 1;
-    visibility: visible;
-  }
-  97.3% {
-    opacity: 1;
-    visibility: visible;
-  }
-  97.31% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.elephant-planet-central-img-small {
-  animation: toggleVisibility2-small 18s linear infinite;
-}
-
-@keyframes toggleVisibility2-small {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  13.8% {
-    opacity: 1;
-    visibility: visible;
-  }
-  13.81% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  46.7% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  46.71% {
-    opacity: 1;
-    visibility: visible;
-  }
-  55% {
-    opacity: 1;
-    visibility: visible;
-  }
-  63.63% {
-    opacity: 1;
-    visibility: visible;
-  }
-  63.64% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  97.2% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  97.21% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.elephant-planet-right-img-small {
-  animation: toggleVisibility3-small 18s linear infinite;
-}
-
-@keyframes toggleVisibility3-small {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  13.8% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  13.81% {
-    opacity: 1;
-    visibility: visible;
-  }
-  33% {
-    opacity: 1;
-    visibility: visible;
-  }
-  47% {
-    opacity: 1;
-    visibility: visible;
-  }
-  47.01% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
+    100% {
+      transform: rotate(50deg) translateY(0);
+    }
   }
 }
