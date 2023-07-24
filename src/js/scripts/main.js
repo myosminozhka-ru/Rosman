@@ -292,7 +292,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Применяем наклон к блоку с помощью свойства transform
       yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
+
+      const movingBlockTopLine = document.querySelector('.yellow-moving-block-top-line ')
+      const movingBlockBottomLine = document.querySelector('.yellow-moving-block-bottom-line')
+
+      const mousePos = {
+        x: event.pageX,
+        y: event.pageY
+      }
+
+      const bodyRect = document.body.getBoundingClientRect()
+      const elemRect = yellowMovingBlock.getBoundingClientRect()
+      const movingBlockTopOffset = elemRect.top - bodyRect.top;
+      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top
+
+      console.log('top',movingBlockTopOffset)
+      console.log('bottom', movingBLockBottomOffset)
+      console.log('mousepos', mousePos)
+
+      // console.log('bounding',bottom, left)
+
     });
+
+
   }
 
   // boxshadow

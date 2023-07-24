@@ -1173,6 +1173,14 @@ header {
   width: 110%;
 }
 
+.yellow-moving-block-top-line {
+  filter: drop-shadow(0px 2px 5px #535353);
+}
+
+.yellow-moving-block-bottom-line {
+  filter: drop-shadow(0px -2px 5px #535353);
+}
+
 #parent {
   width: 99%;
   margin: auto;
@@ -1181,7 +1189,7 @@ header {
   /* Скрыть содержимое, выходящее за границы блока */
 }
 
-// rjvvtyndslfjslkf
+
 //.elephant-swiper {
 //  width: 100% !important;
 //  height: auto!important;
