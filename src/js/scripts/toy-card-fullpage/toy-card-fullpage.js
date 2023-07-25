@@ -177,6 +177,9 @@ if (jsBookToggleButton && jsBookTextContainer) {
       jsBookToggleButton.innerHTML =
         'Подробное описание, характеристика<span></span>';
       jsBookToggleButton.classList.remove('active-js');
+      if (jsBookToggleButton.classList.contains('author-page-btn')) {
+        jsBookToggleButton.innerHTML = 'Прочитать полностью<span></span>';
+      }
     }
   });
 }
