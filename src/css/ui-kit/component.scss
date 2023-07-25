@@ -1162,8 +1162,8 @@ header {
 
 #yellow-moving-block {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
-  left: -2rem;
-  width: 110%;
+  width: 120%;
+  left: -10%
 }
 
 #yellow-moving-block2 {
@@ -1175,6 +1175,7 @@ header {
 
 .yellow-moving-block-top-line {
   filter: drop-shadow(0px 2px 5px #535353);
+  // filter: drop-shadow(0px 2px 5px #535353);
 }
 
 .yellow-moving-block-bottom-line {
