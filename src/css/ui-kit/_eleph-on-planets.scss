@@ -5,13 +5,14 @@
   @media (min-width: 700px) and (max-width: 900px) {
     @apply px-20;
     margin-bottom: 4.8rem;
-    margin-top: 15.4rem;
+    //margin-top: 15.4rem;
   }
   @media screen and (max-width: 500px) {
     @apply px-12;
   }
   @media screen and (max-width: 699px) {
     margin-bottom: 4.8rem;
+    margin-top: 12rem;
   }
 }
 

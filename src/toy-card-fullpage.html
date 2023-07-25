@@ -309,7 +309,7 @@
         </div>
       </div>
       <div
-        class="card-fullpage-card-brands small-cards items-center px-24 ipadmini:px-12"
+        class="grid grid-cols-3 mb-64 md:mb-48 md:grid-cols-1 gap-16 items-stretch px-24 ipadmini:px-12"
       >
         <div class="card_brand card-fullpage-card-brand">
           <div class="card_brand_content">
@@ -350,47 +350,47 @@
       </div>
 
       <div class="card-fullpage-tabs px-24 ipadmini:px-12">
-        <div class="navigation">
+        <div class="navigation card-fullpage-navigation">
           <ul
-            class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 sm:justify-between"
+            class="navigation-flex !gap-0 nav-list px-24 ipadmini:px-12 ipadmini:justify-between"
           >
             <li>
-              <p class="card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+              <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
                 Описание
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
                 Характеристики
               </p>
             </li>
             <li>
-              <p class="card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Инструкция</p>
+              <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-instr">Инструкция</p>
             </li>
           </ul>
         </div>
       </div>
 
       <!--компонент из таба ОПИСАНИЕ-->
-      <div class="card-fp-description px-24 ipadmini:px-12">
+      <div class="card-fp-description bg-white card-fp-tab px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-desc-comp.html',
         { }, )
       </div>
 
       <!--    характеристики   -->
-      <div class="card-fp-characteristics hidden px-24 ipadmini:px-12">
+      <div class="card-fp-characteristics card-fp-tab hidden px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-characteristics-comp.html',
         { }, )
       </div>
 
       <!--   инструкция      -->
-      <div class="card-fp-instruction hidden px-24 ipadmini:px-12">
+      <div class="card-fp-instruction card-fp-tab hidden px-24 ipadmini:px-12">
         @@include('components/fullpage-toy-book-components/toy-card-fullpage-instruction-comp.html',
         { }, )
       </div>
 
       <!--компонент с карточками КНИГ И ИГРУШЕК-->
-      <div class="swiper-image-2 bg-white pb-12 px-24 ipadmini:px-12 sm:mb-0">
+      <div class="swiper-image-2 pt-12 bg-white pb-12 px-24 ipadmini:px-12 sm:mb-0">
         <div class="swiper-header !w-full sm:!mb-16 sm:!justify-between">
           <h3
             class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
@@ -431,7 +431,8 @@
       </div>
 
       <!-- тут наклоняющаяся фотогалерея -->
-      <div id="white-background" class="msm:!h-[44rem] msm:!pt-[5rem] !mb-0 card-fullpage-w-bg-modified">
+      <div id="white-background"
+           class="msm:!h-[44rem] ipadmini:!h-[55rem] !h-[63rem] msm:!pt-[5rem] !mb-0 card-fullpage-w-bg-modified">
         <div id="yellow-moving-block" class="msm:!h-[36rem] card-fullpage-w-bg-modified">
           <svg
           class="absolute"
@@ -469,7 +470,7 @@
         </div>
         <div id="above-block" class="above-block-mod">
           <div class="swiper-image-gallery my-0 px-24 pb-60 ipadmini:px-12">
-            <div class="swiper-header sw-head-mod !w-full">
+            <div class="swiper-header !mt-28 sw-head-mod !w-full">
               <h3 class="head-3">Фотогалерея</h3>
               <div class="buttons">
                 <div class="button-prev"></div>
@@ -531,11 +532,11 @@
         </div>
       </div>
       <!-- тут ниже футер -->
-      @@include('components/ui-kit/footer/footer-ru.html', { }, )
+
     </div>
   </div>
 </div>
-
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"

@@ -347,9 +347,9 @@ button {
 }
 
 .filter-label {
-  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-semibold;
-  min-width: 5rem;
-  max-width: 15rem;
+  @apply mx-4 my-8 inline-flex h-24 w-auto cursor-pointer flex-row items-center justify-center whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-medium;
+  //min-width: 5rem;
+  //max-width: 15rem;
 
   &.header {
     border-color: black;
@@ -603,13 +603,12 @@ button {
     @media (max-width: 600px) {
       @apply mx-16;
       &:first-child {
-       @apply  ml-0;
+        @apply ml-0;
       }
     }
 
     p {
       @apply relative cursor-pointer text-black no-underline mx-8 text-m w-fit text-center;
-
 
 
       &.active-js {
