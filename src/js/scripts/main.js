@@ -281,19 +281,73 @@ window.addEventListener('DOMContentLoaded', () => {
   const yellowMovingBlock = document.getElementById('yellow-moving-block');
   if (yellowMovingBlock) {
     document.addEventListener('mousemove', function (event) {
-      const windowWidth = window.innerWidth;
-      const blockWidth = yellowMovingBlock.offsetWidth;
+      const blockWidth = window.innerWidth;
+      const oneDeg = blockWidth / 100 
+      const tiltAngle = (event.clientX- (oneDeg*50)) / oneDeg / 30
 
-      // Вычисляем позицию блока на основе позиции мыши и ширины окна
-      let blockX = event.clientX - blockWidth / 2;
+      yellowMovingBlock.style.transform = `rotate(${tiltAngle}deg)`;
 
-      // Вычисляем наклон блока в зависимости от позиции мыши
-      let tilt = (blockX / windowWidth) * 6;
+      const computedFontSize = window.getComputedStyle(
+        document.documentElement
+      ).fontSize;
 
-      // Применяем наклон к блоку с помощью свойства transform
-      yellowMovingBlock.style.transform = `rotate(${tilt}deg)`;
+      const computedFontSizeNumber = computedFontSize.slice(
+        0,
+        computedFontSize.length - 2
+      );
+
+      const movingBlockTopLine = document.querySelector('.yellow-moving-block-top-line ')
+      const movingBlockBottomLine = document.querySelector('.yellow-moving-block-bottom-line')
+
+      const mousePos = {
+        x: event.pageX,
+        y: event.pageY
+      }
+
+   
+
+      const bodyRect = document.body.getBoundingClientRect()
+      const elemRect = yellowMovingBlock.getBoundingClientRect()
+      const movingBlockTopOffset = elemRect.top - bodyRect.top;
+      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top
+
+      const verticalLeg = Math.abs(blockWidth * Math.sin(Math.PI * (tiltAngle/180)))
+      const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y
+
+      const activationHeight = 300
+      const shiftNumber = 3
+
+      const mouseTiltHorizontallyPercentage = event.clientX / oneDeg
+
+      if(activationTopArea > 0 && activationTopArea < activationHeight) {
+        const shadowShiftPercentage = 100 - (activationTopArea / activationHeight * 100)
+        const leftShiftPercentage = ((100 - mouseTiltHorizontallyPercentage) + shadowShiftPercentage) / 2
+        const rightShiftPercentage = (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2
+        const leftShadowShiftNumber = shiftNumber / 100 * leftShiftPercentage
+        const rightShadowShiftNumber = shiftNumber / 100 * rightShiftPercentage
+
+        movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`)
+        movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`)
+      }
+
+      const activationBottomArea =  -movingBLockBottomOffset - -mousePos.y
+
+      if(activationBottomArea < activationHeight && activationBottomArea > 0) {
+        const shadowShiftPercentage = 100 - (activationBottomArea / activationHeight * 100)
+        const leftShiftPercentage = ((100 - mouseTiltHorizontallyPercentage) + shadowShiftPercentage) /2
+        const rightShiftPercentage = (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2
+        const leftShadowShiftNumber = shiftNumber / 100 * leftShiftPercentage
+        const rightShadowShiftNumber = shiftNumber / 100 * rightShiftPercentage
+   
+        movingBlockBottomLine.setAttribute('y1', `${100 + leftShadowShiftNumber}%`)
+        movingBlockBottomLine.setAttribute('y2', `${100 + rightShadowShiftNumber}%`)
+
+      }
     });
   }
+
+  // boxshadow
+  // box-shadow: inset 0px 1px 19px 4px #535353;
 
   let isMoving = false;
 
@@ -359,6 +413,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );
@@ -803,3 +858,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
