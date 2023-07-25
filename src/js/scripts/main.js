@@ -455,7 +455,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   ////////////////////// для открытия нижних кнопок
-  document.addEventListener('mousemove', function (event) {
+  document.addEventListener('click', function (event) {
     const x = event.clientX;
     const y = event.clientY;
 
