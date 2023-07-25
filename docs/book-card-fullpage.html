@@ -1615,27 +1615,23 @@
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
 
           <div class="card-fullpage-tabs px-24 sm:px-12">
-            <div class="navigation card-fullpage-navigation">
-              <ul
-                class="navigation-flex nav-list !gap-0 px-24 ipadmini:justify-between ipadmini:px-12"
-              >
+            <div class="navigation">
+              <ul class="navigation-flex nav-list !gap-0">
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-desc active-js !mx-0 !px-16 msm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
                   >
                     Описание
                   </p>
                 </li>
                 <li>
-                  <p
-                    class="card-fullpage-tab card-fp-tab-char !mx-0 !px-16 sm:!px-0"
-                  >
+                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
                     Характеристики
                   </p>
                 </li>
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-instr !mx-0 !px-16 sm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
                   >
                     Об авторах
                   </p>
@@ -1645,9 +1641,7 @@
           </div>
 
           <!--компонент из таба ОПИСАНИЕ-->
-          <div
-            class="card-fp-description card-fp-tab bg-white bg-white px-24 sm:px-12"
-          >
+          <div class="card-fp-description bg-white px-24 sm:px-12">
             <!-- контент первого таба ОПИСАНИЕ  -->
 <div class="card-fullpage-desc-image">
   <img src="./img/card-fullpage/gagloev-huge.svg" alt="" />
@@ -1782,7 +1776,7 @@
 
           <!--    характеристики   -->
           <div
-            class="card-fp-characteristics card-fp-tab mb-[8rem] hidden px-24 md:mb-[6rem] sm:px-12"
+            class="card-fp-characteristics mb-[8rem] hidden px-24 md:mb-[6rem] sm:px-12"
           >
             <div class="card-fullpage-characteristics">
   <div class="card-fp-char-items">
@@ -1899,9 +1893,7 @@
           </div>
 
           <!--   инструкция      -->
-          <div
-            class="card-fp-instruction card-fp-tab mb-64 hidden px-24 ipadmini:mb-48 sm:px-12"
-          >
+          <div class="card-fp-instruction hidden px-24 sm:px-12">
             <div class="book-card-fp-author">
   <div class="book-card-fp-author-image author-avatar">
     <img src="./img/card-fullpage/author-avatar.svg" alt="" />
@@ -1934,17 +1926,18 @@
             <div
               class="swiper-header !mt-0 !w-full sm:!mb-16 sm:!justify-between"
             >
-              <div class="flex flex-row flex-nowrap items-start gap-8">
-                <h3
-                  class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+              <h3
+                class="head-3 flex flex-row flex-nowrap items-start gap-8 msm:!max-w-[20rem]"
+              >
+                С этой книгой часто покупают
+                <a
+                  href="#"
+                  class="link-s-bold inline-block hidden sm:inline-block"
                 >
-                  С этой книгой часто покупают
-                </h3>
-
-                <a href="#" class="link-s-bold !hidden md:!inline-block">
                   Все
                 </a>
-              </div>
+              </h3>
+
               <div class="buttons">
                 <div class="button-prev"></div>
                 <div class="button-next"></div>
@@ -2624,12 +2617,38 @@
           <!-- тут наклоняющаяся фотогалерея -->
           <div
             id="white-background"
-            class="card-fullpage-w-bg-modified !mb-0 mb-40 !h-[63rem] ipadmini:!h-[55rem] msm:!h-[44rem] msm:!pt-[5rem]"
+            class="card-fullpage-w-bg-modified !mb-0 mb-40 msm:!h-[43rem] msm:!pt-[5rem]"
           >
             <div
-              id="yellow-moving-block"
               class="card-fullpage-w-bg-modified msm:!h-[36rem]"
+              id="yellow-moving-block"
             >
+              <svg
+                class="absolute"
+                style="height: 100%; width: 100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  class="yellow-moving-block-top-line"
+                  x1="0"
+                  y1="0"
+                  x2="100%"
+                  y2="0"
+                  stroke="white"
+                  stroke-width="1rem"
+                />
+
+                <line
+                  class="yellow-moving-block-bottom-line"
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  stroke-width="1rem"
+                ></line>
+              </svg>
+
               <div id="parent" class="relative">
                 <div
                   id="follower"
@@ -2643,11 +2662,6 @@
 </div>
 
                 </div>
-                <!--            <img-->
-                <!--              id="follower"-->
-                <!--              class="slide-el card-fullpage-slide-el-mod"-->
-                <!--              src="./img/running-elephant/slide-el.png"-->
-                <!--            />-->
               </div>
             </div>
             <div id="above-block" class="above-block-mod">
@@ -2830,7 +2844,10 @@
           </div>
 
           <!-- тут ниже футер -->
-          <div id="js_popup_all_filters_modal" class="modal sm:!pt-[20rem]">
+        </div>
+      </div>
+    </div>
+    <div id="js_popup_all_filters_modal" class="modal sm:!pt-[20rem]">
   <div
     class="popup_all_filters_content !gap-40 !p-0 !pb-60 md:mb-20 sm:bg-grey"
   >
@@ -3253,11 +3270,7 @@
     </div>
   </div>
 </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="footer rosman-footer-ru bs:mb-60">
+ <div class="footer rosman-footer-ru bs:mb-60">
   <div class="footer-container">
     <div class="footer-heading">
       <div class="footer-heading-main">
@@ -3451,7 +3464,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>-->
     <script type="module" src="./js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>

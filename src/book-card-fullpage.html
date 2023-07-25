@@ -623,17 +623,16 @@
           </div>
 
           <!-- тут ниже футер -->
-          @@include('components/ui-kit/footer/footer-ru.html', { }, )
-          @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html',
-          { }, )
         </div>
       </div>
     </div>
+    @@include('components/ui-kit/popups/book-smotret-soderzhanie-popup.html', {
+    }, ) @@include('components/ui-kit/footer/footer-ru.html', { }, )
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>-->
     <script type="module" src="./js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
