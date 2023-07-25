@@ -282,8 +282,8 @@ window.addEventListener('DOMContentLoaded', () => {
   if (yellowMovingBlock) {
     document.addEventListener('mousemove', function (event) {
       const blockWidth = window.innerWidth;
-      const oneDeg = blockWidth / 100 
-      const tiltAngle = (event.clientX- (oneDeg*50)) / oneDeg / 30
+      const oneDeg = blockWidth / 100;
+      const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
 
       yellowMovingBlock.style.transform = `rotate(${tiltAngle}deg)`;
 
@@ -296,52 +296,69 @@ window.addEventListener('DOMContentLoaded', () => {
         computedFontSize.length - 2
       );
 
-      const movingBlockTopLine = document.querySelector('.yellow-moving-block-top-line ')
-      const movingBlockBottomLine = document.querySelector('.yellow-moving-block-bottom-line')
+      const movingBlockTopLine = document.querySelector(
+        '.yellow-moving-block-top-line '
+      );
+      const movingBlockBottomLine = document.querySelector(
+        '.yellow-moving-block-bottom-line'
+      );
 
       const mousePos = {
         x: event.pageX,
-        y: event.pageY
-      }
+        y: event.pageY,
+      };
 
-   
-
-      const bodyRect = document.body.getBoundingClientRect()
-      const elemRect = yellowMovingBlock.getBoundingClientRect()
+      const bodyRect = document.body.getBoundingClientRect();
+      const elemRect = yellowMovingBlock.getBoundingClientRect();
       const movingBlockTopOffset = elemRect.top - bodyRect.top;
-      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top
+      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
 
-      const verticalLeg = Math.abs(blockWidth * Math.sin(Math.PI * (tiltAngle/180)))
-      const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y
+      const verticalLeg = Math.abs(
+        blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
+      );
+      const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
 
-      const activationHeight = 300
-      const shiftNumber = 3
+      const activationHeight = 300;
+      const shiftNumber = 3;
 
-      const mouseTiltHorizontallyPercentage = event.clientX / oneDeg
+      const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
 
-      if(activationTopArea > 0 && activationTopArea < activationHeight) {
-        const shadowShiftPercentage = 100 - (activationTopArea / activationHeight * 100)
-        const leftShiftPercentage = ((100 - mouseTiltHorizontallyPercentage) + shadowShiftPercentage) / 2
-        const rightShiftPercentage = (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2
-        const leftShadowShiftNumber = shiftNumber / 100 * leftShiftPercentage
-        const rightShadowShiftNumber = shiftNumber / 100 * rightShiftPercentage
+      if (activationTopArea > 0 && activationTopArea < activationHeight) {
+        const shadowShiftPercentage =
+          100 - (activationTopArea / activationHeight) * 100;
+        const leftShiftPercentage =
+          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+        const rightShiftPercentage =
+          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+        const rightShadowShiftNumber =
+          (shiftNumber / 100) * rightShiftPercentage;
 
-        movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`)
-        movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`)
+        movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
+        movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
       }
 
-      const activationBottomArea =  -movingBLockBottomOffset - -mousePos.y
+      const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
 
-      if(activationBottomArea < activationHeight && activationBottomArea > 0) {
-        const shadowShiftPercentage = 100 - (activationBottomArea / activationHeight * 100)
-        const leftShiftPercentage = ((100 - mouseTiltHorizontallyPercentage) + shadowShiftPercentage) /2
-        const rightShiftPercentage = (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2
-        const leftShadowShiftNumber = shiftNumber / 100 * leftShiftPercentage
-        const rightShadowShiftNumber = shiftNumber / 100 * rightShiftPercentage
-   
-        movingBlockBottomLine.setAttribute('y1', `${100 + leftShadowShiftNumber}%`)
-        movingBlockBottomLine.setAttribute('y2', `${100 + rightShadowShiftNumber}%`)
+      if (activationBottomArea < activationHeight && activationBottomArea > 0) {
+        const shadowShiftPercentage =
+          100 - (activationBottomArea / activationHeight) * 100;
+        const leftShiftPercentage =
+          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+        const rightShiftPercentage =
+          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+        const rightShadowShiftNumber =
+          (shiftNumber / 100) * rightShiftPercentage;
 
+        movingBlockBottomLine.setAttribute(
+          'y1',
+          `${100 + leftShadowShiftNumber}%`
+        );
+        movingBlockBottomLine.setAttribute(
+          'y2',
+          `${100 + rightShadowShiftNumber}%`
+        );
       }
     });
   }
@@ -858,4 +875,3 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-

@@ -107,7 +107,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
+      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   };
 }
@@ -174,7 +174,6 @@ if (jsBookToggleButton && jsBookTextContainer) {
       jsBookToggleButton.innerHTML = 'Свернуть описание<span></span>';
       jsBookToggleButton.classList.add('active-js');
     } else {
-
       jsBookToggleButton.innerHTML =
         'Подробное описание, характеристика<span></span>';
       jsBookToggleButton.classList.remove('active-js');
@@ -182,7 +181,6 @@ if (jsBookToggleButton && jsBookTextContainer) {
         jsBookToggleButton.innerHTML = 'Прочитать полностью<span></span>';
       }
     }
-
   });
 }
 

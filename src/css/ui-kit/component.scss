@@ -242,7 +242,6 @@
 
 .header .flex.w-full.flex-col {
   position: relative;
-
 }
 
 .header[data-header='main'] {
@@ -1165,7 +1164,7 @@ header {
 #yellow-moving-block {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
   width: 120%;
-  left: -10%
+  left: -10%;
 }
 
 #yellow-moving-block2 {
@@ -1191,7 +1190,6 @@ header {
   height: 100%;
   /* Скрыть содержимое, выходящее за границы блока */
 }
-
 
 //.elephant-swiper {
 //  width: 100% !important;
@@ -1584,7 +1582,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
+        center;
       background-size: contain;
     }
 
