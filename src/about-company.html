@@ -2,726 +2,469 @@
 <!-- <html lang="en" style="font-size: 62.5%"> -->
 <!-- 107.9 -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
 
-  <body>
-    @@include('components/header/header-main.html', { }, )
+<body>
+@@include('components/header/header-main.html', { }, )
 
-    <div id="yellow-background">
-      <div id="moving-block">
-        <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-          <g>
-            <path
-              id="moving-bock-shadow"
-              d="M 0 0 L 100 0 L 100 100 L 0 100"
-              fill="white"
-            ></path>
-          </g>
-        </svg>
+<div id="yellow-background">
+  <div id="moving-block">
+    <svg class="-z-1" viewBox="0 0 100 50" class="sc-jDwBTQ fmXCLV">
+      <g>
+        <path
+          id="moving-bock-shadow"
+          d="M 0 0 L 100 0 L 100 100 L 0 100"
+          fill="white"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div id="white-mobile-background"></div>
+  <div id="above-block">
+    @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+
+    <div
+      class="mb-56 grid grid-cols-12 px-24 sm:mb-32 sm:grid-cols-1 sm:px-12"
+    >
+      <h1 class="head-1 col-span-5">O компании</h1>
+
+      <div class="col-span-6 mt-32 flex flex-col gap-20 sm:mt-16">
+        <p class="body-l">
+          Росмэн — ведущий игрок на рынке детских товаров.
+        </p>
+
+        <p class="body-l">
+          Мы работаем c молодым поколением, которому принадлежит будущее.
+          Они изменят этот мир. Нам доверяют, потому что мы всегда были
+          первооткрывателями в бизнесе и остаёмся лидерами сегодня. 30 лет
+          мы создаём захватывающие истории и игровые миры для детей, чтобы
+          вдохновлять их на новые открытия.
+        </p>
+
+        <div class="flex items-center gap-16">
+          <img
+            src="./img/person-photo.png"
+            alt="person"
+            class="max-h-[5.6rem] max-w-[5.6rem]"
+          />
+
+          <div>
+            <p class="body-m-bold">Михаил Маркоткин</p>
+            <p class="body-m">Генеральный директор</p>
+          </div>
+        </div>
       </div>
-      <div id="white-mobile-background"></div>
-      <div id="above-block">
-        @@include('components/ui-kit/breadcrumbs/index.html', { }, )
+    </div>
 
-        <div
-          class="mb-56 grid grid-cols-12 px-24 sm:mb-32 sm:grid-cols-1 sm:px-12"
+    <div class="relative aspect-video w-full overflow-hidden">
+      <iframe
+        class="absolute inset-0 h-full w-full"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      >
+      </iframe>
+    </div>
+
+    <div class="mt-56 grid gap-24 px-24 sm:mb-32 sm:gap-16 sm:px-12">
+      <h2 class="head-2">Мы работаем для тех, кто изменит мир</h2>
+
+      <div
+        class="grid grid-cols-4 divide-x-2 divide-grey bg-background p-32 bs:grid-cols-2 bs:gap-y-20 bs:divide-x-0 sm:grid-cols-1 sm:divide-x-0 sm:divide-y-2 sm:p-24"
+      >
+        <div class="pr-40 sm:pb-16 sm:pr-28">
+          <p class="head-1">18%</p>
+          <p class="body-m mt-12">
+            рынка детских книг России занимает издательство «Росмэн»
+          </p>
+        </div>
+
+        <div class="px-40 bs:pr-0 sm:py-16 sm:pl-0 sm:pr-28">
+          <p class="head-1">топ-5</p>
+          <p class="body-m mt-12">
+            рейтинга крупнейших издательств России занимает издательство
+            «Росмэн»
+          </p>
+        </div>
+
+        <div class="px-40 bs:pl-0 sm:py-16 sm:pl-0 sm:pr-28">
+          <p class="head-1">>1500</p>
+          <p class="body-m mt-12">
+            наименований книг в активном портфеле и более 10 000 в бек-листе
+          </p>
+        </div>
+
+        <div class="pl-40 sm:pl-0 sm:pr-28 sm:pt-16">
+          <p class="head-1">30 лет</p>
+          <p class="body-m mt-12">на рынке</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mt-64 px-24 sm:mt-32 sm:px-12">
+      <div class="about-company-page-moons-container">
+        <video
+          class="about-company-page-elephant"
+          id="movie"
+          preload="auto"
+          autoplay
+          playsinline
+          loop
+          muted
         >
-          <h1 class="head-1 col-span-5">O компании</h1>
+          <source
+            src="../../img/running-elephant/run.webm"
+            type='video/webm; codecs="vp8, vorbis"'
+          />
+        </video>
 
-          <div class="col-span-6 mt-32 flex flex-col gap-20 sm:mt-16">
-            <p class="body-l">
-              Росмэн — ведущий игрок на рынке детских товаров.
-            </p>
-
-            <p class="body-l">
-              Мы работаем c молодым поколением, которому принадлежит будущее.
-              Они изменят этот мир. Нам доверяют, потому что мы всегда были
-              первооткрывателями в бизнесе и остаёмся лидерами сегодня. 30 лет
-              мы создаём захватывающие истории и игровые миры для детей, чтобы
-              вдохновлять их на новые открытия.
-            </p>
-
-            <div class="flex items-center gap-16">
-              <img
-                src="./img/person-photo.png"
-                alt="person"
-                class="max-h-[5.6rem] max-w-[5.6rem]"
-              />
-
-              <div>
-                <p class="body-m-bold">Михаил Маркоткин</p>
-                <p class="body-m">Генеральный директор</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative aspect-video w-full overflow-hidden">
-          <iframe
-            class="absolute inset-0 h-full w-full"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
-          >
-          </iframe>
-        </div>
-
-        <div class="mt-56 grid gap-24 px-24 sm:mb-32 sm:gap-16 sm:px-12">
-          <h2 class="head-2">Мы работаем для тех, кто изменит мир</h2>
-
-          <div
-            class="grid grid-cols-4 divide-x-2 divide-grey bg-background p-32 bs:grid-cols-2 bs:gap-y-20 bs:divide-x-0 sm:grid-cols-1 sm:divide-x-0 sm:divide-y-2 sm:p-24"
-          >
-            <div class="pr-40 sm:pb-16 sm:pr-28">
-              <p class="head-1">18%</p>
-              <p class="body-m mt-12">
-                рынка детских книг России занимает издательство «Росмэн»
-              </p>
-            </div>
-
-            <div class="px-40 bs:pr-0 sm:py-16 sm:pl-0 sm:pr-28">
-              <p class="head-1">топ-5</p>
-              <p class="body-m mt-12">
-                рейтинга крупнейших издательств России занимает издательство
-                «Росмэн»
-              </p>
-            </div>
-
-            <div class="px-40 bs:pl-0 sm:py-16 sm:pl-0 sm:pr-28">
-              <p class="head-1">>1500</p>
-              <p class="body-m mt-12">
-                наименований книг в активном портфеле и более 10 000 в бек-листе
-              </p>
-            </div>
-
-            <div class="pl-40 sm:pl-0 sm:pr-28 sm:pt-16">
-              <p class="head-1">30 лет</p>
-              <p class="body-m mt-12">на рынке</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative mt-64 px-24 sm:mt-32 sm:px-12">
-          <div class="about-company-page-moons-container">
-            <video
-              class="about-company-page-elephant"
-              id="movie"
-              preload="auto"
-              autoplay
-              playsinline
-              loop
+        <div class="about-company-page-text">
+          <p class="body-l">
+            За <span class="body-l-bold">30 лет</span> издательство
+            выпустило более
+            <span class="body-l-bold">300 миллионов экземпляров книг</span>
+            — это <span class="body-l-bold">по две книги</span> на каждого
+            жителя нашей страны, считая женщин, стариков и детей
+          </p>
+          <p class="body-l">
+            Если все эти книги сложить одну к другой, то этой книжной
+            дорожкой можно
+            <span class="body-l-bold"
+            >обернуть землю по экватору полтора раза</span
             >
-              <source
-                src="../../img/running-elephant/run.webm"
-                type='video/webm; codecs="vp8, vorbis"'
-              />
-            </video>
+          </p>
+        </div>
 
-            <div class="about-company-page-text">
-              <p class="body-l">
-                За <span class="body-l-bold">30 лет</span> издательство
-                выпустило более
-                <span class="body-l-bold">300 миллионов экземпляров книг</span>
-                — это <span class="body-l-bold">по две книги</span> на каждого
-                жителя нашей страны, считая женщин, стариков и детей
-              </p>
-              <p class="body-l">
-                Если все эти книги сложить одну к другой, то этой книжной
-                дорожкой можно
-                <span class="body-l-bold"
-                  >обернуть землю по экватору полтора раза</span
-                >
-              </p>
-            </div>
+        <div class="about-company-page-big-moon-container">
+          <img
+            class="about-company-page-big-moon"
+            src="./img/running-elephant/moon.png"
+            alt="moon"
+          />
+        </div>
 
-            <div class="about-company-page-big-moon-container">
+        <div class="about-company-page-small-moon">
+          <img src="./img/running-elephant/moon-2.png" alt="moon"/>
+        </div>
+
+        <div class="about-company-page-statistics">
+          <div class="flex">
+            <img
+              class="w-[50%]"
+              src="./img/white-big-smile.svg"
+              alt="smile"
+            />
+            <div class="flex">
               <img
-                class="about-company-page-big-moon"
-                src="./img/running-elephant/moon.png"
-                alt="moon"
+                class="h-40 w-40"
+                src="./img/white-book-40x40.svg"
+                alt="book"
+              />
+              <img
+                class="h-40 w-40"
+                src="./img/white-book-40x40.svg"
+                alt="book"
               />
             </div>
+          </div>
 
-            <div class="about-company-page-small-moon">
-              <img src="./img/running-elephant/moon-2.png" alt="moon" />
-            </div>
-
-            <div class="about-company-page-statistics">
-              <div class="flex">
-                <img
-                  class="w-[50%]"
-                  src="./img/white-big-smile.svg"
-                  alt="smile"
-                />
-                <div class="flex">
-                  <img
-                    class="h-40 w-40"
-                    src="./img/white-book-40x40.svg"
-                    alt="book"
-                  />
-                  <img
-                    class="h-40 w-40"
-                    src="./img/white-book-40x40.svg"
-                    alt="book"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div class="flex items-center">
+          <div>
+            <div class="flex items-center">
                   <span
                     class="content-none before:relative before:block before:h-24 before:w-24 before:bg-[url('../img/equals-24x24.svg')] before:bg-[length:2.4rem_2.4rem] before:bg-center before:bg-no-repeat"
                   >
                   </span>
-                  <p class="head-2 text-white">2 книги</p>
-                </div>
-                <p class="body-m text-white">
-                  приходится на каждого жителя нашей страны
-                </p>
-              </div>
+              <p class="head-2 text-white">2 книги</p>
             </div>
-          </div>
-        </div>
-
-        <div class="mt-64 px-24 sm:mt-48 sm:px-0">
-          <div class="border-y-[1px] border-grey py-40 sm:px-12">
-            <div class="grid grid-cols-12 sm:grid-cols-1 sm:gap-32">
-              <div class="col-span-6 flex flex-col pr-40 sm:pr-0">
-                <p class="head-4">
-                  Количество проданных игрушек за 7 лет существования
-                  бизнес-юнита Игрушки равняется численности детей в возрасте от
-                  0 до 10 лет
-                </p>
-                <p class="body-m mt-auto">* по данным Росстата</p>
-              </div>
-
-              <div class="col-span-6">
-                <div class="grid grid-cols-12 sm:grid-cols-11">
-                  <div
-                    class="col-span-5 flex flex-col items-center bg-background p-24 sm:p-12"
-                  >
-                    <img
-                      class="h-[4.8rem] w-[4.8rem]"
-                      src="./img/persons-58x58.svg"
-                      alt="persons"
-                    />
-                    <h3 class="head-3 mt-16">25 819 366</h3>
-
-                    <p class="body-m mt-8 text-center">
-                      детей в возрасте от 0 до 10 лет проживает в России*
-                    </p>
-                  </div>
-
-                  <div class="col-span-2 sm:col-span-1"></div>
-
-                  <div
-                    class="col-span-5 flex flex-col items-center bg-background p-24 sm:p-12"
-                  >
-                    <img
-                      class="h-[4.8rem] w-[4.8rem]"
-                      src="./img/camera-58x58.svg"
-                      alt="camera"
-                    />
-                    <h3 class="head-3 mt-8">25 819 366</h3>
-
-                    <p class="body-m text-center">
-                      Количество проданных игрушек за 7 лет существования
-                      бизнес-юнита «Игрушки»
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="content-none before:block before:h-8 before:bg-blue-1"
-                >
-                  <div
-                    class="mx-auto h-[9.6rem] w-[9.6rem] rounded-full bg-green sm:h-[6.1rem] sm:w-[6.1rem]"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-64 px-24 sm:mt-48 sm:px-0">
-          <div
-            class="grid grid-cols-12 border-b-[1px] border-grey pb-64 sm:grid-cols-1 sm:gap-24 sm:px-12 sm:pb-32"
-          >
-            <p class="head-2 col-span-6 pr-20">
-              Мы не просто дистрибутор, мы компания, которая строит бренды на
-              рынке
+            <p class="body-m text-white">
+              приходится на каждого жителя нашей страны
             </p>
-            <div class="col-span-6 grid grid-cols-12 sm:grid-cols-11">
-              <div class="col-span-5 flex flex-col gap-24">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-64 px-24 sm:mt-48 sm:px-0">
+      <div class="border-y-[1px] border-grey py-40 sm:px-12">
+        <div class="grid grid-cols-12 sm:grid-cols-1 sm:gap-32">
+          <div class="col-span-6 flex flex-col pr-40 sm:pr-0">
+            <p class="head-4">
+              Количество проданных игрушек за 7 лет существования
+              бизнес-юнита Игрушки равняется численности детей в возрасте от
+              0 до 10 лет
+            </p>
+            <p class="body-m mt-auto">* по данным Росстата</p>
+          </div>
+
+          <div class="col-span-6">
+            <div class="grid grid-cols-12 sm:grid-cols-11">
+              <div
+                class="col-span-5 flex flex-col items-center bg-background p-24 sm:p-12"
+              >
                 <img
-                  class="h-[5.8rem] w-[5.8rem]"
-                  src="./img/company-growth-58x58.svg"
-                  alt="company grojth"
+                  class="h-[4.8rem] w-[4.8rem]"
+                  src="./img/persons-58x58.svg"
+                  alt="persons"
                 />
-                <p class="body-l">
-                  Одна из самых быстрорастущих компаний на рынке игрушек начиная
-                  c 2019 года
+                <h3 class="head-3 mt-16">25 819 366</h3>
+
+                <p class="body-m mt-8 text-center">
+                  детей в возрасте от 0 до 10 лет проживает в России*
                 </p>
               </div>
 
               <div class="col-span-2 sm:col-span-1"></div>
 
-              <div class="col-span-5 flex flex-col gap-24">
+              <div
+                class="col-span-5 flex flex-col items-center bg-background p-24 sm:p-12"
+              >
                 <img
-                  class="h-[5.8rem] w-[5.8rem]"
-                  src="./img/reward-58x58.svg"
-                  alt="company growth"
+                  class="h-[4.8rem] w-[4.8rem]"
+                  src="./img/camera-58x58.svg"
+                  alt="camera"
                 />
-                <p class="body-l">
-                  РОСМЭН входит в топ-3 крупнейших российских дистрибьюторов
-                  игрушек в России
+                <h3 class="head-3 mt-8">25 819 366</h3>
+
+                <p class="body-m text-center">
+                  Количество проданных игрушек за 7 лет существования
+                  бизнес-юнита «Игрушки»
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="mt-64 px-24 sm:mt-48 sm:px-12">
-          <h2 class="head-2">Принципы работы</h2>
-          <div class="mt-32 grid grid-cols-3 gap-16 sm:mt-24 sm:grid-cols-1">
-            <div class="flex flex-col">
-              <h5 class="head-5 flex min-h-[9rem] items-center bg-yellow p-16">
-                Результат важнее процесса
-              </h5>
-              <p class="body-m min-h-[11rem] bg-background p-12 text-text">
-                Вывод успешного продукта на рынок — ключевой фокус нашей
-                организации. Каждый сотрудник знает, что он для этого делает
-              </p>
-            </div>
-
-            <div class="flex flex-col">
-              <h5 class="head-5 flex min-h-[9rem] items-center bg-blue-2 p-16">
-                Результат важнее процесса
-              </h5>
-              <p class="body-m min-h-[11rem] bg-background p-12 text-text">
-                Вывод успешного продукта на рынок — ключевой фокус нашей
-                организации. Каждый сотрудник знает, что он для этого делает
-              </p>
-            </div>
-
-            <div class="flex flex-col">
-              <h5 class="head-5 flex min-h-[9rem] items-center bg-green p-16">
-                Результат важнее процесса
-              </h5>
-              <p class="body-m min-h-[11rem] bg-background p-12 text-text">
-                Вывод успешного продукта на рынок — ключевой фокус нашей
-                организации. Каждый сотрудник знает, что он для этого делает
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel sm:mt32 sm:px12">
-          <!-- Slider main container -->
-
-          <div class="elephant-history">
-            <div class="slider-header sm:px12 px-24">
-              <h3 class="head-3">История</h3>
-              <div class="buttons">
-                <div class="button-prev" onclick="scrollContent('left')"></div>
-                <div class="button-next" onclick="scrollContent('right')"></div>
-              </div>
-            </div>
-            <div id="elephant-container">
-              <div id="elephant-slider">
-                <div class="elephant-slider-body body"></div>
-                <div class="elephant-dropdown upper first">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <p class="year-text up first">1992</p>
-                <p class="year-text up second">2008</p>
-                <p class="year-text up third">2010</p>
-                <p class="year-text up fourth">2012</p>
-                <p class="year-text up fifth">2015</p>
-                <p class="year-text up sixth">2019</p>
-                <p class="year-text up seventh">2020</p>
-                <p class="year-text up nine">2020</p>
-                <p class="year-text up ten">2022</p>
-                <p class="year-text bottom first">2009</p>
-                <p class="year-text bottom second">2014</p>
-                <p class="year-text bottom third">2019</p>
-                <p class="year-text bottom fourth">2020</p>
-                <p class="year-text bottom fifth">2021</p>
-                <div class="elephant-dropdown upper second">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Издательство становится профильным детским
-                          издательством
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper third">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          РОСМЭН крупнейшее профильное детское издательство
-                          России
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper fourth">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Открытие направления Игрушки
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper fifth">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          «Свинка Пеппа» – игрушечный бренд №1 в России по
-                          обороту*
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper sixth">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          2019 год – РОСМЭН – самая быстрорастущая компания на
-                          рынке игрушек
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper seventh">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          2019 год – РОСМЭН – самая быстрорастущая компания на
-                          рынке игрушек
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper nine">
-                  <div class="color-block upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          2019 год – РОСМЭН – самая быстрорастущая компания на
-                          рынке игрушек
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown upper ten">
-                  <div class="color-block upper upper">
-                    <div class="elephant-more-up">
-                      <div class="elephant-more-up-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          2019 год – РОСМЭН – самая быстрорастущая компания на
-                          рынке игрушек
-                        </p>
-                      </div>
-                      <button class="elephant-more-up-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown bottom first">
-                  <div class="color-block bottom">
-                    <div class="elephant-more-down">
-                      <button class="elephant-more-down-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                      <div class="elephant-more-down-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown bottom second">
-                  <div class="color-block bottom">
-                    <div class="elephant-more-down">
-                      <button class="elephant-more-down-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                      <div class="elephant-more-down-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown bottom third">
-                  <div class="color-block bottom">
-                    <div class="elephant-more-down">
-                      <button class="elephant-more-down-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                      <div class="elephant-more-down-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown bottom fourth">
-                  <div class="color-block bottom">
-                    <div class="elephant-more-down">
-                      <button class="elephant-more-down-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                      <div class="elephant-more-down-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-dropdown bottom fifth">
-                  <div class="color-block bottom">
-                    <div class="elephant-more-down">
-                      <button class="elephant-more-down-button">
-                        <span></span>
-                      </button>
-                      <!--  more-up -->
-                      <div class="elephant-more-down-content">
-                        <p class="whitespace-normal p-16 text-m">
-                          Основание издательства
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="elephant-slider-body trunk-one"></div>
-              </div>
-            </div>
-          </div>
-          <!--<div class="elephant-dropdown">-->
-          <!--    <div class="color-block">-->
-          <!--        <div class="more-down">-->
-          <!--            <button class="more-down-button"><span></span></button> &lt;!&ndash;  more-down &ndash;&gt;-->
-          <!--            <div class="more-down-content">-->
-          <!--                <p>Содержимое 1</p>-->
-          <!--            </div>-->
-          <!--        </div>-->
-          <!--    </div>-->
-          <!--</div>-->
-        </div>
-
-        <div class="mt-64 px-24 sm:mt-32 sm:px-12">
-          <h2 class="head-2">Награды</h2>
-          <div class="mt-32 grid grid-cols-3 gap-16 sm:mt-24 sm:grid-cols-1">
-            <div class="card_awards">
-              <div class="card_awards_content js_traceable_item">
-                <div class="card_awards_image">
-                  <img
-                    src="./img/awards-publishing-house-the-best.jpg"
-                    alt="award"
-                  />
-                </div>
-                <div class="card_awards_info">
-                  <div class="card_awards_year">2016</div>
-                  <div class="card_awards_title">
-                    РОСМЭН - «лучшее издательство России»
-                  </div>
-                  <div class="card_awards_description">
-                    Победа в профессиональном конкурсе книжной индустрии
-                    «Ревизор»
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card_awards">
-              <div class="card_awards_content js_traceable_item">
-                <div class="card_awards_image">
-                  <img src="./img/awards-golden-teddy-bear.jpg" alt="award" />
-                </div>
-                <div class="card_awards_info">
-                  <div class="card_awards_year">2016</div>
-                  <div class="card_awards_title">
-                    Росмэн — лауреат премии «Золотой медвежонок»
-                  </div>
-                  <div class="card_awards_description">
-                    Ассоциации индустрии детских товаров в номинации «Компания
-                    года»
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card_awards">
-              <div class="card_awards_content js_traceable_item">
-                <div class="card_awards_image">
-                  <img
-                    src="./img/awards-best-publishing-house-in-russia.jpg"
-                    alt="award"
-                  />
-                </div>
-                <div class="card_awards_info">
-                  <div class="card_awards_year">2016</div>
-                  <div class="card_awards_title">
-                    РОСМЭН - «лучшее издательство России»
-                  </div>
-                  <div class="card_awards_description">
-                    Победа в профессиональном конкурсе книжной индустрии
-                    «Ревизор»
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-64 sm:mt-32">
-          <h2 class="head-2 px-24 sm:px-12">Наши партнёры</h2>
-          <div class="mt-56 sm:mt-24">
-            @@include('components/ui-kit/sliders/run-stroke.html', { }, )
-          </div>
-        </div>
-
-        <div class="mb-64 mt-64 px-24 sm:mb-32 sm:mt-32 sm:px-12">
-          <h2 class="head-2 sm:hidden">Ключевые персоны</h2>
-
-          <div class="mt-32 grid grid-cols-3 gap-24 sm:hidden">
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-            @@include('components/ui-kit/cards/card-employee.html', { }, )
-          </div>
-
-          <div class="mt-24 hidden sm:block">
-            <div class="swiper persons-slider">
-              <div class="swiper-header">
-                <h2 class="head-2">Ключевые персоны</h2>
-
-                <div class="buttons">
-                  <div class="button-prev swiper-button-disabled"></div>
-                  <div class="button-next"></div>
-                </div>
-              </div>
-
-              <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-                <div class="swiper-slide swiper-slide-active">
-                  @@include('components/ui-kit/cards/card-employee.html', { }, )
-                </div>
-              </div>
-
-              <span
-                class="swiper-notification"
-                aria-live="assertive"
-                aria-atomic="true"
-              ></span>
+            <div
+              class="content-none before:block before:h-8 before:bg-blue-1"
+            >
+              <div
+                class="mx-auto h-[9.6rem] w-[9.6rem] rounded-full bg-green sm:h-[6.1rem] sm:w-[6.1rem]"
+              ></div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
+    <div class="mt-64 px-24 sm:mt-48 sm:px-0">
+      <div
+        class="grid grid-cols-12 border-b-[1px] border-grey pb-64 sm:grid-cols-1 sm:gap-24 sm:px-12 sm:pb-32"
+      >
+        <p class="head-2 col-span-6 pr-20">
+          Мы не просто дистрибьютор, мы компания, которая строит бренды на
+          рынке
+        </p>
+        <div class="col-span-6 grid grid-cols-12 sm:grid-cols-11">
+          <div class="col-span-5 flex flex-col gap-24">
+            <img
+              class="h-[5.8rem] w-[5.8rem]"
+              src="./img/company-growth-58x58.svg"
+              alt="company grojth"
+            />
+            <p class="body-l">
+              Одна из самых быстрорастущих компаний на рынке игрушек начиная
+              c 2019 года
+            </p>
+          </div>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+          <div class="col-span-2 sm:col-span-1"></div>
+
+          <div class="col-span-5 flex flex-col gap-24">
+            <img
+              class="h-[5.8rem] w-[5.8rem]"
+              src="./img/reward-58x58.svg"
+              alt="company growth"
+            />
+            <p class="body-l">
+              РОСМЭН входит в топ-3 крупнейших российских дистрибьюторов
+              игрушек в России
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-64 px-24 sm:mt-48 sm:px-12">
+      <h2 class="head-2">Принципы работы</h2>
+      <div class="mt-32 grid grid-cols-3 gap-16 sm:mt-24 sm:grid-cols-1">
+        <div class="flex flex-col">
+          <h5 class="head-5 flex min-h-[9rem] items-center bg-yellow p-16">
+            Результат важнее процесса
+          </h5>
+          <p class="body-m min-h-[11rem] h-full bg-background p-12 text-text">
+            Вывод успешного продукта на рынок — ключевой фокус нашей
+            организации. Каждый сотрудник знает, что он для этого делает
+          </p>
+        </div>
+
+        <div class="flex flex-col">
+          <h5 class="head-5 flex min-h-[9rem] items-center bg-blue-2 p-16">
+            Ошибки - часть роста
+          </h5>
+          <p class="body-m min-h-[11rem] h-full bg-background p-12 text-text">
+            Мы даем друг другу возможность ошибаться и задавать вопросы, так как инновации рождаются в поиске
+          </p>
+        </div>
+
+        <div class="flex flex-col">
+          <h5 class="head-5 flex min-h-[9rem] items-center bg-green p-16">
+            Обмен информацией важнее иерархии
+          </h5>
+          <p class="body-m min-h-[11rem] h-full bg-background p-12 text-text">
+            Коммуникация «строго по правилам» —тормозит инновации и всю компанию, каждый сотрудник должен иметь
+            возможность и способ, чтобы предложить улучшение продукта или процесса
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    @@include('components/ui-kit/sliders/elephant-history.html', { }, )
+
+
+    <div class="px-24 sm:px-12 mt-[-5rem]">
+      <h2 class="head-2">Награды</h2>
+      <div class="mt-32 grid grid-cols-3 gap-16 sm:mt-24 sm:grid-cols-1">
+        <div class="card_awards">
+          <div class="card_awards_content js_traceable_item">
+            <div class="card_awards_image">
+              <img
+                src="./img/awards-publishing-house-the-best.jpg"
+                alt="award"
+              />
+            </div>
+            <div class="card_awards_info">
+              <div class="card_awards_year">2016</div>
+              <div class="card_awards_title">
+                РОСМЭН - «лучшее издательство России»
+              </div>
+              <div class="card_awards_description">
+                Победа в профессиональном конкурсе книжной индустрии
+                «Ревизор»
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card_awards">
+          <div class="card_awards_content js_traceable_item">
+            <div class="card_awards_image">
+              <img src="./img/awards-golden-teddy-bear.jpg" alt="award"/>
+            </div>
+            <div class="card_awards_info">
+              <div class="card_awards_year">2016</div>
+              <div class="card_awards_title">
+                Росмэн — лауреат премии «Золотой медвежонок»
+              </div>
+              <div class="card_awards_description">
+                Ассоциации индустрии детских товаров в номинации «Компания
+                года»
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card_awards">
+          <div class="card_awards_content js_traceable_item">
+            <div class="card_awards_image">
+              <img
+                src="./img/awards-best-publishing-house-in-russia.jpg"
+                alt="award"
+              />
+            </div>
+            <div class="card_awards_info">
+              <div class="card_awards_year">2016</div>
+              <div class="card_awards_title">
+                РОСМЭН - «лучшее издательство России»
+              </div>
+              <div class="card_awards_description">
+                Победа в профессиональном конкурсе книжной индустрии
+                «Ревизор»
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-64 sm:mt-32">
+      <h2 class="head-2 px-24 sm:px-12">Наши партнёры</h2>
+      <div class="mt-56 sm:mt-24">
+        @@include('components/ui-kit/sliders/run-stroke.html', { }, )
+      </div>
+    </div>
+
+    <div class="mb-64 mt-64 px-24 sm:mb-32 sm:mt-32 sm:px-12">
+      <h2 class="head-2 sm:hidden">Ключевые персоны</h2>
+
+      <div class="mt-32 grid grid-cols-3 gap-24 sm:hidden">
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+        @@include('components/ui-kit/cards/card-employee.html', { }, )
+      </div>
+
+      <div class="mt-24 hidden sm:block">
+        <div class="swiper persons-slider">
+          <div class="swiper-header !w-full px-24 sm:px-12">
+            <h2 class="head-2">Ключевые персоны</h2>
+
+            <div class="buttons">
+              <div class="button-prev swiper-button-disabled"></div>
+              <div class="button-next"></div>
+            </div>
+          </div>
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              @@include('components/ui-kit/cards/card-employee.html', { }, )
+            </div>
+          </div>
+
+          <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
 </html>
