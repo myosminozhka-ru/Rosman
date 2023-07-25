@@ -453,9 +453,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );
-  const elephantUpButtons = document.getElementsByClassName(
-    'elephant-more-up-button'
-  );
 
   for (let i = 0; i < elephantDownButtons.length; i++) {
     elephantDownButtons[i].addEventListener('click', function () {
@@ -473,7 +470,33 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  ////////////////////////////////
+
+  ////////////////////// для открытия нижних кнопок
+  document.addEventListener('click', function (event) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    const elementsUnderCursor = document.elementsFromPoint(x, y);
+
+    for (const elementUnderCursor of elementsUnderCursor) {
+      if (elementUnderCursor.classList.contains('elephant-more-up-button')) {
+        const content = elementUnderCursor.previousElementSibling;
+        if (elementUnderCursor.classList.contains('active-js')) {
+          elementUnderCursor.classList.remove('active-js');
+        } else {
+          elementUnderCursor.classList.add('active-js');
+        }
+        if (content.classList.contains('active-js')) {
+          content.classList.remove('active-js');
+        } else {
+          content.classList.add('active-js');
+        }
+
+        break;
+      }
+    }
+  });
+
   // второй вариант истории Росмэна со слоном
 
   const yearTexts = document.querySelectorAll('.year-text');
@@ -581,23 +604,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  for (let i = 0; i < elephantUpButtons.length; i++) {
-    elephantUpButtons[i].addEventListener('click', function () {
-      const content = this.previousElementSibling;
-      if (this.classList.contains('active-js')) {
-        this.classList.remove('active-js');
-      } else {
-        this.classList.add('active-js');
-      }
-      if (content.classList.contains('active-js')) {
-        content.classList.remove('active-js');
-      } else {
-        // content.style.display = "block";
-        content.classList.add('active-js');
-      }
-    });
-  }
-
   function toggleSearch() {
     let mobileMenu = document.getElementById('mobile-menu');
     let headerNav = document.querySelector('.header-nav');
@@ -679,17 +685,6 @@ window.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < contentNavBar.length; i++) {
       contentNavBar[i].classList.remove('active-js');
       contentNavBar[i].classList.add('hide');
-    }
-  }
-
-  function scrollContent(direction) {
-    let container = document.getElementById('elephant-container');
-    let content = document.getElementById('elephant-slider');
-
-    if (direction === 'left') {
-      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-    } else if (direction === 'right') {
-      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
     }
   }
 
@@ -1121,7 +1116,6 @@ if (buttonsPag) {
 }
 
 
-
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -1275,33 +1269,6 @@ window.addEventListener('resize', function () {
 //   }
 // });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const brandDropdowns = document.querySelectorAll(
-    '.js-brand-description-dropdown'
-  );
-
-  if (brandDropdowns.length) {
-    for (let i = 0; i < brandDropdowns.length; i++) {
-      brandDropdowns[i].addEventListener('click', function (e) {
-        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
-        let checkedRows = 0;
-        const dropdownCounter = brandDropdowns[i].querySelector(
-          '.js-brand-dropdown-counter'
-        );
-
-        for (let j = 0; j < checkboxes.length; j++) {
-          if (checkboxes[j].checked) {
-            checkedRows++;
-          }
-        }
-
-        if (checkedRows) {
-          dropdownCounter.textContent = `(${checkedRows})`;
-        }
-      });
-    }
-  }
-});
 
 const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
   // Optional parameters
@@ -1404,6 +1371,34 @@ const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
 });
 
 // External JS file like jquery etc which you do not wish to inlcuded in minification
+
+document.addEventListener('DOMContentLoaded', function () {
+  const brandDropdowns = document.querySelectorAll(
+    '.js-brand-description-dropdown'
+  );
+
+  if (brandDropdowns.length) {
+    for (let i = 0; i < brandDropdowns.length; i++) {
+      brandDropdowns[i].addEventListener('click', function (e) {
+        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
+        let checkedRows = 0;
+        const dropdownCounter = brandDropdowns[i].querySelector(
+          '.js-brand-dropdown-counter'
+        );
+
+        for (let j = 0; j < checkboxes.length; j++) {
+          if (checkboxes[j].checked) {
+            checkedRows++;
+          }
+        }
+
+        if (checkedRows) {
+          dropdownCounter.textContent = `(${checkedRows})`;
+        }
+      });
+    }
+  }
+});
 
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
@@ -2055,7 +2050,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       900: {
         slidesPerView: 5,
         spaceBetween: 30,
@@ -2072,7 +2066,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       320: {
         slidesPerView: 2.1,
         spaceBetween: 30,
@@ -2094,7 +2087,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       320: {
         slidesPerView: 0.9,
         spaceBetween: 20,
@@ -2118,17 +2110,6 @@ window.addEventListener('DOMContentLoaded', () => {
     autoHeight: true,
     slidesPerView: 1.2,
     spaceBetween: 24,
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 2,
-    //   },
-    //   480: {
-    //     slidesPerView: 3,
-    //   },
-    //   640: {
-    //     slidesPerView: 4,
-    //   },
-    // },
   });
 
   const swiperImage = new Swiper('.swiper-image', {
@@ -2186,7 +2167,45 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// слайдер для страницы с вакансиями,
+// слайдер для истории слона, слайдер, но не свипер,
+function scrollContent(direction) {
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}
+
+// открытие блоков, когда прокручено до середины экрана
+function addActiveClassToAutoOpenElements() {
+  const autoOpenElements = document.querySelectorAll('.auto-open');
+
+  if (autoOpenElements.length > 0) {
+    autoOpenElements.forEach((element) => {
+      element.classList.add('active-js');
+    });
+  }
+}
+
+function handleScroll() {
+  const elephantHistory = document.querySelector('.elephant-history');
+
+  if (elephantHistory) {
+    const { top, bottom } = elephantHistory.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight / 4 && bottom > windowHeight) {
+      addActiveClassToAutoOpenElements();
+
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2367,6 +2386,9 @@ if (jsBookToggleButton && jsBookTextContainer) {
       jsBookToggleButton.innerHTML =
         'Подробное описание, характеристика<span></span>';
       jsBookToggleButton.classList.remove('active-js');
+      if (jsBookToggleButton.classList.contains('author-page-btn')) {
+        jsBookToggleButton.innerHTML = 'Прочитать полностью<span></span>';
+      }
     }
   });
 }

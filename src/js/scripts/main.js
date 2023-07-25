@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-            (avaliableCursorArea.height / 100) -
+              (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -435,7 +435,6 @@ window.addEventListener('DOMContentLoaded', () => {
     'elephant-more-down-button'
   );
 
-
   for (let i = 0; i < elephantDownButtons.length; i++) {
     elephantDownButtons[i].addEventListener('click', function () {
       const content = this.nextElementSibling;
@@ -452,7 +451,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 
   ////////////////////// для открытия нижних кнопок
   document.addEventListener('click', function (event) {
@@ -587,7 +585,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   function toggleSearch() {
     let mobileMenu = document.getElementById('mobile-menu');
     let headerNav = document.querySelector('.header-nav');
@@ -672,7 +669,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
   class Slider {
     constructor(rangeElement, valueElement, options) {
       this.rangeElement = rangeElement;
@@ -696,7 +692,7 @@ window.addEventListener('DOMContentLoaded', () => {
     asMoney(value) {
       return (
         '$' +
-        parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
+        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
       );
     }
 

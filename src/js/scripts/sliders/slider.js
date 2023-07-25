@@ -264,7 +264,7 @@ function addActiveClassToAutoOpenElements() {
   const autoOpenElements = document.querySelectorAll('.auto-open');
 
   if (autoOpenElements.length > 0) {
-    autoOpenElements.forEach(element => {
+    autoOpenElements.forEach((element) => {
       element.classList.add('active-js');
     });
   }
@@ -274,7 +274,7 @@ function handleScroll() {
   const elephantHistory = document.querySelector('.elephant-history');
 
   if (elephantHistory) {
-    const {top, bottom} = elephantHistory.getBoundingClientRect();
+    const { top, bottom } = elephantHistory.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
     if (top < windowHeight / 4 && bottom > windowHeight) {
