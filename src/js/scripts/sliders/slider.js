@@ -130,7 +130,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       900: {
         slidesPerView: 5,
         spaceBetween: 30,
@@ -147,7 +146,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       320: {
         slidesPerView: 2.1,
         spaceBetween: 30,
@@ -169,7 +167,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
-      // настройки для разных разрешений
       320: {
         slidesPerView: 0.9,
         spaceBetween: 20,
@@ -193,17 +190,6 @@ window.addEventListener('DOMContentLoaded', () => {
     autoHeight: true,
     slidesPerView: 1.2,
     spaceBetween: 24,
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 2,
-    //   },
-    //   480: {
-    //     slidesPerView: 3,
-    //   },
-    //   640: {
-    //     slidesPerView: 4,
-    //   },
-    // },
   });
 
   const swiperImage = new Swiper('.swiper-image', {
@@ -272,3 +258,31 @@ function scrollContent(direction) {
     container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
   }
 }
+
+// открытие блоков, когда прокручено до середины экрана
+function addActiveClassToAutoOpenElements() {
+  const autoOpenElements = document.querySelectorAll('.auto-open');
+
+  if (autoOpenElements.length > 0) {
+    autoOpenElements.forEach(element => {
+      element.classList.add('active-js');
+    });
+  }
+}
+
+function handleScroll() {
+  const elephantHistory = document.querySelector('.elephant-history');
+
+  if (elephantHistory) {
+    const {top, bottom} = elephantHistory.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight / 4 && bottom > windowHeight) {
+      addActiveClassToAutoOpenElements();
+
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+}
+
+window.addEventListener('scroll', handleScroll);

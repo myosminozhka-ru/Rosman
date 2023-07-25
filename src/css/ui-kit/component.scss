@@ -1279,13 +1279,10 @@ header {
   #elephant-slider {
     background-size: auto;
     width: 345rem;
-    height: 95rem;
+    height: 90rem;
     position: relative;
     display: list-item;
-
-    @media screen and (max-width: 768px) {
-      left: -25rem;
-    }
+    
 
     .year-text {
       @apply text-5xl text-white;
@@ -1294,7 +1291,7 @@ header {
       z-index: 1001;
 
       &.up {
-        bottom: 64.5rem;
+        bottom: 59.5rem;
 
         &.first {
           left: 36.5rem;
@@ -1336,6 +1333,21 @@ header {
       &.bottom {
         top: 59rem;
 
+        &.zero {
+          left: 49.5rem;
+          top: 45rem;
+        }
+
+        &.zero-two {
+          left: 117.5rem;
+          top: 45rem;
+        }
+
+        &.zero-three {
+          left: 183.5rem;
+          top: 45rem;
+        }
+
         &.first {
           left: 83rem;
         }
@@ -1367,7 +1379,7 @@ header {
       width: 20rem;
 
       &.upper {
-        bottom: 63.5rem;
+        bottom: 58.5rem;
 
         &.first {
           left: 30.5rem;
@@ -1409,6 +1421,21 @@ header {
       &.bottom {
         top: 58rem;
 
+        &.zero {
+          left: 43.5rem;
+          top: 44rem;
+        }
+
+        &.zero-two {
+          left: 110.5rem;
+          top: 44rem;
+        }
+
+        &.zero-three {
+          left: 177rem;
+          top: 44rem;
+        }
+
         &.first {
           left: 77.5rem;
         }
@@ -1437,6 +1464,18 @@ header {
           border-bottom-left-radius: 0.5rem;
           border-bottom-right-radius: 0.5rem;
           padding-top: 9rem;
+
+          &.zero {
+            background-color: #ff0053;
+          }
+
+          &.zero-two {
+            background-color: #ff8500;
+          }
+
+          &.zero-three {
+            background-color: #4498fc;
+          }
 
           &.first {
             background-color: #fff145;

@@ -1,29 +1,16 @@
-<!-- Slider main container -->
-
 <div class="elephant-history">
-  <div class="slider-header !w-[99%] !mb-0">
+  <div class="slider-header !w-full !mb-0 px-24 sm:px-12">
     <h3 class="head-3">История</h3>
     <div class="buttons">
       <div class="button-prev" onclick="scrollContent('left')"></div>
       <div class="button-next" onclick="scrollContent('right')"></div>
     </div>
   </div>
-  <div id="elephant-container">
+  <div id="elephant-container"
+       class="[&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
     <div id="elephant-slider">
       <div class="elephant-slider-body body"></div>
-      <div class="elephant-dropdown upper first">
-        <div class="color-block upper first">
-          <div class="elephant-more-up">
-            <button class="elephant-more-down-button"><span></span></button>
-            <!--  more-up -->
-            <div class="elephant-more-up-content">
-              <p class="whitespace-normal px-16 min-h-[14rem] text-m">
-                Издательство становится профильным детским издательством
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <p class="year-text up first">1992</p>
       <p class="year-text up second">2008</p>
       <p class="year-text up third">2010</p>
@@ -33,11 +20,28 @@
       <p class="year-text up seventh">2020</p>
       <p class="year-text up nine">2020</p>
       <p class="year-text up ten">2022</p>
+      <p class="year-text bottom zero">2007</p>
       <p class="year-text bottom first">2009</p>
+      <p class="year-text bottom zero-two">2011</p>
+      <p class="year-text bottom zero-three">2017</p>
       <p class="year-text bottom second">2014</p>
       <p class="year-text bottom third">2019</p>
       <p class="year-text bottom fourth">2020</p>
       <p class="year-text bottom fifth">2021</p>
+
+      <div class="elephant-dropdown upper first">
+        <div class="color-block upper first">
+          <div class="elephant-more-up">
+            <button class="elephant-more-down-button auto-open"><span></span></button>
+            <!--  more-up -->
+            <div class="elephant-more-up-content auto-open">
+              <p class="whitespace-normal px-16 min-h-[14rem] text-m">
+                Издательство становится профильным детским издательством
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="elephant-dropdown upper second">
         <div class="color-block upper second">
           <div class="elephant-more-up">
@@ -146,12 +150,51 @@
           </div>
         </div>
       </div>
+
+      <div class="elephant-dropdown bottom zero">
+        <div class="color-block bottom zero">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content auto-open">
+              <p class="whitespace-normal px-16 min-h-[14rem] text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button auto-open"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom zero-two">
+        <div class="color-block bottom zero-two">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal px-16 min-h-[14rem] text-m">
+                Основание издательства
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+            <!--  more-up -->
+          </div>
+        </div>
+      </div>
+      <div class="elephant-dropdown bottom zero-three">
+        <div class="color-block bottom zero-three">
+          <div class="elephant-more-down">
+            <div class="elephant-more-down-content">
+              <p class="whitespace-normal px-16 min-h-[14rem] text-m">
+                Основание издательства2
+              </p>
+            </div>
+            <button class="elephant-more-up-button"><span></span></button>
+          </div>
+        </div>
+      </div>
       <div class="elephant-dropdown bottom first">
         <div class="color-block bottom first">
           <div class="elephant-more-down">
             <div class="elephant-more-down-content">
               <p class="whitespace-normal px-16 min-h-[14rem] text-m">
-                Основание издательства
+                Основание издательства2
               </p>
             </div>
             <button class="elephant-more-up-button"><span></span></button>
@@ -215,13 +258,8 @@
     </div>
   </div>
 </div>
-<!--<div class="elephant-dropdown">-->
-<!--    <div class="color-block">-->
-<!--        <div class="more-down">-->
-<!--            <button class="more-down-button"><span></span></button> &lt;!&ndash;  more-down &ndash;&gt;-->
-<!--            <div class="more-down-content">-->
-<!--                <p>Содержимое 1</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+
+<script>
+
+
+</script>
