@@ -261,4 +261,14 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// слайдер для страницы с вакансиями,
+// слайдер для истории слона, слайдер, но не свипер,
+function scrollContent(direction) {
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}

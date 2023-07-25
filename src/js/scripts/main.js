@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-              (avaliableCursorArea.height / 100) -
+            (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -591,16 +591,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function scrollContent(direction) {
-    let container = document.getElementById('elephant-container');
-    let content = document.getElementById('elephant-slider');
-
-    if (direction === 'left') {
-      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-    } else if (direction === 'right') {
-      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
-    }
-  }
 
   class Slider {
     constructor(rangeElement, valueElement, options) {
@@ -625,7 +615,7 @@ window.addEventListener('DOMContentLoaded', () => {
     asMoney(value) {
       return (
         '$' +
-        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+        parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
       );
     }
 
