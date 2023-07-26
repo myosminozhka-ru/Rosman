@@ -139,6 +139,7 @@ function prodGitHTML() {
     .pipe(includePartials())
     .pipe(replace('../../', './'))
     .pipe(replace('./../', './'))
+    .pipe(replace('<script src="./js/scripts.js"></script>', '<script src="./js/scripts.js"></script> <script src="./js/libs.js"></script>'))
     .pipe(dest(options.paths.docs.base));
 }
 

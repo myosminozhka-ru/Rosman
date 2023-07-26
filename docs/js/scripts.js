@@ -1560,105 +1560,272 @@ function initializeSearchInput(locator) {
   });
 }
 
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
+const popupMethods = ['close', 'open'];
+
+window.popup = function (popupName, method) {
+  if (!popupMethods.includes(method)) {
+    console.error('не корректный метод попапа' + ' - ' + `${method}`);
+    return;
+  }
+
+  const popup = document.getElementById(popupName);
+  if (!popup) {
+    console.error('не корректное имя попапа' + ' - ' + `${popupName}`);
+    return;
+  }
+
+  if (method === popupMethods[0]) {
+    popup.classList.remove('--active');
+  } else {
+    popup.classList.add('--active');
+  }
+};
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal')) {
+    e.target.classList.remove('--active');
+  }
+
+  if (e.target.classList.contains('ui-popup-close-button')) {
+    e.target.closest('.modal').classList.remove('--active');
+  }
+
+  if (e.target.classList.contains('ui-popup-close')) {
+    e.target.closest('.modal').classList.remove('--active');
+  }
 });
 
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
+document
+  .getElementById('js-all-brand')
+  ?.addEventListener('click', function (e) {
+    window.popup('js_popup_brand_choose_list_modal', 'open');
+  });
 
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
+document
+  .querySelector('.js_popup_all_filters_button')
+  ?.addEventListener('click', function () {
+    window.popup('js_popup_all_filters_modal', 'open');
+  });
+
+document
+  .getElementById('js_popup_brand_description_button')
+  ?.addEventListener('click', function () {
+    window.popup('js_popup_brand_description_modal', 'open');
+  });
+
+const openBookDescription = document.querySelectorAll(
+  '.js_popup_all_filters_button'
+);
+if (openBookDescription.length) {
+  for (let i = 0; i < openBookDescription.length; i++) {
+    openBookDescription[i].addEventListener('click', function () {
+      window.popup('js_popup_all_filters_modal', 'open');
+    });
+  }
+}
+// функция для добавления класса через положение тогглера в true,
+// повесить слушатель событий,
+const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
+
+for (let i = 0; i < dropdownTogglers.length; i++) {
+  dropdownTogglers[i].addEventListener('click', function () {
+    const content = this.parentNode.parentNode.nextElementSibling;
+    if (this.classList.contains('active-js')) {
+      this.classList.remove('active-js');
+    } else {
+      this.classList.add('active-js');
+    }
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+      content.classList.add('active-js');
+    }
+  });
+}
+
+// функция для маски телефона
+let phoneNumber = document.querySelector('#phone');
+
+if (phoneNumber) {
+  phoneNumber.onclick = function () {
+    phoneNumber.value = '+';
+  };
+  var old = 0;
+  phoneNumber.onkeydown = function () {
+    var curLen = phoneNumber.value.length;
+    if (curLen < old) {
+      old--;
+      return;
+    }
+    if (curLen === 2) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 6) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 10) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen === 13) phoneNumber.value = phoneNumber.value + '-';
+    if (curLen > 15)
+      phoneNumber.value = phoneNumber.value.substring(
+        0,
+        phoneNumber.value.length - 1
+      );
+    old++;
+  };
+}
+
+const brandPopupCheckboxes = document.querySelectorAll('.checkbox_overlay');
+
+if (brandPopupCheckboxes) {
+  for (let i = 0; i < brandPopupCheckboxes.length; i++) {
+    brandPopupCheckboxes[i].addEventListener('click', function (event) {
+      const checkboxPpb = this.nextElementSibling;
+      if (this.checked) {
+        checkboxPpb.style.display = 'block';
+      } else {
+        checkboxPpb.style.display = '';
+      }
+    });
+  }
+}
+
+// код с фильтрацией и сортировкой
+const allFiltersPopup = document.querySelector('.pup_brand_input');
+if (allFiltersPopup) {
+  allFiltersPopup.addEventListener('input', function (event) {
+    let searchValue = allFiltersPopup.value.toLowerCase().trim();
+    searchValue = searchValue.replace(/\W/g, '');
+    const imageContainers = document.querySelectorAll('.image_container');
+
+    imageContainers.forEach((container) => {
+      const brandName = container.dataset.brandName.toLowerCase();
+      if (brandName.includes(searchValue)) {
+        container.classList.remove('!hidden');
+      } else {
+        container.classList.add('!hidden');
+      }
+    });
+
+    if (searchValue.length < 3) {
+      imageContainers.forEach((container) => {
+        container.classList.remove('!hidden');
+      });
+    }
+  });
+}
+
+const radioButtons = document.querySelectorAll('[name="sort-by"]');
+if (radioButtons) {
+  radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', function (event) {
+      const sortBy = event.target.value;
+      const imageContainers = document.querySelectorAll('.image_container');
+      const containerArray = Array.from(imageContainers);
+      const button = document.querySelector('.more-down-button.with-padds');
+
+      switch (sortBy) {
+        case 'date':
+          containerArray.sort((a, b) => {
+            return a.dataset.brandCreationDate - b.dataset.brandCreationDate;
+          });
+          button.innerHTML = 'Сначала новые<span></span>';
+          break;
+        case 'date_reverse':
+          containerArray.sort((a, b) => {
+            return b.dataset.brandCreationDate - a.dataset.brandCreationDate;
+          });
+          button.innerHTML = 'Сначала старые<span></span>';
+          break;
+        case 'name':
+          containerArray.sort((a, b) => {
+            const nameA = a.dataset.brandName.toLowerCase();
+            const nameB = b.dataset.brandName.toLowerCase();
+            return nameA.localeCompare(nameB);
+          });
+          button.innerHTML = 'А-Я<span></span>';
+          break;
+        case 'name_reverse':
+          containerArray.sort((a, b) => {
+            const nameA = a.dataset.brandName.toLowerCase();
+            const nameB = b.dataset.brandName.toLowerCase();
+            return nameB.localeCompare(nameA);
+          });
+          button.innerHTML = 'Я-А<span></span>';
+          break;
+      }
+
+      const containerParent = document.querySelector(
+        '.popup_brand_choose_brands'
+      );
+      containerArray.forEach((container) => {
+        containerParent.appendChild(container);
+      });
+    });
+  });
+}
+
+function parseDate(dateString) {
+  const parts = dateString.split('.');
+  return new Date(parts[2], parts[1] - 1, parts[0]);
+}
+
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
+
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
+
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
+
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
+    });
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   const rem = (16 / 100) * 65.2;
@@ -1948,67 +2115,6 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
-
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
-}
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2543,208 +2649,102 @@ window.addEventListener('load', function () {
   toggleVisibility();
 });
 
-const popupMethods = ['close', 'open'];
-
-window.popup = function (popupName, method) {
-  if (!popupMethods.includes(method)) {
-    console.error('не корректный метод попапа' + ' - ' + `${method}`);
-    return;
-  }
-
-  const popup = document.getElementById(popupName);
-  if (!popup) {
-    console.error('не корректное имя попапа' + ' - ' + `${popupName}`);
-    return;
-  }
-
-  if (method === popupMethods[0]) {
-    popup.classList.remove('--active');
-  } else {
-    popup.classList.add('--active');
-  }
-};
-
-document.addEventListener('click', function (e) {
-  if (e.target.classList.contains('modal')) {
-    e.target.classList.remove('--active');
-  }
-
-  if (e.target.classList.contains('ui-popup-close-button')) {
-    e.target.closest('.modal').classList.remove('--active');
-  }
-
-  if (e.target.classList.contains('ui-popup-close')) {
-    e.target.closest('.modal').classList.remove('--active');
-  }
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
 });
 
-document
-  .getElementById('js-all-brand')
-  ?.addEventListener('click', function (e) {
-    window.popup('js_popup_brand_choose_list_modal', 'open');
-  });
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
 
-document
-  .querySelector('.js_popup_all_filters_button')
-  ?.addEventListener('click', function () {
-    window.popup('js_popup_all_filters_modal', 'open');
-  });
-
-document
-  .getElementById('js_popup_brand_description_button')
-  ?.addEventListener('click', function () {
-    window.popup('js_popup_brand_description_modal', 'open');
-  });
-
-const openBookDescription = document.querySelectorAll(
-  '.js_popup_all_filters_button'
-);
-if (openBookDescription.length) {
-  for (let i = 0; i < openBookDescription.length; i++) {
-    openBookDescription[i].addEventListener('click', function () {
-      window.popup('js_popup_all_filters_modal', 'open');
-    });
-  }
-}
-// функция для добавления класса через положение тогглера в true,
-// повесить слушатель событий,
-const dropdownTogglers = document.getElementsByClassName('dropdown_checkbox');
-
-for (let i = 0; i < dropdownTogglers.length; i++) {
-  dropdownTogglers[i].addEventListener('click', function () {
-    const content = this.parentNode.parentNode.nextElementSibling;
-    if (this.classList.contains('active-js')) {
-      this.classList.remove('active-js');
-    } else {
-      this.classList.add('active-js');
-    }
-    if (content.style.display === 'block') {
-      content.style.display = 'none';
-    } else {
-      content.style.display = 'block';
-      content.classList.add('active-js');
-    }
-  });
-}
-
-// функция для маски телефона
-let phoneNumber = document.querySelector('#phone');
-
-if (phoneNumber) {
-  phoneNumber.onclick = function () {
-    phoneNumber.value = '+';
-  };
-  var old = 0;
-  phoneNumber.onkeydown = function () {
-    var curLen = phoneNumber.value.length;
-    if (curLen < old) {
-      old--;
-      return;
-    }
-    if (curLen === 2) phoneNumber.value = phoneNumber.value + '-';
-    if (curLen === 6) phoneNumber.value = phoneNumber.value + '-';
-    if (curLen === 10) phoneNumber.value = phoneNumber.value + '-';
-    if (curLen === 13) phoneNumber.value = phoneNumber.value + '-';
-    if (curLen > 15)
-      phoneNumber.value = phoneNumber.value.substring(
-        0,
-        phoneNumber.value.length - 1
-      );
-    old++;
-  };
-}
-
-const brandPopupCheckboxes = document.querySelectorAll('.checkbox_overlay');
-
-if (brandPopupCheckboxes) {
-  for (let i = 0; i < brandPopupCheckboxes.length; i++) {
-    brandPopupCheckboxes[i].addEventListener('click', function (event) {
-      const checkboxPpb = this.nextElementSibling;
-      if (this.checked) {
-        checkboxPpb.style.display = 'block';
-      } else {
-        checkboxPpb.style.display = '';
-      }
-    });
-  }
-}
-
-// код с фильтрацией и сортировкой
-const allFiltersPopup = document.querySelector('.pup_brand_input');
-if (allFiltersPopup) {
-  allFiltersPopup.addEventListener('input', function (event) {
-    let searchValue = allFiltersPopup.value.toLowerCase().trim();
-    searchValue = searchValue.replace(/\W/g, '');
-    const imageContainers = document.querySelectorAll('.image_container');
-
-    imageContainers.forEach((container) => {
-      const brandName = container.dataset.brandName.toLowerCase();
-      if (brandName.includes(searchValue)) {
-        container.classList.remove('!hidden');
-      } else {
-        container.classList.add('!hidden');
-      }
-    });
-
-    if (searchValue.length < 3) {
-      imageContainers.forEach((container) => {
-        container.classList.remove('!hidden');
-      });
-    }
-  });
-}
-
-const radioButtons = document.querySelectorAll('[name="sort-by"]');
-if (radioButtons) {
-  radioButtons.forEach((radioButton) => {
-    radioButton.addEventListener('change', function (event) {
-      const sortBy = event.target.value;
-      const imageContainers = document.querySelectorAll('.image_container');
-      const containerArray = Array.from(imageContainers);
-      const button = document.querySelector('.more-down-button.with-padds');
-
-      switch (sortBy) {
-        case 'date':
-          containerArray.sort((a, b) => {
-            return a.dataset.brandCreationDate - b.dataset.brandCreationDate;
-          });
-          button.innerHTML = 'Сначала новые<span></span>';
-          break;
-        case 'date_reverse':
-          containerArray.sort((a, b) => {
-            return b.dataset.brandCreationDate - a.dataset.brandCreationDate;
-          });
-          button.innerHTML = 'Сначала старые<span></span>';
-          break;
-        case 'name':
-          containerArray.sort((a, b) => {
-            const nameA = a.dataset.brandName.toLowerCase();
-            const nameB = b.dataset.brandName.toLowerCase();
-            return nameA.localeCompare(nameB);
-          });
-          button.innerHTML = 'А-Я<span></span>';
-          break;
-        case 'name_reverse':
-          containerArray.sort((a, b) => {
-            const nameA = a.dataset.brandName.toLowerCase();
-            const nameB = b.dataset.brandName.toLowerCase();
-            return nameB.localeCompare(nameA);
-          });
-          button.innerHTML = 'Я-А<span></span>';
-          break;
-      }
-
-      const containerParent = document.querySelector(
-        '.popup_brand_choose_brands'
-      );
-      containerArray.forEach((container) => {
-        containerParent.appendChild(container);
-      });
-    });
-  });
-}
-
-function parseDate(dateString) {
-  const parts = dateString.split('.');
-  return new Date(parts[2], parts[1] - 1, parts[0]);
-}
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
