@@ -516,39 +516,36 @@
             class="card-fullpage-w-bg-modified !mb-0 mb-40 msm:!h-[43rem] msm:!pt-[5rem]"
           >
             <div
-              class="card-fullpage-w-bg-modified msm:!h-[36rem]"
-              id="yellow-moving-block"
+              class="card-fullpage-w-bg-modified msm:!h-[36rem] yellow-moving-block"
             >
-              <svg
-                class="absolute"
-                style="height: 100%; width: 100%"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  class="yellow-moving-block-top-line"
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  stroke-width="1rem"
-                />
-
-                <line
-                  class="yellow-moving-block-bottom-line"
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  stroke-width="1rem"
-                ></line>
-              </svg>
-
-              <div id="parent" class="relative">
+            <svg
+            class="absolute"
+            style="height: 100%; width: 100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              class="yellow-moving-block-top-line"
+              x1="0"
+              y1="-1%"
+              x2="100%"
+              y2="-1%"
+              stroke="white"
+              stroke-width="1rem"
+            />
+  
+            <line
+              class="yellow-moving-block-bottom-line"
+              x1="0"
+              y1="101%"
+              x2="100%"
+              y2="101%"
+              stroke="white"
+              stroke-width="1rem"
+            ></line>
+          </svg>
+              <div class="parent" class="relative">
                 <div
-                  id="follower"
-                  class="slide-el card-fullpage-slide-el-mod-2"
+                  class="slide-el card-fullpage-slide-el-mod-2 follower"
                 >
                   @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html',
                   { }, )
