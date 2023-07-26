@@ -1125,7 +1125,6 @@ if (buttonsPag) {
 }
 
 
-
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -1278,6 +1277,107 @@ window.addEventListener('resize', function () {
 //     });
 //   }
 // });
+
+
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
+});
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   const brandDropdowns = document.querySelectorAll(
@@ -1764,67 +1864,6 @@ if (radioButtons) {
 function parseDate(dateString) {
   const parts = dateString.split('.');
   return new Date(parts[2], parts[1] - 1, parts[0]);
-}
-
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -2649,102 +2688,63 @@ window.addEventListener('load', function () {
   toggleVisibility();
 });
 
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
-});
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
 
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
 
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
+
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
+    });
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
+}
