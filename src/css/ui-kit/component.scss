@@ -807,6 +807,7 @@ header {
 #yellow-background:after {
   position: absolute;
   content: '';
+  z-index: 111;
   display: block;
   top: calc(2rem + (100vw / 2));
   bottom: 0;
