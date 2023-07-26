@@ -218,7 +218,6 @@ if (buttonsPag) {
       });
       loadPrevBtn.classList.remove('!hidden');
     }
-    console.log(currentPage, maxPages);
     showAuthorsByPage(currentPage);
   });
 }
