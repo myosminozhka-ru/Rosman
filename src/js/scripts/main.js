@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-              (avaliableCursorArea.height / 100) -
+            (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -444,9 +444,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
   );
-  const elephantUpButtons = document.getElementsByClassName(
-    'elephant-more-up-button'
-  );
+
 
   for (let i = 0; i < elephantDownButtons.length; i++) {
     elephantDownButtons[i].addEventListener('click', function () {
@@ -464,7 +462,34 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  ////////////////////////////////
+
+
+  ////////////////////// для открытия нижних кнопок
+  document.addEventListener('click', function (event) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    const elementsUnderCursor = document.elementsFromPoint(x, y);
+
+    for (const elementUnderCursor of elementsUnderCursor) {
+      if (elementUnderCursor.classList.contains('elephant-more-up-button')) {
+        const content = elementUnderCursor.previousElementSibling;
+        if (elementUnderCursor.classList.contains('active-js')) {
+          elementUnderCursor.classList.remove('active-js');
+        } else {
+          elementUnderCursor.classList.add('active-js');
+        }
+        if (content.classList.contains('active-js')) {
+          content.classList.remove('active-js');
+        } else {
+          content.classList.add('active-js');
+        }
+
+        break;
+      }
+    }
+  });
+
   // второй вариант истории Росмэна со слоном
 
   const yearTexts = document.querySelectorAll('.year-text');
@@ -572,22 +597,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  for (let i = 0; i < elephantUpButtons.length; i++) {
-    elephantUpButtons[i].addEventListener('click', function () {
-      const content = this.previousElementSibling;
-      if (this.classList.contains('active-js')) {
-        this.classList.remove('active-js');
-      } else {
-        this.classList.add('active-js');
-      }
-      if (content.classList.contains('active-js')) {
-        content.classList.remove('active-js');
-      } else {
-        // content.style.display = "block";
-        content.classList.add('active-js');
-      }
-    });
-  }
 
   function toggleSearch() {
     let mobileMenu = document.getElementById('mobile-menu');
@@ -673,16 +682,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function scrollContent(direction) {
-    let container = document.getElementById('elephant-container');
-    let content = document.getElementById('elephant-slider');
-
-    if (direction === 'left') {
-      container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-    } else if (direction === 'right') {
-      container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
-    }
-  }
 
   class Slider {
     constructor(rangeElement, valueElement, options) {
@@ -707,7 +706,7 @@ window.addEventListener('DOMContentLoaded', () => {
     asMoney(value) {
       return (
         '$' +
-        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+        parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
       );
     }
 
