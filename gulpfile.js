@@ -144,6 +144,8 @@ function prodGitHTML() {
     .pipe(dest(options.paths.docs.base));
 }
 
+
+
 function prodStyles() {
   const tailwindcss = require('tailwindcss');
   const autoprefixer = require('autoprefixer');
