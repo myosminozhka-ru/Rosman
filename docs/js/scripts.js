@@ -1279,134 +1279,6 @@ window.addEventListener('resize', function () {
 //   }
 // });
 
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
-});
-
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
-
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const brandDropdowns = document.querySelectorAll(
-    '.js-brand-description-dropdown'
-  );
-
-  if (brandDropdowns.length) {
-    for (let i = 0; i < brandDropdowns.length; i++) {
-      brandDropdowns[i].addEventListener('click', function (e) {
-        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
-        let checkedRows = 0;
-        const dropdownCounter = brandDropdowns[i].querySelector(
-          '.js-brand-dropdown-counter'
-        );
-
-        for (let j = 0; j < checkboxes.length; j++) {
-          if (checkboxes[j].checked) {
-            checkedRows++;
-          }
-        }
-
-        if (checkedRows) {
-          dropdownCounter.textContent = `(${checkedRows})`;
-        }
-      });
-    }
-  }
-});
-
 // External JS file like jquery etc which you do not wish to inlcuded in minification
 
 /** Helper function to generate a Google Maps directions URL */
@@ -1866,6 +1738,34 @@ function parseDate(dateString) {
   return new Date(parts[2], parts[1] - 1, parts[0]);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const brandDropdowns = document.querySelectorAll(
+    '.js-brand-description-dropdown'
+  );
+
+  if (brandDropdowns.length) {
+    for (let i = 0; i < brandDropdowns.length; i++) {
+      brandDropdowns[i].addEventListener('click', function (e) {
+        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
+        let checkedRows = 0;
+        const dropdownCounter = brandDropdowns[i].querySelector(
+          '.js-brand-dropdown-counter'
+        );
+
+        for (let j = 0; j < checkboxes.length; j++) {
+          if (checkboxes[j].checked) {
+            checkedRows++;
+          }
+        }
+
+        if (checkedRows) {
+          dropdownCounter.textContent = `(${checkedRows})`;
+        }
+      });
+    }
+  }
+});
+
 const randomBookButton = document.querySelector('.js-randomize-book');
 if (randomBookButton) {
   randomBookButton.addEventListener('click', function (event) {
@@ -2215,6 +2115,106 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
+});
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
