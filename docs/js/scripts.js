@@ -297,89 +297,98 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const yellowMovingBlock = document.getElementById('yellow-moving-block');
-  if (yellowMovingBlock) {
-    document.addEventListener('mousemove', function (event) {
-      const blockWidth = window.innerWidth;
-      const oneDeg = blockWidth / 100;
-      const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
+  const yellowMovingBlock = document.querySelectorAll('.yellow-moving-block');
 
-      yellowMovingBlock.style.transform = `rotate(${tiltAngle}deg)`;
+  if (yellowMovingBlock.length) {
+    for (let i = 0; i < yellowMovingBlock.length; i++) {
+      document.addEventListener('mousemove', function (event) {
+        const blockWidth = window.innerWidth;
+        const oneDeg = blockWidth / 100;
+        const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
 
-      const computedFontSize = window.getComputedStyle(
-        document.documentElement
-      ).fontSize;
+        yellowMovingBlock[i].style.transform = `rotate(${tiltAngle}deg)`;
 
-      const computedFontSizeNumber = computedFontSize.slice(
-        0,
-        computedFontSize.length - 2
-      );
+        const computedFontSize = window.getComputedStyle(
+          document.documentElement
+        ).fontSize;
 
-      const movingBlockTopLine = document.querySelector(
-        '.yellow-moving-block-top-line '
-      );
-      const movingBlockBottomLine = document.querySelector(
-        '.yellow-moving-block-bottom-line'
-      );
-
-      const mousePos = {
-        x: event.pageX,
-        y: event.pageY,
-      };
-
-      const bodyRect = document.body.getBoundingClientRect();
-      const elemRect = yellowMovingBlock.getBoundingClientRect();
-      const movingBlockTopOffset = elemRect.top - bodyRect.top;
-      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
-
-      const verticalLeg = Math.abs(
-        blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
-      );
-      const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
-
-      const activationHeight = 300;
-      const shiftNumber = 3;
-
-      const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
-
-      if (activationTopArea > 0 && activationTopArea < activationHeight) {
-        const shadowShiftPercentage =
-          100 - (activationTopArea / activationHeight) * 100;
-        const leftShiftPercentage =
-          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const rightShiftPercentage =
-          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-        const rightShadowShiftNumber =
-          (shiftNumber / 100) * rightShiftPercentage;
-
-        movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
-        movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
-      }
-
-      const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
-
-      if (activationBottomArea < activationHeight && activationBottomArea > 0) {
-        const shadowShiftPercentage =
-          100 - (activationBottomArea / activationHeight) * 100;
-        const leftShiftPercentage =
-          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const rightShiftPercentage =
-          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-        const rightShadowShiftNumber =
-          (shiftNumber / 100) * rightShiftPercentage;
-
-        movingBlockBottomLine.setAttribute(
-          'y1',
-          `${100 + leftShadowShiftNumber}%`
+        const computedFontSizeNumber = computedFontSize.slice(
+          0,
+          computedFontSize.length - 2
         );
-        movingBlockBottomLine.setAttribute(
-          'y2',
-          `${100 + rightShadowShiftNumber}%`
+
+        const movingBlockTopLine = yellowMovingBlock[i].querySelector(
+          '.yellow-moving-block-top-line '
         );
-      }
-    });
+        const movingBlockBottomLine = yellowMovingBlock[i].querySelector(
+          '.yellow-moving-block-bottom-line'
+        );
+
+        const mousePos = {
+          x: event.pageX,
+          y: event.pageY,
+        };
+
+        const bodyRect = document.body.getBoundingClientRect();
+        const elemRect = yellowMovingBlock[i].getBoundingClientRect();
+        const movingBlockTopOffset = elemRect.top - bodyRect.top;
+        const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
+
+        const verticalLeg = Math.abs(
+          blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
+        );
+        const activationTopArea =
+          verticalLeg + movingBlockTopOffset - mousePos.y;
+
+        const activationHeight = 300;
+        const shiftNumber = 3;
+
+        const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
+
+        if (activationTopArea > 0 && activationTopArea < activationHeight) {
+          const shadowShiftPercentage =
+            100 - (activationTopArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber =
+            (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
+          movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
+        }
+
+        const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
+
+        if (
+          activationBottomArea < activationHeight &&
+          activationBottomArea > 0
+        ) {
+          const shadowShiftPercentage =
+            100 - (activationBottomArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber =
+            (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockBottomLine.setAttribute(
+            'y1',
+            `${100 + leftShadowShiftNumber}%`
+          );
+          movingBlockBottomLine.setAttribute(
+            'y2',
+            `${100 + rightShadowShiftNumber}%`
+          );
+        }
+      });
+    }
   }
 
   // boxshadow
@@ -388,67 +397,68 @@ window.addEventListener('DOMContentLoaded', () => {
   let isMoving = false;
 
   document.addEventListener('mousemove', function (event) {
-    let parent = document.getElementById('parent');
-    if (parent) {
-      let follower = document.getElementById('follower');
-      let parentRect = parent.getBoundingClientRect();
-      let x = event.clientX - parentRect.left;
-      let newX = x - follower.offsetWidth; // Вычисляем новое положение в противоположной стороне
-      newX = Math.max(
-        0,
-        Math.min(newX, parentRect.width - follower.offsetWidth)
-      );
+    let parent = document.querySelectorAll('.parent');
+    let follower = document.querySelectorAll('.follower');
+    if (parent.length && follower.length && follower.length === parent.length) {
+      for (let i = 0; i < parent.length; i++) {
+        let parentRect = parent[i].getBoundingClientRect();
+        let x = event.clientX - parentRect.left;
+        let newX = x - follower[i].offsetWidth; // Вычисляем новое положение в противоположной стороне
 
-      if (!isMoving) {
-        isMoving = true;
-        follower.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+        newX = Math.max(
+          0,
+          Math.min(newX, parentRect.width - follower[i].offsetWidth)
+        );
 
-        setTimeout(function () {
+        if (!isMoving) {
+          isMoving = true;
+          follower[i].style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+
           isMoving = false;
-        }, 500); // Задержка в 200 миллисекунд
+        }
       }
     }
   });
-  const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
-  if (yellowMovingBlock2) {
-    document.addEventListener('mousemove', function (event) {
-      const windowWidth = window.innerWidth;
-      const blockWidth = yellowMovingBlock2.offsetWidth;
+  // const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
+  // if (yellowMovingBlock2) {
+  //   document.addEventListener('mousemove', function (event) {
+  //     const windowWidth = window.innerWidth;
+  //     const blockWidth = yellowMovingBlock2.offsetWidth;
 
-      // Вычисляем позицию блока на основе позиции мыши и ширины окна
-      let blockX = event.clientX - blockWidth / 2;
+  //     // Вычисляем позицию блока на основе позиции мыши и ширины окна
+  //     let blockX = event.clientX - blockWidth / 2;
 
-      // Вычисляем наклон блока в зависимости от позиции мыши
-      let tilt = (blockX / windowWidth) * 6;
+  //     // Вычисляем наклон блока в зависимости от позиции мыши
+  //     let tilt = (blockX / windowWidth) * 6;
 
-      // Применяем наклон к блоку с помощью свойства transform
-      yellowMovingBlock2.style.transform = `rotate(${tilt}deg)`;
-    });
-  }
+  //     // Применяем наклон к блоку с помощью свойства transform
+  //     yellowMovingBlock2.style.transform = `rotate(${tilt}deg)`;
+  //   });
+  // }
 
-  let isMoving2 = false;
-  document.addEventListener('mousemove', function (event) {
-    let parent2 = document.getElementById('parent2');
-    if (parent2) {
-      let follower2 = document.getElementById('follower2');
-      let parentRect = parent2.getBoundingClientRect();
-      let x = event.clientX - parentRect.left;
-      let newX = x - follower2.offsetWidth; // Вычисляем новое положение в противоположной стороне
-      newX = Math.max(
-        0,
-        Math.min(newX, parentRect.width - follower2.offsetWidth)
-      );
+  // let isMoving2 = false;
+  // document.addEventListener('mousemove', function (event) {
+  //   let parent2 = document.getElementById('parent2');
+  //   if (parent2) {
+  //     let follower2 = document.getElementById('follower2');
+  //     let parentRect = parent2.getBoundingClientRect();
+  //     let x = event.clientX - parentRect.left;
+  //     let newX = x - follower2.offsetWidth; // Вычисляем новое положение в противоположной стороне
+  //     newX = Math.max(
+  //       0,
+  //       Math.min(newX, parentRect.width - follower2.offsetWidth)
+  //     );
 
-      if (!isMoving2) {
-        isMoving2 = true;
-        follower2.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+  //     if (!isMoving2) {
+  //       isMoving2 = true;
+  //       follower2.style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
 
-        setTimeout(function () {
-          isMoving2 = false;
-        }, 500); // Задержка в 200 миллисекунд
-      }
-    }
-  });
+  //       setTimeout(function () {
+  //         isMoving2 = false;
+  //       }, 500); // Задержка в 200 миллисекунд
+  //     }
+  //   }
+  // });
 
   const elephantDownButtons = document.getElementsByClassName(
     'elephant-more-down-button'
@@ -1110,112 +1120,11 @@ if (buttonsPag) {
       });
       loadPrevBtn.classList.remove('!hidden');
     }
-    console.log(currentPage, maxPages);
     showAuthorsByPage(currentPage);
   });
 }
 
 
-
-const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 8,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 8,
-    },
-  },
-});
-
-const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-    },
-  },
-});
-
-const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-    },
-  },
-});
-const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
-  // Optional parameters
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
-  },
-  autoHeight: true,
-  slidesPerView: 2,
-  spaceBetween: 16,
-  breakpoints: {
-    950: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-    },
-  },
-});
 
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
@@ -1370,33 +1279,107 @@ window.addEventListener('resize', function () {
 //   }
 // });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const brandDropdowns = document.querySelectorAll(
-    '.js-brand-description-dropdown'
-  );
-
-  if (brandDropdowns.length) {
-    for (let i = 0; i < brandDropdowns.length; i++) {
-      brandDropdowns[i].addEventListener('click', function (e) {
-        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
-        let checkedRows = 0;
-        const dropdownCounter = brandDropdowns[i].querySelector(
-          '.js-brand-dropdown-counter'
-        );
-
-        for (let j = 0; j < checkboxes.length; j++) {
-          if (checkboxes[j].checked) {
-            checkedRows++;
-          }
-        }
-
-        if (checkedRows) {
-          dropdownCounter.textContent = `(${checkedRows})`;
-        }
-      });
-    }
-  }
+const swiperDetailedPage = new Swiper('.swiper-detailed-page', {
+  // Optional parameters
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 8,
+    },
+  },
 });
+
+const swiperDetailedPageVideo = new Swiper('.swiper-detailed-page-video', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+    },
+  },
+});
+
+const swiperImidzhPageEmps = new Swiper('.swiper-imidzh-page', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+    },
+  },
+});
+const swiperCatalogProjects = new Swiper('.swiper-catalog-projects', {
+  // Optional parameters
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+  },
+});
+
+// External JS file like jquery etc which you do not wish to inlcuded in minification
 
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
@@ -1649,7 +1632,33 @@ function initializeSearchInput(locator) {
   });
 }
 
-// External JS file like jquery etc which you do not wish to inlcuded in minification
+document.addEventListener('DOMContentLoaded', function () {
+  const brandDropdowns = document.querySelectorAll(
+    '.js-brand-description-dropdown'
+  );
+
+  if (brandDropdowns.length) {
+    for (let i = 0; i < brandDropdowns.length; i++) {
+      brandDropdowns[i].addEventListener('click', function (e) {
+        const checkboxes = brandDropdowns[i].getElementsByTagName('input');
+        let checkedRows = 0;
+        const dropdownCounter = brandDropdowns[i].querySelector(
+          '.js-brand-dropdown-counter'
+        );
+
+        for (let j = 0; j < checkboxes.length; j++) {
+          if (checkboxes[j].checked) {
+            checkedRows++;
+          }
+        }
+
+        if (checkedRows) {
+          dropdownCounter.textContent = `(${checkedRows})`;
+        }
+      });
+    }
+  }
+});
 
 const popupMethods = ['close', 'open'];
 
@@ -1855,6 +1864,67 @@ if (radioButtons) {
 function parseDate(dateString) {
   const parts = dateString.split('.');
   return new Date(parts[2], parts[1] - 1, parts[0]);
+}
+
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
+
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
+
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
+
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
+    });
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -2145,67 +2215,6 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
-
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
-}
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
