@@ -41,6 +41,7 @@ for (let i = 0; i < traceableItems.length; i++) {
     }
 
     this.style.backgroundColor = getRandomColor(colors);
+
   });
 }
 
