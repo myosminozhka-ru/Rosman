@@ -138,7 +138,7 @@ function prodGitHTML() {
   return src(`${options.paths.src.base}/**/*.{html,php}`)
     .pipe(includePartials())
     .pipe(replace('../../', './'))
-    .pipe(replace('../../../', './'))
+    .pipe(replace('./../', './'))
     .pipe(dest(options.paths.docs.base));
 }
 
