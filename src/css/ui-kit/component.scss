@@ -751,7 +751,7 @@ header {
   @media screen and (max-width: 768px) {
     @apply pt-10;
   }
-  @media (min-width: 1940px) {
+  @media (min-width: 1968px) {
     padding-top: 0;
     background-color: #fff;
   }
@@ -760,7 +760,7 @@ header {
     @media screen and (max-width: 768px) {
       display: none;
     }
-    @media (min-width: 1940px) {
+    @media (min-width: 1968px) {
       display: none;
     }
   }
@@ -847,7 +847,7 @@ header {
   @media screen and (max-width: 768px) {
     @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
   }
-  @media (min-width: 1940px) {
+  @media (min-width: 1968px) {
     @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
   }
 }
