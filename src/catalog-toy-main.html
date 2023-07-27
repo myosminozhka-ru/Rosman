@@ -1,137 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог Игрушек</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог Игрушек</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
 
-  <body>
-    @@include('components/header/header-main.html', { }, )
-    <div class="container-main">
-      <div id="yellow-background">
-        <div id="moving-block" class="!-left-2 !w-[110%]">
-          <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
-            <g>
-              <path
-                id="moving-bock-shadow"
-                d="M 0 0 L 100 0 L 100 100 L 0 100"
-                fill="white"
-              ></path>
-            </g>
-          </svg>
+<body>
+@@include('components/header/header-main.html', { }, )
+
+<div class="container-main">
+  <div id="yellow-background">
+    <div id="moving-block" class="!-left-2 !w-[110%]">
+      <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
+        <g>
+          <path
+            id="moving-bock-shadow"
+            d="M 0 0 L 100 0 L 100 100 L 0 100"
+            fill="white"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div id="white-mobile-background"></div>
+    <div id="above-block">
+      <div
+        class="popup_all_filters_filters gap-8 px-24 sm:px-12 mt-12 md:mt-12"
+      >
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+      </div>
+      @@include('components/ui-kit/breadcrumbs/index.html', { },)
+      <div class="flex flex-col gap-24 px-24 sm:px-12 mb-64 md:mb-48">
+        <div class="card-fullpage-tabs !mb-0">
+          <div class="navigation card-fullpage-navigation">
+            <ul class="navigation-flex !justify-start !gap-8 nav-list ">
+              <li class="!mx-0">
+                <p class="!m-0 card-fullpage-tab !px-16 card-fp-tab-desc active-js">
+                  Игрушки
+                </p>
+              </li>
+              <li class="!mx-0">
+                <p class="!m-0 card-fullpage-tab !px-16 card-fp-tab-char">
+                  Книги
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="white-mobile-background"></div>
-        <div id="above-block">
+        <div
+          class="grid grid-cols-4 shs:grid-cols-3 bss:grid-cols-2 bss:gap-y-48 gap-20 md:grid-cols-1 bg-white card-fp-description">
+          <div class="col-span-3 shs:col-span-2 md:col-span-1 md:w-full bg-white flex flex-col gap-32">
+            <div
+              class="grid grid-cols-3 shs:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-16 md:grid-cols-2 msm:grid-cols-1">
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+            </div>
+            <section class="pagination rm-pag">
+              <button class="pagination-more-button js-rm-pag-more-btn">
+                Показать ещё
+              </button>
+            </section>
+          </div>
+
           <div
-            class="popup_all_filters_filters mt-12 gap-8 px-24 md:mt-12 sm:px-12"
-          >
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
-            @@include('components/tags/header-tag.html', { },)
+            class="col-span-1 grid grid-cols-1 gap-24 w-full  bg-white">
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
           </div>
-          @@include('components/ui-kit/breadcrumbs/index.html', { },)
-          <div class="mb-64 flex flex-col gap-24 px-24 md:mb-48 sm:px-12">
-            <div class="card-fullpage-tabs !mb-0">
-              <div class="navigation card-fullpage-navigation">
-                <ul class="navigation-flex nav-list !justify-start !gap-8">
-                  <li class="!mx-0">
-                    <p
-                      class="card-fullpage-tab card-fp-tab-desc active-js !m-0 !px-16"
-                    >
-                      Игрушки
-                    </p>
-                  </li>
-                  <li class="!mx-0">
-                    <p class="card-fullpage-tab card-fp-tab-char !m-0 !px-16">
-                      Книги
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="card-fp-description grid grid-cols-4 gap-20 bg-white shs:grid-cols-3 bss:grid-cols-2 bss:gap-y-48 md:grid-cols-1"
-            >
-              <div
-                class="col-span-3 flex flex-col gap-32 bg-white shs:col-span-2 md:col-span-1 md:w-full"
-              >
-                <div
-                  class="grid grid-cols-3 gap-x-16 gap-y-20 shs:grid-cols-2 md:grid-cols-2 md:gap-y-16 msm:grid-cols-1"
-                >
-                  @@include('components/ui-kit/cards/card-brand-socs.html', {
-                  },) @@include('components/ui-kit/cards/card-brand-socs.html',
-                  { },)
-                  @@include('components/ui-kit/cards/card-brand-socs.html', {
-                  },) @@include('components/ui-kit/cards/card-brand-socs.html',
-                  { },)
-                  @@include('components/ui-kit/cards/card-brand-socs.html', {
-                  },) @@include('components/ui-kit/cards/card-brand-socs.html',
-                  { },)
-                  @@include('components/ui-kit/cards/card-brand-socs.html', {
-                  },) @@include('components/ui-kit/cards/card-brand-socs.html',
-                  { },)
-                  @@include('components/ui-kit/cards/card-brand-socs.html', {
-                  },)
-                </div>
-                <section class="pagination rm-pag">
-                  <button class="pagination-more-button js-rm-pag-more-btn">
-                    Показать ещё
-                  </button>
-                </section>
-              </div>
+        </div>
 
-              <div class="col-span-1 grid w-full grid-cols-1 gap-24 bg-white">
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-                @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-              </div>
-            </div>
 
-            <div
-              class="card-fp-characteristics grid hidden grid-cols-2 gap-16 md:grid-cols-1"
-            >
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-              @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
-            </div>
-            <div
-              class="card-fp-instruction card-fp-tab mb-64 hidden px-24 ipadmini:mb-48 sm:px-12"
-            ></div>
-          </div>
+        <div class="grid card-fp-characteristics grid-cols-2 md:grid-cols-1 gap-16 hidden">
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+        </div>
+        <div class="card-fp-instruction card-fp-tab hidden px-24 mb-64 ipadmini:mb-48 sm:px-12">
         </div>
       </div>
     </div>
-    @@include('components/ui-kit/footer/footer-ru.html', { }, )
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+  </div>
+</div>
+@@include('components/ui-kit/footer/footer-ru.html', { }, )
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
 </html>
