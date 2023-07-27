@@ -242,7 +242,6 @@
 
 .header .flex.w-full.flex-col {
   position: relative;
-
 }
 
 .header[data-header='main'] {
@@ -808,6 +807,7 @@ header {
 #yellow-background:after {
   position: absolute;
   content: '';
+  z-index: 111;
   display: block;
   top: calc(2rem + (100vw / 2));
   bottom: 0;
@@ -1162,21 +1162,29 @@ header {
   }
 }
 
-#yellow-moving-block {
+.yellow-moving-block {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
-  box-shadow: inset 0px 1px 19px 4px #535353;
-  left: -2rem;
-  width: 110%;
+  width: 120%;
+  left: -10%;
 }
 
 #yellow-moving-block2 {
   @apply absolute z-100 mx-auto my-0 h-180 bg-white bg-yellow;
-  box-shadow: inset 0px 1px 19px 4px #535353;
+  // box-shadow: inset 0px 1px 19px 4px #535353;
   left: -2rem;
   width: 110%;
 }
 
-#parent {
+.yellow-moving-block-top-line {
+  filter: drop-shadow(0px 2px 5px #535353);
+  // filter: drop-shadow(0px 2px 5px #535353);
+}
+
+.yellow-moving-block-bottom-line {
+  filter: drop-shadow(0px -2px 5px #535353);
+}
+
+.parent {
   width: 99%;
   margin: auto;
   position: relative;
@@ -1184,7 +1192,6 @@ header {
   /* Скрыть содержимое, выходящее за границы блока */
 }
 
-// rjvvtyndslfjslkf
 //.elephant-swiper {
 //  width: 100% !important;
 //  height: auto!important;
@@ -1615,7 +1622,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
+        center;
       background-size: contain;
     }
 

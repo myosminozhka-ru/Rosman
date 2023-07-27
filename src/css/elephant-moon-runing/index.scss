@@ -24,9 +24,18 @@
 
 .about-company-page-big-moon-container {
   grid-area: 3 / 1 / 11 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 768px) {
     grid-area: unset;
   }
+}
+
+.about-company-page-big-moon-text {
+  position: absolute;
+  width: 24rem;
+  z-index: 1;
 }
 
 .about-company-page-big-moon {
@@ -38,34 +47,246 @@
 }
 
 .about-company-page-elephant {
-  grid-area: 1/4/2/6;
-  transform: scale(1.7);
+  grid-area: 1/4/3/6;
   position: relative;
-  left: 2rem;
-  bottom: -0.2rem;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  animation-name: elephant;
+  animation-duration: 1.7s ;
+  animation-iteration-count: infinite;
+  bottom: -1rem;
+  left: 1rem;
   @media (max-width: 768px) {
     grid-area: unset;
     grid-row-start: 2;
     width: 10rem;
     margin: 0 auto;
+    height: 15rem;
   }
 }
 
-.about-company-page-small-moon {
+@keyframes elephant {
+  from {
+    transform: translateY(-4rem);
+  }
+  22% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-4rem);
+  }
+  72% {
+    transform: translateY(0rem);
+  }
+
+  to {
+    transform: translateY(-4rem);
+  }
+}
+
+
+.about-company-elephant-back-right-leg,
+.about-company-elephant-back-left-leg,
+.about-company-elephant-front-right-leg,
+.about-company-elephant-front-left-leg,
+.about-company-elephant-torso,
+.about-company-elephant-head {
+  position: absolute;
+}
+
+
+.about-company-elephant-back-right-leg,
+.about-company-elephant-back-left-leg {
+  height: 4rem;
+  width: 3rem;
+  top: 7rem;
+  left: 3.6rem;
+}
+
+.about-company-elephant-back-right-leg {
+  animation-name: back-right-leg;
+  animation-duration: 1.7s ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes back-right-leg {
+  from {
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+  }
+
+  50% {
+    transform: rotate(0deg) translate(0rem, 0rem);;
+  }
+
+  to {
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+  }
+}
+
+.about-company-elephant-back-left-leg {
+  animation-name: back-left-leg;
+  animation-duration: 1.7s ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes back-left-leg {
+  from {
+    transform: rotate(0deg) translate(0rem, 0rem);;
+  }
+
+  50% {
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+  }
+
+  to {
+    transform: rotate(0deg) translate(0rem, 0rem);;
+  }
+}
+
+.about-company-elephant-front-right-leg,
+.about-company-elephant-front-left-leg {
+  height: 4rem;
+  width: 4rem;
+  left: 6rem;
+  top: 6.6rem;
+}
+
+
+.about-company-elephant-front-right-leg {
+  animation:1.7s   infinite  front-right-leg;
+}
+
+@keyframes front-right-leg {
+  0% {
+  transform: rotate(-91deg) translate(1.7rem, 3.2rem);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+
+  100% {
+    transform: rotate(-91deg) translate(1.7rem, 3.2rem);
+  }
+}
+
+.about-company-elephant-front-left-leg {
+  animation: 1.7s  infinite  front-left-leg;
+}
+
+
+@keyframes front-left-leg {
+  0% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+
+  50% {
+    transform: rotate(-91deg) translate(1.7rem, 3.2rem);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+}
+
+.about-company-elephant-torso {
+  height: 6rem;
+  width: 7rem;
+  left: 3rem;
+  top: 3rem;
+}
+
+.about-company-elephant-head {
+  width: 7.5rem;
+  height: 7.5rem;
+  left: 7rem;
+  top: 0rem;
+  // transform: rotate(45deg) translate(2.5rem, 0.4rem);
+  animation: 1.7s infinite  head;
+  position: relative;
+}
+
+
+@keyframes head {
+  0% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+
+  20% {
+    transform: rotate(45deg) translate(2.1rem, 0.1rem);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+
+  70% {
+    transform: rotate(45deg) translate(2.1rem, 0.1rem);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0rem, 0rem);
+  }
+}
+
+.about-company-elephant-eye {
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  left: 3.2rem;
+  top: 2.6rem;
+  transform: rotate(166deg);
+}
+
+.about-company-elephant-eye-socket {
+  height: 2rem;
+  width: 1.8rem;
+  position: absolute;
+  left: 2.3rem;
+  top: 2.2rem;
+  transform: rotate(166deg);
+
+}
+
+.about-company-page-small-moon-container {
   grid-area: 7/9/11/13;
   position: relative;
   left: -2rem;
-  -webkit-animation: rotating-reverse 4s linear infinite;
-  -moz-animation: rotating-reverse 4s linear infinite;
-  -ms-animation: rotating-reverse 4s linear infinite;
-  -o-animation: rotating-reverse 4s linear infinite;
-  animation: rotating-reverse 4s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 768px) {
     grid-area: unset;
     left: unset;
     width: 80%;
     margin: 0 auto;
   }
+}
+
+.about-company-page-small-moon-text {
+  position: absolute;
+  width: 23rem;
+  z-index: 1;
+  @media (max-width: 999px){
+    width: 16rem; 
+  }
+
+  .head-3 {
+    @media (max-width: 999px) {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+    }
+  }
+}
+
+.about-company-page-small-moon {
+  -webkit-animation: rotating-reverse 4s linear infinite;
+  -moz-animation: rotating-reverse 4s linear infinite;
+  -ms-animation: rotating-reverse 4s linear infinite;
+  -o-animation: rotating-reverse 4s linear infinite;
+  animation: rotating-reverse 4s linear infinite;
 }
 
 .about-company-page-statistics {

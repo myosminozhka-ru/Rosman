@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Автор</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
   </head>
 
   <body>
@@ -26,16 +30,47 @@
       </div>
       <div id="white-mobile-background"></div>
       <div id="above-block">
-        <div class="flex flex-wrap justify-start px-24">
-          <p class="filter-label header">0-3</p>
-          <p class="filter-label header">0-3</p>
-          <p class="filter-label header">4-6</p>
-          <p class="filter-label header">7-9</p>
-          <p class="filter-label header">10-15</p>
-          <p class="filter-label header">15+</p>
-          <p class="filter-label header">Новинки</p>
-          <p class="filter-label header">Хиты</p>
-          <p class="filter-label header">Случайная карта</p>
+        <div class="popup_all_filters_filters gap-8 px-24 md:mt-12 md:px-12">
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >0-3</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >4-6</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >7-9</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >10-15</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >15+</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >Новинки</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >Хиты</a
+          >
+          <a
+            href="#"
+            class="filter-label header !m-0 !max-w-[60rem] !cursor-pointer hover:!border-transparent hover:bg-yellow active:bg-yellow"
+            >Случайная карта</a
+          >
         </div>
 
         @@include('components/ui-kit/breadcrumbs/index.html', { }, )
@@ -50,7 +85,16 @@
                   <span
                     class="card-fp-desc-text-top line-clamp-10 text-ellipsis"
                   >
-                    <p class="py-6">
+                    <p class="mb-16">
+                      Российский детский поэт, писатель, переводчик, лауреат
+                      премии Президента РФ в области литературы и искусства за
+                      произведения для детей и юношества 2016 года, издатель,
+                      владелец издательства. В 2019 году Анастасия, совместно с
+                      партнерами, учредила свое издательство под названием
+                      “Книжный дом Анастасии Орловой”, в котором и работает на
+                      должности главного редактора.
+                    </p>
+                    <p class="mb-16">
                       Российский детский поэт, писатель, переводчик, лауреат
                       премии Президента РФ в области литературы и искусства за
                       произведения для детей и юношества 2016 года, издатель,
@@ -68,16 +112,11 @@
                       “Книжный дом Анастасии Орловой”, в котором и работает на
                       должности главного редактора.
                     </p>
-                    Российский детский поэт, писатель, переводчик, лауреат
-                    премии Президента РФ в области литературы и искусства за
-                    произведения для детей и юношества 2016 года, издатель,
-                    владелец издательства. В 2019 году Анастасия, совместно с
-                    партнерами, учредила свое издательство под названием
-                    “Книжный дом Анастасии Орловой”, в котором и работает на
-                    должности главного редактора.
                   </span>
                 </div>
-                <button class="more-down-button js-book-toggle-button !p-0">
+                <button
+                  class="more-down-button-card author-page-btn js-book-toggle-button !p-0 font-medium"
+                >
                   Прочитать полностью<span></span>
                 </button>
               </div>
@@ -259,16 +298,39 @@
 
         <div
           id="white-background"
-          class="card-fullpage-w-bg-modified books-slider !h-[75.9rem]"
+          class="card-fullpage-w-bg-modified books-slider !mb-40 !h-[75.9rem]"
         >
           <div
-            id="yellow-moving-block"
-            class="card-fullpage-w-bg-modified books-slider"
+            class="card-fullpage-w-bg-modified books-slider yellow-moving-block"
           >
-            <div id="parent">
+            <svg
+              class="absolute"
+              style="height: 100%; width: 100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                class="yellow-moving-block-top-line"
+                x1="0"
+                y1="-1%"
+                x2="100%"
+                y2="-1%"
+                stroke="white"
+                stroke-width="1rem"
+              />
+
+              <line
+                class="yellow-moving-block-bottom-line"
+                x1="0"
+                y1="101%"
+                x2="100%"
+                y2="101%"
+                stroke="white"
+                stroke-width="1rem"
+              ></line>
+            </svg>
+            <div class="parent">
               <img
-                id="follower"
-                class="slide-el card-fullpage-slide-el-mod"
+                class="slide-el card-fullpage-slide-el-mod follower"
                 src="../../img/running-elephant/slide-el.png"
               />
             </div>
@@ -608,130 +670,93 @@
         </div>
 
         <div
-          class="relative mb-64 bg-yellow px-24 py-[10rem] bs:py-[7rem] sm:px-12"
+          id="white-background"
+          class="card-fullpage-w-bg-modified !mb-0 mb-40 !h-[63rem] ipadmini:!h-[55rem] msm:!h-[44rem] msm:!pt-[5rem] !pt-[10rem]"
         >
           <div
-            class="absolute left-0 right-0 top-0 h-46 origin-top-right skew-y-[2deg] overflow-hidden bg-background shadow-lg"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 right-0 z-10 h-46 origin-bottom-left skew-y-2 overflow-hidden bg-background shadow-[0_-6px_8px_0px_rgba(189,173,0,0.5)]"
-          ></div>
-          <div
-            class="relative bottom-[-58rem] left-0 right-0 z-900 h-[1rem] rotate-2 bs:bottom-[-48rem] msm:!bottom-[-46rem]"
+            class="card-fullpage-w-bg-modified msm:!h-[36rem] yellow-moving-block"
           >
-            <div
-              class="z-2 absolute bottom-0 right-[12%] block h-[10rem] w-[14rem]"
+            <svg
+              class="absolute"
+              style="height: 100%; width: 100%"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div class="elephant-moves-leg">
-                <div class="elephant-moves-leg-body el-body">
-                  <div class="elephant-moves-leg-eye el-eye rotating"></div>
-                  <div class="elephant-moves-leg-leg el-leg"></div>
+              <line
+                class="yellow-moving-block-top-line"
+                x1="0"
+                y1="-1%"
+                x2="100%"
+                y2="-1%"
+                stroke="white"
+                stroke-width="1rem"
+              />
+
+              <line
+                class="yellow-moving-block-bottom-line"
+                x1="0"
+                y1="101%"
+                x2="100%"
+                y2="101%"
+                stroke="white"
+                stroke-width="1rem"
+              ></line>
+            </svg>
+            <div class="parent" class="relative">
+              <div class="slide-el card-fullpage-slide-el-mod-2 follower">
+                @@include('components/ui-kit/eleph-moves-leg/eleph-moves-leg.html',
+                { }, )
+              </div>
+            </div>
+          </div>
+          <div id="above-block" class="above-block-mod">
+            <div
+              class="swiper-image-gallery my-0 mb-24 px-24 pb-60 ipadmini:px-12"
+            >
+              <div class="swiper-header sw-head-mod !w-full">
+                <h3 class="head-3">Фотогалерея</h3>
+                <div class="buttons">
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper !items-end">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
+                </div>
+                <div class="swiper-slide">
+                  @@include('components/ui-kit/cards/card-photogallery-item.html',
+                  { }, )
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-image-2 my-0 mb-24 pb-60">
-            <div class="swiper-header sw-head-mod !w-full">
-              <h3 class="head-3">Фотогалерея</h3>
-              <div class="buttons">
-                <div class="button-prev"></div>
-                <div class="button-next"></div>
-              </div>
-            </div>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper !items-end">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card_photogallery_item">
-                  <img src="../../img/cards_photogallery_item.svg" alt="" />
-                  <div class="cards_photogallery_eye_image">
-                    <img
-                      class="cards_photogallery_eye_img"
-                      src="../../img/cards_photogallery_eye.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--   контентная часть   -->
         </div>
-        <h3 class="head-3 px-24">Видео</h3>
+        <h3 class="head-3 px-24 ipadmini:hidden">Видео</h3>
         <div
-          class="grid grid-cols-4 gap-x-16 gap-y-40 px-24 ipadmini:!grid-cols-2 md:grid-cols-3 sm:gap-y-32 surfaceduo:!grid-cols-1"
+          class="mb-32 grid grid-cols-4 gap-x-16 gap-y-40 px-24 ipadmini:hidden ipadmini:!grid-cols-2 md:grid-cols-3 sm:gap-y-32 surfaceduo:!grid-cols-1"
         >
           <div class="card_video_item">
             <div class="card_video_preview">
@@ -856,203 +881,25 @@
         </div>
       </div>
     </div>
-    <div class="footer rosman-footer-ru">
-      <div class="footer-container">
-        <div class="footer-heading">
-          <div class="footer-heading-main">
-            <span class="footer-heading-image"></span>
-            <div class="footer-heading-subscription">
-              <div class="drop-down-discover-rosman">
-                <div href="#" class="more-down-button disc-rosman-button">
-                  Книги<span></span>
-                </div>
-                <div class="more-down-content disc-rosman-content">
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                </div>
-                <hr class="my-8 text-grey" />
-                <div href="#" class="more-down-button disc-rosman-button">
-                  Игрушки<span></span>
-                </div>
-                <div class="more-down-content disc-rosman-content">
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                  <a href="#" class="disc-rosman-item">Каталог книг</a>
-                </div>
-                <hr class="mb-0 mt-8 text-grey" />
-              </div>
-              <div class="footer-heading-subs-title">
-                Подпишитесь на рассылку РОСМЭН и получайте наши лучшие материалы
-                1 раз в неделю. Бесплатно, по делу
-              </div>
-              <div class="footer-heading-subs-inputs">
-                <div class="footer-heading-subs-inputs-main">
-                  <input
-                    type="email"
-                    placeholder="Электронная почта"
-                    class="footer-heading-subs-input input"
-                  />
-                  <button class="footer-heading-subs-button button-yellow">
-                    Подписаться
-                  </button>
-                </div>
-                <div class="js-footer-heading-policy-agreement checkbox_main">
-                  <input
-                    class="js-footer-heading-checkbox checkbox__input_main"
-                    type="checkbox"
-                    id="footer-heading-checkbox"
-                  />
-                  <label
-                    for="footer-heading-checkbox"
-                    class="footer-heading-policy-agreement-text checkbox__label_main body-m"
-                  >
-                    <span>Соглашаюсь с &nbsp</span>
-                    <a
-                      href="#"
-                      class="footer-heading-policy-agreement-link link-m-bold"
-                    >
-                      политикой конфиденциальности
-                    </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-heading-discover-rosman">
-            <div class="footer_heading_about footer-heading-disc-block">
-              <a href="#" class="footer-section-header head-6">Компания</a>
-              <div class="footer-section-items">
-                <a href="#" class="footer-section-item common-text body-s"
-                  >О компании</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Партнёрам</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Карьера в РОСМЭН</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Контакты</a
-                >
-              </div>
-            </div>
-            <div class="footer_heading_books footer-heading-disc-block">
-              <a href="#" class="footer-section-header head-6">Книги</a>
-              <div class="footer-section-items">
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Каталог книг</a
-                >
-
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Авторы РОСМЭН</a
-                >
-
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Об издательстве</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >НДК</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Писательская школа</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Проект раз</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Проект два</a
-                >
-              </div>
-            </div>
-            <div class="footer_heading_toys footer-heading-disc-block">
-              <a href="#" class="footer-section-header head-6">Игрушки</a>
-              <div class="footer-section-items">
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Каталог игрушек</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Бренды</a
-                >
-                <a href="#" class="footer-section-item common-text body-s"
-                  >Новости игрушек</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="text-black" />
-        <div class="footer-info">
-          <div class="footer-info-main">
-            <div class="footer-info-rss common-text">
-              <a href="#" class="footer-info-rss-image"></a>RSS рассылка
-            </div>
-            <div class="footer-info-contacts">
-              <div class="footer-info-address ft-inf-item common-text">
-                17465, ул. Генерала Тюленева, дом 29, корпус 1, комнаты 3,2,1,
-                помещ. II, 1 этаж
-              </div>
-              <div class="footer-info-directs ft-inf-item">
-                <a href="tel:+74959337130" class="footer-info-tel common-text"
-                  >+7 495 933-71-30</a
-                >
-                <a
-                  href="mailto:rosman@rosman.ru"
-                  class="footer-info-email-one common-text"
-                >
-                  rosman@rosman.ru
-                </a>
-              </div>
-              <div class="footer-info-address ft-inf-item common-text">
-                127521, г. Москва, ул. Шереметьевская, д. 47,м. Бутырская,
-                Марьина Роща
-              </div>
-              <a
-                href="mailto:rosman@rosman.ru"
-                class="footer-info-email-two common-text"
-                >rosman@rosman.ru</a
-              >
-            </div>
-          </div>
-          <hr class="text-black" />
-          <div class="footer-extras">
-            <div class="footer-extras-creators">
-              <div class="footer-extras-idea common-text">
-                © 1992–2023 ООО РОСМЭН. Все права защищены.
-              </div>
-              <div class="footer-extras-maker common-text">
-                Разработка сайта: Осьминожка
-              </div>
-            </div>
-            <div class="footer-extras-links">
-              <div class="footer-extras-link common-text link-m-bold">
-                Политика конфиденциальности
-              </div>
-              <div class="footer-extras-link common-text link-m-bold">
-                Пользовательское соглашение
-              </div>
-              <div class="footer-extras-link common-text link-m-bold">
-                Cookies
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @@include('components/ui-kit/footer/footer-ru.html', { }, )
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>-->
     <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery-big"]', {
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-small"]', {
+        loop: false,
+      });
+      Fancybox.bind('[data-fancybox="gallery-photogallery"]', {
+        loop: false,
+      });
+    </script>
   </body>
 </html>
