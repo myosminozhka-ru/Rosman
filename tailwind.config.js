@@ -32,6 +32,7 @@ module.exports = {
       bsmin: {min: '1100px'},
       bsmax: {max: '1099px'},
       bs: {max: '999px'},
+      bss: {max: '899px'},
       ipadmini: {max: '768px'},
       md: {max: '768px'},
       sm: {max: '639px'},

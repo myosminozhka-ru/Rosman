@@ -25,61 +25,90 @@
     </div>
     <div id="white-mobile-background"></div>
     <div id="above-block">
+      <div
+        class="popup_all_filters_filters gap-8 mt-12 md:mt-12"
+      >
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+        @@include('components/tags/header-tag.html', { },)
+      </div>
       @@include('components/ui-kit/breadcrumbs/index.html', { },)
-      <div class="flex flex-col gap-24 px-24 sm:gap-16 sm:px-12 pb-24 sm:pb-16">
-        <div class="flex justify-start">
-          <div class="navigation card-fullpage-filter-links !h-46">
-            <ul class="nav-list">
-              <li
-                class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !pl-0 !pr-16"
-              >
-                <p class="other !my-10 text-15.20 font-medium">Игрушки</p>
+      <div class="flex flex-col gap-24 md:pb-16 mb-64 md:mb-48">
+        <div class="card-fullpage-tabs">
+          <div class="navigation card-fullpage-navigation">
+            <ul class="navigation-flex  !gap-0 nav-list ">
+              <li>
+                <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+                  Игрушки
+                </p>
               </li>
-              <li
-                class="!m-0 flex flex-row flex-nowrap !items-center gap-4 !px-16"
-              >
-                <p class="news !my-10 text-15.20 font-medium">Книги</p>
+              <li>
+                <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+                  Книги
+                </p>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-      <div class="flex flex-row gap-20 md:flex-col md:gap-48">
-        <div class="bg-white md:w-full flex flex-col gap-32">
-          <div
-            class="grid grid-cols-3 gap-x-16 gap-y-20 md:gap-y-16 md:grid-cols-2 msm:grid-cols-1"
-          >
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-            @@include('components/ui-kit/cards/card-brand-socs.html', { },)
-          </div>
-          <section class="pagination rm-pag">
-            <button class="pagination-more-button js-rm-pag-more-btn">
-              Показать ещё
-            </button>
-          </section>
-        </div>
         <div
-          class="flex flex-col gap-24 w-full max-w-[32rem] bsmax:max-w-[28rem] bg-white md:mb-48 md:!max-w-[100rem]"
-        >
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
-          @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+          class="grid grid-cols-4 shs:grid-cols-3 bss:grid-cols-2 bss:gap-y-48 gap-20 md:grid-cols-1 bg-white card-fp-description">
+          <div class="col-span-3 shs:col-span-2 bs:col-span-2 bss:col-span-2 md:w-full bg-white flex flex-col gap-32">
+            <div
+              class="grid grid-cols-3 shs:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-16 md:grid-cols-2 msm:grid-cols-1">
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+              @@include('components/ui-kit/cards/card-brand-socs.html', { },)
+            </div>
+            <section class="pagination rm-pag">
+              <button class="pagination-more-button js-rm-pag-more-btn">
+                Показать ещё
+              </button>
+            </section>
+          </div>
+
+          <div
+            class="col-span-1 grid grid-cols-1 gap-24 w-full  bg-white md:mb-48">
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+            @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
+          </div>
+        </div>
+
+
+        <div class="grid card-fp-characteristics grid-cols-2 md:grid-cols-1 gap-16 hidden">
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+          @@include('components/ui-kit/cards/card-book-catalog.html', { }, )
+        </div>
+        <div class="card-fp-instruction card-fp-tab hidden px-24 mb-64 ipadmini:mb-48 sm:px-12">
         </div>
       </div>
     </div>
