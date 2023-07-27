@@ -1866,294 +1866,66 @@ function parseDate(dateString) {
   return new Date(parts[2], parts[1] - 1, parts[0]);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  const rem = (16 / 100) * 65.2;
+const randomBookButton = document.querySelector('.js-randomize-book');
+if (randomBookButton) {
+  randomBookButton.addEventListener('click', function (event) {
+    // тут собираем активные чекбоксы
+    const selectedGenres = Array.from(
+      document.querySelectorAll('#genres input:checked')
+    ).map((input) => input.id);
+    const selectedAges = Array.from(
+      document.querySelectorAll('#ages input:checked')
+    ).map((input) => input.id);
 
-  new Swiper('.js-toys-articles', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-articles-swiper-button-next',
-      prevEl: '.toys-articles-swiper-button-prev',
-    },
+    // тут объект на отправку на бэк
+    const requestData = {
+      genres: selectedGenres,
+      ages: selectedAges,
+    };
 
-    slidesPerView: 1.2,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      639: {
-        slidesPerView: 2,
+    // тут имитация отправки запроса на бэк
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      868: {
-        slidesPerView: 3,
-      },
-    },
-  });
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {})
+      .catch((error) => {
+        console.error(error);
+      });
+    // тут отдельно все чекбоксы
+    const checkboxElements = document.querySelectorAll(
+      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
+    );
 
-  new Swiper('.js-toys-brands', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-brands-swiper-button-next',
-      prevEl: '.toys-brands-swiper-button-prev',
-    },
-
-    slidesPerView: 1,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      639: {
-        slidesPerView: 2,
-      },
-      868: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-event-tape', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-event-tape-swiper-button-next',
-      prevEl: '.toys-event-tape-swiper-button-prev',
-    },
-
-    slidesPerView: 2,
-    autoHeight: true,
-    spaceBetween: rem * 1.6,
-    breakpoints: {
-      // 639: {
-      //   slidesPerView: 3,
-      // },
-      868: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-bestsellers', {
-    loop: false,
-    navigation: {
-      nextEl: '.bestsellers-swiper-button-next',
-      prevEl: '.bestsellers-swiper-button-prev',
-    },
-    pagination: {
-      el: '.bestsellers-swiper-pagination',
-      type: 'fraction',
-      renderFraction: function (currentClass, totalClass) {
-        return (
-          '<span class="text-slider-fraction body-m ' +
-          currentClass +
-          '"></span>' +
-          ' ' +
-          '	&nbsp;' +
-          '<span class="text-slider-fraction body-m"> из </span> ' +
-          '	&nbsp;' +
-          '<span class="text-slider-fraction body-m ' +
-          totalClass +
-          '"></span>'
-        );
-      },
-    },
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: rem * 2.4 * 2,
-    breakpoints: {
-      900: {
-        spaceBetween: rem * 1.2 * 2,
-      },
-    },
-  });
-
-  new Swiper('.js-toys-banner', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-swiper-button-next',
-      prevEl: '.toys-swiper-button-prev',
-    },
-    pagination: {
-      el: '.toys-swiper-pagination',
-    },
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: rem * 2.4 * 2,
-    breakpoints: {
-      900: {
-        spaceBetween: rem * 1.2 * 2,
-      },
-    },
-  });
-
-  const swiper = new Swiper('.swiper', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      900: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-      },
-    },
-  });
-  const swiperBook = new Swiper('.swiper-book', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      320: {
-        slidesPerView: 2.1,
-        spaceBetween: 30,
-      },
-      900: {
-        slidesPerView: 4.2,
-        spaceBetween: 60,
-      },
-    },
-  });
-
-  const swiperOneBook = new Swiper('.swiper-one-book', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      320: {
-        slidesPerView: 0.9,
-        spaceBetween: 20,
-      },
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  const personsSLider = new Swiper('.persons-slider', {
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 1.2,
-    spaceBetween: 24,
-  });
-
-  const swiperImage = new Swiper('.swiper-image', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    breakpoints: {
-      900: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-      },
-    },
-  });
-  const swiperText = new Swiper('.swiper-text', {
-    loop: false,
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    },
-    autoHeight: true,
-    slidesPerView: 0.9,
-    spaceBetween: 10,
-    breakpoints: {
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 60,
-      },
-    },
-  });
-
-  const runStroke = new Swiper('.swiper-container', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-    },
-    speed: 6000,
-    slidesPerView: 6,
-  });
-
-  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
-    speed: 6000,
-    slidesPerView: 6,
-  });
-});
-
-// слайдер для истории слона, слайдер, но не свипер,
-function scrollContent(direction) {
-  let container = document.getElementById('elephant-container');
-  let content = document.getElementById('elephant-slider');
-
-  if (direction === 'left') {
-    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
-  } else if (direction === 'right') {
-    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
-  }
-}
-
-// открытие блоков, когда прокручено до середины экрана
-function addActiveClassToAutoOpenElements() {
-  const autoOpenElements = document.querySelectorAll('.auto-open');
-
-  if (autoOpenElements.length > 0) {
-    autoOpenElements.forEach((element) => {
-      element.classList.add('active-js');
+    // находим кнопки
+    const activeDropDownsButtons = document.querySelectorAll(
+      '.more-down-button.active-js'
+    );
+    const activeDropDownsContent = document.querySelectorAll(
+      '.more-down-content.active-js'
+    );
+    // тут классы кнопок,меняем стили
+    activeDropDownsButtons.forEach(function (activeDDB) {
+      activeDDB.classList.toggle('active-js');
     });
-  }
+    activeDropDownsContent.forEach(function (activeDDC) {
+      activeDDC.classList.toggle('active-js');
+    });
+    // убираем галки
+    checkboxElements.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+    // меняем название кнопки
+    randomBookButton.innerText = 'Подобрать ещё раз';
+    // пока оставлю так по стилям,
+    const literallyBook = document.querySelector('.random-book-card');
+    literallyBook.classList.remove('hidden');
+  });
 }
-
-function handleScroll() {
-  const elephantHistory = document.querySelector('.elephant-history');
-
-  if (elephantHistory) {
-    const { top, bottom } = elephantHistory.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (top < windowHeight / 4 && bottom > windowHeight) {
-      addActiveClassToAutoOpenElements();
-
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }
-}
-
-window.addEventListener('scroll', handleScroll);
 
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
@@ -2631,6 +2403,295 @@ window.onresize = function () {
   // chooseSwiperItem();
 };
 
+window.addEventListener('DOMContentLoaded', () => {
+  const rem = (16 / 100) * 65.2;
+
+  new Swiper('.js-toys-articles', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-articles-swiper-button-next',
+      prevEl: '.toys-articles-swiper-button-prev',
+    },
+
+    slidesPerView: 1.2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-brands', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-brands-swiper-button-next',
+      prevEl: '.toys-brands-swiper-button-prev',
+    },
+
+    slidesPerView: 1,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      639: {
+        slidesPerView: 2,
+      },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-event-tape', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-event-tape-swiper-button-next',
+      prevEl: '.toys-event-tape-swiper-button-prev',
+    },
+
+    slidesPerView: 2,
+    autoHeight: true,
+    spaceBetween: rem * 1.6,
+    breakpoints: {
+      // 639: {
+      //   slidesPerView: 3,
+      // },
+      868: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-bestsellers', {
+    loop: false,
+    navigation: {
+      nextEl: '.bestsellers-swiper-button-next',
+      prevEl: '.bestsellers-swiper-button-prev',
+    },
+    pagination: {
+      el: '.bestsellers-swiper-pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return (
+          '<span class="text-slider-fraction body-m ' +
+          currentClass +
+          '"></span>' +
+          ' ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m"> из </span> ' +
+          '	&nbsp;' +
+          '<span class="text-slider-fraction body-m ' +
+          totalClass +
+          '"></span>'
+        );
+      },
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  new Swiper('.js-toys-banner', {
+    loop: false,
+    navigation: {
+      nextEl: '.toys-swiper-button-next',
+      prevEl: '.toys-swiper-button-prev',
+    },
+    pagination: {
+      el: '.toys-swiper-pagination',
+    },
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: rem * 2.4 * 2,
+    breakpoints: {
+      900: {
+        spaceBetween: rem * 1.2 * 2,
+      },
+    },
+  });
+
+  const swiper = new Swiper('.swiper', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperBook = new Swiper('.swiper-book', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      320: {
+        slidesPerView: 2.1,
+        spaceBetween: 30,
+      },
+      900: {
+        slidesPerView: 4.2,
+        spaceBetween: 60,
+      },
+    },
+  });
+
+  const swiperOneBook = new Swiper('.swiper-one-book', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      320: {
+        slidesPerView: 0.9,
+        spaceBetween: 20,
+      },
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  const personsSLider = new Swiper('.persons-slider', {
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 1.2,
+    spaceBetween: 24,
+  });
+
+  const swiperImage = new Swiper('.swiper-image', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    breakpoints: {
+      900: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperText = new Swiper('.swiper-text', {
+    loop: false,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+    autoHeight: true,
+    slidesPerView: 0.9,
+    spaceBetween: 10,
+    breakpoints: {
+      900: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+    },
+  });
+
+  const runStroke = new Swiper('.swiper-container', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+
+  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
+    loop: false,
+    autoplay: {
+      delay: 20,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    speed: 6000,
+    slidesPerView: 6,
+  });
+});
+
+// слайдер для истории слона, слайдер, но не свипер,
+function scrollContent(direction) {
+  let container = document.getElementById('elephant-container');
+  let content = document.getElementById('elephant-slider');
+
+  if (direction === 'left') {
+    container.scrollLeft -= 400; // Измените значение 100 на желаемое расстояние для перемещения влево
+  } else if (direction === 'right') {
+    container.scrollLeft += 400; // Измените значение 100 на желаемое расстояние для перемещения вправо
+  }
+}
+
+// открытие блоков, когда прокручено до середины экрана
+function addActiveClassToAutoOpenElements() {
+  const autoOpenElements = document.querySelectorAll('.auto-open');
+
+  if (autoOpenElements.length > 0) {
+    autoOpenElements.forEach((element) => {
+      element.classList.add('active-js');
+    });
+  }
+}
+
+function handleScroll() {
+  const elephantHistory = document.querySelector('.elephant-history');
+
+  if (elephantHistory) {
+    const { top, bottom } = elephantHistory.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight / 4 && bottom > windowHeight) {
+      addActiveClassToAutoOpenElements();
+
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+
 // скрипт для слежения за вводом в поля инпутов
 const inputFields = document.querySelectorAll('.js-traceable-item-vacancy');
 const remainingItemsContainer = document.querySelector('.js-remaining-items');
@@ -2687,64 +2748,3 @@ window.addEventListener('resize', function handleResize() {
 window.addEventListener('load', function () {
   toggleVisibility();
 });
-
-const randomBookButton = document.querySelector('.js-randomize-book');
-if (randomBookButton) {
-  randomBookButton.addEventListener('click', function (event) {
-    // тут собираем активные чекбоксы
-    const selectedGenres = Array.from(
-      document.querySelectorAll('#genres input:checked')
-    ).map((input) => input.id);
-    const selectedAges = Array.from(
-      document.querySelectorAll('#ages input:checked')
-    ).map((input) => input.id);
-
-    // тут объект на отправку на бэк
-    const requestData = {
-      genres: selectedGenres,
-      ages: selectedAges,
-    };
-
-    // тут имитация отправки запроса на бэк
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error(error);
-      });
-    // тут отдельно все чекбоксы
-    const checkboxElements = document.querySelectorAll(
-      '.js-footer-heading-policy-agreement.cb-f-rb.checkbox_main input:checked'
-    );
-
-    // находим кнопки
-    const activeDropDownsButtons = document.querySelectorAll(
-      '.more-down-button.active-js'
-    );
-    const activeDropDownsContent = document.querySelectorAll(
-      '.more-down-content.active-js'
-    );
-    // тут классы кнопок,меняем стили
-    activeDropDownsButtons.forEach(function (activeDDB) {
-      activeDDB.classList.toggle('active-js');
-    });
-    activeDropDownsContent.forEach(function (activeDDC) {
-      activeDDC.classList.toggle('active-js');
-    });
-    // убираем галки
-    checkboxElements.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-    // меняем название кнопки
-    randomBookButton.innerText = 'Подобрать ещё раз';
-    // пока оставлю так по стилям,
-    const literallyBook = document.querySelector('.random-book-card');
-    literallyBook.classList.remove('hidden');
-  });
-}
