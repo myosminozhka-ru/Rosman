@@ -1,3 +1,16 @@
+.container-main {
+  margin: 0 auto !important;
+  @media (min-width: 1968px) {
+    max-width: 1968px;
+  }
+}
+
+.header-big {
+  @media (min-width: 1968px) {
+    padding-bottom: 1.4rem;
+  }
+}
+
 .scroll-block {
   @apply h-140 overflow-y-auto;
 }
@@ -738,9 +751,16 @@ header {
   @media screen and (max-width: 768px) {
     @apply pt-10;
   }
+  @media (min-width: 1940px) {
+    padding-top: 0;
+    background-color: #fff;
+  }
 
   #moving-block {
     @media screen and (max-width: 768px) {
+      display: none;
+    }
+    @media (min-width: 1940px) {
       display: none;
     }
   }
@@ -825,6 +845,9 @@ header {
 
 #white-mobile-background {
   @media screen and (max-width: 768px) {
+    @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
+  }
+  @media (min-width: 1940px) {
     @apply absolute z-100 mx-auto my-0 h-full w-full overflow-hidden bg-white;
   }
 }
@@ -1289,7 +1312,7 @@ header {
     height: 90rem;
     position: relative;
     display: list-item;
-    
+
 
     .year-text {
       @apply text-5xl text-white;
@@ -1622,8 +1645,7 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
-        center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
       background-size: contain;
     }
 
