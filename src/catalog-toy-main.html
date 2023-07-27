@@ -10,7 +10,7 @@
 
 <body>
 @@include('components/header/header-main.html', { }, )
-<div class="search-result-wrapper">
+<div class="container-main">
   <div id="yellow-background">
     <div id="moving-block" class="!-left-2 !w-[110%]">
       <svg class="-z-1" viewBox="0 0 100 100" class="sc-jDwBTQ fmXCLV">
@@ -26,7 +26,7 @@
     <div id="white-mobile-background"></div>
     <div id="above-block">
       <div
-        class="popup_all_filters_filters gap-8 mt-12 md:mt-12"
+        class="popup_all_filters_filters gap-8 px-24 sm:px-12 mt-12 md:mt-12"
       >
         @@include('components/tags/header-tag.html', { },)
         @@include('components/tags/header-tag.html', { },)
@@ -37,17 +37,17 @@
         @@include('components/tags/header-tag.html', { },)
       </div>
       @@include('components/ui-kit/breadcrumbs/index.html', { },)
-      <div class="flex flex-col gap-24 md:pb-16 mb-64 md:mb-48">
-        <div class="card-fullpage-tabs">
+      <div class="flex flex-col gap-24 px-24 sm:px-12 mb-64 md:mb-48">
+        <div class="card-fullpage-tabs !mb-0">
           <div class="navigation card-fullpage-navigation">
-            <ul class="navigation-flex  !gap-0 nav-list ">
-              <li>
-                <p class="!mx-0 card-fullpage-tab !px-16 msm:!px-0 card-fp-tab-desc active-js">
+            <ul class="navigation-flex !justify-start !gap-8 nav-list ">
+              <li class="!mx-0">
+                <p class="!m-0 card-fullpage-tab !px-16 card-fp-tab-desc active-js">
                   Игрушки
                 </p>
               </li>
-              <li>
-                <p class="!mx-0 card-fullpage-tab !px-16 sm:!px-0 card-fp-tab-char">
+              <li class="!mx-0">
+                <p class="!m-0 card-fullpage-tab !px-16 card-fp-tab-char">
                   Книги
                 </p>
               </li>
@@ -56,7 +56,7 @@
         </div>
         <div
           class="grid grid-cols-4 shs:grid-cols-3 bss:grid-cols-2 bss:gap-y-48 gap-20 md:grid-cols-1 bg-white card-fp-description">
-          <div class="col-span-3 shs:col-span-2 bs:col-span-2 bss:col-span-2 md:w-full bg-white flex flex-col gap-32">
+          <div class="col-span-3 shs:col-span-2 md:col-span-1 md:w-full bg-white flex flex-col gap-32">
             <div
               class="grid grid-cols-3 shs:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-16 md:grid-cols-2 msm:grid-cols-1">
               @@include('components/ui-kit/cards/card-brand-socs.html', { },)
@@ -77,7 +77,7 @@
           </div>
 
           <div
-            class="col-span-1 grid grid-cols-1 gap-24 w-full  bg-white md:mb-48">
+            class="col-span-1 grid grid-cols-1 gap-24 w-full  bg-white">
             @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
             @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
             @@include('components/ui-kit/cards/card-catalog-toy.html', { },)
