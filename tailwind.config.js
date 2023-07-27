@@ -27,6 +27,7 @@ module.exports = {
       25: '25rem',
     },
     screens: {
+      fullhd: {max: '1968px'},
       hs: {max: '1500px'},
       shs: {max: '1200px'},
       bsmin: {min: '1100px'},
