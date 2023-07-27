@@ -53,7 +53,7 @@
   justify-content: center;
   z-index: -1;
   animation-name: elephant;
-  animation-duration: 1.7s ;
+  animation-duration: 1.7s;
   animation-iteration-count: infinite;
   bottom: -1rem;
   left: 1rem;
@@ -86,7 +86,6 @@
   }
 }
 
-
 .about-company-elephant-back-right-leg,
 .about-company-elephant-back-left-leg,
 .about-company-elephant-front-right-leg,
@@ -95,7 +94,6 @@
 .about-company-elephant-head {
   position: absolute;
 }
-
 
 .about-company-elephant-back-right-leg,
 .about-company-elephant-back-left-leg {
@@ -107,41 +105,41 @@
 
 .about-company-elephant-back-right-leg {
   animation-name: back-right-leg;
-  animation-duration: 1.7s ;
+  animation-duration: 1.7s;
   animation-iteration-count: infinite;
 }
 
 @keyframes back-right-leg {
   from {
-    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);
   }
 
   50% {
-    transform: rotate(0deg) translate(0rem, 0rem);;
+    transform: rotate(0deg) translate(0rem, 0rem);
   }
 
   to {
-    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);
   }
 }
 
 .about-company-elephant-back-left-leg {
   animation-name: back-left-leg;
-  animation-duration: 1.7s ;
+  animation-duration: 1.7s;
   animation-iteration-count: infinite;
 }
 
 @keyframes back-left-leg {
   from {
-    transform: rotate(0deg) translate(0rem, 0rem);;
+    transform: rotate(0deg) translate(0rem, 0rem);
   }
 
   50% {
-    transform: rotate(81deg) translate(-1.5rem, 2.6rem);;
+    transform: rotate(81deg) translate(-1.5rem, 2.6rem);
   }
 
   to {
-    transform: rotate(0deg) translate(0rem, 0rem);;
+    transform: rotate(0deg) translate(0rem, 0rem);
   }
 }
 
@@ -153,14 +151,13 @@
   top: 6.6rem;
 }
 
-
 .about-company-elephant-front-right-leg {
-  animation:1.7s   infinite  front-right-leg;
+  animation: 1.7s infinite front-right-leg;
 }
 
 @keyframes front-right-leg {
   0% {
-  transform: rotate(-91deg) translate(1.7rem, 3.2rem);
+    transform: rotate(-91deg) translate(1.7rem, 3.2rem);
   }
 
   50% {
@@ -173,9 +170,8 @@
 }
 
 .about-company-elephant-front-left-leg {
-  animation: 1.7s  infinite  front-left-leg;
+  animation: 1.7s infinite front-left-leg;
 }
-
 
 @keyframes front-left-leg {
   0% {
@@ -204,10 +200,9 @@
   left: 7rem;
   top: 0rem;
   // transform: rotate(45deg) translate(2.5rem, 0.4rem);
-  animation: 1.7s infinite  head;
+  animation: 1.7s infinite head;
   position: relative;
 }
-
 
 @keyframes head {
   0% {
@@ -247,7 +242,6 @@
   left: 2.3rem;
   top: 2.2rem;
   transform: rotate(166deg);
-
 }
 
 .about-company-page-small-moon-container {
@@ -269,8 +263,8 @@
   position: absolute;
   width: 23rem;
   z-index: 1;
-  @media (max-width: 999px){
-    width: 16rem; 
+  @media (max-width: 999px) {
+    width: 16rem;
   }
 
   .head-3 {

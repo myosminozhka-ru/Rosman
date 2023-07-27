@@ -1313,7 +1313,6 @@ header {
     position: relative;
     display: list-item;
 
-
     .year-text {
       @apply text-5xl text-white;
       display: inline-block;
@@ -1645,7 +1644,8 @@ header {
       width: 53.6rem;
       height: 65.6rem;
       left: -28rem;
-      background: url('../../img/elephant-slider/elephant-body.png') no-repeat center;
+      background: url('../../img/elephant-slider/elephant-body.png') no-repeat
+        center;
       background-size: contain;
     }
 
