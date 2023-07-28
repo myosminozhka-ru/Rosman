@@ -1620,24 +1620,28 @@
 
           <!--компонент с карточками КНИГ И ИГРУШЕК-->
 
-          <div class="card-fullpage-tabs px-24 sm:px-12">
-            <div class="navigation">
-              <ul class="navigation-flex nav-list !gap-0">
+          <div class="card-fullpage-tabs px-24 ipadmini:px-12">
+            <div class="navigation card-fullpage-navigation">
+              <ul
+                class="navigation-flex nav-list !gap-0 px-24 ipadmini:justify-between ipadmini:px-12"
+              >
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-desc active-js !px-16 msm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-desc active-js !mx-0 !px-16 msm:!px-0"
                   >
                     Описание
                   </p>
                 </li>
                 <li>
-                  <p class="card-fullpage-tab card-fp-tab-char !px-16 sm:!px-0">
+                  <p
+                    class="card-fullpage-tab card-fp-tab-char !mx-0 !px-16 sm:!px-0"
+                  >
                     Характеристики
                   </p>
                 </li>
                 <li>
                   <p
-                    class="card-fullpage-tab card-fp-tab-instr !px-16 sm:!px-0"
+                    class="card-fullpage-tab card-fp-tab-instr !mx-0 !px-16 sm:!px-0"
                   >
                     Об авторах
                   </p>
@@ -1647,7 +1651,9 @@
           </div>
 
           <!--компонент из таба ОПИСАНИЕ-->
-          <div class="card-fp-description bg-white px-24 sm:px-12">
+          <div
+            class="card-fp-description card-fp-tab bg-white px-24 ipadmini:px-12"
+          >
             <!-- контент первого таба ОПИСАНИЕ  -->
 <div class="card-fullpage-desc-image">
   <img src="./img/card-fullpage/gagloev-huge.svg" alt="" />
@@ -1782,7 +1788,7 @@
 
           <!--    характеристики   -->
           <div
-            class="card-fp-characteristics mb-[8rem] hidden px-24 md:mb-[6rem] sm:px-12"
+            class="card-fp-characteristics card-fp-tab hidden px-24 ipadmini:px-12"
           >
             <div class="card-fullpage-characteristics">
   <div class="card-fp-char-items">
@@ -1899,7 +1905,9 @@
           </div>
 
           <!--   инструкция      -->
-          <div class="card-fp-instruction hidden px-24 sm:px-12">
+          <div
+            class="card-fp-instruction card-fp-tab hidden px-24 ipadmini:px-12"
+          >
             <div class="book-card-fp-author">
   <div class="book-card-fp-author-image author-avatar">
     <img src="./img/card-fullpage/author-avatar.svg" alt="" />
@@ -3469,7 +3477,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>-->
     <script type="module" src="./js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
