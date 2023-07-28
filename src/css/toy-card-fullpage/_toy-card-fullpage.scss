@@ -64,8 +64,7 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
-    center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -177,9 +176,9 @@
   width: 100%;
   content: '';
   background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
+                  to top,
+                  rgba(255, 255, 255, 1) 0%,
+                  rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
   /* so the text is still selectable */
@@ -661,9 +660,16 @@
   }
 }
 
+.card-fp-instruction {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 // стили для компонента ИНСТРУКЦИИ
 .card-fullpage-instruction {
-  @apply flex w-1/2 flex-row gap-16 bg-yellow p-24 sm:p-16;
+  @apply flex w-1/2 flex-row justify-between gap-16 bg-yellow p-24 sm:p-16;
 
   @media (min-width: 901px) and (max-width: 1100px) {
     @apply w-3/5;
