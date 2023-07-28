@@ -64,7 +64,8 @@
 
 .breadcrumbs-small-screen-image {
   @apply block h-20 w-20;
-  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat center;
+  background: url('../../img/card-fullpage/breadcrumb-home.svg') no-repeat
+    center;
   background-size: contain;
 }
 
@@ -176,9 +177,9 @@
   width: 100%;
   content: '';
   background: linear-gradient(
-                  to top,
-                  rgba(255, 255, 255, 1) 0%,
-                  rgba(255, 255, 255, 0) 100%
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
   /* so the text is still selectable */
