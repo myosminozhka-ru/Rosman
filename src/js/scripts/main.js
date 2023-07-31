@@ -281,92 +281,92 @@ window.addEventListener('DOMContentLoaded', () => {
   const yellowMovingBlock = document.querySelectorAll('.yellow-moving-block');
 
   if (yellowMovingBlock.length) {
-    for(let i = 0; i < yellowMovingBlock.length; i++) {
+    for (let i = 0; i < yellowMovingBlock.length; i++) {
 
 
-    document.addEventListener('mousemove', function (event) {
+      document.addEventListener('mousemove', function (event) {
 
-      const blockWidth = window.innerWidth;
-      const oneDeg = blockWidth / 100;
-      const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
+        const blockWidth = window.innerWidth;
+        const oneDeg = blockWidth / 100;
+        const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
 
-      yellowMovingBlock[i].style.transform = `rotate(${tiltAngle}deg)`;
+        yellowMovingBlock[i].style.transform = `rotate(${tiltAngle}deg)`;
 
-      const computedFontSize = window.getComputedStyle(
-        document.documentElement
-      ).fontSize;
+        const computedFontSize = window.getComputedStyle(
+          document.documentElement
+        ).fontSize;
 
-      const computedFontSizeNumber = computedFontSize.slice(
-        0,
-        computedFontSize.length - 2
-      );
-
-      const movingBlockTopLine = yellowMovingBlock[i].querySelector(
-        '.yellow-moving-block-top-line '
-      );
-      const movingBlockBottomLine = yellowMovingBlock[i].querySelector(
-        '.yellow-moving-block-bottom-line'
-      );
-
-      const mousePos = {
-        x: event.pageX,
-        y: event.pageY,
-      };
-
-      const bodyRect = document.body.getBoundingClientRect();
-      const elemRect = yellowMovingBlock[i].getBoundingClientRect();
-      const movingBlockTopOffset = elemRect.top - bodyRect.top;
-      const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
-
-      const verticalLeg = Math.abs(
-        blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
-      );
-      const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
-
-      const activationHeight = 300;
-      const shiftNumber = 3;
-
-      const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
-
-      if (activationTopArea > 0 && activationTopArea < activationHeight) {
-        const shadowShiftPercentage =
-          100 - (activationTopArea / activationHeight) * 100;
-        const leftShiftPercentage =
-          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const rightShiftPercentage =
-          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-        const rightShadowShiftNumber =
-          (shiftNumber / 100) * rightShiftPercentage;
-
-        movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
-        movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
-      }
-
-      const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
-
-      if (activationBottomArea < activationHeight && activationBottomArea > 0) {
-        const shadowShiftPercentage =
-          100 - (activationBottomArea / activationHeight) * 100;
-        const leftShiftPercentage =
-          (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const rightShiftPercentage =
-          (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-        const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-        const rightShadowShiftNumber =
-          (shiftNumber / 100) * rightShiftPercentage;
-
-        movingBlockBottomLine.setAttribute(
-          'y1',
-          `${100 + leftShadowShiftNumber}%`
+        const computedFontSizeNumber = computedFontSize.slice(
+          0,
+          computedFontSize.length - 2
         );
-        movingBlockBottomLine.setAttribute(
-          'y2',
-          `${100 + rightShadowShiftNumber}%`
+
+        const movingBlockTopLine = yellowMovingBlock[i].querySelector(
+          '.yellow-moving-block-top-line '
         );
-      }
-    });
-  }
+        const movingBlockBottomLine = yellowMovingBlock[i].querySelector(
+          '.yellow-moving-block-bottom-line'
+        );
+
+        const mousePos = {
+          x: event.pageX,
+          y: event.pageY,
+        };
+
+        const bodyRect = document.body.getBoundingClientRect();
+        const elemRect = yellowMovingBlock[i].getBoundingClientRect();
+        const movingBlockTopOffset = elemRect.top - bodyRect.top;
+        const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
+
+        const verticalLeg = Math.abs(
+          blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
+        );
+        const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
+
+        const activationHeight = 300;
+        const shiftNumber = 3;
+
+        const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
+
+        if (activationTopArea > 0 && activationTopArea < activationHeight) {
+          const shadowShiftPercentage =
+            100 - (activationTopArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
+          movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
+        }
+
+        const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
+
+        if (activationBottomArea < activationHeight && activationBottomArea > 0) {
+          const shadowShiftPercentage =
+            100 - (activationBottomArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockBottomLine.setAttribute(
+            'y1',
+            `${100 + leftShadowShiftNumber}%`
+          );
+          movingBlockBottomLine.setAttribute(
+            'y2',
+            `${100 + rightShadowShiftNumber}%`
+          );
+        }
+      });
+    }
 
   }
 
@@ -379,25 +379,25 @@ window.addEventListener('DOMContentLoaded', () => {
     let parent = document.querySelectorAll('.parent');
     let follower = document.querySelectorAll('.follower');
     if (parent.length && follower.length && follower.length === parent.length) {
-      for(let i = 0; i < parent.length; i++) {
+      for (let i = 0; i < parent.length; i++) {
 
-      let parentRect = parent[i].getBoundingClientRect();
-      let x = event.clientX - parentRect.left;
-      let newX = x - follower[i].offsetWidth; // Вычисляем новое положение в противоположной стороне
+        let parentRect = parent[i].getBoundingClientRect();
+        let x = event.clientX - parentRect.left;
+        let newX = x - follower[i].offsetWidth; // Вычисляем новое положение в противоположной стороне
 
-      newX = Math.max(
-        0,
-        Math.min(newX, parentRect.width - follower[i].offsetWidth)
-      );
+        newX = Math.max(
+          0,
+          Math.min(newX, parentRect.width - follower[i].offsetWidth)
+        );
 
-      if (!isMoving) {
-        isMoving = true;
-        follower[i].style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
+        if (!isMoving) {
+          isMoving = true;
+          follower[i].style.transform = 'translateX(' + newX + 'px)'; // Используем translateX для перемещения блока
 
           isMoving = false;
+        }
       }
     }
-      }
 
   });
   // const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
@@ -539,21 +539,22 @@ window.addEventListener('DOMContentLoaded', () => {
         ? smallFilterCounter
         : extendedFilterCounter;
 
-    const filterChild = filterOpen.querySelector('.counter');
-    if (!moreCheckedInputsNumber) {
-      if (filterChild) {
-        filterOpen.removeChild(filterChild);
-      }
-    } else {
-      if (filterChild) {
-        filterChild.textContent = moreCheckedInputsNumber;
-      } else {
-        const counter = document.createElement('div');
-        counter.textContent = moreCheckedInputsNumber;
-        counter.classList.add('counter');
-        filterOpen.appendChild(counter);
-      }
-    }
+    // счетчик фильтров
+    // const filterChild = filterOpen.querySelector('.counter');
+    // if (!moreCheckedInputsNumber) {
+    //   if (filterChild) {
+    //     filterOpen.removeChild(filterChild);
+    //   }
+    // } else {
+    //   if (filterChild) {
+    //     filterChild.textContent = moreCheckedInputsNumber;
+    //   } else {
+    //     const counter = document.createElement('div');
+    //     counter.textContent = moreCheckedInputsNumber;
+    //     counter.classList.add('counter');
+    //     filterOpen.appendChild(counter);
+    //   }
+    // }
   };
 
   if (filterOpen) {
