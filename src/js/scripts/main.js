@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', () => {
           x: cursorPosition.x / (avaliableCursorArea.width / 100),
           y:
             (cursorPosition.y + avaliableCursorArea.heightCompensator) /
-              (avaliableCursorArea.height / 100) -
+            (avaliableCursorArea.height / 100) -
             100,
         };
 
@@ -282,7 +282,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (yellowMovingBlock.length) {
     for (let i = 0; i < yellowMovingBlock.length; i++) {
+
+
       document.addEventListener('mousemove', function (event) {
+
         const blockWidth = window.innerWidth;
         const oneDeg = blockWidth / 100;
         const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
@@ -318,8 +321,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const verticalLeg = Math.abs(
           blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
         );
-        const activationTopArea =
-          verticalLeg + movingBlockTopOffset - mousePos.y;
+        const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
 
         const activationHeight = 300;
         const shiftNumber = 3;
@@ -333,8 +335,7 @@ window.addEventListener('DOMContentLoaded', () => {
             (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
           const rightShiftPercentage =
             (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber =
-            (shiftNumber / 100) * leftShiftPercentage;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
           const rightShadowShiftNumber =
             (shiftNumber / 100) * rightShiftPercentage;
 
@@ -344,18 +345,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
 
-        if (
-          activationBottomArea < activationHeight &&
-          activationBottomArea > 0
-        ) {
+        if (activationBottomArea < activationHeight && activationBottomArea > 0) {
           const shadowShiftPercentage =
             100 - (activationBottomArea / activationHeight) * 100;
           const leftShiftPercentage =
             (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
           const rightShiftPercentage =
             (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber =
-            (shiftNumber / 100) * leftShiftPercentage;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
           const rightShadowShiftNumber =
             (shiftNumber / 100) * rightShiftPercentage;
 
@@ -370,6 +367,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+
   }
 
   // boxshadow
@@ -382,6 +380,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let follower = document.querySelectorAll('.follower');
     if (parent.length && follower.length && follower.length === parent.length) {
       for (let i = 0; i < parent.length; i++) {
+
         let parentRect = parent[i].getBoundingClientRect();
         let x = event.clientX - parentRect.left;
         let newX = x - follower[i].offsetWidth; // Вычисляем новое положение в противоположной стороне
@@ -399,6 +398,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
+
   });
   // const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
   // if (yellowMovingBlock2) {
@@ -445,6 +445,7 @@ window.addEventListener('DOMContentLoaded', () => {
     'elephant-more-down-button'
   );
 
+
   for (let i = 0; i < elephantDownButtons.length; i++) {
     elephantDownButtons[i].addEventListener('click', function () {
       const content = this.nextElementSibling;
@@ -461,6 +462,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
 
   ////////////////////// для открытия нижних кнопок
   document.addEventListener('click', function (event) {
@@ -537,21 +539,22 @@ window.addEventListener('DOMContentLoaded', () => {
         ? smallFilterCounter
         : extendedFilterCounter;
 
-    const filterChild = filterOpen.querySelector('.counter');
-    if (!moreCheckedInputsNumber) {
-      if (filterChild) {
-        filterOpen.removeChild(filterChild);
-      }
-    } else {
-      if (filterChild) {
-        filterChild.textContent = moreCheckedInputsNumber;
-      } else {
-        const counter = document.createElement('div');
-        counter.textContent = moreCheckedInputsNumber;
-        counter.classList.add('counter');
-        filterOpen.appendChild(counter);
-      }
-    }
+    // счетчик фильтров
+    // const filterChild = filterOpen.querySelector('.counter');
+    // if (!moreCheckedInputsNumber) {
+    //   if (filterChild) {
+    //     filterOpen.removeChild(filterChild);
+    //   }
+    // } else {
+    //   if (filterChild) {
+    //     filterChild.textContent = moreCheckedInputsNumber;
+    //   } else {
+    //     const counter = document.createElement('div');
+    //     counter.textContent = moreCheckedInputsNumber;
+    //     counter.classList.add('counter');
+    //     filterOpen.appendChild(counter);
+    //   }
+    // }
   };
 
   if (filterOpen) {
@@ -594,6 +597,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
 
   function toggleSearch() {
     let mobileMenu = document.getElementById('mobile-menu');
@@ -679,6 +683,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
   class Slider {
     constructor(rangeElement, valueElement, options) {
       this.rangeElement = rangeElement;
@@ -702,7 +707,7 @@ window.addEventListener('DOMContentLoaded', () => {
     asMoney(value) {
       return (
         '$' +
-        parseFloat(value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+        parseFloat(value).toLocaleString('en-US', {maximumFractionDigits: 2})
       );
     }
 
