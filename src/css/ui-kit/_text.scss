@@ -102,7 +102,7 @@ p {
 }
 
 .link-m {
-  @apply relative -bottom-2px inline  cursor-pointer border-b-2 border-black p-0 text-m font-normal;
+  @apply relative -bottom-2px inline  cursor-pointer border-b border-black p-0 text-m font-normal;
 
   &:hover {
     @apply border-b-2 border-transparent text-text;
@@ -110,7 +110,7 @@ p {
 }
 
 .link-m-bold {
-  @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-m font-medium;
+  @apply relative -bottom-2px inline cursor-pointer border-b border-black p-0 text-m font-medium;
   &:hover {
     @apply border-b-2 border-transparent text-text;
   }
@@ -131,8 +131,8 @@ p {
 }
 
 .link-s-bold {
-  @apply relative -bottom-2px inline cursor-pointer border-b-2 border-black p-0 text-xl font-medium leading-none;
+  @apply relative inline cursor-pointer border-b border-black p-0 text-xl pb-2 font-medium leading-none;
   &:hover {
-    @apply border-b-2 border-transparent text-text;
+    @apply border-transparent text-text;
   }
 }
