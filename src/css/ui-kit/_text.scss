@@ -131,7 +131,7 @@ p {
 }
 
 .link-s-bold {
-  @apply relative inline cursor-pointer border-b border-black p-0 text-xl pb-2 font-medium leading-none;
+  @apply relative inline cursor-pointer border-b border-black p-0 pb-2 text-xl font-medium leading-none;
   &:hover {
     @apply border-transparent text-text;
   }
