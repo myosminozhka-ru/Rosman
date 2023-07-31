@@ -17,15 +17,13 @@
 }
 
 .footer-heading-main {
-  @apply flex flex-col items-start justify-between;
+  @apply flex flex-col items-start justify-between gap-64 ipadmini:gap-40;
   flex-basis: 52rem;
 }
 
 .footer-heading-image {
-  @apply block;
-  height: 8.8rem;
-  width: 8.3rem;
-  background: url('../../img/footer_elephant.svg') no-repeat center;
+  @apply block h-[8.8rem] sm:h-[5.5rem] aspect-square;
+  background: url('../../img/footer-logo-main.png') no-repeat left;
   background-size: contain;
 }
 
@@ -43,7 +41,7 @@
 .disc-rosman-item {
   @apply px-0 py-8 text-xl;
   @media (min-width: 501px) and (max-width: 900px) {
-    @apply p-8 text-xl;
+    @apply text-xl;
   }
   @media screen and (max-width: 500px) {
     @apply text-s;
@@ -51,7 +49,7 @@
 }
 
 .disc-rosman-button {
-  @apply justify-between px-0 py-0  text-15.20;
+  @apply justify-between px-0 py-0 font-medium text-15.20;
 }
 
 .disc-rosman-content {
@@ -149,11 +147,11 @@
 }
 
 .footer-section-items {
-  @apply flex flex-col gap-8;
+  @apply flex flex-col gap-16;
 }
 
 .footer-section-item {
-  @apply w-max py-8;
+  @apply w-max;
 }
 
 //.footer_heading_about,
