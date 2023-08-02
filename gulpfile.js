@@ -12,7 +12,7 @@
   3. npm run prod //To generate minifed files for live server
 */
 
-const { src, dest, watch, series, parallel } = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 const clean = require('gulp-clean'); //For Cleaning build/dist for fresh export
 const options = require('./config'); //paths and other options from config.js
 const browserSync = require('browser-sync').create();
@@ -60,7 +60,7 @@ function devStyles() {
   return src(`${options.paths.src.css}/**/*.scss`)
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(dest(options.paths.dist.css));
 }
 
@@ -70,7 +70,7 @@ function devScripts() {
     `${options.paths.src.js}/**/*.js`,
     `!${options.paths.src.js}/**/external/*`,
   ])
-    .pipe(concat({ path: 'scripts.js' }))
+    .pipe(concat({path: 'scripts.js'}))
     .pipe(dest(options.paths.dist.js));
 }
 
@@ -122,7 +122,7 @@ function devClean() {
     '\n\t' + logSymbols.info,
     'Cleaning dist folder for fresh start.\n'
   );
-  return src(options.paths.dist.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.dist.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
@@ -154,7 +154,7 @@ function prodStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -187,7 +187,7 @@ function prodGitStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -212,7 +212,7 @@ function prodScripts() {
     `${options.paths.src.js}/libs/**/*.js`,
     `${options.paths.src.js}/**/*.js`,
   ])
-    .pipe(concat({ path: 'scripts.js' }))
+    .pipe(concat({path: 'scripts.js'}))
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
@@ -220,7 +220,7 @@ function prodScripts() {
 function prodGitLibsScripts() {
   return (
     src([`${options.paths.src.js}/libs/**/*.js`])
-      .pipe(concat({ path: 'libs.js' }))
+      .pipe(concat({path: 'libs.js'}))
       // .pipe(uglify())
       .pipe(dest(options.paths.docs.js))
   );
@@ -229,7 +229,7 @@ function prodGitLibsScripts() {
 function prodGitDevScripts() {
   return (
     src([`${options.paths.src.js}/scripts/**/*.js`])
-      .pipe(concat({ path: 'scripts.js' }))
+      .pipe(concat({path: 'scripts.js'}))
       // .pipe(uglify())
       .pipe(dest(options.paths.docs.js))
   );
@@ -243,8 +243,8 @@ function prodImages() {
     ? options.config.imagemin.jpeg
     : 70;
   const plugins = [
-    pngquant({ quality: pngQuality }),
-    mozjpeg({ quality: jpgQuality }),
+    pngquant({quality: pngQuality}),
+    mozjpeg({quality: jpgQuality}),
   ];
 
   return src(options.paths.src.img + '/**/*')
@@ -260,8 +260,8 @@ function prodGitImages() {
     ? options.config.imagemin.jpeg
     : 70;
   const plugins = [
-    pngquant({ quality: pngQuality }),
-    mozjpeg({ quality: jpgQuality }),
+    pngquant({quality: pngQuality}),
+    mozjpeg({quality: jpgQuality}),
   ];
 
   return src(options.paths.src.img + '/**/*')
@@ -298,7 +298,7 @@ function prodClean() {
     '\n\t' + logSymbols.info,
     'Cleaning build folder for fresh start.\n'
   );
-  return src(options.paths.build.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.build.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
@@ -308,7 +308,7 @@ function prodGitClean() {
     '\n\t' + logSymbols.info,
     'Cleaning build folder for fresh start.\n'
   );
-  return src(options.paths.docs.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.docs.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
