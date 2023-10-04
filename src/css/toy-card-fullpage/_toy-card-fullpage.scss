@@ -45,6 +45,9 @@
 
 // breadcrumb-home.svg
 .breadcrumbs {
+  li:last-child span {
+    color: #000000;
+  }
   @media (max-width: 801px) {
     @apply hidden;
   }
@@ -689,10 +692,10 @@
 }
 
 .card-fullpage-instruction-text-image {
-  @apply block h-20 w-20;
+  @apply block h-28 w-28;
   background: url('../../img/download.svg') no-repeat center;
   background-size: contain;
-  flex-basis: 2rem;
+  flex-basis: 2.8rem;
   flex-shrink: 0;
 }
 
@@ -776,7 +779,9 @@
 
 .slider__flex {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start;    
+  flex-shrink: 0;
+  width: 100%;
 
   @media screen and (max-width: 768px) {
     max-height: 100%;
@@ -803,8 +808,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider__next {
+  bottom: 0;
 }
 
+.slider__prev {
+  top: 0;
+}
 .slider__prev:focus,
 .slider__next:focus {
   outline: none;
@@ -824,7 +837,8 @@
 }
 
 .slider__images {
-  width: 50.4rem;
+  width: 50.4rem;    
+  flex-shrink: 0;
   aspect-ratio: 1/1;
 }
 
@@ -877,7 +891,8 @@
   background-color: #f5f5f5;
 
   @media screen and (max-width: 768px) {
-    max-width: 100%;
+    max-width: 100%;        
+    background-color: #fff;
   }
 }
 

@@ -24,7 +24,8 @@ if (randomBookButton) {
       body: JSON.stringify(requestData),
     })
       .then((response) => response.json())
-      .then((data) => {})
+      .then((data) => {
+      })
       .catch((error) => {
         console.error(error);
       });

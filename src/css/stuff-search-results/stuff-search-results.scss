@@ -10,8 +10,8 @@
 
 .bordered_tags_item {
   @media screen and (max-width: 480px) {
-    @apply text-11.14;
-    padding: 0.4rem !important;
+    @apply text-11.14;        
+    padding: 0.35rem 0.65rem !important;
   }
 }
 

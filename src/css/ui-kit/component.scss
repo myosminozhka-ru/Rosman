@@ -13,6 +13,7 @@
 
 .scroll-block {
   @apply h-140 overflow-y-auto;
+  padding-right: 0.2rem;
 }
 
 .scroll-block::-webkit-scrollbar-track {
@@ -20,12 +21,14 @@
 }
 
 .scroll-block::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.3rem;
+  background: #D9D9D9;
+  outline: 1px solid #D9D9D9;
 }
 
-.scroll-block::-webkit-scrollbar-thumb {
-  border-radius: 0.4rem;
-  background: #acadad;
+.scroll-block::-webkit-scrollbar-thumb {    
+  background-color: #000000;
+  border-radius: 3px;
 }
 
 .scroll-block:hover::-webkit-scrollbar-thumb {
@@ -83,7 +86,7 @@
 
 .mobile-filter {
   position: relative;
-
+  
   .counter {
     position: absolute;
     right: -0.5rem;
@@ -121,7 +124,29 @@
     background-size: 2rem 2rem;
   }
 }
+.open-filter {
 
+  @media screen and (max-width: 900px) {
+    background: #fff;
+    display: flex !important;
+    /* height: 95vh; */
+    bottom: 60px;
+    left: 0;
+    overflow-y: scroll;
+    padding-top: 1.2rem;
+    /* padding-bottom: 3rem; */
+    padding-left: 4rem;
+    padding-right: 2.4rem;
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    z-index: 100002
+  }
+  @media (max-width:768px) {
+    padding-left: 2.2rem;
+    padding-right: 1.2rem;
+  }
+}
 .mobile-p {
   @media screen and (min-width: 900px) {
     @apply hidden;
@@ -165,21 +190,6 @@
 
   @media screen and (max-width: 900px) {
     @apply hidden;
-  }
-}
-
-.open-filter {
-  @media screen and (max-width: 900px) {
-    display: flex !important;
-    position: fixed;
-    top: 0;
-    background: white;
-    width: 100% !important;
-    z-index: 100002;
-    left: 0;
-    padding: 1.2rem;
-    height: 95vh;
-    overflow-y: scroll;
   }
 }
 

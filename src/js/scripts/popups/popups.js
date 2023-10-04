@@ -1,3 +1,4 @@
+
 const popupMethods = ['close', 'open'];
 
 window.popup = function (popupName, method) {
@@ -7,14 +8,16 @@ window.popup = function (popupName, method) {
   }
 
   const popup = document.getElementById(popupName);
-  if (!popup) {
-    console.error('не корректное имя попапа' + ' - ' + `${popupName}`);
-    return;
+  if(!popup) {
+    console.error('не корректное имя попапа' + ' - ' + `${popupName}`)
+    return
   }
 
   if (method === popupMethods[0]) {
+    document.body.style.overflow = 'visible';
     popup.classList.remove('--active');
   } else {
+    document.body.style.overflow = 'hidden';
     popup.classList.add('--active');
   }
 };
@@ -22,13 +25,16 @@ window.popup = function (popupName, method) {
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('modal')) {
     e.target.classList.remove('--active');
+    document.body.style.overflow = 'visible';
   }
 
   if (e.target.classList.contains('ui-popup-close-button')) {
+    document.body.style.overflow = 'visible';
     e.target.closest('.modal').classList.remove('--active');
   }
 
   if (e.target.classList.contains('ui-popup-close')) {
+    document.body.style.overflow = 'visible';
     e.target.closest('.modal').classList.remove('--active');
   }
 });
@@ -128,8 +134,7 @@ if (brandPopupCheckboxes) {
 const allFiltersPopup = document.querySelector('.pup_brand_input');
 if (allFiltersPopup) {
   allFiltersPopup.addEventListener('input', function (event) {
-    let searchValue = allFiltersPopup.value.toLowerCase().trim();
-    searchValue = searchValue.replace(/\W/g, '');
+    let searchValue = event.target.value.toLowerCase().trim();
     const imageContainers = document.querySelectorAll('.image_container');
 
     imageContainers.forEach((container) => {
@@ -141,7 +146,7 @@ if (allFiltersPopup) {
       }
     });
 
-    if (searchValue.length < 3) {
+    if (searchValue.length < 2) {
       imageContainers.forEach((container) => {
         container.classList.remove('!hidden');
       });

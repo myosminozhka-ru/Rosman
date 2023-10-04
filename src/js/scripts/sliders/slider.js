@@ -82,9 +82,9 @@ window.addEventListener('DOMContentLoaded', () => {
           currentClass +
           '"></span>' +
           ' ' +
-          '	&nbsp;' +
+          '	&nbsp; &nbsp;' +
           '<span class="text-slider-fraction body-m"> из </span> ' +
-          '	&nbsp;' +
+          '	&nbsp; &nbsp;' +
           '<span class="text-slider-fraction body-m ' +
           totalClass +
           '"></span>'
@@ -101,6 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  
   new Swiper('.js-toys-banner', {
     loop: false,
     navigation: {
@@ -120,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.persons-slider', {
     loop: false,
     navigation: {
       nextEl: '.button-next',
@@ -208,6 +209,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
   const swiperText = new Swiper('.swiper-text', {
     loop: false,
     navigation: {
@@ -225,26 +227,60 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const runStroke = new Swiper('.swiper-container', {
+  const runStroke = new Swiper('.running-stroke', {
     loop: false,
     autoplay: {
-      delay: 20,
+      delay: 10,
       disableOnInteraction: false,
     },
-    speed: 6000,
+    speed: 3000,
     slidesPerView: 6,
   });
 
   const runStrokeReverse = new Swiper('.swiper-container-reverse', {
     loop: false,
     autoplay: {
-      delay: 20,
+      delay: 10,
       disableOnInteraction: false,
       reverseDirection: true,
     },
-    speed: 6000,
+    speed: 3000,
     slidesPerView: 6,
   });
+
+  const runStrokeSwiperContainers = document.querySelectorAll('.swiper-container')
+  const runStrokeSwiperContainersReverse = document.querySelectorAll('.swiper-container-reverse')
+
+  const holdParntersSliderAnimation = function(el) {
+    el.autoplay.stop()
+  }
+
+  const playPartnerSliderAnimation = function(el) {
+    el.autoplay.start()
+  }
+  
+  for(let i = 0; i < runStrokeSwiperContainers.length; i++) {
+    runStrokeSwiperContainers[i].addEventListener('mouseenter', function(e) {
+      holdParntersSliderAnimation(runStroke[i])
+    })
+  
+    runStrokeSwiperContainers[i].addEventListener('mouseleave', function() {
+      playPartnerSliderAnimation(runStroke[i])
+      runStrokeSwiperContainers[i].removeEventListener('mouseenter', holdParntersSliderAnimation)
+    })
+  }
+
+  for(let i = 0; i < runStrokeSwiperContainersReverse.length; i++) {
+    runStrokeSwiperContainersReverse[i].addEventListener('mouseenter', function(e) {
+      holdParntersSliderAnimation(runStrokeReverse[i])
+    })
+  
+    runStrokeSwiperContainersReverse[i].addEventListener('mouseleave', function() {
+      playPartnerSliderAnimation(runStrokeReverse[i])
+      runStrokeSwiperContainersReverse[i].removeEventListener('mouseenter', playPartnerSliderAnimation)
+    })
+  } 
+
 });
 
 // слайдер для истории слона, слайдер, но не свипер,
@@ -264,7 +300,7 @@ function addActiveClassToAutoOpenElements() {
   const autoOpenElements = document.querySelectorAll('.auto-open');
 
   if (autoOpenElements.length > 0) {
-    autoOpenElements.forEach(element => {
+    autoOpenElements.forEach((element) => {
       element.classList.add('active-js');
     });
   }

@@ -1,7 +1,7 @@
 .container-elephant-on-planets {
   @apply flex flex-col items-center px-40;
   margin-bottom: 6.4rem;
-  margin-top: 10.4rem;
+  margin-top: 15.4rem;
   @media (min-width: 700px) and (max-width: 900px) {
     @apply px-20;
     margin-bottom: 4.8rem;
@@ -34,28 +34,36 @@
   }
 }
 
-.wrapper-first {
-  top: -10rem;
-  left: 2.3rem;
+.wrapper-first {    
+  left: 1.2vw;
+  top: -8vw;
   flex-basis: 40rem;
   @media (min-width: 701px) and (max-width: 900px) {
-    left: 2.8rem;
+    left: 1vw;
   }
   @media screen and (max-width: 700px) {
     top: 0;
     left: 0;
     flex-basis: 33.6rem;
   }
+  @media screen and (min-width: 1433px) {
+    top: -15.8rem;
+    left: 3rem;
+  }
 }
 
-.wrapper-second {
-  top: -10rem;
-  right: 2.3rem;
+.wrapper-second {    
+  right: 1.4vw;
+  top: -8vw;
   flex-basis: 40rem;
-  @media (min-width: 701px) and (max-width: 900px) {
-    right: 2.8rem;
+  @media screen and (min-width: 1433px) {
+    top: -15.8rem;
+    right: 2.9rem;
   }
-  @media screen and (max-width: 700px) {
+  @media (min-width: 701px) and (max-width: 900px) {
+    right: 1vw;
+  }
+  @media screen and (max-width: 768px) {
     top: 0;
     right: 0;
     flex-basis: 33.6rem;
@@ -69,11 +77,15 @@
   }
 }
 
-.static-text {
+.static-text {    
+  width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width:700px) {
+    width: 90%;
+  }
 }
 
 .planet {

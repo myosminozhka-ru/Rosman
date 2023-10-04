@@ -5,9 +5,13 @@
 }
 
 .footer-container {
-  @apply flex flex-col gap-28 bg-background px-24 py-32;
+  @apply flex flex-col gap-28 bg-background px-24 py-32;    
+  padding-top: 32px;
+  padding-bottom: 32px;
   @media screen and (max-width: 900px) {
-    @apply gap-12 px-12 py-24;
+    @apply gap-12 px-12 py-24;        
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -23,8 +27,14 @@
 
 .footer-heading-image {
   @apply block h-[8.8rem] sm:h-[5.5rem] aspect-square;
-  background: url('../../img/footer-logo-main.png') no-repeat left;
-  background-size: contain;
+  background: url('../../img/mobile-logo.svg') no-repeat center;
+  background-size: contain;    
+  display: block;
+  width: 8.3rem;
+  aspect-ratio: 89 / 83;
+  @media (max-width: 768px) {
+    width: 5.5rem;
+  }
 }
 
 .footer-heading-subscription {
@@ -96,10 +106,15 @@
 
 .js-footer-heading-policy-agreement {
   @apply flex w-min flex-row flex-nowrap;
+  @media (max-width: 768px) {
+    justify-content: start;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-heading-policy-agreement-text {
-  @apply ml-20 flex flex-row flex-nowrap items-end text-s font-medium;
+  @apply ml-30 flex flex-row flex-nowrap items-end text-s;
   @media screen and (max-width: 500px) {
     @apply flex flex-col items-start;
   }
