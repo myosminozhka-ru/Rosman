@@ -204,14 +204,8 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', function (event) {
       const windowWidth = window.innerWidth;
       const blockWidth = movingBlock.offsetWidth;
-
-      // Вычисляем позицию блока на основе позиции мыши и ширины окна
       let blockX = event.clientX - blockWidth / 2;
-
-      // Вычисляем наклон блока в зависимости от позиции мыши
       let tilt = (blockX / windowWidth) * 2;
-
-      // Применяем наклон к блоку с помощью свойства transform
       movingBlock.style.transform = `rotate(${tilt}deg)`;
 
       const computedFontSize = window.getComputedStyle(
@@ -258,22 +252,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const shadowFractionToShift = 0.8;
 
-        movingBlockShadow.setAttribute(
-          'd',
-          `M 0 ${
-            (shadowFractionToShift / 100) *
-            getAveragePercentage([
-              averageCoordinates.left,
-              averageCoordinates.top,
-            ])
-          } L 100 ${
-            (shadowFractionToShift / 100) *
-            getAveragePercentage([
-              averageCoordinates.right,
-              averageCoordinates.top,
-            ])
-          } L 100 100 L 0 100`
-        );
+        setTimeout(() => {
+          movingBlockShadow.setAttribute(
+            'd',
+            `M 0 ${
+              (shadowFractionToShift / 100) *
+              getAveragePercentage([
+                averageCoordinates.left,
+                averageCoordinates.top,
+              ])
+            } L 100 ${
+              (shadowFractionToShift / 100) *
+              getAveragePercentage([
+                averageCoordinates.right,
+                averageCoordinates.top,
+              ])
+            } L 100 100 L 0 100`
+          );
+        }, 0)
       }
     });
   }
@@ -282,10 +278,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (yellowMovingBlock.length) {
     for (let i = 0; i < yellowMovingBlock.length; i++) {
-
-
       document.addEventListener('mousemove', function (event) {
-
         const blockWidth = window.innerWidth;
         const oneDeg = blockWidth / 100;
         const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
@@ -321,7 +314,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const verticalLeg = Math.abs(
           blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
         );
-        const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
+        const activationTopArea =
+          verticalLeg + movingBlockTopOffset - mousePos.y;
 
         const activationHeight = 300;
         const shiftNumber = 3;
@@ -335,7 +329,8 @@ window.addEventListener('DOMContentLoaded', () => {
             (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
           const rightShiftPercentage =
             (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const leftShadowShiftNumber =
+            (shiftNumber / 100) * leftShiftPercentage;
           const rightShadowShiftNumber =
             (shiftNumber / 100) * rightShiftPercentage;
 
@@ -345,14 +340,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
 
-        if (activationBottomArea < activationHeight && activationBottomArea > 0) {
+        if (
+          activationBottomArea < activationHeight &&
+          activationBottomArea > 0
+        ) {
           const shadowShiftPercentage =
             100 - (activationBottomArea / activationHeight) * 100;
           const leftShiftPercentage =
             (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
           const rightShiftPercentage =
             (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const leftShadowShiftNumber =
+            (shiftNumber / 100) * leftShiftPercentage;
           const rightShadowShiftNumber =
             (shiftNumber / 100) * rightShiftPercentage;
 
@@ -367,7 +366,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-
   }
 
   // boxshadow
@@ -380,7 +378,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let follower = document.querySelectorAll('.follower');
     if (parent.length && follower.length && follower.length === parent.length) {
       for (let i = 0; i < parent.length; i++) {
-
         let parentRect = parent[i].getBoundingClientRect();
         let x = event.clientX - parentRect.left;
         let newX = x - follower[i].offsetWidth; // Вычисляем новое положение в противоположной стороне
@@ -398,7 +395,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
-
   });
   // const yellowMovingBlock2 = document.getElementById('yellow-moving-block2');
   // if (yellowMovingBlock2) {
@@ -445,7 +441,6 @@ window.addEventListener('DOMContentLoaded', () => {
     'elephant-more-down-button'
   );
 
-
   for (let i = 0; i < elephantDownButtons.length; i++) {
     elephantDownButtons[i].addEventListener('click', function () {
       const content = this.nextElementSibling;
@@ -462,7 +457,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 
   ////////////////////// для открытия нижних кнопок
   document.addEventListener('click', function (event) {
@@ -507,16 +501,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const filterOpen = document.getElementById('open-filter');
   const filterClose = document.getElementById('close-filter');
-  const filter = document.getElementById('filter');
+  const filter = document.getElementById('filter-form-3');
   const filter2 = document.getElementById('filter-2');
-  const allFilters = document.querySelector('#js_popup_all_filters_modal');
+  const allFilters = document.querySelector('#js_popup_all_filters_modal .popup_all_filters_block_filter');
 
-  const filterCheckedInputsCounter = function () {
-    const counter = 0;
+  filterOpen?.addEventListener('click', () => {
+    setTimeout(() => {
+      window.autoOpenFilterByHeight()
+    }, 50)
+  })
+
+  window.filterCheckedInputsCounter = function () {
+    let checkedInputsCount = 0;
+    const allInputs = allFilters.getElementsByTagName('input');
+
+    for (let i = 0; i < allInputs.length; i++) {
+      if (allInputs[i].checked) {
+        console.log('checked: ', allInputs[i])
+        checkedInputsCount++;
+      }
+    }
+    console.log(checkedInputsCount)
   };
-
-  let smallFilterCounter = 0;
-  let extendedFilterCounter = 0;
 
   const setFiltersCheckedCounts = function (filterEl, filterSize) {
     let checkedInputsCount = 0;
@@ -527,80 +533,69 @@ window.addEventListener('DOMContentLoaded', () => {
         checkedInputsCount++;
       }
     }
-
-    if (filterSize === 'small') {
-      smallFilterCounter = checkedInputsCount;
+    const filterChild = filterOpen.querySelector('.counter');
+    if (!checkedInputsCount) {
+      if (filterChild) {
+        filterOpen.removeChild(filterChild);
+      }
     } else {
-      extendedFilterCounter = checkedInputsCount;
+      if (filterChild) {
+        filterChild.textContent = checkedInputsCount;
+      } else {
+        const counter = document.createElement('div');
+        counter.textContent = checkedInputsCount;
+        counter.classList.add('counter');
+        filterOpen.appendChild(counter);
+      }
     }
-
-    let moreCheckedInputsNumber =
-      smallFilterCounter > extendedFilterCounter
-        ? smallFilterCounter
-        : extendedFilterCounter;
-
-    // счетчик фильтров
-    // const filterChild = filterOpen.querySelector('.counter');
-    // if (!moreCheckedInputsNumber) {
-    //   if (filterChild) {
-    //     filterOpen.removeChild(filterChild);
-    //   }
-    // } else {
-    //   if (filterChild) {
-    //     filterChild.textContent = moreCheckedInputsNumber;
-    //   } else {
-    //     const counter = document.createElement('div');
-    //     counter.textContent = moreCheckedInputsNumber;
-    //     counter.classList.add('counter');
-    //     filterOpen.appendChild(counter);
-    //   }
-    // }
   };
 
   if (filterOpen) {
     if (filter) {
       filter.addEventListener('click', function () {
-        setFiltersCheckedCounts(filter, 'small');
+        setTimeout(() => {
+          setFiltersCheckedCounts(allFilters);
+        }, 1000)
       });
     }
 
     if (filter2) {
       filter2.addEventListener('click', function () {
-        setFiltersCheckedCounts(filter2, 'small');
+        setTimeout(() => {
+          setFiltersCheckedCounts(allFilters);
+        }, 1000)
       });
     }
 
-    allFilters.addEventListener('click', function () {
-      setFiltersCheckedCounts(allFilters);
-    });
+    if (allFilters) {
+      allFilters.addEventListener('click', function () {
+        setTimeout(() => {
+          setFiltersCheckedCounts(allFilters);
+        }, 1000)
+      });
+    }
   }
 
   if (filterOpen !== null) {
     filterOpen.addEventListener('click', function () {
-      if (filter !== null) {
-        document.body.style.overflow = 'hidden';
-        filter.classList.add('open-filter');
-      } else if (filter2 !== null) {
+      if (filter2 !== null) {
         document.body.style.overflow = 'hidden';
         filter2.classList.add('open-filter');
       }
     });
   }
+
   if (filterClose !== null) {
     filterClose.addEventListener('click', function () {
-      if (filter !== null) {
-        document.body.style.overflow = 'auto';
-        filter.classList.remove('open-filter');
-      } else if (filter2 !== null) {
+      if (filter2 !== null) {
         document.body.style.overflow = 'auto';
         filter2.classList.remove('open-filter');
       }
     });
   }
 
-
   function toggleSearch() {
-    let mobileMenu = document.getElementById('mobile-menu');
+    // let mobileMenu = document.getElementById('mobile-menu');
     let headerNav = document.querySelector('.header-nav');
     let searchInput = document.querySelector('.search-input');
     let input = document.querySelector('.search-input input');
@@ -611,6 +606,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (headerNav.classList.contains('hide')) {
       headerNav.classList.remove('hide');
       logo.classList.remove('hide');
+      input.blur()
       for (let i = 0; i < headerbtn.length; i++) {
         headerbtn[i].classList.remove('hide-mobile');
         headerbtn[i].classList.remove('hide-icon');
@@ -624,18 +620,21 @@ window.addEventListener('DOMContentLoaded', () => {
         headerbtn[i].classList.add('hide-icon');
         headerbtn[i].classList.add('hide');
       }
+      input.focus()
     }
     if (searchInput.classList.contains('hide')) {
       searchInput.classList.remove('hide');
+      input.focus()
     } else {
       searchInput.classList.add('hide');
+      input.blur()
     }
 
-    if (mobileMenu.classList.contains('hide')) {
-      mobileMenu.classList.remove('hide');
-    } else {
-      mobileMenu.classList.add('hide');
-    }
+    // if (mobileMenu.classList.contains('hide')) {
+    //   mobileMenu.classList.remove('hide');
+    // } else {
+    //   mobileMenu.classList.add('hide');
+    // }
 
     const headerSearch = document.getElementById('search-header');
     const searchResult = document.getElementById('search-result-header');
@@ -682,7 +681,6 @@ window.addEventListener('DOMContentLoaded', () => {
       contentNavBar[i].classList.add('hide');
     }
   }
-
 
   class Slider {
     constructor(rangeElement, valueElement, options) {
@@ -768,11 +766,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
   function closeFilter() {
     const filterOpen = document.getElementById('open-filter');
     const filterClose = document.getElementById('close-filter');
     const filter = document.getElementById('filter');
     const filter2 = document.getElementById('filter-2');
+
     if (filterOpen !== null) {
       if (filter !== null) {
         document.body.style.overflow = 'hidden';
@@ -791,6 +791,14 @@ window.addEventListener('DOMContentLoaded', () => {
         filter2.classList.remove('open-filter');
       }
     }
+  }
+
+  const closeFilterButtons = document.querySelectorAll('.js-close-filter-button')
+
+  for(let i = 0; i < closeFilterButtons.length; i++) {
+    closeFilterButtons[i].addEventListener('click', function() {
+      closeFilter()
+    })
   }
 
   const inputSearch = document.querySelectorAll('.searchInput');
@@ -875,6 +883,23 @@ window.addEventListener('DOMContentLoaded', () => {
   //   });
   // }
 
+  function autoOpenFilterByHeight() {
+
+    const containers = document.querySelectorAll('#filter-2 [data-filter-values="container"]')
+    containers.forEach(element => {
+      const list = element.querySelector('.filter-label__list')
+      const styles = getComputedStyle(list)
+      const isHide = parseInt(styles.height) < parseInt(styles.maxHeight)
+      if (isHide) {
+        const btn = element.querySelector('[data-filter-values="btn"]')
+        btn?.remove()
+        list.classList.add('active')
+      }
+    })
+
+  }
+  autoOpenFilterByHeight()
+  window.autoOpenFilterByHeight = autoOpenFilterByHeight
   const headerSearch = document.getElementById('search-header');
   headerSearch.addEventListener('input', function () {
     const searchResult = document.getElementById('search-result-header');

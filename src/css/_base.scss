@@ -12,11 +12,8 @@
 }
 
 html {
-  font-size: 65.2%;
-  @media (min-width: 1280px) and (max-width: 1920px) {
-    font-size: calc-between-width(1280, 10.4, 1980, 17.2);
-  }
-  @media (min-width: 1920px) {
-    font-size: 107.9%;
+  font-size: 62.5%;
+  @media (min-width: 1433px) {
+    font-size: 73%;
   }
 }

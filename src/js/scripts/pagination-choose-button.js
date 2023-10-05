@@ -1,23 +1,93 @@
-const toggleBtn = document.querySelector('.js-alphabet-toggle-btn');
+
+
+const toggleAutorLangBtn = document.querySelector('.js-alphabet-toggle-btn');
 const alphabetBlocks = document.querySelectorAll('.js-alphabet');
 const dropdownAuthorList = document.querySelectorAll('.dd-author-list');
 
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', () => {
+function containsEnglishLetter(list) {
+  for (let i = 0; i < list.length; i++) {
+    const char = list[i];
+    const unicode = char.charCodeAt(0);
+    
+    if ((unicode >= 65 && unicode <= 90) || (unicode >= 97 && unicode <= 122)) {
+      return true; 
+    }
+  }
+  
+  return false; 
+}
+
+
+if (toggleAutorLangBtn) {
+  const alphabetListKeys = document.querySelectorAll('.js-autor-filter-lang-key')
+
+  const autorFilterButtons = document.querySelectorAll('.js-autor-filter-button')
+
+  for(let i = 0; i < autorFilterButtons.length; i++) {
+    autorFilterButtons[i].addEventListener('click', function(e) {
+      for(let j = 0; j < alphabetListKeys.length; j++) {
+        if(e.target.textContent === alphabetListKeys[j].textContent) {
+          const parentElement = alphabetListKeys[j].closest('.js-autor-filter-list')
+          parentElement.style.display = 'block'
+        } else {
+          const parentElement = alphabetListKeys[j].closest('.js-autor-filter-list')
+          parentElement.style.display = 'none'
+        }
+      }
+    })
+  }
+
+  const alphabetToggler = function() {
+    if(toggleAutorLangBtn.textContent.toLowerCase().split('').includes('z')) {
+      for(let i = 0; i < alphabetListKeys.length; i++) {
+        if(containsEnglishLetter(alphabetListKeys[i].textContent)) {
+          const parentElement = alphabetListKeys[i].closest(".js-autor-filter-list")
+          parentElement.style.display = 'none'
+        } else {
+          const parentElement = alphabetListKeys[i].closest(".js-autor-filter-list")
+          parentElement.style.display = 'block'
+        }
+      }
+    } else {
+      for(let i = 0; i < alphabetListKeys.length; i++) {
+        if(!containsEnglishLetter(alphabetListKeys[i].textContent)) {
+          const parentElement = alphabetListKeys[i].closest(".js-autor-filter-list")
+          parentElement.style.display = 'none'
+        } else {
+          const parentElement = alphabetListKeys[i].closest(".js-autor-filter-list")
+          parentElement.style.display = 'block'
+        }
+      }
+    }
+  }
+ 
+  toggleAutorLangBtn.addEventListener('click', () => {
     if (alphabetBlocks) {
       alphabetBlocks.forEach((block) => {
         block.classList.toggle('hidden');
       });
-      toggleBtn.innerHTML = toggleBtn.innerHTML === 'А-Я' ? 'A-Z' : 'А-Я';
+
+      toggleAutorLangBtn.innerHTML = toggleAutorLangBtn.innerHTML === '<span>А</span><span class="px-6">-</span><span>Я</span>' ? '<span>A</span><span class="px-6">-</span><span>Z</span>' : '<span>А</span><span class="px-6">-</span><span>Я</span>';
 
       if (dropdownAuthorList) {
         dropdownAuthorList.forEach((list) => {
           list.classList.toggle('hidden');
         });
       }
+
     }
+
+    setTimeout(() => {
+      alphabetToggler()
+    },0)
+
   });
+
+  alphabetToggler()
 }
+
+
+
 
 const authorsData = {
   А: [

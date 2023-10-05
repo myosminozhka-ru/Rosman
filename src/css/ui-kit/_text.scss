@@ -111,6 +111,8 @@ p {
 
 .link-m-bold {
   @apply relative -bottom-2px inline cursor-pointer border-b border-black p-0 text-m font-medium;
+  display: block;
+  width: fit-content;
   &:hover {
     @apply border-b-2 border-transparent text-text;
   }

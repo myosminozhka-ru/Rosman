@@ -1,3 +1,5 @@
+
+
 // карточкам будет дан специальный класс - js_traceable_item,
 // а элементам js-bg-changeable, которые будут менять фон,- js-hovered,
 // событие будет генерироваться на заход в целом на карточку - mouseenter/mouseleave
@@ -41,7 +43,6 @@ for (let i = 0; i < traceableItems.length; i++) {
     }
 
     this.style.backgroundColor = getRandomColor(colors);
-
   });
 }
 

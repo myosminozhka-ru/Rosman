@@ -1,3 +1,4 @@
+
 // let largeImg = document.querySelector('.largeImg');
 // let thumbs = document.querySelectorAll('.thumbs img');
 //
@@ -24,11 +25,12 @@ let isExpandedToys = false;
 
 if (jsMdb) {
   jsMdb.onclick = function (event) {
-    if (cardTextToHide) {
-      cardTextToHide.classList.toggle('js-card-fp-hidden-item');
-    }
+    // if (cardTextToHide) {
+    //   cardTextToHide.classList.toggle('js-card-fp-hidden-item');
+    // }
     if (cartToTrans) {
       cartToTrans.classList.toggle('card-fp-transparent-text');
+      cartToTrans.classList.toggle('active-js');
     }
     isExpandedToys = !isExpandedToys; // Изменяем состояние isExpanded при каждом клике
 
@@ -43,42 +45,42 @@ if (jsMdb) {
 }
 
 // для таба надо добавлять класс active-js, чтобы он подчеркивался
-const navButtons = document.querySelector('.card-fullpage-navigation');
-
-if (navButtons) {
-  const descriptionComponent = document.querySelector('.card-fp-description');
-  const characteristicsComponent = document.querySelector(
-    '.card-fp-characteristics'
-  );
-  const instructionComponent = document.querySelector('.card-fp-instruction');
-
-  navButtons.addEventListener('click', (event) => {
-    // event.preventDefault();
-    const currentChosen = navButtons.querySelector('.active-js');
-    const target = event.target.closest('.card-fullpage-tab');
-
-    if (!target || target === currentChosen) return;
-
-    if (currentChosen) {
-      currentChosen.classList.remove('active-js');
-    }
-    target.classList.add('active-js');
-
-    // Скрыть все компоненты
-    descriptionComponent.classList.add('hidden');
-    characteristicsComponent.classList.add('hidden');
-    instructionComponent.classList.add('hidden');
-
-    // Показать выбранный компонент
-    if (target.classList.contains('card-fp-tab-desc')) {
-      descriptionComponent.classList.remove('hidden');
-    } else if (target.classList.contains('card-fp-tab-char')) {
-      characteristicsComponent.classList.remove('hidden');
-    } else if (target.classList.contains('card-fp-tab-instr')) {
-      instructionComponent.classList.remove('hidden');
-    }
-  });
-}
+// const navButtons = document.querySelector('.card-fullpage-navigation');
+//
+// if (navButtons) {
+//   const descriptionComponent = document.querySelector('.card-fp-description');
+//   const characteristicsComponent = document.querySelector(
+//     '.card-fp-characteristics'
+//   );
+//   const instructionComponent = document.querySelector('.card-fp-instruction');
+//
+//   navButtons.addEventListener('click', (event) => {
+//     // event.preventDefault();
+//     const currentChosen = navButtons.querySelector('.active-js');
+//     const target = event.target.closest('.card-fullpage-tab');
+//
+//     if (!target || target === currentChosen) return;
+//
+//     if (currentChosen) {
+//       currentChosen.classList.remove('active-js');
+//     }
+//     target.classList.add('active-js');
+//
+//     // Скрыть все компоненты
+//     descriptionComponent.classList.add('hidden');
+//     characteristicsComponent.classList.add('hidden');
+//     instructionComponent.classList.add('!hidden');
+//
+//     // Показать выбранный компонент
+//     if (target.classList.contains('card-fp-tab-desc')) {
+//       descriptionComponent.classList.remove('hidden');
+//     } else if (target.classList.contains('card-fp-tab-char')) {
+//       characteristicsComponent.classList.remove('hidden');
+//     } else if (target.classList.contains('card-fp-tab-instr')) {
+//       instructionComponent.classList.remove('!hidden');
+//     }
+//   });
+// }
 
 // для описания будет такая кнопка - js-mdb-desc
 // а для текста описания будет card-fp-desc-hidden-block
@@ -107,7 +109,7 @@ if (jsMdbDescButton) {
     }
 
     if (isExpanded) {
-      jsMdbDescButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      jsMdbDescButton.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   };
 }
@@ -193,13 +195,12 @@ const swiperImage2 = new Swiper('.swiper-image-2', {
     nextEl: '.button-next',
     prevEl: '.button-prev',
   },
-  autoHeight: true,
   slidesPerView: 4,
   spaceBetween: 16,
   breakpoints: {
     950: {
       slidesPerView: 4,
-      spaceBetween: 25,
+      spaceBetween: 16,
     },
     600: {
       slidesPerView: 3,
@@ -233,7 +234,7 @@ const swiperImageGallery = new Swiper('.swiper-image-gallery', {
       spaceBetween: 16,
     },
     0: {
-      slidesPerView: 2.3,
+      slidesPerView: 2.38,
       spaceBetween: 16,
     },
   },
@@ -252,6 +253,8 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container-3', {
   clickable: true,
   freeMode: true,
 });
+
+
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.slider__images .swiper-container-4', {
   // ищем слайдер превью по селектору
@@ -344,86 +347,30 @@ const sliderImagesMob = new Swiper('.swiper-container-5', {
 // слайдер - смотреть фрагмент книги
 const swiperBookFragment = new Swiper('.swiper-book-fragment', {
   loop: false,
-  preventInteractionOnTransition: true,
   navigation: {
     nextEl: '.button-next',
     prevEl: '.button-prev',
   },
-  autoHeight: true,
-  allowTouchMove: false,
   slidesPerView: 1,
-  spaceBetween: 16,
+  spaceBetween: 0,
 });
-
 const sliderMain = document.querySelector('.slider-main');
-const sliderPages = document.querySelectorAll('.slider-page');
+const sliderPages = document.querySelectorAll('.slider-page--swiper-book-fragment');
 
-if (sliderPages && sliderMain) {
-  sliderPages.forEach(function (sliderPage) {
-    sliderPage.textContent = sliderMain.value;
-  });
-  const max = sliderMain.max;
-  const step = 100 / (max - 1);
-  window.addEventListener('load', function () {
-    const sliderValue = sliderMain.value;
-    sliderPages.forEach(function (sliderPage) {
-      sliderPage.textContent = sliderValue;
-    });
-
-    const slideNumber = parseInt(sliderMain.value) - 1;
-    const percentage = (slideNumber * step).toFixed(2);
-    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
-    sliderMain.style.background = color;
-  });
-
-  sliderMain.addEventListener('input', function () {
-    const currentValue = parseInt(this.value);
-    if (currentValue > swiperBookFragment.slides.length) {
-      this.value = swiperBookFragment.slides.length;
-    }
-    const sliderValue = sliderMain.value;
-    sliderPages.forEach(function (sliderPage) {
-      sliderPage.textContent = sliderValue;
-    });
-
-    const slideNumber = parseInt(this.value) - 1;
-    if (slideNumber <= swiperBookFragment.slides.length) {
-      swiperBookFragment.slideTo(slideNumber);
-    }
-
-    const percentage = (slideNumber * step).toFixed(2);
-    const color = `linear-gradient(90deg, black ${percentage}%, #E3E3E2 ${percentage}%)`;
-    sliderMain.style.background = color;
-  });
-}
-
-// тут кнопки для переключения слайдов,
-// события перестают генерироваться, если значение инпута больше количества слайдов
-const nextButtonFragment = document.querySelector('.bg-next-arrow');
-const prevButtonFragment = document.querySelector('.bg-prev-arrow');
-if (nextButtonFragment) {
-  nextButtonFragment.onclick = function () {
-    const nextValue = parseInt(sliderMain.value) + 1;
-    if (nextValue <= swiperBookFragment.slides.length) {
-      sliderMain.value = nextValue;
-      const event = new Event('input');
-      sliderMain.dispatchEvent(event);
-      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
-    }
-  };
-}
-
-if (prevButtonFragment) {
-  prevButtonFragment.onclick = function () {
-    const prevValue = parseInt(sliderMain.value) - 1;
-    if (prevValue >= 1) {
-      sliderMain.value = prevValue;
-      const event = new Event('input');
-      sliderMain.dispatchEvent(event);
-      swiperBookFragment.update(); // Обновить количество слайдов в swiperBookFragment
-    }
-  };
-}
+swiperBookFragment.on('slideChange', (swiper) => {
+  sliderPages.forEach(i => i.textContent = (swiper.realIndex + 1))
+  sliderMain.value = (swiper.realIndex + 1)
+  const progress = swiper.progress * 100
+  const color = `linear-gradient(90deg, black ${progress}%, #E3E3E2 ${progress}%)`;
+  sliderMain.style.background = color;
+})
+sliderMain?.addEventListener('input', (e) => {
+  const val = e.target.value
+  swiperBookFragment.slideTo(val - 1, 1000, false)
+  const progress = (val * 100) / swiperBookFragment.slides
+  const color = `linear-gradient(90deg, black ${progress}%, #E3E3E2 ${progress}%)`;
+  sliderMain.style.background = color;
+})
 
 // код для навешивания синего бордера на элемент
 // function chooseSwiperItem() {

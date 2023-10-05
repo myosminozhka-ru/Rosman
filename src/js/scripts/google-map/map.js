@@ -1,4 +1,3 @@
-/** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
   const googleMapsUrlBase = 'https://www.google.com/maps/dir/?';
   const searchParams = new URLSearchParams('api=1');
@@ -120,7 +119,7 @@ function LocatorPlus(configuration) {
     } else {
       sectionNameEl.textContent = `All locations (${locations.length})`;
     }
-    const resultItemContext = { locations: locations };
+    const resultItemContext = {locations: locations};
     resultsContainerEl.innerHTML = itemsTemplate(resultItemContext);
     for (let item of resultsContainerEl.children) {
       const resultIndex = getResultIndex(item);
@@ -180,7 +179,7 @@ function initializeSearchInput(locator) {
       locator.searchLocation = null;
       return;
     }
-    locator.searchLocation = { address: address, location: location };
+    locator.searchLocation = {address: address, location: location};
     locator.searchLocationMarker = new google.maps.Marker({
       position: location,
       map: locator.map,
@@ -224,7 +223,7 @@ function initializeSearchInput(locator) {
       handleResult(geocodeCache.get(query));
       return;
     }
-    const request = { address: query, bounds: locator.map.getBounds() };
+    const request = {address: query, bounds: locator.map.getBounds()};
     geocoder.geocode(request, function (results, status) {
       if (status === 'OK') {
         if (results.length > 0) {

@@ -53,6 +53,7 @@
 .item_card_tags.bordered_tags {
   @media screen and (max-width: 400px) {
     @apply flex-col-reverse items-start;
+    gap: 0.6rem;
   }
 }
 
@@ -185,7 +186,7 @@
 }
 
 .item_card_more {
-  @apply flex flex-row justify-start gap-18;
+  @apply flex flex-row justify-start ;
 }
 
 .item_card_link.overline-button {
@@ -197,24 +198,21 @@
 }
 
 .item_card_add_to_favourite {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-center p-10;
-  background: url('../../img/heart_white.svg') no-repeat center;
-  background-size: contain;
+  @apply m-0 h-25 w-25 cursor-pointer border-0 bg-center p-10;
+  background: url('../../img/heart_white.svg') no-repeat center;    
+  background-size: 2rem;    
+  min-width: unset;
 
   &:hover {
     background: url('../../img/heart-grey.svg') no-repeat center;
-    background-size: contain;
   }
 }
 
 .item_card_add_to_favourite.js_pressed {
-  @apply m-0 h-20 w-20 cursor-pointer border-0 bg-center p-10;
-  background: url('../../img/heart_black.svg') no-repeat center;
-  background-size: contain;
+  background-image: url('../../img/heart_black.svg');
 
   &:hover {
-    background: url('../../img/heart-pressed-grey.svg') no-repeat center;
-    background-size: contain;
+    background-image: url('../../img/heart-pressed-grey.svg');
   }
 }
 
@@ -340,7 +338,7 @@
 }
 
 .card_articles_text {
-  @apply text-2.5xl text-black ssm:text-15.20;
+  @apply text-2.5xl text-black sm:text-15.20;
   font-weight: 400;
 }
 
@@ -393,7 +391,7 @@
 }
 
 .card_brand_name {
-  @apply text-center text-2.5xl font-normal text-black;
+  @apply text-center text-2.5xl font-normal font-medium text-black;
 
   @media screen and (max-width: 359px) {
     @apply text-xl;
@@ -407,9 +405,10 @@
   aspect-ratio: 15/9;
 }
 
-.card_brand_image img {
-  @apply w-full;
+.card_brand_image img {    
   object-fit: contain;
+  aspect-ratio: 100/62;
+  width: 100%
 }
 
 // КАТАЛОГ КНИГ КАРТОЧКА
@@ -423,18 +422,21 @@
 }
 
 .card_book_image {
-  @apply h-40 w-40;
+  @apply h-58 w-58;
 }
 
 .card_book_img {
 }
 
 .card_book_title {
-  @apply text-3xl ssm:text-15.20;
+  @apply text-3xl sm:text-15.20;   
+  line-height: 1.1666; 
 }
 
 .card_book_link {
-  @apply w-max;
+  @apply w-max;    
+  font-weight: 500;
+  line-height: 1.3333;
 }
 
 // КАРТОЧКА КАРЬЕРА
@@ -461,7 +463,7 @@
 }
 
 .card_career_title {
-  @apply text-4xl font-medium ssm:text-2xl;
+  @apply text-4xl font-medium sm:text-2xl;
 }
 
 .card_career_tags {
@@ -505,7 +507,7 @@
 }
 
 .card_career_cond_item_text {
-  @apply text-15.20 font-normal text-black ssm:text-15.20;
+  @apply text-15.20 font-normal text-black sm:text-15.20;
 }
 
 .card_career_cond_item_text:hover {
@@ -514,7 +516,7 @@
 
 // 3
 .card_career_description {
-  @apply text-2.5xl font-normal text-black ssm:text-15.20;
+  @apply text-2.5xl font-normal text-black sm:text-15.20;
 }
 
 // 4
@@ -729,7 +731,7 @@
 }
 
 .card_employee_text {
-  @apply text-2.5xl font-normal ssm:text-15.20;
+  @apply text-2.5xl font-normal sm:text-15.20;
 }
 
 .card_employee_image::before {
@@ -770,7 +772,9 @@
 
 .card_employee_social_item {
   @apply block h-20 w-20 rounded-full;
-  background-position: center center;
+  background-position: center center;    
+  padding: 1.2rem;
+  background-color: transparent;
 }
 
 .card_employee_social_item:hover {
@@ -836,7 +840,7 @@
 }
 
 .card_awards_title {
-  @apply text-3xl font-medium ssm:text-2xl;
+  @apply text-3xl font-medium sm:text-2xl;
 }
 
 .card_awards_description {

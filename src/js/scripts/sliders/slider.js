@@ -82,9 +82,9 @@ window.addEventListener('DOMContentLoaded', () => {
           currentClass +
           '"></span>' +
           ' ' +
-          '	&nbsp;' +
+          '	&nbsp; &nbsp;' +
           '<span class="text-slider-fraction body-m"> из </span> ' +
-          '	&nbsp;' +
+          '	&nbsp; &nbsp;' +
           '<span class="text-slider-fraction body-m ' +
           totalClass +
           '"></span>'
@@ -101,6 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  
   new Swiper('.js-toys-banner', {
     loop: false,
     navigation: {
@@ -120,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.persons-slider', {
     loop: false,
     navigation: {
       nextEl: '.button-next',
@@ -208,6 +209,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
   const swiperText = new Swiper('.swiper-text', {
     loop: false,
     navigation: {
@@ -224,27 +226,15 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+  document.querySelectorAll('.running-stroke').forEach(el => {
+    const wrapper = el.querySelector('.marquee')
+    if (!wrapper) return
+    const length = wrapper.getBoundingClientRect().width
+    el.style.width = length + 'px'
+    el.style.animationDuration = length/70 + 's'
+    wrapper.insertAdjacentElement('afterend', wrapper.cloneNode(true))
+  })
 
-  const runStroke = new Swiper('.swiper-container', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-    },
-    speed: 6000,
-    slidesPerView: 6,
-  });
-
-  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
-    loop: false,
-    autoplay: {
-      delay: 20,
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
-    speed: 6000,
-    slidesPerView: 6,
-  });
 });
 
 // слайдер для истории слона, слайдер, но не свипер,
@@ -264,7 +254,7 @@ function addActiveClassToAutoOpenElements() {
   const autoOpenElements = document.querySelectorAll('.auto-open');
 
   if (autoOpenElements.length > 0) {
-    autoOpenElements.forEach(element => {
+    autoOpenElements.forEach((element) => {
       element.classList.add('active-js');
     });
   }

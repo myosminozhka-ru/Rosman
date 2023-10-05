@@ -4,7 +4,11 @@ button {
 
 .button-black {
   @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap bg-black px-40 py-10 text-white;
-
+  &.md {
+    min-width: 17.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   &:hover {
     @apply bg-yellow text-black;
 
@@ -225,23 +229,6 @@ button {
   }
 }
 
-.more-down-content::-webkit-scrollbar-track {
-  border-radius: 0.4rem;
-}
-
-.more-down-content::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-.more-down-content::-webkit-scrollbar-thumb {
-  border-radius: 0.4rem;
-  background: #acadad;
-}
-
-.more-down-content:hover::-webkit-scrollbar-thumb {
-  background: #555555;
-}
-
 .more-down-content {
   @apply hidden p-2;
 
@@ -280,7 +267,7 @@ button {
 
 .sort-checkbox {
   @apply hidden;
-
+  width: 100%;
   &:checked + .sort-label {
     @apply border-0 bg-yellow;
 
@@ -299,7 +286,7 @@ button {
 }
 
 .sort-label {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
+  @apply flex h-24 cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
   min-width: 5rem;
 
   &.active-js {
@@ -607,7 +594,7 @@ button {
       }
     }
 
-    p {
+    p, a {
       @apply relative mx-8 w-fit cursor-pointer text-center text-m text-black no-underline;
 
       &.active-js {
@@ -615,9 +602,9 @@ button {
           content: '';
           position: absolute;
           left: 0;
-          bottom: -0.2rem;
+          bottom: 0rem;
           width: 100%;
-          height: 0.2rem;
+          height: 0.1rem;
           background-color: #000;
         }
       }
@@ -659,7 +646,8 @@ button {
       @apply flex h-[14rem] gap-16 border-b border-background py-16;
 
       .picture {
-        @apply w-3/12;
+        width: 7.2rem;
+        height: 7.2rem;
       }
 
       .name {
@@ -724,20 +712,18 @@ button {
 
 // кнопка "связаться с нами"
 .custom-box {
-  @apply fixed flex cursor-pointer flex-row items-center justify-center gap-12 rounded-b-2xl bg-black text-2.5xl text-white;
+  @apply fixed flex cursor-pointer flex-row items-center justify-center gap-12 ;
   width: 17.4rem;
-  height: 2.4rem;
+  height: 2.2rem;
   z-index: 1002;
   top: 60%;
   transform: rotate(-90deg);
   transform-origin: left top;
-
-  @media screen and (max-width: 639px) {
-    @apply hidden;
-  }
+  transition: scale 0.2s ease;
 
   &:hover {
     @apply bg-yellow text-black;
+    scale: 1.1;
   }
 }
 
@@ -770,7 +756,8 @@ button {
   background-image: url('../../img/custom-before.svg');
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;    
+  padding: 2rem;
 }
 
 .custom-after {
