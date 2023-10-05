@@ -590,7 +590,8 @@ header {
     }
 
     .language {
-      @apply inline-block whitespace-nowrap text-l;
+      @apply inline-flex whitespace-nowrap text-l;
+      align-items: center;
 
       .active-js {
         color: rgba(160, 168, 47, 0.69);
