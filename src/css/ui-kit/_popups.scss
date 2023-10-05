@@ -1296,7 +1296,7 @@
 }
 
 .sort-label_erase {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between rounded-3xl  bg-background px-6 text-s font-normal;
+  @apply flex h-24 cursor-pointer flex-row items-center justify-between rounded-3xl  bg-background px-6 text-s font-normal;
 
   span {
     @apply ml-10 block h-12 w-12 cursor-pointer;

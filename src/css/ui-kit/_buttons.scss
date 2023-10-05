@@ -286,7 +286,7 @@ button {
 }
 
 .sort-label {
-  @apply flex h-24 w-full cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
+  @apply flex h-24 cursor-pointer flex-row items-center justify-between whitespace-nowrap rounded-3xl border border-card-stroke px-12 text-s font-normal;
   min-width: 5rem;
 
   &.active-js {

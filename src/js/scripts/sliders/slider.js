@@ -226,60 +226,14 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
-
-  const runStroke = new Swiper('.running-stroke', {
-    loop: false,
-    autoplay: {
-      delay: 10,
-      disableOnInteraction: false,
-    },
-    speed: 3000,
-    slidesPerView: 6,
-  });
-
-  const runStrokeReverse = new Swiper('.swiper-container-reverse', {
-    loop: false,
-    autoplay: {
-      delay: 10,
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
-    speed: 3000,
-    slidesPerView: 6,
-  });
-
-  const runStrokeSwiperContainers = document.querySelectorAll('.swiper-container')
-  const runStrokeSwiperContainersReverse = document.querySelectorAll('.swiper-container-reverse')
-
-  const holdParntersSliderAnimation = function(el) {
-    el.autoplay.stop()
-  }
-
-  const playPartnerSliderAnimation = function(el) {
-    el.autoplay.start()
-  }
-  
-  for(let i = 0; i < runStrokeSwiperContainers.length; i++) {
-    runStrokeSwiperContainers[i].addEventListener('mouseenter', function(e) {
-      holdParntersSliderAnimation(runStroke[i])
-    })
-  
-    runStrokeSwiperContainers[i].addEventListener('mouseleave', function() {
-      playPartnerSliderAnimation(runStroke[i])
-      runStrokeSwiperContainers[i].removeEventListener('mouseenter', holdParntersSliderAnimation)
-    })
-  }
-
-  for(let i = 0; i < runStrokeSwiperContainersReverse.length; i++) {
-    runStrokeSwiperContainersReverse[i].addEventListener('mouseenter', function(e) {
-      holdParntersSliderAnimation(runStrokeReverse[i])
-    })
-  
-    runStrokeSwiperContainersReverse[i].addEventListener('mouseleave', function() {
-      playPartnerSliderAnimation(runStrokeReverse[i])
-      runStrokeSwiperContainersReverse[i].removeEventListener('mouseenter', playPartnerSliderAnimation)
-    })
-  } 
+  document.querySelectorAll('.running-stroke').forEach(el => {
+    const wrapper = el.querySelector('.marquee')
+    if (!wrapper) return
+    const length = wrapper.getBoundingClientRect().width
+    el.style.width = length + 'px'
+    el.style.animationDuration = length/70 + 's'
+    wrapper.insertAdjacentElement('afterend', wrapper.cloneNode(true))
+  })
 
 });
 
