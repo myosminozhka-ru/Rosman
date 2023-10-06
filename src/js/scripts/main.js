@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded', () => {
   // var updateWindowSize = (function () {
   //   console.log(window.innerHeight);
@@ -367,9 +368,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-
-  // boxshadow
-  // box-shadow: inset 0px 1px 19px 4px #535353;
 
   let isMoving = false;
 
@@ -909,4 +907,211 @@ window.addEventListener('DOMContentLoaded', () => {
       searchResult.classList.add('hidden');
     }
   });
+
+
+
+  /*Todo: Новые скрипты на замену старых*/
+  window.pluralFormat = function(num, one, two, many) {
+    var endOnOne = num % 10 === 1 && num % 100 !== 11;
+    var endOnTwo = num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20);
+    var notOne = endOnTwo ? two : many;
+    return endOnOne ? one : notOne;
+  };
+
+  //Движущаяся секция
+  const movingSections = document.querySelectorAll('.js-animate');
+  if (movingSections.length) {
+    movingSections.forEach((movingSection)=>{
+      document.addEventListener('mousemove', function (event) {
+
+        const blockWidth = window.innerWidth;
+        const oneDeg = blockWidth / 100;
+        const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
+
+        movingSection.style.transform = `rotate(${tiltAngle}deg)`;
+/*
+        const computedFontSize = window.getComputedStyle(
+          document.documentElement
+        ).fontSize;
+
+        const computedFontSizeNumber = computedFontSize.slice(
+          0,
+          computedFontSize.length - 2
+        );*/
+
+        const movingBlockTopLine = movingSection.querySelector('.js-animate-top-line');
+        const movingBlockBottomLine = movingSection.querySelector('.js-animate-bottom-line');
+
+        const mousePos = {
+          x: event.pageX,
+          y: event.pageY,
+        };
+
+        const bodyRect = document.body.getBoundingClientRect();
+        const elemRect = movingSection.getBoundingClientRect();
+        const movingBlockTopOffset = elemRect.top - bodyRect.top;
+        const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
+
+        const verticalLeg = Math.abs(
+          blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
+        );
+        const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
+
+        const activationHeight = 300;
+        const shiftNumber = 3;
+
+        const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
+
+        if (activationTopArea > 0 && activationTopArea < activationHeight) {
+          const shadowShiftPercentage =
+            100 - (activationTopArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
+          movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
+        }
+
+        const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
+
+        if (activationBottomArea < activationHeight && activationBottomArea > 0) {
+          const shadowShiftPercentage =
+            100 - (activationBottomArea / activationHeight) * 100;
+          const leftShiftPercentage =
+            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const rightShiftPercentage =
+            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
+          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
+          const rightShadowShiftNumber =
+            (shiftNumber / 100) * rightShiftPercentage;
+
+          movingBlockBottomLine.setAttribute(
+            'y1',
+            `${100 + leftShadowShiftNumber}%`
+          );
+          movingBlockBottomLine.setAttribute(
+            'y2',
+            `${100 + rightShadowShiftNumber}%`
+          );
+        }
+      });
+    })
+  }
+
+  // Слайдер универсальный
+  const sliderSectionElems = document.querySelectorAll('.js-slider');
+  if (sliderSectionElems.length > 0) {
+    const sliderInit = (sliderEl, swiperPrev, swiperNext, swiperCounter) => {
+      const swiperDataSlide = sliderEl.dataset.slideCount;
+      let swiperDataSlideCount = null;
+      let slidesPerView = 1;
+      if (swiperDataSlide) {
+        const breakpoints = JSON.parse(swiperDataSlide);
+        slidesPerView = breakpoints.default;
+        swiperDataSlideCount = {
+          480: {
+            slidesPerView: breakpoints.sm,
+          },
+          576: {
+            slidesPerView: breakpoints.md,
+          },
+          767: {
+            slidesPerView: breakpoints.lg
+          },
+          992: {
+            slidesPerView: breakpoints.lg
+          },
+          1200: {
+            slidesPerView: breakpoints.xl
+          }
+        }
+      }
+      let sectionSlider = new Swiper(sliderEl, {
+        slidesPerView,
+        spaceBetween: 16,
+        watchSlidesProgress: true,
+        lazy: {
+          enabled: true,
+          loadOnTransitionStart: true
+        },
+        navigation: {
+          nextEl: swiperNext || null,
+          prevEl: swiperPrev || null
+        },
+        breakpoints: swiperDataSlideCount,
+        pagination: {
+          el: swiperCounter,
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return (
+              '<span class="' + currentClass + '"></span>' + ' ' + '<span>из</span> ' + ' ' + '<span class="' + totalClass + '"></span>'
+            );
+          },
+        },
+      });
+    };
+    sliderSectionElems.forEach(sliderSectionEl => {
+      const swiperWrapper = sliderSectionEl.closest('.js-slider-section');
+      const swiperPrev = swiperWrapper.querySelector('.swiper-arrows__prev');
+      const swiperNext = swiperWrapper.querySelector('.swiper-arrows__next');
+      const swiperCounter = swiperWrapper.querySelector('.swiper-counter');
+      sliderInit(sliderSectionEl, swiperPrev, swiperNext, swiperCounter);
+    });
+  }
+
+  //Счетчик обратного отсчета
+
+  const countDowns = document.querySelectorAll('[data-countdown-date]');
+  if (countDowns.length > 0) {
+    function callCountDown(countDownEl) {
+      console.log(countDownEl)
+      let interval;
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const countDownFn = () => {
+        const eventDay = new Date(countDownEl.dataset.countdownDate);
+        const today = new Date();
+        const timeSpan = eventDay - today;
+
+        if (timeSpan <= -today) {
+          console.log("Unfortunately we have past the event day");
+          clearInterval(interval);
+          return;
+        } else if (timeSpan <= 0) {
+          console.log("Today is the event day");
+          clearInterval(interval);
+          return;
+        } else {
+          const days = Math.floor(timeSpan / day);
+          const hours = Math.floor((timeSpan % day) / hour);
+          const minutes = Math.floor((timeSpan % hour) / minute);
+          const seconds = Math.floor((timeSpan % minute) / second);
+
+          // Прописывает результаты в нужные ячейки
+          countDownEl.querySelector('.js-countdown-day').innerHTML = days;
+          countDownEl.querySelector('.js-countdown-day-text').innerHTML = pluralFormat(days, 'день', 'дня', 'дней');
+          countDownEl.querySelector('.js-countdown-hour').innerHTML = hours;
+          countDownEl.querySelector('.js-countdown-hour-text').innerHTML = pluralFormat(hours, 'час', 'часа', 'часов');
+          countDownEl.querySelector('.js-countdown-min').innerHTML = minutes;
+          countDownEl.querySelector('.js-countdown-min-text').innerHTML = pluralFormat(minutes, 'минута', 'минуты', 'минут');
+          countDownEl.querySelector('.js-countdown-sec').innerHTML = seconds;
+          countDownEl.querySelector('.js-countdown-sec-text').innerHTML = pluralFormat(seconds, 'секунда', 'секунды', 'секунд');
+        }
+      }
+      interval = setInterval(countDownFn, second);
+    }
+
+    countDowns.forEach(countDown => {
+      callCountDown(countDown)
+    })
+  }
+
 });

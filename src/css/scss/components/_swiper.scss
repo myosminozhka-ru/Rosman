@@ -1,0 +1,28 @@
+.swiper{
+    &-wrapper{
+        @apply flex items-stretch;
+    }
+    &-slide{
+        @apply h-auto;
+    }
+    &-arrows{
+        display: grid;
+        grid-template-columns: 40px 40px;
+        grid-column-gap: 16px;
+        &__prev,
+        &__next{
+            @apply p-0;
+            &:not([aria-disabled="false"]){
+                @apply text-text
+            }
+
+            [aria-disabled="false"]{
+                @apply opacity-40
+            }
+        }
+    }
+
+    &-counter{
+        @apply body-m text-text;
+    }
+}

@@ -26,13 +26,27 @@ module.exports = {
       8.8: '8.8rem',
       25: '25rem',
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1.2rem',
+        bsMin: '2.4rem',
+      },
+      screens: {
+        hsMin: {max: '1969px'},
+        bsMin: {max: '1533px'},
+      },
+    },
     screens: {
+      msmMin: '520px',
+      bsMin: '999px',
+      hsMin: '1433px',
+      fullHdMin: '1969px',
+
       fullhd: {max: '1968px'},
-      hs: {max: '1500px'},
-      shs: {max: '1200px'},
-      bsmin: {min: '1100px'},
-      bsmax: {max: '1099px'},
-      bs: {max: '999px'},
+      hs: {max: '1432px'},
+      shs: {max: '1433px'},
+      bs: {max: '998px'},
       bss: {max: '899px'},
       ipadmini: {max: '768px'},
       md: {max: '768px'},

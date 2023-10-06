@@ -1,0 +1,111 @@
+<section class="slider-section standard-margin js-slider-section">
+    <div class="container">
+        <header class="slider-section__header">
+            <h2 class="slider-section__title head-3">@@title</h2>
+            @@if (this.counterPagination === 'true') {
+                <div class="swiper-counter -translate-y-1.5"></div>
+            }
+            <div class="swiper-arrows js-slider-arrows">
+                @@include("../components/_slider-arrows.html")
+            </div>
+        </header>
+
+        @@if (this.card === 'cardInfographics') {
+            <div class="swiper js-slider" data-slide-count='{"default":1.2, "sm":1.5, "md":2.2, "lg":3, "xl":3}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-infographics.html", {
+                        text:"Предварительно зарядить блэйд с помощью USB-провода.",
+                        imgUrl:"../img/books-58x58.svg",
+                        dopClass: 'min-h-[27rem]',
+                        borderClass: 'card-infographics--border'
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-infographics.html", {
+                        text:"Предварительно зарядить блэйд с помощью USB-провода.",
+                        imgUrl:"../img/books-58x58.svg",
+                        dopClass: 'min-h-[27rem]',
+                        borderClass: 'card-infographics--border'
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-infographics.html", {
+                        text:"Предварительно зарядить блэйд с помощью USB-провода.",
+                        imgUrl:"../img/books-58x58.svg",
+                        dopClass: 'min-h-[27rem]',
+                        borderClass: 'card-infographics--border'
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-infographics.html", {
+                        text:"Предварительно зарядить блэйд с помощью USB-провода.",
+                        imgUrl:"../img/books-58x58.svg",
+                        dopClass: 'min-h-[27rem]',
+                        borderClass: 'card-infographics--border'
+                        }, )
+                    </div>
+                </div>
+            </div>
+        }
+        @@if (this.card === 'cardLogo') {
+            <div class="swiper js-slider" data-slide-count='{"default":2, "sm":2, "md":3, "lg":4, "xl":5}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-logo.html", {
+                        imgUrl:"../img/logos/main-logo-big.svg"
+                        }, )
+                    </div>
+                </div>
+            </div>
+        }
+        @@if (this.card === 'cardVideo') {
+            <div class="swiper js-slider" data-slide-count='{"default":1, "sm":2, "md":3, "lg":4, "xl":4}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-video.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-pr-1.png"
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-video.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-2.png"
+                        }, )
+                    </div>
+                </div>
+            </div>
+        }
+        @@if (this.card === 'monoImage') {
+            <div class="swiper js-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-mono-image.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-pr-1.png"
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-mono-image.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-2.png"
+                        }, )
+                    </div>
+                </div>
+            </div>
+        }
+        @@if (this.card === 'cardOffer') {
+            <div class="swiper js-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-offer.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-pr-1.png"
+                        }, )
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("../cards/_card-offer.html", {
+                        imgUrl:"../img/catalog-project/catalog-project-2.png"
+                        }, )
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

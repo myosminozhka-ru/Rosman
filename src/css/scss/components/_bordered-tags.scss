@@ -1,0 +1,23 @@
+.bordered-tags {
+  @apply flex flex-row justify-between gap-8;
+
+  @media screen and (max-width: 400px) {
+    @apply w-full justify-between gap-6;
+  }
+  &__item{
+    @apply body-s-bold bg-white px-12 py-4 border border-black;
+
+    @media screen and (max-width: 400px) {
+      @apply w-1/2 text-center;
+    }
+
+    @media screen and (max-width: 900px) {
+      @apply px-4;
+    }
+  }
+}
+/*
+.bordered_tags_item-smalled {
+  @apply px-4 py-4 text-center text-11.14;
+  width: 7rem;
+} Todo: проверить наличие*/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+@@include('../blocks/layouts-blocks/_head.html',{
+"lang":"ru",
+"title":"Конструктор",
+"description":"",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+<body>
+
+  @@include('../blocks/layouts-blocks/_header.html')
+
+  <main class="main">
+    @@include('../blocks/sections/_animate-section.html')
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'Как играть в Инфинити Надо с контроллером?',
+    card: 'cardInfographics',
+    }) <!--Слайдер с карточкой с иконкой-->
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'Хиты продаж',
+    card: 'cardOffer',
+    counterPagination: 'true'
+    }) <!--Слайдер со спец предложениями-->
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'Логотипы',
+    card: 'cardLogo',
+    counterPagination: 'true'
+    }) <!--Слайдер с логотипами-->
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'Блог для визуала проекта',
+    card: 'monoImage',
+    counterPagination: 'true'
+    }) <!--Слайдер с одной картинкой-->
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'Видео',
+    card: 'cardVideo',
+    }) <!--Слайдер с видео-->
+
+    @@include('../blocks/sections/_advantages.html', {
+    title: 'Блок с инфографикой',
+    description: 'В своём стремлении повысить качество жизни, они забывают, что синтетическое тестирование говорит о возможностях кластеризации усилий.'
+    }) <!--Блок с инфографикой-->
+
+    <!--Формы на желтом фоне-->
+
+    @@include('../blocks/sections/_countdown.html', {
+    title: 'Заголовок Осталось немного',
+    description: 'В целом, конечно, синтетическое тестирование однозначно фиксирует необходимость системы обучения кадров'
+    })
+
+  </main>
+
+  @@include('../blocks/layouts-blocks/_footer.html')
+  @@include('../blocks/layouts-blocks/_scripts.html')
+
+</body>
+</html>

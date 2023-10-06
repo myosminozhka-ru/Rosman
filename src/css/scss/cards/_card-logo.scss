@@ -1,0 +1,6 @@
+.card-logo{
+  @apply border border-card-stroke h-full p-24 aspect-square p-15;
+  &__image{
+    @apply w-full h-full object-contain;
+  }
+}

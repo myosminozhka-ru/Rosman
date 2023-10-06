@@ -1,0 +1,8 @@
+.slider-section{
+    &__header{
+        @apply flex items-baseline justify-between sm:mb-16 mb-24 sm:gap-17 gap-32;
+    }
+    &__title{
+        @apply grow max-w-[70%];
+    }
+}

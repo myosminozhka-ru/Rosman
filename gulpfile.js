@@ -12,7 +12,7 @@
   3. npm run prod //To generate minifed files for live server
 */
 
-const { src, dest, watch, series, parallel } = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 const clean = require('gulp-clean'); //For Cleaning build/dist for fresh export
 const options = require('./config'); //paths and other options from config.js
 const browserSync = require('browser-sync').create();
@@ -28,6 +28,8 @@ const pngquant = require('imagemin-pngquant'); // imagemin plugin
 const purgecss = require('gulp-purgecss'); // Remove Unused CSS from Styles
 const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P
 const includePartials = require('gulp-file-include'); //For supporting partials if required
+const svgmin = require('gulp-svgmin');
+const svgSprite = require('gulp-svg-sprite');
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -60,7 +62,7 @@ function devStyles() {
   return src(`${options.paths.src.css}/**/*.scss`)
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(dest(options.paths.dist.css));
 }
 
@@ -70,7 +72,7 @@ function devScripts() {
     `${options.paths.src.js}/**/*.js`,
     `!${options.paths.src.js}/**/external/*`,
   ])
-    .pipe(concat({ path: 'scripts.js' }))
+    .pipe(concat({path: 'scripts.js'}))
     .pipe(dest(options.paths.dist.js));
 }
 
@@ -78,6 +80,54 @@ function devImages() {
   return src(`${options.paths.src.img}/**/*`).pipe(
     dest(options.paths.dist.img)
   );
+}
+function spriteSvg() {
+  return src('src/img/svg-sprite/**/*.svg')
+    .pipe(svgSprite({
+      dest: './src/img/svg-sprite',
+      mode: {
+        ['symbol']: {
+          dest: './',
+          prefix: '$sprite-%s',
+          sprite: 'sprite',
+          bust: false,
+          layout: 'packed',
+        }
+      },
+      shape: {
+        dimension: {
+          precision: 0
+        },
+        transform: [
+          {
+            svgo: {
+              plugins: [
+                {
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      // disable plugins
+                      removeViewBox: false,
+                      cleanupIDs: false,
+                      removeUselessDefs: false
+                    },
+                  },
+                },
+              ],
+            }
+          }
+        ]
+      },
+      svg: {
+        transform: [
+          svg => {
+            return svg.replace(/ xml:space="preserve"/g, '');
+          }
+        ]
+      }
+    }))
+    .pipe(dest('dist/img'))
+    .pipe(dest('src/img'))
 }
 
 // function devImages() {
@@ -122,7 +172,7 @@ function devClean() {
     '\n\t' + logSymbols.info,
     'Cleaning dist folder for fresh start.\n'
   );
-  return src(options.paths.dist.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.dist.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
@@ -154,7 +204,7 @@ function prodStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -187,7 +237,7 @@ function prodGitStyles() {
         cssnano(),
       ])
     )
-    .pipe(concat({ path: 'style.css' }))
+    .pipe(concat({path: 'style.css'}))
     .pipe(
       purgecss({
         ...options.config.purgecss,
@@ -212,7 +262,7 @@ function prodScripts() {
     `${options.paths.src.js}/libs/**/*.js`,
     `${options.paths.src.js}/**/*.js`,
   ])
-    .pipe(concat({ path: 'scripts.js' }))
+    .pipe(concat({path: 'scripts.js'}))
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
@@ -220,7 +270,7 @@ function prodScripts() {
 function prodGitLibsScripts() {
   return (
     src([`${options.paths.src.js}/libs/**/*.js`])
-      .pipe(concat({ path: 'libs.js' }))
+      .pipe(concat({path: 'libs.js'}))
       // .pipe(uglify())
       .pipe(dest(options.paths.docs.js))
   );
@@ -229,7 +279,7 @@ function prodGitLibsScripts() {
 function prodGitDevScripts() {
   return (
     src([`${options.paths.src.js}/scripts/**/*.js`])
-      .pipe(concat({ path: 'scripts.js' }))
+      .pipe(concat({path: 'scripts.js'}))
       // .pipe(uglify())
       .pipe(dest(options.paths.docs.js))
   );
@@ -243,8 +293,8 @@ function prodImages() {
     ? options.config.imagemin.jpeg
     : 70;
   const plugins = [
-    pngquant({ quality: pngQuality }),
-    mozjpeg({ quality: jpgQuality }),
+    pngquant({quality: pngQuality}),
+    mozjpeg({quality: jpgQuality}),
   ];
 
   return src(options.paths.src.img + '/**/*')
@@ -260,8 +310,8 @@ function prodGitImages() {
     ? options.config.imagemin.jpeg
     : 70;
   const plugins = [
-    pngquant({ quality: pngQuality }),
-    mozjpeg({ quality: jpgQuality }),
+    pngquant({quality: pngQuality}),
+    mozjpeg({quality: jpgQuality}),
   ];
 
   return src(options.paths.src.img + '/**/*')
@@ -298,7 +348,7 @@ function prodClean() {
     '\n\t' + logSymbols.info,
     'Cleaning build folder for fresh start.\n'
   );
-  return src(options.paths.build.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.build.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
@@ -308,7 +358,7 @@ function prodGitClean() {
     '\n\t' + logSymbols.info,
     'Cleaning build folder for fresh start.\n'
   );
-  return src(options.paths.docs.base, { read: false, allowEmpty: true }).pipe(
+  return src(options.paths.docs.base, {read: false, allowEmpty: true}).pipe(
     clean()
   );
 }
@@ -323,7 +373,15 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devFonts, devThirdParty, devHTML), //Run All tasks in parallel
+  parallel(
+    devStyles,
+    devScripts,
+    devImages,
+    devFonts,
+    devThirdParty,
+    devHTML,
+    spriteSvg,
+  ), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
@@ -336,7 +394,8 @@ exports.prod = series(
     prodImages,
     prodHTML,
     prodFonts,
-    prodThirdParty
+    prodThirdParty,
+    spriteSvg,
   ), //Run All tasks in parallel
   buildFinish
 );
@@ -350,7 +409,9 @@ exports.prodGithub = series(
     prodGitImages,
     prodGitHTML,
     prodGitFonts,
-    prodGitThirdParty
+    prodGitThirdParty,
+    spriteSvg,
+
   ), //Run All tasks in parallel
   buildFinish
 );

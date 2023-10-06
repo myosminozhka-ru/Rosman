@@ -1,0 +1,20 @@
+.card-infographics{
+  &--border{
+    @apply border border-card-stroke h-full p-24;
+  }
+  &__picture{
+    @apply flex justify-end w-58 h-58
+  }
+  &__image{
+    @apply w-full h-full object-contain
+  }
+  &__content{
+    @apply body-m mt-16;
+  }
+  &__text{
+    @apply text-m sm:text-s;
+    &:not(:first-child){
+      @apply mt-16;
+    }
+  }
+}

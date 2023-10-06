@@ -1,0 +1,9 @@
+.advantages{
+  &__description{
+    @apply body-s max-w-[46rem] mt-8
+  }
+  &__list{
+    @apply grid grid-cols-1 gap-x-20 gap-y-40 bsMin:grid-cols-3 msmMin:grid-cols-2 mt-40 md:mt-32;
+
+  }
+}

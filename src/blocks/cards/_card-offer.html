@@ -1,0 +1,52 @@
+<article class="card-offer">
+  <div class="card-offer__side card-offer__side--picture"
+  >
+    <div class="card-offer__labels bordered-tags">
+      <a href="#" class="bordered-tags__item">Бестселлер</a>
+      <a href="#" class="bordered-tags__item">Новинка</a>
+      <a href="#" class="bordered-tags__item">8+</a>
+    </div>
+    <img class="card-offer__picture" src="../img/cards_toy.svg" alt="toy"/>
+  </div>
+
+  <div class="card-offer__side card-offer__side--content ">
+    <h3 class="card-offer__title head-3">Игровой набор Домик Буси</h3>
+    <div class="card-offer__text">
+      Игровой набор " Домик Буси" . Есть световые и звуковые
+      эффекты( 2 песни, 3 мелодии, 6 звуков, 2 фразы). В наборе:
+      18 предметов и 2 фигурки высотой 5,5 см. Голова, ручки и
+      ножки фигурок двигаются. Домик собирается в чемоданчик,
+      все аксессуары помещаются внутри. Набор выполнен из
+      безопасного пластика ( АБС-пластик, полипропилен,
+      полиоксиметилен, поливинилхлорид). Упаковка: коробка с
+      окном
+    </div>
+
+    <div class="mt-24 grid grid-cols-4 sm:grid-cols-3 gap-x-20">
+      <div class="mt-16">
+        @@include("../cards/_card-infographics.html", {
+        text:"Преимущество c иконкой 1",
+        imgUrl:"../img/camera-58x58.png"
+        }, )
+      </div>
+      <div class="mt-16">
+        @@include("../cards/_card-infographics.html", {
+        text:"Преимущество c иконкой 33",
+        imgUrl:"../img/books-58x58.svg"
+        }, )
+      </div>
+      <div class="mt-16">
+        @@include("../cards/_card-infographics.html", {
+        text:"Преимущество c иконкой 23",
+        imgUrl:"../img/certificate-58x58.svg"
+        }, )
+      </div>
+    </div>
+    <a href="#" class="card-offer__button button button-primary mt-24">
+      <span>Показать ещё</span>
+      <svg class="ml-10" width="5" height="9">
+        <use href="../img/sprite.svg#arrow-right"></use>
+      </svg>
+    </a>
+  </div>
+</article>

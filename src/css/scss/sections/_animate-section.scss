@@ -1,0 +1,44 @@
+.animate-section{
+    @apply relative mb-20 items-center overflow-hidden pt-60;
+    &__items{
+        @apply relative
+    }
+    &__picture{
+        @apply h-full m-auto relative w-[99%];
+        svg{
+            @apply absolute z-20;
+            bottom: -0.1rem;
+            transition: transform 2s ease;
+        }
+    }
+    &__lines{
+        @apply w-full h-full;
+    }
+    &__line-top{
+        filter: drop-shadow(0px 2px 5px #535353);
+    }
+    &__line-bottom{
+        filter: drop-shadow(0px -2px 5px #535353);
+    }
+}
+#white-background {
+    @apply relative mb-20 h-200 w-full items-center overflow-hidden bg-white pt-60;
+
+    .slide-el {
+        width: 10.4rem;
+        z-index: 1000;
+        height: 10.4rem;
+        position: absolute;
+        bottom: -2rem;
+        transition: transform 2s ease;
+    }
+
+    .slide-el-2 {
+        width: 10.4rem;
+        z-index: 1000;
+        height: 10.4rem;
+        position: absolute;
+        bottom: -0.1rem;
+        transition: transform 2s ease;
+    }
+}

@@ -1,0 +1,18 @@
+.card-offer{
+  @apply grid grid-cols-[45%_55%] md:grid-cols-1 gap-x-24;
+  &__side{
+    @apply body-m;
+    &--picture{
+      @apply relative bg-background aspect-[278/249] md:mb-24;
+    }
+  }
+  &__labels{
+    @apply absolute left-0 top-0 flex gap-8
+  }
+  &__text{
+    @apply mt-16 sm:mt-24;
+  }
+  &__button{
+    @apply md:w-full
+  }
+}

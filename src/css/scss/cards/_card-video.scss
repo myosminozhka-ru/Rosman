@@ -1,0 +1,31 @@
+.card-video {
+  &__preview {
+    @apply relative cursor-pointer aspect-[16/9];
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+    &-image{
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__play-button {
+    @apply absolute m-0 p-0 top-[50%] left-[50%];
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    @apply text-2.5xl sm:text-15.20 mt-16;
+  }
+}

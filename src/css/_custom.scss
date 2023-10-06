@@ -69,10 +69,10 @@
 .item_card_img--top {
   aspect-ratio: 10/13.2;
 }
-
+/*
 .header .flex.item_card_img.flex-col {
   position: relative;
-}
+}*/
 
 .dotted_tags_category:first-child {
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -183,7 +183,7 @@
   padding-bottom: 0.8rem;
 }
 
-.container {
+/*.container {
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   margin-left: auto;
@@ -195,7 +195,7 @@
   .container {
     max-width: 1433px;
   }
-}
+}*/
 @media screen and (max-width: 999px) {
   .toolbar {
     align-items: center;
@@ -274,13 +274,13 @@
   }
 }
 @media (max-width: 768px) {
-  .container {
-    /* временно отключить
+  /*.container {
+    !* временно отключить
       padding-left: 2.2rem;
-    */
+    *!
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-  }
+  }*/
   .popup_brand_description_image {
     width: 5rem;
   }
@@ -577,9 +577,9 @@ z-index: 100;
 width: 100%;
 }
 
-.container {
+/*.container {
 width: 100%;
-}
+}*/
 .card_brand_info {
 word-break: break-word;
 }

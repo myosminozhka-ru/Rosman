@@ -2,4 +2,32 @@
 @import './base';
 @import './main';
 @import './ui-kit/index';
+
+//Base
+svg{
+  fill: currentColor;
+}
+img{
+  @apply w-full h-full object-cover;
+}
+.standard-margin{
+  @apply mt-64 mb-64 sm:mt-48 sm:mb-48;
+}
+
+@import "scss/components/buttons";
+@import "scss/components/swiper";
+@import "scss/components/bordered-tags";
+
+@import "scss/layout/header";
+
+@import "scss/sections/slider-section";
+@import "scss/sections/animate-section";
+@import "scss/sections/advantages";
+
+@import "scss/cards/card-infographics";
+@import "scss/cards/card-logo";
+@import "scss/cards/card-mono-image";
+@import "scss/cards/card-video";
+@import "scss/cards/card-offer";
+
 @import './custom';

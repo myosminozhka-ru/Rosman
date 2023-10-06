@@ -263,10 +263,6 @@
   }
 }
 
-.header .flex.w-full.flex-col {
-  position: relative;
-}
-
 .header[data-header='main'] {
   .rosmen {
     display: none;
@@ -357,8 +353,6 @@
 }
 
 header {
-  @apply flex items-center bg-yellow px-24 pt-14 sm:px-12;
-
   @media screen and (max-width: 900px) {
     @apply justify-between;
   }
