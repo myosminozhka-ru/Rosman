@@ -1,5 +1,6 @@
 button {
-  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap px-40 py-10 text-m;
+  @apply flex min-w-4 flex-row items-center justify-center px-40 py-10 text-m;
+  //Todo: убрала whitespace-nowrap
 }
 
 .button-black {
@@ -708,7 +709,7 @@ button {
     }
   }
 }
-
+//Todo: перенесла в component/collapse
 
 // кнопка "связаться с нами"
 .custom-box {

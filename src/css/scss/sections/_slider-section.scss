@@ -1,6 +1,12 @@
 .slider-section{
+    section & .container{
+        padding: 0;
+    }
     &__header{
         @apply flex items-baseline justify-between sm:mb-16 mb-24 sm:gap-17 gap-32;
+    }
+    &__footer{
+        @apply flex items-center justify-between sm:mt-16 mt-24 sm:gap-17 gap-32;
     }
     &__title{
         @apply grow max-w-[70%];

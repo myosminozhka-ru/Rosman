@@ -1,0 +1,8 @@
+.mono-banner{
+  &__inner{
+    @apply block w-full;
+  }
+  &__image{
+    @apply w-full h-full object-cover;
+  }
+}

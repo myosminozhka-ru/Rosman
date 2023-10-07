@@ -1,0 +1,9 @@
+.card-photo{
+  @apply aspect-square;
+  &__picture{
+    @apply block w-full h-full
+  }
+  &__image{
+    @apply w-full h-full object-cover;
+  }
+}

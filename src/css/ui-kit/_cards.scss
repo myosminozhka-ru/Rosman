@@ -539,7 +539,7 @@
   background-size: contain;
 }
 
-// КАРТОЧКА БРЕНДА С СОЦСЕТЯМИ
+// КАРТОЧКА БРЕНДА С СОЦСЕТЯМИ - Todo:переехали стили socials. на удаление
 .card_brand_with_socials {
   @apply flex grow flex-col items-start justify-between bg-cover bg-no-repeat px-20 py-16;
   width: 29.6rem;
@@ -547,7 +547,6 @@
   background-image: url('../../img/cards_brand_socials.svg');
   background-position: center center;
 }
-
 .card_brand_with_socs {
   @apply relative;
 
@@ -555,13 +554,11 @@
     @apply p-0;
   }
 }
-
 .card_brand_with_socs_links {
   @apply absolute inline-block flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
   top: 6%;
   left: 6%;
 }
-
 .card_brand_links {
   @apply inline-block flex flex-row flex-nowrap gap-12 px-12 py-8;
 
@@ -570,39 +567,24 @@
     height: 2rem;
   }
 }
-
 .card_brand_with_socs_item_page {
   @apply absolute hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
   bottom: 6%;
   left: 6%;
   width: 88%;
 }
-
 .card_brand_with_socs:hover .card_brand_with_socs_item_page {
   @apply block;
 }
-
-//
-//.card_brand_img {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 100%;
-//  object-fit: cover;
-//}
 .card_brand_with_socials_links {
   @apply flex flex-row flex-nowrap gap-12 rounded-xl bg-yellow px-12 py-8;
 }
-
 .card_brand_with_socials_link_image {
   @apply h-12 w-12;
 }
-
 .card_brand_with_socials_item_page {
   @apply hidden w-full rounded-xl bg-white py-8 text-center text-2.5xl;
 }
-
 .card_brand_with_socials:hover .card_brand_with_socials_item_page {
   @apply block;
 }

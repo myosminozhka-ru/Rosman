@@ -1,30 +1,30 @@
 .button {
-  @apply inline-flex min-w-4 items-center justify-center px-40 sm:px-40 py-10 text-m;
-}
+  @apply inline-flex min-w-4 items-center justify-center px-40 sm:px-20 py-9 text-m border font-medium;
+  transition: color .35s ease-in-out, background-color .35s ease-in-out, border-color .35s ease-in-out;
 
-.button-primary {
-  @apply bg-black text-white;
-/*  &.md {
-    min-width: 17.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }*/
-  &:hover {
-    @apply bg-yellow text-black;
-  }
-
-  &.arrow-span {
-    span {
-      background-image: url(../../img/arrow-right.svg);
-      background-repeat: no-repeat;
-      background-size: 2rem 2rem;
-      width: 2rem;
-      height: 2rem;
-      margin-left: 1rem;
+  &-primary {
+    @apply bg-black text-white border-black;
+    &:hover {
+      @apply bg-yellow text-black border-yellow;
     }
   }
-}
+  &-outline-primary {
+    @apply text-black border-black;
+    &:hover {
+      @apply bg-black text-white border-black;
+    }
+  }
+  &-secondary {
+    @apply bg-yellow text-black border-yellow;
+    &:hover {
+      @apply bg-black text-white border-black;
+    }
+  }
 
+  &-lg{
+    @apply py-24 md:py-14
+  }
+}
 
 
 //Не причесано
@@ -36,13 +36,7 @@
   }
 }
 
-.button-yellow {
-  @apply flex min-w-4 flex-row items-center justify-center whitespace-nowrap bg-yellow px-40 py-10 text-black;
 
-  &:hover {
-    @apply bg-black text-white;
-  }
-}
 
 .button-yellow-full {
   @apply mx-auto flex w-full min-w-4 flex-row items-center justify-center whitespace-nowrap bg-yellow bg-opacity-50 px-40 py-10 text-black;

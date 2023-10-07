@@ -1,0 +1,5 @@
+.info-line{
+  &__buttons{
+    @apply flex flex-wrap gap-24 justify-center mt-32 sm:gap-16;
+  }
+}

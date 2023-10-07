@@ -1,0 +1,12 @@
+.countdown{
+    @apply flex justify-center items-center;
+    &__item{
+        @apply md:px-[0.4rem] px-[1.4rem];
+    }
+    &__title{
+        @apply head-1;
+    }
+    &__text{
+        @apply font-medium md:min-w-[6rem] min-w-[9rem];
+    }
+}

@@ -5,13 +5,14 @@
     &-slide{
         @apply h-auto;
     }
+    &-button-lock{
+        display: none;
+    }
     &-arrows{
-        display: grid;
-        grid-template-columns: 40px 40px;
-        grid-column-gap: 16px;
+        @apply grid gap-16 grid-cols-[40px_40px] md:grid-cols-[28px_28px];
         &__prev,
         &__next{
-            @apply p-0;
+            @apply p-0 h-40 sm:h-[28px];
             &:not([aria-disabled="false"]){
                 @apply text-text
             }
@@ -19,10 +20,24 @@
             [aria-disabled="false"]{
                 @apply opacity-40
             }
+            svg{
+                max-width: 80%;
+                max-height: 80%;
+            }
         }
     }
 
     &-counter{
         @apply body-m text-text;
+    }
+
+    &-dots{
+        @apply flex gap-16 justify-center items-center;
+    }
+    &-pagination-bullet {
+        @apply w-[9px] h-[9px] rounded-full bg-white border border-black;
+        &-active{
+            @apply bg-black;
+        }
     }
 }

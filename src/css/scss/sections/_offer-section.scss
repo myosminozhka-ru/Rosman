@@ -1,0 +1,16 @@
+.offer-section{
+  @apply bg-background py-48 body-m md:py-24;
+  &__content{
+    @apply max-w-[65rem] mx-auto text-center
+  }
+  &__picture{
+    @apply inline-block max-w-[20rem];
+  }
+  &__description{
+    @apply mt-8;
+  }
+  &__button{
+    @apply mt-56 md:mt-32;
+    min-width: 160px;
+  }
+}

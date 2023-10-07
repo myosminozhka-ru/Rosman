@@ -11,17 +11,54 @@
   @@include('../blocks/layouts-blocks/_header.html')
 
   <main class="main">
-    @@include('../blocks/sections/_animate-section.html')
+    @@include('../blocks/sections/_mono-banner.html');
+
+    @@include('../blocks/sections/_animate-section.html',{
+    card: 'text',
+    urlFollower: '../img/elephant/elephant-on-hand.svg',
+    followerClass: 'bottom-27',
+    standardMargin: ''
+    })<!--Желтый блок с текстом-->
+
+    @@include('../blocks/sections/_info-line.html',{
+    title: 'Официальный сайт Инфинити Надо',
+    socials: 'true',
+    })<!--Желтый блок с текстом-->
 
     @@include('../blocks/sections/_slider-section.html', {
     title: 'Как играть в Инфинити Надо с контроллером?',
     card: 'cardInfographics',
+    standardMargin: 'standard-margin'
     }) <!--Слайдер с карточкой с иконкой-->
+
+    <!--Каталог с фильтром-->
+
+    @@include('../blocks/sections/_crossing-section.html', {
+    title: 'Как играть в Инфинити Надо с контроллером?',
+    card: 'cardInfographics',
+    }) <!--Перекрещивающаяся секция-->
+
+    @@include('../blocks/sections/_faq.html') <!--FaQ-->
+
+    @@include('../blocks/sections/_animate-section.html',{
+    standardMargin: 'standard-margin',
+    card: 'slider',
+    urlFollower: '../img/elephant/elephant-swinging-foot.svg',
+    followerClass: '-bottom-17'
+    })<!--Фотогалерея-->
+
+    @@include('../blocks/sections/_slider-section.html', {
+    title: 'баннер',
+    card: 'monoImageThin',
+    standardMargin: 'standard-margin',
+    paginationBottom: 'true'
+    }) <!--Слайдер с одной картинкой навигация снизу-->
 
     @@include('../blocks/sections/_slider-section.html', {
     title: 'Хиты продаж',
     card: 'cardOffer',
-    counterPagination: 'true'
+    counterPagination: 'true',
+    standardMargin: 'standard-margin'
     }) <!--Слайдер со спец предложениями-->
 
     @@include('../blocks/sections/_slider-section.html', {
@@ -33,12 +70,14 @@
     @@include('../blocks/sections/_slider-section.html', {
     title: 'Блог для визуала проекта',
     card: 'monoImage',
-    counterPagination: 'true'
+    counterPagination: 'true',
+    standardMargin: 'standard-margin'
     }) <!--Слайдер с одной картинкой-->
 
     @@include('../blocks/sections/_slider-section.html', {
     title: 'Видео',
     card: 'cardVideo',
+    standardMargin: 'standard-margin'
     }) <!--Слайдер с видео-->
 
     @@include('../blocks/sections/_advantages.html', {
@@ -48,11 +87,15 @@
 
     <!--Формы на желтом фоне-->
 
-    @@include('../blocks/sections/_countdown.html', {
+    @@include('../blocks/sections/_offer-section.html', {
     title: 'Заголовок Осталось немного',
     description: 'В целом, конечно, синтетическое тестирование однозначно фиксирует необходимость системы обучения кадров'
-    })
+    })<!--Блок с информацией и часами-->
 
+    @@include('../blocks/sections/_info-line.html',{
+    title: 'Где купить',
+    shops: 'true'
+    })<!--Желтый блок с текстом-->
   </main>
 
   @@include('../blocks/layouts-blocks/_footer.html')

@@ -1,0 +1,9 @@
+.socials{
+    @apply flex justify-center items-center gap-20;
+    &__item{
+        @apply w-20 aspect-square flex justify-center items-center;
+        &:hover{
+          @apply bg-yellow
+        }
+    }
+}

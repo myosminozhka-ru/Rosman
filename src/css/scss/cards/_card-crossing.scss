@@ -1,0 +1,31 @@
+.card-crossing{
+  @apply grid gap-24 grid-cols-2 md:grid-cols-1 body-m;
+  &:not(:first-child){
+    @apply mt-55 md:mt-32;
+  }
+
+  &__picture{
+    aspect-ratio: 1.56/1;
+  }
+  &__image{
+    @apply w-full h-full object-cover
+  }
+  &__content{
+    @apply order-1;
+  }
+  &__logo{
+    @apply mt-24;
+  }
+  &__link{
+    @apply mt-32 inline-block border-b-black border-b;
+    &:hover{
+      @apply border-b-0;
+    }
+  }
+  &__text{
+    @apply mt-16;
+    p{
+      @apply mt-16;
+    }
+  }
+}

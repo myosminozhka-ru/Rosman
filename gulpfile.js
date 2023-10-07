@@ -42,7 +42,7 @@ function livePreview(done) {
   done();
 }
 
-// Triggers Browser reload
+// Triggers Browser reload![](../../Downloads/test-thin-banner.png)
 function previewReload(done) {
   console.log('\n\t' + logSymbols.info, 'Reloading Browser Preview.\n');
   browserSync.reload();

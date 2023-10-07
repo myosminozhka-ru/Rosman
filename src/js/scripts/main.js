@@ -169,35 +169,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const buttons = document.getElementsByClassName('collapse-button');
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function () {
-      const content = this.nextElementSibling;
-      if (content.classList.contains('active')) {
-        content.classList.remove('active');
-      } else {
-        // Закрытие других активных контентов
-        const activeContent = document.querySelector(
-          '.collapse-content.active'
-        );
-
-        if (activeContent) {
-          activeContent.classList.remove('active');
-        }
-        content.classList.add('active');
-      }
-      if (this.classList.contains('active')) {
-        this.classList.remove('active');
-      } else {
-        const activeBtn = document.querySelector('.collapse-button.active');
-        if (activeBtn) {
-          activeBtn.classList.remove('active');
-        }
-        this.classList.add('active');
-      }
-    });
-  }
-
   const movingBlock = document.getElementById('moving-block');
   const movingBlockShadow = document.getElementById('moving-bock-shadow');
 
@@ -919,96 +890,47 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   //Движущаяся секция
-  const movingSections = document.querySelectorAll('.js-animate');
+  const movingSections = document.querySelectorAll('[data-animate="parent"]');
   if (movingSections.length) {
     movingSections.forEach((movingSection)=>{
+      const lines = movingSection.querySelectorAll('[data-animate="line"]');
+      const follower = movingSection.querySelector('[data-animate="follower"]');
+      const followerParent = movingSection.querySelector('[data-animate="follower-parent"]');
+      let isMoving = false;
+
       document.addEventListener('mousemove', function (event) {
-
-        const blockWidth = window.innerWidth;
-        const oneDeg = blockWidth / 100;
+        //качаем рамки
+        const oneDeg = window.innerWidth / 100;
         const tiltAngle = (event.clientX - oneDeg * 50) / oneDeg / 30;
+        lines.forEach(line => line.style.transform = `rotate(${tiltAngle}deg)`);
 
-        movingSection.style.transform = `rotate(${tiltAngle}deg)`;
-/*
-        const computedFontSize = window.getComputedStyle(
-          document.documentElement
-        ).fontSize;
+        //катаем картиннку
+        if (follower && followerParent) {
+          const followerParentRect = followerParent.getBoundingClientRect();
+          const x = event.clientX - followerParentRect.left;
+          const otherX = x - follower.clientWidth; // Вычисляем новое положение в противоположной стороне
+          const newX = Math.max(0, Math.min(otherX, followerParentRect.width - follower.clientWidth));
 
-        const computedFontSizeNumber = computedFontSize.slice(
-          0,
-          computedFontSize.length - 2
-        );*/
-
-        const movingBlockTopLine = movingSection.querySelector('.js-animate-top-line');
-        const movingBlockBottomLine = movingSection.querySelector('.js-animate-bottom-line');
-
-        const mousePos = {
-          x: event.pageX,
-          y: event.pageY,
-        };
-
-        const bodyRect = document.body.getBoundingClientRect();
-        const elemRect = movingSection.getBoundingClientRect();
-        const movingBlockTopOffset = elemRect.top - bodyRect.top;
-        const movingBLockBottomOffset = elemRect.bottom - bodyRect.top;
-
-        const verticalLeg = Math.abs(
-          blockWidth * Math.sin(Math.PI * (tiltAngle / 180))
-        );
-        const activationTopArea = verticalLeg + movingBlockTopOffset - mousePos.y;
-
-        const activationHeight = 300;
-        const shiftNumber = 3;
-
-        const mouseTiltHorizontallyPercentage = event.clientX / oneDeg;
-
-        if (activationTopArea > 0 && activationTopArea < activationHeight) {
-          const shadowShiftPercentage =
-            100 - (activationTopArea / activationHeight) * 100;
-          const leftShiftPercentage =
-            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const rightShiftPercentage =
-            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-          const rightShadowShiftNumber =
-            (shiftNumber / 100) * rightShiftPercentage;
-
-          movingBlockTopLine.setAttribute('y1', `-${leftShadowShiftNumber}%`);
-          movingBlockTopLine.setAttribute('y2', `-${rightShadowShiftNumber}%`);
+          if (!isMoving) {
+            isMoving = true;
+            followerParent.style.transform = `rotate(${tiltAngle}deg)`;
+            follower.style.transform = `translateX(${newX}px) rotate(${tiltAngle}deg)`; // Используем translateX для перемещения блока
+            isMoving = false;
+          }
         }
-
-        const activationBottomArea = -movingBLockBottomOffset - -mousePos.y;
-
-        if (activationBottomArea < activationHeight && activationBottomArea > 0) {
-          const shadowShiftPercentage =
-            100 - (activationBottomArea / activationHeight) * 100;
-          const leftShiftPercentage =
-            (100 - mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const rightShiftPercentage =
-            (mouseTiltHorizontallyPercentage + shadowShiftPercentage) / 2;
-          const leftShadowShiftNumber = (shiftNumber / 100) * leftShiftPercentage;
-          const rightShadowShiftNumber =
-            (shiftNumber / 100) * rightShiftPercentage;
-
-          movingBlockBottomLine.setAttribute(
-            'y1',
-            `${100 + leftShadowShiftNumber}%`
-          );
-          movingBlockBottomLine.setAttribute(
-            'y2',
-            `${100 + rightShadowShiftNumber}%`
-          );
-        }
-      });
+      })
     })
   }
 
   // Слайдер универсальный
-  const sliderSectionElems = document.querySelectorAll('.js-slider');
+  const sliderSectionElems = document.querySelectorAll('[data-slider]');
   if (sliderSectionElems.length > 0) {
-    const sliderInit = (sliderEl, swiperPrev, swiperNext, swiperCounter) => {
+    const sliderInit = (sliderEl, swiperArrows, swiperPagination, swiperCounter) => {
+      const swiperPrev = swiperArrows ? swiperArrows.querySelector('[data-slider-prev]') : null;
+      const swiperNext = swiperArrows ? swiperArrows.querySelector('[data-slider-next]') : null;
       const swiperDataSlide = sliderEl.dataset.slideCount;
       let swiperDataSlideCount = null;
+
       let slidesPerView = 1;
       if (swiperDataSlide) {
         const breakpoints = JSON.parse(swiperDataSlide);
@@ -1031,6 +953,26 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         }
       }
+      let pagination = {
+        el: null,
+      };
+      if(swiperCounter) {
+        pagination = {
+          el: swiperCounter,
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return (
+              '<span class="' + currentClass + '"></span>' + ' ' + '<span>из</span> ' + ' ' + '<span class="' + totalClass + '"></span>'
+            );
+          },
+        }
+      }
+      if(swiperPagination) {
+        pagination = {
+          el: swiperPagination
+        }
+      }
+
       let sectionSlider = new Swiper(sliderEl, {
         slidesPerView,
         spaceBetween: 16,
@@ -1040,36 +982,26 @@ window.addEventListener('DOMContentLoaded', () => {
           loadOnTransitionStart: true
         },
         navigation: {
-          nextEl: swiperNext || null,
-          prevEl: swiperPrev || null
+          nextEl: swiperNext,
+          prevEl: swiperPrev
         },
         breakpoints: swiperDataSlideCount,
-        pagination: {
-          el: swiperCounter,
-          type: 'fraction',
-          renderFraction: function (currentClass, totalClass) {
-            return (
-              '<span class="' + currentClass + '"></span>' + ' ' + '<span>из</span> ' + ' ' + '<span class="' + totalClass + '"></span>'
-            );
-          },
-        },
+        pagination,
       });
     };
     sliderSectionElems.forEach(sliderSectionEl => {
-      const swiperWrapper = sliderSectionEl.closest('.js-slider-section');
-      const swiperPrev = swiperWrapper.querySelector('.swiper-arrows__prev');
-      const swiperNext = swiperWrapper.querySelector('.swiper-arrows__next');
-      const swiperCounter = swiperWrapper.querySelector('.swiper-counter');
-      sliderInit(sliderSectionEl, swiperPrev, swiperNext, swiperCounter);
+      const swiperWrapper = sliderSectionEl.closest('[data-slider-section]');
+      const swiperArrows = swiperWrapper.querySelector('[data-slider-arrows]');
+      const swiperCounter = swiperWrapper.querySelector('[data-slider-counter]');
+      const swiperPagination = swiperWrapper.querySelector('[data-slider-dots]');
+      sliderInit(sliderSectionEl, swiperArrows, swiperPagination, swiperCounter);
     });
   }
 
   //Счетчик обратного отсчета
-
   const countDowns = document.querySelectorAll('[data-countdown-date]');
   if (countDowns.length > 0) {
     function callCountDown(countDownEl) {
-      console.log(countDownEl)
       let interval;
       const second = 1000;
       const minute = second * 60;
@@ -1096,14 +1028,14 @@ window.addEventListener('DOMContentLoaded', () => {
           const seconds = Math.floor((timeSpan % minute) / second);
 
           // Прописывает результаты в нужные ячейки
-          countDownEl.querySelector('.js-countdown-day').innerHTML = days;
-          countDownEl.querySelector('.js-countdown-day-text').innerHTML = pluralFormat(days, 'день', 'дня', 'дней');
-          countDownEl.querySelector('.js-countdown-hour').innerHTML = hours;
-          countDownEl.querySelector('.js-countdown-hour-text').innerHTML = pluralFormat(hours, 'час', 'часа', 'часов');
-          countDownEl.querySelector('.js-countdown-min').innerHTML = minutes;
-          countDownEl.querySelector('.js-countdown-min-text').innerHTML = pluralFormat(minutes, 'минута', 'минуты', 'минут');
-          countDownEl.querySelector('.js-countdown-sec').innerHTML = seconds;
-          countDownEl.querySelector('.js-countdown-sec-text').innerHTML = pluralFormat(seconds, 'секунда', 'секунды', 'секунд');
+          countDownEl.querySelector('[data-countdown-day]').innerHTML = days;
+          countDownEl.querySelector('[data-countdown-day-text]').innerHTML = pluralFormat(days, 'день', 'дня', 'дней');
+          countDownEl.querySelector('[data-countdown-hour]').innerHTML = hours;
+          countDownEl.querySelector('[data-countdown-hour-text]').innerHTML = pluralFormat(hours, 'час', 'часа', 'часов');
+          countDownEl.querySelector('[data-countdown-min]').innerHTML = minutes;
+          countDownEl.querySelector('[data-countdown-min-text]').innerHTML = pluralFormat(minutes, 'минута', 'минуты', 'минут');
+          countDownEl.querySelector('[data-countdown-sec]').innerHTML = seconds;
+          countDownEl.querySelector('[data-countdown-sec-text]').innerHTML = pluralFormat(seconds, 'секунда', 'секунды', 'секунд');
         }
       }
       interval = setInterval(countDownFn, second);
@@ -1114,4 +1046,41 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  //Компонент сворачивания (пример FAQ)
+  const collapseLists = document.querySelectorAll('[data-collapse-list]');
+  if(collapseLists.length){
+    function closeAll(list) {
+      list.querySelectorAll('[data-collapse]').forEach(btn => {
+        btn.classList.remove('active');
+      })
+      list.querySelectorAll('[data-collapsed]').forEach(content => {
+        content.style.maxHeight = '0px';
+      })
+    }
+    collapseLists.forEach(collapseList => {
+      const collapseElems = collapseList.querySelectorAll('[data-collapse-item]');
+      if (collapseElems.length) {
+        collapseElems.forEach(collapseElem => {
+          const collapseBtn = collapseElem.querySelector('[data-collapse]');
+          const collapseContent = collapseElem.querySelector('[data-collapsed]');
+          const collapseText = collapseElem.querySelector('[data-collapse-text]');
+          const fullHeight = collapseText.scrollHeight;
+
+          collapseBtn.addEventListener('click', function() {
+            if (collapseBtn.classList.contains('active')) {
+              collapseBtn.classList.remove('active');
+              collapseContent.style.maxHeight = '0px';
+            } else {
+              if (collapseList.dataset.collapseList === 'accordion') {
+                closeAll(collapseList) //если это акордион, закрываем остальные эелементы в списке
+              }
+
+              collapseBtn.classList.add('active');
+              collapseContent.style.maxHeight = `${fullHeight}px`;
+            }
+          })
+        })
+      }
+    })
+  }
 });

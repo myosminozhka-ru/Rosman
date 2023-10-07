@@ -6,6 +6,9 @@
       @apply relative bg-background aspect-[278/249] md:mb-24;
     }
   }
+  &__picture {
+    @apply w-full h-full
+  }
   &__labels{
     @apply absolute left-0 top-0 flex gap-8
   }

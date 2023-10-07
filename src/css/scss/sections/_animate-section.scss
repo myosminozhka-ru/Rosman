@@ -1,44 +1,32 @@
 .animate-section{
-    @apply relative mb-20 items-center overflow-hidden pt-60;
-    &__items{
-        @apply relative
+    @apply py-32 -my-32 overflow-hidden;
+    &__inner{
+        @apply pt-94 pb-160 md:pt-55 md:pb-150 relative;
     }
-    &__picture{
-        @apply h-full m-auto relative w-[99%];
-        svg{
+    &__follower{
+        @apply h-full m-auto absolute bottom-0 w-[99%] z-20;
+        &-item{
             @apply absolute z-20;
-            bottom: -0.1rem;
             transition: transform 2s ease;
         }
     }
     &__lines{
         @apply w-full h-full;
     }
+    &__line-top,
+    &__line-bottom{
+        @apply absolute bg-white z-10 h-60 md:h-30;
+        width: 100%;
+    }
     &__line-top{
-        filter: drop-shadow(0px 2px 5px #535353);
+        bottom: calc(100% - 30px);
+        box-shadow: 0 6px 8px 0 #BDAD0080;
     }
     &__line-bottom{
-        filter: drop-shadow(0px -2px 5px #535353);
+        top: calc(100% - 30px);
+        box-shadow: 0 -6px 8px 0 #BDAD0080;
     }
-}
-#white-background {
-    @apply relative mb-20 h-200 w-full items-center overflow-hidden bg-white pt-60;
-
-    .slide-el {
-        width: 10.4rem;
-        z-index: 1000;
-        height: 10.4rem;
-        position: absolute;
-        bottom: -2rem;
-        transition: transform 2s ease;
-    }
-
-    .slide-el-2 {
-        width: 10.4rem;
-        z-index: 1000;
-        height: 10.4rem;
-        position: absolute;
-        bottom: -0.1rem;
-        transition: transform 2s ease;
+    &__content{
+        @apply body-l relative z-30;
     }
 }

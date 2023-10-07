@@ -1,0 +1,23 @@
+<section class="info-line standard-margin text-center">
+    <div class="container">
+        <h2 class="head-3">@@title</h2>
+        @@if (this.socials === 'true') {
+            @@include("../components/_socials.html", {
+                dopClass: 'mt-16'
+            })
+        }
+        <div class="info-line__buttons">
+
+            @@if (this.shops !== 'true') {
+                <a class="button button-secondary md:grow" href="#">Смотреть</a>
+                <a class="button button-outline-primary md:grow" href="#" target="_blank">На сайт</a>
+            }
+            @@if (this.shops === 'true') {
+                <a class="button button-outline-primary button-lg md:grow" href="#">
+                    <img src="../img/logos/ozon.svg" alt="Лого ozon" width="105" height="24">
+                </a>
+                <a class="button button-outline-primary button-lg md:grow" href="#" target="_blank"> <img src="../img/logos/wildberries.svg" alt="Лого wildberries" width="205" height="24"></a>
+            }
+        </div>
+    </div>
+</section>

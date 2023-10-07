@@ -1,4 +1,6 @@
 .card-mono-image{
-  @apply aspect-[1.85/1];
-  overflow: hidden;
+  @apply overflow-hidden;
+  img{
+    @apply w-full h-full object-cover;
+  }
 }

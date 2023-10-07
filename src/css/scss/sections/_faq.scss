@@ -1,0 +1,5 @@
+.faq {
+  &__row{
+    @apply grid grid-cols-[4fr_2fr] bs:grid-cols-1 gap-60;
+  }
+}

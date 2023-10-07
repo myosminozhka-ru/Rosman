@@ -25,20 +25,19 @@ module.exports = {
       '5xl': '115rem',
       8.8: '8.8rem',
       25: '25rem',
+      full: '100%'
     },
     container: {
       center: true,
-      padding: {
-        DEFAULT: '1.2rem',
-        bsMin: '2.4rem',
-      },
+      padding: '1.2rem',
       screens: {
-        hsMin: {max: '1969px'},
-        bsMin: {max: '1533px'},
+        sm: '1969px', //ничего не менять, дальше контейнер правится в base файле
       },
     },
     screens: {
       msmMin: '520px',
+      mdMin: '769px',
+      bssMin: '899px',
       bsMin: '999px',
       hsMin: '1433px',
       fullHdMin: '1969px',
@@ -103,10 +102,6 @@ module.exports = {
       'tt-hoves-pro': ['TT Hoves Pro', 'sans-serif'],
     },
     extend: {
-      backgroundImage: {
-        'prev-arrow': "url('../../img/prev.png')",
-        'next-arrow': "url('../../img/next.png')",
-      },
       spacing: {
         '2px': '2px',
         1: '0.1rem',
@@ -114,6 +109,7 @@ module.exports = {
         4: '0.4rem',
         6: '0.6rem',
         8: '0.8rem',
+        9: '0.9rem',
         10: '1rem',
         12: '1.2rem',
         14: '1.4rem',
@@ -127,6 +123,7 @@ module.exports = {
         24: '2.4rem',
         25: '2.5rem',
         26: '2.6rem',
+        27: '2.8rem',
         28: '2.8rem',
         30: '3rem',
         32: '3.2rem',
@@ -162,6 +159,7 @@ module.exports = {
         130: '13rem',
         140: '14rem',
         150: '15rem',
+        160: '16rem',
         170: '30rem',
         180: '39rem',
         190: '45rem',
