@@ -11,7 +11,7 @@
   @@include('../blocks/layouts-blocks/_header.html')
 
   <main class="main">
-    @@include('../blocks/sections/_mono-banner.html');
+    @@include('../blocks/sections/_mono-banner.html')
 
     @@include('../blocks/sections/_animate-section.html',{
     card: 'text',
@@ -31,7 +31,377 @@
     standardMargin: 'standard-margin'
     }) <!--Слайдер с карточкой с иконкой-->
 
-    <!--Каталог с фильтром-->
+    <!--Каталог с фильтром Todo:Переписать-->
+    <div class="container">
+      <div class="flex md:mt-40">
+        <div
+                class="more-down-filters no-padds no-after mb-16 border border-card-stroke md:mt-0"
+        >
+          <button class="more-down-button with-padds new">
+            Сначала новые<span></span>
+          </button>
+          <!--  more-down -->
+          <div class="more-down-content new">
+            <label class="checkbox-container">
+              <input type="radio" name="sort-by" />
+              <span class="checkmark"></span>
+              Сначала новые
+            </label>
+            <label class="checkbox-container">
+              <input type="radio" name="sort-by" />
+              <span class="checkmark"></span>
+              Сначала старые
+            </label>
+            <label class="checkbox-container">
+              <input type="radio" name="sort-by" />
+              <span class="checkmark"></span>
+              А-Я
+            </label>
+            <label class="checkbox-container">
+              <input type="radio" name="sort-by" />
+              <span class="checkmark"></span>
+              Я-А
+            </label>
+          </div>
+        </div>
+        <div id="open-filter" class="mobile-filter"></div>
+      </div>
+      <div class="popup_all_filters_filters md:hidden">
+        <div class="popup_all_filters_filter">
+          <input type="checkbox" id="novelty" class="sort-checkbox" />
+          <label class="sort-label" for="novelty"
+          >Для мальчиков<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+                  type="checkbox"
+                  id="interactive_features"
+                  class="sort-checkbox"
+          />
+          <label class="sort-label" for="interactive_features"
+          >Новинка<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+                  type="checkbox"
+                  id="sound_effects"
+                  class="sort-checkbox"
+          />
+          <label class="sort-label" for="sound_effects"
+          >Игровой набор<span class="count">12</span>
+            <span class="cross"></span>
+          </label>
+        </div>
+        <div class="popup_all_filters_filter">
+          <input
+                  type="checkbox"
+                  id="erase_all_filters"
+                  class="sort-checkbox_erase"
+          />
+          <label class="sort-label_erase" for="erase_all_filters"
+          >Сбросить все
+            <span class="cross"></span>
+          </label>
+        </div>
+      </div>
+      <div class="my-40 grid grid-cols-4 gap-16 md:grid-cols-2 sm:grid-cols-1"
+      >
+        <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="https://schema.org/Book"
+        >
+          <div class="book_card_heading">
+            <div class="item_card_tags bordered_tags">
+              <div class="item_card_tags_main bordered_tags_main">
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item"
+                >Бестселлер</a
+                >
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item"
+                >Новинка</a
+                >
+              </div>
+              <a
+                      itemprop="url"
+                      href="#"
+                      class="book_card_tags_age body-s-bold"
+              >8+</a
+              >
+            </div>
+
+            <div class="book_card_image item_card_image">
+              <img
+                      itemprop="image"
+                      class="book_card_img item_card_img"
+                      src="../../img/brand_nado.svg"
+                      alt=""
+              />
+            </div>
+          </div>
+          <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+          >
+            <div itemprop="name" class="book_card_name item_card_name">
+              Чародол. Весь цикл в одном томе
+            </div>
+            <div itemprop="author" class="book_card_author">
+              Щерба Н. В.
+            </div>
+            <div class="book_card_more item_card_more">
+              <button
+                      class="book_card_item_link item_card_link overline-button"
+                      itemprop="url"
+              >
+                Подробнее
+              </button>
+              <button class="item_card_add_to_favourite"></button>
+            </div>
+          </div>
+        </div>
+
+        <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="https://schema.org/Book"
+        >
+          <div class="book_card_heading">
+            <div class="item_card_tags bordered_tags">
+              <div class="item_card_tags_main bordered_tags_main">
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item"
+                >Бестселлер</a
+                >
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item"
+                >Новинка</a
+                >
+              </div>
+              <a
+                      itemprop="url"
+                      href="#"
+                      class="book_card_tags_age body-s-bold"
+              >8+</a
+              >
+            </div>
+
+            <div class="book_card_image item_card_image">
+              <img
+                      itemprop="image"
+                      class="book_card_img item_card_img"
+                      src="../../img/brand_nado.svg"
+                      alt=""
+              />
+            </div>
+          </div>
+          <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+          >
+            <div itemprop="name" class="book_card_name item_card_name">
+              Чародол. Весь цикл в одном томе
+            </div>
+            <div itemprop="author" class="book_card_author">
+              Щерба Н. В.
+            </div>
+            <div class="book_card_more item_card_more">
+              <button
+                      class="book_card_item_link item_card_link overline-button"
+                      itemprop="url"
+              >
+                Подробнее
+              </button>
+              <button class="item_card_add_to_favourite"></button>
+            </div>
+          </div>
+        </div>
+        <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="https://schema.org/Book"
+        >
+          <div class="book_card_heading">
+            <div class="item_card_tags bordered_tags">
+              <div class="item_card_tags_main bordered_tags_main">
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item"
+                >Бестселлер</a
+                >
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item"
+                >Новинка</a
+                >
+              </div>
+              <a
+                      itemprop="url"
+                      href="#"
+                      class="book_card_tags_age body-s-bold"
+              >8+</a
+              >
+            </div>
+
+            <div class="book_card_image item_card_image">
+              <img
+                      itemprop="image"
+                      class="book_card_img item_card_img"
+                      src="../../img/brand_nado.svg"
+                      alt=""
+              />
+            </div>
+          </div>
+          <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+          >
+            <div itemprop="name" class="book_card_name item_card_name">
+              Чародол. Весь цикл в одном томе
+            </div>
+            <div itemprop="author" class="book_card_author">
+              Щерба Н. В.
+            </div>
+            <div class="book_card_more item_card_more">
+              <button
+                      class="book_card_item_link item_card_link overline-button"
+                      itemprop="url"
+              >
+                Подробнее
+              </button>
+              <button class="item_card_add_to_favourite"></button>
+            </div>
+          </div>
+        </div>
+
+        <div
+                class="book_card js_item_card item_card"
+                itemscope
+                itemtype="https://schema.org/Book"
+        >
+          <div class="book_card_heading">
+            <div class="item_card_tags bordered_tags">
+              <div class="item_card_tags_main bordered_tags_main">
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_first bordered_tags_item"
+                >Бестселлер</a
+                >
+                <a
+                        itemprop="url"
+                        href="#"
+                        class="book_card_tags_second bordered_tags_item"
+                >Новинка</a
+                >
+              </div>
+              <a
+                      itemprop="url"
+                      href="#"
+                      class="book_card_tags_age body-s-bold"
+              >8+</a
+              >
+            </div>
+
+            <div class="book_card_image item_card_image">
+              <img
+                      itemprop="image"
+                      class="book_card_img item_card_img"
+                      src="../../img/brand_nado.svg"
+                      alt=""
+              />
+            </div>
+          </div>
+          <div
+                  class="book_card_info item_card_info"
+                  itemprop="description"
+          >
+            <div itemprop="name" class="book_card_name item_card_name">
+              Чародол. Весь цикл в одном томе
+            </div>
+            <div itemprop="author" class="book_card_author">
+              Щерба Н. В.
+            </div>
+            <div class="book_card_more item_card_more">
+              <button
+                      class="book_card_item_link item_card_link overline-button"
+                      itemprop="url"
+              >
+                Подробнее
+              </button>
+              <button class="item_card_add_to_favourite"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="pagination rm-pag">
+        <div class="pagination-seen js-rm-pag-seen">
+          Просмотрено: 12 из 456
+        </div>
+        <button class="pagination-more-button js-rm-pag-more-btn">
+          Показать ещё
+        </button>
+        <div class="pagination-nav-page-buttons js-rm-pag-nav-page-btns">
+          <button
+                  class="pagination-nav-page-button js-rm-pag-nav-page-back-bnt"
+          >
+            <span></span>Назад
+          </button>
+          <div class="nav-btns">
+            <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+            >
+              1
+            </button>
+
+            <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+            >
+              2
+            </button>
+
+            <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn"
+            >
+              3
+            </button>
+
+            <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+            >
+              4
+            </button>
+
+            <button
+                    class="pagination-nav-page-button js-rm-pag-nav-page-btn pag-hidden"
+            >
+              5
+            </button>
+          </div>
+
+          <button
+                  class="pagination-nav-page-button js-rm-pag-nav-page-more-bnt"
+          >
+            Вперёд <span></span>
+          </button>
+        </div>
+      </section>
+    </div>
 
     @@include('../blocks/sections/_crossing-section.html', {
     title: 'Как играть в Инфинити Надо с контроллером?',

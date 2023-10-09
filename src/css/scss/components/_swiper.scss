@@ -1,6 +1,7 @@
 .swiper{
+    $root: &;
     &-wrapper{
-        @apply flex items-stretch;
+        @apply flex items-stretch relative;
     }
     &-slide{
         @apply h-auto;
@@ -12,27 +13,48 @@
         @apply grid gap-16 grid-cols-[40px_40px] md:grid-cols-[28px_28px];
         &__prev,
         &__next{
-            @apply p-0 h-40 sm:h-[28px];
+            @apply p-0 sm:h-[28px] aspect-square;
             &:not([aria-disabled="false"]){
                 @apply text-text
             }
-
             [aria-disabled="false"]{
                 @apply opacity-40
+            }
+            &--rounded{
+                @apply rounded-full bg-yellow text-black w-56;
             }
             svg{
                 max-width: 80%;
                 max-height: 80%;
             }
         }
-    }
+        &--absolute{
+            #{$root}-arrows__prev,
+            #{$root}-arrows__next{
+                @apply absolute z-50 md:hidden;
+                top: 50%;
+                transform: translateY(-50%);
 
+            }
+            #{$root}-arrows__prev{
+                @apply left-16;
+            }
+            #{$root}-arrows__next{
+                @apply right-16;
+            }
+            #{$root}-dots{
+                @apply absolute bottom-16 sm:static sm:mt-16
+            }
+        }
+    }
     &-counter{
         @apply body-m text-text;
     }
-
     &-dots{
         @apply flex gap-16 justify-center items-center;
+        &--absolute{
+            @apply absolute bottom-16 sm:static sm:mt-16 z-50 w-full;
+        }
     }
     &-pagination-bullet {
         @apply w-[9px] h-[9px] rounded-full bg-white border border-black;

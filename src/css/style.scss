@@ -7,6 +7,9 @@
 svg{
   fill: currentColor;
 }
+img, svg{
+  @apply inline-block;
+}
 img{
   @apply max-w-full object-contain h-auto;
 }
@@ -19,6 +22,7 @@ img{
 
 @import "scss/components/buttons";
 @import "scss/components/swiper";
+@import "scss/components/fancybox";
 @import "scss/components/bordered-tags";
 @import "scss/components/countdown";
 @import "scss/components/accordion";
@@ -26,20 +30,24 @@ img{
 
 @import "scss/layout/header";
 
+
+@import "scss/cards/card-brand-small";
+@import "scss/cards/card-crossing";
 @import "scss/cards/card-infographics";
 @import "scss/cards/card-logo";
 @import "scss/cards/card-mono-image";
-@import "scss/cards/card-video";
-@import "scss/cards/card-photo";
 @import "scss/cards/card-offer";
-@import "scss/cards/card-crossing";
+@import "scss/cards/card-photo";
+@import "scss/cards/card-video";
 
-@import "scss/sections/mono-banner";
-@import "scss/sections/slider-section";
-@import "scss/sections/animate-section";
 @import "scss/sections/advantages";
-@import "scss/sections/offer-section";
+@import "scss/sections/animate-section";
+@import "scss/sections/choice-brand";
 @import "scss/sections/faq";
 @import "scss/sections/info-line";
+@import "scss/sections/mono-banner";
+@import "scss/sections/offer-section";
+@import "scss/sections/select-shop";
+@import "scss/sections/slider-section";
 
 @import './custom';

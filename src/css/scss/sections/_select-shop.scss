@@ -1,0 +1,71 @@
+.select-shop{
+  $root: &;
+  &__header{
+    @apply pb-40 sm:pb-24 relative;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 5%;
+      width: 75px;
+      height: 100px;
+      background: url("../img/elephant/elephant-swinging-foot.svg") 0 0 no-repeat;
+      background-size: 100%;
+      transform: translateY(-64%);
+      @media (max-width: theme('screens.sm.max')){
+        width: 59px;
+        height: 80px;
+      }
+    }
+  }
+  &__description{
+    @apply mt-12 text-text sm:pr-80;
+  }
+  &__row{
+    @apply grid gap-16;
+    @media (min-width: theme('screens.bsMin')){
+      grid-template-columns: 296px 1fr;
+    }
+  }
+  &__control{
+    @apply flex justify-center items-center text-center text-l p-39 bg-yellow border border-card-stroke;
+    &.active{
+      @apply bg-light-grey;
+      #{$root}__control-text {
+        @apply hidden
+      }
+      #{$root}__button-inactive {
+        @apply hidden
+      }
+    }
+    &:not(.active){
+      #{$root}__control-image {
+        @apply hidden
+      }
+      #{$root}__button-active {
+        @apply hidden
+      }
+    }
+  }
+  &__button{
+    @apply px-20;
+  }
+  &__results{
+    @apply border border-card-stroke bg-background p-42 sm:py-32 sm:px-32;
+    &-content{
+      @apply flex flex-wrap items-center justify-center sm:justify-start h-full;
+    }
+    &-item{
+      @apply flex justify-center items-center py-22 px-11 sm:px-16;
+      &.disabled{
+        @apply grayscale;
+      }
+      min-width: 250px;
+      max-width: 250px;
+      @media (max-width: theme('screens.sm.max')){
+        min-width: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<section class="select-shop standard-margin">
+    <div class="container">
+        <header class="select-shop__header">
+            <h2 class="select-shop__title head-3">Где купить</h2>
+            <p class="select-shop__description head-6">РОСМЕН на маркетплейсах:</p>
+        </header>
+        <div class="select-shop__row">
+            <div class="select-shop__control" data-select-shop="control">
+                <div class="select-shop__control-content">
+                    <img class="select-shop__control-image" src="../../img/brand_nado.svg" alt="Название бренда" data-select-shop="logo">
+                    <p class="select-shop__control-text">Выберите бренд, и мы <br>покажем, где его купить</p>
+                    <button class="select-shop__button button button-primary mt-16" data-fancybox data-src="#popup-choice-brand">
+                        <span class="select-shop__button-inactive">Выбрать бренд</span>
+                        <span class="select-shop__button-active">Выбрать другой бренд</span>
+                    </button>
+                    <div id="popup-choice-brand" style="display: none">
+                        @@include("../components/_choice-brand.html", {
+                        dopClass: 'mt-16'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="select-shop__results">
+                <div class="select-shop__results-content" data-select-shop="result">
+                    <div class="select-shop__results-item disabled">
+                        <img class="select-shop__results-image sm:max-w-" src="../img/logos/ozon.svg" alt="marketplace" width="159">
+                    </div>
+                    <div class="select-shop__results-item disabled">
+                        <img class="select-shop__results-image" src="../img/logos/wildberries.svg" width="228" alt="marketplace">
+                    </div>
+                    <div class="select-shop__results-item disabled">
+                        <img class="select-shop__results-image" src="../img/logos/yandex-market.svg" alt="marketplace" width="200">
+                    </div>
+                </div>
+                <template id="select-shop-result">
+                    <div class="select-shop__results-content" data-select-shop="result">
+                        <a href="" class="select-shop__results-item" data-select-shop="ozon">
+                            <img class="select-shop__results-image" src="../img/logos/ozon.svg" alt="marketplace" width="159">
+                        </a>
+                        <a href="" class="select-shop__results-item" data-select-shop="wildberries">
+                            <img class="select-shop__results-image" src="../img/logos/wildberries.svg" width="228" alt="marketplace">
+                        </a>
+                        <a href="" class="select-shop__results-item" data-select-shop="yandex">
+                            <img class="select-shop__results-image" src="../img/logos/yandex-market.svg" alt="marketplace" width="200">
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</section>

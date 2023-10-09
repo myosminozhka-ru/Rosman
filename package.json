@@ -57,6 +57,7 @@
     "tailwindcss": "^3.3.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.24",
     "swiper": "^10.3.1"
   }
 }

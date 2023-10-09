@@ -66,11 +66,17 @@ function devStyles() {
     .pipe(dest(options.paths.dist.css));
 }
 
-function devScripts() {
+function devScriptsLibs() {
   return src([
     `${options.paths.src.js}/libs/**/*.js`,
+  ])
+    .pipe(dest(`${options.paths.dist.js}/libs`))
+}
+function devScripts() {
+  return src([
     `${options.paths.src.js}/**/*.js`,
     `!${options.paths.src.js}/**/external/*`,
+    `!${options.paths.src.js}/**/libs/*`,
   ])
     .pipe(concat({path: 'scripts.js'}))
     .pipe(dest(options.paths.dist.js));
@@ -259,7 +265,7 @@ function prodGitStyles() {
 
 function prodScripts() {
   return src([
-    `${options.paths.src.js}/libs/**/*.js`,
+    `!${options.paths.src.js}/libs/**/*.js`,
     `${options.paths.src.js}/**/*.js`,
   ])
     .pipe(concat({path: 'scripts.js'}))
@@ -270,9 +276,7 @@ function prodScripts() {
 function prodGitLibsScripts() {
   return (
     src([`${options.paths.src.js}/libs/**/*.js`])
-      .pipe(concat({path: 'libs.js'}))
-      // .pipe(uglify())
-      .pipe(dest(options.paths.docs.js))
+      .pipe(dest(`${options.paths.dist.js}/libs`))
   );
 }
 
@@ -375,6 +379,7 @@ exports.default = series(
   devClean, // Clean Dist Folder
   parallel(
     devStyles,
+    devScriptsLibs,
     devScripts,
     devImages,
     devFonts,

@@ -208,3 +208,47 @@ function parseDate(dateString) {
   const parts = dateString.split('.');
   return new Date(parts[2], parts[1] - 1, parts[0]);
 }
+
+
+const selectShop = document.querySelector('[data-select-shop="control"]');
+if (selectShop){
+  Fancybox.bind("[data-fancybox]", {
+    on: {
+      done: (fancybox, slide) => {
+        const choiceButtons = slide.el.querySelectorAll('[data-select-shop="button"]');
+        choiceButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            selectShop.classList.add('active'); //делаем активным правый блок, скрывается надпись, меняется текст кнопки
+            selectShop.querySelector('[data-select-shop="logo"]').src = button.querySelector('img').src; //подставляем лого выбранного бренда
+
+            //Подстановка в шаблон списка магазинов новых ссылок, выбранного бренда
+            const template = document.querySelector('#select-shop-result').content.cloneNode(true);
+            const ozonLink = button.dataset.linkOzon;
+            const wildberriesLink = button.dataset.linkWildberries;
+            const yandexLink = button.dataset.linkYandex;
+            if(ozonLink) {
+              template.querySelector(`[data-select-shop="ozon"]`).href = ozonLink;
+            } else {
+              template.querySelector(`[data-select-shop="ozon"]`).remove();
+            }
+            if(wildberriesLink) {
+              template.querySelector(`[data-select-shop="wildberries"]`).href = wildberriesLink;
+            } else {
+              template.querySelector(`[data-select-shop="wildberries"]`).remove();
+            }
+            if(yandexLink){
+              template.querySelector(`[data-select-shop="yandex"]`).href = yandexLink;
+            } else {
+              template.querySelector(`[data-select-shop="yandex"]`).remove();
+            }
+
+            document.querySelector('[data-select-shop="result"]').replaceWith(template);
+
+            Fancybox.close();
+          })
+        })
+        console.log(fancybox, slide)
+      }
+    }
+  });
+}

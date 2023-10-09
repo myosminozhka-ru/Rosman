@@ -1,0 +1,8 @@
+.choice-brand{
+  &__list{
+    @apply flex flex-wrap items-center gap-16
+  }
+  &__item{
+    @apply p-0
+  }
+}

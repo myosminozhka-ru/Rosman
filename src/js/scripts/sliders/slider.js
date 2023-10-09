@@ -101,26 +101,6 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  
-  new Swiper('.js-toys-banner', {
-    loop: false,
-    navigation: {
-      nextEl: '.toys-swiper-button-next',
-      prevEl: '.toys-swiper-button-prev',
-    },
-    pagination: {
-      el: '.toys-swiper-pagination',
-    },
-    autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: rem * 2.4 * 2,
-    breakpoints: {
-      900: {
-        spaceBetween: rem * 1.2 * 2,
-      },
-    },
-  });
-
   const swiper = new Swiper('.persons-slider', {
     loop: false,
     navigation: {

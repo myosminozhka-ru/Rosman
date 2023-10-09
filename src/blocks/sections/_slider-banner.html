@@ -1,0 +1,25 @@
+<section class="slider-section" data-slider-section>
+    <div class="container">
+        <h2 class="sr-only">@@title</h2>
+        <div class="swiper" data-slider>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    @@include("../cards/_card-mono-image.html", {
+                    imgUrl:"../../../img/cats-and-dogs-toys-bg.jpg",
+                    imageAspectRatio: 'aspect-[1.85/1]'
+                    }, )
+                </div>
+                <div class="swiper-slide">
+                    @@include("../cards/_card-mono-image.html", {
+                    imgUrl:"../../../img/cats-and-dogs-toys-bg.jpg",
+                    imageAspectRatio: 'aspect-[1.85/1]'
+                    }, )
+                </div>
+            </div>
+            <div class="swiper-dots swiper-dots--absolute grow" data-slider-dots></div>
+            <div class="swiper-arrows swiper-arrows--absolute" data-slider-arrows>
+                @@include("../components/_slider-arrows-rounded.html")
+            </div>
+        </div>
+    </div>
+</section>

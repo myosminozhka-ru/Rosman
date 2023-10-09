@@ -67,7 +67,10 @@ p {
 }
 
 .head-6 {
-  @apply text-2xl font-normal;
+  @apply text-2xl font-medium sm:font-normal;
+  @media (max-width: 768px) {
+    @apply text-m;
+  }
 }
 
 .body-l,
